@@ -1,0 +1,39 @@
+- no: 938
+  character: 縄
+  kun_readings: ["なわ", "ただす"]
+  on_readings: ["ジョウ"]
+  meanings_en:
+    - rope
+    - cord
+    - to measure
+    - to rectify
+  image_bone_script: images/縄_bone_form.png
+  etymology_essay: >
+    縄 combines 糸, the thread radical, with the phonetic and semantic element 韋 (used 
+    phonetically here as ‘jō’), but its true significance is knotted into ancient ritual 
+    craftsmanship. In Shang and later cultures, cords were not just tools but instruments 
+    of law and measurement. The earliest ropes — coarse, hempen lines — became progressively 
+    refined into the ink cords (墨縄 *suminawa*) used to draw straight lines on wood or stone, 
+    snapped taut to leave an imprint of order. This act of alignment — of imposing straightness 
+    upon the chaotic material of the world — birthed not only architecture, but metaphor: 
+    from ink cord to rule, from rule to rectification.
+
+    In this way, 縄 came to mean “to measure” and “to correct” — to bring into conformity 
+    with a higher standard. Even the etymological sense of 法 (*nori*: law) shares this 
+    lineage. To draw a straight line was not only practical — it was cosmological. 
+    It aligned the visible world with the invisible lines of Heaven. Thus, 縄 is not 
+    merely a rope, but the ritual thread that binds the human to the divine.
+
+  examples:
+    - word: 墨縄
+      reading: すみなわ
+      meaning: ink cord used for straight-line marking
+    - word: 縄文
+      reading: じょうもん
+      meaning: cord-marked pattern (as in Jōmon pottery)
+    - word: 縄張り
+      reading: なわばり
+      meaning: territory marked by rope (or metaphorically, jurisdiction)
+    - word: 縄目
+      reading: なわめ
+      meaning: mesh pattern; rope texture

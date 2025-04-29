@@ -1,0 +1,46 @@
+- no: 2
+  character: 哀
+  kun_readings: ["あわ・れ", "あわ・れる", "かな・しい"]
+  on_readings: ["アイ"]
+  meanings_en:
+    - sorrow
+    - grief
+    - pity
+    - mourning rite
+  image_bone_script: images/哀_bone_form.png
+  etymology_essay: >
+    哀 unites the form of a ceremonial garment (衣) with the ‘sai’ 口-shaped vessel used in 
+    rituals to offer prayer texts to the gods. When a person died, a 口 ‘sai’ was placed 
+    into the neckband of their robe — a physical marker of grief and a spiritual gesture 
+    calling the soul back (tamayobai). Thus, 哀 is not just sorrow as emotion but sorrow 
+    as rite — a ritualized grief inscribed in gesture, textile, and utterance. The Shang 
+    viewed the boundary between life and death as negotiable: the dead could return, or 
+    fail to leave. 哀 captures the moment when the living reach back, hoping to close 
+    what remains open. It is pity imbued with rite, and grief embodied in the ceremonial 
+    act of recalling the departed soul.
+
+  examples:
+    - word: 哀歌
+      reading: あいか
+      meaning: elegy, sorrowful poem
+    - word: 哀感
+      reading: あいかん
+      meaning: deep sorrow, pathos
+    - word: 哀傷
+      reading: あいしょう
+      meaning: mourning, grieving
+    - word: 哀情
+      reading: あいじょう
+      meaning: sad feelings
+    - word: 哀訴
+      reading: あいそ
+      meaning: plaintive appeal
+    - word: 哀痛
+      reading: あいつう
+      meaning: deep grief
+    - word: 哀楽
+      reading: あいらく
+      meaning: grief and joy
+    - word: 悲哀
+      reading: ひあい
+      meaning: sorrow, grief

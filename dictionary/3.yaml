@@ -1,0 +1,37 @@
+- no: 3
+  character: 愛
+  kun_readings: ["いつく・しむ", "した・しむ"]
+  on_readings: ["アイ"]
+  meanings_en:
+    - love
+    - affection
+    - tender care
+    - longing
+  image_bone_script: images/愛_bone_form.png
+  etymology_essay: >
+    The character 愛 brings together a person pausing to look back (夊 with 心 beneath) — 
+    a figure whose heart is reluctant to leave. In Shang cosmology, emotional states were 
+    not private but had ritual and communal significance. 愛 depicts not a spontaneous 
+    impulse but a measured, solemn yearning: the sorrowful pause before parting, a weighing 
+    of the heart. In early rites, this backward glance becomes a sacred moment — a hesitation 
+    not just of affection but of connection, as one lingers at the threshold between presence 
+    and absence. Thus 愛 evokes both love and grief, as all true love contains the seed of 
+    its loss. Its Japanese reading intersects with 悲, suggesting a shared tonal field between 
+    ‘love’, ‘sorrow’, and ‘the heart drawn back’.
+
+  examples:
+    - word: 愛育
+      reading: あいく
+      meaning: nurturing with affection
+    - word: 愛玩
+      reading: あいがん
+      meaning: cherishing, fondling
+    - word: 愛好
+      reading: あいこう
+      meaning: fondness
+    - word: 愛情
+      reading: あいじょう
+      meaning: emotional love, attachment
+    - word: 愛読
+      reading: あいどく
+      meaning: fond reading, reading with affection
