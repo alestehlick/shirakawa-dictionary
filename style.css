@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, "Hiragino Sans", "Yu Mincho", serif;
+  font-family: -apple-system, "Hiragino Sans", "Yu Gothic", serif;
   margin: 2rem;
   background: #fafafa;
   color: #222;
@@ -13,13 +13,12 @@ body {
 
 /* Left: Big Kanji */
 .kanji-col {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
+  font-weight: 700;           /* strong Mincho stroke */
   font-size: 8rem;
-  font-weight: bold;
-  min-width: 140px;
+  line-height: 1;
+  /* optional: slightly tighter tracking looks elegant for a single glyph */
+  letter-spacing: 0.01em;
 }
 
 /* Middle: Image stack */
@@ -61,3 +60,4 @@ h3 {
 }
 
 .notes { color: #444; font-style: italic; }
+
