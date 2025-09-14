@@ -1,0 +1,11 @@
+{
+  "id": "U+7A7A",
+  "kanji": "空",
+  "kun_readings_romaji": ["sora", "kara", "aku", "akeru", "munashii"],
+  "on_readings_romaji": ["kuu"],
+  "category": "heavenly phenomena",
+  "meanings": ["sky", "empty", "void", "vacant"],
+  "explanation": "Composed of the ‘cavern/roofed hollow’ determinative (穴) and phonetic 工. Original sense: a vaulted, hollow space; later generalized to the open sky and to ‘emptiness/void.’",
+  "additional_notes": "Japanese usage splits ‘sora’ (sky) and ‘kara’ (empty). In classical descriptions may denote an arched emptiness like a dome.",
+  "images": ["images/空_oracle.png", "images/空_bronze.png", "images/空_seal.png"]
+}
