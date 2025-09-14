@@ -48,4 +48,4 @@ for file in json_dir.glob("*.json"):
     out_file.write_text(html_content, encoding="utf-8")
     index.append({"file": f"{data['kanji']}.html", "kanji": data["kanji"], "gloss": " ・ ".join(data["meanings"])})
 
-(Path(entries_dir) / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
+(entries_dir / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
