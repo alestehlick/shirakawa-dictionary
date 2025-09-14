@@ -1,27 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kanji Etymology Dictionary</title>
+  <meta charset="utf-8">
+  <title>Shirakawa Kanji Dictionary</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Script to extract search query from URL -->
-  <script>
-    function getQueryParam(param) {
-      let urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
-    const initialSearch = getQueryParam('search');
-  </script>
-
 </head>
 <body>
-  <h1>Kanji Etymology Dictionary</h1>
-  <input type="text" id="search" placeholder="Search Kanji..." onkeyup="filterKanji()">
-  <div id="kanji-list"></div>
-
-  <script src="filelist.js"></script> <!-- Automatically generated list -->
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-  <script src="main.js"></script>
+  <h1>Shirakawa Kanji Dictionary</h1>
+  <p>Tap a character to view its entry:</p>
+  <div>
+    <a href="entries/ki.html">気</a>
+    <a href="entries/fu.html">風</a>
+    <!-- Add more links -->
+  </div>
 </body>
 </html>
