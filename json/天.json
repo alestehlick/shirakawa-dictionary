@@ -1,0 +1,11 @@
+{
+  "id": "U+5929",
+  "kanji": "天",
+  "kun_readings_romaji": ["ama", "ame"],
+  "on_readings_romaji": ["ten"],
+  "category": "heavenly phenomena",
+  "meanings": ["heaven", "sky", "uppermost"],
+  "explanation": "Early graphs show the figure of a person (大) with an added stroke above to mark what is highest; thus ‘the sky/heaven.’ By extension, the supreme or celestial in ritual language.",
+  "additional_notes": "Frequently contrasts with 地 ‘earth.’ In archaic forms the top line emphasizes ‘above.’",
+  "images": ["images/天_oracle.png", "images/天_bronze.png", "images/天_seal.png"]
+}
