@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, "Hiragino Sans", "Yu Gothic", serif;
+  font-family: "Noto Serif JP", "Hiragino Sans", "Yu Gothic", serif;
   margin: 2rem;
   background: #fafafa;
   color: #222;
@@ -60,4 +60,5 @@ h3 {
 }
 
 .notes { color: #444; font-style: italic; }
+
 
