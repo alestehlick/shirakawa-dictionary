@@ -7,6 +7,9 @@ on:
       - 'generator.py'
   workflow_dispatch:
 
+permissions:
+  contents: write  # allow the workflow to push commits
+
 jobs:
   build:
     runs-on: ubuntu-latest
