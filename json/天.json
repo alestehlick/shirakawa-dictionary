@@ -1,11 +1,9 @@
 {
-  "id": "U+5929",
-  "kanji": "天",
-  "kun_readings_romaji": ["ama", "ame"],
-  "on_readings_romaji": ["ten"],
-  "category": "heavenly phenomena",
-  "meanings": ["heaven", "sky", "uppermost"],
-  "explanation": "Early graphs show the figure of a person (大) with an added stroke above to mark what is highest; thus ‘the sky/heaven.’ By extension, the supreme or celestial in ritual language.",
-  "additional_notes": "Frequently contrasts with 地 ‘earth.’ In archaic forms the top line emphasizes ‘above.’",
-  "images": ["images/天_oracle.png", "images/天_bronze.png", "images/天_seal.png"]
-}
+    "id": "U+5929",
+    "kanji": "天",
+    "kun_readings_romaji": ["amatsu", "ame", "ama"],
+    "on_readings_romaji": ["ten"],
+    "category": "heavenly phenomena",
+    "meanings": ["heaven", "sky"],
+    "explanation": "Shuowen says: ‘It is 頂 (itadaki, the top of the head). Exalted to the highest, with nothing above it, great.’ The oracle bone script form depicts a human head. The upper part means ‘top,’ and it is not, as Shuowen says, ‘a great man.’ The bronze inscriptions show the form of a person with a large head; it is the form of a punishment in which a human head was cut off and offered to the gods of mountains and rivers. The original meaning of 天 was this. Later, ‘receiving the command of Heaven’ came to be said, and Heaven was revered as the supreme deity. In the royal house of the Zhou, the hall where Heaven was worshiped was called the Altar of Heaven (天壇). Because the ruler worshiped Heaven in that hall, he thereby assumed the dignity of 帝 (Emperor). ‘Son of Heaven’ (天子) means a king who has received the command of Heaven."
+  }
