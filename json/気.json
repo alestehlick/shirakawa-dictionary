@@ -1,11 +1,9 @@
-{
-  "id": "U+6C17",
-  "kanji": "気",
-  "kun_readings_romaji": ["ki", "ke"],
-  "on_readings_romaji": ["ki"],
-  "category": "heavenly phenomena",
-  "meanings": ["air", "spirit", "vital energy"],
-  "explanation": "*Shuowen Jiezi* states 气 means 'clouds'...",
-  "additional_notes": "Oracle form emphasizes vapor/mist...",
-  "images": ["images/気_oracle.png", "images/気_bronze.png", "images/気_seal.png"]
-}
+  {
+    "id": "U+6C17",
+    "kanji": "気",
+    "kun_readings_romaji": ["ki", "ke"],
+    "on_readings_romaji": [],
+    "category": "heavenly phenomena",
+    "meanings": ["breath", "air", "spirit", "energy"],
+    "explanation": "Shuowen says: ‘气 means cloud-vapor.’ 气 is the original form, and it is the same as 氣. In the bronze inscriptions 气 is written for cloud-vapor. Later, in the clerical script, 米 (grain) was added below, making 氣, to show vapor rising from boiling grain. This came to be used for ‘breath’ or ‘spirit.’ In the clerical form 气, the second stroke on the right descends, producing the shape of 气. 气 is thus the clerical form derived from 气 (cloud-vapor), and came to mean vital energy."
+  }
