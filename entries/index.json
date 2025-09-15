@@ -1,47 +1,49 @@
-[
-  {
-    "file": "風.html",
-    "kanji": "風",
-    "gloss": "wind ・ style ・ manner"
-  },
-  {
-    "file": "旬.html",
-    "kanji": "旬",
-    "gloss": "ten-day period ・ season (for food, etc.)"
-  },
-  {
-    "file": "宙.html",
-    "kanji": "宙",
-    "gloss": "midair ・ space ・ the midst/within"
-  },
-  {
-    "file": "宇.html",
-    "kanji": "宇",
-    "gloss": "eaves of a house ・ the heavens ・ universe"
-  },
-  {
-    "file": "天.html",
-    "kanji": "天",
-    "gloss": "heaven ・ sky"
-  },
-  {
-    "file": "气.html",
-    "kanji": "气",
-    "gloss": "breath ・ air ・ spirit ・ energy"
-  },
-  {
-    "file": "雪.html",
-    "kanji": "雪",
-    "gloss": "snow, snowfall; sometimes to cleanse, wipe away"
-  },
-  {
-    "file": "空.html",
-    "kanji": "空",
-    "gloss": "sky ・ empty ・ void"
-  },
-  {
-    "file": "宙.html",
-    "kanji": "宙",
-    "gloss": "cloud"
-  }
-]
+{
+  "heavenly phenomena": [
+    {
+      "file": "天.html",
+      "kanji": "天",
+      "gloss": "heaven ・ sky"
+    },
+    {
+      "file": "宇.html",
+      "kanji": "宇",
+      "gloss": "eaves of a house ・ the heavens ・ universe"
+    },
+    {
+      "file": "宙.html",
+      "kanji": "宙",
+      "gloss": "midair ・ space ・ the midst/within"
+    },
+    {
+      "file": "宙.html",
+      "kanji": "宙",
+      "gloss": "cloud"
+    },
+    {
+      "file": "旬.html",
+      "kanji": "旬",
+      "gloss": "ten-day period ・ season (for food, etc.)"
+    },
+    {
+      "file": "气.html",
+      "kanji": "气",
+      "gloss": "breath ・ air ・ spirit ・ energy"
+    },
+    {
+      "file": "空.html",
+      "kanji": "空",
+      "gloss": "sky ・ empty ・ void"
+    },
+    {
+      "file": "雪.html",
+      "kanji": "雪",
+      "gloss": "snow, snowfall; sometimes to cleanse, wipe away"
+    },
+    {
+      "file": "風.html",
+      "kanji": "風",
+      "gloss": "wind ・ style ・ manner"
+    }
+  ]
+}
