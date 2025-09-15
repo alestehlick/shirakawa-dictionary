@@ -1,4 +1,12 @@
 {
+  "action": [
+    {
+      "file": "走.html",
+      "kanji": "走",
+      "gloss": "to run, dash, flee, hurry",
+      "category": "action"
+    }
+  ],
   "assault": [
     {
       "file": "変.html",
