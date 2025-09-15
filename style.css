@@ -79,7 +79,7 @@ body {
   flex: 1;
   max-width: 72ch;  /* comfortable measure on desktop */
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 
@@ -183,4 +183,5 @@ a:hover { text-decoration: underline; }
   /* slightly tighter index on small screens */
   .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
+
 
