@@ -91,6 +91,18 @@
       "category": " "
     },
     {
+      "file": "道.html",
+      "kanji": "道",
+      "gloss": "road, path, way; journey; moral principle; the Way (Dao)",
+      "category": " "
+    },
+    {
+      "file": "雪.html",
+      "kanji": "雪",
+      "gloss": "snow, snowfall; sometimes to cleanse, wipe away",
+      "category": " "
+    },
+    {
       "file": "風.html",
       "kanji": "風",
       "gloss": "wind ・ style ・ manner",
@@ -105,28 +117,12 @@
       "category": "action"
     }
   ],
-  "heavenly phenomena": [
-    {
-      "file": "雪.html",
-      "kanji": "雪",
-      "gloss": "snow, snowfall; sometimes to cleanse, wipe away",
-      "category": "heavenly phenomena"
-    }
-  ],
   "language": [
     {
       "file": "言.html",
       "kanji": "言",
       "gloss": "word, speech, statement, language, to say",
       "category": "language"
-    }
-  ],
-  "the way": [
-    {
-      "file": "道.html",
-      "kanji": "道",
-      "gloss": "road, path, way; journey; moral principle; the Way (Dao)",
-      "category": "the way"
     }
   ]
 }
