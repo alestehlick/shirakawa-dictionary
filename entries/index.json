@@ -7,6 +7,12 @@
       "category": " "
     },
     {
+      "file": "天.html",
+      "kanji": "天",
+      "gloss": "heaven ・ sky",
+      "category": " "
+    },
+    {
       "file": "早.html",
       "kanji": "早",
       "gloss": "early, morning, young",
@@ -38,12 +44,6 @@
     }
   ],
   "heavenly phenomena": [
-    {
-      "file": "天.html",
-      "kanji": "天",
-      "gloss": "heaven ・ sky",
-      "category": "heavenly phenomena"
-    },
     {
       "file": "宇.html",
       "kanji": "宇",
