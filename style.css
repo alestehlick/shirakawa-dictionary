@@ -110,7 +110,7 @@ body {
 /* Headings inside the text column */
 h3 {
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.1rem;
   margin: 1rem 0 0.5rem;
   padding-bottom: 0.25rem;
@@ -183,6 +183,7 @@ a:hover { text-decoration: underline; }
   /* slightly tighter index on small screens */
   .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
+
 
 
 
