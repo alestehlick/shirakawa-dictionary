@@ -3,47 +3,56 @@
     {
       "file": "天.html",
       "kanji": "天",
-      "gloss": "heaven ・ sky"
+      "gloss": "heaven ・ sky",
+      "category": "heavenly phenomena"
     },
     {
       "file": "宇.html",
       "kanji": "宇",
-      "gloss": "eaves of a house ・ the heavens ・ universe"
+      "gloss": "eaves of a house ・ the heavens ・ universe",
+      "category": "heavenly phenomena"
     },
     {
       "file": "宙.html",
       "kanji": "宙",
-      "gloss": "midair ・ space ・ the midst/within"
+      "gloss": "midair ・ space ・ the midst/within",
+      "category": "heavenly phenomena"
     },
     {
       "file": "宙.html",
       "kanji": "宙",
-      "gloss": "cloud"
+      "gloss": "cloud",
+      "category": "heavenly phenomena"
     },
     {
       "file": "旬.html",
       "kanji": "旬",
-      "gloss": "ten-day period ・ season (for food, etc.)"
+      "gloss": "ten-day period ・ season (for food, etc.)",
+      "category": "heavenly phenomena"
     },
     {
       "file": "气.html",
       "kanji": "气",
-      "gloss": "breath ・ air ・ spirit ・ energy"
+      "gloss": "breath ・ air ・ spirit ・ energy",
+      "category": "heavenly phenomena"
     },
     {
       "file": "空.html",
       "kanji": "空",
-      "gloss": "sky ・ empty ・ void"
+      "gloss": "sky ・ empty ・ void",
+      "category": "heavenly phenomena"
     },
     {
       "file": "雪.html",
       "kanji": "雪",
-      "gloss": "snow, snowfall; sometimes to cleanse, wipe away"
+      "gloss": "snow, snowfall; sometimes to cleanse, wipe away",
+      "category": "heavenly phenomena"
     },
     {
       "file": "風.html",
       "kanji": "風",
-      "gloss": "wind ・ style ・ manner"
+      "gloss": "wind ・ style ・ manner",
+      "category": "heavenly phenomena"
     }
   ]
 }
