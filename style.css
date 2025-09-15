@@ -43,7 +43,7 @@ body {
 /* Left: Big Kanji — elegant Mincho serif */
 .kanji-col {
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(4rem, 12vw, 8rem); /* scales down on small screens */
   line-height: 1;
   min-width: 140px;
@@ -183,5 +183,6 @@ a:hover { text-decoration: underline; }
   /* slightly tighter index on small screens */
   .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
+
 
 
