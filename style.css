@@ -25,9 +25,15 @@ body {
   font-family: -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
   line-height: 1.6;
   padding: 2rem;
+
+  /* Keep very wide screens readable */
+  max-width: 1100px;
+  margin-inline: auto;
 }
 
-/* Overall entry layout */
+/* =========================
+   Entry page layout
+   ========================= */
 .entry {
   display: flex;
   gap: 2rem;
@@ -120,9 +126,11 @@ h3 {
 a { color: #564d3d; text-decoration-thickness: 0.08em; }
 a:hover { text-decoration: underline; }
 
-/* Index page groups */
+/* =========================
+   Index page (grouped)
+   ========================= */
 .cat-head {
-  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-family: "Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
   font-weight: 700;
   font-size: 1.25rem;
   margin: 1.25rem 0 0.5rem;
@@ -130,24 +138,48 @@ a:hover { text-decoration: underline; }
   padding-bottom: 0.25rem;
 }
 
+/* Compact, hole-free grid of items */
 .index-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0.5rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.4rem 1rem;
+  align-items: start;
+  grid-auto-flow: row dense;  /* backfills gaps to avoid “spread” */
+}
+
+.index-item { 
+  padding: 0.1rem 0;
+  line-height: 1.5;
+  break-inside: avoid;
 }
 
 .index-item a {
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
+  margin-right: .25rem;
 }
 .index-item a:hover { text-decoration: underline; }
 
-/* Responsive niceties */
+/* one-line gloss with ellipsis; add title attr in HTML for full tooltip */
+.index-item .gloss {
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;      /* change to 2 if you want two lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================
+   Responsive niceties
+   ========================= */
 @media (max-width: 900px){
   .entry { flex-wrap: wrap; gap: 1.25rem; }
   .kanji-col { min-width: 0; } /* let it shrink on phones */
   .image-col { order: 3; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
   .image-col img { width: clamp(72px, 24vw, 100px); }  /* smaller on phones */
   .text-col { order: 2; max-width: 100%; }
-}
 
+  /* slightly tighter index on small screens */
+  .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+}
