@@ -25,12 +25,6 @@
       "category": " "
     },
     {
-      "file": "宙.html",
-      "kanji": "宙",
-      "gloss": "cloud",
-      "category": " "
-    },
-    {
       "file": "尚.html",
       "kanji": "尚",
       "gloss": "esteem, revere, value, aspire; still, yet, furthermore",
@@ -118,6 +112,12 @@
       "file": "雪.html",
       "kanji": "雪",
       "gloss": "snow, snowfall; sometimes to cleanse, wipe away",
+      "category": " "
+    },
+    {
+      "file": "雲.html",
+      "kanji": "雲",
+      "gloss": "cloud",
       "category": " "
     },
     {
