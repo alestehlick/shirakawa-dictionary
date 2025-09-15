@@ -54,5 +54,13 @@
       "gloss": "wind ・ style ・ manner",
       "category": "heavenly phenomena"
     }
+  ],
+  "the way": [
+    {
+      "file": "道.html",
+      "kanji": "道",
+      "gloss": "road, path, way; journey; moral principle; the Way (Dao)",
+      "category": "the way"
+    }
   ]
 }
