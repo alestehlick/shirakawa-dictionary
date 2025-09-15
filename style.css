@@ -45,6 +45,7 @@ body {
 }
 
 /* Middle: vertical image stack */
+.image-col:empty { display: none; }
 .image-col {
   flex: 0 0 auto;
   display: flex;
@@ -59,6 +60,7 @@ body {
   border-radius: 8px;
   padding: 6px;
 }
+
 
 /* Right: Explanation column — Mincho serif, a bit heavier for readability */
 .text-col {
@@ -119,3 +121,4 @@ a:hover { text-decoration: underline; }
   .image-col img { width: 100px; }
   .text-col { order: 2; max-width: 100%; }
 }
+
