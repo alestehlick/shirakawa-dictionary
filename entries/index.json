@@ -19,6 +19,12 @@
       "category": " "
     },
     {
+      "file": "宙.html",
+      "kanji": "宙",
+      "gloss": "midair ・ space ・ the midst/within",
+      "category": " "
+    },
+    {
       "file": "早.html",
       "kanji": "早",
       "gloss": "early, morning, young",
@@ -50,12 +56,6 @@
     }
   ],
   "heavenly phenomena": [
-    {
-      "file": "宙.html",
-      "kanji": "宙",
-      "gloss": "midair ・ space ・ the midst/within",
-      "category": "heavenly phenomena"
-    },
     {
       "file": "宙.html",
       "kanji": "宙",
