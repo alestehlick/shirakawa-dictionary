@@ -59,6 +59,12 @@
       "kanji": "早",
       "gloss": "early, morning, young",
       "category": " "
+    },
+    {
+      "file": "旬.html",
+      "kanji": "旬",
+      "gloss": "ten-day period ・ season (for food, etc.)",
+      "category": " "
     }
   ],
   "action": [
@@ -82,12 +88,6 @@
       "file": "宙.html",
       "kanji": "宙",
       "gloss": "cloud",
-      "category": "heavenly phenomena"
-    },
-    {
-      "file": "旬.html",
-      "kanji": "旬",
-      "gloss": "ten-day period ・ season (for food, etc.)",
       "category": "heavenly phenomena"
     },
     {
