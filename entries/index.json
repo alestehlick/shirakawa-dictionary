@@ -55,6 +55,14 @@
       "category": "heavenly phenomena"
     }
   ],
+  "teaching": [
+    {
+      "file": "教.html",
+      "kanji": "教",
+      "gloss": "to teach, instruct, educate; teaching, doctrine, faith",
+      "category": "teaching"
+    }
+  ],
   "the way": [
     {
       "file": "道.html",
