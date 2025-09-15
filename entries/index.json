@@ -63,6 +63,14 @@
       "category": "heavenly phenomena"
     }
   ],
+  "language": [
+    {
+      "file": "言.html",
+      "kanji": "言",
+      "gloss": "word, speech, statement, language, to say",
+      "category": "language"
+    }
+  ],
   "teaching": [
     {
       "file": "教.html",
