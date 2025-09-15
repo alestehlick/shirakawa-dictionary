@@ -25,6 +25,12 @@
       "category": " "
     },
     {
+      "file": "宙.html",
+      "kanji": "宙",
+      "gloss": "cloud",
+      "category": " "
+    },
+    {
       "file": "尚.html",
       "kanji": "尚",
       "gloss": "esteem, revere, value, aspire; still, yet, furthermore",
@@ -83,6 +89,12 @@
       "kanji": "空",
       "gloss": "sky ・ empty ・ void",
       "category": " "
+    },
+    {
+      "file": "風.html",
+      "kanji": "風",
+      "gloss": "wind ・ style ・ manner",
+      "category": " "
     }
   ],
   "action": [
@@ -95,21 +107,9 @@
   ],
   "heavenly phenomena": [
     {
-      "file": "宙.html",
-      "kanji": "宙",
-      "gloss": "cloud",
-      "category": "heavenly phenomena"
-    },
-    {
       "file": "雪.html",
       "kanji": "雪",
       "gloss": "snow, snowfall; sometimes to cleanse, wipe away",
-      "category": "heavenly phenomena"
-    },
-    {
-      "file": "風.html",
-      "kanji": "風",
-      "gloss": "wind ・ style ・ manner",
       "category": "heavenly phenomena"
     }
   ],
