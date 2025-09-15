@@ -11,12 +11,6 @@
       "kanji": "早",
       "gloss": "early, morning, young",
       "category": " "
-    },
-    {
-      "file": "私.html",
-      "kanji": "私",
-      "gloss": "private, personal, secret; “I, me”; selfish",
-      "category": " "
     }
   ],
   "action": [
@@ -33,6 +27,14 @@
       "kanji": "廷",
       "gloss": "courtyard, garden, yard, palace court",
       "category": "assault"
+    }
+  ],
+  "farming": [
+    {
+      "file": "私.html",
+      "kanji": "私",
+      "gloss": "private, personal, secret; “I, me”; selfish",
+      "category": "farming"
     }
   ],
   "heavenly phenomena": [
