@@ -77,6 +77,12 @@
       "kanji": "私",
       "gloss": "private, personal, secret; “I, me”; selfish",
       "category": " "
+    },
+    {
+      "file": "空.html",
+      "kanji": "空",
+      "gloss": "sky ・ empty ・ void",
+      "category": " "
     }
   ],
   "action": [
@@ -92,12 +98,6 @@
       "file": "宙.html",
       "kanji": "宙",
       "gloss": "cloud",
-      "category": "heavenly phenomena"
-    },
-    {
-      "file": "空.html",
-      "kanji": "空",
-      "gloss": "sky ・ empty ・ void",
       "category": "heavenly phenomena"
     },
     {
