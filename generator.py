@@ -24,7 +24,6 @@ TEMPLATE = """<!doctype html>
     <div class="meanings">{meanings}</div>
     <h3>Explanation</h3>
     <p>{explanation}</p>
-    <h3>Additional Notes</h3>
     <p class="notes">{notes}</p>
   </div>
 </div>
@@ -41,7 +40,6 @@ for file in json_dir.glob("*.json"):
         on=", ".join(data.get("on_readings_romaji", [])),
         meanings=" ・ ".join(data.get("meanings", [])),
         explanation=data.get("explanation", ""),
-        notes=data.get("additional_notes", ""),
         images=img_tags
     )
     out_file = entries_dir / f"{data['kanji']}.html"
