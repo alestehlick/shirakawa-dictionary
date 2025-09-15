@@ -120,6 +120,28 @@ h3 {
 a { color: #564d3d; text-decoration-thickness: 0.08em; }
 a:hover { text-decoration: underline; }
 
+/* Index page groups */
+.cat-head {
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 1.25rem 0 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.25rem;
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.5rem 1rem;
+}
+
+.index-item a {
+  font-weight: 700;
+  text-decoration: none;
+}
+.index-item a:hover { text-decoration: underline; }
+
 /* Responsive niceties */
 @media (max-width: 900px){
   .entry { flex-wrap: wrap; gap: 1.25rem; }
@@ -128,3 +150,4 @@ a:hover { text-decoration: underline; }
   .image-col img { width: clamp(72px, 24vw, 100px); }  /* smaller on phones */
   .text-col { order: 2; max-width: 100%; }
 }
+
