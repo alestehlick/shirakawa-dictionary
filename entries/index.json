@@ -1,11 +1,13 @@
 {
-  "heavenly phenomena": [
+  "assault": [
     {
       "file": "変.html",
       "kanji": "変",
       "gloss": "heaven ・ sky",
-      "category": "heavenly phenomena"
-    },
+      "category": "assault"
+    }
+  ],
+  "heavenly phenomena": [
     {
       "file": "天.html",
       "kanji": "天",
