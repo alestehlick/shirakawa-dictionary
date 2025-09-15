@@ -25,6 +25,24 @@
       "category": " "
     },
     {
+      "file": "尚.html",
+      "kanji": "尚",
+      "gloss": "esteem, revere, value, aspire; still, yet, furthermore",
+      "category": " "
+    },
+    {
+      "file": "廷.html",
+      "kanji": "廷",
+      "gloss": "courtyard, garden, yard, palace court",
+      "category": " "
+    },
+    {
+      "file": "廷.html",
+      "kanji": "廷",
+      "gloss": "court, courtyard, government office, imperial court",
+      "category": " "
+    },
+    {
       "file": "早.html",
       "kanji": "早",
       "gloss": "early, morning, young",
@@ -37,14 +55,6 @@
       "kanji": "走",
       "gloss": "to run, dash, flee, hurry",
       "category": "action"
-    }
-  ],
-  "assault": [
-    {
-      "file": "廷.html",
-      "kanji": "廷",
-      "gloss": "courtyard, garden, yard, palace court",
-      "category": "assault"
     }
   ],
   "farming": [
@@ -119,24 +129,10 @@
   ],
   "尚": [
     {
-      "file": "尚.html",
-      "kanji": "尚",
-      "gloss": "esteem, revere, value, aspire; still, yet, furthermore",
-      "category": "尚"
-    },
-    {
       "file": "当.html",
       "kanji": "当",
       "gloss": "to be appropriate, to correspond, to be in charge, to hit, to apply, to undertake",
       "category": "尚"
-    }
-  ],
-  "廷": [
-    {
-      "file": "廷.html",
-      "kanji": "廷",
-      "gloss": "court, courtyard, government office, imperial court",
-      "category": "廷"
     }
   ]
 }
