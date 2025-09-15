@@ -24,7 +24,6 @@ TEMPLATE = """<!doctype html>
     <div class="meanings">{meanings}</div>
     <h3>Explanation</h3>
     <p>{explanation}</p>
-    <p class="notes">{notes}</p>
   </div>
 </div>
 </body></html>
