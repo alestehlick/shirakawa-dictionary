@@ -2,11 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap');
 
 :root{
-  --cream: #f8f5e6;   /* comfortable “paper” */
+  /* Lightened paper + tuned accents */
+  --cream: #fbf9ef;   /* lighter than #f8f5e6 */
   --ink:   #262626;   /* soft black */
-  --muted: #6f6b63;   /* muted text */
-  --rule:  #ddd6c8;   /* separators tuned for cream */
+  --muted: #756f66;   /* muted text */
+  --rule:  #e7e0d0;   /* lighter separators for the new paper */
 }
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
 
 html, body {
   background: var(--cream);
@@ -16,7 +21,7 @@ html, body {
 }
 
 body {
-  /* keep UI bits sans if you like; text column will override to serif */
+  /* keep UI bits sans; text column overrides to serif */
   font-family: -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
   line-height: 1.6;
   padding: 2rem;
@@ -33,7 +38,7 @@ body {
 .kanji-col {
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
   font-weight: 700;
-  font-size: 8rem;
+  font-size: clamp(4rem, 12vw, 8rem); /* scales down on small screens */
   line-height: 1;
   min-width: 140px;
   display: flex;
@@ -44,7 +49,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Middle: vertical image stack */
+/* Middle: image */
 .image-col:empty { display: none; }
 .image-col {
   flex: 0 0 auto;
@@ -54,22 +59,29 @@ body {
   align-items: center;
 }
 .image-col img {
-  width: 120px;
+  width: clamp(90px, 18vw, 120px); /* smaller & responsive */
+  max-width: 100%;
+  height: auto;
   background: #fff;
-  border: 1px solid #d9d2c4;  /* softer than pure gray on cream */
+  border: 1px solid #e2dbc9; /* softened for the lighter paper */
   border-radius: 8px;
   padding: 6px;
 }
 
-
-/* Right: Explanation column — Mincho serif, a bit heavier for readability */
+/* Right: Explanation column — justified & mobile-friendly */
 .text-col {
   flex: 1;
-  max-width: 72ch;  /* comfortable measure */
+  max-width: 72ch;  /* comfortable measure on desktop */
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
-  font-weight: 500; /* not too thin */
-  line-height: 1.75;
+  font-weight: 500;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
+
+  /* Justification + hyphenation */
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 /* Small metadata text */
@@ -104,21 +116,15 @@ h3 {
   margin: 0 0 0.9rem; 
 }
 
-/* Notes styling */
-.notes { 
-  color: #3a3a3a; 
-  font-style: italic; 
-}
-
 /* Optional: subtle link style on cream */
 a { color: #564d3d; text-decoration-thickness: 0.08em; }
 a:hover { text-decoration: underline; }
 
-/* Responsive nicety: on narrow screens, drop images below the big kanji */
+/* Responsive niceties */
 @media (max-width: 900px){
-  .entry { flex-wrap: wrap; }
+  .entry { flex-wrap: wrap; gap: 1.25rem; }
+  .kanji-col { min-width: 0; } /* let it shrink on phones */
   .image-col { order: 3; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
-  .image-col img { width: 100px; }
+  .image-col img { width: clamp(72px, 24vw, 100px); }  /* smaller on phones */
   .text-col { order: 2; max-width: 100%; }
 }
-
