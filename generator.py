@@ -1,12 +1,14 @@
 import json
 from pathlib import Path
+from collections import defaultdict, OrderedDict
 
 entries_dir = Path("entries")
 json_dir = Path("json")
 images_dir = Path("images")
 entries_dir.mkdir(parents=True, exist_ok=True)
 
-index = []
+# Optional: enforce a custom category order. Leave [] to sort A→Z.
+CATEGORY_ORDER = []  # e.g. ["heavenly phenomena", "animals", "plants"]
 
 TEMPLATE = """<!doctype html>
 <html lang="en">
@@ -30,19 +32,22 @@ TEMPLATE = """<!doctype html>
 </body></html>
 """
 
-def find_image_src(kanji: str) -> str | None:
-    # Prefer .png, but allow a few common alternatives.
+def find_image_src(kanji: str):
     for ext in (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"):
         p = images_dir / f"{kanji}{ext}"
         if p.exists():
-            # entries/*.html -> ../images/{file}
             return f"../images/{kanji}{ext}"
     return None
+
+groups = defaultdict(list)
 
 for file in json_dir.glob("*.json"):
     data = json.loads(file.read_text(encoding="utf-8"))
 
     kanji = data["kanji"]
+    category = data.get("category", "Uncategorized")
+
+    # ---- build entry page ----
     img_src = find_image_src(kanji)
     images_html = (
         f'<div class="image-col"><img src="{img_src}" alt="{kanji} illustration" '
@@ -52,7 +57,7 @@ for file in json_dir.glob("*.json"):
 
     html_content = TEMPLATE.format(
         kanji=kanji,
-        category=data.get("category", ""),
+        category=category,
         kun=", ".join(data.get("kun_readings_romaji", [])),
         on=", ".join(data.get("on_readings_romaji", [])),
         meanings=" ・ ".join(data.get("meanings", [])),
@@ -63,12 +68,27 @@ for file in json_dir.glob("*.json"):
     out_file = entries_dir / f"{kanji}.html"
     out_file.write_text(html_content, encoding="utf-8")
 
-    index.append({
+    # ---- collect for grouped index ----
+    groups[category].append({
         "file": f"{kanji}.html",
         "kanji": kanji,
         "gloss": " ・ ".join(data.get("meanings", []))
     })
 
+# sort entries inside each category by kanji
+for cat in groups:
+    groups[cat].sort(key=lambda x: x["kanji"])
+
+# decide category order
+if CATEGORY_ORDER:
+    ordered_cats = [c for c in CATEGORY_ORDER if c in groups] + \
+                   sorted([c for c in groups if c not in CATEGORY_ORDER], key=str.lower)
+else:
+    ordered_cats = sorted(groups.keys(), key=str.lower)
+
+grouped_index = OrderedDict((cat, groups[cat]) for cat in ordered_cats)
+
 (entries_dir / "index.json").write_text(
-    json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8"
+    json.dumps(grouped_index, ensure_ascii=False, indent=2),
+    encoding="utf-8"
 )
