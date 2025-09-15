@@ -1,8 +1,9 @@
-import os, json
+import json
 from pathlib import Path
 
 entries_dir = Path("entries")
 json_dir = Path("json")
+images_dir = Path("images")
 entries_dir.mkdir(parents=True, exist_ok=True)
 
 index = []
@@ -29,27 +30,28 @@ TEMPLATE = """<!doctype html>
 </body></html>
 """
 
-def make_img_tags(entry):
-    tags = []
-    for i, item in enumerate(entry.get("images", []), 1):
-        if isinstance(item, str):
-            src, alt = item, f'{entry.get("kanji","")} illustration {i}'
-        else:
-            src = item.get("src", "")
-            alt = item.get("alt", f'{entry.get("kanji","")} illustration {i}')
-        if src:
-            tags.append(f'<img src="{src}" alt="{alt}" loading="lazy" decoding="async">')
-    return "".join(tags)
+def find_image_src(kanji: str) -> str | None:
+    # Prefer .png, but allow a few common alternatives.
+    for ext in (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"):
+        p = images_dir / f"{kanji}{ext}"
+        if p.exists():
+            # entries/*.html -> ../images/{file}
+            return f"../images/{kanji}{ext}"
+    return None
 
 for file in json_dir.glob("*.json"):
     data = json.loads(file.read_text(encoding="utf-8"))
 
-    # images column (omit completely if none)
-    img_tags = make_img_tags(data)
-    images_html = f'<div class="image-col">{img_tags}</div>' if img_tags else ""
+    kanji = data["kanji"]
+    img_src = find_image_src(kanji)
+    images_html = (
+        f'<div class="image-col"><img src="{img_src}" alt="{kanji} illustration" '
+        f'loading="lazy" decoding="async"></div>'
+        if img_src else ""
+    )
 
     html_content = TEMPLATE.format(
-        kanji=data["kanji"],
+        kanji=kanji,
         category=data.get("category", ""),
         kun=", ".join(data.get("kun_readings_romaji", [])),
         on=", ".join(data.get("on_readings_romaji", [])),
@@ -58,12 +60,12 @@ for file in json_dir.glob("*.json"):
         images_html=images_html,
     )
 
-    out_file = entries_dir / f"{data['kanji']}.html"
+    out_file = entries_dir / f"{kanji}.html"
     out_file.write_text(html_content, encoding="utf-8")
 
     index.append({
-        "file": f"{data['kanji']}.html",
-        "kanji": data["kanji"],
+        "file": f"{kanji}.html",
+        "kanji": kanji,
         "gloss": " ・ ".join(data.get("meanings", []))
     })
 
