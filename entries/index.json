@@ -49,6 +49,12 @@
       "category": " "
     },
     {
+      "file": "教.html",
+      "kanji": "教",
+      "gloss": "to teach, instruct, educate; teaching, doctrine, faith",
+      "category": " "
+    },
+    {
       "file": "早.html",
       "kanji": "早",
       "gloss": "early, morning, young",
@@ -115,14 +121,6 @@
       "kanji": "言",
       "gloss": "word, speech, statement, language, to say",
       "category": "language"
-    }
-  ],
-  "teaching": [
-    {
-      "file": "教.html",
-      "kanji": "教",
-      "gloss": "to teach, instruct, educate; teaching, doctrine, faith",
-      "category": "teaching"
     }
   ],
   "the way": [
