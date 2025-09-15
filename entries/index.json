@@ -65,6 +65,12 @@
       "kanji": "旬",
       "gloss": "ten-day period ・ season (for food, etc.)",
       "category": " "
+    },
+    {
+      "file": "气.html",
+      "kanji": "气",
+      "gloss": "breath ・ air ・ spirit ・ energy",
+      "category": " "
     }
   ],
   "action": [
@@ -88,12 +94,6 @@
       "file": "宙.html",
       "kanji": "宙",
       "gloss": "cloud",
-      "category": "heavenly phenomena"
-    },
-    {
-      "file": "气.html",
-      "kanji": "气",
-      "gloss": "breath ・ air ・ spirit ・ energy",
       "category": "heavenly phenomena"
     },
     {
