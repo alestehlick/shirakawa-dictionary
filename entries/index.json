@@ -13,6 +13,12 @@
       "category": " "
     },
     {
+      "file": "宇.html",
+      "kanji": "宇",
+      "gloss": "eaves of a house ・ the heavens ・ universe",
+      "category": " "
+    },
+    {
       "file": "早.html",
       "kanji": "早",
       "gloss": "early, morning, young",
@@ -44,12 +50,6 @@
     }
   ],
   "heavenly phenomena": [
-    {
-      "file": "宇.html",
-      "kanji": "宇",
-      "gloss": "eaves of a house ・ the heavens ・ universe",
-      "category": "heavenly phenomena"
-    },
     {
       "file": "宙.html",
       "kanji": "宙",
