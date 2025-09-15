@@ -71,6 +71,12 @@
       "kanji": "气",
       "gloss": "breath ・ air ・ spirit ・ energy",
       "category": " "
+    },
+    {
+      "file": "私.html",
+      "kanji": "私",
+      "gloss": "private, personal, secret; “I, me”; selfish",
+      "category": " "
     }
   ],
   "action": [
@@ -79,14 +85,6 @@
       "kanji": "走",
       "gloss": "to run, dash, flee, hurry",
       "category": "action"
-    }
-  ],
-  "farming": [
-    {
-      "file": "私.html",
-      "kanji": "私",
-      "gloss": "private, personal, secret; “I, me”; selfish",
-      "category": "farming"
     }
   ],
   "heavenly phenomena": [
