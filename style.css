@@ -7,6 +7,9 @@
   --ink:   #262626;   /* soft black */
   --muted: #756f66;   /* muted text */
   --rule:  #e7e0d0;   /* lighter separators for the new paper */
+
+  /* NEW: single source of truth for big kanji size (also caps top image) */
+  --kanji-size: clamp(4rem, 12vw, 8rem);
 }
 
 *,
@@ -44,7 +47,7 @@ body {
 .kanji-col {
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
   font-weight: 600;
-  font-size: clamp(4rem, 12vw, 8rem); /* scales down on small screens */
+  font-size: var(--kanji-size); /* was clamp(4rem, 12vw, 8rem) */
   line-height: 1;
   min-width: 140px;
   display: flex;
@@ -170,14 +173,17 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
 }
 
-/* Landscape images sit at the top of the text column, full width */
-.wide-image {
-  margin: 0 0 0.75rem 0;
-}
+/* Landscape image placed at the top of the text column */
+.wide-image { margin: 0 0 0.6rem 0; }
 .wide-image img {
   display: block;
-  width: 100%;
+
+  /* NEW: cap height ≈ big kanji; still scale responsively */
+  max-height: calc(var(--kanji-size) * 0.9);
+  width: auto;
+  max-width: 100%;
   height: auto;
+
   background: #fff;
   border: 1px solid #e2dbc9;
   border-radius: 8px;
@@ -197,8 +203,3 @@ a:hover { text-decoration: underline; }
   /* slightly tighter index on small screens */
   .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
-
-
-
-
-
