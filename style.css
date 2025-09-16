@@ -170,6 +170,20 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
 }
 
+/* Landscape images sit at the top of the text column, full width */
+.wide-image {
+  margin: 0 0 0.75rem 0;
+}
+.wide-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e2dbc9;
+  border-radius: 8px;
+  padding: 6px;
+}
+
 /* =========================
    Responsive niceties
    ========================= */
@@ -183,6 +197,7 @@ a:hover { text-decoration: underline; }
   /* slightly tighter index on small screens */
   .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
+
 
 
 
