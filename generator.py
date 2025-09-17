@@ -6,6 +6,7 @@ from collections import defaultdict, OrderedDict
 entries_dir = Path("entries")
 json_dir    = Path("json")
 images_dir  = Path("images")
+
 entries_dir.mkdir(parents=True, exist_ok=True)
 
 # Optional: enforce a custom category order on the index page (else A→Z).
@@ -37,32 +38,6 @@ TEMPLATE = """<!doctype html>
 </body></html>
 """
 
-# ---------- list parsing helpers ----------
-
-def parse_semicolon_list(value):
-    """
-    Accepts either a string or a list of strings.
-    Splits on ';', trims whitespace, drops empties.
-    Does NOT split on commas, so 'great, big' stays as one item.
-    """
-    items = []
-    if isinstance(value, str):
-        parts = value.split(';')
-        items = [p.strip() for p in parts if p.strip()]
-    elif isinstance(value, list):
-        for v in value:
-            if isinstance(v, str):
-                parts = v.split(';')
-                items.extend(p.strip() for p in parts if p.strip())
-    # de-duplicate while preserving order (optional; comment out if not desired)
-    seen = set()
-    out = []
-    for it in items:
-        if it not in seen:
-            seen.add(it)
-            out.append(it)
-    return out
-
 # ---------- image helpers (no external deps) ----------
 
 def png_size(path: Path):
@@ -77,7 +52,7 @@ def png_size(path: Path):
 def jpeg_size(path: Path):
     with path.open('rb') as f:
         data = f.read(24)
-        if len(data) < 2 or data[0:2] != b'\xff\xd8':  # SOI
+        if len(data) < 2 or data[0:2] != b'\xff\xd8':
             return None
         f.seek(2)
         while True:
@@ -89,7 +64,6 @@ def jpeg_size(path: Path):
             while b == b'\xff':
                 b = f.read(1)
             marker = b[0]
-            # SOF markers that contain size
             if marker in (0xC0,0xC1,0xC2,0xC3,0xC5,0xC6,0xC7,0xC9,0xCA,0xCB,0xCD,0xCE,0xCF):
                 _len = struct.unpack('>H', f.read(2))[0]
                 f.read(1)  # precision
@@ -121,10 +95,9 @@ def get_image_size(path: Path):
             return gif_size(path)
     except Exception:
         pass
-    return None  # unknown/unsupported (e.g., webp/svg)
+    return None
 
-def find_image_src(kanji: str):
-    """Find images/{kanji}.{ext} and return relative src for entries/*.html."""
+def find_image_src(kanji: str) -> str | None:
     for ext in IMAGE_EXTS:
         p = images_dir / f"{kanji}{ext}"
         if p.exists():
@@ -155,23 +128,18 @@ def load_json_strict(path: Path) -> dict:
 
 # ---------- Build pages & grouped index ----------
 
-groups = defaultdict(list)
+groups: dict[str, list[dict]] = defaultdict(list)
 
 for file in sorted(json_dir.glob("*.json")):
     data = load_json_strict(file)
 
     kanji     = data["kanji"]
     category  = data.get("category", "Uncategorized")
-
-    # NEW: accept semicolon-separated strings or lists and render with dots
-    kun_list  = parse_semicolon_list(data.get("kun_readings_romaji", []))
-    on_list   = parse_semicolon_list(data.get("on_readings_romaji", []))
-    mean_list = parse_semicolon_list(data.get("meanings", []))
-
-    kun       = " ・ ".join(kun_list)
-    on        = " ・ ".join(on_list)
-    meanings  = " ・ ".join(mean_list)
-
+    kun_list  = data.get("kun_readings_romaji", []) or []
+    on_list   = data.get("on_readings_romaji", []) or []
+    kun       = ", ".join(kun_list)
+    on        = ", ".join(on_list)
+    meanings  = " ・ ".join(data.get("meanings", []))
     expl      = data.get("explanation", "")
 
     # Prefer explicit JSON path if you add one; else auto-find by filename.
@@ -211,11 +179,14 @@ for file in sorted(json_dir.glob("*.json")):
     out_file = entries_dir / f"{kanji}.html"
     out_file.write_text(html_content, encoding="utf-8")
 
+    # Include kun/on arrays in the index so the browser can search them
     groups[category].append({
         "file": f"{kanji}.html",
         "kanji": kanji,
-        "gloss": meanings,      # use the dotted meanings for the index too
+        "gloss": meanings,
         "category": category,
+        "kun": kun_list,
+        "on": on_list,
     })
 
 # sort entries in each category by kanji and write grouped index
