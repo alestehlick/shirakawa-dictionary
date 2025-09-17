@@ -6,7 +6,6 @@ from collections import defaultdict, OrderedDict
 entries_dir = Path("entries")
 json_dir    = Path("json")
 images_dir  = Path("images")
-
 entries_dir.mkdir(parents=True, exist_ok=True)
 
 # Optional: enforce a custom category order on the index page (else A→Z).
@@ -38,6 +37,32 @@ TEMPLATE = """<!doctype html>
 </body></html>
 """
 
+# ---------- list parsing helpers ----------
+
+def parse_semicolon_list(value):
+    """
+    Accepts either a string or a list of strings.
+    Splits on ';', trims whitespace, drops empties.
+    Does NOT split on commas, so 'great, big' stays as one item.
+    """
+    items = []
+    if isinstance(value, str):
+        parts = value.split(';')
+        items = [p.strip() for p in parts if p.strip()]
+    elif isinstance(value, list):
+        for v in value:
+            if isinstance(v, str):
+                parts = v.split(';')
+                items.extend(p.strip() for p in parts if p.strip())
+    # de-duplicate while preserving order (optional; comment out if not desired)
+    seen = set()
+    out = []
+    for it in items:
+        if it not in seen:
+            seen.add(it)
+            out.append(it)
+    return out
+
 # ---------- image helpers (no external deps) ----------
 
 def png_size(path: Path):
@@ -61,7 +86,6 @@ def jpeg_size(path: Path):
                 return None
             if b != b'\xff':
                 continue
-            # skip fill bytes
             while b == b'\xff':
                 b = f.read(1)
             marker = b[0]
@@ -99,7 +123,7 @@ def get_image_size(path: Path):
         pass
     return None  # unknown/unsupported (e.g., webp/svg)
 
-def find_image_src(kanji: str) -> str | None:
+def find_image_src(kanji: str):
     """Find images/{kanji}.{ext} and return relative src for entries/*.html."""
     for ext in IMAGE_EXTS:
         p = images_dir / f"{kanji}{ext}"
@@ -108,10 +132,8 @@ def find_image_src(kanji: str) -> str | None:
     return None
 
 def local_path_from_src(src: str) -> Path | None:
-    """Map an img src back to a local file Path for size sniffing."""
     if not src:
         return None
-    # handles "../images/天.png", "/.../images/天.png", "images/天.png"
     name = os.path.basename(src)
     p = images_dir / name
     return p if p.exists() else None
@@ -133,16 +155,23 @@ def load_json_strict(path: Path) -> dict:
 
 # ---------- Build pages & grouped index ----------
 
-groups: dict[str, list[dict]] = defaultdict(list)
+groups = defaultdict(list)
 
 for file in sorted(json_dir.glob("*.json")):
     data = load_json_strict(file)
 
     kanji     = data["kanji"]
     category  = data.get("category", "Uncategorized")
-    kun       = ", ".join(data.get("kun_readings_romaji", []))
-    on        = ", ".join(data.get("on_readings_romaji", []))
-    meanings  = " ・ ".join(data.get("meanings", []))
+
+    # NEW: accept semicolon-separated strings or lists and render with dots
+    kun_list  = parse_semicolon_list(data.get("kun_readings_romaji", []))
+    on_list   = parse_semicolon_list(data.get("on_readings_romaji", []))
+    mean_list = parse_semicolon_list(data.get("meanings", []))
+
+    kun       = " ・ ".join(kun_list)
+    on        = " ・ ".join(on_list)
+    meanings  = " ・ ".join(mean_list)
+
     expl      = data.get("explanation", "")
 
     # Prefer explicit JSON path if you add one; else auto-find by filename.
@@ -185,7 +214,7 @@ for file in sorted(json_dir.glob("*.json")):
     groups[category].append({
         "file": f"{kanji}.html",
         "kanji": kanji,
-        "gloss": meanings,
+        "gloss": meanings,      # use the dotted meanings for the index too
         "category": category,
     })
 
