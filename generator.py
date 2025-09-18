@@ -1,4 +1,4 @@
-import json, os, struct
+import json, os, struct, html
 from pathlib import Path
 from collections import defaultdict, OrderedDict
 
@@ -32,7 +32,7 @@ TEMPLATE = """<!doctype html>
     <div class="readings"><b>Kun:</b> {kun} &nbsp;|&nbsp; <b>On:</b> {on}</div>
     <div class="meanings">{meanings}</div>
     <h3>Explanation</h3>
-    <p>{explanation}</p>
+    <p>{explanation_html}</p>
   </div>
 </div>
 </body></html>
@@ -126,13 +126,45 @@ def load_json_strict(path: Path) -> dict:
             f"{bad_line}\n{pointer}\n"
         )
 
+# ---------- Linkify helpers ----------
+
+def build_kanji_map(all_entries: list[dict]) -> dict[str, str]:
+    """
+    Map kanji -> 'kanji.html' for every entry that exists.
+    """
+    return {e["kanji"]: f'{e["kanji"]}.html' for e in all_entries if "kanji" in e and e["kanji"]}
+
+def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji: str) -> str:
+    """
+    Escape HTML, then wrap any character that is a known kanji (and not the current entry's kanji)
+    with a link to its entry page.
+    """
+    if not raw_text:
+        return ""
+    s = html.escape(raw_text)  # & < > " ' become entities; CJK remain intact
+    out_chars = []
+    for ch in s:
+        # Only link if this exact character is a key (kanji) and not the current entry's own kanji
+        if ch in kanji_to_file and ch != self_kanji:
+            out_chars.append(f'<a class="kanji-link" href="{kanji_to_file[ch]}">{ch}</a>')
+        else:
+            out_chars.append(ch)
+    return "".join(out_chars)
+
 # ---------- Build pages & grouped index ----------
+
+# First pass: load all JSON to know which kanji exist
+raw_entries = []
+for file in sorted(json_dir.glob("*.json")):
+    data = load_json_strict(file)
+    raw_entries.append(data)
+
+kanji_to_file = build_kanji_map(raw_entries)
 
 groups: dict[str, list[dict]] = defaultdict(list)
 
-for file in sorted(json_dir.glob("*.json")):
-    data = load_json_strict(file)
-
+# Second pass: generate pages and grouped index
+for data in raw_entries:
     kanji     = data["kanji"]
     category  = data.get("category", "Uncategorized")
     kun_list  = data.get("kun_readings_romaji", []) or []
@@ -140,7 +172,7 @@ for file in sorted(json_dir.glob("*.json")):
     kun       = ", ".join(kun_list)
     on        = ", ".join(on_list)
     meanings  = " ・ ".join(data.get("meanings", []))
-    expl      = data.get("explanation", "")
+    expl_raw  = data.get("explanation", "")
 
     # Prefer explicit JSON path if you add one; else auto-find by filename.
     explicit_img = data.get("image")
@@ -153,7 +185,6 @@ for file in sorted(json_dir.glob("*.json")):
         local = local_path_from_src(img_src) if explicit_img else (images_dir / os.path.basename(img_src))
         size = get_image_size(local) if local and local.exists() else None
         is_landscape = bool(size and size[0] > size[1])
-
         if is_landscape:
             wide_image_html = (
                 f'<figure class="wide-image"><img src="{img_src}" alt="{kanji} illustration" '
@@ -165,13 +196,16 @@ for file in sorted(json_dir.glob("*.json")):
                 f'loading="lazy" decoding="async"></div>'
             )
 
+    # Crosslink kanji inside the explanation
+    explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
+
     html_content = TEMPLATE.format(
         kanji=kanji,
         category=category,
         kun=kun,
         on=on,
         meanings=meanings,
-        explanation=expl,
+        explanation_html=explanation_html,
         images_html=images_html,
         wide_image_html=wide_image_html,
     )
@@ -179,7 +213,6 @@ for file in sorted(json_dir.glob("*.json")):
     out_file = entries_dir / f"{kanji}.html"
     out_file.write_text(html_content, encoding="utf-8")
 
-    # Include kun/on arrays in the index so the browser can search them
     groups[category].append({
         "file": f"{kanji}.html",
         "kanji": kanji,
