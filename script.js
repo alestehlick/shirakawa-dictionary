@@ -7,7 +7,7 @@ async function loadEntries() {
     const data = await res.json();
     results.innerHTML = '';
 
-    // If legacy flat array, group it on the fly
+    // If legacy flat array, group on the fly
     const grouped = Array.isArray(data)
       ? data.reduce((acc, e) => {
           const cat = e.category || 'Uncategorized';
@@ -29,10 +29,15 @@ async function loadEntries() {
       grid.className = 'index-grid';
 
       items.forEach(entry => {
+        const kun = Array.isArray(entry.kun) ? entry.kun.join(' ') : '';
+        const on  = Array.isArray(entry.on)  ? entry.on.join(' ')  : '';
+        const searchBlob = `${entry.kanji} ${entry.gloss} ${category} ${kun} ${on}`.toLowerCase();
+
         const div = document.createElement('div');
         div.className = 'index-item';
-        div.dataset.search = `${entry.kanji} ${entry.gloss} ${category}`.toLowerCase();
-        div.innerHTML = `<a href="entries/${entry.file}">${entry.kanji}</a> — ${entry.gloss}`;
+        div.dataset.search = searchBlob;
+
+        div.innerHTML = `<a href="entries/${entry.file}" title="${entry.gloss}">${entry.kanji}</a><span class="gloss">— ${entry.gloss}</span>`;
         grid.appendChild(div);
       });
 
