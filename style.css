@@ -129,6 +129,15 @@ h3 {
 a { color: #564d3d; text-decoration-thickness: 0.08em; }
 a:hover { text-decoration: underline; }
 
+/* Subtle styling for in-text kanji links */
+a.kanji-link {
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(86,77,61,0.5);
+}
+a.kanji-link:hover {
+  border-bottom-style: solid;
+}
+
 /* =========================
    Index page (grouped)
    ========================= */
@@ -203,3 +212,4 @@ a:hover { text-decoration: underline; }
   /* slightly tighter index on small screens */
   .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
+
