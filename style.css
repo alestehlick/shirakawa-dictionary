@@ -138,24 +138,38 @@ a.kanji-link:hover {
   border-bottom-style: solid;
 }
 
-/* Bigger, crisper kanji inside the Explanation text */
+/* Enlarge ALL in-text kanji (linked or not) in the Explanation */
 :root{
-  --kanji-inline-scale: 1.18;   /* tune 1.10–1.25 as you like */
+  --kanji-inline-scale: 1.18; /* adjust 1.10–1.25 to taste */
 }
 
-.text-col a.kanji-link{
+.text-col .kanji-inline{
   font-family: "Noto Serif JP","Hiragino Mincho ProN","Yu Mincho","Source Han Serif JP",serif;
-  font-weight: 700;              /* slightly bolder for glyph clarity */
+  font-weight: 700; /* slightly bolder for glyph clarity */
   font-size: calc(1em * var(--kanji-inline-scale));
-  line-height: 1;                /* avoid extra leading around the glyph */
+  line-height: 1;
   letter-spacing: 0.01em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-
-  /* keep the subtle dotted underline from your base rule */
-  border-bottom: 1px dotted rgba(86,77,61,0.5);
-  text-decoration: none;
+  vertical-align: -0.04em; /* baseline nudge so taller glyphs sit nicely */
 }
+
+/* When a kanji is also a link, keep your dotted underline/hover behavior */
+.text-col a.kanji-link.kanji-inline{
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(86,77,61,0.5);
+}
+.text-col a.kanji-link.kanji-inline:hover{
+  border-bottom-style: solid;
+}
+
+/* Optional: slightly smaller scale on phones to reduce reflow */
+@media (max-width: 900px){
+  .text-col .kanji-inline{
+    font-size: calc(1em * (var(--kanji-inline-scale) - 0.06));
+  }
+}
+
 
 /* On hover, keep your solid underline style */
 .text-col a.kanji-link:hover{
@@ -247,5 +261,6 @@ a.kanji-link:hover {
   /* slightly tighter index on small screens */
   .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
+
 
 
