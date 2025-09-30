@@ -1,6 +1,34 @@
 {
   "Uncategorized": [
     {
+      "file": "伯.html",
+      "kanji": "伯",
+      "gloss": "leader ・ chief ・ eldest brother ・ elder uncle ・ count",
+      "category": "Uncategorized",
+      "kun": [
+        "osa"
+      ],
+      "on": [
+        "haku"
+      ]
+    },
+    {
+      "file": "白.html",
+      "kanji": "白",
+      "gloss": "white ・ to say ・ to report",
+      "category": "Uncategorized",
+      "kun": [
+        "shiro",
+        "shira",
+        "shiroi",
+        "mosu"
+      ],
+      "on": [
+        "haku",
+        "byaku"
+      ]
+    },
+    {
       "file": "適.html",
       "kanji": "適",
       "gloss": "to suit ・ to fit ・ appropriate ・ to go",
