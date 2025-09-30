@@ -6,7 +6,7 @@ from collections import defaultdict, OrderedDict
 # --- Paths ---
 entries_dir = Path("entries")
 json_dir    = Path("json")
-images_dir  = Path("Images")  # NOTE: Capital I, per your repo
+images_dir  = Path("images")  # Capital I
 entries_dir.mkdir(parents=True, exist_ok=True)
 
 # Optional: enforce a custom category order on the index page (else A→Z).
@@ -33,8 +33,6 @@ TEMPLATE = """<!doctype html>
     <div class="meanings">{meanings}</div>
     <h3>Explanation</h3>
     <p>{explanation_html}</p>
-
-    {original_section_html}
   </div>
 </div>
 </body></html>
@@ -103,23 +101,23 @@ def get_image_size(path: Path):
 
 def extract_number_from_json_filename(p: Path) -> str | None:
     """
-    Expect filenames like '<kanji>_<number>.json' (e.g., '兆_5146.json').
-    Returns the trailing <number> as a string, or None if not found.
+    Filenames like '<kanji>_<number>.json' (e.g., '兆_5146.json').
+    Returns '<number>' as a string, or None if not found.
     """
     m = re.search(r'_([0-9]+)$', p.stem)
     return m.group(1) if m else None
 
 def find_numbered_image_src(number: str | None) -> str | None:
     """
-    Look for an image in Images/ named <number>.(png|jpg|jpeg|webp|gif|svg).
-    Returns a relative src like '../Images/5146.png'.
+    Look for images/<number>.(png|jpg|jpeg|webp|gif|svg).
+    Returns a relative src like '../images/5146.png'.
     """
     if not number:
         return None
     for ext in IMAGE_EXTS:
         p = images_dir / f"{number}{ext}"
         if p.exists():
-            return f"../Images/{number}{ext}"
+            return f"../images/{number}{ext}"
     return None
 
 def local_path_from_src(src: str) -> Path | None:
@@ -240,7 +238,7 @@ for i, data in enumerate(raw_entries):
     number = file_numbers.get(i)  # number extracted from '<kanji>_<number>.json'
 
     # Main illustration:
-    # Prefer explicit JSON path if present; else use Images/<number>.<ext>.
+    # Prefer explicit JSON path if present; else use images/<number>.<ext>.
     explicit_img = data.get("image")
     img_src = explicit_img if explicit_img else find_numbered_image_src(number)
 
@@ -264,19 +262,6 @@ for i, data in enumerate(raw_entries):
     # Crosslink kanji inside the explanation
     explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
 
-    # "Original entry" section: prefer explicit path, else Images/<number>.<ext>
-    explicit_orig = data.get("original_image")
-    orig_src = explicit_orig if explicit_orig else find_numbered_image_src(number)
-
-    # Avoid showing the same file twice (if main illustration == original scan)
-    original_section_html = ""
-    if orig_src and orig_src != img_src:
-        original_section_html = (
-            '<h3>Original entry</h3>'
-            f'<figure class="orig-image"><img src="{orig_src}" alt="Original entry for {kanji}" '
-            f'loading="lazy" decoding="async"></figure>'
-        )
-
     html_content = TEMPLATE.format(
         kanji=kanji,
         category=category,
@@ -286,7 +271,6 @@ for i, data in enumerate(raw_entries):
         explanation_html=explanation_html,
         images_html=images_html,
         wide_image_html=wide_image_html,
-        original_section_html=original_section_html,
     )
 
     out_file = entries_dir / f"{kanji}.html"
