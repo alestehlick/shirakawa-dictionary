@@ -10,7 +10,7 @@ images_dir  = Path("images")
 entries_dir.mkdir(parents=True, exist_ok=True)
 
 # Optional: enforce a custom category order on the index page (else A→Z).
-CATEGORY_ORDER = []
+CATEGORY_ORDER: list[str] = []
 
 IMAGE_EXTS = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg")
 
@@ -129,10 +129,13 @@ def load_json_strict(path: Path) -> dict:
 # ---------- Linkify helpers ----------
 
 def build_kanji_map(all_entries: list[dict]) -> dict[str, str]:
-    """
-    Map kanji -> 'kanji.html' for every entry that exists.
-    """
-    return {e["kanji"]: f'{e["kanji"]}.html' for e in all_entries if "kanji" in e and e["kanji"]}
+    """Map kanji -> 'kanji.html' for every entry that exists."""
+    out = {}
+    for e in all_entries:
+        k = e.get("kanji")
+        if k:
+            out[k] = f"{k}.html"
+    return out
 
 def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji: str) -> str:
     """
@@ -141,10 +144,9 @@ def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji
     """
     if not raw_text:
         return ""
-    s = html.escape(raw_text)  # & < > " ' become entities; CJK remain intact
+    s = html.escape(raw_text)
     out_chars = []
     for ch in s:
-        # Only link if this exact character is a key (kanji) and not the current entry's own kanji
         if ch in kanji_to_file and ch != self_kanji:
             out_chars.append(f'<a class="kanji-link" href="{kanji_to_file[ch]}">{ch}</a>')
         else:
@@ -153,26 +155,44 @@ def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji
 
 # ---------- Build pages & grouped index ----------
 
-# First pass: load all JSON to know which kanji exist
-raw_entries = []
+# 1) Load all JSON files (accept your schema)
+raw_entries: list[dict] = []
 for file in sorted(json_dir.glob("*.json")):
     data = load_json_strict(file)
+
+    # Minimal validation + normalization to our internal field names
+    if not data.get("kanji"):
+        raise SystemExit(f"Missing 'kanji' in {file}")
+
+    # normalize readings (accept legacy fallbacks if ever present)
+    data["_kun_list"] = list(data.get("kun_readings_romaji", []) or data.get("kun", []) or [])
+    data["_on_list"]  = list(data.get("on_readings_romaji", [])  or data.get("on", [])  or [])
+
+    # normalize meanings
+    data["_meanings"] = list(data.get("meanings", []) or [])
+
+    # normalize category
+    data["_category"] = data.get("category") or "Uncategorized"
+
+    # explanation (string)
+    data["_explanation"] = data.get("explanation", "") or ""
+
     raw_entries.append(data)
 
 kanji_to_file = build_kanji_map(raw_entries)
 
 groups: dict[str, list[dict]] = defaultdict(list)
 
-# Second pass: generate pages and grouped index
+# 2) Generate pages and the grouped index
 for data in raw_entries:
     kanji     = data["kanji"]
-    category  = data.get("category", "Uncategorized")
-    kun_list  = data.get("kun_readings_romaji", []) or []
-    on_list   = data.get("on_readings_romaji", []) or []
+    category  = data["_category"]
+    kun_list  = data["_kun_list"]
+    on_list   = data["_on_list"]
     kun       = ", ".join(kun_list)
     on        = ", ".join(on_list)
-    meanings  = " ・ ".join(data.get("meanings", []))
-    expl_raw  = data.get("explanation", "")
+    meanings  = " ・ ".join(data["_meanings"])
+    expl_raw  = data["_explanation"]
 
     # Prefer explicit JSON path if you add one; else auto-find by filename.
     explicit_img = data.get("image")
@@ -218,11 +238,11 @@ for data in raw_entries:
         "kanji": kanji,
         "gloss": meanings,
         "category": category,
-        "kun": kun_list,
+        "kun": kun_list,  # kept as 'kun' / 'on' for the index JS
         "on": on_list,
     })
 
-# sort entries in each category by kanji and write grouped index
+# 3) Sort entries in each category and write grouped index
 for cat in groups:
     groups[cat].sort(key=lambda x: x["kanji"])
 
