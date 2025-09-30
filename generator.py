@@ -137,17 +137,41 @@ def build_kanji_map(all_entries: list[dict]) -> dict[str, str]:
             out[k] = f"{k}.html"
     return out
 
+def is_cjk_ideograph(ch: str) -> bool:
+    cp = ord(ch)
+    # Core CJK + Extensions A–G + Compatibility Ideographs
+    return (
+        0x4E00 <= cp <= 0x9FFF   or  # CJK Unified Ideographs
+        0x3400 <= cp <= 0x4DBF   or  # Extension A
+        0xF900 <= cp <= 0xFAFF   or  # Compatibility Ideographs
+        0x20000 <= cp <= 0x2A6DF or  # Extension B
+        0x2A700 <= cp <= 0x2B73F or  # Extension C
+        0x2B740 <= cp <= 0x2B81F or  # Extension D
+        0x2B820 <= cp <= 0x2CEAF or  # Extension E
+        0x2CEB0 <= cp <= 0x2EBEF     # Extension F/G
+    )
+
 def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji: str) -> str:
+    """
+    Escape HTML, then:
+      - wrap any CJK ideograph in <span class="kanji-inline">…</span>
+      - if that ideograph has an entry (and isn't this page's main kanji),
+        make it a link: <a class="kanji-link kanji-inline" href="…">…</a>
+    """
     if not raw_text:
         return ""
     s = html.escape(raw_text)
-    out_chars = []
+    out = []
     for ch in s:
-        if ch in kanji_to_file and ch != self_kanji:
-            out_chars.append(f'<a class="kanji-link" href="{kanji_to_file[ch]}">{ch}</a>')
+        if is_cjk_ideograph(ch):
+            if ch in kanji_to_file and ch != self_kanji:
+                out.append(f'<a class="kanji-link kanji-inline" href="{kanji_to_file[ch]}">{ch}</a>')
+            else:
+                out.append(f'<span class="kanji-inline">{ch}</span>')
         else:
-            out_chars.append(ch)
-    return "".join(out_chars)
+            out.append(ch)
+    return "".join(out)
+
 
 # ---------- Build pages & grouped index ----------
 
