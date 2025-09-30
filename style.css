@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap');
 
 :root{
-  /* Lightened paper + tuned accents */
-  --cream: #fbf9ef;   /* lighter than #f8f5e6 */
-  --ink:   #262626;   /* soft black */
-  --muted: #756f66;   /* muted text */
-  --rule:  #e7e0d0;   /* lighter separators for the new paper */
+  /* Paper & accents */
+  --cream: #fbf9ef;
+  --ink:   #22221f;  /* slightly warmer/darker than before */
+  --muted: #756f66;
+  --rule:  #e7e0d0;
 
-  /* NEW: single source of truth for big kanji size (also caps top image) */
+  /* Sizes */
   --kanji-size: clamp(4rem, 12vw, 8rem);
+  --kanji-inline-scale: 1.20; /* 1.15–1.25 is a good range */
 }
 
 *,
@@ -26,10 +27,11 @@ html, body {
 body {
   /* keep UI bits sans; text column overrides to serif */
   font-family: -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: clamp(16px, 1.15vw + 0.5rem, 19px); /* bookish base sizing */
   line-height: 1.6;
   padding: 2rem;
+  font-feature-settings: "liga" 1, "kern" 1, "palt" 1; /* better JP punctuation spacing */
 
-  /* Keep very wide screens readable */
   max-width: 1100px;
   margin-inline: auto;
 }
@@ -47,7 +49,7 @@ body {
 .kanji-col {
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
   font-weight: 600;
-  font-size: var(--kanji-size); /* was clamp(4rem, 12vw, 8rem) */
+  font-size: var(--kanji-size);
   line-height: 1;
   min-width: 140px;
   display: flex;
@@ -68,11 +70,11 @@ body {
   align-items: center;
 }
 .image-col img {
-  width: clamp(90px, 18vw, 120px); /* smaller & responsive */
+  width: clamp(90px, 18vw, 120px);
   max-width: 100%;
   height: auto;
   background: #fff;
-  border: 1px solid #e2dbc9; /* softened for the lighter paper */
+  border: 1px solid #e2dbc9;
   border-radius: 8px;
   padding: 6px;
 }
@@ -80,13 +82,14 @@ body {
 /* Right: Explanation column — justified & mobile-friendly */
 .text-col {
   flex: 1;
-  max-width: 72ch;  /* comfortable measure on desktop */
+  max-width: 68ch;  /* a touch narrower; reads better */
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
   font-weight: 600;
-  line-height: 1.8;
+  line-height: 1.85;   /* slightly airier for long paragraphs */
+  letter-spacing: 0.003em;
+  font-variant-east-asian: proportional-width;
   -webkit-font-smoothing: antialiased;
 
-  /* Justification + hyphenation */
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
@@ -98,16 +101,20 @@ body {
   font-size: 0.9rem;
   color: var(--muted);
   margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.readings {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-variant-caps: small-caps;
   letter-spacing: 0.03em;
 }
 
-.readings { 
-  font-weight: 600; 
-  margin-bottom: 0.5rem; 
-}
-.meanings { 
-  font-weight: 600; 
+.meanings {
+  font-weight: 600;
   margin-bottom: 0.25rem;
+  letter-spacing: 0.01em;
 }
 
 /* Headings inside the text column */
@@ -117,12 +124,12 @@ h3 {
   font-size: 1.1rem;
   margin: 1rem 0 0.5rem;
   padding-bottom: 0.25rem;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid color-mix(in srgb, var(--rule) 88%, transparent);
 }
 
 /* Paragraph rhythm */
-.text-col p { 
-  margin: 0 0 0.9rem; 
+.text-col p {
+  margin: 0 0 0.9rem;
 }
 
 /* Optional: subtle link style on cream */
@@ -134,15 +141,9 @@ a.kanji-link {
   text-decoration: none;
   border-bottom: 1px dotted rgba(86,77,61,0.5);
 }
-a.kanji-link:hover {
-  border-bottom-style: solid;
-}
+a.kanji-link:hover { border-bottom-style: solid; }
 
 /* Enlarge ALL in-text kanji (linked or not) in the Explanation */
-:root{
-  --kanji-inline-scale: 1.18; /* adjust 1.10–1.25 to taste */
-}
-
 .text-col .kanji-inline{
   font-family: "Noto Serif JP","Hiragino Mincho ProN","Yu Mincho","Source Han Serif JP",serif;
   font-weight: 700; /* slightly bolder for glyph clarity */
@@ -151,41 +152,29 @@ a.kanji-link:hover {
   letter-spacing: 0.01em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  vertical-align: -0.04em; /* baseline nudge so taller glyphs sit nicely */
+  vertical-align: -0.05em; /* sits better with Latin x-height */
 }
 
-/* When a kanji is also a link, keep your dotted underline/hover behavior */
+/* When a kanji is also a link, keep the elegant dotted underline */
 .text-col a.kanji-link.kanji-inline{
   text-decoration: none;
   border-bottom: 1px dotted rgba(86,77,61,0.5);
 }
-.text-col a.kanji-link.kanji-inline:hover{
-  border-bottom-style: solid;
+.text-col a.kanji-link.kanji-inline:hover{ border-bottom-style: solid; }
+
+/* Landscape image placed at the top of the text column */
+.wide-image { margin: 0 0 0.6rem 0; }
+.wide-image img {
+  display: block;
+  max-height: calc(var(--kanji-size) * 0.9);
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e2dbc9;
+  border-radius: 8px;
+  padding: 6px;
 }
-
-/* Optional: slightly smaller scale on phones to reduce reflow */
-@media (max-width: 900px){
-  .text-col .kanji-inline{
-    font-size: calc(1em * (var(--kanji-inline-scale) - 0.06));
-  }
-}
-
-
-/* On hover, keep your solid underline style */
-.text-col a.kanji-link:hover{
-  border-bottom-style: solid;
-}
-
-/* Optional: nudge baseline so taller kanji sit nicely with Latin text */
-.text-col a.kanji-link { vertical-align: -0.04em; }
-
-/* Optional (mobile): trim the scale slightly to reduce reflow */
-@media (max-width: 900px){
-  .text-col a.kanji-link{
-    font-size: calc(1em * (var(--kanji-inline-scale) - 0.06));
-  }
-}
-
 
 /* =========================
    Index page (grouped)
@@ -199,16 +188,15 @@ a.kanji-link:hover {
   padding-bottom: 0.25rem;
 }
 
-/* Compact, hole-free grid of items */
 .index-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.4rem 1rem;
   align-items: start;
-  grid-auto-flow: row dense;  /* backfills gaps to avoid “spread” */
+  grid-auto-flow: row dense;
 }
 
-.index-item { 
+.index-item {
   padding: 0.1rem 0;
   line-height: 1.5;
   break-inside: avoid;
@@ -226,26 +214,9 @@ a.kanji-link:hover {
 .index-item .gloss {
   color: var(--muted);
   display: -webkit-box;
-  -webkit-line-clamp: 1;      /* change to 2 if you want two lines */
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-/* Landscape image placed at the top of the text column */
-.wide-image { margin: 0 0 0.6rem 0; }
-.wide-image img {
-  display: block;
-
-  /* NEW: cap height ≈ big kanji; still scale responsively */
-  max-height: calc(var(--kanji-size) * 0.9);
-  width: auto;
-  max-width: 100%;
-  height: auto;
-
-  background: #fff;
-  border: 1px solid #e2dbc9;
-  border-radius: 8px;
-  padding: 6px;
 }
 
 /* =========================
@@ -253,14 +224,25 @@ a.kanji-link:hover {
    ========================= */
 @media (max-width: 900px){
   .entry { flex-wrap: wrap; gap: 1.25rem; }
-  .kanji-col { min-width: 0; } /* let it shrink on phones */
+  .kanji-col { min-width: 0; }
   .image-col { order: 3; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
-  .image-col img { width: clamp(72px, 24vw, 100px); }  /* smaller on phones */
+  .image-col img { width: clamp(72px, 24vw, 100px); }
   .text-col { order: 2; max-width: 100%; }
 
-  /* slightly tighter index on small screens */
   .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+  /* Slightly reduce inline kanji scale on phones to limit reflow */
+  .text-col .kanji-inline{
+    font-size: calc(1em * (var(--kanji-inline-scale) - 0.06));
+  }
 }
 
-
-
+/* =========================
+   Print-friendly
+   ========================= */
+@media print{
+  body{ background: #fff; color: #111; padding: 0; }
+  .entry{ gap: 1.2rem; }
+  a.kanji-link{ border-bottom: none; }
+  .cat-head, .index-grid{ page-break-inside: avoid; }
+}
