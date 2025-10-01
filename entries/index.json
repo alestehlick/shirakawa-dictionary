@@ -1,1 +1,1291 @@
-{}
+{
+  "Uncategorized": [
+    {
+      "file": "争.html",
+      "kanji": "争",
+      "gloss": "to contend ・ to strive ・ to fight",
+      "category": "Uncategorized",
+      "kun": [
+        "arasou"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "亜.html",
+      "kanji": "亜",
+      "gloss": "asia ・ sub- ・ secondary ・ next in rank",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "a"
+      ]
+    },
+    {
+      "file": "以.html",
+      "kanji": "以",
+      "gloss": "by means of ・ from",
+      "category": "Uncategorized",
+      "kun": [
+        "motte"
+      ],
+      "on": [
+        "i"
+      ]
+    },
+    {
+      "file": "仮.html",
+      "kanji": "仮",
+      "gloss": "temporary ・ provisional ・ assumed ・ substitute ・ imitation",
+      "category": "Uncategorized",
+      "kun": [
+        "kari",
+        "karu",
+        "kasu"
+      ],
+      "on": [
+        "ka",
+        "ke"
+      ]
+    },
+    {
+      "file": "体.html",
+      "kanji": "体",
+      "gloss": "body ・ form ・ shape",
+      "category": "Uncategorized",
+      "kun": [
+        "karada",
+        "katachi"
+      ],
+      "on": [
+        "tai",
+        "tei"
+      ]
+    },
+    {
+      "file": "何.html",
+      "kanji": "何",
+      "gloss": "what ・ which ・ where ・ how ・ how many",
+      "category": "Uncategorized",
+      "kun": [
+        "nani",
+        "nan",
+        "izuku",
+        "izure"
+      ],
+      "on": [
+        "ka"
+      ]
+    },
+    {
+      "file": "佳.html",
+      "kanji": "佳",
+      "gloss": "good ・ beautiful ・ auspicious ・ excellent",
+      "category": "Uncategorized",
+      "kun": [
+        "yoi"
+      ],
+      "on": [
+        "ka"
+      ]
+    },
+    {
+      "file": "価.html",
+      "kanji": "価",
+      "gloss": "value ・ price ・ worth ・ valuation",
+      "category": "Uncategorized",
+      "kun": [
+        "atai"
+      ],
+      "on": [
+        "ka"
+      ]
+    },
+    {
+      "file": "促.html",
+      "kanji": "促",
+      "gloss": "to urge ・ to hasten ・ to press ・ to prompt",
+      "category": "Uncategorized",
+      "kun": [
+        "unagasu"
+      ],
+      "on": [
+        "soku"
+      ]
+    },
+    {
+      "file": "俗.html",
+      "kanji": "俗",
+      "gloss": "custom ・ convention ・ vulgar ・ worldly ・ secular",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "zoku"
+      ]
+    },
+    {
+      "file": "倉.html",
+      "kanji": "倉",
+      "gloss": "storehouse ・ granary ・ storeroom",
+      "category": "Uncategorized",
+      "kun": [
+        "kura"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "側.html",
+      "kanji": "側",
+      "gloss": "side ・ beside",
+      "category": "Uncategorized",
+      "kun": [
+        "kawa",
+        "gawa",
+        "soba",
+        "katawara"
+      ],
+      "on": [
+        "soku"
+      ]
+    },
+    {
+      "file": "像.html",
+      "kanji": "像",
+      "gloss": "image ・ figure ・ portrait ・ statue",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "zou"
+      ]
+    },
+    {
+      "file": "僧.html",
+      "kanji": "僧",
+      "gloss": "buddhist monk ・ priest",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "億.html",
+      "kanji": "億",
+      "gloss": "hundred million ・ to think ・ to fathom ・ to guess",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "oku"
+      ]
+    },
+    {
+      "file": "則.html",
+      "kanji": "則",
+      "gloss": "rule ・ regulation ・ model ・ standard ・ to conform ・ namely",
+      "category": "Uncategorized",
+      "kun": [
+        "nori",
+        "nottoru",
+        "sunawachi"
+      ],
+      "on": [
+        "soku"
+      ]
+    },
+    {
+      "file": "千.html",
+      "kanji": "千",
+      "gloss": "thousand ・ one thousand",
+      "category": "Uncategorized",
+      "kun": [
+        "chi"
+      ],
+      "on": [
+        "sen"
+      ]
+    },
+    {
+      "file": "卒.html",
+      "kanji": "卒",
+      "gloss": "to die ・ to end ・ to run out ・ finally ・ sudden",
+      "category": "Uncategorized",
+      "kun": [
+        "shinu",
+        "owaru",
+        "tsukiru",
+        "tsui ni"
+      ],
+      "on": [
+        "sotsu"
+      ]
+    },
+    {
+      "file": "即.html",
+      "kanji": "即",
+      "gloss": "immediately ・ namely ・ to accede ・ to take a seat",
+      "category": "Uncategorized",
+      "kun": [
+        "sunawachi",
+        "tsuku"
+      ],
+      "on": [
+        "soku"
+      ]
+    },
+    {
+      "file": "可.html",
+      "kanji": "可",
+      "gloss": "can ・ possible ・ approve",
+      "category": "Uncategorized",
+      "kun": [
+        "yoshi",
+        "beki"
+      ],
+      "on": [
+        "ka"
+      ]
+    },
+    {
+      "file": "喪.html",
+      "kanji": "喪",
+      "gloss": "mourning ・ funeral ・ to lose ・ to perish ・ to destroy",
+      "category": "Uncategorized",
+      "kun": [
+        "mo",
+        "ushinau",
+        "horobosu"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "増.html",
+      "kanji": "増",
+      "gloss": "increase ・ add ・ augment ・ raise",
+      "category": "Uncategorized",
+      "kun": [
+        "masu",
+        "fueru",
+        "fuyasu",
+        "kuwaeru"
+      ],
+      "on": [
+        "zou"
+      ]
+    },
+    {
+      "file": "墮.html",
+      "kanji": "墮",
+      "gloss": "to fall ・ to tumble down ・ to crumble ・ to degenerate",
+      "category": "Uncategorized",
+      "kun": [
+        "ochiru",
+        "kuzureru"
+      ],
+      "on": [
+        "da"
+      ]
+    },
+    {
+      "file": "多.html",
+      "kanji": "多",
+      "gloss": "many ・ much ・ numerous",
+      "category": "Uncategorized",
+      "kun": [
+        "ooi",
+        "amata"
+      ],
+      "on": [
+        "ta"
+      ]
+    },
+    {
+      "file": "太.html",
+      "kanji": "太",
+      "gloss": "thick ・ fat ・ large ・ great",
+      "category": "Uncategorized",
+      "kun": [
+        "futoi",
+        "futoru"
+      ],
+      "on": [
+        "tai",
+        "ta"
+      ]
+    },
+    {
+      "file": "奏.html",
+      "kanji": "奏",
+      "gloss": "to play music ・ to offer to the gods ・ to report to a superior",
+      "category": "Uncategorized",
+      "kun": [
+        "kanaderu"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "妥.html",
+      "kanji": "妥",
+      "gloss": "peaceful ・ moderate ・ proper ・ to settle ・ compromise",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "da"
+      ]
+    },
+    {
+      "file": "存.html",
+      "kanji": "存",
+      "gloss": "to exist ・ to live ・ to keep ・ to think ・ to inquire",
+      "category": "Uncategorized",
+      "kun": [
+        "aru",
+        "ikiru",
+        "omou",
+        "tou"
+      ],
+      "on": [
+        "son",
+        "zon"
+      ]
+    },
+    {
+      "file": "孫.html",
+      "kanji": "孫",
+      "gloss": "grandchild ・ descendant",
+      "category": "Uncategorized",
+      "kun": [
+        "mago"
+      ],
+      "on": [
+        "son"
+      ]
+    },
+    {
+      "file": "寸.html",
+      "kanji": "寸",
+      "gloss": "inch ・ a little ・ unit of length",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "sun"
+      ]
+    },
+    {
+      "file": "対.html",
+      "kanji": "対",
+      "gloss": "opposite ・ pair ・ versus ・ to face ・ to respond",
+      "category": "Uncategorized",
+      "kun": [
+        "utsu",
+        "mukau",
+        "kotaeru"
+      ],
+      "on": [
+        "tai",
+        "tsui"
+      ]
+    },
+    {
+      "file": "尊.html",
+      "kanji": "尊",
+      "gloss": "to honor ・ revered ・ noble",
+      "category": "Uncategorized",
+      "kun": [
+        "tattoi",
+        "toutoi",
+        "tattobu",
+        "toutobu"
+      ],
+      "on": [
+        "son"
+      ]
+    },
+    {
+      "file": "屋.html",
+      "kanji": "屋",
+      "gloss": "house ・ building ・ shop",
+      "category": "Uncategorized",
+      "kun": [
+        "ya"
+      ],
+      "on": [
+        "oku"
+      ]
+    },
+    {
+      "file": "属.html",
+      "kanji": "属",
+      "gloss": "to belong to ・ category ・ genus ・ to connect ・ to line up ・ to entrust",
+      "category": "Uncategorized",
+      "kun": [
+        "tsuranaru",
+        "tsuku",
+        "makasu"
+      ],
+      "on": [
+        "zoku",
+        "shoku"
+      ]
+    },
+    {
+      "file": "層.html",
+      "kanji": "層",
+      "gloss": "layer ・ stratum",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "崇.html",
+      "kanji": "崇",
+      "gloss": "lofty ・ high ・ to revere ・ to worship",
+      "category": "Uncategorized",
+      "kun": [
+        "agameru",
+        "tattobu"
+      ],
+      "on": [
+        "suu"
+      ]
+    },
+    {
+      "file": "巣.html",
+      "kanji": "巣",
+      "gloss": "nest ・ to build a nest ・ lair",
+      "category": "Uncategorized",
+      "kun": [
+        "su",
+        "sukuu"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "待.html",
+      "kanji": "待",
+      "gloss": "to wait ・ to await ・ to prepare ・ to treat",
+      "category": "Uncategorized",
+      "kun": [
+        "matsu"
+      ],
+      "on": [
+        "tai"
+      ]
+    },
+    {
+      "file": "怠.html",
+      "kanji": "怠",
+      "gloss": "to neglect ・ to be idle ・ negligence",
+      "category": "Uncategorized",
+      "kun": [
+        "okotaru",
+        "namakeru"
+      ],
+      "on": [
+        "tai"
+      ]
+    },
+    {
+      "file": "性.html",
+      "kanji": "性",
+      "gloss": "nature ・ character ・ disposition ・ sex",
+      "category": "Uncategorized",
+      "kun": [
+        "saga",
+        "tachi",
+        "umaretsuki"
+      ],
+      "on": [
+        "sei",
+        "sho"
+      ]
+    },
+    {
+      "file": "恩.html",
+      "kanji": "恩",
+      "gloss": "kindness ・ grace ・ favor",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "on"
+      ]
+    },
+    {
+      "file": "息.html",
+      "kanji": "息",
+      "gloss": "breath ・ to breathe ・ rest ・ to cease ・ interest",
+      "category": "Uncategorized",
+      "kun": [
+        "iki",
+        "ikou",
+        "yamu"
+      ],
+      "on": [
+        "soku"
+      ]
+    },
+    {
+      "file": "惰.html",
+      "kanji": "惰",
+      "gloss": "laziness ・ idleness ・ neglect",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "da"
+      ]
+    },
+    {
+      "file": "想.html",
+      "kanji": "想",
+      "gloss": "to think ・ to imagine ・ thought ・ idea",
+      "category": "Uncategorized",
+      "kun": [
+        "omou"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "憎.html",
+      "kanji": "憎",
+      "gloss": "to hate ・ hatred ・ to detest",
+      "category": "Uncategorized",
+      "kun": [
+        "nikumu",
+        "nikui",
+        "nikurashii",
+        "nikushimi"
+      ],
+      "on": [
+        "zou",
+        "sou"
+      ]
+    },
+    {
+      "file": "打.html",
+      "kanji": "打",
+      "gloss": "to strike ・ to hit",
+      "category": "Uncategorized",
+      "kun": [
+        "utsu",
+        "uchi"
+      ],
+      "on": [
+        "da",
+        "ta"
+      ]
+    },
+    {
+      "file": "挿.html",
+      "kanji": "挿",
+      "gloss": "to insert ・ to stick in ・ to plug",
+      "category": "Uncategorized",
+      "kun": [
+        "sasu",
+        "sashikomu",
+        "sashihasamu"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "捜.html",
+      "kanji": "捜",
+      "gloss": "to search ・ to look for ・ to visit",
+      "category": "Uncategorized",
+      "kun": [
+        "sagasu"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "掃.html",
+      "kanji": "掃",
+      "gloss": "to sweep ・ to clean ・ purify ・ exorcise",
+      "category": "Uncategorized",
+      "kun": [
+        "haku"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "損.html",
+      "kanji": "損",
+      "gloss": "loss ・ damage ・ to harm ・ to diminish ・ to lose",
+      "category": "Uncategorized",
+      "kun": [
+        "sokonau",
+        "sokoneru"
+      ],
+      "on": [
+        "son"
+      ]
+    },
+    {
+      "file": "操.html",
+      "kanji": "操",
+      "gloss": "to manipulate ・ to operate ・ chastity ・ moral integrity",
+      "category": "Uncategorized",
+      "kun": [
+        "ayatsuru",
+        "misao"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "数.html",
+      "kanji": "数",
+      "gloss": "number ・ to count ・ several ・ often ・ to attack ・ rule ・ fate",
+      "category": "Uncategorized",
+      "kun": [
+        "kazu",
+        "kazoeru",
+        "semeru",
+        "shibashiba"
+      ],
+      "on": [
+        "suu",
+        "su"
+      ]
+    },
+    {
+      "file": "整.html",
+      "kanji": "整",
+      "gloss": "arrange ・ put in order ・ rectify",
+      "category": "Uncategorized",
+      "kun": [
+        "totonoeru",
+        "totonou"
+      ],
+      "on": [
+        "sei"
+      ]
+    },
+    {
+      "file": "族.html",
+      "kanji": "族",
+      "gloss": "tribe ・ clan ・ family",
+      "category": "Uncategorized",
+      "kun": [
+        "yakara"
+      ],
+      "on": [
+        "zoku"
+      ]
+    },
+    {
+      "file": "早.html",
+      "kanji": "早",
+      "gloss": "early ・ morning ・ young ・ quick",
+      "category": "Uncategorized",
+      "kun": [
+        "hayai",
+        "hayamaru",
+        "hayameru",
+        "asa"
+      ],
+      "on": [
+        "sou",
+        "sa"
+      ]
+    },
+    {
+      "file": "星.html",
+      "kanji": "星",
+      "gloss": "star",
+      "category": "Uncategorized",
+      "kun": [
+        "hoshi"
+      ],
+      "on": [
+        "sei",
+        "shou"
+      ]
+    },
+    {
+      "file": "暗.html",
+      "kanji": "暗",
+      "gloss": "dark ・ darkness ・ gloomy",
+      "category": "Uncategorized",
+      "kun": [
+        "kurai",
+        "yami"
+      ],
+      "on": [
+        "an"
+      ]
+    },
+    {
+      "file": "曹.html",
+      "kanji": "曹",
+      "gloss": "official ・ bureau ・ companions",
+      "category": "Uncategorized",
+      "kun": [
+        "tomogara"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "村.html",
+      "kanji": "村",
+      "gloss": "village ・ hamlet",
+      "category": "Uncategorized",
+      "kun": [
+        "mura"
+      ],
+      "on": [
+        "son"
+      ]
+    },
+    {
+      "file": "束.html",
+      "kanji": "束",
+      "gloss": "bundle ・ tie up ・ bind",
+      "category": "Uncategorized",
+      "kun": [
+        "taba",
+        "tabaneru",
+        "tsuka"
+      ],
+      "on": [
+        "soku"
+      ]
+    },
+    {
+      "file": "果.html",
+      "kanji": "果",
+      "gloss": "fruit ・ result ・ to accomplish ・ to end",
+      "category": "Uncategorized",
+      "kun": [
+        "hatasu",
+        "hateru",
+        "hate"
+      ],
+      "on": [
+        "ka"
+      ]
+    },
+    {
+      "file": "枢.html",
+      "kanji": "枢",
+      "gloss": "pivot ・ hinge ・ hub ・ vital point",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "su"
+      ]
+    },
+    {
+      "file": "染.html",
+      "kanji": "染",
+      "gloss": "to dye ・ to stain ・ to permeate ・ to infect ・ to pollute",
+      "category": "Uncategorized",
+      "kun": [
+        "someru",
+        "somaru",
+        "shimiru",
+        "shimi",
+        "shimu",
+        "somu"
+      ],
+      "on": [
+        "sen"
+      ]
+    },
+    {
+      "file": "桑.html",
+      "kanji": "桑",
+      "gloss": "mulberry ・ mulberry tree",
+      "category": "Uncategorized",
+      "kun": [
+        "kuwa"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "槽.html",
+      "kanji": "槽",
+      "gloss": "trough ・ vat ・ tank ・ tub",
+      "category": "Uncategorized",
+      "kun": [
+        "fune"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "河.html",
+      "kanji": "河",
+      "gloss": "river ・ the yellow river",
+      "category": "Uncategorized",
+      "kun": [
+        "kawa"
+      ],
+      "on": [
+        "ka"
+      ]
+    },
+    {
+      "file": "清.html",
+      "kanji": "清",
+      "gloss": "pure ・ clear ・ clean ・ to purify ・ to clear up",
+      "category": "Uncategorized",
+      "kun": [
+        "kiyoi",
+        "kiyomaru",
+        "kiyomeru",
+        "sumu"
+      ],
+      "on": [
+        "sei",
+        "shou"
+      ]
+    },
+    {
+      "file": "測.html",
+      "kanji": "測",
+      "gloss": "to measure ・ to sound (depth)",
+      "category": "Uncategorized",
+      "kun": [
+        "hakaru"
+      ],
+      "on": [
+        "soku"
+      ]
+    },
+    {
+      "file": "燥.html",
+      "kanji": "燥",
+      "gloss": "dry ・ to dry up ・ parched ・ irritability",
+      "category": "Uncategorized",
+      "kun": [
+        "kawaku"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "率.html",
+      "kanji": "率",
+      "gloss": "to lead ・ to command ・ all ・ in general ・ to follow",
+      "category": "Uncategorized",
+      "kun": [
+        "hikiiru"
+      ],
+      "on": [
+        "sotsu",
+        "ritsu"
+      ]
+    },
+    {
+      "file": "相.html",
+      "kanji": "相",
+      "gloss": "mutual ・ to help ・ appearance ・ physiognomy",
+      "category": "Uncategorized",
+      "kun": [
+        "ai"
+      ],
+      "on": [
+        "sou",
+        "shou"
+      ]
+    },
+    {
+      "file": "睡.html",
+      "kanji": "睡",
+      "gloss": "sleep ・ drowsiness",
+      "category": "Uncategorized",
+      "kun": [
+        "nemuru"
+      ],
+      "on": [
+        "sui"
+      ]
+    },
+    {
+      "file": "穂.html",
+      "kanji": "穂",
+      "gloss": "ear (of grain) ・ spike",
+      "category": "Uncategorized",
+      "kun": [
+        "ho"
+      ],
+      "on": [
+        "sui"
+      ]
+    },
+    {
+      "file": "箱.html",
+      "kanji": "箱",
+      "gloss": "box ・ case",
+      "category": "Uncategorized",
+      "kun": [
+        "hako"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "続.html",
+      "kanji": "続",
+      "gloss": "to continue ・ continuation ・ series",
+      "category": "Uncategorized",
+      "kun": [
+        "tsuzuku",
+        "tsuzukeru",
+        "tsugu"
+      ],
+      "on": [
+        "zoku",
+        "shoku"
+      ]
+    },
+    {
+      "file": "総.html",
+      "kanji": "総",
+      "gloss": "total ・ overall ・ to gather ・ to bring together ・ to govern",
+      "category": "Uncategorized",
+      "kun": [
+        "atsumeru",
+        "suberu",
+        "subete"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "繰.html",
+      "kanji": "繰",
+      "gloss": "to reel ・ to wind ・ to repeat",
+      "category": "Uncategorized",
+      "kun": [
+        "kuru"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "臓.html",
+      "kanji": "臓",
+      "gloss": "internal organs ・ viscera ・ entrails",
+      "category": "Uncategorized",
+      "kun": [
+        "harawata"
+      ],
+      "on": [
+        "zo"
+      ]
+    },
+    {
+      "file": "草.html",
+      "kanji": "草",
+      "gloss": "grass ・ weeds ・ draft ・ shabby ・ initial",
+      "category": "Uncategorized",
+      "kun": [
+        "kusa",
+        "gusa"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "荘.html",
+      "kanji": "荘",
+      "gloss": "solemn ・ villa ・ manor",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "so",
+        "sho"
+      ]
+    },
+    {
+      "file": "葬.html",
+      "kanji": "葬",
+      "gloss": "to bury ・ burial ・ funeral",
+      "category": "Uncategorized",
+      "kun": [
+        "houmuru"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "蔵.html",
+      "kanji": "蔵",
+      "gloss": "storehouse ・ to store ・ to conceal ・ to save",
+      "category": "Uncategorized",
+      "kun": [
+        "kura",
+        "kakusu",
+        "takuwaeru"
+      ],
+      "on": [
+        "zo",
+        "so"
+      ]
+    },
+    {
+      "file": "藻.html",
+      "kanji": "藻",
+      "gloss": "algae ・ water plants ・ rhetorical flourish ・ ornamental pattern",
+      "category": "Uncategorized",
+      "kun": [
+        "mo"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "装.html",
+      "kanji": "装",
+      "gloss": "to dress ・ to adorn ・ attire ・ to equip",
+      "category": "Uncategorized",
+      "kun": [
+        "yosoou",
+        "yosooi"
+      ],
+      "on": [
+        "sou",
+        "shou"
+      ]
+    },
+    {
+      "file": "訴.html",
+      "kanji": "訴",
+      "gloss": "to appeal ・ to sue ・ to complain",
+      "category": "Uncategorized",
+      "kun": [
+        "uttaeru"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "賊.html",
+      "kanji": "賊",
+      "gloss": "robber ・ bandit ・ rebel ・ to harm ・ to injure",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "zoku"
+      ]
+    },
+    {
+      "file": "贈.html",
+      "kanji": "贈",
+      "gloss": "to present ・ gift ・ to bestow",
+      "category": "Uncategorized",
+      "kun": [
+        "okuru"
+      ],
+      "on": [
+        "zou",
+        "sou"
+      ]
+    },
+    {
+      "file": "走.html",
+      "kanji": "走",
+      "gloss": "to run ・ to hasten",
+      "category": "Uncategorized",
+      "kun": [
+        "hashiru"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
+      "file": "足.html",
+      "kanji": "足",
+      "gloss": "foot ・ to be sufficient ・ to add",
+      "category": "Uncategorized",
+      "kun": [
+        "ashi",
+        "tariru",
+        "taru",
+        "tasu"
+      ],
+      "on": [
+        "soku"
+      ]
+    },
+    {
+      "file": "送.html",
+      "kanji": "送",
+      "gloss": "to send ・ to present (a gift) ・ to escort ・ to see off",
+      "category": "Uncategorized",
+      "kun": [
+        "okuru",
+        "okuri"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "速.html",
+      "kanji": "速",
+      "gloss": "fast ・ quick ・ speedy ・ to hasten",
+      "category": "Uncategorized",
+      "kun": [
+        "hayai",
+        "hayameru",
+        "hayamaru",
+        "sumiyaka"
+      ],
+      "on": [
+        "soku"
+      ]
+    },
+    {
+      "file": "遂.html",
+      "kanji": "遂",
+      "gloss": "to accomplish ・ to carry through ・ to proceed ・ finally, at last",
+      "category": "Uncategorized",
+      "kun": [
+        "togeru",
+        "tsuini"
+      ],
+      "on": [
+        "sui"
+      ]
+    },
+    {
+      "file": "遭.html",
+      "kanji": "遭",
+      "gloss": "to encounter ・ to meet by chance ・ to run into",
+      "category": "Uncategorized",
+      "kun": [
+        "au"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "錘.html",
+      "kanji": "錘",
+      "gloss": "weight ・ plumb bob ・ spindle",
+      "category": "Uncategorized",
+      "kun": [
+        "tsumu",
+        "omori"
+      ],
+      "on": [
+        "sui"
+      ]
+    },
+    {
+      "file": "随.html",
+      "kanji": "随",
+      "gloss": "to follow ・ to accompany",
+      "category": "Uncategorized",
+      "kun": [
+        "shitagau",
+        "shitagaeru"
+      ],
+      "on": [
+        "zui"
+      ]
+    },
+    {
+      "file": "霜.html",
+      "kanji": "霜",
+      "gloss": "frost ・ hoarfrost",
+      "category": "Uncategorized",
+      "kun": [
+        "shimo"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "静.html",
+      "kanji": "静",
+      "gloss": "quiet ・ calm ・ peaceful ・ tranquil",
+      "category": "Uncategorized",
+      "kun": [
+        "shizuka",
+        "shizu",
+        "shizumaru",
+        "shizumeru",
+        "yasuraka"
+      ],
+      "on": [
+        "sei",
+        "jou"
+      ]
+    },
+    {
+      "file": "駄.html",
+      "kanji": "駄",
+      "gloss": "packhorse ・ to load ・ useless ・ inferior",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "da",
+        "ta"
+      ]
+    },
+    {
+      "file": "騒.html",
+      "kanji": "騒",
+      "gloss": "clamor ・ uproar ・ commotion ・ to make a fuss",
+      "category": "Uncategorized",
+      "kun": [
+        "sawagu",
+        "sawagashii",
+        "zawameku"
+      ],
+      "on": [
+        "so"
+      ]
+    },
+    {
+      "file": "髄.html",
+      "kanji": "髄",
+      "gloss": "marrow ・ bone marrow ・ essence",
+      "category": "Uncategorized",
+      "kun": [
+        "sune"
+      ],
+      "on": [
+        "zui"
+      ]
+    }
+  ]
+}
