@@ -32,23 +32,20 @@ jobs:
           if [[ ! -d "$FOLDER_PATH" ]]; then
             COUNT=0
           else
-            # OPTION A: count all files in json/
-            # COUNT=$(find "$FOLDER_PATH" -type f ! -name "$(basename "$OUTPUT_FILE")" | wc -l | tr -d ' ')
-
-            # OPTION B: count only .json files (recommended)
+            # Count only .json files; exclude the output file itself
             COUNT=$(find "$FOLDER_PATH" -type f -iname "*.json" ! -name "$(basename "$OUTPUT_FILE")" | wc -l | tr -d ' ')
           fi
 
           printf "%s\n" "$COUNT" > "$OUTPUT_FILE"
           echo "Counted $COUNT file(s) in '$FOLDER_PATH' → wrote $OUTPUT_FILE"
 
-      - name: Commit if changed
+      - name: Commit if changed (skip CI)
         run: |
           if ! git diff --quiet -- "$OUTPUT_FILE"; then
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add "$OUTPUT_FILE"
-            git commit -m "chore: update file count for json/"
+            git commit -m "chore: update file count for json/ [skip ci]"
             git push
           else
             echo "No changes to commit."
