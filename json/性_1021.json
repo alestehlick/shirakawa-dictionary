@@ -2,9 +2,7 @@
   "id": "U+6027",
   "kanji": "性",
   "kun_readings_romaji": [
-    "saga",
-    "tachi",
-    "umaretsuki"
+    "saga"
   ],
   "on_readings_romaji": [
     "sei",
@@ -14,8 +12,7 @@
   "meanings": [
     "nature",
     "character",
-    "disposition",
     "sex"
   ],
-  "explanation": "A phono-semantic character formed with the heart element indicating feelings and the graph 生, which depicts a sprouting plant, serving as the phonetic for sei and suggesting what is inborn. Accordingly, 性 denotes the innate sensibility or feelings with which people are originally endowed—their nature, character, or what is \"by nature.\" In the Warring States period, debates on 性 (seisetsu) produced Mencius’s doctrine of innate goodness (seizensetsu) and, later, Xunzi’s doctrine of innate badness (seiakusetsu), the latter stressing the importance of self-cultivation rather than denying the possibility of moral improvement."
+  "explanation": "A phono-semantic compound, 性 pairs the heart radical 忄, which points to feeling and sensibility, with 生 as its phonetic. The graph 生 originally depicts a sprouting plant and here lends the sound sei. From this formation, 性 came to mean the affective endowment human beings possess by birth—their innate nature or disposition. In the Warring States period it became a key term of moral thought: Mencius articulated the view that human nature is originally good, in line with Confucian teaching, while Xunzi spoke of nature as “bad” to stress the necessity of self-cultivation—an exhortation to improve oneself, not a denial that character can be corrected."
 }

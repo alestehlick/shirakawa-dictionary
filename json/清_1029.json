@@ -5,19 +5,21 @@
     "kiyoi",
     "kiyomaru",
     "kiyomeru",
+    "kiyoraka",
     "sumu"
   ],
   "on_readings_romaji": [
     "sei",
-    "shou"
+    "sho",
+    "shin"
   ],
   "category": "",
   "meanings": [
     "pure",
-    "clear",
     "clean",
     "to purify",
-    "to clear up"
+    "to clear",
+    "clarity"
   ],
-  "explanation": "A phono-semantic compound, originally written 淸, with the water element providing the semantic field of water and liquids, and 青 supplying the sound sei while also evoking a calm blue‑green hue associated with purity and quiet. The Shuowen defines it as “becoming clear,” and understands the graph as depicting limpid, settled water. From the idea of water clearing, the sense extends to people, feelings, and conduct, yielding meanings such as pure, clean, to purify, and to be or make clear."
+  "explanation": "清 is a phono-semantic character. Its original form 淸 pairs the water element with 青, with 青 serving as the phonetic that signals the on reading sei. 青 names a blue‑green color once derived from cinnabar, a tone felt to be pure and tranquil. As the Shuowen says, the graph means “to become clear,” depicting water that has settled and turned limpid. From this image come senses such as water becoming clear (sumu), to clear or purify (kiyomeru), and, by extension, clarity and purity in a person or feeling—kiyoi, kiyoraka, akiraka."
 }
