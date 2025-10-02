@@ -3097,6 +3097,19 @@
       ]
     },
     {
+      "file": "双.html",
+      "kanji": "双",
+      "gloss": "pair ・ set of two ・ double",
+      "category": "Uncategorized",
+      "kun": [
+        "futa",
+        "futatsu"
+      ],
+      "on": [
+        "sou"
+      ]
+    },
+    {
       "file": "収.html",
       "kanji": "収",
       "gloss": "to collect ・ to receive ・ to store ・ to harvest ・ to capture",
@@ -4240,6 +4253,16 @@
       ],
       "on": [
         "kai"
+      ]
+    },
+    {
+      "file": "塑.html",
+      "kanji": "塑",
+      "gloss": "to model in clay ・ sculpt ・ clay figure",
+      "category": "Uncategorized",
+      "kun": [],
+      "on": [
+        "so"
       ]
     },
     {
@@ -13604,6 +13627,21 @@
       ]
     },
     {
+      "file": "疎.html",
+      "kanji": "疎",
+      "gloss": "sparse ・ estranged ・ distant ・ coarse",
+      "category": "Uncategorized",
+      "kun": [
+        "utoi",
+        "utomu",
+        "madara"
+      ],
+      "on": [
+        "so",
+        "sho"
+      ]
+    },
+    {
       "file": "疑.html",
       "kanji": "疑",
       "gloss": "to doubt ・ to suspect ・ distrust ・ be puzzled",
@@ -14287,6 +14325,18 @@
       ],
       "on": [
         "ma"
+      ]
+    },
+    {
+      "file": "礎.html",
+      "kanji": "礎",
+      "gloss": "foundation stone ・ cornerstone ・ basis ・ foundation",
+      "category": "Uncategorized",
+      "kun": [
+        "ishizue"
+      ],
+      "on": [
+        "so"
       ]
     },
     {
@@ -18056,7 +18106,7 @@
     {
       "file": "訴.html",
       "kanji": "訴",
-      "gloss": "to appeal ・ to sue ・ to complain",
+      "gloss": "to sue ・ to appeal ・ to accuse ・ complaint",
       "category": "Uncategorized",
       "kun": [
         "uttaeru"
