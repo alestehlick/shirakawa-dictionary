@@ -1,0 +1,53 @@
+name: Count files in a folder
+
+on:
+  push:
+    branches: [ main, master ]
+    # Only run when the target folder changes (adjust as needed)
+    paths:
+      - "Images/**"
+      - ".github/workflows/count-files.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write  # needed to push the count file
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure
+        run: |
+          # === Edit these two lines to your folder/file ===
+          echo "FOLDER_PATH=Images" >> $GITHUB_ENV
+          echo "OUTPUT_FILE=Images/_file_count.txt" >> $GITHUB_ENV
+
+      - name: Count files and write file
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$FOLDER_PATH"
+
+          # Count regular files; exclude the count file itself
+          COUNT=$(find . -type f ! -name "$(basename "$OUTPUT_FILE")" | wc -l | tr -d ' ')
+
+          # Go back to repo root and write result
+          cd - >/dev/null
+          printf "%s\n" "$COUNT" > "$OUTPUT_FILE"
+
+          echo "Counted $COUNT files in '$FOLDER_PATH' and wrote to '$OUTPUT_FILE'."
+
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet -- "$OUTPUT_FILE"; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add "$OUTPUT_FILE"
+            git commit -m "chore: update file count for $FOLDER_PATH"
+            git push
+          else
+            echo "No changes to commit."
+          fi
