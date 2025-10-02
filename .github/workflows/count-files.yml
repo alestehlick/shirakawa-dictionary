@@ -1,16 +1,15 @@
-name: Count files in a folder
+name: Count files in json folder
 
 on:
   push:
     branches: [ main, master ]
-    # Only run when the target folder changes (adjust as needed)
     paths:
-      - "images/**"
-      - ".github/workflows/count-files.yml"
+      - "json/**"
+      - ".github/workflows/count-json.yml"
   workflow_dispatch: {}
 
 permissions:
-  contents: write  # needed to push the count file
+  contents: write
 
 jobs:
   count:
@@ -19,26 +18,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure
+      - name: Configure target
         run: |
-          # === Edit these two lines to your folder/file ===
-          echo "FOLDER_PATH=images" >> $GITHUB_ENV
-          echo "OUTPUT_FILE=images/_file_count.txt" >> $GITHUB_ENV
+          echo "FOLDER_PATH=json" >> $GITHUB_ENV
+          echo "OUTPUT_FILE=json/_file_count.txt" >> $GITHUB_ENV
 
-      - name: Count files and write file
+      - name: Count and write
         shell: bash
         run: |
           set -euo pipefail
-          cd "$FOLDER_PATH"
+          mkdir -p "$(dirname "$OUTPUT_FILE")"
 
-          # Count regular files; exclude the count file itself
-          COUNT=$(find . -type f ! -name "$(basename "$OUTPUT_FILE")" | wc -l | tr -d ' ')
+          if [[ ! -d "$FOLDER_PATH" ]]; then
+            COUNT=0
+          else
+            # OPTION A: count all files in json/
+            # COUNT=$(find "$FOLDER_PATH" -type f ! -name "$(basename "$OUTPUT_FILE")" | wc -l | tr -d ' ')
 
-          # Go back to repo root and write result
-          cd - >/dev/null
+            # OPTION B: count only .json files (recommended)
+            COUNT=$(find "$FOLDER_PATH" -type f -iname "*.json" ! -name "$(basename "$OUTPUT_FILE")" | wc -l | tr -d ' ')
+          fi
+
           printf "%s\n" "$COUNT" > "$OUTPUT_FILE"
-
-          echo "Counted $COUNT files in '$FOLDER_PATH' and wrote to '$OUTPUT_FILE'."
+          echo "Counted $COUNT file(s) in '$FOLDER_PATH' → wrote $OUTPUT_FILE"
 
       - name: Commit if changed
         run: |
@@ -46,7 +48,7 @@ jobs:
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add "$OUTPUT_FILE"
-            git commit -m "chore: update file count for $FOLDER_PATH"
+            git commit -m "chore: update file count for json/"
             git push
           else
             echo "No changes to commit."
