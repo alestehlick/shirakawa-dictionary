@@ -1,0 +1,19 @@
+{
+  "id": "U+6669",
+  "kanji": "晩",
+  "kun_readings_romaji": [
+    "kure",
+    "osoi",
+    "okureru"
+  ],
+  "on_readings_romaji": [
+    "ban"
+  ],
+  "category": "",
+  "meanings": [
+    "evening",
+    "dusk",
+    "late"
+  ],
+  "explanation": "This is a phono-semantic compound: the sun element 日 sets the scene of declining light, while 免 serves as the phonetic, giving the on reading ban. The same phonetic appears in 挽 and 輓, both read ban, which confirms its sound value. The Shuowen glosses it as 莫, “dusk,” pointing to the time when the sun sinks. From this core image it means nightfall or dusk (kure, higure), and by extension “late,” “to be late,” and “later” with respect to time or age."
+}
