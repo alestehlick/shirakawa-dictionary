@@ -1,6 +1,20 @@
 {
   "Uncategorized": [
     {
+      "file": "(益).html",
+      "kanji": "(益)",
+      "gloss": "benefit ・ advantage ・ profit ・ increase",
+      "category": "Uncategorized",
+      "kun": [
+        "masu"
+      ],
+      "on": [
+        "eki",
+        "yaku",
+        "itsu"
+      ]
+    },
+    {
       "file": "一.html",
       "kanji": "一",
       "gloss": "one ・ single ・ first ・ all ・ whole",
@@ -15535,20 +15549,6 @@
       "on": [
         "eki",
         "yaku"
-      ]
-    },
-    {
-      "file": "益.html",
-      "kanji": "益",
-      "gloss": "benefit ・ advantage ・ profit ・ increase",
-      "category": "Uncategorized",
-      "kun": [
-        "masu"
-      ],
-      "on": [
-        "eki",
-        "yaku",
-        "itsu"
       ]
     },
     {
