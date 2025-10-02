@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Count JSONs and write reports (robust parse + debug)
+      - name: Count JSONs and write reports (robust; no broken pipes)
         shell: bash
         run: |
           set -euo pipefail
@@ -35,34 +35,49 @@ jobs:
 
           mkdir -p "$FOLDER"
 
-          # Collect basenames of *.json, excluding our helper files explicitly
-          mapfile -t FILES < <(find "$FOLDER" -type f -iname '*.json' -printf '%f\n' \
-            | grep -Ev '^(_file_count|_missing_numbers|_debug_listing)\.json$' \
-            | sort)
+          # Collect basenames of *.json (null-delimited to be safe), skip our helper files explicitly
+          FILES=()
+          while IFS= read -r -d '' f; do
+            base="$(basename "$f")"
+            case "$base" in
+              _file_count.txt|_missing_numbers.txt|_missing_numbers.json|_debug_listing.txt) continue ;;
+            esac
+            FILES+=("$base")
+          done < <(find "$FOLDER" -type f -iname '*.json' -print0)
 
-          # Debug: show a sample of filenames we actually see
+          # Debug sample (no pipes -> no SIGPIPE)
           {
-            echo "== SAMPLE FILENAMES =="
-            printf '%s\n' "${FILES[@]}" | head -n 50
+            echo "== SAMPLE FILENAMES (up to 50) =="
+            n=0
+            for b in "${FILES[@]}"; do
+              echo "$b"
+              n=$((n+1))
+              (( n>=50 )) && break
+            done
             echo
           } > "$DEBUG_LIST"
 
-          # Parse numbers: take digits after the LAST underscore before .json
-          # Only keep entries that actually yield a number
-          declare -a NUMS=()
-          for base in "${FILES[@]:-}"; do
-            # try to extract trailing digits after last underscore
-            if [[ "$base" =~ ^.*_([0-9]+)\.json$ ]]; then
-              n="${BASH_REMATCH[1]}"
-              NUMS+=("$n")
-              printf '%s -> %s\n' "$base" "$n" >> "$DEBUG_LIST"
+          # Extract digits after the LAST underscore before .json
+          NUMS=()
+          : > "$DEBUG_LIST"  # reset; now record parsed mapping
+          echo "== PARSE CHECK (filename -> number) ==" >> "$DEBUG_LIST"
+          for base in "${FILES[@]}"; do
+            stem="${base%.json}"
+            # take text after last underscore
+            num="${stem##*_}"
+            if [[ "$num" =~ ^[0-9]+$ ]]; then
+              NUMS+=("$num")
+              echo "$base -> $num" >> "$DEBUG_LIST"
             else
-              printf '%s -> (no match)\n' "$base" >> "$DEBUG_LIST"
+              echo "$base -> (no match)" >> "$DEBUG_LIST"
             fi
           done
 
-          # Unique-sort numbers
-          mapfile -t FOUND_NUMS < <(printf '%s\n' "${NUMS[@]:-}" | grep -E '^[0-9]+$' | sort -n | uniq)
+          # Unique, numeric sort
+          FOUND_NUMS=()
+          if ((${#NUMS[@]})); then
+            mapfile -t FOUND_NUMS < <(printf '%s\n' "${NUMS[@]}" | sort -n | uniq)
+          fi
 
           FOUND_TOTAL="${#FOUND_NUMS[@]}"
           printf '%s\n' "$FOUND_TOTAL" > "$COUNT_FILE"
@@ -71,7 +86,13 @@ jobs:
           tmp_expected="$(mktemp)"; seq 1 "$EXPECTED_TOTAL" > "$tmp_expected"
           tmp_found="$(mktemp)";    printf '%s\n' "${FOUND_NUMS[@]:-}" > "$tmp_found"
 
-          mapfile -t MISSING < <(comm -23 "$tmp_expected" "$tmp_found" || true)
+          # comm needs sorted unique inputs (we ensured that)
+          MISSING=()
+          if [[ -s "$tmp_found" ]]; then
+            mapfile -t MISSING < <(comm -23 "$tmp_expected" "$tmp_found")
+          else
+            mapfile -t MISSING < <(cat "$tmp_expected")
+          fi
 
           # Write newline-separated missing numbers
           if ((${#MISSING[@]})); then
@@ -89,7 +110,10 @@ jobs:
             echo "  \"found_total\": ${FOUND_TOTAL},"
             echo "  \"missing_count\": ${#MISSING[@]},"
             echo -n "  \"missing_numbers\": ["
-            if ((${#MISSING[@]})); then paste -sd, <(printf '%s\n' "${MISSING[@]}"); fi
+            if ((${#MISSING[@]})); then
+              # join with commas without trailing comma
+              printf '%s,' "${MISSING[@]}" | sed 's/,$//'
+            fi
             echo "]"
             echo "}"
           } > "$MISSING_JSON"
