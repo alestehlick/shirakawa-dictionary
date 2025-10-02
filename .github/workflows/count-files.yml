@@ -2,14 +2,11 @@ name: Count files in json folder
 
 on:
   push:
-    branches: [ main, master ]
-    paths:
-      - "json/**"
-      - ".github/workflows/count-json.yml"
-  workflow_dispatch: {}
+    branches: [ main, master ]   # change if your default branch is different
+  workflow_dispatch: {}           # lets you run it manually from the Actions tab
 
 permissions:
-  contents: write
+  contents: write                 # required to push the count file
 
 jobs:
   count:
@@ -17,36 +14,60 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configure target
         run: |
           echo "FOLDER_PATH=json" >> $GITHUB_ENV
           echo "OUTPUT_FILE=json/_file_count.txt" >> $GITHUB_ENV
 
-      - name: Count and write
+      - name: Count and write file
         shell: bash
         run: |
           set -euo pipefail
+
+          # Ensure the target folder exists (if it doesn't, we'll still write the file)
+          mkdir -p "$FOLDER_PATH"
           mkdir -p "$(dirname "$OUTPUT_FILE")"
 
-          if [[ ! -d "$FOLDER_PATH" ]]; then
-            COUNT=0
-          else
-            # Count only .json files; exclude the output file itself
+          # Count only *.json files; exclude the count file itself if it's also *.json (it isn't)
+          if [[ -d "$FOLDER_PATH" ]]; then
             COUNT=$(find "$FOLDER_PATH" -type f -iname "*.json" ! -name "$(basename "$OUTPUT_FILE")" | wc -l | tr -d ' ')
+          else
+            COUNT=0
           fi
 
           printf "%s\n" "$COUNT" > "$OUTPUT_FILE"
           echo "Counted $COUNT file(s) in '$FOLDER_PATH' → wrote $OUTPUT_FILE"
 
-      - name: Commit if changed (skip CI)
+      - name: Ensure file is not ignored; show status
+        shell: bash
         run: |
-          if ! git diff --quiet -- "$OUTPUT_FILE"; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add "$OUTPUT_FILE"
+          set -euo pipefail
+
+          # If .gitignore would ignore the output file, add an exception
+          if git check-ignore -q "$OUTPUT_FILE"; then
+            echo "!$OUTPUT_FILE" >> .gitignore
+            echo "Added ignore exception for $OUTPUT_FILE in .gitignore"
+            git add .gitignore
+          fi
+
+          echo "---- git status (before commit) ----"
+          git status --porcelain=v1
+          echo "------------------------------------"
+
+      - name: Commit and push (skip CI)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "$OUTPUT_FILE"               # -f in case any ignore rules linger
+          if ! git diff --cached --quiet; then
             git commit -m "chore: update file count for json/ [skip ci]"
             git push
+            echo "Committed and pushed $OUTPUT_FILE"
           else
             echo "No changes to commit."
           fi
