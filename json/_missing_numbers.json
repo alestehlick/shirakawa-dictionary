@@ -1,6 +1,6 @@
 {
   "folder": "json",
-  "pattern": "<kanji>_<NUMBER>.json  // number taken after last underscore",
+  "pattern": "<kanji>_<NUMBER>.json (number after last underscore)",
   "expected_total": 1950,
   "found_total": 1751,
   "missing_count": 1859,
