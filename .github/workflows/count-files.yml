@@ -5,7 +5,7 @@ on:
     branches: [ main, master ]
     # Only run when the target folder changes (adjust as needed)
     paths:
-      - "Images/**"
+      - "images/**"
       - ".github/workflows/count-files.yml"
   workflow_dispatch: {}
 
@@ -22,8 +22,8 @@ jobs:
       - name: Configure
         run: |
           # === Edit these two lines to your folder/file ===
-          echo "FOLDER_PATH=Images" >> $GITHUB_ENV
-          echo "OUTPUT_FILE=Images/_file_count.txt" >> $GITHUB_ENV
+          echo "FOLDER_PATH=images" >> $GITHUB_ENV
+          echo "OUTPUT_FILE=images/_file_count.txt" >> $GITHUB_ENV
 
       - name: Count files and write file
         shell: bash
