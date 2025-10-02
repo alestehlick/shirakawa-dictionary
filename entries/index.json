@@ -15525,6 +15525,20 @@
       ]
     },
     {
+      "file": "益 .html",
+      "kanji": "益 ",
+      "gloss": "benefit ・ advantage ・ profit ・ increase",
+      "category": "Uncategorized",
+      "kun": [
+        "masu"
+      ],
+      "on": [
+        "eki",
+        "yaku",
+        "itsu"
+      ]
+    },
+    {
       "file": "益a.html",
       "kanji": "益a",
       "gloss": "benefit ・ profit ・ increase ・ gain ・ abundance",
@@ -15535,20 +15549,6 @@
       "on": [
         "eki",
         "yaku"
-      ]
-    },
-    {
-      "file": "益b.html",
-      "kanji": "益b",
-      "gloss": "benefit ・ advantage ・ profit ・ increase",
-      "category": "Uncategorized",
-      "kun": [
-        "masu"
-      ],
-      "on": [
-        "eki",
-        "yaku",
-        "itsu"
       ]
     },
     {
