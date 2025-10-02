@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Count JSONs and write reports (pure Bash; last-underscore rule)
+      - name: Count JSONs and write reports (strict pattern)
         shell: bash
         run: |
           set -euo pipefail
@@ -32,45 +32,32 @@ jobs:
 
           mkdir -p "$FOLDER"
 
-          # Collect numbers from filenames:
-          # - Matches: "<kanji>_<number>.json"  (extract the number after the LAST underscore)
-          # - Also accepts: "<number>.json"
-          declare -a NUMS=()
+          # Gather only files that strictly match: <kanji>_<number>.json
+          #   - exactly one underscore
+          #   - digits at the end before .json
+          #   - excludes helper files like _missing_numbers.json, etc.
+          mapfile -t MATCHED < <(
+            find "$FOLDER" -type f -iname '*.json' \
+            ! -name '_*.json' \
+            -printf '%f\n' \
+            | sed -nE 's/^([^_]+)_([0-9]+)\.json$/\1_\2/p'
+          )
 
-          while IFS= read -r -d '' path; do
-            base="$(basename "$path")"
-            if [[ "$base" == *.json ]]; then
-              # strip extension
-              stem="${base%.json}"
-              # take text after last underscore if present; otherwise the whole stem
-              if [[ "$stem" == *_* ]]; then
-                num="${stem##*_}"
-              else
-                num="$stem"
-              fi
-              # accept only pure integers
-              if [[ "$num" =~ ^[0-9]+$ ]]; then
-                NUMS+=("$num")
-              fi
-            fi
-          done < <(find "$FOLDER" -type f -iname '*.json' -print0)
+          # Extract just the numbers, sort unique
+          mapfile -t FOUND_NUMS < <(
+            printf '%s\n' "${MATCHED[@]}" \
+            | sed -E 's/^[^_]+_([0-9]+)\.json$/\1/' \
+            | sort -n | uniq
+          )
 
-          # Sort unique
-          mapfile -t FOUND_NUMS < <(printf '%s\n' "${NUMS[@]}" | sort -n | uniq)
-
-          # Count found (this is "how many numbered .jsons we found")
+          # Count found
           FOUND_TOTAL="${#FOUND_NUMS[@]}"
           printf '%s\n' "$FOUND_TOTAL" > "$COUNT_FILE"
 
-          # Build expected 1..EXPECTED_TOTAL
-          tmp_expected="$(mktemp)"
-          seq 1 "$EXPECTED_TOTAL" > "$tmp_expected"
+          # Build expected 1..EXPECTED_TOTAL and compute missing
+          tmp_expected="$(mktemp)"; seq 1 "$EXPECTED_TOTAL" > "$tmp_expected"
+          tmp_found="$(mktemp)";    printf '%s\n' "${FOUND_NUMS[@]}" > "$tmp_found"
 
-          # Write found numbers to a temp file
-          tmp_found="$(mktemp)"
-          printf '%s\n' "${FOUND_NUMS[@]}" > "$tmp_found"
-
-          # Missing = expected minus found
           mapfile -t MISSING < <(comm -23 "$tmp_expected" "$tmp_found")
 
           # Write newline-separated missing numbers
@@ -80,18 +67,16 @@ jobs:
             : > "$MISSING_TXT"
           fi
 
-          # JSON summary (compact but readable)
-          MISSING_COUNT="${#MISSING[@]}"
+          # JSON summary
           {
             echo "{"
             echo "  \"folder\": \"${FOLDER}\","
-            echo "  \"pattern\": \"(<kanji>_|)<NUMBER>.json  // number taken after last underscore\","
+            echo "  \"pattern\": \"<kanji>_<NUMBER>.json\","
             echo "  \"expected_total\": ${EXPECTED_TOTAL},"
             echo "  \"found_total\": ${FOUND_TOTAL},"
-            echo "  \"missing_count\": ${MISSING_COUNT},"
+            echo "  \"missing_count\": ${#MISSING[@]},"
             echo -n "  \"missing_numbers\": ["
             if ((${#MISSING[@]})); then
-              # join with commas without trailing comma
               paste -sd, <(printf '%s\n' "${MISSING[@]}")
             fi
             echo "]"
@@ -104,8 +89,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
-          # Ensure outputs are not ignored
           for p in json/_file_count.txt json/_missing_numbers.txt json/_missing_numbers.json; do
             if git check-ignore -q "$p"; then
               echo "!$p" >> .gitignore
