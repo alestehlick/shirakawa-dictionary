@@ -19,36 +19,30 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Configure target
-        shell: bash
-        run: |
-          echo "FOLDER_PATH=json" >> "$GITHUB_ENV"
-          echo "COUNT_FILE=json/_file_count.txt" >> "$GITHUB_ENV"
-          echo "MISSING_TXT=json/_missing_numbers.txt" >> "$GITHUB_ENV"
-          echo "MISSING_JSON=json/_missing_numbers.json" >> "$GITHUB_ENV"
-          echo "EXPECTED_TOTAL=1950" >> "$GITHUB_ENV"
-
-      - name: Compute counts and missing numbers
+      - name: Count JSONs and write reports
         shell: bash
         run: |
           set -euo pipefail
+          FOLDER_PATH="json"
+          COUNT_FILE="json/_file_count.txt"
+          MISSING_TXT="json/_missing_numbers.txt"
+          MISSING_JSON="json/_missing_numbers.json"
+          EXPECTED_TOTAL=1950
+
           mkdir -p "$FOLDER_PATH"
 
-          python3 - << 'PY'
+          # --- Python block to compute counts & missing numbers ---
+          python3 - <<'PY'
 import os, re, json
-
-folder       = os.environ["FOLDER_PATH"]
-count_file   = os.environ["COUNT_FILE"]
-missing_txt  = os.environ["MISSING_TXT"]
-missing_json = os.environ["MISSING_JSON"]
-expected_tot = int(os.environ["EXPECTED_TOTAL"])
+folder = "json"
+count_file = "json/_file_count.txt"
+missing_txt = "json/_missing_numbers.txt"
+missing_json = "json/_missing_numbers.json"
+expected_tot = 1950
 
 pat = re.compile(r'(?:^|_)(\d+)\.json$', re.IGNORECASE)
 nums = set()
-
 for root, _, files in os.walk(folder):
     for f in files:
         m = pat.search(f)
@@ -78,27 +72,23 @@ with open(missing_json, "w", encoding="utf-8") as f:
 
 print(f"Found {len(nums)} numbered .json file(s). Missing: {len(missing)}")
 PY
+          # -------------------------------------------------------
 
-      - name: Ensure outputs not ignored & show status
+      - name: Commit results (skip CI)
         shell: bash
         run: |
           set -euo pipefail
-          for p in "$COUNT_FILE" "$MISSING_TXT" "$MISSING_JSON"; do
+          # Ensure outputs aren’t ignored
+          for p in json/_file_count.txt json/_missing_numbers.txt json/_missing_numbers.json; do
             if git check-ignore -q "$p"; then
               echo "!$p" >> .gitignore
               git add .gitignore
-              echo "Added exception for $p in .gitignore"
             fi
           done
-          git status --porcelain=v1 || true
 
-      - name: Commit and push results (skip CI)
-        shell: bash
-        run: |
-          set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f "$COUNT_FILE" "$MISSING_TXT" "$MISSING_JSON"
+          git add -f json/_file_count.txt json/_missing_numbers.txt json/_missing_numbers.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: update json count & missing list [skip ci]"
             git push
