@@ -1859,6 +1859,32 @@
       ]
     },
     {
+      "file": "免.html",
+      "kanji": "免",
+      "gloss": "to avoid ・ to be exempt ・ to excuse ・ exemption",
+      "category": "Uncategorized",
+      "kun": [
+        "manugareru",
+        "manukareru"
+      ],
+      "on": [
+        "men"
+      ]
+    },
+    {
+      "file": "免.html",
+      "kanji": "免",
+      "gloss": "to avoid ・ to be exempt ・ exemption",
+      "category": "Uncategorized",
+      "kun": [
+        "manugareru",
+        "manukau"
+      ],
+      "on": [
+        "men"
+      ]
+    },
+    {
       "file": "児.html",
       "kanji": "児",
       "gloss": "child ・ infant",
@@ -15496,6 +15522,33 @@
       "kun": [],
       "on": [
         "bon"
+      ]
+    },
+    {
+      "file": "益.html",
+      "kanji": "益",
+      "gloss": "benefit ・ profit ・ increase ・ gain ・ abundance",
+      "category": "Uncategorized",
+      "kun": [
+        "masu"
+      ],
+      "on": [
+        "eki",
+        "yaku"
+      ]
+    },
+    {
+      "file": "益.html",
+      "kanji": "益",
+      "gloss": "benefit ・ advantage ・ profit ・ increase",
+      "category": "Uncategorized",
+      "kun": [
+        "masu"
+      ],
+      "on": [
+        "eki",
+        "yaku",
+        "itsu"
       ]
     },
     {
