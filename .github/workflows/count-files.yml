@@ -14,88 +14,62 @@ jobs:
     env:
       LC_ALL: C.UTF-8
       LANG: C.UTF-8
+      # >>>>>>>>> EDIT THIS to your real folder path <<<<<<<<<
+      TARGET_DIR: json
+      EXPECTED_TOTAL: "1950"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Detect folder with Kanji_number.json files
-        id: detect
+      - name: Validate target folder
         shell: bash
         run: |
           set -euo pipefail
-
-          # Prefer ./json if it actually contains matching files:
-          if [[ -d json ]]; then
-            if find json -type f -iname '*_[0-9]*.json' | grep -q .; then
-              echo "folder=json" >>"$GITHUB_OUTPUT"
-              echo "Using explicit folder: json"
-              exit 0
-            fi
+          if [[ ! -d "$TARGET_DIR" ]]; then
+            echo "::error ::Folder '$TARGET_DIR' does not exist at repo root. Edit TARGET_DIR in the workflow to the correct path (exact case)."
+            echo "Here are candidate folders containing '*_[0-9]*.json':"
+            find . -type f -iname '*_[0-9]*.json' -printf '%h\n' | sed 's#^\./##' | sort | uniq -c | sort -nr | head -n 20 || true
+            exit 1
           fi
 
-          # Auto-detect: pick the directory (within repo) that has the MOST files like *_<digits>.json
-          # Limit depth a bit to avoid walking node_modules, etc.
-          mapfile -t counts < <(
-            find . -maxdepth 4 -type f -iname '*_[0-9]*.json' -printf '%h\n' \
-              | sed 's#^\./##' \
-              | awk 'NF' \
-              | sort | uniq -c | sort -nr
-          )
-
-          if ((${#counts[@]}==0)); then
-            echo "::error ::No files matching '*_[0-9]*.json' found anywhere in repo."
-            # Still write outputs to ./json for visibility
-            echo "folder=json" >>"$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          # First column is count, second is folder path
-          # Example line: "   345 json"
-          best_line="${counts[0]}"
-          best_count="$(awk '{print $1}' <<<"$best_line")"
-          best_folder="$(awk '{sub($1 FS,""); print}' <<<"$best_line")"
-          best_folder="${best_folder#./}"
-
-          echo "Auto-detected folder: $best_folder (files: $best_count)"
-          echo "folder=$best_folder" >>"$GITHUB_OUTPUT"
-
-      - name: Count & list missing (1..1950)
+      - name: Count JSONs and list missing (strict; no folder creation)
         shell: bash
         run: |
           set -euo pipefail
-          FOLDER="${{ steps.detect.outputs.folder }}"
-          [[ -z "$FOLDER" ]] && FOLDER="json"
-
+          FOLDER="$TARGET_DIR"
           COUNT_FILE="$FOLDER/_file_count.txt"
           MISSING_TXT="$FOLDER/_missing_numbers.txt"
           MISSING_JSON="$FOLDER/_missing_numbers.json"
-          EXPECTED_TOTAL=1950
 
-          mkdir -p "$FOLDER"
-
-          # Collect numbers: take digits after the LAST underscore before .json
+          # Collect numbers from files matching <kanji>_<number>.json
           NUMS=()
           while IFS= read -r -d '' f; do
             base="$(basename "$f")"
+            # ignore our own outputs if they already exist
+            case "$base" in
+              _file_count.txt|_missing_numbers.txt|_missing_numbers.json) continue ;;
+            esac
+            # take digits after the last underscore, before .json
             stem="${base%.json}"
             num="${stem##*_}"
-            [[ "$num" =~ ^[0-9]+$ ]] && NUMS+=("$num")
+            if [[ "$num" =~ ^[0-9]+$ ]]; then
+              NUMS+=("$num")
+            fi
           done < <(find "$FOLDER" -type f -iname '*.json' -print0)
 
-          # Unique numeric sort
+          # Unique, numeric sort
           FOUND_NUMS=()
           if ((${#NUMS[@]})); then
             mapfile -t FOUND_NUMS < <(printf '%s\n' "${NUMS[@]}" | sort -n | uniq)
           fi
 
-          # Write how many numbered .jsons we found
+          # Write how many numbered jsons found
           printf '%s\n' "${#FOUND_NUMS[@]}" > "$COUNT_FILE"
 
-          # Compute missing in 1..1950
+          # Build expected and compute missing in 1..EXPECTED_TOTAL
           tmp_expected="$(mktemp)"; seq 1 "$EXPECTED_TOTAL" > "$tmp_expected"
           tmp_found="$(mktemp)";    printf '%s\n' "${FOUND_NUMS[@]:-}" > "$tmp_found"
 
-          MISSING=()
           if [[ -s "$tmp_found" ]]; then
             mapfile -t MISSING < <(comm -23 "$tmp_expected" "$tmp_found")
           else
@@ -112,7 +86,7 @@ jobs:
           {
             echo "{"
             echo "  \"folder\": \"${FOLDER}\","
-            echo "  \"pattern\": \"<kanji>_<NUMBER>.json  // number after last underscore\","
+            echo "  \"pattern\": \"<kanji>_<NUMBER>.json (number after last underscore)\","
             echo "  \"expected_total\": ${EXPECTED_TOTAL},"
             echo "  \"found_total\": ${#FOUND_NUMS[@]},"
             echo "  \"missing_count\": ${#MISSING[@]},"
@@ -126,22 +100,15 @@ jobs:
 
           rm -f "$tmp_expected" "$tmp_found"
 
-          echo "Folder: $FOLDER"
-          echo "Found:  ${#FOUND_NUMS[@]}"
-          echo "Missing: ${#MISSING[@]}"
-
       - name: Commit results (skip CI)
         shell: bash
         run: |
           set -euo pipefail
-          OUT1="${{ steps.detect.outputs.folder }}/_file_count.txt"
-          OUT2="${{ steps.detect.outputs.folder }}/_missing_numbers.txt"
-          OUT3="${{ steps.detect.outputs.folder }}/_missing_numbers.json"
+          OUT1="$TARGET_DIR/_file_count.txt"
+          OUT2="$TARGET_DIR/_missing_numbers.txt"
+          OUT3="$TARGET_DIR/_missing_numbers.json"
 
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          # Ensure not ignored
+          # If any of these are ignored, add an exception
           for p in "$OUT1" "$OUT2" "$OUT3"; do
             if git check-ignore -q "$p"; then
               echo "!$p" >> .gitignore
@@ -149,6 +116,8 @@ jobs:
             fi
           done
 
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f "$OUT1" "$OUT2" "$OUT3" || true
           if ! git diff --cached --quiet; then
             git commit -m "chore: update count & missing list [skip ci]"
