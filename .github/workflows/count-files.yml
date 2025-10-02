@@ -1,12 +1,15 @@
-name: Count files in json folder
+name: Count and list missing json files
 
 on:
   push:
-    branches: [ main, master ]   # change if your default branch is different
-  workflow_dispatch: {}           # lets you run it manually from the Actions tab
+    branches: [ main, master ]         # adjust if needed
+    paths:
+      - "json/**"
+      - ".github/workflows/count-json.yml"
+  workflow_dispatch: {}
 
 permissions:
-  contents: write                 # required to push the count file
+  contents: write
 
 jobs:
   count:
@@ -20,54 +23,93 @@ jobs:
       - name: Configure target
         run: |
           echo "FOLDER_PATH=json" >> $GITHUB_ENV
-          echo "OUTPUT_FILE=json/_file_count.txt" >> $GITHUB_ENV
+          echo "COUNT_FILE=json/_file_count.txt" >> $GITHUB_ENV
+          echo "MISSING_TXT=json/_missing_numbers.txt" >> $GITHUB_ENV
+          echo "MISSING_JSON=json/_missing_numbers.json" >> $GITHUB_ENV
+          echo "EXPECTED_TOTAL=1950" >> $GITHUB_ENV
 
-      - name: Count and write file
+      - name: Compute counts and missing numbers
         shell: bash
         run: |
           set -euo pipefail
-
-          # Ensure the target folder exists (if it doesn't, we'll still write the file)
           mkdir -p "$FOLDER_PATH"
-          mkdir -p "$(dirname "$OUTPUT_FILE")"
 
-          # Count only *.json files; exclude the count file itself if it's also *.json (it isn't)
-          if [[ -d "$FOLDER_PATH" ]]; then
-            COUNT=$(find "$FOLDER_PATH" -type f -iname "*.json" ! -name "$(basename "$OUTPUT_FILE")" | wc -l | tr -d ' ')
-          else
-            COUNT=0
-          fi
+          python3 - << 'PY'
+import os, re, json, sys
 
-          printf "%s\n" "$COUNT" > "$OUTPUT_FILE"
-          echo "Counted $COUNT file(s) in '$FOLDER_PATH' → wrote $OUTPUT_FILE"
+folder       = os.environ["FOLDER_PATH"]
+count_file   = os.environ["COUNT_FILE"]
+missing_txt  = os.environ["MISSING_TXT"]
+missing_json = os.environ["MISSING_JSON"]
+expected_tot = int(os.environ["EXPECTED_TOTAL"])
 
-      - name: Ensure file is not ignored; show status
+# Collect numbers from filenames in folder:
+# matches: "123.json" or "anything_123.json"
+pat = re.compile(r'(?:^|_)(\d+)\.json$', re.IGNORECASE)
+
+nums = set()
+for root, _, files in os.walk(folder):
+    for f in files:
+        m = pat.search(f)
+        if m:
+            nums.add(int(m.group(1)))
+
+expected = set(range(1, expected_tot + 1))
+missing  = sorted(expected - nums)
+
+# Write outputs
+os.makedirs(os.path.dirname(count_file), exist_ok=True)
+with open(count_file, "w", encoding="utf-8") as f:
+    f.write(str(len(nums)) + "\n")
+
+with open(missing_txt, "w", encoding="utf-8") as f:
+    if missing:
+        f.write("\n".join(map(str, missing)) + "\n")
+    else:
+        f.write("")  # empty file if none missing
+
+summary = {
+    "folder": folder,
+    "pattern": "(^|_)<NUMBER>.json",
+    "expected_total": expected_tot,
+    "found_total": len(nums),
+    "missing_count": len(missing),
+    "missing_numbers": missing,
+}
+with open(missing_json, "w", encoding="utf-8") as f:
+    json.dump(summary, f, ensure_ascii=False, indent=2)
+
+print(f"Found {len(nums)} numbered .json file(s). Missing: {len(missing)}")
+PY
+
+      - name: Ensure files aren’t ignored & show status
         shell: bash
         run: |
           set -euo pipefail
-
-          # If .gitignore would ignore the output file, add an exception
-          if git check-ignore -q "$OUTPUT_FILE"; then
-            echo "!$OUTPUT_FILE" >> .gitignore
-            echo "Added ignore exception for $OUTPUT_FILE in .gitignore"
-            git add .gitignore
-          fi
+          # If .gitignore would ignore our outputs, add exceptions
+          for p in "$COUNT_FILE" "$MISSING_TXT" "$MISSING_JSON"; do
+            if git check-ignore -q "$p"; then
+              echo "!$p" >> .gitignore
+              git add .gitignore
+              echo "Added exception for $p in .gitignore"
+            fi
+          done
 
           echo "---- git status (before commit) ----"
-          git status --porcelain=v1
+          git status --porcelain=v1 || true
           echo "------------------------------------"
 
-      - name: Commit and push (skip CI)
+      - name: Commit and push results (skip CI)
         shell: bash
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f "$OUTPUT_FILE"               # -f in case any ignore rules linger
+          git add -f "$COUNT_FILE" "$MISSING_TXT" "$MISSING_JSON"
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update file count for json/ [skip ci]"
+            git commit -m "chore: update json count & missing list [skip ci]"
             git push
-            echo "Committed and pushed $OUTPUT_FILE"
+            echo "Committed and pushed."
           else
             echo "No changes to commit."
           fi
