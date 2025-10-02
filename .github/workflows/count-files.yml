@@ -20,65 +20,73 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Count JSONs and write reports
+      - name: Count JSONs and write reports (pure Bash)
         shell: bash
         run: |
           set -euo pipefail
-          FOLDER_PATH="json"
+          FOLDER="json"
           COUNT_FILE="json/_file_count.txt"
           MISSING_TXT="json/_missing_numbers.txt"
           MISSING_JSON="json/_missing_numbers.json"
           EXPECTED_TOTAL=1950
 
-          mkdir -p "$FOLDER_PATH"
+          mkdir -p "$FOLDER"
 
-          # --- Python block to compute counts & missing numbers ---
-          python3 - <<'PY'
-import os, re, json
-folder = "json"
-count_file = "json/_file_count.txt"
-missing_txt = "json/_missing_numbers.txt"
-missing_json = "json/_missing_numbers.json"
-expected_tot = 1950
+          # Extract numbers from filenames like 123.json or anything_123.json
+          # 1) list all .json files -> filenames only
+          # 2) sed pulls the trailing number before .json
+          # 3) sort/uniq
+          mapfile -t FOUND_NUMS < <(find "$FOLDER" -type f -iname '*.json' -printf '%f\n' \
+            | sed -nE 's/^(.*_)?([0-9]+)\.json$/\2/p' \
+            | sort -n | uniq)
 
-pat = re.compile(r'(?:^|_)(\d+)\.json$', re.IGNORECASE)
-nums = set()
-for root, _, files in os.walk(folder):
-    for f in files:
-        m = pat.search(f)
-        if m:
-            nums.add(int(m.group(1)))
+          # Count found
+          FOUND_TOTAL="${#FOUND_NUMS[@]}"
+          printf '%s\n' "$FOUND_TOTAL" > "$COUNT_FILE"
 
-expected = set(range(1, expected_tot + 1))
-missing  = sorted(expected - nums)
+          # Build missing list: seq 1..EXPECTED minus FOUND_NUMS
+          # Use comm; it needs both inputs sorted & unique
+          tmp_found="$(mktemp)"
+          printf '%s\n' "${FOUND_NUMS[@]}" > "$tmp_found"
 
-os.makedirs(os.path.dirname(count_file), exist_ok=True)
-with open(count_file, "w", encoding="utf-8") as f:
-    f.write(str(len(nums)) + "\n")
+          tmp_expected="$(mktemp)"
+          seq 1 "$EXPECTED_TOTAL" > "$tmp_expected"
 
-with open(missing_txt, "w", encoding="utf-8") as f:
-    f.write("\n".join(map(str, missing)) + ("\n" if missing else ""))
+          # Missing = in expected but not in found
+          mapfile -t MISSING < <(comm -23 "$tmp_expected" "$tmp_found")
 
-summary = {
-    "folder": folder,
-    "pattern": "(^|_)<NUMBER>.json",
-    "expected_total": expected_tot,
-    "found_total": len(nums),
-    "missing_count": len(missing),
-    "missing_numbers": missing,
-}
-with open(missing_json, "w", encoding="utf-8") as f:
-    json.dump(summary, f, ensure_ascii=False, indent=2)
+          # Write missing numbers (newline-separated)
+          if ((${#MISSING[@]})); then
+            printf '%s\n' "${MISSING[@]}" > "$MISSING_TXT"
+          else
+            : > "$MISSING_TXT"   # empty file if none missing
+          fi
 
-print(f"Found {len(nums)} numbered .json file(s). Missing: {len(missing)}")
-PY
-          # -------------------------------------------------------
+          # JSON summary
+          MISSING_COUNT="${#MISSING[@]}"
+          {
+            echo "{"
+            echo "  \"folder\": \"${FOLDER}\","
+            echo "  \"pattern\": \"(^|_)<NUMBER>.json\","
+            echo "  \"expected_total\": ${EXPECTED_TOTAL},"
+            echo "  \"found_total\": ${FOUND_TOTAL},"
+            echo "  \"missing_count\": ${MISSING_COUNT},"
+            echo -n "  \"missing_numbers\": ["
+            if ((${#MISSING[@]})); then
+              paste -sd, <(printf '%s\n' "${MISSING[@]}")
+            fi
+            echo "]"
+            echo "}"
+          } > "$MISSING_JSON"
+
+          rm -f "$tmp_found" "$tmp_expected"
 
       - name: Commit results (skip CI)
         shell: bash
         run: |
           set -euo pipefail
-          # Ensure outputs aren’t ignored
+
+          # Ensure outputs are not ignored
           for p in json/_file_count.txt json/_missing_numbers.txt json/_missing_numbers.json; do
             if git check-ignore -q "$p"; then
               echo "!$p" >> .gitignore
