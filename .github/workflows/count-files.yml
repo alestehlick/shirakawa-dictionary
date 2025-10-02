@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Count JSONs and write reports (pure Bash)
+      - name: Count JSONs and write reports (pure Bash; last-underscore rule)
         shell: bash
         run: |
           set -euo pipefail
@@ -32,54 +32,73 @@ jobs:
 
           mkdir -p "$FOLDER"
 
-          # Extract numbers from filenames like 123.json or anything_123.json
-          # 1) list all .json files -> filenames only
-          # 2) sed pulls the trailing number before .json
-          # 3) sort/uniq
-          mapfile -t FOUND_NUMS < <(find "$FOLDER" -type f -iname '*.json' -printf '%f\n' \
-            | sed -nE 's/^(.*_)?([0-9]+)\.json$/\2/p' \
-            | sort -n | uniq)
+          # Collect numbers from filenames:
+          # - Matches: "<kanji>_<number>.json"  (extract the number after the LAST underscore)
+          # - Also accepts: "<number>.json"
+          declare -a NUMS=()
 
-          # Count found
+          while IFS= read -r -d '' path; do
+            base="$(basename "$path")"
+            if [[ "$base" == *.json ]]; then
+              # strip extension
+              stem="${base%.json}"
+              # take text after last underscore if present; otherwise the whole stem
+              if [[ "$stem" == *_* ]]; then
+                num="${stem##*_}"
+              else
+                num="$stem"
+              fi
+              # accept only pure integers
+              if [[ "$num" =~ ^[0-9]+$ ]]; then
+                NUMS+=("$num")
+              fi
+            fi
+          done < <(find "$FOLDER" -type f -iname '*.json' -print0)
+
+          # Sort unique
+          mapfile -t FOUND_NUMS < <(printf '%s\n' "${NUMS[@]}" | sort -n | uniq)
+
+          # Count found (this is "how many numbered .jsons we found")
           FOUND_TOTAL="${#FOUND_NUMS[@]}"
           printf '%s\n' "$FOUND_TOTAL" > "$COUNT_FILE"
 
-          # Build missing list: seq 1..EXPECTED minus FOUND_NUMS
-          # Use comm; it needs both inputs sorted & unique
-          tmp_found="$(mktemp)"
-          printf '%s\n' "${FOUND_NUMS[@]}" > "$tmp_found"
-
+          # Build expected 1..EXPECTED_TOTAL
           tmp_expected="$(mktemp)"
           seq 1 "$EXPECTED_TOTAL" > "$tmp_expected"
 
-          # Missing = in expected but not in found
+          # Write found numbers to a temp file
+          tmp_found="$(mktemp)"
+          printf '%s\n' "${FOUND_NUMS[@]}" > "$tmp_found"
+
+          # Missing = expected minus found
           mapfile -t MISSING < <(comm -23 "$tmp_expected" "$tmp_found")
 
-          # Write missing numbers (newline-separated)
+          # Write newline-separated missing numbers
           if ((${#MISSING[@]})); then
             printf '%s\n' "${MISSING[@]}" > "$MISSING_TXT"
           else
-            : > "$MISSING_TXT"   # empty file if none missing
+            : > "$MISSING_TXT"
           fi
 
-          # JSON summary
+          # JSON summary (compact but readable)
           MISSING_COUNT="${#MISSING[@]}"
           {
             echo "{"
             echo "  \"folder\": \"${FOLDER}\","
-            echo "  \"pattern\": \"(^|_)<NUMBER>.json\","
+            echo "  \"pattern\": \"(<kanji>_|)<NUMBER>.json  // number taken after last underscore\","
             echo "  \"expected_total\": ${EXPECTED_TOTAL},"
             echo "  \"found_total\": ${FOUND_TOTAL},"
             echo "  \"missing_count\": ${MISSING_COUNT},"
             echo -n "  \"missing_numbers\": ["
             if ((${#MISSING[@]})); then
+              # join with commas without trailing comma
               paste -sd, <(printf '%s\n' "${MISSING[@]}")
             fi
             echo "]"
             echo "}"
           } > "$MISSING_JSON"
 
-          rm -f "$tmp_found" "$tmp_expected"
+          rm -f "$tmp_expected" "$tmp_found"
 
       - name: Commit results (skip CI)
         shell: bash
