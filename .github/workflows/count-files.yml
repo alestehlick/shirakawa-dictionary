@@ -2,9 +2,7 @@ name: Count and list missing json files
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [ main, master ]
     paths:
       - 'json/**'
       - '.github/workflows/count-files.yml'
@@ -16,49 +14,64 @@ permissions:
 jobs:
   count:
     runs-on: ubuntu-latest
+    env:
+      LC_ALL: C.UTF-8
+      LANG: C.UTF-8
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Count JSONs and write reports (strict pattern)
+      - name: Count JSONs and write reports (robust parse + debug)
         shell: bash
         run: |
           set -euo pipefail
+
           FOLDER="json"
-          COUNT_FILE="json/_file_count.txt"
-          MISSING_TXT="json/_missing_numbers.txt"
-          MISSING_JSON="json/_missing_numbers.json"
+          COUNT_FILE="$FOLDER/_file_count.txt"
+          MISSING_TXT="$FOLDER/_missing_numbers.txt"
+          MISSING_JSON="$FOLDER/_missing_numbers.json"
+          DEBUG_LIST="$FOLDER/_debug_listing.txt"
           EXPECTED_TOTAL=1950
 
           mkdir -p "$FOLDER"
 
-          # Gather only files that strictly match: <kanji>_<number>.json
-          #   - exactly one underscore
-          #   - digits at the end before .json
-          #   - excludes helper files like _missing_numbers.json, etc.
-          mapfile -t MATCHED < <(
-            find "$FOLDER" -type f -iname '*.json' \
-            ! -name '_*.json' \
-            -printf '%f\n' \
-            | sed -nE 's/^([^_]+)_([0-9]+)\.json$/\1_\2/p'
-          )
+          # Collect basenames of *.json, excluding our helper files explicitly
+          mapfile -t FILES < <(find "$FOLDER" -type f -iname '*.json' -printf '%f\n' \
+            | grep -Ev '^(_file_count|_missing_numbers|_debug_listing)\.json$' \
+            | sort)
 
-          # Extract just the numbers, sort unique
-          mapfile -t FOUND_NUMS < <(
-            printf '%s\n' "${MATCHED[@]}" \
-            | sed -E 's/^[^_]+_([0-9]+)\.json$/\1/' \
-            | sort -n | uniq
-          )
+          # Debug: show a sample of filenames we actually see
+          {
+            echo "== SAMPLE FILENAMES =="
+            printf '%s\n' "${FILES[@]}" | head -n 50
+            echo
+          } > "$DEBUG_LIST"
 
-          # Count found
+          # Parse numbers: take digits after the LAST underscore before .json
+          # Only keep entries that actually yield a number
+          declare -a NUMS=()
+          for base in "${FILES[@]:-}"; do
+            # try to extract trailing digits after last underscore
+            if [[ "$base" =~ ^.*_([0-9]+)\.json$ ]]; then
+              n="${BASH_REMATCH[1]}"
+              NUMS+=("$n")
+              printf '%s -> %s\n' "$base" "$n" >> "$DEBUG_LIST"
+            else
+              printf '%s -> (no match)\n' "$base" >> "$DEBUG_LIST"
+            fi
+          done
+
+          # Unique-sort numbers
+          mapfile -t FOUND_NUMS < <(printf '%s\n' "${NUMS[@]:-}" | grep -E '^[0-9]+$' | sort -n | uniq)
+
           FOUND_TOTAL="${#FOUND_NUMS[@]}"
           printf '%s\n' "$FOUND_TOTAL" > "$COUNT_FILE"
 
           # Build expected 1..EXPECTED_TOTAL and compute missing
           tmp_expected="$(mktemp)"; seq 1 "$EXPECTED_TOTAL" > "$tmp_expected"
-          tmp_found="$(mktemp)";    printf '%s\n' "${FOUND_NUMS[@]}" > "$tmp_found"
+          tmp_found="$(mktemp)";    printf '%s\n' "${FOUND_NUMS[@]:-}" > "$tmp_found"
 
-          mapfile -t MISSING < <(comm -23 "$tmp_expected" "$tmp_found")
+          mapfile -t MISSING < <(comm -23 "$tmp_expected" "$tmp_found" || true)
 
           # Write newline-separated missing numbers
           if ((${#MISSING[@]})); then
@@ -71,14 +84,12 @@ jobs:
           {
             echo "{"
             echo "  \"folder\": \"${FOLDER}\","
-            echo "  \"pattern\": \"<kanji>_<NUMBER>.json\","
+            echo "  \"pattern\": \"<kanji>_<NUMBER>.json  // number taken after last underscore\","
             echo "  \"expected_total\": ${EXPECTED_TOTAL},"
             echo "  \"found_total\": ${FOUND_TOTAL},"
             echo "  \"missing_count\": ${#MISSING[@]},"
             echo -n "  \"missing_numbers\": ["
-            if ((${#MISSING[@]})); then
-              paste -sd, <(printf '%s\n' "${MISSING[@]}")
-            fi
+            if ((${#MISSING[@]})); then paste -sd, <(printf '%s\n' "${MISSING[@]}"); fi
             echo "]"
             echo "}"
           } > "$MISSING_JSON"
@@ -89,7 +100,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for p in json/_file_count.txt json/_missing_numbers.txt json/_missing_numbers.json; do
+          for p in json/_file_count.txt json/_missing_numbers.txt json/_missing_numbers.json json/_debug_listing.txt; do
             if git check-ignore -q "$p"; then
               echo "!$p" >> .gitignore
               git add .gitignore
@@ -98,7 +109,7 @@ jobs:
 
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f json/_file_count.txt json/_missing_numbers.txt json/_missing_numbers.json
+          git add -f json/_file_count.txt json/_missing_numbers.txt json/_missing_numbers.json json/_debug_listing.txt
           if ! git diff --cached --quiet; then
             git commit -m "chore: update json count & missing list [skip ci]"
             git push
