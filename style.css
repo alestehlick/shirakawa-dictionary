@@ -166,7 +166,7 @@ a.kanji-link:hover { border-bottom-style: solid; }
 .wide-image { margin: 0 0 0.6rem 0; }
 .wide-image img {
   display: block;
-  max-height: calc(var(--kanji-size) * 0.9);
+  max-height: calc(var(--kanji-size) * 1.1);
   width: auto;
   max-width: 100%;
   height: auto;
@@ -246,3 +246,4 @@ a.kanji-link:hover { border-bottom-style: solid; }
   a.kanji-link{ border-bottom: none; }
   .cat-head, .index-grid{ page-break-inside: avoid; }
 }
+
