@@ -5068,6 +5068,21 @@
       ]
     },
     {
+      "file": "変.html",
+      "kanji": "変",
+      "gloss": "to change ・ to alter ・ to be in disorder",
+      "category": "Uncategorized",
+      "kun": [
+        "kawaru",
+        "kaeru",
+        "aratameru",
+        "midareru"
+      ],
+      "on": [
+        "hen"
+      ]
+    },
+    {
       "file": "夏.html",
       "kanji": "夏",
       "gloss": "summer ・ xia (ancient china) ・ great",
@@ -20808,21 +20823,6 @@
       ],
       "on": [
         "go"
-      ]
-    },
-    {
-      "file": "變.html",
-      "kanji": "變",
-      "gloss": "to change ・ to alter ・ to be in disorder",
-      "category": "Uncategorized",
-      "kun": [
-        "kawaru",
-        "kaeru",
-        "aratameru",
-        "midareru"
-      ],
-      "on": [
-        "hen"
       ]
     },
     {
