@@ -242,11 +242,12 @@ a.kanji-link:hover { border-bottom-style: solid; }
   }
 }
 
-/* exact matches highlight on search */
+/* Make exact reading matches stand out by size (not underline) */
 .index-item.exact-reading a {
-  font-weight: 700;
-  text-decoration: underline;
+  font-size: 1.25em;   /* bump size for the kanji link */
+  line-height: 1.05;   /* keep vertical rhythm tidy */
 }
+.index-item a { transition: font-size 120ms ease; }
 
 
 /* =========================
@@ -258,6 +259,7 @@ a.kanji-link:hover { border-bottom-style: solid; }
   a.kanji-link{ border-bottom: none; }
   .cat-head, .index-grid{ page-break-inside: avoid; }
 }
+
 
 
 
