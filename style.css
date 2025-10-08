@@ -237,6 +237,13 @@ a.kanji-link:hover { border-bottom-style: solid; }
   }
 }
 
+/* exact matches highlight on search */
+.index-item.exact-reading a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
 /* =========================
    Print-friendly
    ========================= */
@@ -246,4 +253,5 @@ a.kanji-link:hover { border-bottom-style: solid; }
   a.kanji-link{ border-bottom: none; }
   .cat-head, .index-grid{ page-break-inside: avoid; }
 }
+
 
