@@ -238,16 +238,28 @@ a.kanji-link:hover { border-bottom-style: solid; }
   }
 }
 
-/* Make exact reading matches bigger, not underlined */
+/* Exact reading match: nicer Mincho face + size bump, no underline */
 .index-item.exact-reading a {
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho",
+               "Source Han Serif JP", serif;
+  font-weight: 700;
   font-size: 1.25em;
   line-height: 1.05;
   text-decoration: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.01em;   /* tiny tracking to keep glyphs crisp */
 }
 
 .index-item.exact-reading a:hover {
-  text-decoration: none;
+  text-decoration: none;     /* keep it clean on hover too */
 }
+
+/* Smooth size transition on re-rank (optional) */
+.index-item a { transition: font-size 120ms ease; }
+
+.index-item.exact-reading a { color: #2a241b; }
+
 
 
 /* =========================
@@ -259,6 +271,7 @@ a.kanji-link:hover { border-bottom-style: solid; }
   a.kanji-link{ border-bottom: none; }
   .cat-head, .index-grid{ page-break-inside: avoid; }
 }
+
 
 
 
