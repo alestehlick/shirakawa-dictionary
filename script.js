@@ -8,7 +8,7 @@ async function loadEntries() {
     const data = await res.json();
     results.innerHTML = '';
 
-    // If legacy flat array, group on the fly
+    // Group legacy flat array on the fly
     const grouped = Array.isArray(data)
       ? data.reduce((acc, e) => {
           const cat = e?.category || 'Uncategorized';
@@ -18,13 +18,16 @@ async function loadEntries() {
       : (data || {});
 
     for (const [category, items] of Object.entries(grouped)) {
+      // Skip the Uncategorized section entirely
+      if ((category || '').toLowerCase() === 'uncategorized') continue;
+
       const section = document.createElement('section');
       section.className = 'cat-section';
       section.dataset.category = (category || '').toLowerCase();
 
       const h2 = document.createElement('h2');
       h2.className = 'cat-head';
-      h2.textContent = category || 'Uncategorized';
+      h2.textContent = category || '';
 
       const grid = document.createElement('div');
       grid.className = 'index-grid';
@@ -33,16 +36,22 @@ async function loadEntries() {
         const kanji = entry?.kanji || '';
         const file  = entry?.file  || '';
         const gloss = entry?.gloss || '';
-        const kun   = Array.isArray(entry?.kun) ? entry.kun.join(' ') : '';
-        const on    = Array.isArray(entry?.on)  ? entry.on.join(' ')  : '';
 
-        const searchBlob = `${kanji} ${gloss} ${category} ${kun} ${on}`.toLowerCase();
+        // Normalize kun/on to lowercased arrays of tokens
+        const kunArr = Array.isArray(entry?.kun) ? entry.kun.map(s => String(s).toLowerCase().trim()) : [];
+        const onArr  = Array.isArray(entry?.on)  ? entry.on.map(s => String(s).toLowerCase().trim())  : [];
+
+        // Keep your old general blob for gloss/kanji/category substring search
+        const searchBlob = `${kanji} ${gloss} ${category} ${kunArr.join(' ')} ${onArr.join(' ')}`.toLowerCase();
 
         const div = document.createElement('div');
         div.className = 'index-item';
         div.dataset.search = searchBlob;
 
-        // Use textContent in spans to avoid any HTML injection from data
+        // Store readings as JSON strings for exact matching later
+        div.dataset.kun = JSON.stringify(kunArr);
+        div.dataset.on  = JSON.stringify(onArr);
+
         div.innerHTML = `<a href="entries/${file}" title="${gloss}">${kanji}</a><span class="gloss">— ${gloss}</span>`;
         grid.appendChild(div);
       });
@@ -60,17 +69,12 @@ async function loadEntries() {
   }
 }
 
-function searchEntries() {
-  const q = (document.getElementById('search').value || '').trim().toLowerCase();
-  document.querySelectorAll('.cat-section').forEach(section => {
-    let visible = 0;
-    section.querySelectorAll('.index-item').forEach(item => {
-      const show = !q || (item.dataset.search || '').includes(q);
-      item.style.display = show ? '' : 'none';
-      if (show) visible++;
-    });
-    section.style.display = visible ? '' : 'none';
-  });
+
+.index-item.exact-reading a {
+  font-weight: 700;
+  text-decoration: underline;
 }
+
+
 
 window.onload = loadEntries;
