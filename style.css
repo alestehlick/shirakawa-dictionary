@@ -176,6 +176,11 @@ a.kanji-link:hover { border-bottom-style: solid; }
   padding: 6px;
 }
 
+.index-item.exact-reading a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 /* =========================
    Index page (grouped)
    ========================= */
@@ -253,5 +258,6 @@ a.kanji-link:hover { border-bottom-style: solid; }
   a.kanji-link{ border-bottom: none; }
   .cat-head, .index-grid{ page-break-inside: avoid; }
 }
+
 
 
