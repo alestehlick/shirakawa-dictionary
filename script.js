@@ -70,10 +70,6 @@ async function loadEntries() {
 }
 
 
-.index-item.exact-reading a {
-  font-weight: 700;
-  text-decoration: underline;
-}
 
 
 
