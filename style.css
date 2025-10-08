@@ -243,7 +243,7 @@ a.kanji-link:hover { border-bottom-style: solid; }
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho",
                "Source Han Serif JP", serif;
   font-weight: 700;
-  font-size: 1.25em;
+  font-size: 1.7em;
   line-height: 1.05;
   text-decoration: none;
   text-rendering: optimizeLegibility;
@@ -271,6 +271,7 @@ a.kanji-link:hover { border-bottom-style: solid; }
   a.kanji-link{ border-bottom: none; }
   .cat-head, .index-grid{ page-break-inside: avoid; }
 }
+
 
 
 
