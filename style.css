@@ -176,10 +176,6 @@ a.kanji-link:hover { border-bottom-style: solid; }
   padding: 6px;
 }
 
-.index-item.exact-reading a {
-  font-weight: 700;
-  text-decoration: underline;
-}
 
 /* =========================
    Index page (grouped)
@@ -242,12 +238,16 @@ a.kanji-link:hover { border-bottom-style: solid; }
   }
 }
 
-/* Make exact reading matches stand out by size (not underline) */
+/* Make exact reading matches bigger, not underlined */
 .index-item.exact-reading a {
-  font-size: 1.25em;   /* bump size for the kanji link */
-  line-height: 1.05;   /* keep vertical rhythm tidy */
+  font-size: 1.25em;
+  line-height: 1.05;
+  text-decoration: none;
 }
-.index-item a { transition: font-size 120ms ease; }
+
+.index-item.exact-reading a:hover {
+  text-decoration: none;
+}
 
 
 /* =========================
@@ -259,6 +259,7 @@ a.kanji-link:hover { border-bottom-style: solid; }
   a.kanji-link{ border-bottom: none; }
   .cat-head, .index-grid{ page-break-inside: avoid; }
 }
+
 
 
 
