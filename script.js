@@ -10,40 +10,50 @@ async function loadEntries() {
     const data = await res.json();
     results.innerHTML = '';
 
-    // Group legacy flat array on the fly
+    // Normalize into { category: [items] } shape
     const grouped = Array.isArray(data)
       ? data.reduce((acc, e) => {
-          const cat = (e && e.category) || 'Uncategorized';
+          const rawCat = (e && e.category) ?? '';
+          const cat = String(rawCat || '').trim() || 'Uncategorized';
           (acc[cat] ||= []).push(e);
           return acc;
         }, {})
       : (data || {});
 
-    for (const [category, items] of Object.entries(grouped)) {
-      // Skip the Uncategorized section entirely
-      if ((category || '').toLowerCase() === 'uncategorized') continue;
+    const toArray = v =>
+      Array.isArray(v) ? v :
+      (v == null || v === '') ? [] :
+      String(v).split(/\s*[;,/｜|]\s*| +/).filter(Boolean);
 
+    let sectionCount = 0;
+
+    for (const [category, items] of Object.entries(grouped)) {
       const section = document.createElement('section');
       section.className = 'cat-section';
       section.dataset.category = (category || '').toLowerCase();
 
-      const h2 = document.createElement('h2');
-      h2.className = 'cat-head';
-      h2.textContent = category || '';
+      // Only render a header if category is meaningful
+      const showHeader = !!category && category.toLowerCase() !== 'uncategorized';
+      if (showHeader) {
+        const h2 = document.createElement('h2');
+        h2.className = 'cat-head';
+        h2.textContent = category;
+        section.appendChild(h2);
+      }
 
       const grid = document.createElement('div');
       grid.className = 'index-grid';
 
       (items || []).forEach(entry => {
-        const kanji = entry?.kanji || '';
-        const file  = entry?.file  || '';
-        const gloss = entry?.gloss || '';
+        const kanji = entry?.kanji ?? '';
+        const file  = entry?.file  ?? '';
+        const gloss = entry?.gloss ?? '';
 
-        // Normalize kun/on to lowercased arrays of tokens
-        const kunArr = Array.isArray(entry?.kun) ? entry.kun.map(s => String(s).toLowerCase().trim()) : [];
-        const onArr  = Array.isArray(entry?.on)  ? entry.on.map(s => String(s).toLowerCase().trim())  : [];
+        // Normalize readings to lowercased token arrays
+        const kunArr = toArray(entry?.kun).map(s => String(s).toLowerCase().trim());
+        const onArr  = toArray(entry?.on).map(s => String(s).toLowerCase().trim());
 
-        // Keep general blob for gloss/kanji/category substring search
+        // Keep general blob for fallback substring search
         const searchBlob = `${kanji} ${gloss} ${category} ${kunArr.join(' ')} ${onArr.join(' ')}`.toLowerCase();
 
         const div = document.createElement('div');
@@ -56,19 +66,23 @@ async function loadEntries() {
         grid.appendChild(div);
       });
 
-      section.append(h2, grid);
-      results.appendChild(section);
+      // Only append section if it has items
+      if (grid.children.length) {
+        section.appendChild(grid);
+        results.appendChild(section);
+        sectionCount++;
+      }
     }
 
-    if (!results.children.length) {
+    if (!sectionCount) {
       results.textContent = 'No entries found yet.';
     }
   } catch (err) {
     console.error(err);
-    const results = document.getElementById('results');
-    if (results) results.textContent = 'No entries found yet.';
+    results.textContent = 'No entries found yet.';
   }
 }
+
 
 /* Ranked search: exact reading > startsWith reading > general substring */
 function searchEntries() {
