@@ -1,4 +1,4 @@
-/* ===== JS: entries loader + ranked search ===== */
+/* ===== Flat index: no categories, single grid, ranked search ===== */
 
 async function loadEntries() {
   const results = document.getElementById('results');
@@ -10,71 +10,47 @@ async function loadEntries() {
     const data = await res.json();
     results.innerHTML = '';
 
-    // Normalize into { category: [items] } shape
-    const grouped = Array.isArray(data)
-      ? data.reduce((acc, e) => {
-          const rawCat = (e && e.category) ?? '';
-          const cat = String(rawCat || '').trim() || 'Uncategorized';
-          (acc[cat] ||= []).push(e);
-          return acc;
-        }, {})
-      : (data || {});
+    // Normalize into a flat array of entries (supports old grouped shape too)
+    const flat = Array.isArray(data)
+      ? data
+      : Object.values(data || {}).flat();
 
     const toArray = v =>
       Array.isArray(v) ? v :
       (v == null || v === '') ? [] :
       String(v).split(/\s*[;,/｜|]\s*| +/).filter(Boolean);
 
-    let sectionCount = 0;
+    // Build a single grid
+    const grid = document.createElement('div');
+    grid.className = 'index-grid';
+    grid.id = 'index-grid';
 
-    for (const [category, items] of Object.entries(grouped)) {
-      const section = document.createElement('section');
-      section.className = 'cat-section';
-      section.dataset.category = (category || '').toLowerCase();
+    (flat || []).forEach(entry => {
+      const kanji = entry?.kanji ?? '';
+      const file  = entry?.file  ?? '';
+      const gloss = entry?.gloss ?? '';
 
-      // Only render a header if category is meaningful
-      const showHeader = !!category && category.toLowerCase() !== 'uncategorized';
-      if (showHeader) {
-        const h2 = document.createElement('h2');
-        h2.className = 'cat-head';
-        h2.textContent = category;
-        section.appendChild(h2);
-      }
+      // Normalize readings to lowercased token arrays
+      const kunArr = toArray(entry?.kun).map(s => String(s).toLowerCase().trim());
+      const onArr  = toArray(entry?.on).map(s => String(s).toLowerCase().trim());
 
-      const grid = document.createElement('div');
-      grid.className = 'index-grid';
+      // General blob for fallback substring search (category dropped)
+      const searchBlob = `${kanji} ${gloss} ${kunArr.join(' ')} ${onArr.join(' ')}`.toLowerCase();
 
-      (items || []).forEach(entry => {
-        const kanji = entry?.kanji ?? '';
-        const file  = entry?.file  ?? '';
-        const gloss = entry?.gloss ?? '';
+      const div = document.createElement('div');
+      div.className = 'index-item';
+      div.dataset.search = searchBlob;
+      div.dataset.kun = JSON.stringify(kunArr);
+      div.dataset.on  = JSON.stringify(onArr);
 
-        // Normalize readings to lowercased token arrays
-        const kunArr = toArray(entry?.kun).map(s => String(s).toLowerCase().trim());
-        const onArr  = toArray(entry?.on).map(s => String(s).toLowerCase().trim());
+      // Render
+      div.innerHTML = `<a href="entries/${file}" title="${gloss}">${kanji}</a><span class="gloss">— ${gloss}</span>`;
+      grid.appendChild(div);
+    });
 
-        // Keep general blob for fallback substring search
-        const searchBlob = `${kanji} ${gloss} ${category} ${kunArr.join(' ')} ${onArr.join(' ')}`.toLowerCase();
-
-        const div = document.createElement('div');
-        div.className = 'index-item';
-        div.dataset.search = searchBlob;
-        div.dataset.kun = JSON.stringify(kunArr);
-        div.dataset.on  = JSON.stringify(onArr);
-
-        div.innerHTML = `<a href="entries/${file}" title="${gloss}">${kanji}</a><span class="gloss">— ${gloss}</span>`;
-        grid.appendChild(div);
-      });
-
-      // Only append section if it has items
-      if (grid.children.length) {
-        section.appendChild(grid);
-        results.appendChild(section);
-        sectionCount++;
-      }
-    }
-
-    if (!sectionCount) {
+    if (grid.children.length) {
+      results.appendChild(grid);
+    } else {
       results.textContent = 'No entries found yet.';
     }
   } catch (err) {
@@ -83,59 +59,55 @@ async function loadEntries() {
   }
 }
 
-
-/* Ranked search: exact reading > startsWith reading > general substring */
+/* Ranked search across the single grid:
+   exact reading > startsWith reading > general substring */
 function searchEntries() {
   const q = (document.getElementById('search')?.value || '').trim().toLowerCase();
+  const grid = document.getElementById('index-grid');
+  if (!grid) return;
 
-  document.querySelectorAll('.cat-section').forEach(section => {
-    const grid = section.querySelector('.index-grid');
-    if (!grid) return;
+  const nodes = Array.from(grid.querySelectorAll('.index-item'));
+  if (!nodes.length) return;
 
-    const nodes = Array.from(grid.querySelectorAll('.index-item'));
-    const ranked = [];
+  const ranked = [];
 
-    nodes.forEach((item, idx) => {
-      item.classList.remove('exact-reading');
+  nodes.forEach((item, idx) => {
+    item.classList.remove('exact-reading');
 
-      if (!q) {
-        item.style.display = '';
-        ranked.push({ el: item, score: 0, idx });
-        return;
-      }
+    if (!q) {
+      item.style.display = '';
+      ranked.push({ el: item, score: 0, idx });
+      return;
+    }
 
-      const kun = JSON.parse(item.dataset.kun || '[]');
-      const on  = JSON.parse(item.dataset.on  || '[]');
-      const blob = item.dataset.search || '';
+    const kun = JSON.parse(item.dataset.kun || '[]');
+    const on  = JSON.parse(item.dataset.on  || '[]');
+    const blob = item.dataset.search || '';
 
-      const exactReadingHit   = kun.includes(q) || on.includes(q);
-      const startsReadingHit  = !exactReadingHit && (kun.some(s => s.startsWith(q)) || on.some(s => s.startsWith(q)));
-      const generalHit        = !exactReadingHit && !startsReadingHit && blob.includes(q);
+    const exactReadingHit  = kun.includes(q) || on.includes(q);
+    const startsReadingHit = !exactReadingHit && (kun.some(s => s.startsWith(q)) || on.some(s => s.startsWith(q)));
+    const generalHit       = !exactReadingHit && !startsReadingHit && blob.includes(q);
 
-      let score = -1;
-      if (exactReadingHit) score = 300;
-      else if (startsReadingHit) score = 200;
-      else if (generalHit) score = 100;
+    let score = -1;
+    if (exactReadingHit) score = 300;
+    else if (startsReadingHit) score = 200;
+    else if (generalHit) score = 100;
 
-      if (score >= 0) {
-        item.style.display = '';
-        if (exactReadingHit) item.classList.add('exact-reading');
-        ranked.push({ el: item, score, idx });
-      } else {
-        item.style.display = 'none';
-      }
-    });
-
-    // sort by score desc; stable by original index
-    ranked.sort((a, b) => (b.score - a.score) || (a.idx - b.idx));
-    ranked.forEach(({ el }) => grid.appendChild(el));
-
-    // Hide section if nothing visible
-    section.style.display = ranked.length ? '' : 'none';
+    if (score >= 0) {
+      item.style.display = '';
+      if (exactReadingHit) item.classList.add('exact-reading');
+      ranked.push({ el: item, score, idx });
+    } else {
+      item.style.display = 'none';
+    }
   });
+
+  // Reorder visible results by score (stable by original index)
+  ranked.sort((a, b) => (b.score - a.score) || (a.idx - b.idx));
+  ranked.forEach(({ el }) => grid.appendChild(el));
 }
 
-/* Optional: debounce and hotkeys for the search box */
+/* Optional: debounce + hotkeys; then initial run */
 const debounce = (fn, ms = 120) => {
   let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
 };
@@ -145,20 +117,19 @@ function attachSearch() {
   const clearBtn = document.getElementById('clearSearch');
   if (!box) return;
 
-  const run = debounce(searchEntries, 120);
-
-  // Prefill from ?q= or #q= if present
+  // Prefill from ?q= or #q=
   const params = new URLSearchParams(location.search || location.hash.slice(1));
   const q = (params.get('q') || '').trim();
   if (q) box.value = q;
 
+  const run = debounce(searchEntries, 120);
   box.addEventListener('input', run);
   box.addEventListener('keydown', e => {
     if (e.key === 'Escape') { box.value = ''; searchEntries(); }
   });
   clearBtn?.addEventListener('click', () => { box.value = ''; box.focus(); searchEntries(); });
 
-  // Quick "/" to focus when not in an input/textarea
+  // "/" to focus
   window.addEventListener('keydown', e => {
     const tag = document.activeElement?.tagName;
     if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
@@ -170,7 +141,7 @@ function attachSearch() {
   searchEntries();
 }
 
-/* Load, then wire search */
+/* Boot */
 window.addEventListener('load', async () => {
   await loadEntries();
   attachSearch();
