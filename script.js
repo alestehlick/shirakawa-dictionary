@@ -1,4 +1,21 @@
-/* ===== Flat index: no categories, single grid, ranked search ===== */
+/* ===== Flat index: no categories, single grid, ranked search + optional Draws/IM_<id>.png ===== */
+
+/* Derive the numeric id used by your Draws files */
+function getEntryId(entry) {
+  // Prefer explicit numeric ids if present
+  if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
+  if (entry?.num != null) { const m = String(entry.num).match(/\d+/); if (m) return m[0]; }
+
+  // Otherwise extract digits from the file/path (e.g., "0123.json" -> "0123")
+  const candidates = [entry?.json, entry?.file, entry?.path, entry?.href, entry?.src];
+  for (const c of candidates) {
+    if (!c) continue;
+    const base = String(c).split('/').pop().replace(/\.[a-z0-9]+$/i, '');
+    const m = base.match(/\d+/);
+    if (m) return m[0];
+  }
+  return null;
+}
 
 async function loadEntries() {
   const results = document.getElementById('results');
@@ -10,17 +27,15 @@ async function loadEntries() {
     const data = await res.json();
     results.innerHTML = '';
 
-    // Normalize into a flat array of entries (supports old grouped shape too)
-    const flat = Array.isArray(data)
-      ? data
-      : Object.values(data || {}).flat();
+    // Normalize to a flat array (also supports old grouped shape)
+    const flat = Array.isArray(data) ? data : Object.values(data || {}).flat();
 
     const toArray = v =>
       Array.isArray(v) ? v :
       (v == null || v === '') ? [] :
       String(v).split(/\s*[;,/｜|]\s*| +/).filter(Boolean);
 
-    // Build a single grid
+    // Build single grid
     const grid = document.createElement('div');
     grid.className = 'index-grid';
     grid.id = 'index-grid';
@@ -30,12 +45,14 @@ async function loadEntries() {
       const file  = entry?.file  ?? '';
       const gloss = entry?.gloss ?? '';
 
-      // Normalize readings to lowercased token arrays
       const kunArr = toArray(entry?.kun).map(s => String(s).toLowerCase().trim());
       const onArr  = toArray(entry?.on).map(s => String(s).toLowerCase().trim());
 
-      // General blob for fallback substring search (category dropped)
       const searchBlob = `${kanji} ${gloss} ${kunArr.join(' ')} ${onArr.join(' ')}`.toLowerCase();
+
+      // Optional drawing thumbnail: Draws/IM_<id>.png
+      const id = getEntryId(entry);
+      const thumb = id ? `Draws/IM_${id}.png` : null;
 
       const div = document.createElement('div');
       div.className = 'index-item';
@@ -43,24 +60,23 @@ async function loadEntries() {
       div.dataset.kun = JSON.stringify(kunArr);
       div.dataset.on  = JSON.stringify(onArr);
 
-      // Render
-      div.innerHTML = `<a href="entries/${file}" title="${gloss}">${kanji}</a><span class="gloss">— ${gloss}</span>`;
+      div.innerHTML = `
+        <a href="entries/${file}" title="${gloss}">${kanji}</a>
+        <span class="gloss">— ${gloss}</span>
+        ${thumb ? `<img class="thumb" src="${thumb}" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ''}
+      `;
       grid.appendChild(div);
     });
 
-    if (grid.children.length) {
-      results.appendChild(grid);
-    } else {
-      results.textContent = 'No entries found yet.';
-    }
+    if (grid.children.length) results.appendChild(grid);
+    else results.textContent = 'No entries found yet.';
   } catch (err) {
     console.error(err);
     results.textContent = 'No entries found yet.';
   }
 }
 
-/* Ranked search across the single grid:
-   exact reading > startsWith reading > general substring */
+/* Ranked search: exact reading > startsWith reading > general substring */
 function searchEntries() {
   const q = (document.getElementById('search')?.value || '').trim().toLowerCase();
   const grid = document.getElementById('index-grid');
@@ -80,8 +96,8 @@ function searchEntries() {
       return;
     }
 
-    const kun = JSON.parse(item.dataset.kun || '[]');
-    const on  = JSON.parse(item.dataset.on  || '[]');
+    const kun  = JSON.parse(item.dataset.kun || '[]');
+    const on   = JSON.parse(item.dataset.on  || '[]');
     const blob = item.dataset.search || '';
 
     const exactReadingHit  = kun.includes(q) || on.includes(q);
@@ -102,47 +118,33 @@ function searchEntries() {
     }
   });
 
-  // Reorder visible results by score (stable by original index)
   ranked.sort((a, b) => (b.score - a.score) || (a.idx - b.idx));
   ranked.forEach(({ el }) => grid.appendChild(el));
 }
 
-/* Optional: debounce + hotkeys; then initial run */
-const debounce = (fn, ms = 120) => {
-  let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
-};
+/* Debounce + hotkeys, then initial run */
+const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
 
 function attachSearch() {
   const box = document.getElementById('search');
   const clearBtn = document.getElementById('clearSearch');
   if (!box) return;
 
-  // Prefill from ?q= or #q=
   const params = new URLSearchParams(location.search || location.hash.slice(1));
   const q = (params.get('q') || '').trim();
   if (q) box.value = q;
 
   const run = debounce(searchEntries, 120);
   box.addEventListener('input', run);
-  box.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { box.value = ''; searchEntries(); }
-  });
+  box.addEventListener('keydown', e => { if (e.key === 'Escape') { box.value = ''; searchEntries(); } });
   clearBtn?.addEventListener('click', () => { box.value = ''; box.focus(); searchEntries(); });
 
-  // "/" to focus
   window.addEventListener('keydown', e => {
     const tag = document.activeElement?.tagName;
-    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
-      e.preventDefault(); box.focus();
-    }
+    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); box.focus(); }
   });
 
-  // First run
   searchEntries();
 }
 
-/* Boot */
-window.addEventListener('load', async () => {
-  await loadEntries();
-  attachSearch();
-});
+window.addEventListener('load', async () => { await loadEntries(); attachSearch(); });
