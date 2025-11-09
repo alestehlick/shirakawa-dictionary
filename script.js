@@ -1,294 +1,199 @@
-# -*- coding: utf-8 -*-
-import json, os, re, struct, html
-from pathlib import Path
-from collections import defaultdict, OrderedDict
+/* ===== Flat index: single grid, ranked search + thumbnails from images/ and Draws/IM_<id>.png ===== */
 
-# --- Paths ---
-entries_dir = Path("entries")
-json_dir    = Path("json")
-images_dir  = Path("images")      # <-- back to lowercase "images"
-strokes_dir = Path("order_gifs")  # stroke-order animations (by KANJI)
-entries_dir.mkdir(parents=True, exist_ok=True)
+/* Extract a numeric id we can use for filenames */
+function getEntryId(entry) {
+  if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
+  if (entry?.num != null) { const m = String(entry.num).match(/\d+/); if (m) return m[0]; }
 
-# Optional: category ordering for index (else A→Z)
-CATEGORY_ORDER: list[str] = []
+  const candidates = [entry?.json, entry?.file, entry?.path, entry?.href, entry?.src];
+  for (const c of candidates) {
+    if (!c) continue;
+    const base = String(c).split('/').pop().replace(/\.[a-z0-9]+$/i, '');
+    const m = base.match(/\d+/);
+    if (m) return m[0];
+  }
+  return null;
+}
 
-IMAGE_EXTS  = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg")
-STROKE_EXTS = (".gif", ".webp", ".png")
+/* Turn arrays/strings into token arrays */
+const toArray = v =>
+  Array.isArray(v) ? v :
+  (v == null || v === '') ? [] :
+  String(v).split(/\s*[;,/｜|]\s*| +/).filter(Boolean);
 
-TEMPLATE = """<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{kanji}</title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+/* Progressive thumbnail loader: tries each source until one loads, else removes <img> */
+function initThumb(img) {
+  const list = (img.dataset.srcList || '').split('|').filter(Boolean);
+  if (!list.length) { img.remove(); return; }
 
-<div class="entry">
-  <div class="kanji-col">
-    {kanji}
-    {stroke_gif_html}
-  </div>
-  {images_html}
-  <div class="text-col">
-    {wide_image_html}
-    <div class="category">{category}</div>
-    <div class="readings"><b>Kun:</b> {kun} &nbsp;|&nbsp; <b>On:</b> {on}</div>
-    <div class="meanings">{meanings}</div>
-    <h3>Explanation</h3>
-    <p>{explanation_html}</p>
-  </div>
-</div>
+  let i = 0;
+  img.onerror = () => {
+    i += 1;
+    if (i < list.length) img.src = list[i];
+    else img.remove();
+  };
+  img.src = list[i];
+}
 
-<script src="../script.js"></script>
-</body></html>
-"""
+/* Initialize all thumbs in the grid */
+function initAllThumbs(root = document) {
+  root.querySelectorAll('img.thumb[data-src-list]').forEach(initThumb);
+}
 
-# ---------- image helpers ----------
-def png_size(path: Path):
-    with path.open('rb') as f:
-        sig = f.read(8)
-        if sig != b'\x89PNG\r\n\x1a\n': return None
-        f.read(8)
-        w, h = struct.unpack('>II', f.read(8))
-        return (w, h)
+async function loadEntries() {
+  const results = document.getElementById('results');
+  if (!results) return;
+  results.innerHTML = 'Loading...';
 
-def jpeg_size(path: Path):
-    with path.open('rb') as f:
-        data = f.read(24)
-        if len(data) < 2 or data[0:2] != b'\xff\xd8': return None
-        f.seek(2)
-        while True:
-            b = f.read(1)
-            if not b: return None
-            if b != b'\xff': continue
-            while b == b'\xff': b = f.read(1)
-            marker = b[0]
-            if marker in (0xC0,0xC1,0xC2,0xC3,0xC5,0xC6,0xC7,0xC9,0xCA,0xCB,0xCD,0xCE,0xCF):
-                _ = struct.unpack('>H', f.read(2))[0]
-                f.read(1)
-                h, w = struct.unpack('>HH', f.read(4))
-                return (w, h)
-            else:
-                seglen = struct.unpack('>H', f.read(2))[0]
-                f.seek(seglen - 2, 1)
+  try {
+    const res = await fetch('entries/index.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    results.innerHTML = '';
 
-def gif_size(path: Path):
-    with path.open('rb') as f:
-        hdr = f.read(10)
-        if hdr[:6] not in (b'GIF87a', b'GIF89a'): return None
-        w, h = struct.unpack('<HH', hdr[6:10])
-        return (w, h)
+    // Normalize to a flat array (also supports old grouped shape)
+    const flat = Array.isArray(data) ? data : Object.values(data || {}).flat();
 
-def get_image_size(path: Path):
-    try:
-        ext = path.suffix.lower()
-        if ext == '.png':  return png_size(path)
-        if ext in ('.jpg', '.jpeg'): return jpeg_size(path)
-        if ext == '.gif':  return gif_size(path)
-    except Exception:
-        pass
-    return None
+    // Build single grid
+    const grid = document.createElement('div');
+    grid.className = 'index-grid';
+    grid.id = 'index-grid';
 
-# ---------- path helpers ----------
-def extract_number_from_json_filename(p: Path) -> str | None:
-    """ '<kanji>_<number>.json' -> 'number' """
-    m = re.search(r'_([0-9]+)$', p.stem)
-    return m.group(1) if m else None
+    (flat || []).forEach(entry => {
+      const kanji = entry?.kanji ?? '';
+      const file  = entry?.file  ?? '';
+      const gloss = entry?.gloss ?? '';
 
-def find_numbered_image_src(folder: Path, number: str | None, exts: tuple[str, ...]) -> str | None:
-    """
-    Find main illustration by NUMBER in the images/ folder:
-    images/<number>.(png|jpg|jpeg|webp|gif|svg)
-    """
-    if not number: return None
-    for ext in exts:
-        p = folder / f"{number}{ext}"
-        if p.exists():
-            return f"../{folder.name}/{number}{ext}"
-    return None
+      const kunArr = toArray(entry?.kun).map(s => String(s).toLowerCase().trim());
+      const onArr  = toArray(entry?.on).map(s => String(s).toLowerCase().trim());
+      const searchBlob = `${kanji} ${gloss} ${kunArr.join(' ')} ${onArr.join(' ')}`.toLowerCase();
 
-def find_kanji_image_src(folder: Path, kanji: str | None, exts: tuple[str, ...]) -> str | None:
-    """Find stroke GIF by KANJI name."""
-    if not kanji: return None
-    for ext in exts:
-        p = folder / f"{kanji}{ext}"
-        if p.exists():
-            return f"../{folder.name}/{kanji}{ext}"
-    return None
+      // Derive id and prepare thumbnail source lists
+      const id = getEntryId(entry);
 
-def local_path_from_src(src: str) -> Path | None:
-    """Turn a rendered ../folder/file.ext back into a local path for size detection."""
-    if not src: return None
-    name = os.path.basename(src)
-    for base in (images_dir, strokes_dir):
-        p = base / name
-        if p.exists(): return p
-    return None
+      // 1) Main content images: /images/<id>.(png|jpg|jpeg|webp)
+      //    Optional: entry.image to pin a specific filename (relative to root or absolute URL)
+      const imageSources = [];
+      if (entry?.image) {
+        const imgPath = String(entry.image).startsWith('http') ? entry.image :
+                        (entry.image.startsWith('images/') ? entry.image : `images/${entry.image}`);
+        imageSources.push(imgPath);
+      }
+      if (id) {
+        imageSources.push(
+          `images/${id}.png`,
+          `images/${id}.jpg`,
+          `images/${id}.jpeg`,
+          `images/${id}.webp`,
+          `images/${id}.gif`,
+          `images/${id}.svg`
+        );
+      }
 
-# ---------- CJK helpers ----------
-def is_cjk_ideograph(ch: str) -> bool:
-    cp = ord(ch)
-    return (
-        0x4E00 <= cp <= 0x9FFF or
-        0x3400 <= cp <= 0x4DBF or
-        0xF900 <= cp <= 0xFAFF or
-        0x20000 <= cp <= 0x2A6DF or
-        0x2A700 <= cp <= 0x2B73F or
-        0x2B740 <= cp <= 0x2B81F or
-        0x2B820 <= cp <= 0x2CEAF or
-        0x2CEB0 <= cp <= 0x2EBEF
-    )
+      // 2) Optional drawing: /Draws/IM_<id>.png
+      const drawSource = id ? `Draws/IM_${id}.png` : null;
 
-# ---------- JSON helper ----------
-def load_json_strict(path: Path) -> dict:
-    text = path.read_text(encoding="utf-8")
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError as e:
-        lines = text.splitlines()
-        bad_line = lines[e.lineno - 1] if 0 <= e.lineno - 1 < len(lines) else ""
-        pointer  = " " * (e.colno - 1) + "^"
-        raise SystemExit(
-            f"\nJSON error in {path} at line {e.lineno}, column {e.colno}: {e.msg}\n"
-            f"{bad_line}\n{pointer}\n"
-        )
+      const div = document.createElement('div');
+      div.className = 'index-item';
+      div.dataset.search = searchBlob;
+      div.dataset.kun = JSON.stringify(kunArr);
+      div.dataset.on  = JSON.stringify(onArr);
 
-# ---------- Linkify helpers ----------
-def build_kanji_map(all_entries: list[dict]) -> dict[str, str]:
-    out = {}
-    for e in all_entries:
-        k = e.get("kanji")
-        if k:
-            out[k] = f"{k}.html"
-    return out
+      div.innerHTML = `
+        <a href="entries/${file}" title="${gloss}">${kanji}</a>
+        <span class="gloss">— ${gloss}</span>
+        ${imageSources.length ? `<img class="thumb main" alt="" loading="lazy" decoding="async"
+           data-src-list="${imageSources.join('|')}">` : ''}
+        ${drawSource ? `<img class="thumb draw" alt="" loading="lazy" decoding="async"
+           data-src-list="${drawSource}">` : ''}
+      `;
+      grid.appendChild(div);
+    });
 
-def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji: str) -> str:
-    if not raw_text:
-        return ""
-    s = html.escape(raw_text)
-    out = []
-    for ch in s:
-        if is_cjk_ideograph(ch):
-            if ch in kanji_to_file and ch != self_kanji:
-                out.append(f'<a class="kanji-link kanji-inline" href="{kanji_to_file[ch]}">{ch}</a>')
-            else:
-                out.append(f'<span class="kanji-inline">{ch}</span>')
-        else:
-            out.append(ch)
-    return "".join(out)
+    if (grid.children.length) {
+      results.appendChild(grid);
+      initAllThumbs(grid);
+    } else {
+      results.textContent = 'No entries found yet.';
+    }
+  } catch (err) {
+    console.error(err);
+    results.textContent = 'No entries found yet.';
+  }
+}
 
-# ---------- Build pages & grouped index ----------
-raw_entries: list[dict] = []
-json_files = sorted(json_dir.glob("*.json"))
-file_numbers: dict[int, str] = {}
+/* Ranked search: exact reading > startsWith reading > general substring */
+function searchEntries() {
+  const q = (document.getElementById('search')?.value || '').trim().toLowerCase();
+  const grid = document.getElementById('index-grid');
+  if (!grid) return;
 
-for i, file in enumerate(json_files):
-    data = load_json_strict(file)
-    if not data.get("kanji"):
-        raise SystemExit(f"Missing 'kanji' in {file}")
-    num = extract_number_from_json_filename(file)
-    file_numbers[i] = num
+  const nodes = Array.from(grid.querySelectorAll('.index-item'));
+  if (!nodes.length) return;
 
-    data["_kun_list"] = list(data.get("kun_readings_romaji", []) or data.get("kun", []) or [])
-    data["_on_list"]  = list(data.get("on_readings_romaji", [])  or data.get("on", [])  or [])
-    data["_meanings"] = list(data.get("meanings", []) or [])
-    data["_category"] = data.get("category") or "Uncategorized"
-    data["_explanation"] = data.get("explanation", "") or ""
-    raw_entries.append(data)
+  const ranked = [];
 
-kanji_to_file = build_kanji_map(raw_entries)
-groups: dict[str, list[dict]] = defaultdict(list)
+  nodes.forEach((item, idx) => {
+    item.classList.remove('exact-reading');
 
-for i, data in enumerate(raw_entries):
-    kanji     = data["kanji"]
-    category  = data["_category"]
-    kun_list  = data["_kun_list"]
-    on_list   = data["_on_list"]
-    kun       = ", ".join(kun_list)
-    on        = ", ".join(on_list)
-    meanings  = " ・ ".join(data["_meanings"])
-    expl_raw  = data["_explanation"]
+    if (!q) {
+      item.style.display = '';
+      ranked.push({ el: item, score: 0, idx });
+      return;
+    }
 
-    number = file_numbers.get(i)
+    const kun  = JSON.parse(item.dataset.kun || '[]');
+    const on   = JSON.parse(item.dataset.on  || '[]');
+    const blob = item.dataset.search || '';
 
-    # Main illustration (images/<number>.<ext>) with optional JSON override
-    explicit_img = data.get("image")  # allow a custom path like "foo/bar.png" or "123.png"
-    if explicit_img:
-        img_src = f"../{explicit_img}" if not explicit_img.startswith("../") and not explicit_img.startswith("http") else explicit_img
-    else:
-        img_src = find_numbered_image_src(images_dir, number, IMAGE_EXTS)
+    const exactReadingHit  = kun.includes(q) || on.includes(q);
+    const startsReadingHit = !exactReadingHit && (kun.some(s => s.startsWith(q)) || on.some(s => s.startsWith(q)));
+    const generalHit       = !exactReadingHit && !startsReadingHit && blob.includes(q);
 
-    images_html = ""
-    wide_image_html = ""
-    if img_src:
-        # Resolve to local path for size check
-        local = local_path_from_src(img_src) if explicit_img else (images_dir / os.path.basename(img_src))
-        size = get_image_size(local) if local and local.exists() else None
-        is_landscape = bool(size and size[0] > size[1])
-        if is_landscape:
-            wide_image_html = (
-                f'<figure class="wide-image"><img src="{img_src}" alt="{kanji} illustration" '
-                f'loading="lazy" decoding="async"></figure>'
-            )
-        else:
-            images_html = (
-                f'<div class="image-col"><img src="{img_src}" alt="{kanji} illustration" '
-                f'loading="lazy" decoding="async"></div>'
-            )
+    let score = -1;
+    if (exactReadingHit) score = 300;
+    else if (startsReadingHit) score = 200;
+    else if (generalHit) score = 100;
 
-    explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
+    if (score >= 0) {
+      item.style.display = '';
+      if (exactReadingHit) item.classList.add('exact-reading');
+      ranked.push({ el: item, score, idx });
+    } else {
+      item.style.display = 'none';
+    }
+  });
 
-    # Stroke-order GIF: explicit "stroke_gif" or order_gifs/<KANJI>.(gif/webp/png)
-    stroke_src = data.get("stroke_gif") or find_kanji_image_src(strokes_dir, kanji, STROKE_EXTS)
-    stroke_gif_html = ""
-    if stroke_src:
-        stroke_gif_html = (
-            f'<div class="stroke-gif" data-stroke-src="{stroke_src}">'
-            f'  <button type="button" class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>'
-            f'</div>'
-        )
+  ranked.sort((a, b) => (b.score - a.score) || (a.idx - b.idx));
+  ranked.forEach(({ el }) => grid.appendChild(el));
+}
 
-    html_content = TEMPLATE.format(
-        kanji=kanji,
-        category=category,
-        kun=kun,
-        on=on,
-        meanings=meanings,
-        explanation_html=explanation_html,
-        images_html=images_html,
-        wide_image_html=wide_image_html,
-        stroke_gif_html=stroke_gif_html,
-    )
+/* Debounce + hotkeys, then initial run */
+const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
 
-    out_file = entries_dir / f"{kanji}.html"
-    out_file.write_text(html_content, encoding="utf-8")
+function attachSearch() {
+  const box = document.getElementById('search');
+  const clearBtn = document.getElementById('clearSearch');
+  if (!box) return;
 
-    groups[category].append({
-        "file": f"{kanji}.html",
-        "kanji": kanji,
-        "gloss": meanings,
-        "category": category,
-        "kun": kun_list,
-        "on": on_list,
-    })
+  const params = new URLSearchParams(location.search || location.hash.slice(1));
+  const q = (params.get('q') || '').trim();
+  if (q) box.value = q;
 
-# sort entries and write grouped index
-for cat in groups:
-    groups[cat].sort(key=lambda x: x["kanji"])
+  const run = debounce(searchEntries, 120);
+  box.addEventListener('input', run);
+  box.addEventListener('keydown', e => { if (e.key === 'Escape') { box.value = ''; searchEntries(); } });
+  clearBtn?.addEventListener('click', () => { box.value = ''; box.focus(); searchEntries(); });
 
-ordered_cats = (
-    [c for c in CATEGORY_ORDER if c in groups] +
-    sorted([c for c in groups if c not in CATEGORY_ORDER], key=str.lower)
-) if CATEGORY_ORDER else sorted(groups.keys(), key=str.lower)
+  window.addEventListener('keydown', e => {
+    const tag = document.activeElement?.tagName;
+    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); box.focus(); }
+  });
 
-grouped_index = OrderedDict((cat, groups[cat]) for cat in ordered_cats)
+  searchEntries();
+}
 
-(entries_dir / "index.json").write_text(
-    json.dumps(grouped_index, ensure_ascii=False, indent=2),
-    encoding="utf-8"
-)
-
-print(f"Built {sum(len(v) for v in groups.values())} entries across {len(groups)} categories.")
+window.addEventListener('load', async () => {
+  await loadEntries();
+  attachSearch();
+});
