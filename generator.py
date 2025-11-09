@@ -6,11 +6,13 @@ from collections import defaultdict, OrderedDict
 # --- Paths ---
 entries_dir = Path("entries")
 json_dir    = Path("json")
-images_dir  = Path("Images")      # main illustrations (by number)
-strokes_dir = Path("order_gifs")  # stroke-order GIFs (by KANJI name)
+images_dir  = Path("Images")      # main illustrations (by NUMBER)
+strokes_dir = Path("order_gifs")  # stroke-order animations (by KANJI)
 entries_dir.mkdir(parents=True, exist_ok=True)
 
+# Optional: category ordering for index (else A→Z)
 CATEGORY_ORDER: list[str] = []
+
 IMAGE_EXTS  = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg")
 STROKE_EXTS = (".gif", ".webp", ".png")
 
@@ -45,7 +47,6 @@ TEMPLATE = """<!doctype html>
 """
 
 # ---------- image helpers ----------
-
 def png_size(path: Path):
     with path.open('rb') as f:
         sig = f.read(8)
@@ -92,8 +93,8 @@ def get_image_size(path: Path):
     return None
 
 # ---------- path helpers ----------
-
 def extract_number_from_json_filename(p: Path) -> str | None:
+    """ '<kanji>_<number>.json' -> 'number' """
     m = re.search(r'_([0-9]+)$', p.stem)
     return m.group(1) if m else None
 
@@ -122,13 +123,12 @@ def local_path_from_src(src: str) -> Path | None:
     return None
 
 # ---------- CJK helpers ----------
-
 def is_cjk_ideograph(ch: str) -> bool:
     cp = ord(ch)
     return (
-        0x4E00 <= cp <= 0x9FFF   or
-        0x3400 <= cp <= 0x4DBF   or
-        0xF900 <= cp <= 0xFAFF   or
+        0x4E00 <= cp <= 0x9FFF or
+        0x3400 <= cp <= 0x4DBF or
+        0xF900 <= cp <= 0xFAFF or
         0x20000 <= cp <= 0x2A6DF or
         0x2A700 <= cp <= 0x2B73F or
         0x2B740 <= cp <= 0x2B81F or
@@ -137,7 +137,6 @@ def is_cjk_ideograph(ch: str) -> bool:
     )
 
 # ---------- JSON helper ----------
-
 def load_json_strict(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
     try:
@@ -152,7 +151,6 @@ def load_json_strict(path: Path) -> dict:
         )
 
 # ---------- Linkify helpers ----------
-
 def build_kanji_map(all_entries: list[dict]) -> dict[str, str]:
     out = {}
     for e in all_entries:
@@ -177,7 +175,6 @@ def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji
     return "".join(out)
 
 # ---------- Build pages & grouped index ----------
-
 raw_entries: list[dict] = []
 json_files = sorted(json_dir.glob("*.json"))
 file_numbers: dict[int, str] = {}
@@ -223,22 +220,24 @@ for i, data in enumerate(raw_entries):
         is_landscape = bool(size and size[0] > size[1])
         if is_landscape:
             wide_image_html = (
-                f'<figure class="wide-image"><img src="{img_src}" alt="{kanji} illustration" loading="lazy" decoding="async"></figure>'
+                f'<figure class="wide-image"><img src="{img_src}" alt="{kanji} illustration" '
+                f'loading="lazy" decoding="async"></figure>'
             )
         else:
             images_html = (
-                f'<div class="image-col"><img src="{img_src}" alt="{kanji} illustration" loading="lazy" decoding="async"></div>'
+                f'<div class="image-col"><img src="{img_src}" alt="{kanji} illustration" '
+                f'loading="lazy" decoding="async"></div>'
             )
 
     explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
 
-    # Stroke-order GIF: explicit "stroke_gif" or order_gifs/<kanji>.(gif/webp/png)
+    # Stroke-order GIF: explicit "stroke_gif" or order_gifs/<KANJI>.(gif/webp/png)
     stroke_src = data.get("stroke_gif") or find_kanji_image_src(strokes_dir, kanji, STROKE_EXTS)
     stroke_gif_html = ""
     if stroke_src:
         stroke_gif_html = (
             f'<div class="stroke-gif" data-stroke-src="{stroke_src}">'
-            f'  <button class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>'
+            f'  <button type="button" class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>'
             f'</div>'
         )
 
@@ -266,6 +265,7 @@ for i, data in enumerate(raw_entries):
         "on": on_list,
     })
 
+# sort entries and write grouped index
 for cat in groups:
     groups[cat].sort(key=lambda x: x["kanji"])
 
