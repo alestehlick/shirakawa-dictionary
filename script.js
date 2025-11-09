@@ -193,7 +193,78 @@ function attachSearch() {
   searchEntries();
 }
 
+
+
+
+/* ===== Entry page: in-place stroke-order GIF player (40s cap) =====
+   Expects markup:
+   <div class="stroke-gif" data-stroke-src="../order_gifs/<KANJI>.gif">
+     <button type="button" class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>
+   </div>
+*/
+function attachStrokePlayer() {
+  const container = document.querySelector('.stroke-gif');
+  if (!container) return; // Not an entry page (or no GIF available)
+
+  const playBtn = container.querySelector('.stroke-play');
+  const SRC = container.getAttribute('data-stroke-src');
+  let timer = null;
+
+  const isPlaying = () => !!container.querySelector('img');
+
+  function startPlayback() {
+    if (!SRC || isPlaying()) return;
+
+    // Add <img> and cache-bust so GIF starts from frame 1 each time
+    const img = document.createElement('img');
+    img.alt = 'Stroke order animation';
+    img.loading = 'eager';
+    img.decoding = 'async';
+    img.src = `${SRC}${SRC.includes('?') ? '&' : '?'}t=${Date.now()}`;
+    container.appendChild(img);
+
+    container.classList.add('playing');
+    if (playBtn) playBtn.style.display = 'none';
+
+    // Auto-stop after 40 seconds
+    timer = window.setTimeout(stopPlayback, 40_000);
+  }
+
+  function stopPlayback() {
+    if (timer) { clearTimeout(timer); timer = null; }
+    const img = container.querySelector('img');
+    if (img) img.remove();
+    container.classList.remove('playing');
+    if (playBtn) playBtn.style.display = '';
+  }
+
+  playBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (isPlaying()) stopPlayback();
+    else startPlayback();
+  });
+
+  // Clicking anywhere on the container stops while playing
+  container.addEventListener('click', () => {
+    if (isPlaying()) stopPlayback();
+  });
+
+  // ESC key stops playback
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') stopPlayback();
+  });
+}
+
+
+
+
+
+
 window.addEventListener('load', async () => {
-  await loadEntries();
-  attachSearch();
+  await loadEntries();   // no-op on entry pages (safe)
+  attachSearch();        // only wires up if #search exists
+  attachStrokePlayer();  // wires up the Play button on entry pages
+});
+
+
 });
