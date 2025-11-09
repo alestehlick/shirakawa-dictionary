@@ -6,15 +6,13 @@ from collections import defaultdict, OrderedDict
 # --- Paths ---
 entries_dir = Path("entries")
 json_dir    = Path("json")
-images_dir  = Path("Images")      # Capital I (main illustrations)
-strokes_dir = Path("order_gifs")  # Stroke-order GIFs by KANJI name
+images_dir  = Path("Images")      # main illustrations (by number)
+strokes_dir = Path("order_gifs")  # stroke-order GIFs (by KANJI name)
 entries_dir.mkdir(parents=True, exist_ok=True)
 
-# Optional: enforce a custom category order on the index page (else A→Z).
 CATEGORY_ORDER: list[str] = []
-
 IMAGE_EXTS  = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg")
-STROKE_EXTS = (".gif", ".webp", ".png")  # allow animated webp/apng if you have them
+STROKE_EXTS = (".gif", ".webp", ".png")
 
 TEMPLATE = """<!doctype html>
 <html lang="en">
@@ -25,8 +23,6 @@ TEMPLATE = """<!doctype html>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
-<button id="global-play" aria-label="Play stroke order" title="Play stroke order">▶</button>
 
 <div class="entry">
   <div class="kanji-col">
@@ -48,61 +44,49 @@ TEMPLATE = """<!doctype html>
 </body></html>
 """
 
-# ---------- image helpers (no external deps) ----------
+# ---------- image helpers ----------
 
 def png_size(path: Path):
     with path.open('rb') as f:
         sig = f.read(8)
-        if sig != b'\x89PNG\r\n\x1a\n':
-            return None
-        f.read(8)  # length+type (IHDR)
+        if sig != b'\x89PNG\r\n\x1a\n': return None
+        f.read(8)
         w, h = struct.unpack('>II', f.read(8))
         return (w, h)
 
 def jpeg_size(path: Path):
     with path.open('rb') as f:
         data = f.read(24)
-        if len(data) < 2 or data[0:2] != b'\xff\xd8':
-            return None
+        if len(data) < 2 or data[0:2] != b'\xff\xd8': return None
         f.seek(2)
         while True:
             b = f.read(1)
-            if not b:
-                return None
-            if b != b'\xff':
-                continue
-            while b == b'\xff':
-                b = f.read(1)
+            if not b: return None
+            if b != b'\xff': continue
+            while b == b'\xff': b = f.read(1)
             marker = b[0]
             if marker in (0xC0,0xC1,0xC2,0xC3,0xC5,0xC6,0xC7,0xC9,0xCA,0xCB,0xCD,0xCE,0xCF):
                 _ = struct.unpack('>H', f.read(2))[0]
-                f.read(1)  # precision
+                f.read(1)
                 h, w = struct.unpack('>HH', f.read(4))
                 return (w, h)
             else:
-                seglen_bytes = f.read(2)
-                if len(seglen_bytes) != 2:
-                    return None
-                seglen = struct.unpack('>H', seglen_bytes)[0]
+                seglen = struct.unpack('>H', f.read(2))[0]
                 f.seek(seglen - 2, 1)
 
 def gif_size(path: Path):
     with path.open('rb') as f:
         hdr = f.read(10)
-        if hdr[:6] not in (b'GIF87a', b'GIF89a'):
-            return None
+        if hdr[:6] not in (b'GIF87a', b'GIF89a'): return None
         w, h = struct.unpack('<HH', hdr[6:10])
         return (w, h)
 
 def get_image_size(path: Path):
     try:
         ext = path.suffix.lower()
-        if ext == '.png':
-            return png_size(path)
-        if ext in ('.jpg', '.jpeg'):
-            return jpeg_size(path)
-        if ext == '.gif':
-            return gif_size(path)
+        if ext == '.png':  return png_size(path)
+        if ext in ('.jpg', '.jpeg'): return jpeg_size(path)
+        if ext == '.gif':  return gif_size(path)
     except Exception:
         pass
     return None
@@ -110,18 +94,11 @@ def get_image_size(path: Path):
 # ---------- path helpers ----------
 
 def extract_number_from_json_filename(p: Path) -> str | None:
-    """
-    Filenames like '<kanji>_<number>.json' (e.g., '兆_5146.json') -> '5146'
-    """
     m = re.search(r'_([0-9]+)$', p.stem)
     return m.group(1) if m else None
 
 def find_numbered_image_src(folder: Path, number: str | None, exts: tuple[str, ...]) -> str | None:
-    """
-    Look for folder/<number>.<ext>; return '../folder/<number>.<ext>'.
-    """
-    if not number:
-        return None
+    if not number: return None
     for ext in exts:
         p = folder / f"{number}{ext}"
         if p.exists():
@@ -129,11 +106,7 @@ def find_numbered_image_src(folder: Path, number: str | None, exts: tuple[str, .
     return None
 
 def find_kanji_image_src(folder: Path, kanji: str | None, exts: tuple[str, ...]) -> str | None:
-    """
-    Look for folder/<kanji>.<ext>; return '../folder/<kanji>.<ext>'.
-    """
-    if not kanji:
-        return None
+    if not kanji: return None
     for ext in exts:
         p = folder / f"{kanji}{ext}"
         if p.exists():
@@ -141,13 +114,11 @@ def find_kanji_image_src(folder: Path, kanji: str | None, exts: tuple[str, ...])
     return None
 
 def local_path_from_src(src: str) -> Path | None:
-    if not src:
-        return None
+    if not src: return None
     name = os.path.basename(src)
     for base in (images_dir, strokes_dir):
         p = base / name
-        if p.exists():
-            return p
+        if p.exists(): return p
     return None
 
 # ---------- CJK helpers ----------
@@ -155,17 +126,17 @@ def local_path_from_src(src: str) -> Path | None:
 def is_cjk_ideograph(ch: str) -> bool:
     cp = ord(ch)
     return (
-        0x4E00 <= cp <= 0x9FFF   or  # CJK Unified Ideographs
-        0x3400 <= cp <= 0x4DBF   or  # Extension A
-        0xF900 <= cp <= 0xFAFF   or  # Compatibility Ideographs
-        0x20000 <= cp <= 0x2A6DF or  # Extension B
-        0x2A700 <= cp <= 0x2B73F or  # Extension C
-        0x2B740 <= cp <= 0x2B81F or  # Extension D
-        0x2B820 <= cp <= 0x2CEAF or  # Extension E
-        0x2CEB0 <= cp <= 0x2EBEF     # Extension F/G
+        0x4E00 <= cp <= 0x9FFF   or
+        0x3400 <= cp <= 0x4DBF   or
+        0xF900 <= cp <= 0xFAFF   or
+        0x20000 <= cp <= 0x2A6DF or
+        0x2A700 <= cp <= 0x2B73F or
+        0x2B740 <= cp <= 0x2B81F or
+        0x2B820 <= cp <= 0x2CEAF or
+        0x2CEB0 <= cp <= 0x2EBEF
     )
 
-# ---------- JSON helper with nice errors ----------
+# ---------- JSON helper ----------
 
 def load_json_strict(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
@@ -207,40 +178,27 @@ def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji
 
 # ---------- Build pages & grouped index ----------
 
-# First pass: load all JSON to know which kanji exist and capture numbers
 raw_entries: list[dict] = []
 json_files = sorted(json_dir.glob("*.json"))
-file_numbers: dict[int, str] = {}  # index -> number string
+file_numbers: dict[int, str] = {}
 
 for i, file in enumerate(json_files):
     data = load_json_strict(file)
-
     if not data.get("kanji"):
         raise SystemExit(f"Missing 'kanji' in {file}")
-
     num = extract_number_from_json_filename(file)
-    file_numbers[i] = num  # may be None if pattern doesn't match
+    file_numbers[i] = num
 
-    # normalize readings
     data["_kun_list"] = list(data.get("kun_readings_romaji", []) or data.get("kun", []) or [])
     data["_on_list"]  = list(data.get("on_readings_romaji", [])  or data.get("on", [])  or [])
-
-    # normalize meanings
     data["_meanings"] = list(data.get("meanings", []) or [])
-
-    # normalize category
     data["_category"] = data.get("category") or "Uncategorized"
-
-    # explanation
     data["_explanation"] = data.get("explanation", "") or ""
-
     raw_entries.append(data)
 
 kanji_to_file = build_kanji_map(raw_entries)
-
 groups: dict[str, list[dict]] = defaultdict(list)
 
-# Second pass: generate pages and grouped index
 for i, data in enumerate(raw_entries):
     kanji     = data["kanji"]
     category  = data["_category"]
@@ -251,9 +209,9 @@ for i, data in enumerate(raw_entries):
     meanings  = " ・ ".join(data["_meanings"])
     expl_raw  = data["_explanation"]
 
-    number = file_numbers.get(i)  # number from '<kanji>_<number>.json'
+    number = file_numbers.get(i)
 
-    # Main illustration (Images/<number>.<ext>) with optional explicit override in JSON
+    # Main illustration (Images/<number>.<ext>) with optional JSON override
     explicit_img = data.get("image")
     img_src = explicit_img or find_numbered_image_src(images_dir, number, IMAGE_EXTS)
 
@@ -265,26 +223,23 @@ for i, data in enumerate(raw_entries):
         is_landscape = bool(size and size[0] > size[1])
         if is_landscape:
             wide_image_html = (
-                f'<figure class="wide-image"><img src="{img_src}" alt="{kanji} illustration" '
-                f'loading="lazy" decoding="async"></figure>'
+                f'<figure class="wide-image"><img src="{img_src}" alt="{kanji} illustration" loading="lazy" decoding="async"></figure>'
             )
         else:
             images_html = (
-                f'<div class="image-col"><img src="{img_src}" alt="{kanji} illustration" '
-                f'loading="lazy" decoding="async"></div>'
+                f'<div class="image-col"><img src="{img_src}" alt="{kanji} illustration" loading="lazy" decoding="async"></div>'
             )
 
-    # Crosslink kanji inside the explanation
     explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
 
-    # Stroke-order GIF: prefer explicit "stroke_gif" (URL or relative), else order_gifs/<kanji>.(gif/webp/png)
+    # Stroke-order GIF: explicit "stroke_gif" or order_gifs/<kanji>.(gif/webp/png)
     stroke_src = data.get("stroke_gif") or find_kanji_image_src(strokes_dir, kanji, STROKE_EXTS)
     stroke_gif_html = ""
     if stroke_src:
-        # Store only the src; JS will inject/remove the <img> to control playback
         stroke_gif_html = (
-            f'<div class="stroke-gif" data-stroke-src="{stroke_src}" role="button" '
-            f'aria-label="Play/stop stroke order"></div>'
+            f'<div class="stroke-gif" data-stroke-src="{stroke_src}">'
+            f'  <button class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>'
+            f'</div>'
         )
 
     html_content = TEMPLATE.format(
@@ -311,7 +266,6 @@ for i, data in enumerate(raw_entries):
         "on": on_list,
     })
 
-# sort entries in each category and write grouped index
 for cat in groups:
     groups[cat].sort(key=lambda x: x["kanji"])
 
