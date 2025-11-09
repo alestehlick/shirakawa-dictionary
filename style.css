@@ -25,7 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 96px;             /* keeps a tidy placeholder before play */
+  min-height: 96px;             /* tidy placeholder before play */
   border: 1px solid #e2dbc9;
   border-radius: 8px;
   background: color-mix(in srgb, var(--cream) 90%, white);
@@ -40,8 +40,9 @@
   border-radius: 6px;
 }
 
-/* Make sure the big kanji and the stroke box stack nicely */
+/* Ensure big kanji stacks above the stroke box nicely */
 .kanji-col{
+  display: flex;         /* your file already had display:flex; keeping here for safety */
   flex-direction: column;
   gap: .25rem;
 }
