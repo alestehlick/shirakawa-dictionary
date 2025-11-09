@@ -6,7 +6,7 @@ from collections import defaultdict, OrderedDict
 # --- Paths ---
 entries_dir = Path("entries")
 json_dir    = Path("json")
-images_dir  = Path("Images")      # main illustrations (by NUMBER)
+images_dir  = Path("images")      # main illustrations (by NUMBER)
 strokes_dir = Path("order_gifs")  # stroke-order animations (by KANJI)
 entries_dir.mkdir(parents=True, exist_ok=True)
 
@@ -208,7 +208,7 @@ for i, data in enumerate(raw_entries):
 
     number = file_numbers.get(i)
 
-    # Main illustration (Images/<number>.<ext>) with optional JSON override
+    # Main illustration (images/<number>.<ext>) with optional JSON override
     explicit_img = data.get("image")
     img_src = explicit_img or find_numbered_image_src(images_dir, number, IMAGE_EXTS)
 
