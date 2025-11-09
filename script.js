@@ -42,7 +42,7 @@ function initAllThumbs(root = document) {
 
 async function loadEntries() {
   const results = document.getElementById('results');
-  if (!results) return;
+  if (!results) return; // not on the index page
   results.innerHTML = 'Loading...';
 
   try {
@@ -71,12 +71,13 @@ async function loadEntries() {
       // Derive id and prepare thumbnail source lists
       const id = getEntryId(entry);
 
-      // 1) Main content images: /images/<id>.(png|jpg|jpeg|webp)
-      //    Optional: entry.image to pin a specific filename (relative to root or absolute URL)
+      // Main content images: /images/<id>.(png|jpg|jpeg|webp|gif|svg)
+      // Optional: entry.image to pin a specific filename (relative or absolute)
       const imageSources = [];
       if (entry?.image) {
-        const imgPath = String(entry.image).startsWith('http') ? entry.image :
-                        (entry.image.startsWith('images/') ? entry.image : `images/${entry.image}`);
+        const imgPath = String(entry.image).startsWith('http')
+          ? entry.image
+          : (entry.image.startsWith('images/') ? entry.image : `images/${entry.image}`);
         imageSources.push(imgPath);
       }
       if (id) {
@@ -90,7 +91,7 @@ async function loadEntries() {
         );
       }
 
-      // 2) Optional drawing: /Draws/IM_<id>.png
+      // Optional drawing: /Draws/IM_<id>.png
       const drawSource = id ? `Draws/IM_${id}.png` : null;
 
       const div = document.createElement('div');
@@ -193,9 +194,6 @@ function attachSearch() {
   searchEntries();
 }
 
-
-
-
 /* ===== Entry page: in-place stroke-order GIF player (40s cap) =====
    Expects markup:
    <div class="stroke-gif" data-stroke-src="../order_gifs/<KANJI>.gif">
@@ -255,16 +253,9 @@ function attachStrokePlayer() {
   });
 }
 
-
-
-
-
-
+/* ===== Boot ===== */
 window.addEventListener('load', async () => {
   await loadEntries();   // no-op on entry pages (safe)
-  attachSearch();        // only wires up if #search exists
-  attachStrokePlayer();  // wires up the Play button on entry pages
-});
-
-
+  attachSearch();        // index-only
+  attachStrokePlayer();  // entry-only
 });
