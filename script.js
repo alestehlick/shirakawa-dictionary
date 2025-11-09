@@ -1,4 +1,4 @@
-// ===== Index page logic (unchanged) =====
+// ===== Index page logic =====
 async function loadEntries() {
   const results = document.getElementById('results');
   if (!results) return; // not on index page
@@ -91,7 +91,7 @@ function searchEntries() {
   function startPlayback(){
     if (!SRC || isPlaying()) return;
 
-    // Insert <img> with cache-busting so GIF restarts
+    // Insert <img> with cache-busting so GIF restarts at frame 1
     const img = document.createElement('img');
     img.alt = 'Stroke order animation';
     img.loading = 'eager';
@@ -114,7 +114,7 @@ function searchEntries() {
     document.body.classList.remove('is-playing');
   }
 
-  // Button behavior
+  // Button toggles play/stop
   playBtn.addEventListener('click', () => {
     if (isPlaying()) stopPlayback();
     else startPlayback();
@@ -123,12 +123,10 @@ function searchEntries() {
   // Clicking the GIF area stops playback early
   container.addEventListener('click', stopPlayback);
 
-  // Escape route: press Escape to stop (optional but handy)
+  // Escape to stop (optional)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') stopPlayback();
   });
-
-  // On load: show faint button; do not autoplay
 })();
 
 // ===== Bootstraps for both pages =====
