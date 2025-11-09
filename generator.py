@@ -6,13 +6,15 @@ from collections import defaultdict, OrderedDict
 # --- Paths ---
 entries_dir = Path("entries")
 json_dir    = Path("json")
-images_dir  = Path("images")  # Capital I
+images_dir  = Path("Images")      # Capital I (main illustrations)
+strokes_dir = Path("order_gifs")  # NEW: stroke-order GIFs (numbered)
 entries_dir.mkdir(parents=True, exist_ok=True)
 
 # Optional: enforce a custom category order on the index page (else A→Z).
 CATEGORY_ORDER: list[str] = []
 
-IMAGE_EXTS = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg")
+IMAGE_EXTS  = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg")
+STROKE_EXTS = (".gif", ".webp", ".png")  # allow animated webp/apng if you have them
 
 TEMPLATE = """<!doctype html>
 <html lang="en">
@@ -23,8 +25,14 @@ TEMPLATE = """<!doctype html>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+
+<button id="global-play" aria-label="Play stroke order" title="Play stroke order">▶</button>
+
 <div class="entry">
-  <div class="kanji-col">{kanji}</div>
+  <div class="kanji-col">
+    {kanji}
+    {stroke_gif_html}
+  </div>
   {images_html}
   <div class="text-col">
     {wide_image_html}
@@ -35,6 +43,8 @@ TEMPLATE = """<!doctype html>
     <p>{explanation_html}</p>
   </div>
 </div>
+
+<script src="../script.js"></script>
 </body></html>
 """
 
@@ -46,7 +56,8 @@ def png_size(path: Path):
         if sig != b'\x89PNG\r\n\x1a\n':
             return None
         f.read(8)  # length+type (IHDR)
-        w, h = struct.unpack('>II', f.read(8))
+        import struct as _st
+        w, h = _st.unpack('>II', f.read(8))
         return (w, h)
 
 def jpeg_size(path: Path):
@@ -55,6 +66,7 @@ def jpeg_size(path: Path):
         if len(data) < 2 or data[0:2] != b'\xff\xd8':
             return None
         f.seek(2)
+        import struct as _st
         while True:
             b = f.read(1)
             if not b:
@@ -65,15 +77,15 @@ def jpeg_size(path: Path):
                 b = f.read(1)
             marker = b[0]
             if marker in (0xC0,0xC1,0xC2,0xC3,0xC5,0xC6,0xC7,0xC9,0xCA,0xCB,0xCD,0xCE,0xCF):
-                _len = struct.unpack('>H', f.read(2))[0]
+                _len = _st.unpack('>H', f.read(2))[0]
                 f.read(1)  # precision
-                h, w = struct.unpack('>HH', f.read(4))
+                h, w = _st.unpack('>HH', f.read(4))
                 return (w, h)
             else:
                 seglen_bytes = f.read(2)
                 if len(seglen_bytes) != 2:
                     return None
-                seglen = struct.unpack('>H', seglen_bytes)[0]
+                seglen = _st.unpack('>H', seglen_bytes)[0]
                 f.seek(seglen - 2, 1)
 
 def gif_size(path: Path):
@@ -81,7 +93,8 @@ def gif_size(path: Path):
         hdr = f.read(10)
         if hdr[:6] not in (b'GIF87a', b'GIF89a'):
             return None
-        w, h = struct.unpack('<HH', hdr[6:10])
+        import struct as _st
+        w, h = _st.unpack('<HH', hdr[6:10])
         return (w, h)
 
 def get_image_size(path: Path):
@@ -101,31 +114,34 @@ def get_image_size(path: Path):
 
 def extract_number_from_json_filename(p: Path) -> str | None:
     """
-    Filenames like '<kanji>_<number>.json' (e.g., '兆_5146.json').
-    Returns '<number>' as a string, or None if not found.
+    Filenames like '<kanji>_<number>.json' (e.g., '兆_5146.json') -> '5146'
     """
     m = re.search(r'_([0-9]+)$', p.stem)
     return m.group(1) if m else None
 
-def find_numbered_image_src(number: str | None) -> str | None:
+def find_numbered_image_src(folder: Path, number: str | None, exts: tuple[str, ...]) -> str | None:
     """
-    Look for images/<number>.(png|jpg|jpeg|webp|gif|svg).
-    Returns a relative src like '../images/5146.png'.
+    Look for folder/<number>.<ext>; return relative src like '../Images/5146.png'
+    (or '../order_gifs/5146.gif' depending on folder).
     """
     if not number:
         return None
-    for ext in IMAGE_EXTS:
-        p = images_dir / f"{number}{ext}"
+    for ext in exts:
+        p = folder / f"{number}{ext}"
         if p.exists():
-            return f"../images/{number}{ext}"
+            # derive correct relative prefix (‘..’ from entries/<file>.html)
+            return f"../{folder.name}/{number}{ext}"
     return None
 
 def local_path_from_src(src: str) -> Path | None:
     if not src:
         return None
     name = os.path.basename(src)
-    p = images_dir / name
-    return p if p.exists() else None
+    for base in (images_dir, strokes_dir):
+        p = base / name
+        if p.exists():
+            return p
+    return None
 
 # ---------- CJK helpers ----------
 
@@ -160,7 +176,6 @@ def load_json_strict(path: Path) -> dict:
 # ---------- Linkify helpers ----------
 
 def build_kanji_map(all_entries: list[dict]) -> dict[str, str]:
-    """Map kanji -> 'kanji.html' for every entry that exists."""
     out = {}
     for e in all_entries:
         k = e.get("kanji")
@@ -169,12 +184,6 @@ def build_kanji_map(all_entries: list[dict]) -> dict[str, str]:
     return out
 
 def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji: str) -> str:
-    """
-    Escape HTML, then:
-      - wrap any CJK ideograph in <span class="kanji-inline">…</span>
-      - if that ideograph has an entry (and isn't this page's main kanji),
-        link it and keep the class.
-    """
     if not raw_text:
         return ""
     s = html.escape(raw_text)
@@ -235,12 +244,11 @@ for i, data in enumerate(raw_entries):
     meanings  = " ・ ".join(data["_meanings"])
     expl_raw  = data["_explanation"]
 
-    number = file_numbers.get(i)  # number extracted from '<kanji>_<number>.json'
+    number = file_numbers.get(i)  # number from '<kanji>_<number>.json'
 
-    # Main illustration:
-    # Prefer explicit JSON path if present; else use images/<number>.<ext>.
+    # Main illustration (Images/<number>.<ext>) with optional explicit override in JSON
     explicit_img = data.get("image")
-    img_src = explicit_img if explicit_img else find_numbered_image_src(number)
+    img_src = explicit_img or find_numbered_image_src(images_dir, number, IMAGE_EXTS)
 
     images_html = ""
     wide_image_html = ""
@@ -262,6 +270,13 @@ for i, data in enumerate(raw_entries):
     # Crosslink kanji inside the explanation
     explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
 
+    # Stroke-order GIF: prefer explicit JSON "stroke_gif" (URL or relative), else order_gifs/<number>.<gif/webp/png>
+    stroke_src = data.get("stroke_gif") or find_numbered_image_src(strokes_dir, number, STROKE_EXTS)
+    stroke_gif_html = ""
+    if stroke_src:
+        # We store only the source as data attribute; JS controls play/stop and injects <img>.
+        stroke_gif_html = f'<div class="stroke-gif" data-stroke-src="{stroke_src}" role="button" aria-label="Play/stop stroke order"></div>'
+
     html_content = TEMPLATE.format(
         kanji=kanji,
         category=category,
@@ -271,6 +286,7 @@ for i, data in enumerate(raw_entries):
         explanation_html=explanation_html,
         images_html=images_html,
         wide_image_html=wide_image_html,
+        stroke_gif_html=stroke_gif_html,
     )
 
     out_file = entries_dir / f"{kanji}.html"
