@@ -6,7 +6,7 @@ from collections import defaultdict, OrderedDict
 # --- Paths ---
 entries_dir = Path("entries")
 json_dir    = Path("json")
-images_dir  = Path("images")      # <-- back to lowercase "images"
+images_dir  = Path("images")      # main illustrations (by NUMBER)
 strokes_dir = Path("order_gifs")  # stroke-order animations (by KANJI)
 entries_dir.mkdir(parents=True, exist_ok=True)
 
