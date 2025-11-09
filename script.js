@@ -1,217 +1,284 @@
-/* ===== Flat index: single grid, ranked search + optional Draws/IM_<id>.png ===== */
+# -*- coding: utf-8 -*-
+import json, os, re, struct, html
+from pathlib import Path
+from collections import defaultdict, OrderedDict
 
-/* Derive the numeric id used by your Draws files */
-function getEntryId(entry) {
-  // Prefer explicit numeric ids if present
-  if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
-  if (entry?.num != null) { const m = String(entry.num).match(/\d+/); if (m) return m[0]; }
+# --- Paths ---
+entries_dir = Path("entries")
+json_dir    = Path("json")
+images_dir  = Path("Images")      # main illustrations (by NUMBER)
+strokes_dir = Path("order_gifs")  # stroke-order animations (by KANJI)
+entries_dir.mkdir(parents=True, exist_ok=True)
 
-  // Otherwise extract digits from the file/path (e.g., "0123.json" -> "0123")
-  const candidates = [entry?.json, entry?.file, entry?.path, entry?.href, entry?.src];
-  for (const c of candidates) {
-    if (!c) continue;
-    const base = String(c).split('/').pop().replace(/\.[a-z0-9]+$/i, '');
-    const m = base.match(/\d+/);
-    if (m) return m[0];
-  }
-  return null;
-}
+# Optional: category ordering for index (else A→Z)
+CATEGORY_ORDER: list[str] = []
 
-async function loadEntries() {
-  const results = document.getElementById('results');
-  if (!results) return; // not on index page
-  results.innerHTML = 'Loading...';
+IMAGE_EXTS  = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg")
+STROKE_EXTS = (".gif", ".webp", ".png")
 
-  try {
-    const res = await fetch('entries/index.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    results.innerHTML = '';
+TEMPLATE = """<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{kanji}</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
 
-    // Normalize to a flat array (also supports old grouped shape)
-    const flat = Array.isArray(data) ? data : Object.values(data || {}).flat();
+<div class="entry">
+  <div class="kanji-col">
+    {kanji}
+    {stroke_gif_html}
+  </div>
+  {images_html}
+  <div class="text-col">
+    {wide_image_html}
+    <div class="category">{category}</div>
+    <div class="readings"><b>Kun:</b> {kun} &nbsp;|&nbsp; <b>On:</b> {on}</div>
+    <div class="meanings">{meanings}</div>
+    <h3>Explanation</h3>
+    <p>{explanation_html}</p>
+  </div>
+</div>
 
-    const toArray = v =>
-      Array.isArray(v) ? v :
-      (v == null || v === '') ? [] :
-      String(v).split(/\s*[;,/｜|]\s*| +/).filter(Boolean);
+<script src="../script.js"></script>
+</body></html>
+"""
 
-    // Build single grid
-    const grid = document.createElement('div');
-    grid.className = 'index-grid';
-    grid.id = 'index-grid';
+# ---------- image helpers ----------
+def png_size(path: Path):
+    with path.open('rb') as f:
+        sig = f.read(8)
+        if sig != b'\x89PNG\r\n\x1a\n': return None
+        f.read(8)
+        w, h = struct.unpack('>II', f.read(8))
+        return (w, h)
 
-    (flat || []).forEach(entry => {
-      const kanji = entry?.kanji ?? '';
-      const file  = entry?.file  ?? '';
-      const gloss = entry?.gloss ?? '';
+def jpeg_size(path: Path):
+    with path.open('rb') as f:
+        data = f.read(24)
+        if len(data) < 2 or data[0:2] != b'\xff\xd8': return None
+        f.seek(2)
+        while True:
+            b = f.read(1)
+            if not b: return None
+            if b != b'\xff': continue
+            while b == b'\xff': b = f.read(1)
+            marker = b[0]
+            if marker in (0xC0,0xC1,0xC2,0xC3,0xC5,0xC6,0xC7,0xC9,0xCA,0xCB,0xCD,0xCE,0xCF):
+                _ = struct.unpack('>H', f.read(2))[0]
+                f.read(1)
+                h, w = struct.unpack('>HH', f.read(4))
+                return (w, h)
+            else:
+                seglen = struct.unpack('>H', f.read(2))[0]
+                f.seek(seglen - 2, 1)
 
-      const kunArr = toArray(entry?.kun).map(s => String(s).toLowerCase().trim());
-      const onArr  = toArray(entry?.on).map(s => String(s).toLowerCase().trim());
+def gif_size(path: Path):
+    with path.open('rb') as f:
+        hdr = f.read(10)
+        if hdr[:6] not in (b'GIF87a', b'GIF89a'): return None
+        w, h = struct.unpack('<HH', hdr[6:10])
+        return (w, h)
 
-      const searchBlob = `${kanji} ${gloss} ${kunArr.join(' ')} ${onArr.join(' ')}`.toLowerCase();
+def get_image_size(path: Path):
+    try:
+        ext = path.suffix.lower()
+        if ext == '.png':  return png_size(path)
+        if ext in ('.jpg', '.jpeg'): return jpeg_size(path)
+        if ext == '.gif':  return gif_size(path)
+    except Exception:
+        pass
+    return None
 
-      // Optional drawing thumbnail: Draws/IM_<id>.png
-      const id = getEntryId(entry);
-      const thumb = id ? `Draws/IM_${id}.png` : null;
+# ---------- path helpers ----------
+def extract_number_from_json_filename(p: Path) -> str | None:
+    """ '<kanji>_<number>.json' -> 'number' """
+    m = re.search(r'_([0-9]+)$', p.stem)
+    return m.group(1) if m else None
 
-      const div = document.createElement('div');
-      div.className = 'index-item';
-      div.dataset.search = searchBlob;
-      div.dataset.kun = JSON.stringify(kunArr);
-      div.dataset.on  = JSON.stringify(onArr);
+def find_numbered_image_src(folder: Path, number: str | None, exts: tuple[str, ...]) -> str | None:
+    if not number: return None
+    for ext in exts:
+        p = folder / f"{number}{ext}"
+        if p.exists():
+            return f"../{folder.name}/{number}{ext}"
+    return None
 
-      div.innerHTML = `
-        <a href="entries/${file}" title="${gloss}">${kanji}</a>
-        <span class="gloss">— ${gloss}</span>
-        ${thumb ? `<img class="thumb" src="${thumb}" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ''}
-      `;
-      grid.appendChild(div);
-    });
+def find_kanji_image_src(folder: Path, kanji: str | None, exts: tuple[str, ...]) -> str | None:
+    if not kanji: return None
+    for ext in exts:
+        p = folder / f"{kanji}{ext}"
+        if p.exists():
+            return f"../{folder.name}/{kanji}{ext}"
+    return None
 
-    if (grid.children.length) results.appendChild(grid);
-    else results.textContent = 'No entries found yet.';
-  } catch (err) {
-    console.error(err);
-    results.textContent = 'No entries found yet.';
-  }
-}
+def local_path_from_src(src: str) -> Path | None:
+    if not src: return None
+    name = os.path.basename(src)
+    for base in (images_dir, strokes_dir):
+        p = base / name
+        if p.exists(): return p
+    return None
 
-/* Ranked search: exact reading > startsWith reading > general substring */
-function searchEntries() {
-  const q = (document.getElementById('search')?.value || '').trim().toLowerCase();
-  const grid = document.getElementById('index-grid');
-  if (!grid) return;
+# ---------- CJK helpers ----------
+def is_cjk_ideograph(ch: str) -> bool:
+    cp = ord(ch)
+    return (
+        0x4E00 <= cp <= 0x9FFF or
+        0x3400 <= cp <= 0x4DBF or
+        0xF900 <= cp <= 0xFAFF or
+        0x20000 <= cp <= 0x2A6DF or
+        0x2A700 <= cp <= 0x2B73F or
+        0x2B740 <= cp <= 0x2B81F or
+        0x2B820 <= cp <= 0x2CEAF or
+        0x2CEB0 <= cp <= 0x2EBEF
+    )
 
-  const nodes = Array.from(grid.querySelectorAll('.index-item'));
-  if (!nodes.length) return;
+# ---------- JSON helper ----------
+def load_json_strict(path: Path) -> dict:
+    text = path.read_text(encoding="utf-8")
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError as e:
+        lines = text.splitlines()
+        bad_line = lines[e.lineno - 1] if 0 <= e.lineno - 1 < len(lines) else ""
+        pointer  = " " * (e.colno - 1) + "^"
+        raise SystemExit(
+            f"\nJSON error in {path} at line {e.lineno}, column {e.colno}: {e.msg}\n"
+            f"{bad_line}\n{pointer}\n"
+        )
 
-  const ranked = [];
+# ---------- Linkify helpers ----------
+def build_kanji_map(all_entries: list[dict]) -> dict[str, str]:
+    out = {}
+    for e in all_entries:
+        k = e.get("kanji")
+        if k:
+            out[k] = f"{k}.html"
+    return out
 
-  nodes.forEach((item, idx) => {
-    item.classList.remove('exact-reading');
+def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji: str) -> str:
+    if not raw_text:
+        return ""
+    s = html.escape(raw_text)
+    out = []
+    for ch in s:
+        if is_cjk_ideograph(ch):
+            if ch in kanji_to_file and ch != self_kanji:
+                out.append(f'<a class="kanji-link kanji-inline" href="{kanji_to_file[ch]}">{ch}</a>')
+            else:
+                out.append(f'<span class="kanji-inline">{ch}</span>')
+        else:
+            out.append(ch)
+    return "".join(out)
 
-    if (!q) {
-      item.style.display = '';
-      ranked.push({ el: item, score: 0, idx });
-      return;
-    }
+# ---------- Build pages & grouped index ----------
+raw_entries: list[dict] = []
+json_files = sorted(json_dir.glob("*.json"))
+file_numbers: dict[int, str] = {}
 
-    const kun  = JSON.parse(item.dataset.kun || '[]');
-    const on   = JSON.parse(item.dataset.on  || '[]');
-    const blob = item.dataset.search || '';
+for i, file in enumerate(json_files):
+    data = load_json_strict(file)
+    if not data.get("kanji"):
+        raise SystemExit(f"Missing 'kanji' in {file}")
+    num = extract_number_from_json_filename(file)
+    file_numbers[i] = num
 
-    const exactReadingHit  = kun.includes(q) || on.includes(q);
-    const startsReadingHit = !exactReadingHit && (kun.some(s => s.startsWith(q)) || on.some(s => s.startsWith(q)));
-    const generalHit       = !exactReadingHit && !startsReadingHit && blob.includes(q);
+    data["_kun_list"] = list(data.get("kun_readings_romaji", []) or data.get("kun", []) or [])
+    data["_on_list"]  = list(data.get("on_readings_romaji", [])  or data.get("on", [])  or [])
+    data["_meanings"] = list(data.get("meanings", []) or [])
+    data["_category"] = data.get("category") or "Uncategorized"
+    data["_explanation"] = data.get("explanation", "") or ""
+    raw_entries.append(data)
 
-    let score = -1;
-    if (exactReadingHit) score = 300;
-    else if (startsReadingHit) score = 200;
-    else if (generalHit) score = 100;
+kanji_to_file = build_kanji_map(raw_entries)
+groups: dict[str, list[dict]] = defaultdict(list)
 
-    if (score >= 0) {
-      item.style.display = '';
-      if (exactReadingHit) item.classList.add('exact-reading');
-      ranked.push({ el: item, score, idx });
-    } else {
-      item.style.display = 'none';
-    }
-  });
+for i, data in enumerate(raw_entries):
+    kanji     = data["kanji"]
+    category  = data["_category"]
+    kun_list  = data["_kun_list"]
+    on_list   = data["_on_list"]
+    kun       = ", ".join(kun_list)
+    on        = ", ".join(on_list)
+    meanings  = " ・ ".join(data["_meanings"])
+    expl_raw  = data["_explanation"]
 
-  ranked.sort((a, b) => (b.score - a.score) || (a.idx - b.idx));
-  ranked.forEach(({ el }) => grid.appendChild(el));
-}
+    number = file_numbers.get(i)
 
-/* Debounce + hotkeys, then initial run */
-const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
+    # Main illustration (Images/<number>.<ext>) with optional JSON override
+    explicit_img = data.get("image")
+    img_src = explicit_img or find_numbered_image_src(images_dir, number, IMAGE_EXTS)
 
-function attachSearch() {
-  const box = document.getElementById('search');
-  const clearBtn = document.getElementById('clearSearch');
-  if (!box) return;
+    images_html = ""
+    wide_image_html = ""
+    if img_src:
+        local = local_path_from_src(img_src) if explicit_img else (images_dir / os.path.basename(img_src))
+        size = get_image_size(local) if local and local.exists() else None
+        is_landscape = bool(size and size[0] > size[1])
+        if is_landscape:
+            wide_image_html = (
+                f'<figure class="wide-image"><img src="{img_src}" alt="{kanji} illustration" '
+                f'loading="lazy" decoding="async"></figure>'
+            )
+        else:
+            images_html = (
+                f'<div class="image-col"><img src="{img_src}" alt="{kanji} illustration" '
+                f'loading="lazy" decoding="async"></div>'
+            )
 
-  const params = new URLSearchParams(location.search || location.hash.slice(1));
-  const q = (params.get('q') || '').trim();
-  if (q) box.value = q;
+    explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
 
-  const run = debounce(searchEntries, 120);
-  box.addEventListener('input', run);
-  box.addEventListener('keydown', e => { if (e.key === 'Escape') { box.value = ''; searchEntries(); } });
-  clearBtn?.addEventListener('click', () => { box.value = ''; box.focus(); searchEntries(); });
+    # Stroke-order GIF: explicit "stroke_gif" or order_gifs/<KANJI>.(gif/webp/png)
+    stroke_src = data.get("stroke_gif") or find_kanji_image_src(strokes_dir, kanji, STROKE_EXTS)
+    stroke_gif_html = ""
+    if stroke_src:
+        stroke_gif_html = (
+            f'<div class="stroke-gif" data-stroke-src="{stroke_src}">'
+            f'  <button type="button" class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>'
+            f'</div>'
+        )
 
-  window.addEventListener('keydown', e => {
-    const tag = document.activeElement?.tagName;
-    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); box.focus(); }
-  });
+    html_content = TEMPLATE.format(
+        kanji=kanji,
+        category=category,
+        kun=kun,
+        on=on,
+        meanings=meanings,
+        explanation_html=explanation_html,
+        images_html=images_html,
+        wide_image_html=wide_image_html,
+        stroke_gif_html=stroke_gif_html,
+    )
 
-  searchEntries();
-}
+    out_file = entries_dir / f"{kanji}.html"
+    out_file.write_text(html_content, encoding="utf-8")
 
-/* ===== Entry page: in-place stroke-order GIF player (40s cap) =====
-   Expects markup (emitted by generator):
-   <div class="stroke-gif" data-stroke-src="../order_gifs/<KANJI>.gif">
-     <button class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>
-   </div>
-*/
-function attachStrokePlayer() {
-  const container = document.querySelector('.stroke-gif');
-  if (!container) return; // not an entry page with a stroke gif
+    groups[category].append({
+        "file": f"{kanji}.html",
+        "kanji": kanji,
+        "gloss": meanings,
+        "category": category,
+        "kun": kun_list,
+        "on": on_list,
+    })
 
-  const playBtn = container.querySelector('.stroke-play');
-  const SRC = container.getAttribute('data-stroke-src');
-  let timer = null;
+# sort entries and write grouped index
+for cat in groups:
+    groups[cat].sort(key=lambda x: x["kanji"])
 
-  function isPlaying() {
-    return !!container.querySelector('img');
-  }
+ordered_cats = (
+    [c for c in CATEGORY_ORDER if c in groups] +
+    sorted([c for c in groups if c not in CATEGORY_ORDER], key=str.lower)
+) if CATEGORY_ORDER else sorted(groups.keys(), key=str.lower)
 
-  function startPlayback() {
-    if (!SRC || isPlaying()) return;
+grouped_index = OrderedDict((cat, groups[cat]) for cat in ordered_cats)
 
-    // Add <img> with cache-busting so GIF starts from frame 1
-    const img = document.createElement('img');
-    img.alt = 'Stroke order animation';
-    img.loading = 'eager';
-    img.decoding = 'async';
-    img.src = `${SRC}${SRC.includes('?') ? '&' : '?'}t=${Date.now()}`;
-    container.appendChild(img);
+(entries_dir / "index.json").write_text(
+    json.dumps(grouped_index, ensure_ascii=False, indent=2),
+    encoding="utf-8"
+)
 
-    container.classList.add('playing');
-    if (playBtn) playBtn.style.display = 'none';
-
-    // Stop automatically after 40 seconds
-    timer = window.setTimeout(stopPlayback, 40_000);
-  }
-
-  function stopPlayback() {
-    if (timer) { clearTimeout(timer); timer = null; }
-    const img = container.querySelector('img');
-    if (img) img.remove();
-    container.classList.remove('playing');
-    if (playBtn) playBtn.style.display = '';
-  }
-
-  playBtn?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (isPlaying()) stopPlayback();
-    else startPlayback();
-  });
-
-  // Clicking the area stops playback when playing
-  container.addEventListener('click', () => {
-    if (isPlaying()) stopPlayback();
-  });
-
-  // Escape to stop (optional)
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') stopPlayback();
-  });
-}
-
-/* ===== Boot ===== */
-window.addEventListener('load', async () => {
-  await loadEntries();   // safe; no-op on entry pages
-  attachSearch();        // only wires up if #search exists
-  attachStrokePlayer();  // only wires up if .stroke-gif exists
-});
+print(f"Built {sum(len(v) for v in groups.values())} entries across {len(groups)} categories.")
