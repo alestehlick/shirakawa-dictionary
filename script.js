@@ -75,12 +75,12 @@ function searchEntries() {
   });
 }
 
-// ===== Entry page: stroke-order playback control =====
+// ===== Entry page: stroke-order playback control (in-place button) =====
 (function entryStrokeControls(){
-  const playBtn = document.getElementById('global-play');
   const container = document.querySelector('.stroke-gif');
-  if (!playBtn || !container) return; // not an entry page with stroke gif
+  if (!container) return; // not an entry page with stroke gif
 
+  const playBtn = container.querySelector('.stroke-play');
   const SRC = container.getAttribute('data-stroke-src');
   let timer = null;
 
@@ -91,7 +91,7 @@ function searchEntries() {
   function startPlayback(){
     if (!SRC || isPlaying()) return;
 
-    // Insert <img> with cache-busting so GIF restarts at frame 1
+    // Insert <img> with cache-busting so GIF starts at frame 1
     const img = document.createElement('img');
     img.alt = 'Stroke order animation';
     img.loading = 'eager';
@@ -100,7 +100,8 @@ function searchEntries() {
     container.appendChild(img);
 
     // UI state
-    document.body.classList.add('is-playing');
+    container.classList.add('playing');
+    playBtn.style.display = 'none';
 
     // Stop after 40 seconds
     timer = window.setTimeout(stopPlayback, 40_000);
@@ -111,17 +112,20 @@ function searchEntries() {
     const img = container.querySelector('img');
     if (img) img.remove();
 
-    document.body.classList.remove('is-playing');
+    container.classList.remove('playing');
+    playBtn.style.display = '';
   }
 
-  // Button toggles play/stop
-  playBtn.addEventListener('click', () => {
+  playBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // don't bubble to container
     if (isPlaying()) stopPlayback();
     else startPlayback();
   });
 
-  // Clicking the GIF area stops playback early
-  container.addEventListener('click', stopPlayback);
+  // Clicking anywhere in the GIF area stops playback (only when playing)
+  container.addEventListener('click', () => {
+    if (isPlaying()) stopPlayback();
+  });
 
   // Escape to stop (optional)
   document.addEventListener('keydown', (e) => {
