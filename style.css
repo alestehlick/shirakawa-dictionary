@@ -1,3 +1,230 @@
+/* Load a high-quality Japanese serif with mid weights */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Paper & accents */
+  --cream: #fbf9ef;
+  --ink:   #22221f;  /* slightly warmer/darker */
+  --muted: #756f66;
+  --rule:  #e7e0d0;
+
+  /* Sizes */
+  --kanji-size: clamp(4rem, 12vw, 8rem);
+  --kanji-inline-scale: 1.20; /* 1.15–1.25 is a good range */
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html,
+body {
+  background: var(--cream);
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* keep UI bits sans; text column overrides to serif */
+  font-family: -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: clamp(16px, 1.15vw + 0.5rem, 19px); /* bookish base sizing */
+  line-height: 1.6;
+  padding: 2rem;
+  font-feature-settings: "liga" 1, "kern" 1, "palt" 1; /* better JP punctuation spacing */
+
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+/* =========================
+   Entry page layout
+   ========================= */
+.entry {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Left: Big Kanji — elegant Mincho serif */
+.kanji-col {
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
+  font-weight: 600;
+  font-size: var(--kanji-size);
+  line-height: 1;
+  min-width: 140px;
+
+  display: flex;               /* ensure stroke box stacks under glyph */
+  flex-direction: column;
+  gap: .25rem;
+
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Middle: image */
+.image-col:empty { display: none; }
+.image-col {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.image-col img {
+  width: clamp(90px, 18vw, 120px);
+  max-width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e2dbc9;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+/* Right: Explanation column — justified & mobile-friendly */
+.text-col {
+  flex: 1;
+  max-width: 68ch;  /* a touch narrower; reads better */
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "Source Han Serif JP", serif;
+  font-weight: 600;
+  line-height: 1.85;   /* slightly airier for long paragraphs */
+  letter-spacing: 0.003em;
+  font-variant-east-asian: proportional-width;
+  -webkit-font-smoothing: antialiased;
+
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Small metadata text */
+.category {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.readings {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.03em;
+}
+
+.meanings {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.01em;
+}
+
+/* Headings inside the text column */
+h3 {
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--rule) 88%, transparent);
+}
+
+/* Paragraph rhythm */
+.text-col p { margin: 0 0 0.9rem; }
+
+/* Links */
+a { color: #564d3d; text-decoration-thickness: 0.08em; }
+a:hover { text-decoration: underline; }
+
+/* Subtle styling for in-text kanji links */
+a.kanji-link {
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(86,77,61,0.5);
+}
+a.kanji-link:hover { border-bottom-style: solid; }
+
+/* Enlarge ALL in-text kanji (linked or not) in the Explanation */
+.text-col .kanji-inline{
+  font-family: "Noto Serif JP","Hiragino Mincho ProN","Yu Mincho","Source Han Serif JP",serif;
+  font-weight: 700; /* slightly bolder for glyph clarity */
+  font-size: calc(1em * var(--kanji-inline-scale));
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: -0.05em; /* sits better with Latin x-height */
+}
+
+/* When a kanji is also a link, keep the elegant dotted underline */
+.text-col a.kanji-link.kanji-inline{
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(86,77,61,0.5);
+}
+.text-col a.kanji-link.kanji-inline:hover{ border-bottom-style: solid; }
+
+/* Landscape image placed at the top of the text column */
+.wide-image { margin: 0 0 0.6rem 0; }
+.wide-image img {
+  display: block;
+  max-height: calc(var(--kanji-size) * 0.9);
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e2dbc9;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+/* =========================
+   Index page (grouped)
+   ========================= */
+.cat-head {
+  font-family: "Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 1.25rem 0 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.25rem;
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.4rem 1rem;
+  align-items: start;
+  grid-auto-flow: row dense;
+}
+
+.index-item {
+  padding: 0.1rem 0;
+  line-height: 1.5;
+  break-inside: avoid;
+}
+
+.index-item a {
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-right: .25rem;
+}
+.index-item a:hover { text-decoration: underline; }
+
+.index-item .gloss {
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================
+   Stroke-order player UI
+   ========================= */
+
 /* Faint global Play button at the very top */
 #global-play{
   position: fixed;
@@ -40,9 +267,29 @@
   border-radius: 6px;
 }
 
-/* Ensure big kanji stacks above the stroke box nicely */
-.kanji-col{
-  display: flex;         /* your file already had display:flex; keeping here for safety */
-  flex-direction: column;
-  gap: .25rem;
+/* =========================
+   Responsive niceties
+   ========================= */
+@media (max-width: 900px){
+  .entry { flex-wrap: wrap; gap: 1.25rem; }
+  .kanji-col { min-width: 0; }
+  .image-col { order: 3; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
+  .image-col img { width: clamp(72px, 24vw, 100px); }
+  .text-col { order: 2; max-width: 100%; }
+  .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+  /* Slightly reduce inline kanji scale on phones to limit reflow */
+  .text-col .kanji-inline{
+    font-size: calc(1em * (var(--kanji-inline-scale) - 0.06));
+  }
+}
+
+/* =========================
+   Print-friendly
+   ========================= */
+@media print{
+  body{ background: #fff; color: #111; padding: 0; }
+  .entry{ gap: 1.2rem; }
+  a.kanji-link{ border-bottom: none; }
+  .cat-head, .index-grid{ page-break-inside: avoid; }
 }
