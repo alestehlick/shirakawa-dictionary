@@ -376,30 +376,31 @@ function openPickerModal(){
 }
 
 
-/* ---------- Worksheet builder (A4, 6 per page, big squares) ---------- */
+/* ---------- Worksheet builder (A4, 6 per page, single vertical column) ---------- */
 function buildWorksheetHTML(kanjiList, title='Practice') {
-  // Take first 6 only for the sheet
+  // Exactly 6 per page
   const list = kanjiList.slice(0, 6);
 
-  // Build a furigana map
-  const recent = getRecent();
+  // Build a furigana map (from recent cache or fallback)
+  const recent = getRecent?.() || [];
   const furiMap = Object.fromEntries(list.map(k => {
     const fromRecent = recent.find(x => x.k === k)?.r || '';
-    const fromMap = pickFurigana(k);
+    const fromMap = (typeof pickFurigana === 'function') ? pickFurigana(k) : '';
     return [k, fromRecent || fromMap || ''];
   }));
 
   const items = list.map(k => {
     const f = furiMap[k] || '';
+    // 5 squares of 17mm with 3mm gaps will fill the panel neatly
+    const cellCount = 5;
+    const cells = Array.from({ length: cellCount }, () => '<div class="ws-cell"></div>').join('');
     return `
       <section class="ws-panel">
         <header class="ws-header">
           <span class="ws-kanji">${k}</span>
           ${f ? `<span class="ws-furi-right">${f}</span>` : `<span class="ws-furi-right ws-fade">&nbsp;</span>`}
         </header>
-        <div class="ws-grid">
-          ${'<div class="ws-cell"></div>'.repeat(8)}
-        </div>
+        <div class="ws-col">${cells}</div>
       </section>
     `;
   }).join('');
@@ -413,10 +414,10 @@ function buildWorksheetHTML(kanjiList, title='Practice') {
 <style>
   /* --- Page metrics (A4 portrait) --- */
   @page { size: A4 portrait; margin: 14mm; }
-  html,body{ margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust: exact; }
+  html,body{ margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust: exact; background:#fff; }
   body{ font-family: "Noto Serif JP","Hiragino Mincho ProN","Yu Mincho","Source Han Serif JP",serif; }
 
-  /* Top sticky actions (iPad-friendly) */
+  /* Sticky actions (hidden in print) */
   .top-actions{
     position: sticky; top: 0; background: #fff; padding: 6px 0 8px; margin-bottom: 6px;
     display: flex; gap:10px; justify-content: center; border-bottom: 1px solid #eee;
@@ -433,74 +434,66 @@ function buildWorksheetHTML(kanjiList, title='Practice') {
     letter-spacing: .02em;
   }
 
-  /* --- Grid: 3 columns × 2 rows per A4 page --- */
-  /* A4 inner width ≈ 182mm after margins; height ≈ 269mm after margins.
-     Columns: 3 × 55mm with 8mm gaps fits (55*3 + 8*2 = 181mm).
-     Rows: 2 × 129.5mm with 10mm gap fits (129.5*2 + 10 = 269mm). */
+  /* --- Exact 3×2 layout per A4 page ---
+     Columns: 3 × 55mm with 8mm gaps (≈ 181mm width).
+     Rows:    2 × 125mm with 10mm gap  (≈ 260mm height) < 269mm available after margins. */
   .ws-wrap{
     display: grid;
     grid-template-columns: repeat(3, 55mm);
-    grid-auto-rows: 129.5mm;
-    gap: 10mm 8mm; /* row gap, column gap */
+    grid-auto-rows: 125mm;     /* ensure two rows always fit */
+    gap: 10mm 8mm;              /* row gap, column gap */
     justify-content: center;
   }
 
-  /* --- Individual panel --- */
+  /* --- Panel: header + column of squares --- */
   .ws-panel{
     break-inside: avoid;
     display: grid;
     grid-template-rows: auto 1fr;
     row-gap: 4mm;
     padding: 2mm;
-    border: 1px solid rgba(0,0,0,.08);
+    border: 0.4mm solid rgba(0,0,0,.06);   /* very faint */
     border-radius: 3mm;
     background: #fff;
   }
 
-  .ws-header{
-    display:flex; align-items:flex-end; gap:6mm;
-  }
+  .ws-header{ display:flex; align-items:flex-end; gap:6mm; }
   .ws-kanji{
-    font-size: 22mm;            /* large and legible */
+    font-size: 22mm;
     line-height: 1;
     letter-spacing:.01em;
   }
   .ws-furi-right{
     margin-bottom: 2mm;
     font-family: -apple-system, system-ui, "Hiragino Sans","Yu Gothic", sans-serif;
-    font-size: 4.2mm;           /* readable but subtle */
-    color: rgba(0,0,0,.35);
+    font-size: 4.2mm;
+    color: rgba(0,0,0,.32);    /* fading gray */
     white-space: nowrap;
   }
   .ws-furi-right.ws-fade{ color: transparent; }
 
-  /* --- Practice grid: 2 columns × 4 rows of 24mm squares --- */
-  .ws-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 24mm);
-    grid-template-rows: repeat(4, 24mm);
+  /* --- Single vertical column of squares filling the panel --- */
+  .ws-col{
+    display: flex;
+    flex-direction: column;
     gap: 3mm;
-    align-content: start;
-    justify-content: start;
-    margin-left: 1mm; /* tiny visual balance */
+    align-content: flex-start;
+    justify-content: flex-start;
   }
 
-  /* Square with strong border and center guides */
+  /* 17mm square, faint gridlines + center guides */
   .ws-cell{
-    position: relative;
-    width: 24mm; height: 24mm;
-    border: 0.6mm solid rgba(0,0,0,.55);
-    border-radius: 1.5mm;
+    width: 17mm; height: 17mm;
+    border: 0.45mm solid rgba(0,0,0,.16);              /* very faint */
+    border-radius: 1.2mm;
     background:
-      /* center cross */
-      linear-gradient(to right, rgba(0,0,0,.20) 0 0) center/0.6mm 100% no-repeat,
-      linear-gradient(to bottom, rgba(0,0,0,.20) 0 0) center/100% 0.6mm no-repeat,
-      /* light frame bleed */
-      linear-gradient(to right, rgba(0,0,0,.04) 1px, transparent 1px) center/100% 1px no-repeat,
-      linear-gradient(to bottom, rgba(0,0,0,.04) 1px, transparent 1px) center/1px 100% no-repeat;
+      linear-gradient(to right, rgba(0,0,0,.12), rgba(0,0,0,.12)) center/0.45mm 100% no-repeat, /* vertical guide */
+      linear-gradient(to bottom, rgba(0,0,0,.12), rgba(0,0,0,.12)) center/100% 0.45mm no-repeat, /* horizontal guide */
+      linear-gradient(to right, rgba(0,0,0,.06) 1px, transparent 1px) center/100% 1px no-repeat,  /* soft frame bleed */
+      linear-gradient(to bottom, rgba(0,0,0,.06) 1px, transparent 1px) center/1px 100% no-repeat; /* soft frame bleed */
   }
 
-  /* Screen scaling for iPad preview (doesn't affect print sizing) */
+  /* Screen preview scaling for iPad (print uses millimeters precisely) */
   @media (max-width: 1024px){
     .ws-kanji{ font-size: clamp(32px, 7vw, 22mm); }
   }
@@ -518,6 +511,7 @@ function buildWorksheetHTML(kanjiList, title='Practice') {
 </body>
 </html>`;
 }
+
 
 
 /* Open a new window with the worksheet (robust against popup quirks) */
