@@ -375,28 +375,32 @@ function openPickerModal(){
   });
 }
 
-/* ---------- Worksheet builder (with furigana to the RIGHT) ---------- */
 
+/* ---------- Worksheet builder (A4, 6 per page, big squares) ---------- */
 function buildWorksheetHTML(kanjiList, title='Practice') {
-  // Build a furigana map for the list
-  const furiMap = Object.fromEntries(kanjiList.map(k => {
-    const fromRecent = getRecent().find(x => x.k === k)?.r || '';
+  // Take first 6 only for the sheet
+  const list = kanjiList.slice(0, 6);
+
+  // Build a furigana map
+  const recent = getRecent();
+  const furiMap = Object.fromEntries(list.map(k => {
+    const fromRecent = recent.find(x => x.k === k)?.r || '';
     const fromMap = pickFurigana(k);
     return [k, fromRecent || fromMap || ''];
   }));
 
-  const items = kanjiList.map(k => {
+  const items = list.map(k => {
     const f = furiMap[k] || '';
     return `
-      <div class="ws-col">
-        <div class="ws-header">
+      <section class="ws-panel">
+        <header class="ws-header">
           <span class="ws-kanji">${k}</span>
           ${f ? `<span class="ws-furi-right">${f}</span>` : `<span class="ws-furi-right ws-fade">&nbsp;</span>`}
-        </div>
+        </header>
         <div class="ws-grid">
-          ${'<div class="ws-cell"></div>'.repeat(12)}
+          ${'<div class="ws-cell"></div>'.repeat(8)}
         </div>
-      </div>
+      </section>
     `;
   }).join('');
 
@@ -407,9 +411,18 @@ function buildWorksheetHTML(kanjiList, title='Practice') {
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title}</title>
 <style>
+  /* --- Page metrics (A4 portrait) --- */
   @page { size: A4 portrait; margin: 14mm; }
   html,body{ margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust: exact; }
   body{ font-family: "Noto Serif JP","Hiragino Mincho ProN","Yu Mincho","Source Han Serif JP",serif; }
+
+  /* Top sticky actions (iPad-friendly) */
+  .top-actions{
+    position: sticky; top: 0; background: #fff; padding: 6px 0 8px; margin-bottom: 6px;
+    display: flex; gap:10px; justify-content: center; border-bottom: 1px solid #eee;
+  }
+  .btn{ padding:.45rem .8rem; border-radius: 999px; border:1px solid #ddd; background:#f9f9f9; font-weight:600; }
+  @media print{ .top-actions{ display:none !important; } }
 
   .ws-title{
     font-family: -apple-system, system-ui, "Hiragino Sans","Yu Gothic", sans-serif;
@@ -420,67 +433,92 @@ function buildWorksheetHTML(kanjiList, title='Practice') {
     letter-spacing: .02em;
   }
 
+  /* --- Grid: 3 columns × 2 rows per A4 page --- */
+  /* A4 inner width ≈ 182mm after margins; height ≈ 269mm after margins.
+     Columns: 3 × 55mm with 8mm gaps fits (55*3 + 8*2 = 181mm).
+     Rows: 2 × 129.5mm with 10mm gap fits (129.5*2 + 10 = 269mm). */
   .ws-wrap{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(68mm, 1fr));
-    gap: 6mm 8mm;
+    grid-template-columns: repeat(3, 55mm);
+    grid-auto-rows: 129.5mm;
+    gap: 10mm 8mm; /* row gap, column gap */
+    justify-content: center;
   }
 
-  .ws-col{ break-inside: avoid; }
+  /* --- Individual panel --- */
+  .ws-panel{
+    break-inside: avoid;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 4mm;
+    padding: 2mm;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 3mm;
+    background: #fff;
+  }
 
   .ws-header{
-    display:flex; align-items:center; gap:6mm; margin-bottom: 3mm;
+    display:flex; align-items:flex-end; gap:6mm;
   }
   .ws-kanji{
-    font-size: clamp(36px, 9vw, 64px);
+    font-size: 22mm;            /* large and legible */
     line-height: 1;
     letter-spacing:.01em;
   }
   .ws-furi-right{
+    margin-bottom: 2mm;
     font-family: -apple-system, system-ui, "Hiragino Sans","Yu Gothic", sans-serif;
-    font-size: 12px;
+    font-size: 4.2mm;           /* readable but subtle */
     color: rgba(0,0,0,.35);
+    white-space: nowrap;
   }
   .ws-furi-right.ws-fade{ color: transparent; }
 
+  /* --- Practice grid: 2 columns × 4 rows of 24mm squares --- */
   .ws-grid{
     display: grid;
-    grid-template-rows: repeat(12, 12mm);
-    grid-auto-flow: row;
-    gap: 2mm;
+    grid-template-columns: repeat(2, 24mm);
+    grid-template-rows: repeat(4, 24mm);
+    gap: 3mm;
+    align-content: start;
+    justify-content: start;
+    margin-left: 1mm; /* tiny visual balance */
   }
+
+  /* Square with strong border and center guides */
   .ws-cell{
-    border: 1px solid rgba(0,0,0,.15);
+    position: relative;
+    width: 24mm; height: 24mm;
+    border: 0.6mm solid rgba(0,0,0,.55);
+    border-radius: 1.5mm;
     background:
-      linear-gradient(to right, rgba(0,0,0,.06) 1px, transparent 1px) center/100% 1px no-repeat,
-      linear-gradient(to bottom, rgba(0,0,0,.06) 1px, transparent 1px) center/1px 100% no-repeat;
-    border-radius: 3px;
+      /* center cross */
+      linear-gradient(to right, rgba(0,0,0,.20) 0 0) center/0.6mm 100% no-repeat,
+      linear-gradient(to bottom, rgba(0,0,0,.20) 0 0) center/100% 0.6mm no-repeat,
+      /* light frame bleed */
+      linear-gradient(to right, rgba(0,0,0,.04) 1px, transparent 1px) center/100% 1px no-repeat,
+      linear-gradient(to bottom, rgba(0,0,0,.04) 1px, transparent 1px) center/1px 100% no-repeat;
   }
 
-  @media print{
-    .print-hide{ display:none !important; }
+  /* Screen scaling for iPad preview (doesn't affect print sizing) */
+  @media (max-width: 1024px){
+    .ws-kanji{ font-size: clamp(32px, 7vw, 22mm); }
   }
-
-  /* iPad touch-friendly top actions */
-  .top-actions{
-    position: sticky; top: 0; background: #fff; padding: 6px 0 8px; margin-bottom: 6px;
-    display: flex; gap:10px; justify-content: center; border-bottom: 1px solid #eee;
-  }
-  .btn{ padding:.45rem .8rem; border-radius: 999px; border:1px solid #ddd; background:#f9f9f9; font-weight:600; }
 </style>
 </head>
 <body>
-  <div class="top-actions print-hide">
+  <div class="top-actions">
     <button class="btn" onclick="window.print()">Print</button>
     <button class="btn" onclick="window.close()">Close</button>
   </div>
   <div class="ws-title">${title}</div>
-  <div class="ws-wrap">
+  <main class="ws-wrap">
     ${items}
-  </div>
+  </main>
 </body>
 </html>`;
 }
+
 
 /* Open a new window with the worksheet (robust against popup quirks) */
 function openWorksheet(kanjiList, title = 'Practice') {
