@@ -423,14 +423,36 @@ function updatePickerCount() {
 }
 
 /* -------- Worksheet generator (A4, columns) -------- */
+// REPLACE the whole openWorksheet() with this version
 function openWorksheet(kanjiList, title = 'Practice') {
   const html = buildWorksheetHTML(kanjiList, title);
-  const w = window.open('', '_blank', 'noopener,noreferrer');
-  if (!w) { alert('Popup blocked. Please allow popups.'); return; }
-  w.document.open();
-  w.document.write(html);
-  w.document.close();
+
+  // Try a same-origin about:blank window first (synchronous write)
+  let w = window.open('about:blank', '_blank');
+  if (w && !w.closed) {
+    try {
+      w.document.open('text/html', 'replace');
+      w.document.write(html);
+      w.document.close();
+      return;
+    } catch (e) {
+      // Fall through to blob fallback
+    }
+  }
+
+  // Fallback: blob URL (works even if about:blank was blocked/opaque)
+  try {
+    const blob = new Blob([html], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    w = window.open(url, '_blank');
+    if (!w || w.closed) {
+      alert('Popup was blocked. Please allow popups for this site and try again.');
+    }
+  } catch (e) {
+    alert('Could not open the worksheet window. Please allow popups and try again.');
+  }
 }
+
 
 function buildWorksheetHTML(kanjiList, title) {
   const safeTitle = String(title || 'Practice');
