@@ -376,7 +376,7 @@ function openPickerModal(){
 }
 
 
-/* ---------- Worksheet builder (A4, 6 across, single vertical column fills to bottom) ---------- */
+/* ---------- Worksheet builder (A4, 6 across; furigana below kanji) ---------- */
 function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
   const list = kanjiList.slice(0, 6);
 
@@ -388,18 +388,15 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
     return [k, fromRecent || fromPick || ''];
   }));
 
-  const items = list.map(k => {
-    const f = furiMap[k] || '';
-    return `
+  const items = list.map(k => `
       <section class="ws-panel">
         <header class="ws-header">
           <span class="ws-kanji">${k}</span>
-          ${f ? `<span class="ws-furi-right">${f}</span>` : `<span class="ws-furi-right ws-fade">&nbsp;</span>`}
+          <span class="ws-furi-below">${furiMap[k] || ''}</span>
         </header>
-        <div class="ws-col"><!-- cells injected to fill by JS --></div>
+        <div class="ws-col"></div>
       </section>
-    `;
-  }).join('');
+  `).join('');
 
   return `<!doctype html>
 <html lang="ja">
@@ -411,9 +408,7 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
   /* ---- Page & base ---- */
   @page { size: A4 portrait; margin: 12mm; }
   html,body{ margin:0; padding:0; background:#fff; -webkit-print-color-adjust:exact; print-color-adjust: exact; }
-  body{
-    font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho","Source Han Serif JP",serif;
-  }
+  body{ font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho","Source Han Serif JP",serif; }
   .top-actions{ position:sticky; top:0; background:#fff; padding:6px 0 8px; display:flex; gap:10px; justify-content:center; border-bottom:1px solid #eee; }
   .btn{ padding:.45rem .8rem; border-radius:999px; border:1px solid #ddd; background:#f9f9f9; font-weight:600; }
   @media print{ .top-actions{ display:none !important; } }
@@ -424,64 +419,56 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
     margin: 4mm 0 5mm; text-align:center;
   }
 
-  /* ---- 6 panels across (single row) ----
-     Available width after margins ≈ 210 - 24 = 186mm (safe).
-     6 columns × 28mm + 5 gaps × 4mm = 168 + 20 = 188mm (fits tightly; browsers allow tiny rounding).
-  */
+  /* ---- 6 panels across ---- */
   .ws-wrap{
     display:grid;
     grid-template-columns: repeat(6, 28mm);
-    grid-auto-rows: 240mm;        /* tall enough to reach near the bottom */
-    gap: 0mm 4mm;                  /* row gap 0, column gap 4mm */
+    grid-auto-rows: 240mm;
+    gap: 0mm 4mm;
     justify-content:center;
   }
 
-  /* ---- Panel structure ---- */
+  /* ---- Panel ---- */
   .ws-panel{
     break-inside:avoid;
-    --header-h: 26mm;              /* header block height (kanji + furigana) */
+    --header-h: 30mm;                 /* taller to fit kanji + furigana below */
     display:grid;
     grid-template-rows: var(--header-h) 1fr;
     padding: 2mm;
-    border: .4mm solid rgba(0,0,0,.06);      /* very faint */
+    border: .4mm solid rgba(0,0,0,.06);
     border-radius: 3mm;
     background:#fff;
   }
 
-  .ws-header{ display:flex; align-items:flex-end; gap:6mm; }
-  .ws-kanji{
-    font-size: 20mm;               /* Larger main kanji */
-    line-height:1; letter-spacing:.01em;
+  /* Kanji header: vertical stack, centered */
+  .ws-header{
+    display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
   }
-  .ws-furi-right{
-    margin-bottom: 3mm;
+  .ws-kanji{
+    font-size: 20mm; line-height:1; letter-spacing:.01em;
+  }
+  .ws-furi-below{
+    margin-top: 1.5mm;
     font-family:-apple-system,system-ui,"Hiragino Sans","Yu Gothic",sans-serif;
     font-size:4.6mm;
-    color:rgba(0,0,0,.30);         /* fading gray */
+    color:rgba(0,0,0,.30);            /* fading gray */
     white-space:nowrap;
   }
-  .ws-furi-right.ws-fade{ color:transparent; }
 
-  /* Column of practice squares — JS fills to bottom */
-  .ws-col{
-    display:flex; flex-direction:column;
-    gap: 2.4mm;
-    height: 100%;
-  }
+  /* Practice column (filled by JS to bottom) */
+  .ws-col{ display:flex; flex-direction:column; gap: 2.4mm; height: 100%; }
 
-  /* Larger squares; very faint guides */
   .ws-cell{
     width: 15.5mm; height: 15.5mm;
     border: .45mm solid rgba(0,0,0,.14);
     border-radius: 1.2mm;
     background:
-      linear-gradient(to right, rgba(0,0,0,.12), rgba(0,0,0,.12)) center/0.45mm 100% no-repeat, /* vertical guide */
-      linear-gradient(to bottom, rgba(0,0,0,.12), rgba(0,0,0,.12)) center/100% 0.45mm no-repeat, /* horizontal guide */
+      linear-gradient(to right, rgba(0,0,0,.12), rgba(0,0,0,.12)) center/0.45mm 100% no-repeat,
+      linear-gradient(to bottom, rgba(0,0,0,.12), rgba(0,0,0,.12)) center/100% 0.45mm no-repeat,
       linear-gradient(to right, rgba(0,0,0,.06) 1px, transparent 1px) center/100% 1px no-repeat,
       linear-gradient(to bottom, rgba(0,0,0,.06) 1px, transparent 1px) center/1px 100% no-repeat;
   }
 
-  /* iPad preview scaling only; print uses absolute mm sizes */
   @media (max-width: 1024px){
     .ws-kanji{ font-size: clamp(30px, 6.8vw, 20mm); }
   }
@@ -501,10 +488,8 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
     // Fill each practice column with as many squares as fit exactly to the bottom.
     function fillAllColumns(){
       document.querySelectorAll('.ws-col').forEach(col => {
-        // Create a temp cell to measure
         const tmp = document.createElement('div');
-        tmp.className = 'ws-cell';
-        tmp.style.visibility = 'hidden';
+        tmp.className = 'ws-cell'; tmp.style.visibility = 'hidden';
         col.appendChild(tmp);
         const cellH = tmp.getBoundingClientRect().height;
         col.removeChild(tmp);
@@ -512,21 +497,15 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
         const styles = getComputedStyle(col);
         const gap = parseFloat(styles.gap || styles.rowGap || '0');
 
-        // Clear and compute how many fit into current height
         col.innerHTML = '';
         const avail = col.getBoundingClientRect().height;
         const n = Math.max(1, Math.floor((avail + gap) / (cellH + gap)));
         const frag = document.createDocumentFragment();
-        for (let i = 0; i < n; i++){
-          const c = document.createElement('div');
-          c.className = 'ws-cell';
-          frag.appendChild(c);
-        }
+        for (let i = 0; i < n; i++){ const c = document.createElement('div'); c.className = 'ws-cell'; frag.appendChild(c); }
         col.appendChild(frag);
       });
     }
 
-    // Run after layout, on resize, and before printing to be safe
     window.addEventListener('load', () => { setTimeout(fillAllColumns, 0); });
     window.addEventListener('resize', () => { setTimeout(fillAllColumns, 50); });
     window.addEventListener('beforeprint', fillAllColumns);
@@ -534,6 +513,7 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
 </body>
 </html>`;
 }
+
 
 
 
