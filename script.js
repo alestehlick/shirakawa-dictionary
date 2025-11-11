@@ -376,7 +376,7 @@ function openPickerModal(){
 }
 
 
-/* ---------- Worksheet builder (A4, 6 across; furigana below kanji) ---------- */
+/* ---------- Worksheet builder (A4, 6 across; bigger squares; furigana below) ---------- */
 function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
   const list = kanjiList.slice(0, 6);
 
@@ -419,10 +419,10 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
     margin: 4mm 0 5mm; text-align:center;
   }
 
-  /* ---- 6 panels across ---- */
+  /* ---- 6 panels across (fits within A4 inner width) ---- */
   .ws-wrap{
     display:grid;
-    grid-template-columns: repeat(6, 28mm);
+    grid-template-columns: repeat(6, 27mm);   /* was 28mm */
     grid-auto-rows: 240mm;
     gap: 0mm 4mm;
     justify-content:center;
@@ -431,7 +431,7 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
   /* ---- Panel ---- */
   .ws-panel{
     break-inside:avoid;
-    --header-h: 30mm;                 /* taller to fit kanji + furigana below */
+    --header-h: 30mm;                 /* tall header for kanji + furigana */
     display:grid;
     grid-template-rows: var(--header-h) 1fr;
     padding: 2mm;
@@ -441,12 +441,8 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
   }
 
   /* Kanji header: vertical stack, centered */
-  .ws-header{
-    display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
-  }
-  .ws-kanji{
-    font-size: 20mm; line-height:1; letter-spacing:.01em;
-  }
+  .ws-header{ display:flex; flex-direction:column; align-items:center; justify-content:flex-end; }
+  .ws-kanji{ font-size: 20mm; line-height:1; letter-spacing:.01em; }
   .ws-furi-below{
     margin-top: 1.5mm;
     font-family:-apple-system,system-ui,"Hiragino Sans","Yu Gothic",sans-serif;
@@ -455,13 +451,15 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
     white-space:nowrap;
   }
 
-  /* Practice column (filled by JS to bottom) */
-  .ws-col{ display:flex; flex-direction:column; gap: 2.4mm; height: 100%; }
+  /* Practice column fills to bottom */
+  .ws-col{ display:flex; flex-direction:column; gap: 2.2mm; height: 100%; }
 
+  /* ---- Bigger practice squares ---- */
   .ws-cell{
-    width: 15.5mm; height: 15.5mm;
+    width: 18mm;                       /* was 15.5mm */
+    height: 18mm;                      /* was 15.5mm */
     border: .45mm solid rgba(0,0,0,.14);
-    border-radius: 1.2mm;
+    border-radius: 1.6mm;
     background:
       linear-gradient(to right, rgba(0,0,0,.12), rgba(0,0,0,.12)) center/0.45mm 100% no-repeat,
       linear-gradient(to bottom, rgba(0,0,0,.12), rgba(0,0,0,.12)) center/100% 0.45mm no-repeat,
@@ -513,6 +511,7 @@ function buildWorksheetHTML(kanjiList, title='Practice (Last 6)') {
 </body>
 </html>`;
 }
+
 
 
 
