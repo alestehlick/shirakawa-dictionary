@@ -6,8 +6,8 @@ from collections import defaultdict, OrderedDict
 # --- Paths ---
 entries_dir = Path("entries")
 json_dir    = Path("json")
-images_dir  = Path("images")      # main illustrations (by NUMBER)
-strokes_dir = Path("order_gifs")  # stroke-order animations (by KANJI)
+images_dir  = Path("images")       # main illustrations (by NUMBER)
+strokes_dir = Path("order_gifs")   # stroke-order animations (by KANJI)
 entries_dir.mkdir(parents=True, exist_ok=True)
 
 # Optional: category ordering for index (else A→Z)
@@ -42,6 +42,13 @@ TEMPLATE = """<!doctype html>
   </div>
 </div>
 
+<script>
+  // Expose current entry meta so script.js can record recent history on entry pages
+  window.__ENTRY_META__ = {{
+    kanji: {js_kanji},
+    furigana: {js_furigana}
+  }};
+</script>
 <script src="../script.js"></script>
 </body></html>
 """
@@ -99,10 +106,6 @@ def extract_number_from_json_filename(p: Path) -> str | None:
     return m.group(1) if m else None
 
 def find_numbered_image_src(folder: Path, number: str | None, exts: tuple[str, ...]) -> str | None:
-    """
-    Find main illustration by NUMBER in the images/ folder:
-    images/<number>.(png|jpg|jpeg|webp|gif|svg)
-    """
     if not number: return None
     for ext in exts:
         p = folder / f"{number}{ext}"
@@ -111,7 +114,6 @@ def find_numbered_image_src(folder: Path, number: str | None, exts: tuple[str, .
     return None
 
 def find_kanji_image_src(folder: Path, kanji: str | None, exts: tuple[str, ...]) -> str | None:
-    """Find stroke GIF by KANJI name."""
     if not kanji: return None
     for ext in exts:
         p = folder / f"{kanji}{ext}"
@@ -120,7 +122,6 @@ def find_kanji_image_src(folder: Path, kanji: str | None, exts: tuple[str, ...])
     return None
 
 def local_path_from_src(src: str) -> Path | None:
-    """Turn a rendered ../folder/file.ext back into a local path for size detection."""
     if not src: return None
     name = os.path.basename(src)
     for base in (images_dir, strokes_dir):
@@ -215,16 +216,15 @@ for i, data in enumerate(raw_entries):
     number = file_numbers.get(i)
 
     # Main illustration (images/<number>.<ext>) with optional JSON override
-    explicit_img = data.get("image")  # allow a custom path like "foo/bar.png" or "123.png"
+    explicit_img = data.get("image")  # allow custom, e.g., "images/123.png" or URL
     if explicit_img:
-        img_src = f"../{explicit_img}" if not explicit_img.startswith("../") and not explicit_img.startswith("http") else explicit_img
+        img_src = explicit_img if explicit_img.startswith(("http", "../", "images/")) else f"../{explicit_img}"
     else:
         img_src = find_numbered_image_src(images_dir, number, IMAGE_EXTS)
 
     images_html = ""
     wide_image_html = ""
     if img_src:
-        # Resolve to local path for size check
         local = local_path_from_src(img_src) if explicit_img else (images_dir / os.path.basename(img_src))
         size = get_image_size(local) if local and local.exists() else None
         is_landscape = bool(size and size[0] > size[1])
@@ -240,6 +240,13 @@ for i, data in enumerate(raw_entries):
             )
 
     explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
+
+    # Furigana string (for recent-history on entry pages)
+    # Prefer first kun; else first on; else join a couple; else empty.
+    furigana_candidates = []
+    if kun_list: furigana_candidates.append(kun_list[0])
+    if on_list and not furigana_candidates: furigana_candidates.append(on_list[0])
+    furigana = "・".join(furigana_candidates[:2]) if furigana_candidates else ""
 
     # Stroke-order GIF: explicit "stroke_gif" or order_gifs/<KANJI>.(gif/webp/png)
     stroke_src = data.get("stroke_gif") or find_kanji_image_src(strokes_dir, kanji, STROKE_EXTS)
@@ -261,6 +268,8 @@ for i, data in enumerate(raw_entries):
         images_html=images_html,
         wide_image_html=wide_image_html,
         stroke_gif_html=stroke_gif_html,
+        js_kanji=json.dumps(kanji, ensure_ascii=False),
+        js_furigana=json.dumps(furigana, ensure_ascii=False)
     )
 
     out_file = entries_dir / f"{kanji}.html"
@@ -271,8 +280,8 @@ for i, data in enumerate(raw_entries):
         "kanji": kanji,
         "gloss": meanings,
         "category": category,
-        "kun": kun_list,
-        "on": on_list,
+        "kun": data["_kun_list"],
+        "on": data["_on_list"],
     })
 
 # sort entries and write grouped index
