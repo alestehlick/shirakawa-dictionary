@@ -1,12 +1,15 @@
-/* =========================
-   Robust remote-only history (GAS JSONP)
-   ========================= */
-function gsJsonp(url, params = {}) {
+/* =========================================================
+   Remote-only history via Google Apps Script
+   ========================================================= */
+let REMOTE_HISTORY = []; // last good list; never overwrite with [] on errors
+
+function gsJsonp(params = {}) {
   return new Promise((resolve, reject) => {
+    if (!window.HISTORY_ENDPOINT) { reject(new Error('No endpoint')); return; }
     const cb = 'gsCb_' + Math.random().toString(36).slice(2);
     const qs = new URLSearchParams({ ...params, callback: cb, ts: Date.now().toString() });
     const s  = document.createElement('script');
-    s.async = true;            // load promptly
+    s.async = true;
     s.referrerPolicy = 'no-referrer';
     const timeout = setTimeout(() => { cleanup(); reject(new Error('JSONP timeout')); }, 12000);
     function cleanup(){ delete window[cb]; s.remove(); clearTimeout(timeout); }
@@ -17,39 +20,40 @@ function gsJsonp(url, params = {}) {
   });
 }
 
-async function historyFetchRemote(){
-  if (!window.HISTORY_ENDPOINT) return [];
+async function historyReadSafe() {
   try {
-    const r = await gsJsonp(window.HISTORY_ENDPOINT, { op:'read' });
-    return Array.isArray(r?.list) ? r.list : [];
-  } catch {
-    // one more try with a fresh cache-buster (helps on Brave)
-    try {
-      const r2 = await gsJsonp(window.HISTORY_ENDPOINT, { op:'read' });
-      return Array.isArray(r2?.list) ? r2.list : [];
-    } catch { return []; }
+    const r = await gsJsonp({ op: 'read' });
+    if (Array.isArray(r?.list) && r.list.length) REMOTE_HISTORY = r.list;
+    // If empty array comes back (rare race), keep old cache instead of wiping it.
+  } catch (e) {
+    console.warn('History read failed:', e.message);
   }
 }
 
-/* Push via JSONP; additionally try sendBeacon if supported (safe no-op if GAS doesn't handle POST) */
-async function historyPushRemote(k, r){
-  if (!window.HISTORY_ENDPOINT || !k) return;
-  try { await gsJsonp(window.HISTORY_ENDPOINT, { op:'push', k, r }); } catch {}
-  if (navigator.sendBeacon) {
-    try {
+async function historyPush(k, r) {
+  if (!k) return;
+  // optimistic in-memory update
+  REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 50);
+
+  // JSONP push
+  try { await gsJsonp({ op:'push', k, r }); } catch (e) { console.warn('JSONP push failed:', e.message); }
+
+  // Background beacon (works on many browsers; harmless if blocked)
+  try {
+    if (navigator.sendBeacon && window.HISTORY_ENDPOINT) {
       const fd = new FormData();
       fd.append('op','push'); fd.append('k',k); fd.append('r',r||'');
       navigator.sendBeacon(window.HISTORY_ENDPOINT, fd);
-    } catch {}
-  }
+    }
+  } catch (e) { /* ignore */ }
+
+  // Confirm by reading back (with retry); keep last good on failure
+  await historyReadSafe();
 }
 
-/* In-memory shared cache for click-time sync generation */
-let REMOTE_HISTORY = []; // [{k:'漢', r:'kan'}, newest first]
-
-/* =========================
-   Index & search
-   ========================= */
+/* =========================================================
+   Index & search (exact-match highlighting preserved)
+   ========================================================= */
 function getEntryId(entry) {
   if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
   if (entry?.num != null) { const m = String(entry.num).match(/\d+/); if (m) return m[0]; }
@@ -79,13 +83,13 @@ function initAllThumbs(root = document){ root.querySelectorAll('img.thumb[data-s
 async function loadEntries() {
   const results = document.getElementById('results');
   if (!results) return;
-  results.innerHTML = 'Loading…';
+  results.textContent = 'Loading…';
 
   try {
     const res = await fetch('entries/index.json', { cache: 'no-store' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    results.innerHTML = '';
+    results.textContent = '';
 
     const flat = Array.isArray(data) ? data : Object.values(data || {}).flat();
 
@@ -136,11 +140,11 @@ async function loadEntries() {
       `;
       grid.appendChild(div);
 
-      // On click, we still try to push (entry page will also push upon load).
+      // Record on click (entry page also records on load)
       div.querySelector('a')?.addEventListener('click', () => {
         const k = div.dataset.kanji;
         const r = div.dataset.firstReading || '';
-        recordKanjiSearch(k, r);
+        historyPush(k, r);
       });
     });
 
@@ -186,7 +190,7 @@ function searchEntries() {
 
     if (score >= 0) {
       item.style.display = '';
-      if (exactReadingHit) item.classList.add('exact-reading');  // << restores style
+      if (exactReadingHit) item.classList.add('exact-reading');
       ranked.push({ el: item, score, idx });
     } else {
       item.style.display = 'none';
@@ -197,13 +201,9 @@ function searchEntries() {
   ranked.forEach(({ el }) => grid.appendChild(el));
 }
 
-/* Debounce + hotkeys + ENTER-to-record */
+/* Debounce + hotkeys + ENTER records a single-kanji query */
 const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
-
-function isCJK(ch){
-  const cp = ch.codePointAt(0);
-  return (cp>=0x3400 && cp<=0x9FFF) || (cp>=0xF900 && cp<=0xFAFF);
-}
+function isCJK(ch){ const cp = ch.codePointAt(0); return (cp>=0x3400 && cp<=0x9FFF) || (cp>=0xF900 && cp<=0xFAFF); }
 
 function attachSearch() {
   const box = document.getElementById('search');
@@ -212,16 +212,14 @@ function attachSearch() {
   const run = debounce(searchEntries, 120);
   box.addEventListener('input', run);
 
-  // If user types a single kanji and presses Enter, record to history
   box.addEventListener('keydown', e => {
     if (e.key === 'Escape') { box.value = ''; searchEntries(); return; }
     if (e.key === 'Enter') {
       const v = (box.value || '').trim();
       if (v.length === 1 && isCJK(v)) {
-        // try to fetch reading from first visible match
         const hit = document.querySelector('.index-item:not([style*="display: none"])');
         const r = hit?.dataset?.firstReading || '';
-        recordKanjiSearch(v, r);
+        historyPush(v, r);
       }
     }
   });
@@ -234,20 +232,16 @@ function attachSearch() {
   searchEntries();
 }
 
-/* =========================
-   Record from pages + toolbar + generators
-   ========================= */
-async function recordKanjiSearch(kanji, reading){
-  if (!kanji) return;
-  REMOTE_HISTORY = [{k:kanji, r:reading||''}, ...REMOTE_HISTORY.filter(x => x.k !== kanji)].slice(0,50);
-  await historyPushRemote(kanji, reading || '');
-}
+/* Entry pages record when opened */
 (function maybeRecordFromEntryPage(){
   if (window.__ENTRY_META__ && window.__ENTRY_META__.kanji) {
-    recordKanjiSearch(window.__ENTRY_META__.kanji, window.__ENTRY_META__.furigana || '');
+    historyPush(window.__ENTRY_META__.kanji, window.__ENTRY_META__.furigana || '');
   }
 })();
 
+/* =========================================================
+   Toolbar buttons + picker + generators (unchanged look)
+   ========================================================= */
 function makeToolbarButtons(){
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
@@ -256,14 +250,24 @@ function makeToolbarButtons(){
   const b2 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Practice: Pick' });
   const b3 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Review: Last 40' });
 
-  b1.addEventListener('click', () => { const list = REMOTE_HISTORY.slice(0,6); if (list.length) openWorksheetNow(list); });
-  b2.addEventListener('click', () => { openPickerModal(); });
-  b3.addEventListener('click', () => { const list = REMOTE_HISTORY.slice(0,40); if (list.length) openReviewNow(list); });
+  b1.addEventListener('click', async () => {
+    if (!REMOTE_HISTORY.length) await historyReadSafe();
+    const list = REMOTE_HISTORY.slice(0,6);
+    if (list.length) openWorksheetNow(list);
+  });
+  b2.addEventListener('click', async () => {
+    if (!REMOTE_HISTORY.length) await historyReadSafe();
+    openPickerModal();
+  });
+  b3.addEventListener('click', async () => {
+    if (!REMOTE_HISTORY.length) await historyReadSafe();
+    const list = REMOTE_HISTORY.slice(0,40);
+    if (list.length) openReviewNow(list);
+  });
 
   bar.append(b1, b2, b3);
 }
 
-/* Picker modal (unchanged) */
 function openPickerModal(){
   const root = document.getElementById('modal-root');
   root.innerHTML = '';
@@ -303,14 +307,15 @@ function openPickerModal(){
   };
 }
 
-/* Open helper using Blob URL (popup-safe) */
+/* Open helper with “open first, then write” pattern (reduces popup blocks) */
 function openWithHtml(html){
-  const blob = new Blob([html], {type:'text/html'});
-  const url  = URL.createObjectURL(blob);
-  window.open(url,'_blank');
+  const w = window.open('', '_blank');
+  if (!w) return; // browser blocked; user will see native hint
+  w.document.open();
+  w.document.write(html);
+  w.document.close();
 }
 
-/* Worksheet & Review (unchanged from previous working version) */
 function openWorksheetNow(items){
   const title = 'Practice';
   const kanjiList = items.map(x => ({k:x.k, r:x.r || ''}));
@@ -385,13 +390,13 @@ function openReviewNow(items){
   openWithHtml(html);
 }
 
-/* =========================
+/* =========================================================
    Boot
-   ========================= */
+   ========================================================= */
 window.addEventListener('load', async () => {
-  // Preload remote history (with cache-busting & retry) so button clicks can open immediately
-  REMOTE_HISTORY = await historyFetchRemote();
+  // Load entries first (fast), then get remote history; if it fails, UI still works.
   await loadEntries();
   attachSearch();
   makeToolbarButtons();
+  await historyReadSafe(); // populate REMOTE_HISTORY (keeps last good cache if blocked)
 });
