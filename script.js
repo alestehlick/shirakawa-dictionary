@@ -1,7 +1,7 @@
 /* =========================
    SINGLE SOURCE OF TRUTH
    ========================= */
-const ENDPOINT = "https://script.google.com/macros/s/AKfycbyz7_xvycEJZonQ4Eeh53XUKuQV5CIJqTZBDM-zK48Ww4b_c3_DuKjxFs-jAb0ovtHh/exec";
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbyFMWpzj21PROmEnaMYtQyLa9RqKxsmm9GMoazYaifdpY2CvrVuVCH0F4SkQ2Ku50aB/exec";
 window.HISTORY_ENDPOINT = ENDPOINT; // forced
 
 /* =========================
