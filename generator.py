@@ -16,19 +16,19 @@ CATEGORY_ORDER: list[str] = []
 IMAGE_EXTS  = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg")
 STROKE_EXTS = (".gif", ".webp", ".png")
 
+ENDPOINT = "https://script.google.com/macros/s/AKfycbyz7_xvycEJZonQ4Eeh53XUKuQV5CIJqTZBDM-zK48Ww4b_c3_DuKjxFs-jAb0ovtHh/exec"
+
 TEMPLATE = """<!doctype html>
 <html lang="en">
-
-<script>
-  window.HISTORY_ENDPOINT = "https://script.google.com/macros/s/AKfycbwEZGZwO7waAdKy7u7kMGSUSa5bse3oauIWIKy9x6jHvT4lf6_b9VesltksNSeUHBa0/exec";
-</script>
-
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{kanji}</title>
   <link rel="stylesheet" href="../style.css">
+  <script>
+    // Ensure entry pages can write history even when opened directly.
+    window.HISTORY_ENDPOINT = "{endpoint}";
+  </script>
 </head>
 <body>
 
@@ -248,7 +248,6 @@ for i, data in enumerate(raw_entries):
     explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
 
     # Furigana string (for recent-history on entry pages)
-    # Prefer first kun; else first on; else join a couple; else empty.
     furigana_candidates = []
     if kun_list: furigana_candidates.append(kun_list[0])
     if on_list and not furigana_candidates: furigana_candidates.append(on_list[0])
@@ -275,7 +274,8 @@ for i, data in enumerate(raw_entries):
         wide_image_html=wide_image_html,
         stroke_gif_html=stroke_gif_html,
         js_kanji=json.dumps(kanji, ensure_ascii=False),
-        js_furigana=json.dumps(furigana, ensure_ascii=False)
+        js_furigana=json.dumps(furigana, ensure_ascii=False),
+        endpoint=ENDPOINT
     )
 
     out_file = entries_dir / f"{kanji}.html"
