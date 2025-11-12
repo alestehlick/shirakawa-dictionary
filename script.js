@@ -1,10 +1,8 @@
-/* history endpoint fallback: works on index.html and entries/*.html */
+/* ---- History endpoint fallback (must be first lines in script.js) ---- */
 (function(){
-  const DEFAULT = "https://script.google.com/macros/s/AKfycbwEZGZwO7waAdKy7u7kMGSUSa5bse3oauIWIKy9x6jHvT4lf6_b9VesltksNSeUHBa0/exec";
+  const DEFAULT = "https://script.google.com/macros/s/AKfycbyz7_xvycEJZonQ4Eeh53XUKuQV5CIJqTZBDM-zK48Ww4b_c3_DuKjxFs-jAb0ovtHh/exec";
   if (!window.HISTORY_ENDPOINT) window.HISTORY_ENDPOINT = DEFAULT;
 })();
-
-
 
 /* =========================================================
    Remote-only history via Google Apps Script
