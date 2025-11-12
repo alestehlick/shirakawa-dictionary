@@ -1,5 +1,5 @@
 /* =========================================================
-   JSONP-based remote history (no CORS needed)
+   JSONP-based remote history (no CORS) + robust warnings
    ========================================================= */
 let REMOTE_HISTORY = []; // last good list
 
@@ -13,7 +13,7 @@ function showHistoryWarning(msg) {
     note.style.cssText = 'color:#b04632;font:600 .9rem/1.2 system-ui;margin-left:.5rem';
     bar.appendChild(note);
   }
-  note.textContent = `History not reachable: ${msg}`;
+  note.textContent = `History issue: ${msg}`;
 }
 
 /* -------- JSONP helper -------- */
@@ -61,10 +61,9 @@ async function apiReadJsonp() {
 }
 
 async function apiPushGet(k, r) {
-  // Use GET push; no need to read body, but we JSONP it so we can detect success.
   const t = Date.now();
   const url = `${window.HISTORY_ENDPOINT}?op=push&k=${encodeURIComponent(k)}&r=${encodeURIComponent(r||'')}&t=${t}`;
-  return jsonp(url); // returns { ok:true, n:... }
+  return jsonp(url); // { ok:true, wroteDrive:bool, wroteProps:bool, n:int }
 }
 
 async function historyReadSafe() {
@@ -85,12 +84,15 @@ async function historyReadSafe() {
 
 async function historyPush(k, r) {
   if (!k) return;
-  // Optimistic UI
+  // Optimistic UI so practice/review feels instant
   REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 50);
 
   try {
     const res = await apiPushGet(k, r);
-    if (!res?.ok) throw new Error('push failed');
+    if (!res?.ok) {
+      const flags = `drive:${!!res?.wroteDrive} props:${!!res?.wroteProps}`;
+      throw new Error('push failed '+flags);
+    }
   } catch (e) {
     console.warn('History push failed:', e.message);
     showHistoryWarning(e.message || 'push error');
@@ -99,7 +101,7 @@ async function historyPush(k, r) {
 }
 
 /* =========================================================
-   Index & search (unchanged functionality)
+   Index & search
    ========================================================= */
 function getEntryId(entry) {
   if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
