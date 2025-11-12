@@ -1,3 +1,11 @@
+/* history endpoint fallback: works on index.html and entries/*.html */
+(function(){
+  const DEFAULT = "https://script.google.com/macros/s/AKfycbwEZGZwO7waAdKy7u7kMGSUSa5bse3oauIWIKy9x6jHvT4lf6_b9VesltksNSeUHBa0/exec";
+  if (!window.HISTORY_ENDPOINT) window.HISTORY_ENDPOINT = DEFAULT;
+})();
+
+
+
 /* =========================================================
    Remote-only history via Google Apps Script
    ========================================================= */
