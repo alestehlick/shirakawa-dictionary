@@ -186,6 +186,9 @@ def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji
 # ---------- Build pages & grouped index ----------
 raw_entries: list[dict] = []
 json_files = sorted(json_dir.glob("*.json"))
+if not json_files:
+    print("No JSON files in ./json; nothing to build.")
+
 file_numbers: dict[int, str] = {}
 
 for i, file in enumerate(json_files):
