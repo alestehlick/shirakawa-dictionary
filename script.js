@@ -1,16 +1,18 @@
-/* ============================================================
-   Remote-only HISTORY via Google Apps Script (JSONP)
-   ============================================================ */
+/* =========================
+   Robust remote-only history (GAS JSONP)
+   ========================= */
 function gsJsonp(url, params = {}) {
   return new Promise((resolve, reject) => {
     const cb = 'gsCb_' + Math.random().toString(36).slice(2);
-    const qs = new URLSearchParams({ ...params, callback: cb });
-    const s = document.createElement('script');
-    const timeout = setTimeout(() => { cleanup(); reject(new Error('JSONP timeout')); }, 10000);
+    const qs = new URLSearchParams({ ...params, callback: cb, ts: Date.now().toString() });
+    const s  = document.createElement('script');
+    s.async = true;            // load promptly
+    s.referrerPolicy = 'no-referrer';
+    const timeout = setTimeout(() => { cleanup(); reject(new Error('JSONP timeout')); }, 12000);
     function cleanup(){ delete window[cb]; s.remove(); clearTimeout(timeout); }
     window[cb] = (data) => { cleanup(); resolve(data); };
-    s.src = `${window.HISTORY_ENDPOINT}?${qs.toString()}`;
     s.onerror = () => { cleanup(); reject(new Error('JSONP network error')); };
+    s.src = `${window.HISTORY_ENDPOINT}?${qs.toString()}`;
     document.head.appendChild(s);
   });
 }
@@ -18,24 +20,36 @@ function gsJsonp(url, params = {}) {
 async function historyFetchRemote(){
   if (!window.HISTORY_ENDPOINT) return [];
   try {
-    const { list } = await gsJsonp(window.HISTORY_ENDPOINT, { op:'read' });
-    return Array.isArray(list) ? list : [];
+    const r = await gsJsonp(window.HISTORY_ENDPOINT, { op:'read' });
+    return Array.isArray(r?.list) ? r.list : [];
   } catch {
-    return [];
+    // one more try with a fresh cache-buster (helps on Brave)
+    try {
+      const r2 = await gsJsonp(window.HISTORY_ENDPOINT, { op:'read' });
+      return Array.isArray(r2?.list) ? r2.list : [];
+    } catch { return []; }
   }
 }
+
+/* Push via JSONP; additionally try sendBeacon if supported (safe no-op if GAS doesn't handle POST) */
 async function historyPushRemote(k, r){
   if (!window.HISTORY_ENDPOINT || !k) return;
-  try { await gsJsonp(window.HISTORY_ENDPOINT, { op:'push', k, r }); }
-  catch { /* ignore */ }
+  try { await gsJsonp(window.HISTORY_ENDPOINT, { op:'push', k, r }); } catch {}
+  if (navigator.sendBeacon) {
+    try {
+      const fd = new FormData();
+      fd.append('op','push'); fd.append('k',k); fd.append('r',r||'');
+      navigator.sendBeacon(window.HISTORY_ENDPOINT, fd);
+    } catch {}
+  }
 }
 
-/* In-memory cache (used to avoid async during button click) */
-let REMOTE_HISTORY = [];  // [{k:'漢', r:'kan'}, newest first
+/* In-memory shared cache for click-time sync generation */
+let REMOTE_HISTORY = []; // [{k:'漢', r:'kan'}, newest first]
 
-/* ============================================================
-   Index build + search (unchanged essentials)
-   ============================================================ */
+/* =========================
+   Index & search
+   ========================= */
 function getEntryId(entry) {
   if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
   if (entry?.num != null) { const m = String(entry.num).match(/\d+/); if (m) return m[0]; }
@@ -122,7 +136,7 @@ async function loadEntries() {
       `;
       grid.appendChild(div);
 
-      // record search when clicked
+      // On click, we still try to push (entry page will also push upon load).
       div.querySelector('a')?.addEventListener('click', () => {
         const k = div.dataset.kanji;
         const r = div.dataset.firstReading || '';
@@ -138,6 +152,7 @@ async function loadEntries() {
   }
 }
 
+/* Highlighting + ranking */
 function searchEntries() {
   const q = (document.getElementById('search')?.value || '').trim().toLowerCase();
   const grid = document.getElementById('index-grid');
@@ -171,7 +186,7 @@ function searchEntries() {
 
     if (score >= 0) {
       item.style.display = '';
-      if (exactReadingHit) item.classList.add('exact-reading');
+      if (exactReadingHit) item.classList.add('exact-reading');  // << restores style
       ranked.push({ el: item, score, idx });
     } else {
       item.style.display = 'none';
@@ -182,27 +197,48 @@ function searchEntries() {
   ranked.forEach(({ el }) => grid.appendChild(el));
 }
 
-/* Debounce + hotkeys */
+/* Debounce + hotkeys + ENTER-to-record */
 const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
+
+function isCJK(ch){
+  const cp = ch.codePointAt(0);
+  return (cp>=0x3400 && cp<=0x9FFF) || (cp>=0xF900 && cp<=0xFAFF);
+}
+
 function attachSearch() {
   const box = document.getElementById('search');
   if (!box) return;
+
   const run = debounce(searchEntries, 120);
   box.addEventListener('input', run);
-  box.addEventListener('keydown', e => { if (e.key === 'Escape') { box.value = ''; searchEntries(); } });
+
+  // If user types a single kanji and presses Enter, record to history
+  box.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { box.value = ''; searchEntries(); return; }
+    if (e.key === 'Enter') {
+      const v = (box.value || '').trim();
+      if (v.length === 1 && isCJK(v)) {
+        // try to fetch reading from first visible match
+        const hit = document.querySelector('.index-item:not([style*="display: none"])');
+        const r = hit?.dataset?.firstReading || '';
+        recordKanjiSearch(v, r);
+      }
+    }
+  });
+
   window.addEventListener('keydown', e => {
     const tag = document.activeElement?.tagName;
     if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); box.focus(); }
   });
+
   searchEntries();
 }
 
-/* ============================================================
-   History recording (entry pages)
-   ============================================================ */
+/* =========================
+   Record from pages + toolbar + generators
+   ========================= */
 async function recordKanjiSearch(kanji, reading){
   if (!kanji) return;
-  // Optimistically update in-memory cache
   REMOTE_HISTORY = [{k:kanji, r:reading||''}, ...REMOTE_HISTORY.filter(x => x.k !== kanji)].slice(0,50);
   await historyPushRemote(kanji, reading || '');
 }
@@ -212,9 +248,6 @@ async function recordKanjiSearch(kanji, reading){
   }
 })();
 
-/* ============================================================
-   Buttons: practice (last 6), practice (pick up to 10), review (last 40)
-   ============================================================ */
 function makeToolbarButtons(){
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
@@ -223,22 +256,14 @@ function makeToolbarButtons(){
   const b2 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Practice: Pick' });
   const b3 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Review: Last 40' });
 
-  b1.addEventListener('click', () => {
-    const list = REMOTE_HISTORY.slice(0, 6);
-    if (!list.length) return;
-    openWorksheetNow(list);
-  });
-  b2.addEventListener('click', async () => { openPickerModal(); });
-  b3.addEventListener('click', () => {
-    const list = REMOTE_HISTORY.slice(0, 40);
-    if (!list.length) return;
-    openReviewNow(list);
-  });
+  b1.addEventListener('click', () => { const list = REMOTE_HISTORY.slice(0,6); if (list.length) openWorksheetNow(list); });
+  b2.addEventListener('click', () => { openPickerModal(); });
+  b3.addEventListener('click', () => { const list = REMOTE_HISTORY.slice(0,40); if (list.length) openReviewNow(list); });
 
   bar.append(b1, b2, b3);
 }
 
-/* ------- Picker modal ------- */
+/* Picker modal (unchanged) */
 function openPickerModal(){
   const root = document.getElementById('modal-root');
   root.innerHTML = '';
@@ -263,13 +288,8 @@ function openPickerModal(){
     cell.className = 'modal-kanji';
     cell.textContent = k;
     cell.addEventListener('click', () => {
-      if (cell.classList.contains('selected')) {
-        cell.classList.remove('selected');
-      } else {
-        const selected = grid.querySelectorAll('.selected');
-        if (selected.length >= 10) return;
-        cell.classList.add('selected');
-      }
+      if (cell.classList.contains('selected')) cell.classList.remove('selected');
+      else if (grid.querySelectorAll('.selected').length < 10) cell.classList.add('selected');
     });
     grid.appendChild(cell);
   });
@@ -283,88 +303,78 @@ function openPickerModal(){
   };
 }
 
-/* ------- Generators (open via Blob URL; synchronous inside click) ------- */
-function openWithHtml(htmlString){
-  const blob = new Blob([htmlString], {type: 'text/html'});
-  const url = URL.createObjectURL(blob);
-  window.open(url, '_blank');       // happens immediately in the click handler
-  // no async writes after this
+/* Open helper using Blob URL (popup-safe) */
+function openWithHtml(html){
+  const blob = new Blob([html], {type:'text/html'});
+  const url  = URL.createObjectURL(blob);
+  window.open(url,'_blank');
 }
 
-/* Worksheet (6 per page, squares to bottom, furigana under kanji) */
+/* Worksheet & Review (unchanged from previous working version) */
 function openWorksheetNow(items){
   const title = 'Practice';
   const kanjiList = items.map(x => ({k:x.k, r:x.r || ''}));
 
   const html = `<!doctype html>
-<html><head><meta charset="utf-8">
-<title>${title}</title>
+<html><head><meta charset="utf-8"><title>${title}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   @page { size: A4; margin: 12mm; }
-  html,body{ height:100%; }
-  body{ margin:0; font-family: "Noto Serif JP", serif; color:#222; }
-  h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui, -apple-system, "Hiragino Sans","Yu Gothic", sans-serif; }
-  .page{ display:grid; grid-template-columns: repeat(6, 1fr); gap: 10mm; min-height: calc(100vh - 24mm); padding: 2mm; }
-  .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm; }
-  .head{ display:flex; align-items:flex-end; justify-content:center; gap:4mm; margin-bottom: 4mm; min-height: 22mm; }
-  .k{ font-size: 22mm; line-height:1; }
-  .furi{ font: 400 3.8mm/1.1 "Noto Serif JP", serif; color:#999; transform: translateY(2mm); }
-  .grid{ flex:1; display:grid; grid-auto-rows: 12mm; grid-template-columns: 12mm; justify-content:center; row-gap: 3mm; }
-  .sq{ width:12mm; height:12mm; border:1px solid rgba(0,0,0,.12); background:
-      linear-gradient(to right, rgba(0,0,0,.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0,0,0,.08) 1px, transparent 1px);
-      background-size: 50% 100%, 100% 50%;
-      }
-  @media print{ .page{ min-height:auto; } }
-</style>
-</head>
+  html,body{ height:100% }
+  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
+  h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
+  .page{ display:grid; grid-template-columns: repeat(6, 1fr); gap: 10mm; min-height: calc(100vh - 24mm); padding: 2mm }
+  .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm }
+  .head{ display:flex; align-items:flex-end; justify-content:center; gap:4mm; margin-bottom:4mm; min-height:22mm }
+  .k{ font-size:22mm; line-height:1 }
+  .furi{ font: 400 3.8mm/1.1 "Noto Serif JP",serif; color:#999; transform: translateY(2mm) }
+  .grid{ flex:1; display:grid; grid-auto-rows:12mm; grid-template-columns:12mm; justify-content:center; row-gap:3mm }
+  .sq{ width:12mm; height:12mm; border:1px solid rgba(0,0,0,.12);
+       background:linear-gradient(to right, rgba(0,0,0,.08) 1px, transparent 1px),
+                  linear-gradient(to bottom, rgba(0,0,0,.08) 1px, transparent 1px);
+       background-size:50% 100%, 100% 50%; }
+  @media print{ .page{ min-height:auto } }
+</style></head>
 <body>
   <h2>Practice (Last ${kanjiList.length})</h2>
   <div class="page" id="page"></div>
 <script>
   const data = ${JSON.stringify(kanjiList)};
   const page = document.getElementById('page');
-  // Ensure exactly 6 columns on one page (truncate if more)
   const six = data.slice(0,6);
   six.forEach(({k,r})=>{
     const col = document.createElement('div'); col.className='col';
     col.innerHTML = '<div class="head"><div class="k">'+k+'</div><div class="furi">'+(r||'')+'</div></div><div class="grid"></div>';
     page.appendChild(col);
   });
-  // Fill squares to bottom: compute per column after layout
   function fill(col){
     const grid = col.querySelector('.grid');
-    const rect = grid.getBoundingClientRect();
-    const avail = col.getBoundingClientRect().height - (grid.offsetTop - col.getBoundingClientRect().top) - 4; // padding
-    const sq = 12; const gap = 3; // mm
-    // Convert mm to px (rough): 1in = 25.4mm; CSS px/in = 96; => 1mm = 96/25.4 px
-    const mm = 96/25.4;
+    const mm = 96/25.4; const sq=12, gap=3;
+    const rectCol = col.getBoundingClientRect();
+    const rectGridTop = grid.getBoundingClientRect().top;
+    const avail = rectCol.bottom - rectGridTop - 4;
     const per = Math.floor(avail / ((sq+gap)*mm));
     for(let i=0;i<per;i++){ const d=document.createElement('div'); d.className='sq'; grid.appendChild(d); }
   }
   document.fonts?.ready.then(()=>{ document.querySelectorAll('.col').forEach(fill); });
   window.onload = ()=>{ document.querySelectorAll('.col').forEach(fill); };
-</script>
-</body></html>`;
+</script></body></html>`;
   openWithHtml(html);
 }
 
-/* Review page (last 40, big, left furigana subtle) */
 function openReviewNow(items){
   const list = items.slice(0,40).map(x => ({k:x.k, r:x.r || ''}));
   const html = `<!doctype html>
-<html><head><meta charset="utf-8">
-<title>Review</title>
+<html><head><meta charset="utf-8"><title>Review</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   @page { size: A4; margin: 12mm; }
-  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222; }
-  h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui, -apple-system, "Hiragino Sans","Yu Gothic", sans-serif; }
-  .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm; }
-  .cell{ position:relative; display:grid; place-items:center; min-height: 36mm; border:1px solid #eee; border-radius:6px; }
-  .k{ font-size: 18mm; line-height:1; }
-  .furi{ position:absolute; left:4mm; top:4mm; font: 400 3.5mm/1 "Noto Serif JP", serif; color:#aaa; }
+  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
+  h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
+  .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
+  .cell{ position:relative; display:grid; place-items:center; min-height:36mm; border:1px solid #eee; border-radius:6px }
+  .k{ font-size:18mm; line-height:1 }
+  .furi{ position:absolute; left:4mm; top:4mm; font:400 3.5mm/1 "Noto Serif JP",serif; color:#aaa }
 </style></head>
 <body>
   <h2>Review (Last ${list.length})</h2>
@@ -375,13 +385,12 @@ function openReviewNow(items){
   openWithHtml(html);
 }
 
-/* ============================================================
-   Boot: preload remote history, then build UI
-   ============================================================ */
+/* =========================
+   Boot
+   ========================= */
 window.addEventListener('load', async () => {
-  // Preload remote history so clicks can open synchronously
-  REMOTE_HISTORY = await historyFetchRemote();  // [{k,r}] newest first (server decides)
-  // Build page + buttons + search
+  // Preload remote history (with cache-busting & retry) so button clicks can open immediately
+  REMOTE_HISTORY = await historyFetchRemote();
   await loadEntries();
   attachSearch();
   makeToolbarButtons();
