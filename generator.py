@@ -23,6 +23,9 @@ TEMPLATE = """<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{kanji}</title>
   <link rel="stylesheet" href="../style.css">
+  <script>
+    window.HISTORY_ENDPOINT = "https://script.google.com/macros/s/AKfycbyz7_xvycEJZonQ4Eeh53XUKuQV5CIJqTZBDM-zK48Ww4b_c3_DuKjxFs-jAb0ovtHh/exec";
+  </script>
 </head>
 <body>
 
@@ -101,7 +104,6 @@ def get_image_size(path: Path):
 
 # ---------- path helpers ----------
 def extract_number_from_json_filename(p: Path) -> str | None:
-    """ '<kanji>_<number>.json' -> 'number' """
     m = re.search(r'_([0-9]+)$', p.stem)
     return m.group(1) if m else None
 
@@ -215,8 +217,7 @@ for i, data in enumerate(raw_entries):
 
     number = file_numbers.get(i)
 
-    # Main illustration (images/<number>.<ext>) with optional JSON override
-    explicit_img = data.get("image")  # allow custom, e.g., "images/123.png" or URL
+    explicit_img = data.get("image")
     if explicit_img:
         img_src = explicit_img if explicit_img.startswith(("http", "../", "images/")) else f"../{explicit_img}"
     else:
@@ -241,13 +242,11 @@ for i, data in enumerate(raw_entries):
 
     explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
 
-    # Furigana string (for recent-history on entry pages)
     furigana_candidates = []
     if kun_list: furigana_candidates.append(kun_list[0])
     if on_list and not furigana_candidates: furigana_candidates.append(on_list[0])
     furigana = "・".join(furigana_candidates[:2]) if furigana_candidates else ""
 
-    # Stroke-order GIF: explicit "stroke_gif" or order_gifs/<KANJI>.(gif/webp/png)
     stroke_src = data.get("stroke_gif") or find_kanji_image_src(strokes_dir, kanji, STROKE_EXTS)
     stroke_gif_html = ""
     if stroke_src:
@@ -283,7 +282,6 @@ for i, data in enumerate(raw_entries):
         "on": data["_on_list"],
     })
 
-# sort entries and write grouped index
 for cat in groups:
     groups[cat].sort(key=lambda x: x["kanji"])
 
