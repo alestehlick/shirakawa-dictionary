@@ -1,73 +1,32 @@
-/* =========================
-   SINGLE SOURCE OF TRUTH
-   ========================= */
-const ENDPOINT = "https://script.google.com/macros/s/AKfycbyFMWpzj21PROmEnaMYtQyLa9RqKxsmm9GMoazYaifdpY2CvrVuVCH0F4SkQ2Ku50aB/exec";
-window.HISTORY_ENDPOINT = ENDPOINT; // forced
+/* =========================================================
+   Remote-only history via CORS JSON (no JSONP, no localStorage)
+   ========================================================= */
+let REMOTE_HISTORY = []; // last good list
 
-/* =========================
-   STATUS WIDGET
-   ========================= */
-let STATUS = { ok:false, step:"init", notes:[] };
-
-function renderStatus() {
-  let pill = document.getElementById('history-status-pill');
-  if (!pill) {
-    pill = document.createElement('span');
-    pill.id = 'history-status-pill';
-    pill.style.cssText = `
-      margin-left:.5rem; padding:.25rem .55rem; border-radius:999px;
-      font:600 .82rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
-      border:1px solid #e7e0d0; background:#fff; color:#333;
-    `;
-    document.querySelector('.toolbar')?.appendChild(pill);
-  }
-  if (STATUS.ok) {
-    pill.textContent = "Cloud History: OK";
-    pill.style.background = "#eefce9";
-    pill.style.borderColor = "#bde5b2";
-    pill.style.color = "#114f08";
-    pill.title = "Endpoint reachable and writable.";
-  } else {
-    pill.textContent = "Cloud History: BLOCKED";
-    pill.style.background = "#fff2f0";
-    pill.style.borderColor = "#ffd0c8";
-    pill.style.color = "#7a1a0c";
-    const hints =
-`Remote history endpoint is blocked on this device.
-Try:
-• Disable content blockers for this site (uBlock/Brave/Safari Content Blockers).
-• On iOS Safari: Settings → Safari → turn OFF “Prevent Cross-Site Tracking” (test), and/or allow JavaScript for this site.
-• Disable Private DNS / VPN that filters google domains.
-• Open the endpoint directly: ${ENDPOINT}?op=read&callback=cb  (you should see cb({...}))`;
-    pill.title = hints;
-  }
+async function apiRead() {
+  const url = `${window.HISTORY_ENDPOINT}?op=read`;
+  const res = await fetch(url, { method: 'GET', mode: 'cors', credentials: 'omit', cache: 'no-store' });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json(); // { list: [...] }
 }
 
-/* =========================
-   REMOTE HISTORY (cloud-only)
-   ========================= */
-let REMOTE_HISTORY = []; // session cache
-
-function gsJsonp(params = {}) {
-  return new Promise((resolve, reject) => {
-    const cb = 'gsCb_' + Math.random().toString(36).slice(2);
-    const qs = new URLSearchParams({ ...params, callback: cb, ts: Date.now().toString() });
-    const s  = document.createElement('script');
-    s.async = true;
-    s.referrerPolicy = 'no-referrer';
-    const timeout = setTimeout(() => { cleanup(); reject(new Error('JSONP timeout')); }, 12000);
-    function cleanup(){ try{delete window[cb];}catch(_){} try{s.remove();}catch(_){} clearTimeout(timeout); }
-    window[cb] = (data) => { cleanup(); resolve(data); };
-    s.onerror = () => { cleanup(); reject(new Error('JSONP network error')); };
-    s.src = `${ENDPOINT}?${qs.toString()}`;
-    document.head.appendChild(s);
+async function apiPush(k, r) {
+  // Use a "simple" POST to avoid a CORS preflight
+  const body = new URLSearchParams({ op: 'push', k, r: r || '' });
+  const res = await fetch(window.HISTORY_ENDPOINT, {
+    method: 'POST',
+    mode: 'cors',
+    credentials: 'omit',
+    body
   });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json(); // { ok:true, n:... }
 }
 
 async function historyReadSafe() {
   try {
-    const r = await gsJsonp({ op: 'read' });
-    if (Array.isArray(r?.list) && r.list.length) REMOTE_HISTORY = r.list;
+    const r = await apiRead();
+    if (Array.isArray(r?.list)) REMOTE_HISTORY = r.list;
   } catch (e) {
     console.warn('History read failed:', e.message);
   }
@@ -75,65 +34,15 @@ async function historyReadSafe() {
 
 async function historyPush(k, r) {
   if (!k) return;
+  // optimistic UI
   REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 50);
-
-  try { await gsJsonp({ op:'push', k, r }); } catch (e) { console.warn('JSONP push failed:', e.message); }
-
-  try {
-    if (navigator.sendBeacon) {
-      const fd = new FormData();
-      fd.append('op','push'); fd.append('k',k); fd.append('r',r||'');
-      navigator.sendBeacon(ENDPOINT, fd); // background; may be ignored if blocked
-    }
-  } catch (_) {}
-
-  await historyReadSafe();
+  try { await apiPush(k, r); } catch (e) { console.warn('History push failed:', e.message); }
+  await historyReadSafe(); // confirm server state
 }
 
-/* =========================
-   HEALTH CHECK (3 probes)
-   ========================= */
-async function healthCheck() {
-  STATUS = { ok:false, step:"probe", notes:[] };
-
-  // Probe A: plain-text ping (no JSONP) -> Apps Script returns "pong"
-  try {
-    const u = `${ENDPOINT}?op=ping`;
-    const res = await fetch(u, { method:'GET', mode:'no-cors' }); // no-cors prevents CORS fuss; success is opaque but not a network error
-    // We can’t read body in no-cors, but if we got here, network likely allowed.
-    STATUS.notes.push("Ping reached (no-cors).");
-  } catch (e) {
-    STATUS.notes.push("Ping blocked.");
-  }
-
-  // Probe B: JSONP read
-  let readOk = false;
-  try {
-    const d = await gsJsonp({ op:'read' });
-    if (d && 'list' in d) { readOk = true; STATUS.notes.push("JSONP read OK."); }
-  } catch (e) {
-    STATUS.notes.push("JSONP read blocked.");
-  }
-
-  // Probe C: JSONP push (dummy key) – safe; server de-duplicates by key
-  let pushOk = false;
-  if (readOk) {
-    try {
-      const x = '◎'; // harmless test kanji
-      await gsJsonp({ op:'push', k:x, r:'' });
-      pushOk = true; STATUS.notes.push("JSONP push OK.");
-    } catch (e) {
-      STATUS.notes.push("JSONP push blocked.");
-    }
-  }
-
-  STATUS.ok = readOk && pushOk;
-  renderStatus();
-}
-
-/* =========================
-   INDEX / SEARCH (unchanged)
-   ========================= */
+/* =========================================================
+   Index & search (kept the same)
+   ========================================================= */
 function getEntryId(entry) {
   if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
   if (entry?.num != null) { const m = String(entry.num).match(/\d+/); if (m) return m[0]; }
@@ -220,6 +129,7 @@ async function loadEntries() {
       `;
       grid.appendChild(div);
 
+      // Record on click (entry page also records on load)
       div.querySelector('a')?.addEventListener('click', () => {
         const k = div.dataset.kanji;
         const r = div.dataset.firstReading || '';
@@ -235,9 +145,7 @@ async function loadEntries() {
   }
 }
 
-/* Search, hotkeys (unchanged) */
-const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
-function isCJK(ch){ const cp = ch.codePointAt(0); return (cp>=0x3400 && cp<=0x9FFF) || (cp>=0xF900 && cp<=0xFAFF); }
+/* Highlighting + ranking */
 function searchEntries() {
   const q = (document.getElementById('search')?.value || '').trim().toLowerCase();
   const grid = document.getElementById('index-grid');
@@ -250,7 +158,11 @@ function searchEntries() {
   nodes.forEach((item, idx) => {
     item.classList.remove('exact-reading');
 
-    if (!q) { item.style.display = ''; ranked.push({ el:item, score:0, idx }); return; }
+    if (!q) {
+      item.style.display = '';
+      ranked.push({ el: item, score: 0, idx });
+      return;
+    }
 
     const kun  = JSON.parse(item.dataset.kun || '[]');
     const on   = JSON.parse(item.dataset.on  || '[]');
@@ -261,21 +173,34 @@ function searchEntries() {
     const generalHit       = !exactReadingHit && !startsReadingHit && blob.includes(q);
 
     let score = -1;
-    if (exactReadingHit) score = 300; else if (startsReadingHit) score = 200; else if (generalHit) score = 100;
+    if (exactReadingHit) score = 300;
+    else if (startsReadingHit) score = 200;
+    else if (generalHit) score = 100;
 
-    if (score >= 0) { item.style.display = ''; if (exactReadingHit) item.classList.add('exact-reading'); ranked.push({ el:item, score, idx }); }
-    else item.style.display = 'none';
+    if (score >= 0) {
+      item.style.display = '';
+      if (exactReadingHit) item.classList.add('exact-reading');
+      ranked.push({ el: item, score, idx });
+    } else {
+      item.style.display = 'none';
+    }
   });
 
-  ranked.sort((a,b)=>(b.score-a.score)||(a.idx-b.idx));
-  ranked.forEach(({el})=>grid.appendChild(el));
+  ranked.sort((a, b) => (b.score - a.score) || (a.idx - b.idx));
+  ranked.forEach(({ el }) => grid.appendChild(el));
 }
+
+/* Debounce + hotkeys + ENTER records a single-kanji query */
+const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
+function isCJK(ch){ const cp = ch.codePointAt(0); return (cp>=0x3400 && cp<=0x9FFF) || (cp>=0xF900 && cp<=0xFAFF); }
 
 function attachSearch() {
   const box = document.getElementById('search');
   if (!box) return;
+
   const run = debounce(searchEntries, 120);
   box.addEventListener('input', run);
+
   box.addEventListener('keydown', e => {
     if (e.key === 'Escape') { box.value = ''; searchEntries(); return; }
     if (e.key === 'Enter') {
@@ -287,21 +212,23 @@ function attachSearch() {
       }
     }
   });
+
   window.addEventListener('keydown', e => {
     const tag = document.activeElement?.tagName;
     if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); box.focus(); }
   });
+
   searchEntries();
 }
 
-/* Entry pages record on open */
+/* Entry pages record when opened */
 (function maybeRecordFromEntryPage(){
   if (window.__ENTRY_META__ && window.__ENTRY_META__.kanji) {
     historyPush(window.__ENTRY_META__.kanji, window.__ENTRY_META__.furigana || '');
   }
 })();
 
-/* Toolbar buttons (unchanged) */
+/* Toolbar buttons + picker + generators (unchanged look) */
 function makeToolbarButtons(){
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
@@ -328,13 +255,129 @@ function makeToolbarButtons(){
   bar.append(b1, b2, b3);
 }
 
-/* Picker / generators (unchanged) ... (omit here for brevity if you already have them) */
+function openPickerModal(){
+  const root = document.getElementById('modal-root');
+  root.innerHTML = '';
+  const overlay = document.createElement('div');
+  overlay.className = 'modal';
+  overlay.innerHTML = `
+    <div class="modal-card">
+      <div class="modal-head">
+        <div><strong>Select up to 10 kanji</strong></div>
+        <button class="toolbtn" id="closeModalBtn">Close</button>
+      </div>
+      <div class="modal-grid" id="pickGrid"></div>
+      <div class="modal-actions">
+        <button class="toolbtn" id="pickConfirm">Generate worksheet</button>
+      </div>
+    </div>`;
+  root.appendChild(overlay);
+
+  const grid = overlay.querySelector('#pickGrid');
+  REMOTE_HISTORY.slice(0, 40).forEach(({k}) => {
+    const cell = document.createElement('div');
+    cell.className = 'modal-kanji';
+    cell.textContent = k;
+    cell.addEventListener('click', () => {
+      if (cell.classList.contains('selected')) cell.classList.remove('selected');
+      else if (grid.querySelectorAll('.selected').length < 10) cell.classList.add('selected');
+    });
+    grid.appendChild(cell);
+  });
+
+  overlay.querySelector('#closeModalBtn').onclick = () => (root.innerHTML = '');
+  overlay.querySelector('#pickConfirm').onclick = () => {
+    const picked = Array.from(grid.querySelectorAll('.selected')).map(el => el.textContent);
+    const list = REMOTE_HISTORY.filter(x => picked.includes(x.k)).slice(0,10);
+    if (list.length) openWorksheetNow(list);
+    root.innerHTML = '';
+  };
+}
+
+function openWithHtml(html){
+  const w = window.open('', '_blank');
+  if (!w) return;
+  w.document.open(); w.document.write(html); w.document.close();
+}
+
+function openWorksheetNow(items){
+  const title = 'Practice';
+  const kanjiList = items.map(x => ({k:x.k, r:x.r || ''}));
+
+  const html = `<!doctype html>
+<html><head><meta charset="utf-8"><title>${title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @page { size: A4; margin: 12mm; }
+  html,body{ height:100% }
+  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
+  h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
+  .page{ display:grid; grid-template-columns: repeat(6, 1fr); gap: 10mm; min-height: calc(100vh - 24mm); padding: 2mm }
+  .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm }
+  .head{ display:flex; align-items:flex-end; justify-content:center; gap:4mm; margin-bottom:4mm; min-height:22mm }
+  .k{ font-size:22mm; line-height:1 }
+  .furi{ font: 400 3.8mm/1.1 "Noto Serif JP",serif; color:#999; transform: translateY(2mm) }
+  .grid{ flex:1; display:grid; grid-auto-rows:12mm; grid-template-columns:12mm; justify-content:center; row-gap:3mm }
+  .sq{ width:12mm; height:12mm; border:1px solid rgba(0,0,0,.12);
+       background:linear-gradient(to right, rgba(0,0,0,.08) 1px, transparent 1px),
+                  linear-gradient(to bottom, rgba(0,0,0,.08) 1px, transparent 1px);
+       background-size:50% 100%, 100% 50%; }
+  @media print{ .page{ min-height:auto } }
+</style></head>
+<body>
+  <h2>Practice (Last ${kanjiList.length})</h2>
+  <div class="page" id="page"></div>
+<script>
+  const data = ${JSON.stringify(kanjiList)};
+  const page = document.getElementById('page');
+  const six = data.slice(0,6);
+  six.forEach(({k,r})=>{
+    const col = document.createElement('div'); col.className='col';
+    col.innerHTML = '<div class="head"><div class="k">'+k+'</div><div class="furi">'+(r||'')+'</div></div><div class="grid"></div>';
+    page.appendChild(col);
+  });
+  function fill(col){
+    const grid = col.querySelector('.grid');
+    const mm = 96/25.4; const sq=12, gap=3;
+    const rectCol = col.getBoundingClientRect();
+    const rectGridTop = grid.getBoundingClientRect().top;
+    const avail = rectCol.bottom - rectGridTop - 4;
+    const per = Math.floor(avail / ((sq+gap)*mm));
+    for(let i=0;i<per;i++){ const d=document.createElement('div'); d.className='sq'; grid.appendChild(d); }
+  }
+  document.fonts?.ready.then(()=>{ document.querySelectorAll('.col').forEach(fill); });
+  window.onload = ()=>{ document.querySelectorAll('.col').forEach(fill); };
+</script></body></html>`;
+  openWithHtml(html);
+}
+
+function openReviewNow(items){
+  const list = items.slice(0,40).map(x => ({k:x.k, r:x.r || ''}));
+  const html = `<!doctype html>
+<html><head><meta charset="utf-8"><title>Review</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @page { size: A4; margin: 12mm; }
+  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
+  h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
+  .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
+  .cell{ position:relative; display:grid; place-items:center; min-height:36mm; border:1px solid #eee; border-radius:6px }
+  .k{ font-size:18mm; line-height:1 }
+  .furi{ position:absolute; left:4mm; top:4mm; font:400 3.5mm/1 "Noto Serif JP",serif; color:#aaa }
+</style></head>
+<body>
+  <h2>Review (Last ${list.length})</h2>
+  <div class="grid">
+    ${list.map(({k,r})=>`<div class="cell"><div class="furi">${r||''}</div><div class="k">${k}</div></div>`).join('')}
+  </div>
+</body></html>`;
+  openWithHtml(html);
+}
 
 /* Boot */
 window.addEventListener('load', async () => {
   await loadEntries();
   attachSearch();
   makeToolbarButtons();
-  await healthCheck();   // <-- new
   await historyReadSafe();
 });
