@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <script>
-    /* Remote history endpoint (Google Apps Script Web App – JSONP) */
-    window.HISTORY_ENDPOINT = "https://script.google.com/macros/s/AKfycbwEZGZwO7waAdKy7u7kMGSUSa5bse3oauIWIKy9x6jHvT4lf6_b9VesltksNSeUHBa0/exec";
+    // Remote history endpoint (Google Apps Script Web App – JSONP for GET, POST for beacon)
+    window.HISTORY_ENDPOINT = "https://script.google.com/macros/s/AKfycbyz7_xvycEJZonQ4Eeh53XUKuQV5CIJqTZBDM-zK48Ww4b_c3_DuKjxFs-jAb0ovtHh/exec";
   </script>
 </head>
 <body>
@@ -18,12 +18,10 @@
 
   <div class="toolbar">
     <input id="search" placeholder="Search kanji or meaning…" />
-    <!-- The three minimal buttons get injected by script.js into .toolbar -->
+    <!-- Buttons injected by script.js -->
   </div>
 
   <div id="results"></div>
-
-  <!-- Modal host (built by JS) -->
   <div id="modal-root"></div>
 
   <script src="script.js"></script>
