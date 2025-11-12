@@ -18,6 +18,12 @@ STROKE_EXTS = (".gif", ".webp", ".png")
 
 TEMPLATE = """<!doctype html>
 <html lang="en">
+
+<script>
+  window.HISTORY_ENDPOINT = "https://script.google.com/macros/s/AKfycbwEZGZwO7waAdKy7u7kMGSUSa5bse3oauIWIKy9x6jHvT4lf6_b9VesltksNSeUHBa0/exec";
+</script>
+
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
