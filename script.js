@@ -1,5 +1,5 @@
 /* =========================================================
-   Remote-only history via CORS JSON (no JSONP, no localStorage)
+   JSONP-based remote history (no CORS needed)
    ========================================================= */
 let REMOTE_HISTORY = []; // last good list
 
@@ -16,29 +16,60 @@ function showHistoryWarning(msg) {
   note.textContent = `History not reachable: ${msg}`;
 }
 
-async function apiRead() {
-  // Add a cache-buster to ensure fresh result on every device
-  const t = Date.now();
-  const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
-  const res = await fetch(url, { method: 'GET', mode: 'cors', credentials: 'omit', cache: 'no-store' });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const data = await res.json(); // throws if redirected to HTML login
-  return data; // { list: [...] }
+/* -------- JSONP helper -------- */
+function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
+  return new Promise((resolve, reject) => {
+    const cbName = `__jsonp_cb_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+    const sep = url.includes('?') ? '&' : '?';
+    const src = `${url}${sep}${callbackParam}=${encodeURIComponent(cbName)}`;
+
+    const script = document.createElement('script');
+    let done = false;
+    const cleanup = () => {
+      if (script.parentNode) script.parentNode.removeChild(script);
+      try { delete window[cbName]; } catch (_) { window[cbName] = undefined; }
+    };
+
+    const timer = setTimeout(() => {
+      if (done) return;
+      done = true; cleanup();
+      reject(new Error('timeout'));
+    }, timeoutMs);
+
+    window[cbName] = (data) => {
+      if (done) return;
+      done = true; clearTimeout(timer); cleanup();
+      resolve(data);
+    };
+
+    script.onerror = () => {
+      if (done) return;
+      done = true; clearTimeout(timer); cleanup();
+      reject(new Error('script error'));
+    };
+
+    script.src = src;
+    document.head.appendChild(script);
+  });
 }
 
-async function apiPush(k, r) {
-  // Simple POST → no preflight; friendly on mobile/webview
-  const body = new URLSearchParams({ op: 'push', k, r: r || '' });
-  const res = await fetch(window.HISTORY_ENDPOINT, { method: 'POST', mode: 'cors', credentials: 'omit', body });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const data = await res.json();
-  if (!data?.ok) throw new Error(`push failed`);
-  return data; // { ok:true, n:... }
+/* -------- API wrappers using JSONP/GET -------- */
+async function apiReadJsonp() {
+  const t = Date.now();
+  const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
+  return jsonp(url);
+}
+
+async function apiPushGet(k, r) {
+  // Use GET push; no need to read body, but we JSONP it so we can detect success.
+  const t = Date.now();
+  const url = `${window.HISTORY_ENDPOINT}?op=push&k=${encodeURIComponent(k)}&r=${encodeURIComponent(r||'')}&t=${t}`;
+  return jsonp(url); // returns { ok:true, n:... }
 }
 
 async function historyReadSafe() {
   try {
-    const r = await apiRead();
+    const r = await apiReadJsonp();
     if (Array.isArray(r?.list)) {
       REMOTE_HISTORY = r.list;
       const w = document.getElementById('history-warning');
@@ -54,10 +85,13 @@ async function historyReadSafe() {
 
 async function historyPush(k, r) {
   if (!k) return;
-  // optimistic UI
+  // Optimistic UI
   REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 50);
-  try { await apiPush(k, r); }
-  catch (e) {
+
+  try {
+    const res = await apiPushGet(k, r);
+    if (!res?.ok) throw new Error('push failed');
+  } catch (e) {
     console.warn('History push failed:', e.message);
     showHistoryWarning(e.message || 'push error');
   }
@@ -65,7 +99,7 @@ async function historyPush(k, r) {
 }
 
 /* =========================================================
-   Index & search
+   Index & search (unchanged functionality)
    ========================================================= */
 function getEntryId(entry) {
   if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
@@ -265,7 +299,6 @@ function initStrokePlayers(){
       const img = wrapper.querySelector('img');
       img.src = src;
       img.addEventListener('click', () => {
-        // restart animation by resetting src
         const cur = img.src;
         img.src = '';
         requestAnimationFrame(() => requestAnimationFrame(() => { img.src = cur; }));
