@@ -3,32 +3,52 @@
    ========================================================= */
 let REMOTE_HISTORY = []; // last good list
 
+function showHistoryWarning(msg) {
+  const bar = document.querySelector('.toolbar');
+  if (!bar) return;
+  let note = document.getElementById('history-warning');
+  if (!note) {
+    note = document.createElement('div');
+    note.id = 'history-warning';
+    note.style.cssText = 'color:#b04632;font:600 .9rem/1.2 system-ui;margin-left:.5rem';
+    bar.appendChild(note);
+  }
+  note.textContent = `History not reachable: ${msg}`;
+}
+
 async function apiRead() {
-  const url = `${window.HISTORY_ENDPOINT}?op=read`;
+  // Add a cache-buster to ensure fresh result on every device
+  const t = Date.now();
+  const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
   const res = await fetch(url, { method: 'GET', mode: 'cors', credentials: 'omit', cache: 'no-store' });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return res.json(); // { list: [...] }
+  const data = await res.json(); // throws if redirected to HTML login
+  return data; // { list: [...] }
 }
 
 async function apiPush(k, r) {
-  // Use a "simple" POST to avoid a CORS preflight
+  // Simple POST → no preflight; friendly on mobile/webview
   const body = new URLSearchParams({ op: 'push', k, r: r || '' });
-  const res = await fetch(window.HISTORY_ENDPOINT, {
-    method: 'POST',
-    mode: 'cors',
-    credentials: 'omit',
-    body
-  });
+  const res = await fetch(window.HISTORY_ENDPOINT, { method: 'POST', mode: 'cors', credentials: 'omit', body });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return res.json(); // { ok:true, n:... }
+  const data = await res.json();
+  if (!data?.ok) throw new Error(`push failed`);
+  return data; // { ok:true, n:... }
 }
 
 async function historyReadSafe() {
   try {
     const r = await apiRead();
-    if (Array.isArray(r?.list)) REMOTE_HISTORY = r.list;
+    if (Array.isArray(r?.list)) {
+      REMOTE_HISTORY = r.list;
+      const w = document.getElementById('history-warning');
+      if (w) w.remove();
+    } else {
+      showHistoryWarning('bad JSON');
+    }
   } catch (e) {
     console.warn('History read failed:', e.message);
+    showHistoryWarning(e.message || 'fetch error');
   }
 }
 
@@ -36,12 +56,16 @@ async function historyPush(k, r) {
   if (!k) return;
   // optimistic UI
   REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 50);
-  try { await apiPush(k, r); } catch (e) { console.warn('History push failed:', e.message); }
+  try { await apiPush(k, r); }
+  catch (e) {
+    console.warn('History push failed:', e.message);
+    showHistoryWarning(e.message || 'push error');
+  }
   await historyReadSafe(); // confirm server state
 }
 
 /* =========================================================
-   Index & search (kept the same)
+   Index & search
    ========================================================= */
 function getEntryId(entry) {
   if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
@@ -228,7 +252,30 @@ function attachSearch() {
   }
 })();
 
-/* Toolbar buttons + picker + generators (unchanged look) */
+/* Stroke-order player (lazy load on click) */
+function initStrokePlayers(){
+  document.querySelectorAll('.stroke-gif').forEach(wrapper => {
+    const src = wrapper.getAttribute('data-stroke-src');
+    const btn = wrapper.querySelector('.stroke-play');
+    if (!src || !btn) return;
+
+    const start = () => {
+      wrapper.classList.add('playing');
+      wrapper.innerHTML = `<img alt="Stroke order" loading="lazy" decoding="async">`;
+      const img = wrapper.querySelector('img');
+      img.src = src;
+      img.addEventListener('click', () => {
+        // restart animation by resetting src
+        const cur = img.src;
+        img.src = '';
+        requestAnimationFrame(() => requestAnimationFrame(() => { img.src = cur; }));
+      });
+    };
+    btn.addEventListener('click', start);
+  });
+}
+
+/* Toolbar buttons + picker + generators */
 function makeToolbarButtons(){
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
@@ -379,5 +426,6 @@ window.addEventListener('load', async () => {
   await loadEntries();
   attachSearch();
   makeToolbarButtons();
+  initStrokePlayers();
   await historyReadSafe();
 });
