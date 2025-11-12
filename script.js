@@ -1,27 +1,35 @@
-/* ---- History endpoint fallback (must be first lines in script.js) ---- */
-(function(){
-  const DEFAULT = "https://script.google.com/macros/s/AKfycbyFMWpzj21PROmEnaMYtQyLa9RqKxsmm9GMoazYaifdpY2CvrVuVCH0F4SkQ2Ku50aB/exec";
-  if (!window.HISTORY_ENDPOINT) window.HISTORY_ENDPOINT = DEFAULT;
+/* =========================================================
+   HISTORY ENDPOINT — SINGLE SOURCE OF TRUTH
+   ========================================================= */
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbyz7_xvycEJZonQ4Eeh53XUKuQV5CIJqTZBDM-zK48Ww4b_c3_DuKjxFs-jAb0ovtHh/exec";
+window.HISTORY_ENDPOINT = ENDPOINT; // force this everywhere
+
+/* Tiny diagnostics to spot auth/blocked cases on any device */
+(function healthProbe(){
+  const u = `${ENDPOINT}?op=read&callback=__ping_cb__&ts=${Date.now()}`;
+  const t = setTimeout(() => console.warn("[history] JSONP timed out (likely blocked or not public)"), 8000);
+  window.__ping_cb__ = (d)=>{ clearTimeout(t); if (!Array.isArray(d?.list)) console.warn("[history] Unexpected payload", d); delete window.__ping_cb__; };
+  const s = document.createElement('script'); s.async = true; s.src = u; s.onerror = () => { clearTimeout(t); console.warn("[history] JSONP network error (blocked?)"); };
+  document.head.appendChild(s);
 })();
 
 /* =========================================================
    Remote-only history via Google Apps Script
    ========================================================= */
-let REMOTE_HISTORY = []; // last good list; never overwrite with [] on errors
+let REMOTE_HISTORY = []; // session-only cache
 
 function gsJsonp(params = {}) {
   return new Promise((resolve, reject) => {
-    if (!window.HISTORY_ENDPOINT) { reject(new Error('No endpoint')); return; }
     const cb = 'gsCb_' + Math.random().toString(36).slice(2);
     const qs = new URLSearchParams({ ...params, callback: cb, ts: Date.now().toString() });
     const s  = document.createElement('script');
     s.async = true;
     s.referrerPolicy = 'no-referrer';
     const timeout = setTimeout(() => { cleanup(); reject(new Error('JSONP timeout')); }, 12000);
-    function cleanup(){ delete window[cb]; s.remove(); clearTimeout(timeout); }
+    function cleanup(){ try { delete window[cb]; } catch(_){} try { s.remove(); } catch(_){} clearTimeout(timeout); }
     window[cb] = (data) => { cleanup(); resolve(data); };
     s.onerror = () => { cleanup(); reject(new Error('JSONP network error')); };
-    s.src = `${window.HISTORY_ENDPOINT}?${qs.toString()}`;
+    s.src = `${ENDPOINT}?${qs.toString()}`;
     document.head.appendChild(s);
   });
 }
@@ -30,7 +38,6 @@ async function historyReadSafe() {
   try {
     const r = await gsJsonp({ op: 'read' });
     if (Array.isArray(r?.list) && r.list.length) REMOTE_HISTORY = r.list;
-    // If empty array comes back (rare race), keep old cache instead of wiping it.
   } catch (e) {
     console.warn('History read failed:', e.message);
   }
@@ -38,22 +45,18 @@ async function historyReadSafe() {
 
 async function historyPush(k, r) {
   if (!k) return;
-  // optimistic in-memory update
   REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 50);
 
-  // JSONP push
   try { await gsJsonp({ op:'push', k, r }); } catch (e) { console.warn('JSONP push failed:', e.message); }
 
-  // Background beacon (works on many browsers; harmless if blocked)
   try {
-    if (navigator.sendBeacon && window.HISTORY_ENDPOINT) {
+    if (navigator.sendBeacon) {
       const fd = new FormData();
       fd.append('op','push'); fd.append('k',k); fd.append('r',r||'');
-      navigator.sendBeacon(window.HISTORY_ENDPOINT, fd);
+      navigator.sendBeacon(ENDPOINT, fd);
     }
-  } catch (e) { /* ignore */ }
+  } catch (_) {}
 
-  // Confirm by reading back (with retry); keep last good on failure
   await historyReadSafe();
 }
 
@@ -146,7 +149,6 @@ async function loadEntries() {
       `;
       grid.appendChild(div);
 
-      // Record on click (entry page also records on load)
       div.querySelector('a')?.addEventListener('click', () => {
         const k = div.dataset.kanji;
         const r = div.dataset.firstReading || '';
@@ -246,7 +248,7 @@ function attachSearch() {
 })();
 
 /* =========================================================
-   Toolbar buttons + picker + generators (unchanged look)
+   Toolbar buttons + picker + generators
    ========================================================= */
 function makeToolbarButtons(){
   const bar = document.querySelector('.toolbar');
@@ -313,10 +315,10 @@ function openPickerModal(){
   };
 }
 
-/* Open helper with “open first, then write” pattern (reduces popup blocks) */
+/* Open helper */
 function openWithHtml(html){
   const w = window.open('', '_blank');
-  if (!w) return; // browser blocked; user will see native hint
+  if (!w) return;
   w.document.open();
   w.document.write(html);
   w.document.close();
@@ -400,9 +402,8 @@ function openReviewNow(items){
    Boot
    ========================================================= */
 window.addEventListener('load', async () => {
-  // Load entries first (fast), then get remote history; if it fails, UI still works.
   await loadEntries();
   attachSearch();
   makeToolbarButtons();
-  await historyReadSafe(); // populate REMOTE_HISTORY (keeps last good cache if blocked)
+  await historyReadSafe();
 });
