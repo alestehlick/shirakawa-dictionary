@@ -16,8 +16,6 @@ CATEGORY_ORDER: list[str] = []
 IMAGE_EXTS  = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg")
 STROKE_EXTS = (".gif", ".webp", ".png")
 
-ENDPOINT = "https://script.google.com/macros/s/AKfycbyFMWpzj21PROmEnaMYtQyLa9RqKxsmm9GMoazYaifdpY2CvrVuVCH0F4SkQ2Ku50aB/exec"
-
 TEMPLATE = """<!doctype html>
 <html lang="en">
 <head>
@@ -25,10 +23,6 @@ TEMPLATE = """<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{kanji}</title>
   <link rel="stylesheet" href="../style.css">
-  <script>
-    // Ensure entry pages can write history even when opened directly.
-    window.HISTORY_ENDPOINT = "{endpoint}";
-  </script>
 </head>
 <body>
 
@@ -274,8 +268,7 @@ for i, data in enumerate(raw_entries):
         wide_image_html=wide_image_html,
         stroke_gif_html=stroke_gif_html,
         js_kanji=json.dumps(kanji, ensure_ascii=False),
-        js_furigana=json.dumps(furigana, ensure_ascii=False),
-        endpoint=ENDPOINT
+        js_furigana=json.dumps(furigana, ensure_ascii=False)
     )
 
     out_file = entries_dir / f"{kanji}.html"
