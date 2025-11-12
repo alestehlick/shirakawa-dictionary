@@ -1,0 +1,56 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>History Endpoint Health</title>
+<style>
+  body{font:14px/1.45 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;padding:20px}
+  .ok{color:#0a6}
+  .bad{color:#b00}
+  code{background:#f6f6f6;padding:2px 4px;border:1px solid #eee;border-radius:4px}
+</style>
+<h1>Cloud History – Health Check</h1>
+<div id="log">Running…</div>
+<script>
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbyz7_xvycEJZonQ4Eeh53XUKuQV5CIJqTZBDM-zK48Ww4b_c3_DuKjxFs-jAb0ovtHh/exec";
+const log = (ok, msg) => {
+  const p = document.createElement('p'); p.className = ok ? 'ok' : 'bad'; p.textContent = (ok?'✔ ':'✖ ') + msg;
+  document.getElementById('log').appendChild(p);
+};
+(async function(){
+  document.getElementById('log').textContent = '';
+  // A) plain ping (no-cors) – should not network-error if domain is allowed
+  try { await fetch(ENDPOINT+'?op=ping', {mode:'no-cors'}); log(true,'Ping reached (no-cors).'); }
+  catch(e){ log(false,'Ping blocked (network error).'); }
+
+  // B) JSONP read
+  try {
+    await new Promise((resolve,reject)=>{
+      const cb = 'cb_'+Math.random().toString(36).slice(2);
+      window[cb] = (d)=>{ delete window[cb]; resolve(d); };
+      const s=document.createElement('script'); s.async=true;
+      s.onerror=()=>{ delete window[cb]; reject(new Error('JSONP error')); };
+      s.src = ENDPOINT+'?op=read&callback='+cb+'&ts='+Date.now();
+      document.head.appendChild(s);
+      setTimeout(()=>reject(new Error('JSONP timeout')), 12000);
+    });
+    log(true,'JSONP read OK.');
+  } catch(e){ log(false,'JSONP read blocked.'); }
+
+  // C) JSONP push (dummy)
+  try {
+    await new Promise((resolve,reject)=>{
+      const cb = 'cb_'+Math.random().toString(36).slice(2);
+      window[cb] = (d)=>{ delete window[cb]; resolve(d); };
+      const s=document.createElement('script'); s.async=true;
+      s.onerror=()=>{ delete window[cb]; reject(new Error('JSONP error')); };
+      s.src = ENDPOINT+'?op=push&k=%E2%97%8E&r=&callback='+cb+'&ts='+Date.now();
+      document.head.appendChild(s);
+      setTimeout(()=>reject(new Error('JSONP timeout')), 12000);
+    });
+    log(true,'JSONP push OK.');
+  } catch(e){ log(false,'JSONP push blocked.'); }
+
+  const tips = document.createElement('p');
+  tips.innerHTML = 'If anything is blocked: disable content blockers for your site, allow JavaScript, and test the endpoint directly in the address bar: <code>'+ENDPOINT+'?op=read&callback=cb</code>';
+  document.body.appendChild(tips);
+})();
+</script>
