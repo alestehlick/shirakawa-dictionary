@@ -8,25 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Google Apps Script Web App endpoint (shared history) -->
   <script>
-    window.HISTORY_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwEZGZwO7waAdKy7u7kMGSUSa5bse3oauIWIKy9x6jHvT4lf6_b9VesltksNSeUHBa0/exec';
+    /* Remote history endpoint (Google Apps Script Web App – JSONP) */
+    window.HISTORY_ENDPOINT = "https://script.google.com/macros/s/AKfycbwEZGZwO7waAdKy7u7kMGSUSa5bse3oauIWIKy9x6jHvT4lf6_b9VesltksNSeUHBa0/exec";
   </script>
 </head>
 <body>
   <h1>Shirakawa Kanji Dictionary</h1>
 
   <div class="toolbar">
-    <input id="search" placeholder="Search kanji or meaning…" inputmode="search" />
-    <button id="clearSearch" class="ghost">Clear</button>
-  </div>
-
-  <!-- right-margin minimalist actions -->
-  <div class="actions-right">
-    <button id="btnGenLast6" class="pill">Worksheet — last 6</button>
-    <button id="btnPick10"   class="pill">Worksheet — choose</button>
-    <button id="btnReview40" class="pill">Review — last 40</button>
+    <input id="search" placeholder="Search kanji or meaning…" />
+    <!-- The three minimal buttons get injected by script.js into .toolbar -->
   </div>
 
   <div id="results"></div>
