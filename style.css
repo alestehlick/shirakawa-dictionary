@@ -11,6 +11,11 @@
   /* Sizes */
   --kanji-size: clamp(4rem, 12vw, 8rem);
   --kanji-inline-scale: 1.20; /* 1.15–1.25 is a good range */
+
+  /* UI */
+  --pill-bg: rgba(255,255,255,.75);
+  --pill-bd: rgba(0,0,0,.08);
+  --pill-fg: rgba(0,0,0,.55);
 }
 
 *,
@@ -25,7 +30,6 @@ html, body {
 }
 
 body {
-  /* keep UI bits sans; text column overrides to serif */
   font-family: -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: clamp(16px, 1.15vw + 0.5rem, 19px);
   line-height: 1.6;
@@ -35,6 +39,52 @@ body {
   max-width: 1100px;
   margin-inline: auto;
 }
+
+h1 {
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+/* toolbar */
+.toolbar {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.toolbar input {
+  flex: 1;
+  font: inherit;
+  padding: .55rem .7rem;
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+button.ghost {
+  appearance: none; border: 1px solid var(--rule);
+  background: #fff; color: var(--ink);
+  padding: .45rem .7rem; border-radius: 999px; cursor: pointer;
+}
+
+/* right-margin minimalist actions */
+.actions-right {
+  position: sticky; top: 1.25rem; float: right;
+  display: flex; flex-direction: column; gap: .35rem;
+  margin-left: 1rem; /* sits on the right margin column */
+}
+.pill {
+  appearance: none; -webkit-appearance: none;
+  border: 1px solid var(--pill-bd);
+  background: var(--pill-bg);
+  color: var(--pill-fg);
+  padding: .38rem .7rem;
+  border-radius: 999px;
+  font: 600 .92rem/1 system-ui, -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
+  cursor: pointer;
+  opacity: .8;
+}
+.pill:hover { opacity: 1; }
 
 /* =========================
    Entry page layout
@@ -61,7 +111,7 @@ body {
 
   /* stack the player directly under the glyph */
   flex-direction: column;
-  gap: 0; /* spacing from .stroke-gif margin-top */
+  gap: 0; /* spacing comes from .stroke-gif margin-top */
 }
 
 /* Middle: image */
@@ -101,25 +151,9 @@ body {
 }
 
 /* Small metadata text */
-.category {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.04em;
-}
-
-.readings {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-variant-caps: small-caps;
-  letter-spacing: 0.03em;
-}
-
-.meanings {
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  letter-spacing: 0.01em;
-}
+.category { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+.readings { font-weight: 600; margin-bottom: 0.5rem; font-variant-caps: small-caps; letter-spacing: 0.03em; }
+.meanings  { font-weight: 600; margin-bottom: 0.25rem; letter-spacing: 0.01em; }
 
 /* Headings inside the text column */
 h3 {
@@ -201,7 +235,6 @@ a.kanji-link:hover { border-bottom-style: solid; }
   line-height: 1.5;
   break-inside: avoid;
 }
-
 .index-item a {
   font-weight: 700;
   text-decoration: none;
@@ -211,7 +244,7 @@ a.kanji-link:hover { border-bottom-style: solid; }
 }
 .index-item a:hover { text-decoration: underline; }
 
-/* one-line gloss with ellipsis */
+/* one-line gloss with ellipsis; add title attr in HTML for full tooltip */
 .index-item .gloss {
   color: var(--muted);
   display: -webkit-box;
@@ -251,13 +284,11 @@ a.kanji-link:hover { border-bottom-style: solid; }
    Stroke-order player (in-place, faint ▶)
    ========================= */
 .stroke-gif{
-  /* half a big-kanji below the glyph; no tall placeholder when idle */
   margin-top: calc(var(--kanji-size) / 2);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .stroke-play{
   appearance: none;
   -webkit-appearance: none;
@@ -269,12 +300,10 @@ a.kanji-link:hover { border-bottom-style: solid; }
   border-radius: 999px;
   box-shadow: 0 1px 2px rgba(0,0,0,.06);
   cursor: pointer;
-  opacity: .18;                 /* faint by default */
+  opacity: .18;
   transition: opacity .2s ease, transform .2s ease;
 }
 .stroke-play:hover{ opacity: .45; }
-
-/* When playing, frame the GIF area and allow click-to-stop */
 .stroke-gif.playing{
   border: 1px solid #e2dbc9;
   border-radius: 8px;
@@ -290,73 +319,32 @@ a.kanji-link:hover { border-bottom-style: solid; }
   border-radius: 6px;
 }
 
-/* =========================
-   Right-margin minimalist buttons
-   ========================= */
-#side-actions{
-  position: fixed;
-  right: 1rem;
-  top: 30%;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  z-index: 10;
-}
-.side-btn{
-  appearance: none;
-  -webkit-appearance: none;
-  border: 1px solid rgba(0,0,0,.08);
-  background: rgba(255,255,255,.6);
-  color: rgba(0,0,0,.62);
-  font: 600 12px/1 system-ui, -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
-  padding: .45rem .7rem;
-  border-radius: 999px;
-  box-shadow: 0 1px 2px rgba(0,0,0,.05);
-  cursor: pointer;
-  opacity: .55;
-}
-.side-btn:hover{ opacity: .85; }
-@media (max-width: 900px){
-  #side-actions{ top: auto; bottom: 1rem; right: 1rem; }
-}
-
-/* =========================
-   Picker modal
-   ========================= */
-.picker-overlay{
-  position: fixed; inset: 0; background: rgba(0,0,0,.2);
-  display: grid; place-items: center; z-index: 100;
+/* Modal */
+#modal-root { position: fixed; inset: 0; pointer-events: none; }
+.modal {
+  pointer-events: auto;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.25);
+  display: grid; place-items: center;
   padding: 1rem;
 }
-.picker{
-  background: #fff; color: #222; width: min(720px, 96vw);
-  border-radius: 12px; border: 1px solid #eee; overflow: hidden;
-  display: grid; grid-template-rows: auto 1fr auto; max-height: 82vh;
+.modal .panel{
+  background: #fff; color: #222;
+  width: min(720px, 92vw);
+  max-height: 85vh; overflow: auto;
+  border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  padding: 1rem;
 }
-.pick-head{
-  display: flex; align-items: center; justify-content: space-between;
-  padding: .6rem .9rem; border-bottom: 1px solid #eee; font-weight: 700;
+.kanji-picker{
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: .5rem;
 }
-.pick-close{
-  border: 1px solid #ddd; border-radius: 999px; background: #fafafa; padding: .2rem .6rem; cursor: pointer;
+.kanji-cell{
+  display: grid; place-items: center; gap: .25rem;
+  padding: .5rem; border: 1px dashed #eee; border-radius: 10px;
+  font-family: "Noto Serif JP", serif;
 }
-.pick-grid{
-  padding: .8rem; overflow: auto;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: .5rem;
-}
-.pick-item{
-  display: grid; grid-template-columns: auto 1fr; align-items: center; gap: .25rem .4rem;
-  border: 1px solid #eee; border-radius: 10px; padding: .4rem .5rem; background: #fafafa;
-}
-.pick-kanji{ font-family:"Noto Serif JP","Yu Mincho",serif; font-size: 28px; line-height: 1; }
-.pick-furi{ font-size: 12px; color: rgba(0,0,0,.45); grid-column: 2; }
-.pick-actions{
-  padding: .6rem .9rem; border-top: 1px solid #eee; display: flex; justify-content: flex-end;
-}
-.pick-submit{
-  border: 1px solid #ddd; background: #f9f9f9; padding: .45rem .8rem; border-radius: 999px; font-weight: 700;
-}
-.pick-empty{ padding: .8rem; }
+.kanji-big { font-size: 2.1rem; }
+.furi-small { font-size: .75rem; color: #9aa; }
 
 /* =========================
    Responsive niceties
@@ -370,21 +358,17 @@ a.kanji-link:hover { border-bottom-style: solid; }
 
   .index-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 
-  .text-col .kanji-inline{
-    font-size: calc(1em * (var(--kanji-inline-scale) - 0.06));
-  }
-
   .index-item .thumb { width: clamp(24px, 6vw, 34px); }
+
+  .actions-right { position: static; float: none; margin: 0 0 1rem; flex-direction: row; flex-wrap: wrap; }
 }
 
 /* =========================
-   Print-friendly
+   Print-friendly (for sheets)
    ========================= */
 @media print{
   body{ background: #fff; color: #111; padding: 0; }
   .entry{ gap: 1.2rem; }
   a.kanji-link{ border-bottom: none; }
   .cat-head, .index-grid{ page-break-inside: avoid; }
-  #side-actions{ display: none !important; }
-  .picker-overlay{ display: none !important; }
 }
