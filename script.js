@@ -1,9 +1,12 @@
 /* =========================================================
-   JSONP-based remote history + per-kanji examples (online)
-   Clean example UI; worksheets/review show examples only
-   Stroke-order: toggle + 40s auto-stop
+   JSONP-based remote history + per-kanji examples
+   Worksheets/Review include examples only (no readings)
    ========================================================= */
 let REMOTE_HISTORY = []; // last good list
+
+// Fallback endpoint (if a page forgot to define it)
+window.HISTORY_ENDPOINT = window.HISTORY_ENDPOINT ||
+  "https://script.google.com/macros/s/AKfycbyFMWpzj21PROmEnaMYtQyLa9RqKxsmm9GMoazYaifdpY2CvrVuVCH0F4SkQ2Ku50aB/exec";
 
 function showHistoryWarning(msg) {
   const bar = document.querySelector('.toolbar');
@@ -55,7 +58,7 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
   });
 }
 
-/* -------- History API -------- */
+/* -------- History API (JSONP/GET) -------- */
 async function apiReadJsonp() {
   const t = Date.now();
   const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
@@ -71,8 +74,7 @@ async function historyReadSafe() {
     const r = await apiReadJsonp();
     if (Array.isArray(r?.list)) {
       REMOTE_HISTORY = r.list;
-      const w = document.getElementById('history-warning');
-      if (w) w.remove();
+      document.getElementById('history-warning')?.remove();
     } else {
       showHistoryWarning('bad JSON');
     }
@@ -83,7 +85,7 @@ async function historyReadSafe() {
 }
 async function historyPush(k, r) {
   if (!k) return;
-  REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 200);
+  REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 50);
   try {
     const res = await apiPushGet(k, r);
     if (!res?.ok) {
@@ -97,7 +99,7 @@ async function historyPush(k, r) {
   await historyReadSafe();
 }
 
-/* -------- Examples API -------- */
+/* -------- Examples API (JSONP/GET) -------- */
 function apiExGet(k) {
   const t = Date.now();
   return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${t}`);
@@ -200,16 +202,14 @@ async function loadEntries() {
       `;
       grid.appendChild(div);
 
-      // Ensure push finishes (or 400ms) before navigation
+      // Safer push then navigate
       div.querySelector('a')?.addEventListener('click', (e) => {
         e.preventDefault();
         const url = e.currentTarget.href;
         const k = div.dataset.kanji;
         const r = div.dataset.firstReading || '';
-        Promise.race([
-          historyPush(k, r),
-          new Promise(res => setTimeout(res, 400))
-        ]).finally(() => { window.location.href = url; });
+        Promise.race([historyPush(k, r), new Promise(res => setTimeout(res, 400))])
+          .finally(() => { window.location.href = url; });
       });
     });
 
@@ -304,7 +304,7 @@ function attachSearch() {
   }
 })();
 
-/* Stroke-order player: toggle + 40s auto stop */
+/* Stroke-order player: toggle + auto-stop after 40s */
 function initStrokePlayers(){
   document.querySelectorAll('.stroke-gif').forEach(wrapper => {
     const src = wrapper.getAttribute('data-stroke-src');
@@ -315,42 +315,41 @@ function initStrokePlayers(){
     let timer = null;
 
     const stop = () => {
-      playing = false;
+      const img = wrapper.querySelector('img');
+      if (img) img.remove();
       wrapper.classList.remove('playing');
-      wrapper.innerHTML = `<button type="button" class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>`;
-      wrapper.querySelector('.stroke-play').addEventListener('click', start);
+      playing = false;
       if (timer) { clearTimeout(timer); timer = null; }
     };
 
     const start = () => {
-      if (playing) { stop(); return; }
-      playing = true;
       wrapper.classList.add('playing');
       wrapper.innerHTML = `<img alt="Stroke order" loading="lazy" decoding="async">`;
       const img = wrapper.querySelector('img');
       img.src = src;
-
-      // Clicking the image toggles (stop)
+      playing = true;
+      // clicking image stops
       img.addEventListener('click', stop);
-
-      // Auto-stop after 40s
+      // auto-stop after 40s
       timer = setTimeout(stop, 40000);
     };
 
-    btn.addEventListener('click', start);
+    btn.addEventListener('click', () => {
+      if (playing) stop();
+      else start();
+    });
   });
 }
 
-/* ================= Examples UI ================== */
+/* =============== Examples UI (entry pages) ================== */
 function renderExampleList(container, list, kanji) {
   container.innerHTML = '';
 
-  // header with faint "clear all"
+  const head = document.createElement('div');
+  head.className = 'ex-head';
   if (Array.isArray(list) && list.length) {
-    const head = document.createElement('div');
-    head.className = 'ex-head';
     const clearBtn = document.createElement('button');
-    clearBtn.className = 'ex-faint-btn ex-clear';
+    clearBtn.className = 'ex-clear';
     clearBtn.type = 'button';
     clearBtn.textContent = 'clear all';
     clearBtn.title = 'Remove all examples for this kanji (server-wide)';
@@ -359,13 +358,11 @@ function renderExampleList(container, list, kanji) {
         const res = await jsonp(`${window.HISTORY_ENDPOINT}?op=ex_clear&k=${encodeURIComponent(kanji)}&t=${Date.now()}`);
         if (!res?.ok) throw new Error('server rejected');
         renderExampleList(container, [], kanji);
-      } catch (e) {
-        console.warn('ex_clear failed', e);
-      }
+      } catch (e) { console.warn('ex_clear failed', e); }
     });
     head.append(clearBtn);
-    container.appendChild(head);
   }
+  container.appendChild(head);
 
   if (!Array.isArray(list) || !list.length) {
     const add = document.createElement('button');
@@ -397,7 +394,7 @@ function renderExampleList(container, list, kanji) {
     meaning.textContent = ex.m || '';
 
     const edit = document.createElement('button');
-    edit.className = 'ex-faint-btn';
+    edit.className = 'ex-edit';
     edit.type = 'button';
     edit.textContent = 'edit';
     edit.addEventListener('click', () => openExampleEditor(container, kanji, ex));
@@ -406,13 +403,13 @@ function renderExampleList(container, list, kanji) {
     wrap.appendChild(row);
   });
 
+  container.appendChild(wrap);
+
   const addMore = document.createElement('button');
   addMore.className = 'ex-faint-addmore';
   addMore.type = 'button';
   addMore.textContent = '＋ add another';
   addMore.addEventListener('click', () => openExampleEditor(container, kanji));
-
-  container.appendChild(wrap);
   container.appendChild(addMore);
 }
 
@@ -452,14 +449,11 @@ function openExampleEditor(container, kanji, existing = null) {
 
     try {
       let res;
-      if (existing?.id) {
-        res = await apiExUpdate(kanji, existing.id, w, r, m);
-      } else {
-        res = await apiExAdd(kanji, w, r, m);
-      }
-      if (!res?.ok) throw new Error('server rejected');
+      if (existing?.id) res = await apiExUpdate(kanji, existing.id, w, r, m);
+      else res = await apiExAdd(kanji, w, r, m);
+
+      if (!res?.ok && !Array.isArray(res?.list)) throw new Error('server rejected');
       renderExampleList(container, res.list || [], kanji);
-      fitExamplesWidth(); // keep width after re-render
     } catch (e) {
       console.warn('Example save failed:', e);
       done();
@@ -467,15 +461,6 @@ function openExampleEditor(container, kanji, existing = null) {
   });
 
   cancel.addEventListener('click', done);
-}
-
-function fitExamplesWidth() {
-  const glyph = document.querySelector('.kanji-col .kanji-glyph');
-  const container = document.querySelector('.examples-block');
-  if (!glyph || !container) return;
-  const rect = glyph.getBoundingClientRect();
-  const w = Math.ceil(rect.width);
-  if (w > 0) container.style.width = w + 'px';
 }
 
 async function initExamplesUI() {
@@ -500,14 +485,9 @@ async function initExamplesUI() {
     const res = await apiExGet(meta.kanji);
     const list = Array.isArray(res?.list) ? res.list : [];
     renderExampleList(container, list, meta.kanji);
-    fitExamplesWidth();
   } catch (e) {
     renderExampleList(container, [], meta.kanji);
-    fitExamplesWidth();
   }
-
-  if (document.fonts?.ready) { document.fonts.ready.then(fitExamplesWidth); }
-  window.addEventListener('resize', fitExamplesWidth);
 }
 
 /* Toolbar buttons + picker + generators */
@@ -522,7 +502,7 @@ function makeToolbarButtons(){
   b1.addEventListener('click', async () => {
     if (!REMOTE_HISTORY.length) await historyReadSafe();
     const list = REMOTE_HISTORY.slice(0,6);
-    if (list.length) await openWorksheetNow(list);
+    await openWorksheetNow(list);
   });
   b2.addEventListener('click', async () => {
     if (!REMOTE_HISTORY.length) await historyReadSafe();
@@ -531,7 +511,7 @@ function makeToolbarButtons(){
   b3.addEventListener('click', async () => {
     if (!REMOTE_HISTORY.length) await historyReadSafe();
     const list = REMOTE_HISTORY.slice(0,40);
-    if (list.length) await openReviewNow(list);
+    await openReviewNow(list); // open even if empty
   });
 
   bar.append(b1, b2, b3);
@@ -571,7 +551,7 @@ function openPickerModal(){
   overlay.querySelector('#pickConfirm').onclick = async () => {
     const picked = Array.from(grid.querySelectorAll('.selected')).map(el => el.textContent);
     const list = REMOTE_HISTORY.filter(x => picked.includes(x.k)).slice(0,10);
-    if (list.length) await openWorksheetNow(list);
+    await openWorksheetNow(list);
     root.innerHTML = '';
   };
 }
@@ -582,7 +562,7 @@ function openWithHtml(html){
   w.document.open(); w.document.write(html); w.document.close();
 }
 
-/* Fetch examples for a set of kanji */
+/* -------- Fetch examples for a set of kanji -------- */
 async function fetchExamplesFor(list) {
   const uniq = [...new Set(list.map(x => x.k))];
   const pairs = await Promise.all(uniq.map(async k => {
@@ -594,9 +574,9 @@ async function fetchExamplesFor(list) {
   return map;
 }
 
-/* Worksheets — examples only */
+/* Worksheets (include examples only) */
 async function openWorksheetNow(items){
-  const kanjiList = items.map(x => ({k:x.k, r:x.r || ''}));
+  const kanjiList = items.map(x => ({k:x.k})); // readings intentionally unused
   const exMap = await fetchExamplesFor(kanjiList);
 
   const html = `<!doctype html>
@@ -608,11 +588,11 @@ async function openWorksheetNow(items){
   body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
   h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
   .page{ display:grid; grid-template-columns: repeat(6, 1fr); gap: 10mm; min-height: calc(100vh - 24mm); padding: 2mm }
-  .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm; background:#fff }
-  .head{ display:flex; align-items:center; justify-content:center; gap:4mm; margin-bottom:2mm; min-height:20mm }
+  .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm }
+  .head{ display:flex; align-items:center; justify-content:center; gap:4mm; margin-bottom:3mm; min-height:20mm }
   .k{ font-size:20mm; line-height:1 }
 
-  .ex-mini{ margin:0 0 1.2mm 0; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; background:#fff; }
+  .ex-mini{ margin:.5mm 0 2mm 0; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; background:#fff; }
   .ex-mini .w{ font-weight:700; }
   .ex-mini .r{ color:#777; font-size:3.5mm; display:block; }
   .ex-mini .m{ display:block; font-size:3.6mm; color:#888; }
@@ -643,7 +623,7 @@ async function openWorksheetNow(items){
     col.innerHTML = '<div class="head"><div class="k">'+k+'</div></div>'+exHtml+'<div class="grid"></div>';
     page.appendChild(col);
   });
-  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\\":"&#92;","'":"&#39;","\"":"&quot;" }[m]));}
+  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\'":"&#39;","\"":"&quot;" }[m]));}
   function fill(col){
     const grid = col.querySelector('.grid');
     const mm = 96/25.4; const sq=12, gap=3;
@@ -659,9 +639,9 @@ async function openWorksheetNow(items){
   openWithHtml(html);
 }
 
-/* Review — examples only */
+/* Review (include examples only) */
 async function openReviewNow(items){
-  const list = items.slice(0,40).map(x => ({k:x.k, r:x.r || ''}));
+  const list = items.slice(0,40).map(x => ({k:x.k}));
   const exMap = await fetchExamplesFor(list);
 
   const html = `<!doctype html>
@@ -669,12 +649,13 @@ async function openReviewNow(items){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   @page { size: A4; margin: 12mm; }
-  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
+  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222; background:#fff }
   h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
-  .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm; background:#fff }
+  .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
   .cell{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center;
          min-height:40mm; border:1px solid #eee; border-radius:6px; padding:2mm 2.5mm; background:#fff; }
   .k{ font-size:18mm; line-height:1 }
+  .empty{ text-align:center; padding:18mm 6mm; color:#777 }
   .ex-mini{ width:100%; margin-top:1.2mm; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; background:#fff; }
   .ex-mini .w{ font-weight:700; }
   .ex-mini .r{ color:#777; font-size:3.4mm; display:block; }
@@ -682,25 +663,26 @@ async function openReviewNow(items){
 </style></head>
 <body>
   <h2>Review (Last ${list.length})</h2>
-  <div class="grid" id="grid"></div>
+  ${list.length ? '<div class="grid" id="grid"></div>' : '<div class="empty">No recent kanji yet. Open an entry or search a single kanji to record history.</div>'}
 <script>
   const data = ${JSON.stringify(list)};
   const exMap = ${JSON.stringify(exMap)};
   const grid = document.getElementById('grid');
-
-  data.forEach(({k})=>{
-    const ex = (exMap[k]||[]).slice(0,1);
-    let exHtml = '';
-    ex.forEach(e => {
-      const w = (e.w||''); const rd=(e.r||''); const m=(e.m||'');
-      exHtml += '<div class="ex-mini"><span class="w">'+escapeHtml(w)+'</span>'+(rd?'<span class="r">'+escapeHtml(rd)+'</span>':'')+(m?'<span class="m">'+escapeHtml(m)+'</span>':'')+'</div>';
+  if (grid) {
+    data.forEach(({k})=>{
+      const ex = (exMap[k]||[]).slice(0,1);
+      let exHtml = '';
+      ex.forEach(e => {
+        const w = (e.w||''); const rd=(e.r||''); const m=(e.m||'');
+        exHtml += '<div class="ex-mini"><span class="w">'+escapeHtml(w)+'</span>'+(rd?'<span class="r">'+escapeHtml(rd)+'</span>':'')+(m?'<span class="m">'+escapeHtml(m)+'</span>':'')+'</div>';
+      });
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+      cell.innerHTML = '<div class="k">'+k+'</div>'+exHtml;
+      grid.appendChild(cell);
     });
-    const cell = document.createElement('div');
-    cell.className = 'cell';
-    cell.innerHTML = '<div class="k">'+k+'</div>'+exHtml;
-    grid.appendChild(cell);
-  });
-  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\\":"&#92;","'":"&#39;","\"":"&quot;" }[m]));}
+  }
+  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\'":"&#39;","\"":"&quot;" }[m]));}
 </script></body></html>`;
   openWithHtml(html);
 }
@@ -713,5 +695,4 @@ window.addEventListener('load', async () => {
   initStrokePlayers();
   await historyReadSafe();
   await initExamplesUI(); // entry page examples
-  fitExamplesWidth();
 });
