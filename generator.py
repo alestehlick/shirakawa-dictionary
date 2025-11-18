@@ -31,7 +31,7 @@ TEMPLATE = """<!doctype html>
 
 <div class="entry">
   <div class="kanji-col">
-    {kanji}
+    <div class="kanji-glyph">{kanji}</div>
     {stroke_gif_html}
     <div class="examples-anchor"></div> 
   </div>
