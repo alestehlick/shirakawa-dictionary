@@ -1,5 +1,7 @@
 /* =========================================================
    JSONP-based remote history (no CORS) + robust warnings
+   + Per-kanji examples (online-only, JSONP)
+   + Worksheets/Review include examples
    ========================================================= */
 let REMOTE_HISTORY = []; // last good list
 
@@ -53,19 +55,17 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
   });
 }
 
-/* -------- API wrappers using JSONP/GET -------- */
+/* -------- History API (JSONP/GET) -------- */
 async function apiReadJsonp() {
   const t = Date.now();
   const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
   return jsonp(url);
 }
-
 async function apiPushGet(k, r) {
   const t = Date.now();
   const url = `${window.HISTORY_ENDPOINT}?op=push&k=${encodeURIComponent(k)}&r=${encodeURIComponent(r||'')}&t=${t}`;
-  return jsonp(url); // { ok:true, wroteDrive:bool, wroteProps:bool, n:int }
+  return jsonp(url);
 }
-
 async function historyReadSafe() {
   try {
     const r = await apiReadJsonp();
@@ -81,12 +81,9 @@ async function historyReadSafe() {
     showHistoryWarning(e.message || 'fetch error');
   }
 }
-
 async function historyPush(k, r) {
   if (!k) return;
-  // Optimistic UI so practice/review feels instant
-  REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 50);
-
+  REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 200);
   try {
     const res = await apiPushGet(k, r);
     if (!res?.ok) {
@@ -97,7 +94,21 @@ async function historyPush(k, r) {
     console.warn('History push failed:', e.message);
     showHistoryWarning(e.message || 'push error');
   }
-  await historyReadSafe(); // confirm server state
+  await historyReadSafe();
+}
+
+/* -------- Examples API (JSONP/GET) -------- */
+function apiExGet(k) {
+  const t = Date.now();
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${t}`);
+}
+function apiExAdd(k, w, r, m) {
+  const t = Date.now();
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_add&k=${encodeURIComponent(k)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${t}`);
+}
+function apiExUpdate(k, id, w, r, m) {
+  const t = Date.now();
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${t}`);
 }
 
 /* =========================================================
@@ -189,11 +200,16 @@ async function loadEntries() {
       `;
       grid.appendChild(div);
 
-      // Record on click (entry page also records on load)
-      div.querySelector('a')?.addEventListener('click', () => {
+      // Safer: allow push to complete then navigate
+      div.querySelector('a')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        const url = e.currentTarget.href;
         const k = div.dataset.kanji;
         const r = div.dataset.firstReading || '';
-        historyPush(k, r);
+        Promise.race([
+          historyPush(k, r),
+          new Promise(res => setTimeout(res, 400))
+        ]).finally(() => { window.location.href = url; });
       });
     });
 
@@ -225,11 +241,11 @@ function searchEntries() {
     }
 
     const kun  = JSON.parse(item.dataset.kun || '[]');
-    const on   = JSON.parse(item.dataset.on  || '[]');
+    const theOn = JSON.parse(item.dataset.on  || '[]'); // avoid shadowing "on"
     const blob = item.dataset.search || '';
 
-    const exactReadingHit  = kun.includes(q) || on.includes(q);
-    const startsReadingHit = !exactReadingHit && (kun.some(s => s.startsWith(q)) || on.some(s => s.startsWith(q)));
+    const exactReadingHit  = kun.includes(q) || theOn.includes(q);
+    const startsReadingHit = !exactReadingHit && (kun.some(s => s.startsWith(q)) || theOn.some(s => s.startsWith(q)));
     const generalHit       = !exactReadingHit && !startsReadingHit && blob.includes(q);
 
     let score = -1;
@@ -281,7 +297,7 @@ function attachSearch() {
   searchEntries();
 }
 
-/* Entry pages record when opened */
+/* Entry pages: record when opened */
 (function maybeRecordFromEntryPage(){
   if (window.__ENTRY_META__ && window.__ENTRY_META__.kanji) {
     historyPush(window.__ENTRY_META__.kanji, window.__ENTRY_META__.furigana || '');
@@ -310,6 +326,138 @@ function initStrokePlayers(){
   });
 }
 
+/* =============== Examples UI (entry pages) ================== */
+function renderExampleList(container, list, kanji) {
+  container.innerHTML = '';
+
+  if (!Array.isArray(list) || !list.length) {
+    const add = document.createElement('button');
+    add.className = 'ex-faint-add';
+    add.type = 'button';
+    add.title = 'Add example';
+    add.textContent = '＋ example';
+    add.addEventListener('click', () => openExampleEditor(container, kanji));
+    container.appendChild(add);
+    return;
+  }
+
+  const wrap = document.createElement('div');
+  wrap.className = 'examples-wrap';
+  list.forEach(ex => {
+    const row = document.createElement('div');
+    row.className = 'ex-row';
+
+    const word = document.createElement('div');
+    word.className = 'ex-word';
+    word.textContent = ex.w || '';
+
+    const reading = document.createElement('div');
+    reading.className = 'ex-reading';
+    reading.textContent = ex.r || '';
+
+    const meaning = document.createElement('div');
+    meaning.className = 'ex-meaning';
+    meaning.textContent = ex.m || '';
+
+    const edit = document.createElement('button');
+    edit.className = 'ex-faint-btn';
+    edit.type = 'button';
+    edit.textContent = 'edit';
+    edit.addEventListener('click', () => openExampleEditor(container, kanji, ex));
+
+    row.append(word, reading, meaning, edit);
+    wrap.appendChild(row);
+  });
+
+  const addMore = document.createElement('button');
+  addMore.className = 'ex-faint-addmore';
+  addMore.type = 'button';
+  addMore.textContent = '＋ add another';
+  addMore.addEventListener('click', () => openExampleEditor(container, kanji));
+
+  container.appendChild(wrap);
+  container.appendChild(addMore);
+}
+
+function openExampleEditor(container, kanji, existing = null) {
+  const editor = document.createElement('div');
+  editor.className = 'ex-editor';
+
+  const iWord = Object.assign(document.createElement('input'), { className:'ex-in ex-w',  placeholder:'Word / Compound', value: existing?.w || '' });
+  const iRead = Object.assign(document.createElement('input'), { className:'ex-in ex-r',  placeholder:'Reading', value: existing?.r || '' });
+  const iMean = Object.assign(document.createElement('input'), { className:'ex-in ex-m',  placeholder:'English meaning', value: existing?.m || '' });
+
+  const save = Object.assign(document.createElement('button'), { className:'ex-save', type:'button', textContent: existing ? 'Save' : 'Add' });
+  const cancel = Object.assign(document.createElement('button'), { className:'ex-cancel', type:'button', textContent:'Cancel' });
+
+  const row = document.createElement('div');
+  row.className = 'ex-editor-row';
+  row.append(iWord, iRead, iMean);
+
+  const actions = document.createElement('div');
+  actions.className = 'ex-actions';
+  actions.append(save, cancel);
+
+  editor.append(row, actions);
+
+  if (container.firstChild && container.firstChild.classList.contains('ex-faint-add')) {
+    container.firstChild.remove();
+  }
+  container.prepend(editor);
+
+  const done = () => editor.remove();
+
+  save.addEventListener('click', async () => {
+    const w = iWord.value.trim();
+    const r = iRead.value.trim();
+    const m = iMean.value.trim();
+    if (!w && !r && !m) { done(); return; }
+
+    try {
+      let res;
+      if (existing?.id) {
+        res = await apiExUpdate(kanji, existing.id, w, r, m);
+      } else {
+        res = await apiExAdd(kanji, w, r, m);
+      }
+      if (!res?.ok) throw new Error('server rejected');
+      renderExampleList(container, res.list || [], kanji);
+    } catch (e) {
+      console.warn('Example save failed:', e);
+      done();
+    }
+  });
+
+  cancel.addEventListener('click', done);
+}
+
+async function initExamplesUI() {
+  const meta = window.__ENTRY_META__;
+  if (!meta?.kanji) return;
+
+  const col = document.querySelector('.kanji-col');
+  if (!col) return;
+
+  let anchor = col.querySelector('.examples-anchor');
+  if (!anchor) {
+    anchor = document.createElement('div');
+    anchor.className = 'examples-anchor';
+    col.appendChild(anchor);
+  }
+
+  const container = document.createElement('div');
+  container.className = 'examples-block';
+  anchor.replaceWith(container);
+
+  try {
+    const res = await apiExGet(meta.kanji);
+    const list = Array.isArray(res?.list) ? res.list : [];
+    renderExampleList(container, list, meta.kanji);
+  } catch (e) {
+    renderExampleList(container, [], meta.kanji);
+  }
+}
+
 /* Toolbar buttons + picker + generators */
 function makeToolbarButtons(){
   const bar = document.querySelector('.toolbar');
@@ -322,7 +470,7 @@ function makeToolbarButtons(){
   b1.addEventListener('click', async () => {
     if (!REMOTE_HISTORY.length) await historyReadSafe();
     const list = REMOTE_HISTORY.slice(0,6);
-    if (list.length) openWorksheetNow(list);
+    if (list.length) await openWorksheetNow(list);
   });
   b2.addEventListener('click', async () => {
     if (!REMOTE_HISTORY.length) await historyReadSafe();
@@ -331,7 +479,7 @@ function makeToolbarButtons(){
   b3.addEventListener('click', async () => {
     if (!REMOTE_HISTORY.length) await historyReadSafe();
     const list = REMOTE_HISTORY.slice(0,40);
-    if (list.length) openReviewNow(list);
+    if (list.length) await openReviewNow(list);
   });
 
   bar.append(b1, b2, b3);
@@ -368,10 +516,10 @@ function openPickerModal(){
   });
 
   overlay.querySelector('#closeModalBtn').onclick = () => (root.innerHTML = '');
-  overlay.querySelector('#pickConfirm').onclick = () => {
+  overlay.querySelector('#pickConfirm').onclick = async () => {
     const picked = Array.from(grid.querySelectorAll('.selected')).map(el => el.textContent);
     const list = REMOTE_HISTORY.filter(x => picked.includes(x.k)).slice(0,10);
-    if (list.length) openWorksheetNow(list);
+    if (list.length) await openWorksheetNow(list);
     root.innerHTML = '';
   };
 }
@@ -382,12 +530,25 @@ function openWithHtml(html){
   w.document.open(); w.document.write(html); w.document.close();
 }
 
-function openWorksheetNow(items){
-  const title = 'Practice';
+/* -------- Fetch examples for a set of kanji -------- */
+async function fetchExamplesFor(list) {
+  const uniq = [...new Set(list.map(x => x.k))];
+  const pairs = await Promise.all(uniq.map(async k => {
+    try { const res = await apiExGet(k); return [k, Array.isArray(res?.list) ? res.list : []]; }
+    catch { return [k, []]; }
+  }));
+  const map = {};
+  pairs.forEach(([k, arr]) => { map[k] = arr; });
+  return map;
+}
+
+/* Worksheets (now include examples) */
+async function openWorksheetNow(items){
   const kanjiList = items.map(x => ({k:x.k, r:x.r || ''}));
+  const exMap = await fetchExamplesFor(kanjiList);
 
   const html = `<!doctype html>
-<html><head><meta charset="utf-8"><title>${title}</title>
+<html><head><meta charset="utf-8"><title>Practice</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   @page { size: A4; margin: 12mm; }
@@ -396,9 +557,15 @@ function openWorksheetNow(items){
   h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
   .page{ display:grid; grid-template-columns: repeat(6, 1fr); gap: 10mm; min-height: calc(100vh - 24mm); padding: 2mm }
   .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm }
-  .head{ display:flex; align-items:flex-end; justify-content:center; gap:4mm; margin-bottom:4mm; min-height:22mm }
-  .k{ font-size:22mm; line-height:1 }
-  .furi{ font: 400 3.8mm/1.1 "Noto Serif JP",serif; color:#999; transform: translateY(2mm) }
+  .head{ display:flex; align-items:flex-end; justify-content:center; gap:4mm; margin-bottom:3mm; min-height:20mm }
+  .k{ font-size:20mm; line-height:1 }
+  .furi{ font: 400 3.6mm/1.1 "Noto Serif JP",serif; color:#999; transform: translateY(1.5mm) }
+
+  .ex-mini{ margin:.5mm 0 2mm 0; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; background:#fff; }
+  .ex-mini .w{ font-weight:700; }
+  .ex-mini .r{ color:#777; font-size:3.5mm; display:inline-block; margin-left:2mm; }
+  .ex-mini .m{ display:block; font-size:3.6mm; margin-top:.5mm; }
+
   .grid{ flex:1; display:grid; grid-auto-rows:12mm; grid-template-columns:12mm; justify-content:center; row-gap:3mm }
   .sq{ width:12mm; height:12mm; border:1px solid rgba(0,0,0,.12);
        background:linear-gradient(to right, rgba(0,0,0,.08) 1px, transparent 1px),
@@ -411,13 +578,21 @@ function openWorksheetNow(items){
   <div class="page" id="page"></div>
 <script>
   const data = ${JSON.stringify(kanjiList)};
+  const exMap = ${JSON.stringify(exMap)};
   const page = document.getElementById('page');
   const six = data.slice(0,6);
   six.forEach(({k,r})=>{
     const col = document.createElement('div'); col.className='col';
-    col.innerHTML = '<div class="head"><div class="k">'+k+'</div><div class="furi">'+(r||'')+'</div></div><div class="grid"></div>';
+    const ex = (exMap[k]||[]).slice(0,2); // up to 2 examples
+    let exHtml = '';
+    ex.forEach(e => {
+      const w = (e.w||''); const rd=(e.r||''); const m=(e.m||'');
+      exHtml += '<div class="ex-mini"><span class="w">'+escapeHtml(w)+'</span>'+(rd?'<span class="r">'+escapeHtml(rd)+'</span>':'')+(m?'<span class="m">'+escapeHtml(m)+'</span>':'')+'</div>';
+    });
+    col.innerHTML = '<div class="head"><div class="k">'+k+'</div><div class="furi">'+(r||'')+'</div></div>'+exHtml+'<div class="grid"></div>';
     page.appendChild(col);
   });
+  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&#92;","'":"&#39;", '"':"&quot;" }[m]));}
   function fill(col){
     const grid = col.querySelector('.grid');
     const mm = 96/25.4; const sq=12, gap=3;
@@ -433,8 +608,11 @@ function openWorksheetNow(items){
   openWithHtml(html);
 }
 
-function openReviewNow(items){
+/* Review (now include examples) */
+async function openReviewNow(items){
   const list = items.slice(0,40).map(x => ({k:x.k, r:x.r || ''}));
+  const exMap = await fetchExamplesFor(list);
+
   const html = `<!doctype html>
 <html><head><meta charset="utf-8"><title>Review</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -443,16 +621,37 @@ function openReviewNow(items){
   body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
   h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
   .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
-  .cell{ position:relative; display:grid; place-items:center; min-height:36mm; border:1px solid #eee; border-radius:6px }
+  .cell{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center;
+         min-height:40mm; border:1px solid #eee; border-radius:6px; padding:2mm 2.5mm; background:#fff; }
   .k{ font-size:18mm; line-height:1 }
-  .furi{ position:absolute; left:4mm; top:4mm; font:400 3.5mm/1 "Noto Serif JP",serif; color:#aaa }
+  .furi{ position:absolute; left:3mm; top:3mm; font:400 3.5mm/1 "Noto Serif JP",serif; color:#aaa }
+  .ex-mini{ width:100%; margin-top:1.5mm; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; }
+  .ex-mini .w{ font-weight:700; }
+  .ex-mini .r{ color:#777; font-size:3.4mm; display:inline-block; margin-left:2mm; }
+  .ex-mini .m{ display:block; font-size:3.5mm; margin-top:.4mm; }
 </style></head>
 <body>
   <h2>Review (Last ${list.length})</h2>
-  <div class="grid">
-    ${list.map(({k,r})=>`<div class="cell"><div class="furi">${r||''}</div><div class="k">${k}</div></div>`).join('')}
-  </div>
-</body></html>`;
+  <div class="grid" id="grid"></div>
+<script>
+  const data = ${JSON.stringify(list)};
+  const exMap = ${JSON.stringify(exMap)};
+  const grid = document.getElementById('grid');
+
+  data.forEach(({k,r})=>{
+    const ex = (exMap[k]||[]).slice(0,1); // 1 compact example per cell
+    let exHtml = '';
+    ex.forEach(e => {
+      const w = (e.w||''); const rd=(e.r||''); const m=(e.m||'');
+      exHtml += '<div class="ex-mini"><span class="w">'+escapeHtml(w)+'</span>'+(rd?'<span class="r">'+escapeHtml(rd)+'</span>':'')+(m?'<span class="m">'+escapeHtml(m)+'</span>':'')+'</div>';
+    });
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    cell.innerHTML = '<div class="furi">'+(r||'')+'</div><div class="k">'+k+'</div>'+exHtml;
+    grid.appendChild(cell);
+  });
+  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&#92;","'":"&#39;", '"':"&quot;" }[m]));}
+</script></body></html>`;
   openWithHtml(html);
 }
 
@@ -463,4 +662,5 @@ window.addEventListener('load', async () => {
   makeToolbarButtons();
   initStrokePlayers();
   await historyReadSafe();
+  await initExamplesUI(); // entry page examples
 });
