@@ -1,12 +1,11 @@
 /* =========================================================
-   JSONP-based remote history + per-kanji examples
-   Worksheets/Review include examples only (no readings)
+   JSONP-based remote history (no CORS)
+   Per-kanji examples (online only, JSONP)
+   Worksheets / Review include examples (no readings)
+   Stroke GIF: click-to-start, click-to-stop, auto-stop after 40s
    ========================================================= */
-let REMOTE_HISTORY = []; // last good list
 
-// Fallback endpoint (if a page forgot to define it)
-window.HISTORY_ENDPOINT = window.HISTORY_ENDPOINT ||
-  "https://script.google.com/macros/s/AKfycbyFMWpzj21PROmEnaMYtQyLa9RqKxsmm9GMoazYaifdpY2CvrVuVCH0F4SkQ2Ku50aB/exec";
+let REMOTE_HISTORY = []; // last good list
 
 function showHistoryWarning(msg) {
   const bar = document.querySelector('.toolbar');
@@ -21,7 +20,7 @@ function showHistoryWarning(msg) {
   note.textContent = `History issue: ${msg}`;
 }
 
-/* -------- JSONP helper -------- */
+/* ---------------- JSONP helper ---------------- */
 function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
   return new Promise((resolve, reject) => {
     const cbName = `__jsonp_cb_${Date.now()}_${Math.random().toString(36).slice(2)}`;
@@ -58,7 +57,7 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
   });
 }
 
-/* -------- History API (JSONP/GET) -------- */
+/* ---------------- History API ---------------- */
 async function apiReadJsonp() {
   const t = Date.now();
   const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
@@ -74,7 +73,8 @@ async function historyReadSafe() {
     const r = await apiReadJsonp();
     if (Array.isArray(r?.list)) {
       REMOTE_HISTORY = r.list;
-      document.getElementById('history-warning')?.remove();
+      const w = document.getElementById('history-warning');
+      if (w) w.remove();
     } else {
       showHistoryWarning('bad JSON');
     }
@@ -85,7 +85,7 @@ async function historyReadSafe() {
 }
 async function historyPush(k, r) {
   if (!k) return;
-  REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 50);
+  REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 200);
   try {
     const res = await apiPushGet(k, r);
     if (!res?.ok) {
@@ -99,7 +99,7 @@ async function historyPush(k, r) {
   await historyReadSafe();
 }
 
-/* -------- Examples API (JSONP/GET) -------- */
+/* ---------------- Examples API ---------------- */
 function apiExGet(k) {
   const t = Date.now();
   return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${t}`);
@@ -111,6 +111,10 @@ function apiExAdd(k, w, r, m) {
 function apiExUpdate(k, id, w, r, m) {
   const t = Date.now();
   return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${t}`);
+}
+function apiExClear(k){
+  const t = Date.now();
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_clear&k=${encodeURIComponent(k)}&t=${t}`);
 }
 
 /* =========================================================
@@ -202,14 +206,16 @@ async function loadEntries() {
       `;
       grid.appendChild(div);
 
-      // Safer push then navigate
+      // safer: push then navigate
       div.querySelector('a')?.addEventListener('click', (e) => {
         e.preventDefault();
         const url = e.currentTarget.href;
         const k = div.dataset.kanji;
         const r = div.dataset.firstReading || '';
-        Promise.race([historyPush(k, r), new Promise(res => setTimeout(res, 400))])
-          .finally(() => { window.location.href = url; });
+        Promise.race([
+          historyPush(k, r),
+          new Promise(res => setTimeout(res, 400))
+        ]).finally(() => { window.location.href = url; });
       });
     });
 
@@ -268,431 +274,4 @@ function searchEntries() {
 
 /* Debounce + hotkeys + ENTER records a single-kanji query */
 const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
-function isCJK(ch){ const cp = ch.codePointAt(0); return (cp>=0x3400 && cp<=0x9FFF) || (cp>=0xF900 && cp<=0xFAFF); }
-
-function attachSearch() {
-  const box = document.getElementById('search');
-  if (!box) return;
-
-  const run = debounce(searchEntries, 120);
-  box.addEventListener('input', run);
-
-  box.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { box.value = ''; searchEntries(); return; }
-    if (e.key === 'Enter') {
-      const v = (box.value || '').trim();
-      if (v.length === 1 && isCJK(v)) {
-        const hit = document.querySelector('.index-item:not([style*="display: none"])');
-        const r = hit?.dataset?.firstReading || '';
-        historyPush(v, r);
-      }
-    }
-  });
-
-  window.addEventListener('keydown', e => {
-    const tag = document.activeElement?.tagName;
-    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); box.focus(); }
-  });
-
-  searchEntries();
-}
-
-/* Entry pages record when opened */
-(function maybeRecordFromEntryPage(){
-  if (window.__ENTRY_META__ && window.__ENTRY_META__.kanji) {
-    historyPush(window.__ENTRY_META__.kanji, window.__ENTRY_META__.furigana || '');
-  }
-})();
-
-/* Stroke-order player: toggle + auto-stop after 40s */
-function initStrokePlayers(){
-  document.querySelectorAll('.stroke-gif').forEach(wrapper => {
-    const src = wrapper.getAttribute('data-stroke-src');
-    const btn = wrapper.querySelector('.stroke-play');
-    if (!src || !btn) return;
-
-    let playing = false;
-    let timer = null;
-
-    const stop = () => {
-      const img = wrapper.querySelector('img');
-      if (img) img.remove();
-      wrapper.classList.remove('playing');
-      playing = false;
-      if (timer) { clearTimeout(timer); timer = null; }
-    };
-
-    const start = () => {
-      wrapper.classList.add('playing');
-      wrapper.innerHTML = `<img alt="Stroke order" loading="lazy" decoding="async">`;
-      const img = wrapper.querySelector('img');
-      img.src = src;
-      playing = true;
-      // clicking image stops
-      img.addEventListener('click', stop);
-      // auto-stop after 40s
-      timer = setTimeout(stop, 40000);
-    };
-
-    btn.addEventListener('click', () => {
-      if (playing) stop();
-      else start();
-    });
-  });
-}
-
-/* =============== Examples UI (entry pages) ================== */
-function renderExampleList(container, list, kanji) {
-  container.innerHTML = '';
-
-  const head = document.createElement('div');
-  head.className = 'ex-head';
-  if (Array.isArray(list) && list.length) {
-    const clearBtn = document.createElement('button');
-    clearBtn.className = 'ex-clear';
-    clearBtn.type = 'button';
-    clearBtn.textContent = 'clear all';
-    clearBtn.title = 'Remove all examples for this kanji (server-wide)';
-    clearBtn.addEventListener('click', async () => {
-      try {
-        const res = await jsonp(`${window.HISTORY_ENDPOINT}?op=ex_clear&k=${encodeURIComponent(kanji)}&t=${Date.now()}`);
-        if (!res?.ok) throw new Error('server rejected');
-        renderExampleList(container, [], kanji);
-      } catch (e) { console.warn('ex_clear failed', e); }
-    });
-    head.append(clearBtn);
-  }
-  container.appendChild(head);
-
-  if (!Array.isArray(list) || !list.length) {
-    const add = document.createElement('button');
-    add.className = 'ex-faint-add';
-    add.type = 'button';
-    add.title = 'Add example';
-    add.textContent = '＋ add another';
-    add.addEventListener('click', () => openExampleEditor(container, kanji));
-    container.appendChild(add);
-    return;
-  }
-
-  const wrap = document.createElement('div');
-  wrap.className = 'examples-wrap';
-  list.forEach(ex => {
-    const row = document.createElement('div');
-    row.className = 'ex-row';
-
-    const word = document.createElement('div');
-    word.className = 'ex-word';
-    word.textContent = ex.w || '';
-
-    const reading = document.createElement('div');
-    reading.className = 'ex-reading';
-    reading.textContent = ex.r || '';
-
-    const meaning = document.createElement('div');
-    meaning.className = 'ex-meaning';
-    meaning.textContent = ex.m || '';
-
-    const edit = document.createElement('button');
-    edit.className = 'ex-edit';
-    edit.type = 'button';
-    edit.textContent = 'edit';
-    edit.addEventListener('click', () => openExampleEditor(container, kanji, ex));
-
-    row.append(word, reading, meaning, edit);
-    wrap.appendChild(row);
-  });
-
-  container.appendChild(wrap);
-
-  const addMore = document.createElement('button');
-  addMore.className = 'ex-faint-addmore';
-  addMore.type = 'button';
-  addMore.textContent = '＋ add another';
-  addMore.addEventListener('click', () => openExampleEditor(container, kanji));
-  container.appendChild(addMore);
-}
-
-function openExampleEditor(container, kanji, existing = null) {
-  const editor = document.createElement('div');
-  editor.className = 'ex-editor';
-
-  const iWord = Object.assign(document.createElement('input'), { className:'ex-in ex-w',  placeholder:'Word / Compound', value: existing?.w || '' });
-  const iRead = Object.assign(document.createElement('input'), { className:'ex-in ex-r',  placeholder:'Reading', value: existing?.r || '' });
-  const iMean = Object.assign(document.createElement('input'), { className:'ex-in ex-m',  placeholder:'English meaning', value: existing?.m || '' });
-
-  const save = Object.assign(document.createElement('button'), { className:'ex-save', type:'button', textContent: existing ? 'Save' : 'Add' });
-  const cancel = Object.assign(document.createElement('button'), { className:'ex-cancel', type:'button', textContent:'Cancel' });
-
-  const row = document.createElement('div');
-  row.className = 'ex-editor-row';
-  row.append(iWord, iRead, iMean);
-
-  const actions = document.createElement('div');
-  actions.className = 'ex-actions';
-  actions.append(save, cancel);
-
-  editor.append(row, actions);
-
-  if (container.firstChild && container.firstChild.classList.contains('ex-faint-add')) {
-    container.firstChild.remove();
-  }
-  container.prepend(editor);
-
-  const done = () => editor.remove();
-
-  save.addEventListener('click', async () => {
-    const w = iWord.value.trim();
-    const r = iRead.value.trim();
-    const m = iMean.value.trim();
-    if (!w && !r && !m) { done(); return; }
-
-    try {
-      let res;
-      if (existing?.id) res = await apiExUpdate(kanji, existing.id, w, r, m);
-      else res = await apiExAdd(kanji, w, r, m);
-
-      if (!res?.ok && !Array.isArray(res?.list)) throw new Error('server rejected');
-      renderExampleList(container, res.list || [], kanji);
-    } catch (e) {
-      console.warn('Example save failed:', e);
-      done();
-    }
-  });
-
-  cancel.addEventListener('click', done);
-}
-
-async function initExamplesUI() {
-  const meta = window.__ENTRY_META__;
-  if (!meta?.kanji) return;
-
-  const col = document.querySelector('.kanji-col');
-  if (!col) return;
-
-  let anchor = col.querySelector('.examples-anchor');
-  if (!anchor) {
-    anchor = document.createElement('div');
-    anchor.className = 'examples-anchor';
-    col.appendChild(anchor);
-  }
-
-  const container = document.createElement('div');
-  container.className = 'examples-block';
-  anchor.replaceWith(container);
-
-  try {
-    const res = await apiExGet(meta.kanji);
-    const list = Array.isArray(res?.list) ? res.list : [];
-    renderExampleList(container, list, meta.kanji);
-  } catch (e) {
-    renderExampleList(container, [], meta.kanji);
-  }
-}
-
-/* Toolbar buttons + picker + generators */
-function makeToolbarButtons(){
-  const bar = document.querySelector('.toolbar');
-  if (!bar) return;
-
-  const b1 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Practice: Last 6' });
-  const b2 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Practice: Pick' });
-  const b3 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Review: Last 40' });
-
-  b1.addEventListener('click', async () => {
-    if (!REMOTE_HISTORY.length) await historyReadSafe();
-    const list = REMOTE_HISTORY.slice(0,6);
-    await openWorksheetNow(list);
-  });
-  b2.addEventListener('click', async () => {
-    if (!REMOTE_HISTORY.length) await historyReadSafe();
-    openPickerModal();
-  });
-  b3.addEventListener('click', async () => {
-    if (!REMOTE_HISTORY.length) await historyReadSafe();
-    const list = REMOTE_HISTORY.slice(0,40);
-    await openReviewNow(list); // open even if empty
-  });
-
-  bar.append(b1, b2, b3);
-}
-
-function openPickerModal(){
-  const root = document.getElementById('modal-root');
-  root.innerHTML = '';
-  const overlay = document.createElement('div');
-  overlay.className = 'modal';
-  overlay.innerHTML = `
-    <div class="modal-card">
-      <div class="modal-head">
-        <div><strong>Select up to 10 kanji</strong></div>
-        <button class="toolbtn" id="closeModalBtn">Close</button>
-      </div>
-      <div class="modal-grid" id="pickGrid"></div>
-      <div class="modal-actions">
-        <button class="toolbtn" id="pickConfirm">Generate worksheet</button>
-      </div>
-    </div>`;
-  root.appendChild(overlay);
-
-  const grid = overlay.querySelector('#pickGrid');
-  REMOTE_HISTORY.slice(0, 40).forEach(({k}) => {
-    const cell = document.createElement('div');
-    cell.className = 'modal-kanji';
-    cell.textContent = k;
-    cell.addEventListener('click', () => {
-      if (cell.classList.contains('selected')) cell.classList.remove('selected');
-      else if (grid.querySelectorAll('.selected').length < 10) cell.classList.add('selected');
-    });
-    grid.appendChild(cell);
-  });
-
-  overlay.querySelector('#closeModalBtn').onclick = () => (root.innerHTML = '');
-  overlay.querySelector('#pickConfirm').onclick = async () => {
-    const picked = Array.from(grid.querySelectorAll('.selected')).map(el => el.textContent);
-    const list = REMOTE_HISTORY.filter(x => picked.includes(x.k)).slice(0,10);
-    await openWorksheetNow(list);
-    root.innerHTML = '';
-  };
-}
-
-function openWithHtml(html){
-  const w = window.open('', '_blank');
-  if (!w) return;
-  w.document.open(); w.document.write(html); w.document.close();
-}
-
-/* -------- Fetch examples for a set of kanji -------- */
-async function fetchExamplesFor(list) {
-  const uniq = [...new Set(list.map(x => x.k))];
-  const pairs = await Promise.all(uniq.map(async k => {
-    try { const res = await apiExGet(k); return [k, Array.isArray(res?.list) ? res.list : []]; }
-    catch { return [k, []]; }
-  }));
-  const map = {};
-  pairs.forEach(([k, arr]) => { map[k] = arr; });
-  return map;
-}
-
-/* Worksheets (include examples only) */
-async function openWorksheetNow(items){
-  const kanjiList = items.map(x => ({k:x.k})); // readings intentionally unused
-  const exMap = await fetchExamplesFor(kanjiList);
-
-  const html = `<!doctype html>
-<html><head><meta charset="utf-8"><title>Practice</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  @page { size: A4; margin: 12mm; }
-  html,body{ height:100% }
-  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
-  h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
-  .page{ display:grid; grid-template-columns: repeat(6, 1fr); gap: 10mm; min-height: calc(100vh - 24mm); padding: 2mm }
-  .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm }
-  .head{ display:flex; align-items:center; justify-content:center; gap:4mm; margin-bottom:3mm; min-height:20mm }
-  .k{ font-size:20mm; line-height:1 }
-
-  .ex-mini{ margin:.5mm 0 2mm 0; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; background:#fff; }
-  .ex-mini .w{ font-weight:700; }
-  .ex-mini .r{ color:#777; font-size:3.5mm; display:block; }
-  .ex-mini .m{ display:block; font-size:3.6mm; color:#888; }
-
-  .grid{ flex:1; display:grid; grid-auto-rows:12mm; grid-template-columns:12mm; justify-content:center; row-gap:3mm }
-  .sq{ width:12mm; height:12mm; border:1px solid rgba(0,0,0,.12);
-       background:linear-gradient(to right, rgba(0,0,0,.08) 1px, transparent 1px),
-                  linear-gradient(to bottom, rgba(0,0,0,.08) 1px, transparent 1px);
-       background-size:50% 100%, 100% 50%; }
-  @media print{ .page{ min-height:auto } }
-</style></head>
-<body>
-  <h2>Practice (Last ${kanjiList.length})</h2>
-  <div class="page" id="page"></div>
-<script>
-  const data = ${JSON.stringify(kanjiList)};
-  const exMap = ${JSON.stringify(exMap)};
-  const page = document.getElementById('page');
-  const six = data.slice(0,6);
-  six.forEach(({k})=>{
-    const col = document.createElement('div'); col.className='col';
-    const ex = (exMap[k]||[]).slice(0,2);
-    let exHtml = '';
-    ex.forEach(e => {
-      const w = (e.w||''); const rd=(e.r||''); const m=(e.m||'');
-      exHtml += '<div class="ex-mini"><span class="w">'+escapeHtml(w)+'</span>'+(rd?'<span class="r">'+escapeHtml(rd)+'</span>':'')+(m?'<span class="m">'+escapeHtml(m)+'</span>':'')+'</div>';
-    });
-    col.innerHTML = '<div class="head"><div class="k">'+k+'</div></div>'+exHtml+'<div class="grid"></div>';
-    page.appendChild(col);
-  });
-  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\'":"&#39;","\"":"&quot;" }[m]));}
-  function fill(col){
-    const grid = col.querySelector('.grid');
-    const mm = 96/25.4; const sq=12, gap=3;
-    const rectCol = col.getBoundingClientRect();
-    const rectGridTop = grid.getBoundingClientRect().top;
-    const avail = rectCol.bottom - rectGridTop - 4;
-    const per = Math.floor(avail / ((sq+gap)*mm));
-    for(let i=0;i<per;i++){ const d=document.createElement('div'); d.className='sq'; grid.appendChild(d); }
-  }
-  document.fonts?.ready.then(()=>{ document.querySelectorAll('.col').forEach(fill); });
-  window.onload = ()=>{ document.querySelectorAll('.col').forEach(fill); };
-</script></body></html>`;
-  openWithHtml(html);
-}
-
-/* Review (include examples only) */
-async function openReviewNow(items){
-  const list = items.slice(0,40).map(x => ({k:x.k}));
-  const exMap = await fetchExamplesFor(list);
-
-  const html = `<!doctype html>
-<html><head><meta charset="utf-8"><title>Review</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  @page { size: A4; margin: 12mm; }
-  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222; background:#fff }
-  h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
-  .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
-  .cell{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center;
-         min-height:40mm; border:1px solid #eee; border-radius:6px; padding:2mm 2.5mm; background:#fff; }
-  .k{ font-size:18mm; line-height:1 }
-  .empty{ text-align:center; padding:18mm 6mm; color:#777 }
-  .ex-mini{ width:100%; margin-top:1.2mm; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; background:#fff; }
-  .ex-mini .w{ font-weight:700; }
-  .ex-mini .r{ color:#777; font-size:3.4mm; display:block; }
-  .ex-mini .m{ display:block; font-size:3.5mm; color:#888; }
-</style></head>
-<body>
-  <h2>Review (Last ${list.length})</h2>
-  ${list.length ? '<div class="grid" id="grid"></div>' : '<div class="empty">No recent kanji yet. Open an entry or search a single kanji to record history.</div>'}
-<script>
-  const data = ${JSON.stringify(list)};
-  const exMap = ${JSON.stringify(exMap)};
-  const grid = document.getElementById('grid');
-  if (grid) {
-    data.forEach(({k})=>{
-      const ex = (exMap[k]||[]).slice(0,1);
-      let exHtml = '';
-      ex.forEach(e => {
-        const w = (e.w||''); const rd=(e.r||''); const m=(e.m||'');
-        exHtml += '<div class="ex-mini"><span class="w">'+escapeHtml(w)+'</span>'+(rd?'<span class="r">'+escapeHtml(rd)+'</span>':'')+(m?'<span class="m">'+escapeHtml(m)+'</span>':'')+'</div>';
-      });
-      const cell = document.createElement('div');
-      cell.className = 'cell';
-      cell.innerHTML = '<div class="k">'+k+'</div>'+exHtml;
-      grid.appendChild(cell);
-    });
-  }
-  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\'":"&#39;","\"":"&quot;" }[m]));}
-</script></body></html>`;
-  openWithHtml(html);
-}
-
-/* Boot */
-window.addEventListener('load', async () => {
-  await loadEntries();
-  attachSearch();
-  makeToolbarButtons();
-  initStrokePlayers();
-  await historyReadSafe();
-  await initExamplesUI(); // entry page examples
-});
+function isCJK(ch){ const cp = ch.codePointAt(0); return (cp>=0x
