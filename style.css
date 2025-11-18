@@ -200,6 +200,16 @@ a.kanji-link:hover{ border-bottom-style:solid }
 }
 .ex-save:hover,.ex-cancel:hover{ background:#f9f7f1; }
 
+.ex-head{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  align-items:center;
+  margin-bottom:.25rem;
+}
+.ex-clear{ margin-left:.5rem; }
+
+
+
 /* Responsive */
 @media (max-width:900px){
   .entry{ flex-wrap:wrap; gap:1.25rem }
@@ -216,3 +226,4 @@ a.kanji-link:hover{ border-bottom-style:solid }
   body{ background:#fff; color:#111; padding:0 }
   .entry{ gap:1.2rem }
 }
+
