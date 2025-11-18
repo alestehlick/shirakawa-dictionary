@@ -43,6 +43,8 @@ h1{
   letter-spacing:.01em; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;
   flex-direction:column; gap:0;
 }
+.kanji-col .kanji-glyph{ line-height:1; display:inline-block; } /* measurable width */
+
 .image-col:empty{ display:none }
 .image-col{
   flex:0 0 auto; display:flex; flex-direction:column; gap:1rem; align-items:center
@@ -150,125 +152,47 @@ a.kanji-link:hover{ border-bottom-style:solid }
 }
 .stroke-gif img{ width:clamp(64px,12vw,128px); height:auto; display:block; background:#fff; border-radius:6px }
 
-/* ------------------- NEW: Examples UI (compact vertical, tidy) ------------------- */
+/* ------------------- Examples UI ------------------- */
 .examples-block{
-  width:min(230px,34vw);          /* narrower, space-saving */
-  margin:.4rem 0 0;
+  width:auto;               /* JS sets exact px width to match .kanji-glyph */
+  margin-top:.6rem;
 }
 
 .ex-head{
-  display:flex;
-  justify-content:flex-end;       /* “clear all” at right, faint */
-  align-items:center;
-  margin:0 0 .25rem;
+  display:flex; align-items:center; justify-content:flex-end;
+  margin-bottom:.35rem; min-height:1.2rem;
 }
+.ex-faint-btn, .ex-faint-add, .ex-faint-addmore{
+  appearance:none; -webkit-appearance:none; background:transparent; border:0;
+  color:rgba(42,36,27,.35); cursor:pointer;
+  font:600 .82rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
+}
+.ex-faint-btn:hover, .ex-faint-add:hover, .ex-faint-addmore:hover{ color:rgba(42,36,27,.55) }
+.ex-faint-add{ margin:.1rem 0 .25rem .1rem }
 
-/* container of example rows */
 .examples-wrap{
-  display:flex;
-  flex-direction:column;
-  gap:.35rem;
-  width:100%;
+  display:flex; flex-direction:column; gap:.4rem;
 }
-
-/* each example row: compact, vertical stack */
 .ex-row{
   position:relative;
-  padding:.5rem .6rem .55rem .6rem;
-  border:1px dashed rgba(0,0,0,.08);
-  border-radius:10px;
-  background:rgba(255,255,255,.55);
-  line-height:1.25;
+  display:block;
+  padding:.5rem .8rem .55rem .8rem;
+  border:1px dashed rgba(0,0,0,.06); border-radius:10px;
+  background:#fff;
 }
-
-/* text (vertical: word -> reading -> meaning) */
-.ex-word{
+.ex-word{                          /* +50% size */
   display:block;
   font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
-  font-weight:700;
-  color:var(--ink);                /* black */
-  font-size:1.02rem;
-  letter-spacing:.01em;
-  margin:0 1.6rem .15rem 0;        /* leave room for edit button at right */
+  font-weight:700; color:var(--ink);
+  font-size:1.53rem;
+  letter-spacing:.01em; margin:0 0 .1rem 0;
 }
-.ex-reading{
-  display:block;
-  color:rgba(0,0,0,.46);           /* faint gray */
-  font-size:.92rem;
-  margin:0 0 .12rem 0;
-}
-.ex-meaning{
-  display:block;
-  color:rgba(0,0,0,.36);           /* even fainter gray */
-  font-size:.9rem;
-  margin:0;
-}
+.ex-reading{ display:block; color:#999; font-size:.95rem; margin:.05rem 0 }
+.ex-meaning{ display:block; color:#b0a89b; font-size:1.02rem; margin-top:.05rem }
 
-/* faint buttons (uniform look) */
-.ex-faint-btn,
-.ex-faint-add,
-.ex-faint-addmore{
-  appearance:none; -webkit-appearance:none;
-  background:transparent;
-  border:0; box-shadow:none;
-  color:rgba(42,36,27,.35);
-  font:600 .86rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
-  letter-spacing:.02em;
-  cursor:pointer;
-  border-radius:6px;
-  padding:.08rem .18rem;
-}
-.ex-faint-btn:hover,
-.ex-faint-add:hover,
-.ex-faint-addmore:hover{
-  color:rgba(42,36,27,.55);
-  background:rgba(0,0,0,.03);
-}
-.ex-faint-btn:focus-visible,
-.ex-faint-add:focus-visible,
-.ex-faint-addmore:focus-visible{
-  outline:2px dotted #e3dccb; outline-offset:2px;
-}
-
-/* “edit” sits discreetly inside the row, top-right */
 .ex-row .ex-faint-btn{
-  position:absolute;
-  top:.35rem;
-  right:.4rem;
+  position:absolute; top:.35rem; right:.45rem;
 }
-
-/* the tiny “＋ example / ＋ add another” links */
-.ex-faint-add{ margin-top:.2rem; }
-.ex-faint-addmore{ align-self:flex-end; margin-top:.35rem; }
-
-/* compact inline editor (unchanged sizing, fits narrow width) */
-.ex-editor{
-  width:100%;
-  border:1px solid var(--rule);
-  border-radius:10px;
-  background:#fff;
-  padding:.5rem .6rem;
-  box-shadow:0 1px 0 rgba(0,0,0,.03);
-  margin-bottom:.4rem;
-}
-.ex-editor-row{ display:grid; grid-template-columns:1fr; gap:.5rem; } /* single column to fit width */
-.ex-in{
-  width:100%; border:1px solid var(--rule); border-radius:8px;
-  padding:.4rem .5rem; background:#fff;
-  font:.95rem/1.2 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
-}
-.ex-actions{ display:flex; gap:.5rem; justify-content:flex-end; margin-top:.45rem; }
-.ex-save,.ex-cancel{
-  appearance:none; -webkit-appearance:none;
-  border:1px solid var(--rule); border-radius:8px;
-  padding:.35rem .6rem; background:#fff; cursor:pointer;
-  font:600 .9rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
-}
-.ex-save:hover,.ex-cancel:hover{ background:#f9f7f1; }
-
-
-
-
 
 /* Responsive */
 @media (max-width:900px){
@@ -278,7 +202,6 @@ a.kanji-link:hover{ border-bottom-style:solid }
   .image-col img{ width:clamp(72px,24vw,100px) }
   .text-col{ order:2; max-width:100% }
   .index-grid{ grid-template-columns:repeat(auto-fit,minmax(180px,1fr)) }
-  .ex-editor-row{ grid-template-columns: 1fr; }
 }
 
 /* Print */
@@ -286,7 +209,3 @@ a.kanji-link:hover{ border-bottom-style:solid }
   body{ background:#fff; color:#111; padding:0 }
   .entry{ gap:1.2rem }
 }
-
-
-
-
