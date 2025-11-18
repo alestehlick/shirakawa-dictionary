@@ -214,7 +214,7 @@ async function loadEntries() {
         const r = div.dataset.firstReading || '';
         Promise.race([
           historyPush(k, r),
-          new Promise(res => setTimeout(res, 400))
+          new Promise(res => setTimeout(res, 500))
         ]).finally(() => { window.location.href = url; });
       });
     });
@@ -430,7 +430,6 @@ function openExampleEditor(container, kanji, existing = null) {
 
   editor.append(row, actions);
 
-  // replace the "＋ example" link if present
   if (container.firstChild && container.firstChild.classList?.contains('ex-faint-add')) {
     container.firstChild.remove();
   }
@@ -502,6 +501,7 @@ function makeToolbarButtons(){
     if (!REMOTE_HISTORY.length) await historyReadSafe();
     const list = REMOTE_HISTORY.slice(0,6);
     if (list.length) await openWorksheetNow(list);
+    else openWithHtml(bareInfoPage('Practice', 'No history found yet.'));
   });
   b2.addEventListener('click', async () => {
     if (!REMOTE_HISTORY.length) await historyReadSafe();
@@ -511,6 +511,7 @@ function makeToolbarButtons(){
     if (!REMOTE_HISTORY.length) await historyReadSafe();
     const list = REMOTE_HISTORY.slice(0,40);
     if (list.length) await openReviewNow(list);
+    else openWithHtml(bareInfoPage('Review', 'No history found yet.'));
   });
 
   bar.append(b1, b2, b3);
@@ -551,14 +552,24 @@ function openPickerModal(){
     const picked = Array.from(grid.querySelectorAll('.selected')).map(el => el.textContent);
     const list = REMOTE_HISTORY.filter(x => picked.includes(x.k)).slice(0,10);
     if (list.length) await openWorksheetNow(list);
+    else openWithHtml(bareInfoPage('Practice', 'Pick at least one kanji.'));
     root.innerHTML = '';
   };
 }
 
+/* --------- RELIABLE window opener (Blob URL) ---------- */
 function openWithHtml(html){
-  const w = window.open('', '_blank');
-  if (!w) return;
-  w.document.open(); w.document.write(html); w.document.close();
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  window.open(url, '_blank');
+}
+
+/* Tiny fallback info page */
+function bareInfoPage(title, msg){
+  return `<!doctype html><meta charset="utf-8"><title>${title}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>body{font-family:system-ui;margin:2rem;color:#222}</style>
+  <h2>${title}</h2><p>${msg}</p>`;
 }
 
 /* -------- Fetch examples for a set of kanji -------- */
@@ -664,18 +675,23 @@ async function openReviewNow(items){
   const exMap = ${JSON.stringify(exMap)};
   const grid = document.getElementById('grid');
 
-  data.forEach(({k})=>{
-    const ex = (exMap[k]||[]).slice(0,1);
-    let exHtml = '';
-    ex.forEach(e => {
-      const w = (e.w||''), rd=(e.r||''), m=(e.m||'');
-      exHtml += '<div class="ex-mini"><span class="w">'+escapeHtml(w)+'</span>'+(rd?'<span class="r">'+escapeHtml(rd)+'</span>':'')+(m?'<span class="m">'+escapeHtml(m)+'</span>':'')+'</div>';
+  if (!Array.isArray(data) || !data.length) {
+    grid.innerHTML = '<p style="grid-column:1/-1;color:#666">No history found yet.</p>';
+  } else {
+    data.forEach(({k})=>{
+      const ex = (exMap[k]||[]).slice(0,1);
+      let exHtml = '';
+      ex.forEach(e => {
+        const w = (e.w||''), rd=(e.r||''), m=(e.m||'');
+        exHtml += '<div class="ex-mini"><span class="w">'+escapeHtml(w)+'</span>'+(rd?'<span class="r">'+escapeHtml(rd)+'</span>':'')+(m?'<span class="m">'+escapeHtml(m)+'</span>':'')+'</div>';
+      });
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+      cell.innerHTML = '<div class="k">'+k+'</div>'+exHtml;
+      grid.appendChild(cell);
     });
-    const cell = document.createElement('div');
-    cell.className = 'cell';
-    cell.innerHTML = '<div class="k">'+k+'</div>'+exHtml;
-    grid.appendChild(cell);
-  });
+  }
+
   function escapeHtml(s){return String(s).replace(/[&<>\"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[m]));}
 </script></body></html>`;
   openWithHtml(html);
