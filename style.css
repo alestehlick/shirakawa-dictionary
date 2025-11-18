@@ -152,37 +152,96 @@ a.kanji-link:hover{ border-bottom-style:solid }
 
 /* ------------------- NEW: Examples UI ------------------- */
 /* ------------------- NEW: Examples UI (fix sizing) ------------------- */
+/* ------------------- NEW: Examples UI (compact, faint, right-aligned) ------------------- */
 .examples-block{
+  width:min(280px,38vw);
+  margin:.5rem 0 0;
+}
+
+.ex-head{
+  display:flex;
+  justify-content:flex-end;   /* put “clear all” at far right */
+  align-items:center;
+  margin:0 0 .25rem;
+}
+
+/* wrapper that holds rows */
+.examples-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:.4rem;
   width:100%;
-  margin-top:.6rem;
-  /* RESET base size so it doesn't inherit the huge .kanji-col size */
-  font-size: clamp(.95rem, .9vw + .1rem, 1rem);
-  line-height:1.55;
 }
 
-.examples-wrap{ display:flex; flex-direction:column; gap:.35rem; margin-top:.35rem; width:100%; }
-
-/* normal text sizes */
-.ex-row{ 
-  display:grid; grid-template-columns: 1fr auto; align-items:baseline;
-  gap:.15rem .5rem; padding:.35rem .4rem; border:1px dashed rgba(0,0,0,.06);
-  border-radius:8px; background:rgba(255,255,255,.55);
-  font-size:1em;       /* keep rows at normal text size */
+/* each example row */
+.ex-row{
+  position:relative;                  /* so the edit button can live at top-right */
+  padding:.45rem .6rem .4rem .6rem;   /* room for the edit control on the right */
+  border:1px dashed rgba(0,0,0,.07);
+  border-radius:10px;
+  background:rgba(255,255,255,.55);
 }
-.ex-word{ font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif; font-weight:700; font-size:1.05em; }
-.ex-reading{ color:var(--muted); font-size:.95em; }
-.ex-meaning{ grid-column:1/-1; font-size:.95em; }
 
-/* faint buttons unchanged */
-.ex-faint-add,.ex-faint-addmore,.ex-faint-btn{ /* keep as before */ }
+/* text in a row */
+.ex-word{
+  font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  font-weight:700;
+  letter-spacing:.01em;
+  font-size:1.05rem;
+  line-height:1.25;
+}
+.ex-reading{ color:var(--muted); font-size:.92rem; margin-left:.4rem; }
+.ex-meaning{ margin-top:.15rem; font-size:.95rem; color:#333; }
 
+/* the faint buttons */
+.ex-faint-btn,
+.ex-faint-add,
+.ex-faint-addmore{
+  appearance:none; -webkit-appearance:none;
+  background:transparent;
+  border:0; box-shadow:none;
+  color:rgba(42,36,27,.35);
+  font:600 .88rem/1.15 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
+  letter-spacing:.02em;
+  cursor:pointer;
+  border-radius:6px;
+  padding:.1rem .2rem;
+}
 
+.ex-faint-btn:hover,
+.ex-faint-add:hover,
+.ex-faint-addmore:hover{
+  color:rgba(42,36,27,.55);
+  background:rgba(0,0,0,.03);
+}
+.ex-faint-btn:focus-visible,
+.ex-faint-add:focus-visible,
+.ex-faint-addmore:focus-visible{
+  outline:2px dotted #e3dccb; outline-offset:2px;
+}
+
+/* position “edit” faintly at top-right INSIDE each example row */
+.ex-row .ex-faint-btn{
+  position:absolute;
+  top:.35rem;
+  right:.4rem;
+}
+
+/* the tiny “＋ example / ＋ add another” links */
+.ex-faint-add{ margin-top:.2rem; }
+.ex-faint-addmore{ align-self:flex-end; margin-top:.35rem; }
+
+/* compact inline editor */
 .ex-editor{
-  width:100%; border:1px solid var(--rule); border-radius:10px;
-  background:#fff; padding:.5rem .6rem; box-shadow:0 1px 0 rgba(0,0,0,.03);
+  width:100%;
+  border:1px solid var(--rule);
+  border-radius:10px;
+  background:#fff;
+  padding:.5rem .6rem;
+  box-shadow:0 1px 0 rgba(0,0,0,.03);
   margin-bottom:.4rem;
 }
-.ex-editor-row{ display:grid; grid-template-columns: 1.2fr 1fr 1.8fr; gap:.5rem; }
+.ex-editor-row{ display:grid; grid-template-columns:1.2fr 1fr 1.8fr; gap:.5rem; }
 .ex-in{
   width:100%; border:1px solid var(--rule); border-radius:8px;
   padding:.4rem .5rem; background:#fff;
@@ -191,18 +250,12 @@ a.kanji-link:hover{ border-bottom-style:solid }
 .ex-actions{ display:flex; gap:.5rem; justify-content:flex-end; margin-top:.45rem; }
 .ex-save,.ex-cancel{
   appearance:none; -webkit-appearance:none;
-  border:1px solid var(--rule); border-radius:8px; padding:.35rem .6rem; background:#fff; cursor:pointer;
+  border:1px solid var(--rule); border-radius:8px;
+  padding:.35rem .6rem; background:#fff; cursor:pointer;
   font:600 .9rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
 }
 .ex-save:hover,.ex-cancel:hover{ background:#f9f7f1; }
 
-.ex-head{
-  display:grid;
-  grid-template-columns: 1fr auto;
-  align-items:center;
-  margin-bottom:.25rem;
-}
-.ex-clear{ margin-left:.5rem; }
 
 
 
@@ -222,5 +275,6 @@ a.kanji-link:hover{ border-bottom-style:solid }
   body{ background:#fff; color:#111; padding:0 }
   .entry{ gap:1.2rem }
 }
+
 
 
