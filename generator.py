@@ -33,6 +33,7 @@ TEMPLATE = """<!doctype html>
   <div class="kanji-col">
     {kanji}
     {stroke_gif_html}
+    <div class="examples-anchor"></div> 
   </div>
   {images_html}
   <div class="text-col">
