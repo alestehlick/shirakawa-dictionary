@@ -330,6 +330,30 @@ function initStrokePlayers(){
 function renderExampleList(container, list, kanji) {
   container.innerHTML = '';
 
+  // Header line with faint Clear button (only when there is data)
+  if (Array.isArray(list) && list.length) {
+    const head = document.createElement('div');
+    head.className = 'ex-head';
+    const spacer = document.createElement('div');
+    spacer.textContent = '';
+    const clearBtn = document.createElement('button');
+    clearBtn.className = 'ex-faint-btn ex-clear';
+    clearBtn.type = 'button';
+    clearBtn.textContent = 'clear all';
+    clearBtn.title = 'Remove all examples for this kanji (server-wide)';
+    clearBtn.addEventListener('click', async () => {
+      try {
+        const res = await jsonp(`${window.HISTORY_ENDPOINT}?op=ex_clear&k=${encodeURIComponent(kanji)}&t=${Date.now()}`);
+        if (!res?.ok) throw new Error('server rejected');
+        renderExampleList(container, [], kanji);
+      } catch (e) {
+        console.warn('ex_clear failed', e);
+      }
+    });
+    head.append(spacer, clearBtn);
+    container.appendChild(head);
+  }
+
   if (!Array.isArray(list) || !list.length) {
     const add = document.createElement('button');
     add.className = 'ex-faint-add';
@@ -378,6 +402,7 @@ function renderExampleList(container, list, kanji) {
   container.appendChild(wrap);
   container.appendChild(addMore);
 }
+
 
 function openExampleEditor(container, kanji, existing = null) {
   const editor = document.createElement('div');
