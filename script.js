@@ -1,7 +1,7 @@
 /* =========================================================
    JSONP-based remote history (no CORS) + robust warnings
    + Per-kanji examples (online-only, JSONP)
-   + Worksheets/Review include examples
+   + Worksheets/Review include examples (no per-kanji reading)
    ========================================================= */
 let REMOTE_HISTORY = []; // last good list
 
@@ -27,6 +27,7 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
 
     const script = document.createElement('script');
     let done = false;
+
     const cleanup = () => {
       if (script.parentNode) script.parentNode.removeChild(script);
       try { delete window[cbName]; } catch (_) { window[cbName] = undefined; }
@@ -83,6 +84,7 @@ async function historyReadSafe() {
 }
 async function historyPush(k, r) {
   if (!k) return;
+  // optimistic
   REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 200);
   try {
     const res = await apiPushGet(k, r);
@@ -97,18 +99,21 @@ async function historyPush(k, r) {
   await historyReadSafe();
 }
 
-/* -------- Examples API (JSONP/GET) -------- */
+/* -------- Examples API (JSONP/GET) --------
+   NOTE: backend expects "rr" for the example reading.
+------------------------------------------------ */
 function apiExGet(k) {
   const t = Date.now();
   return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${t}`);
 }
 function apiExAdd(k, w, r, m) {
   const t = Date.now();
-  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_add&k=${encodeURIComponent(k)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${t}`);
+  // IMPORTANT: send rr= for example reading (backend contract)
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_add&k=${encodeURIComponent(k)}&w=${encodeURIComponent(w)}&rr=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${t}`);
 }
 function apiExUpdate(k, id, w, r, m) {
   const t = Date.now();
-  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${t}`);
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&rr=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${t}`);
 }
 
 /* =========================================================
@@ -200,7 +205,7 @@ async function loadEntries() {
       `;
       grid.appendChild(div);
 
-      // Safer: allow push to complete then navigate
+      // Push to history then navigate
       div.querySelector('a')?.addEventListener('click', (e) => {
         e.preventDefault();
         const url = e.currentTarget.href;
@@ -241,7 +246,7 @@ function searchEntries() {
     }
 
     const kun  = JSON.parse(item.dataset.kun || '[]');
-    const theOn = JSON.parse(item.dataset.on  || '[]'); // avoid shadowing "on"
+    const theOn = JSON.parse(item.dataset.on  || '[]');
     const blob = item.dataset.search || '';
 
     const exactReadingHit  = kun.includes(q) || theOn.includes(q);
@@ -304,25 +309,39 @@ function attachSearch() {
   }
 })();
 
-/* Stroke-order player (lazy load on click) */
+/* -------- Stroke-order player (toggle + 40s auto-stop) -------- */
 function initStrokePlayers(){
   document.querySelectorAll('.stroke-gif').forEach(wrapper => {
     const src = wrapper.getAttribute('data-stroke-src');
-    const btn = wrapper.querySelector('.stroke-play');
-    if (!src || !btn) return;
+    if (!src) return;
 
-    const start = () => {
+    const renderButton = () => {
+      wrapper.classList.remove('playing');
+      wrapper.innerHTML = `<button type="button" class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>`;
+      wrapper.querySelector('.stroke-play').addEventListener('click', play);
+    };
+
+    const stop = () => {
+      const tid = wrapper._gifTimerId;
+      if (tid) { clearTimeout(tid); wrapper._gifTimerId = null; }
+      renderButton();
+    };
+
+    const play = () => {
       wrapper.classList.add('playing');
       wrapper.innerHTML = `<img alt="Stroke order" loading="lazy" decoding="async">`;
       const img = wrapper.querySelector('img');
       img.src = src;
-      img.addEventListener('click', () => {
-        const cur = img.src;
-        img.src = '';
-        requestAnimationFrame(() => requestAnimationFrame(() => { img.src = cur; }));
-      });
+
+      // Click stops
+      img.addEventListener('click', stop);
+
+      // Auto-stop after 40s
+      wrapper._gifTimerId = setTimeout(stop, 40000);
     };
-    btn.addEventListener('click', start);
+
+    // initial
+    renderButton();
   });
 }
 
@@ -330,12 +349,11 @@ function initStrokePlayers(){
 function renderExampleList(container, list, kanji) {
   container.innerHTML = '';
 
-  // Header line with faint Clear button (only when there is data)
+  // If we have examples, show a faint "clear all"
   if (Array.isArray(list) && list.length) {
     const head = document.createElement('div');
     head.className = 'ex-head';
-    const spacer = document.createElement('div');
-    spacer.textContent = '';
+    head.appendChild(document.createElement('div'));
     const clearBtn = document.createElement('button');
     clearBtn.className = 'ex-faint-btn ex-clear';
     clearBtn.type = 'button';
@@ -346,11 +364,9 @@ function renderExampleList(container, list, kanji) {
         const res = await jsonp(`${window.HISTORY_ENDPOINT}?op=ex_clear&k=${encodeURIComponent(kanji)}&t=${Date.now()}`);
         if (!res?.ok) throw new Error('server rejected');
         renderExampleList(container, [], kanji);
-      } catch (e) {
-        console.warn('ex_clear failed', e);
-      }
+      } catch (e) { console.warn('ex_clear failed', e); }
     });
-    head.append(spacer, clearBtn);
+    head.appendChild(clearBtn);
     container.appendChild(head);
   }
 
@@ -360,6 +376,8 @@ function renderExampleList(container, list, kanji) {
     add.type = 'button';
     add.title = 'Add example';
     add.textContent = '＋ example';
+    add.style.marginTop = '6px';        // ensure visible below big kanji
+    add.style.opacity = '0.6';          // slightly less faint so you see it
     add.addEventListener('click', () => openExampleEditor(container, kanji));
     container.appendChild(add);
     return;
@@ -402,7 +420,6 @@ function renderExampleList(container, list, kanji) {
   container.appendChild(wrap);
   container.appendChild(addMore);
 }
-
 
 function openExampleEditor(container, kanji, existing = null) {
   const editor = document.createElement('div');
@@ -463,6 +480,7 @@ async function initExamplesUI() {
   const col = document.querySelector('.kanji-col');
   if (!col) return;
 
+  // Always create a stable anchor below the stroke player
   let anchor = col.querySelector('.examples-anchor');
   if (!anchor) {
     anchor = document.createElement('div');
@@ -478,7 +496,7 @@ async function initExamplesUI() {
     const res = await apiExGet(meta.kanji);
     const list = Array.isArray(res?.list) ? res.list : [];
     renderExampleList(container, list, meta.kanji);
-  } catch (e) {
+  } catch {
     renderExampleList(container, [], meta.kanji);
   }
 }
@@ -567,7 +585,7 @@ async function fetchExamplesFor(list) {
   return map;
 }
 
-/* Worksheets (now include examples) */
+/* Worksheets (examples only — no big reading header) */
 async function openWorksheetNow(items){
   const kanjiList = items.map(x => ({k:x.k, r:x.r || ''}));
   const exMap = await fetchExamplesFor(kanjiList);
@@ -581,10 +599,9 @@ async function openWorksheetNow(items){
   body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
   h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
   .page{ display:grid; grid-template-columns: repeat(6, 1fr); gap: 10mm; min-height: calc(100vh - 24mm); padding: 2mm }
-  .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm }
+  .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm; background:#fff }
   .head{ display:flex; align-items:flex-end; justify-content:center; gap:4mm; margin-bottom:3mm; min-height:20mm }
   .k{ font-size:20mm; line-height:1 }
-  .furi{ font: 400 3.6mm/1.1 "Noto Serif JP",serif; color:#999; transform: translateY(1.5mm) }
 
   .ex-mini{ margin:.5mm 0 2mm 0; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; background:#fff; }
   .ex-mini .w{ font-weight:700; }
@@ -606,7 +623,7 @@ async function openWorksheetNow(items){
   const exMap = ${JSON.stringify(exMap)};
   const page = document.getElementById('page');
   const six = data.slice(0,6);
-  six.forEach(({k,r})=>{
+  six.forEach(({k})=>{
     const col = document.createElement('div'); col.className='col';
     const ex = (exMap[k]||[]).slice(0,2); // up to 2 examples
     let exHtml = '';
@@ -614,10 +631,10 @@ async function openWorksheetNow(items){
       const w = (e.w||''); const rd=(e.r||''); const m=(e.m||'');
       exHtml += '<div class="ex-mini"><span class="w">'+escapeHtml(w)+'</span>'+(rd?'<span class="r">'+escapeHtml(rd)+'</span>':'')+(m?'<span class="m">'+escapeHtml(m)+'</span>':'')+'</div>';
     });
-    col.innerHTML = '<div class="head"><div class="k">'+k+'</div><div class="furi">'+(r||'')+'</div></div>'+exHtml+'<div class="grid"></div>';
+    col.innerHTML = '<div class="head"><div class="k">'+k+'</div></div>'+exHtml+'<div class="grid"></div>';
     page.appendChild(col);
   });
-  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&#92;","'":"&#39;", '"':"&quot;" }[m]));}
+  function escapeHtml(s){return String(s).replace(/[&<>\"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[m]));}
   function fill(col){
     const grid = col.querySelector('.grid');
     const mm = 96/25.4; const sq=12, gap=3;
@@ -633,7 +650,7 @@ async function openWorksheetNow(items){
   openWithHtml(html);
 }
 
-/* Review (now include examples) */
+/* Review (examples only — no big reading header) */
 async function openReviewNow(items){
   const list = items.slice(0,40).map(x => ({k:x.k, r:x.r || ''}));
   const exMap = await fetchExamplesFor(list);
@@ -643,13 +660,12 @@ async function openReviewNow(items){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   @page { size: A4; margin: 12mm; }
-  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
+  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222; background:#fff }
   h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
   .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
   .cell{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center;
          min-height:40mm; border:1px solid #eee; border-radius:6px; padding:2mm 2.5mm; background:#fff; }
   .k{ font-size:18mm; line-height:1 }
-  .furi{ position:absolute; left:3mm; top:3mm; font:400 3.5mm/1 "Noto Serif JP",serif; color:#aaa }
   .ex-mini{ width:100%; margin-top:1.5mm; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; }
   .ex-mini .w{ font-weight:700; }
   .ex-mini .r{ color:#777; font-size:3.4mm; display:inline-block; margin-left:2mm; }
@@ -663,7 +679,7 @@ async function openReviewNow(items){
   const exMap = ${JSON.stringify(exMap)};
   const grid = document.getElementById('grid');
 
-  data.forEach(({k,r})=>{
+  data.forEach(({k})=>{
     const ex = (exMap[k]||[]).slice(0,1); // 1 compact example per cell
     let exHtml = '';
     ex.forEach(e => {
@@ -672,10 +688,10 @@ async function openReviewNow(items){
     });
     const cell = document.createElement('div');
     cell.className = 'cell';
-    cell.innerHTML = '<div class="furi">'+(r||'')+'</div><div class="k">'+k+'</div>'+exHtml;
+    cell.innerHTML = '<div class="k">'+k+'</div>'+exHtml;
     grid.appendChild(cell);
   });
-  function escapeHtml(s){return String(s).replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&#92;","'":"&#39;", '"':"&quot;" }[m]));}
+  function escapeHtml(s){return String(s).replace(/[&<>\"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[m]));}
 </script></body></html>`;
   openWithHtml(html);
 }
