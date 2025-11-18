@@ -1,12 +1,13 @@
 /* =========================================================
-   JSONP-based remote history + per-kanji examples
-   Worksheet/Review: child pages are static HTML (no JS).
-   Entry pages init immediately (no index delay).
+   History + examples over JSONP.
+   - Review page supports per-kanji delete (tiny ×).
+   - Example list supports per-example delete (tiny ×).
+   - Worksheet buttons removed; only Review button remains.
    ========================================================= */
 
-let REMOTE_HISTORY = []; // cached list
+let REMOTE_HISTORY = [];
 
-/* -------- Small helpers -------- */
+/* Helpers */
 const escapeHtml = s => String(s).replace(/[&<>"'\\]/g, m =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','\\':'&#92;'}[m])
 );
@@ -14,7 +15,7 @@ const toArray = v =>
   Array.isArray(v) ? v : (v == null || v === '') ? [] :
   String(v).split(/\s*[;,/｜|]\s*| +/).filter(Boolean);
 
-/* -------- JSONP helper -------- */
+/* JSONP core */
 function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
   return new Promise((resolve, reject) => {
     const cbName = `__jsonp_cb_${Date.now()}_${Math.random().toString(36).slice(2)}`;
@@ -51,7 +52,7 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
   });
 }
 
-/* -------- History API (JSONP/GET) -------- */
+/* History API */
 async function apiReadJsonp() {
   const t = Date.now();
   const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
@@ -62,6 +63,11 @@ async function apiPushGet(k, r) {
   const url = `${window.HISTORY_ENDPOINT}?op=push&k=${encodeURIComponent(k)}&r=${encodeURIComponent(r||'')}&t=${t}`;
   return jsonp(url);
 }
+function apiRemoveGet(k) {
+  const t = Date.now();
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=remove&k=${encodeURIComponent(k)}&t=${t}`);
+}
+
 function showHistoryWarning(msg) {
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
@@ -94,26 +100,21 @@ async function historyPush(k, r) {
   REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 200);
   try {
     const res = await apiPushGet(k, r);
-    if (!res?.ok) {
-      const flags = `drive:${!!res?.wroteDrive} props:${!!res?.wroteProps}`;
-      throw new Error('push failed '+flags);
-    }
+    if (!res?.ok) throw new Error('push failed');
   } catch (e) {
     console.warn('History push failed:', e.message);
     showHistoryWarning(e.message || 'push error');
   }
-  // refresh in background but don't block UI
   historyReadSafe();
 }
 
-/* -------- Examples API (JSONP/GET) -------- */
-function apiExGet(k) { return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${Date.now()}`); }
-function apiExAdd(k, w, r, m) { return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_add&k=${encodeURIComponent(k)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
-function apiExUpdate(k, id, w, r, m) { return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
+/* Examples API */
+function apiExGet(k)      { return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${Date.now()}`); }
+function apiExAdd(k,w,r,m){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_add&k=${encodeURIComponent(k)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
+function apiExUpdate(k,id,w,r,m){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
+function apiExDelete(k,id){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_del&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&t=${Date.now()}`); }
 
-/* =========================================================
-   Index (home)
-   ========================================================= */
+/* ---------- Index (home) ---------- */
 function getEntryId(entry) {
   if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
   if (entry?.num != null) { const m = String(entry.num).match(/\d+/); if (m) return m[0]; }
@@ -138,7 +139,7 @@ function initAllThumbs(root = document){ root.querySelectorAll('img.thumb[data-s
 
 async function loadEntries() {
   const results = document.getElementById('results');
-  if (!results) return;               // do nothing on entry pages
+  if (!results) return;
   results.textContent = 'Loading…';
 
   try {
@@ -201,10 +202,8 @@ async function loadEntries() {
         const url = e.currentTarget.href;
         const k = div.dataset.kanji;
         const r = div.dataset.firstReading || '';
-        Promise.race([
-          historyPush(k, r),
-          new Promise(res => setTimeout(res, 300)) // short race; don't block nav
-        ]).finally(() => { window.location.href = url; });
+        Promise.race([historyPush(k, r), new Promise(res => setTimeout(res, 300))])
+          .finally(() => { window.location.href = url; });
       });
     });
 
@@ -216,7 +215,7 @@ async function loadEntries() {
   }
 }
 
-/* Highlighting + ranking */
+/* Search */
 function searchEntries() {
   const q = (document.getElementById('search')?.value || '').trim().toLowerCase();
   const grid = document.getElementById('index-grid');
@@ -261,7 +260,6 @@ function searchEntries() {
   ranked.forEach(({ el }) => grid.appendChild(el));
 }
 
-/* Debounce + hotkeys */
 const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
 function attachSearch() {
   const box = document.getElementById('search');
@@ -276,14 +274,14 @@ function attachSearch() {
   searchEntries();
 }
 
-/* Entry pages: record when opened */
+/* Entry pages: record */
 (function maybeRecordFromEntryPage(){
   if (window.__ENTRY_META__ && window.__ENTRY_META__.kanji) {
     historyPush(window.__ENTRY_META__.kanji, window.__ENTRY_META__.furigana || '');
   }
 })();
 
-/* Stroke-order player: toggle + 40s auto-stop */
+/* Stroke players */
 function initStrokePlayers(){
   document.querySelectorAll('.stroke-gif').forEach(wrapper => {
     const src = wrapper.getAttribute('data-stroke-src');
@@ -313,30 +311,9 @@ function initStrokePlayers(){
   });
 }
 
-/* =============== Examples UI (entry pages) ================== */
+/* ---------------- Examples UI ---------------- */
 function renderExampleList(container, list, kanji) {
   container.innerHTML = '';
-
-  if (Array.isArray(list) && list.length) {
-    const head = document.createElement('div');
-    head.className = 'ex-head';
-    const clearBtn = document.createElement('button');
-    clearBtn.className = 'ex-clear';
-    clearBtn.type = 'button';
-    clearBtn.textContent = 'clear all';
-    clearBtn.title = 'Remove all examples for this kanji (server-wide)';
-    clearBtn.addEventListener('click', async () => {
-      try {
-        const res = await jsonp(`${window.HISTORY_ENDPOINT}?op=ex_clear&k=${encodeURIComponent(kanji)}&t=${Date.now()}`);
-        if (!res?.ok) throw new Error('server rejected');
-        renderExampleList(container, [], kanji);
-      } catch (e) {
-        console.warn('ex_clear failed', e);
-      }
-    });
-    head.append(clearBtn);
-    container.appendChild(head);
-  }
 
   if (!Array.isArray(list) || !list.length) {
     const add = document.createElement('button');
@@ -355,25 +332,38 @@ function renderExampleList(container, list, kanji) {
     const row = document.createElement('div');
     row.className = 'ex-row';
 
-    const word = document.createElement('span');
-    word.className = 'ex-word';
-    word.textContent = ex.w || '';
-
-    const reading = document.createElement('span');
-    reading.className = 'ex-reading';
-    reading.textContent = ex.r || '';
-
-    const meaning = document.createElement('span');
-    meaning.className = 'ex-meaning';
-    meaning.textContent = ex.m || '';
+    const controls = document.createElement('div');
+    controls.className = 'ex-controls';
 
     const edit = document.createElement('button');
-    edit.className = 'ex-faint-btn';
+    edit.className = 'ex-btn';
     edit.type = 'button';
     edit.textContent = 'edit';
     edit.addEventListener('click', () => openExampleEditor(container, kanji, ex));
 
-    row.append(word, reading, meaning, edit);
+    const del = document.createElement('button');
+    del.className = 'ex-btn';
+    del.type = 'button';
+    del.title = 'delete this example';
+    del.textContent = '×';
+    del.addEventListener('click', async () => {
+      try {
+        const res = await apiExDelete(kanji, ex.id);
+        const list2 = Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : []);
+        renderExampleList(container, list2, kanji);
+      } catch (_) { /* ignore */ }
+    });
+
+    controls.append(edit, del);
+
+    const word = document.createElement('span');
+    word.className = 'ex-word';   word.textContent = ex.w || '';
+    const reading = document.createElement('span');
+    reading.className = 'ex-reading'; reading.textContent = ex.r || '';
+    const meaning = document.createElement('span');
+    meaning.className = 'ex-meaning'; meaning.textContent = ex.m || '';
+
+    row.append(controls, word, reading, meaning);
     wrap.appendChild(row);
   });
 
@@ -408,7 +398,7 @@ function openExampleEditor(container, kanji, existing = null) {
 
   editor.append(row, actions);
 
-  if (container.firstChild && (container.firstChild.classList.contains('ex-faint-add') || container.firstChild.classList.contains('ex-head'))) {
+  if (container.firstChild && (container.firstChild.classList.contains('ex-faint-add'))) {
     container.firstChild.remove();
   }
   container.prepend(editor);
@@ -425,13 +415,9 @@ function openExampleEditor(container, kanji, existing = null) {
       let res;
       if (existing?.id) res = await apiExUpdate(kanji, existing.id, w, r, m);
       else res = await apiExAdd(kanji, w, r, m);
-      if (!res?.ok && !Array.isArray(res)) throw new Error('server rejected');
-      const list = res.list ?? res; // handle {ok:true,list} or old array
+      const list = Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : []);
       renderExampleList(container, list || [], kanji);
-    } catch (e) {
-      console.warn('Example save failed:', e);
-      done();
-    }
+    } catch (_) { /* ignore */ }
   });
 
   cancel.addEventListener('click', done);
@@ -448,86 +434,28 @@ async function initExamplesUI() {
   container.className = 'examples-block';
   anchor.replaceWith(container);
 
-  // Fetch immediately; don't await unrelated work
   try {
     const res = await apiExGet(meta.kanji);
     const list = Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : []);
     renderExampleList(container, list, meta.kanji);
-  } catch (e) {
+  } catch (_) {
     renderExampleList(container, [], meta.kanji);
   }
 }
 
-/* Toolbar buttons + picker + generators */
+/* -------- Toolbar: only Review button -------- */
 function makeToolbarButtons(){
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
 
-  const b1 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Practice: Last 6' });
-  const b2 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Practice: Pick' });
   const b3 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Review: Last 40' });
-
-  b1.addEventListener('click', async () => {
-    if (!REMOTE_HISTORY.length) await historyReadSafe();
-    const list = REMOTE_HISTORY.slice(0,6);
-    if (list.length) await openWorksheetNow(list);
-  });
-  b2.addEventListener('click', async () => {
-    if (!REMOTE_HISTORY.length) await historyReadSafe();
-    openPickerModal();
-  });
   b3.addEventListener('click', async () => {
     if (!REMOTE_HISTORY.length) await historyReadSafe();
     const list = REMOTE_HISTORY.slice(0,40);
     if (list.length) await openReviewNow(list);
   });
 
-  bar.append(b1, b2, b3);
-}
-
-function openPickerModal(){
-  const root = document.getElementById('modal-root');
-  root.innerHTML = '';
-  const overlay = document.createElement('div');
-  overlay.className = 'modal';
-  overlay.innerHTML = `
-    <div class="modal-card">
-      <div class="modal-head">
-        <div><strong>Select up to 10 kanji</strong></div>
-        <button class="toolbtn" id="closeModalBtn">Close</button>
-      </div>
-      <div class="modal-grid" id="pickGrid"></div>
-      <div class="modal-actions">
-        <button class="toolbtn" id="pickConfirm">Generate worksheet</button>
-      </div>
-    </div>`;
-  root.appendChild(overlay);
-
-  const grid = overlay.querySelector('#pickGrid');
-  REMOTE_HISTORY.slice(0, 40).forEach(({k}) => {
-    const cell = document.createElement('div');
-    cell.className = 'modal-kanji';
-    cell.textContent = k;
-    cell.addEventListener('click', () => {
-      if (cell.classList.contains('selected')) cell.classList.remove('selected');
-      else if (grid.querySelectorAll('.selected').length < 10) cell.classList.add('selected');
-    });
-    grid.appendChild(cell);
-  });
-
-  overlay.querySelector('#closeModalBtn').onclick = () => (root.innerHTML = '');
-  overlay.querySelector('#pickConfirm').onclick = async () => {
-    const picked = Array.from(grid.querySelectorAll('.selected')).map(el => el.textContent);
-    const list = REMOTE_HISTORY.filter(x => picked.includes(x.k)).slice(0,10);
-    if (list.length) await openWorksheetNow(list);
-    root.innerHTML = '';
-  };
-}
-
-function openWithHtml(html){
-  const w = window.open('', '_blank');
-  if (!w) return;
-  w.document.open(); w.document.write(html); w.document.close();
+  bar.append(b3);
 }
 
 /* -------- Fetch examples for a set of kanji -------- */
@@ -540,74 +468,19 @@ async function fetchExamplesFor(list) {
   const map = {}; pairs.forEach(([k, arr]) => { map[k] = arr; }); return map;
 }
 
-/* Worksheets (examples only; no readings) – STATIC child page */
-async function openWorksheetNow(items){
-  const kanjiList = items.map(x => ({k:x.k}));
-  const exMap = await fetchExamplesFor(kanjiList);
-
-  const cols = kanjiList.slice(0,6).map(({k})=>{
-    const ex = (exMap[k]||[]).slice(0,2).map(e=>{
-      const w = escapeHtml(e.w||''), r=escapeHtml(e.r||''), m=escapeHtml(e.m||'');
-      return `<div class="ex-mini"><span class="w">${w}</span>${r?`<span class="r">${r}</span>`:''}${m?`<span class="m">${m}</span>`:''}</div>`;
-    }).join('');
-    return `<div class="col"><div class="head"><div class="k">${k}</div></div>${ex}<div class="grid"></div></div>`;
-  }).join('');
-
-  const html = `<!doctype html>
-<html><head><meta charset="utf-8"><title>Practice</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  @page { size: A4; margin: 12mm; }
-  html,body{ height:100% }
-  body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
-  h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
-  .page{ display:grid; grid-template-columns: repeat(6, 1fr); gap: 10mm; min-height: calc(100vh - 24mm); padding: 2mm }
-  .col{ display:flex; flex-direction:column; border:1px solid #eee; border-radius:6px; padding:3mm }
-  .head{ display:flex; align-items:flex-end; justify-content:center; gap:4mm; margin-bottom:3mm; min-height:20mm }
-  .k{ font-size:20mm; line-height:1 }
-
-  .ex-mini{ margin:.5mm 0 2mm 0; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; background:#fff; }
-  .ex-mini .w{ font-weight:700; }
-  .ex-mini .r{ color:#777; font-size:3.5mm; display:inline-block; margin-left:2mm; }
-  .ex-mini .m{ display:block; font-size:3.6mm; margin-top:.5mm; }
-
-  .grid{ flex:1; display:grid; grid-auto-rows:12mm; grid-template-columns:12mm; justify-content:center; row-gap:3mm }
-  .sq{ width:12mm; height:12mm; border:1px solid rgba(0,0,0,.12);
-       background:linear-gradient(to right, rgba(0,0,0,.08) 1px, transparent 1px),
-                  linear-gradient(to bottom, rgba(0,0,0,.08) 1px, transparent 1px);
-       background-size:50% 100%, 100% 50%; }
-  @media print{ .page{ min-height:auto } }
-</style></head>
-<body>
-  <h2>Practice (Last ${kanjiList.length})</h2>
-  <div class="page" id="page">${cols}</div>
-<script>
-  (function(){
-    // fill each column with as many squares as fit
-    function fill(col){
-      const grid = col.querySelector('.grid');
-      const mm = 96/25.4, sq=12, gap=3;
-      const rectCol = col.getBoundingClientRect();
-      const rectGridTop = grid.getBoundingClientRect().top;
-      const avail = rectCol.bottom - rectGridTop - 4;
-      const per = Math.floor(avail / ((sq+gap)*mm));
-      for(let i=0;i<per;i++){ const d=document.createElement('div'); d.className='sq'; grid.appendChild(d); }
-    }
-    window.onload = ()=>{ document.querySelectorAll('.col').forEach(fill); };
-  })();
-</script></body></html>`;
-  openWithHtml(html);
-}
-
-/* Review (examples only) – STATIC child page */
+/* -------- Review page (with tiny × remove) -------- */
 async function openReviewNow(items){
   const list = items.slice(0,40).map(x => ({k:x.k}));
   const exMap = await fetchExamplesFor(list);
+  const ENDPOINT = window.HISTORY_ENDPOINT;
 
   const cells = list.map(({k})=>{
     const e = (exMap[k]||[])[0] || {};
     const w = e.w ? `<div class="ex-mini"><span class="w">${escapeHtml(e.w)}</span>${e.r?`<span class="r">${escapeHtml(e.r)}</span>`:''}${e.m?`<span class="m">${escapeHtml(e.m)}</span>`:''}</div>` : '';
-    return `<div class="cell"><div class="k">${k}</div>${w}</div>`;
+    return `<div class="cell" data-k="${k}">
+      <button class="hx" title="remove from history" aria-label="remove">×</button>
+      <div class="k">${k}</div>${w}
+    </div>`;
   }).join('');
 
   const html = `<!doctype html>
@@ -618,32 +491,58 @@ async function openReviewNow(items){
   body{ margin:0; font-family:"Noto Serif JP",serif; color:#222 }
   h2{ text-align:center; margin:.6rem 0 1rem 0; font:700 1.05rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif }
   .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
-  .cell{ display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+  .cell{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
          min-height:40mm; border:1px solid #eee; border-radius:6px; padding:2mm 2.5mm; background:#fff; }
   .k{ font-size:18mm; line-height:1; margin-top:1mm }
   .ex-mini{ width:100%; margin-top:1.5mm; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; }
   .ex-mini .w{ font-weight:700; }
   .ex-mini .r{ color:#777; font-size:3.4mm; display:inline-block; margin-left:2mm; }
   .ex-mini .m{ display:block; font-size:3.5mm; margin-top:.4mm; }
+  .hx{ position:absolute; top:2mm; right:2mm; appearance:none; background:transparent; border:0;
+       font:700 12px/1 system-ui; color:rgba(0,0,0,.35); cursor:pointer; }
+  .hx:hover{ color:rgba(0,0,0,.6) }
 </style></head>
 <body>
   <h2>Review (Last ${list.length})</h2>
-  <div class="grid">${cells}</div>
+  <div class="grid" id="grid">${cells}</div>
+<script>
+  (function(){
+    const ENDPOINT = ${JSON.stringify(ENDPOINT)};
+    function jsonp(u){
+      return new Promise((res,rej)=>{
+        const cb='__cb_'+Date.now()+Math.random().toString(36).slice(2);
+        const s=document.createElement('script');
+        s.src = u + (u.includes('?')?'&':'?') + 'callback=' + cb;
+        const done=(ok)=>{ try{ delete window[cb]; }catch(_){ window[cb]=void 0 } s.remove(); ok ? res(ok) : rej(new Error('fail')); };
+        window[cb]=(x)=>done(x);
+        s.onerror=()=>done(null);
+        document.head.appendChild(s);
+      });
+    }
+    document.getElementById('grid').addEventListener('click', async (e)=>{
+      const b = e.target.closest('.hx'); if(!b) return;
+      const cell = b.closest('.cell'); const k = cell?.dataset.k; if(!k) return;
+      try{
+        const r = await jsonp(ENDPOINT + '?op=remove&k=' + encodeURIComponent(k) + '&t=' + Date.now());
+        if(r && r.ok){ cell.remove(); }
+      }catch(_){}
+    });
+  })();
+</script>
 </body></html>`;
-  openWithHtml(html);
+  const w = window.open('', '_blank'); if(!w) return;
+  w.document.open(); w.document.write(html); w.document.close();
 }
 
-/* Boot: IMPORTANT — do not wait on index fetch for entry pages */
+/* Boot */
 window.addEventListener('load', () => {
-  // Home page only
   if (document.getElementById('results')) {
     loadEntries();
     attachSearch();
-    makeToolbarButtons();
-    historyReadSafe();  // warm cache
+    makeToolbarButtons();   // only Review button added
+    historyReadSafe();
   } else {
-    // Entry pages
     initStrokePlayers();
-    initExamplesUI();   // no waiting on anything
+    initExamplesUI();
   }
 });
