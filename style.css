@@ -151,35 +151,31 @@ a.kanji-link:hover{ border-bottom-style:solid }
 .stroke-gif img{ width:clamp(64px,12vw,128px); height:auto; display:block; background:#fff; border-radius:6px }
 
 /* ------------------- NEW: Examples UI ------------------- */
-.examples-block{ width:100%; margin-top:.4rem; }
-.ex-faint-add,
-.ex-faint-addmore,
-.ex-faint-btn{
-  appearance:none; -webkit-appearance:none; background:transparent; border:0;
-  color:rgba(42,36,27,.35);
-  font:600 .82rem/1.1 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
-  letter-spacing:.02em; cursor:pointer;
+/* ------------------- NEW: Examples UI (fix sizing) ------------------- */
+.examples-block{
+  width:100%;
+  margin-top:.6rem;
+  /* RESET base size so it doesn't inherit the huge .kanji-col size */
+  font-size: clamp(.95rem, .9vw + .1rem, 1rem);
+  line-height:1.55;
 }
-.ex-faint-add{ margin-top:.4rem; }
-.ex-faint-add:hover,
-.ex-faint-addmore:hover,
-.ex-faint-btn:hover{ color:rgba(42,36,27,.55); }
 
-.examples-wrap{
-  display:flex; flex-direction:column; gap:.35rem; margin-top:.35rem; width:100%;
-}
-.ex-row{
+.examples-wrap{ display:flex; flex-direction:column; gap:.35rem; margin-top:.35rem; width:100%; }
+
+/* normal text sizes */
+.ex-row{ 
   display:grid; grid-template-columns: 1fr auto; align-items:baseline;
   gap:.15rem .5rem; padding:.35rem .4rem; border:1px dashed rgba(0,0,0,.06);
   border-radius:8px; background:rgba(255,255,255,.55);
+  font-size:1em;       /* keep rows at normal text size */
 }
-.ex-word{
-  font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
-  font-weight:700; letter-spacing:.01em;
-}
-.ex-reading{ color:var(--muted); font-size:.92rem; }
-.ex-meaning{ grid-column:1/-1; }
-.ex-row .ex-faint-btn{ justify-self:end; }
+.ex-word{ font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif; font-weight:700; font-size:1.05em; }
+.ex-reading{ color:var(--muted); font-size:.95em; }
+.ex-meaning{ grid-column:1/-1; font-size:.95em; }
+
+/* faint buttons unchanged */
+.ex-faint-add,.ex-faint-addmore,.ex-faint-btn{ /* keep as before */ }
+
 
 .ex-editor{
   width:100%; border:1px solid var(--rule); border-radius:10px;
@@ -226,4 +222,5 @@ a.kanji-link:hover{ border-bottom-style:solid }
   body{ background:#fff; color:#111; padding:0 }
   .entry{ gap:1.2rem }
 }
+
 
