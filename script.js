@@ -1,7 +1,8 @@
 /* =========================================================
-   History + examples over JSONP.
+   History + examples + reading (new) over JSONP.
    - Review page supports per-kanji delete (tiny ×).
-   - Example list supports per-example delete (tiny ×).
+   - Per-kanji "Reading" add/edit/delete; appears above Examples.
+   - Review grid shows Reading above glyph in faded blue.
    - Worksheet buttons removed; only Review button remains.
    ========================================================= */
 
@@ -52,7 +53,7 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
   });
 }
 
-/* History API */
+/* ---------- History API ---------- */
 async function apiReadJsonp() {
   const t = Date.now();
   const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
@@ -68,6 +69,18 @@ function apiRemoveGet(k) {
   return jsonp(`${window.HISTORY_ENDPOINT}?op=remove&k=${encodeURIComponent(k)}&t=${t}`);
 }
 
+/* ---------- Examples API ---------- */
+function apiExGet(k)      { return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${Date.now()}`); }
+function apiExAdd(k,w,r,m){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_add&k=${encodeURIComponent(k)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
+function apiExUpdate(k,id,w,r,m){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
+function apiExDelete(k,id){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_del&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&t=${Date.now()}`); }
+
+/* ---------- Reading API (new) ---------- */
+function apiRdGet(k){  return jsonp(`${window.HISTORY_ENDPOINT}?op=rd_get&k=${encodeURIComponent(k)}&t=${Date.now()}`); }
+function apiRdSet(k,v){ return jsonp(`${window.HISTORY_ENDPOINT}?op=rd_set&k=${encodeURIComponent(k)}&v=${encodeURIComponent(v||'')}&t=${Date.now()}`); }
+function apiRdDel(k){  return jsonp(`${window.HISTORY_ENDPOINT}?op=rd_del&k=${encodeURIComponent(k)}&t=${Date.now()}`); }
+
+/* ---------- History helpers ---------- */
 function showHistoryWarning(msg) {
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
@@ -107,12 +120,6 @@ async function historyPush(k, r) {
   }
   historyReadSafe();
 }
-
-/* Examples API */
-function apiExGet(k)      { return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${Date.now()}`); }
-function apiExAdd(k,w,r,m){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_add&k=${encodeURIComponent(k)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
-function apiExUpdate(k,id,w,r,m){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
-function apiExDelete(k,id){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_del&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&t=${Date.now()}`); }
 
 /* ---------- Index (home) ---------- */
 function getEntryId(entry) {
@@ -311,6 +318,100 @@ function initStrokePlayers(){
   });
 }
 
+/* ---------------- Reading UI (new) ---------------- */
+function renderReading(container, value, kanji){
+  container.innerHTML = '';
+  const wrap = document.createElement('div');
+  wrap.className = 'rd-wrap';
+
+  if (value) {
+    const pill = document.createElement('span');
+    pill.className = 'rd-pill';
+    pill.textContent = value;
+
+    const edit = document.createElement('button');
+    edit.type = 'button'; edit.className = 'rd-edit'; edit.textContent = 'edit';
+    edit.addEventListener('click', () => openReadingEditor(container, kanji, value));
+
+    const del  = document.createElement('button');
+    del.type = 'button'; del.className = 'rd-del'; del.title='delete reading'; del.textContent = '×';
+    del.addEventListener('click', async () => {
+      try { await apiRdDel(kanji); renderReading(container, '', kanji); }
+      catch(_) {}
+    });
+
+    pill.appendChild(edit);
+    pill.appendChild(del);
+    wrap.appendChild(pill);
+  } else {
+    const add = document.createElement('button');
+    add.className = 'rd-add'; add.type = 'button'; add.title='Add reading';
+    add.textContent = '＋ add reading';
+    add.addEventListener('click', () => openReadingEditor(container, kanji, ''));
+    wrap.appendChild(add);
+  }
+
+  container.appendChild(wrap);
+}
+
+function openReadingEditor(container, kanji, initial){
+  const editor = document.createElement('div');
+  editor.className = 'rd-editor';
+
+  const input = Object.assign(document.createElement('input'), {
+    className:'rd-in',
+    placeholder:'Reading (e.g., かみ／シン, preferred)',
+    value: initial || ''
+  });
+
+  const actions = document.createElement('div');
+  actions.className = 'rd-actions';
+
+  const save = Object.assign(document.createElement('button'), { className:'rd-save', type:'button', textContent:'Save' });
+  const cancel = Object.assign(document.createElement('button'), { className:'rd-cancel', type:'button', textContent:'Cancel' });
+
+  actions.append(save, cancel);
+  editor.append(input, actions);
+
+  container.firstChild ? container.insertBefore(editor, container.firstChild) : container.appendChild(editor);
+
+  const close = () => editor.remove();
+
+  save.addEventListener('click', async () => {
+    const v = input.value.trim();
+    try {
+      await apiRdSet(kanji, v);
+      renderReading(container, v, kanji);
+    } catch(_){}
+  });
+  cancel.addEventListener('click', close);
+}
+
+async function initReadingUI(){
+  const meta = window.__ENTRY_META__;
+  if (!meta?.kanji) return;
+  const col = document.querySelector('.kanji-col'); if (!col) return;
+
+  // Anchor directly under the glyph / stroke player
+  let anchor = col.querySelector('.reading-anchor');
+  if (!anchor) {
+    anchor = document.createElement('div');
+    anchor.className = 'reading-anchor';
+    col.insertBefore(anchor, col.querySelector('.examples-anchor') || null);
+  }
+  const container = document.createElement('div');
+  container.className = 'reading-block';
+  anchor.replaceWith(container);
+
+  try {
+    const res = await apiRdGet(meta.kanji);
+    const value = (res && typeof res.value === 'string') ? res.value : '';
+    renderReading(container, value, meta.kanji);
+  } catch(_) {
+    renderReading(container, '', meta.kanji);
+  }
+}
+
 /* ---------------- Examples UI ---------------- */
 function renderExampleList(container, list, kanji) {
   container.innerHTML = '';
@@ -458,7 +559,7 @@ function makeToolbarButtons(){
   bar.append(b3);
 }
 
-/* -------- Fetch examples for a set of kanji -------- */
+/* -------- Fetch helpers for Review -------- */
 async function fetchExamplesFor(list) {
   const uniq = [...new Set(list.map(x => x.k))];
   const pairs = await Promise.all(uniq.map(async k => {
@@ -467,18 +568,29 @@ async function fetchExamplesFor(list) {
   }));
   const map = {}; pairs.forEach(([k, arr]) => { map[k] = arr; }); return map;
 }
+async function fetchReadingsFor(list){
+  const uniq = [...new Set(list.map(x => x.k))];
+  const pairs = await Promise.all(uniq.map(async k => {
+    try { const r = await apiRdGet(k); return [k, (r && typeof r.value === 'string') ? r.value : '']; }
+    catch { return [k, '']; }
+  }));
+  const map = {}; pairs.forEach(([k, v]) => { map[k] = v; }); return map;
+}
 
-/* -------- Review page (with tiny × remove) -------- */
+/* -------- Review page (with tiny × remove, plus reading tag) -------- */
 async function openReviewNow(items){
   const list = items.slice(0,40).map(x => ({k:x.k}));
-  const exMap = await fetchExamplesFor(list);
+  const [exMap, rdMap] = await Promise.all([fetchExamplesFor(list), fetchReadingsFor(list)]);
   const ENDPOINT = window.HISTORY_ENDPOINT;
 
   const cells = list.map(({k})=>{
+    const rd = rdMap[k] || '';
+    const rdHtml = rd ? `<div class="rd-tag">${escapeHtml(rd)}</div>` : '';
     const e = (exMap[k]||[])[0] || {};
     const w = e.w ? `<div class="ex-mini"><span class="w">${escapeHtml(e.w)}</span>${e.r?`<span class="r">${escapeHtml(e.r)}</span>`:''}${e.m?`<span class="m">${escapeHtml(e.m)}</span>`:''}</div>` : '';
     return `<div class="cell" data-k="${k}">
       <button class="hx" title="remove from history" aria-label="remove">×</button>
+      ${rdHtml}
       <div class="k">${k}</div>${w}
     </div>`;
   }).join('');
@@ -493,6 +605,13 @@ async function openReviewNow(items){
   .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
   .cell{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
          min-height:40mm; border:1px solid #eee; border-radius:6px; padding:2mm 2.5mm; background:#fff; }
+  .rd-tag{
+    margin-top:1mm; margin-bottom:1mm;
+    font:700 3.6mm/1.1 "Noto Serif JP",serif;
+    color: rgba(32,84,140,.78); background: rgba(32,84,140,.06);
+    border:1px solid rgba(32,84,140,.20); border-radius:999px;
+    padding: .6mm 2.2mm;
+  }
   .k{ font-size:18mm; line-height:1; margin-top:1mm }
   .ex-mini{ width:100%; margin-top:1.5mm; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; }
   .ex-mini .w{ font-weight:700; }
@@ -543,6 +662,7 @@ window.addEventListener('load', () => {
     historyReadSafe();
   } else {
     initStrokePlayers();
+    initReadingUI();        // <-- new
     initExamplesUI();
   }
 });
