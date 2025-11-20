@@ -238,8 +238,24 @@ a.kanji-link:hover{ border-bottom-style:solid }
   font-weight:700; letter-spacing:.01em;
   font-size:1.5rem; line-height:1.1; color:#000;
 }
-.ex-reading{ display:block; margin:0 0 .15rem 0; color:#9a958d; font-size:.96rem }
-.ex-meaning{ display:block; margin:0; color:#b5afa6; font-size:.94rem }
+
+
+.ex-reading{
+  display:block;
+  margin:0 0 .15rem 0;
+  /* Japanese reading: a bit faint */
+  color:rgba(0,0,0,.55);
+  font-size:.96rem;
+}
+
+.ex-meaning{
+  display:block;
+  margin:0;
+  /* English translation: almost invisible */
+  color:rgba(0,0,0,.18);
+  font-size:.94rem;
+}
+
 
 .ex-faint-add,
 .ex-faint-addmore{
@@ -283,3 +299,4 @@ a.kanji-link:hover{ border-bottom-style:solid }
   body{ background:#fff; color:#111; padding:0 }
   .entry{ gap:1.2rem }
 }
+
