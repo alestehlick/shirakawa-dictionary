@@ -299,12 +299,14 @@ function attachSearch() {
   searchEntries();
 }
 
-/* ---------- Entry pages: record history ---------- */
+// Record that you visited this kanji, but do NOT attach any default reading.
+// The reading will appear in history only after you explicitly save one.
 (function maybeRecordFromEntryPage() {
   if (window.__ENTRY_META__ && window.__ENTRY_META__.kanji) {
-    historyPush(window.__ENTRY_META__.kanji, window.__ENTRY_META__.furigana || '');
+    historyPush(window.__ENTRY_META__.kanji, '');
   }
 })();
+
 
 /* ---------- Stroke players ---------- */
 function initStrokePlayers() {
@@ -440,12 +442,14 @@ async function initReadingUI() {
   try {
     const res = await apiRdGet(meta.kanji);
     const v = typeof res?.value === 'string' ? res.value : '';
-    const seed = v || meta.furigana || '';
-    renderReadingBlock(container, meta.kanji, seed);
+    // If nothing stored yet, start EMPTY — you will add readings yourself.
+    renderReadingBlock(container, meta.kanji, v);
   } catch (_) {
-    renderReadingBlock(container, meta.kanji, meta.furigana || '');
+    // On error, also start empty.
+    renderReadingBlock(container, meta.kanji, '');
   }
 }
+
 
 /* ---------- Examples UI (entry page) ---------- */
 function renderExampleList(container, list, kanji) {
