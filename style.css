@@ -159,7 +159,12 @@ a.kanji-link:hover{ border-bottom-style:solid }
 .stroke-gif img{ width:clamp(72px,12vw,132px); height:auto; display:block; background:#fff; border-radius:6px }
 
 /* ------------------- Reading UI (new) ------------------- */
-.reading-block{ width:100%; }
+/* NEW – reset the huge inherited size from .kanji-col */
+.reading-block{
+  width:100%;
+  font-size:1rem;   /* back to normal text size */
+}
+
 .rd-wrap{ display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
 
 .rd-pill{
@@ -169,7 +174,11 @@ a.kanji-link:hover{ border-bottom-style:solid }
   color:var(--blue-ink); background:var(--blue-bg);
   border:1px solid var(--blue-faint); border-radius:999px;
   padding:.25rem .6rem; line-height:1;
+  /* ADD THESE: */
+  font-size:1.5rem;     /* matches .ex-word */
+  line-height:1.1;
 }
+
 .rd-edit, .rd-del{
   appearance:none; background:transparent; border:0; cursor:pointer;
   font:600 .8rem/1 system-ui;
@@ -271,3 +280,4 @@ a.kanji-link:hover{ border-bottom-style:solid }
   body{ background:#fff; color:#111; padding:0 }
   .entry{ gap:1.2rem }
 }
+
