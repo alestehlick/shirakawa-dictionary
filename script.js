@@ -1,19 +1,21 @@
 /* =========================================================
-   History + examples + reading (new) over JSONP.
+   History + examples over JSONP.
    - Review page supports per-kanji delete (tiny ×).
-   - Per-kanji "Reading" add/edit/delete; appears above Examples.
-   - Review grid shows Reading above glyph in faded blue.
+   - Example list supports per-example delete (tiny ×).
    - Worksheet buttons removed; only Review button remains.
    ========================================================= */
 
 let REMOTE_HISTORY = [];
 
 /* Helpers */
-const escapeHtml = s => String(s).replace(/[&<>"'\\]/g, m =>
-  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','\\':'&#92;'}[m])
-);
+const escapeHtml = s =>
+  String(s).replace(/[&<>"'\\]/g, m =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '\\': '&#92;' }[m])
+  );
+
 const toArray = v =>
-  Array.isArray(v) ? v : (v == null || v === '') ? [] :
+  Array.isArray(v) ? v :
+  (v == null || v === '') ? [] :
   String(v).split(/\s*[;,/｜|]\s*| +/).filter(Boolean);
 
 /* JSONP core */
@@ -25,6 +27,7 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
 
     const script = document.createElement('script');
     let done = false;
+
     const cleanup = () => {
       if (script.parentNode) script.parentNode.removeChild(script);
       try { delete window[cbName]; } catch (_) { window[cbName] = undefined; }
@@ -32,19 +35,24 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
 
     const timer = setTimeout(() => {
       if (done) return;
-      done = true; cleanup();
+      done = true;
+      cleanup();
       reject(new Error('timeout'));
     }, timeoutMs);
 
     window[cbName] = (data) => {
       if (done) return;
-      done = true; clearTimeout(timer); cleanup();
+      done = true;
+      clearTimeout(timer);
+      cleanup();
       resolve(data);
     };
 
     script.onerror = () => {
       if (done) return;
-      done = true; clearTimeout(timer); cleanup();
+      done = true;
+      clearTimeout(timer);
+      cleanup();
       reject(new Error('script error'));
     };
 
@@ -59,28 +67,18 @@ async function apiReadJsonp() {
   const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
   return jsonp(url);
 }
+
 async function apiPushGet(k, r) {
   const t = Date.now();
-  const url = `${window.HISTORY_ENDPOINT}?op=push&k=${encodeURIComponent(k)}&r=${encodeURIComponent(r||'')}&t=${t}`;
+  const url = `${window.HISTORY_ENDPOINT}?op=push&k=${encodeURIComponent(k)}&r=${encodeURIComponent(r || '')}&t=${t}`;
   return jsonp(url);
 }
+
 function apiRemoveGet(k) {
   const t = Date.now();
   return jsonp(`${window.HISTORY_ENDPOINT}?op=remove&k=${encodeURIComponent(k)}&t=${t}`);
 }
 
-/* ---------- Examples API ---------- */
-function apiExGet(k)      { return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${Date.now()}`); }
-function apiExAdd(k,w,r,m){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_add&k=${encodeURIComponent(k)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
-function apiExUpdate(k,id,w,r,m){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`); }
-function apiExDelete(k,id){ return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_del&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&t=${Date.now()}`); }
-
-/* ---------- Reading API (new) ---------- */
-function apiRdGet(k){  return jsonp(`${window.HISTORY_ENDPOINT}?op=rd_get&k=${encodeURIComponent(k)}&t=${Date.now()}`); }
-function apiRdSet(k,v){ return jsonp(`${window.HISTORY_ENDPOINT}?op=rd_set&k=${encodeURIComponent(k)}&v=${encodeURIComponent(v||'')}&t=${Date.now()}`); }
-function apiRdDel(k){  return jsonp(`${window.HISTORY_ENDPOINT}?op=rd_del&k=${encodeURIComponent(k)}&t=${Date.now()}`); }
-
-/* ---------- History helpers ---------- */
 function showHistoryWarning(msg) {
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
@@ -93,6 +91,7 @@ function showHistoryWarning(msg) {
   }
   note.textContent = `History issue: ${msg}`;
 }
+
 async function historyReadSafe() {
   try {
     const r = await apiReadJsonp();
@@ -108,9 +107,11 @@ async function historyReadSafe() {
     showHistoryWarning(e.message || 'fetch error');
   }
 }
+
 async function historyPush(k, r) {
   if (!k) return;
-  REMOTE_HISTORY = [{k, r: r || ''}, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 200);
+  // update local cache immediately for snappy behaviour
+  REMOTE_HISTORY = [{ k, r: r || '' }, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 200);
   try {
     const res = await apiPushGet(k, r);
     if (!res?.ok) throw new Error('push failed');
@@ -121,10 +122,30 @@ async function historyPush(k, r) {
   historyReadSafe();
 }
 
+/* ---------- Examples API ---------- */
+function apiExGet(k) {
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_get&k=${encodeURIComponent(k)}&t=${Date.now()}`);
+}
+function apiExAdd(k, w, r, m) {
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_add&k=${encodeURIComponent(k)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`);
+}
+function apiExUpdate(k, id, w, r, m) {
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_update&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&w=${encodeURIComponent(w)}&r=${encodeURIComponent(r)}&m=${encodeURIComponent(m)}&t=${Date.now()}`);
+}
+function apiExDelete(k, id) {
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_del&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&t=${Date.now()}`);
+}
+
 /* ---------- Index (home) ---------- */
 function getEntryId(entry) {
-  if (entry?.id != null)  { const m = String(entry.id).match(/\d+/);  if (m) return m[0]; }
-  if (entry?.num != null) { const m = String(entry.num).match(/\d+/); if (m) return m[0]; }
+  if (entry?.id != null) {
+    const m = String(entry.id).match(/\d+/);
+    if (m) return m[0];
+  }
+  if (entry?.num != null) {
+    const m = String(entry.num).match(/\d+/);
+    if (m) return m[0];
+  }
   const candidates = [entry?.json, entry?.file, entry?.path, entry?.href, entry?.src];
   for (const c of candidates) {
     if (!c) continue;
@@ -135,14 +156,21 @@ function getEntryId(entry) {
   return null;
 }
 
-function initThumb(img){
+function initThumb(img) {
   const list = (img.dataset.srcList || '').split('|').filter(Boolean);
   if (!list.length) { img.remove(); return; }
   let i = 0;
-  img.onerror = () => { i += 1; if (i < list.length) img.src = list[i]; else img.remove(); };
+  img.onerror = () => {
+    i += 1;
+    if (i < list.length) img.src = list[i];
+    else img.remove();
+  };
   img.src = list[i];
 }
-function initAllThumbs(root = document){ root.querySelectorAll('img.thumb[data-src-list]').forEach(initThumb); }
+
+function initAllThumbs(root = document) {
+  root.querySelectorAll('img.thumb[data-src-list]').forEach(initThumb);
+}
 
 async function loadEntries() {
   const results = document.getElementById('results');
@@ -180,8 +208,12 @@ async function loadEntries() {
       }
       if (id) {
         imageSources.push(
-          `images/${id}.png`,`images/${id}.jpg`,`images/${id}.jpeg`,
-          `images/${id}.webp`,`images/${id}.gif`,`images/${id}.svg`
+          `images/${id}.png`,
+          `images/${id}.jpg`,
+          `images/${id}.jpeg`,
+          `images/${id}.webp`,
+          `images/${id}.gif`,
+          `images/${id}.svg`
         );
       }
       const drawSource = id ? `Draws/IM_${id}.png` : null;
@@ -209,20 +241,28 @@ async function loadEntries() {
         const url = e.currentTarget.href;
         const k = div.dataset.kanji;
         const r = div.dataset.firstReading || '';
-        Promise.race([historyPush(k, r), new Promise(res => setTimeout(res, 300))])
-          .finally(() => { window.location.href = url; });
+        Promise.race([
+          historyPush(k, r),
+          new Promise(res => setTimeout(res, 300))
+        ]).finally(() => {
+          window.location.href = url;
+        });
       });
     });
 
-    if (grid.children.length) { results.appendChild(grid); initAllThumbs(grid); }
-    else { results.textContent = 'No entries found yet.'; }
+    if (grid.children.length) {
+      results.appendChild(grid);
+      initAllThumbs(grid);
+    } else {
+      results.textContent = 'No entries found yet.';
+    }
   } catch (err) {
     console.error(err);
     results.textContent = 'No entries found yet.';
   }
 }
 
-/* Search */
+/* ---------- Search ---------- */
 function searchEntries() {
   const q = (document.getElementById('search')?.value || '').trim().toLowerCase();
   const grid = document.getElementById('index-grid');
@@ -267,29 +307,44 @@ function searchEntries() {
   ranked.forEach(({ el }) => grid.appendChild(el));
 }
 
-const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
+const debounce = (fn, ms = 120) => {
+  let t;
+  return (...args) => {
+    clearTimeout(t);
+    t = setTimeout(() => fn(...args), ms);
+  };
+};
+
 function attachSearch() {
   const box = document.getElementById('search');
   if (!box) return;
   const run = debounce(searchEntries, 120);
   box.addEventListener('input', run);
-  box.addEventListener('keydown', e => { if (e.key === 'Escape') { box.value = ''; searchEntries(); }});
+  box.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      box.value = '';
+      searchEntries();
+    }
+  });
   window.addEventListener('keydown', e => {
     const tag = document.activeElement?.tagName;
-    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); box.focus(); }
+    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
+      e.preventDefault();
+      box.focus();
+    }
   });
   searchEntries();
 }
 
-/* Entry pages: record */
-(function maybeRecordFromEntryPage(){
+/* ---------- Entry pages: record visit ---------- */
+(function maybeRecordFromEntryPage() {
   if (window.__ENTRY_META__ && window.__ENTRY_META__.kanji) {
     historyPush(window.__ENTRY_META__.kanji, window.__ENTRY_META__.furigana || '');
   }
 })();
 
-/* Stroke players */
-function initStrokePlayers(){
+/* ---------- Stroke players ---------- */
+function initStrokePlayers() {
   document.querySelectorAll('.stroke-gif').forEach(wrapper => {
     const src = wrapper.getAttribute('data-stroke-src');
     const btn = wrapper.querySelector('.stroke-play');
@@ -298,7 +353,8 @@ function initStrokePlayers(){
     let timer = null;
 
     const stop = () => {
-      clearTimeout(timer); timer = null;
+      clearTimeout(timer);
+      timer = null;
       wrapper.classList.remove('playing');
       wrapper.innerHTML =
         '<button type="button" class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>';
@@ -318,101 +374,7 @@ function initStrokePlayers(){
   });
 }
 
-/* ---------------- Reading UI (new) ---------------- */
-function renderReading(container, value, kanji){
-  container.innerHTML = '';
-  const wrap = document.createElement('div');
-  wrap.className = 'rd-wrap';
-
-  if (value) {
-    const pill = document.createElement('span');
-    pill.className = 'rd-pill';
-    pill.textContent = value;
-
-    const edit = document.createElement('button');
-    edit.type = 'button'; edit.className = 'rd-edit'; edit.textContent = 'edit';
-    edit.addEventListener('click', () => openReadingEditor(container, kanji, value));
-
-    const del  = document.createElement('button');
-    del.type = 'button'; del.className = 'rd-del'; del.title='delete reading'; del.textContent = '×';
-    del.addEventListener('click', async () => {
-      try { await apiRdDel(kanji); renderReading(container, '', kanji); }
-      catch(_) {}
-    });
-
-    pill.appendChild(edit);
-    pill.appendChild(del);
-    wrap.appendChild(pill);
-  } else {
-    const add = document.createElement('button');
-    add.className = 'rd-add'; add.type = 'button'; add.title='Add reading';
-    add.textContent = '＋ add reading';
-    add.addEventListener('click', () => openReadingEditor(container, kanji, ''));
-    wrap.appendChild(add);
-  }
-
-  container.appendChild(wrap);
-}
-
-function openReadingEditor(container, kanji, initial){
-  const editor = document.createElement('div');
-  editor.className = 'rd-editor';
-
-  const input = Object.assign(document.createElement('input'), {
-    className:'rd-in',
-    placeholder:'Reading (e.g., かみ／シン, preferred)',
-    value: initial || ''
-  });
-
-  const actions = document.createElement('div');
-  actions.className = 'rd-actions';
-
-  const save = Object.assign(document.createElement('button'), { className:'rd-save', type:'button', textContent:'Save' });
-  const cancel = Object.assign(document.createElement('button'), { className:'rd-cancel', type:'button', textContent:'Cancel' });
-
-  actions.append(save, cancel);
-  editor.append(input, actions);
-
-  container.firstChild ? container.insertBefore(editor, container.firstChild) : container.appendChild(editor);
-
-  const close = () => editor.remove();
-
-  save.addEventListener('click', async () => {
-    const v = input.value.trim();
-    try {
-      await apiRdSet(kanji, v);
-      renderReading(container, v, kanji);
-    } catch(_){}
-  });
-  cancel.addEventListener('click', close);
-}
-
-async function initReadingUI(){
-  const meta = window.__ENTRY_META__;
-  if (!meta?.kanji) return;
-  const col = document.querySelector('.kanji-col'); if (!col) return;
-
-  // Anchor directly under the glyph / stroke player
-  let anchor = col.querySelector('.reading-anchor');
-  if (!anchor) {
-    anchor = document.createElement('div');
-    anchor.className = 'reading-anchor';
-    col.insertBefore(anchor, col.querySelector('.examples-anchor') || null);
-  }
-  const container = document.createElement('div');
-  container.className = 'reading-block';
-  anchor.replaceWith(container);
-
-  try {
-    const res = await apiRdGet(meta.kanji);
-    const value = (res && typeof res.value === 'string') ? res.value : '';
-    renderReading(container, value, meta.kanji);
-  } catch(_) {
-    renderReading(container, '', meta.kanji);
-  }
-}
-
-/* ---------------- Examples UI ---------------- */
+/* ---------------- Examples UI (entry page) ---------------- */
 function renderExampleList(container, list, kanji) {
   container.innerHTML = '';
 
@@ -429,6 +391,7 @@ function renderExampleList(container, list, kanji) {
 
   const wrap = document.createElement('div');
   wrap.className = 'examples-wrap';
+
   list.forEach(ex => {
     const row = document.createElement('div');
     row.className = 'ex-row';
@@ -452,17 +415,24 @@ function renderExampleList(container, list, kanji) {
         const res = await apiExDelete(kanji, ex.id);
         const list2 = Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : []);
         renderExampleList(container, list2, kanji);
-      } catch (_) { /* ignore */ }
+      } catch (_) {
+        // ignore
+      }
     });
 
     controls.append(edit, del);
 
     const word = document.createElement('span');
-    word.className = 'ex-word';   word.textContent = ex.w || '';
+    word.className = 'ex-word';
+    word.textContent = ex.w || '';
+
     const reading = document.createElement('span');
-    reading.className = 'ex-reading'; reading.textContent = ex.r || '';
+    reading.className = 'ex-reading';
+    reading.textContent = ex.r || '';
+
     const meaning = document.createElement('span');
-    meaning.className = 'ex-meaning'; meaning.textContent = ex.m || '';
+    meaning.className = 'ex-meaning';
+    meaning.textContent = ex.m || '';
 
     row.append(controls, word, reading, meaning);
     wrap.appendChild(row);
@@ -482,12 +452,32 @@ function openExampleEditor(container, kanji, existing = null) {
   const editor = document.createElement('div');
   editor.className = 'ex-editor';
 
-  const iWord = Object.assign(document.createElement('input'), { className:'ex-in ex-w',  placeholder:'Word / Compound', value: existing?.w || '' });
-  const iRead = Object.assign(document.createElement('input'), { className:'ex-in ex-r',  placeholder:'Reading', value: existing?.r || '' });
-  const iMean = Object.assign(document.createElement('input'), { className:'ex-in ex-m',  placeholder:'English meaning', value: existing?.m || '' });
+  const iWord = Object.assign(document.createElement('input'), {
+    className: 'ex-in ex-w',
+    placeholder: 'Word / Compound',
+    value: existing?.w || ''
+  });
+  const iRead = Object.assign(document.createElement('input'), {
+    className: 'ex-in ex-r',
+    placeholder: 'Reading',
+    value: existing?.r || ''
+  });
+  const iMean = Object.assign(document.createElement('input'), {
+    className: 'ex-in ex-m',
+    placeholder: 'English meaning',
+    value: existing?.m || ''
+  });
 
-  const save = Object.assign(document.createElement('button'), { className:'ex-save', type:'button', textContent: existing ? 'Save' : 'Add' });
-  const cancel = Object.assign(document.createElement('button'), { className:'ex-cancel', type:'button', textContent:'Cancel' });
+  const save = Object.assign(document.createElement('button'), {
+    className: 'ex-save',
+    type: 'button',
+    textContent: existing ? 'Save' : 'Add'
+  });
+  const cancel = Object.assign(document.createElement('button'), {
+    className: 'ex-cancel',
+    type: 'button',
+    textContent: 'Cancel'
+  });
 
   const row = document.createElement('div');
   row.className = 'ex-editor-row';
@@ -499,7 +489,7 @@ function openExampleEditor(container, kanji, existing = null) {
 
   editor.append(row, actions);
 
-  if (container.firstChild && (container.firstChild.classList.contains('ex-faint-add'))) {
+  if (container.firstChild && container.firstChild.classList.contains('ex-faint-add')) {
     container.firstChild.remove();
   }
   container.prepend(editor);
@@ -510,15 +500,23 @@ function openExampleEditor(container, kanji, existing = null) {
     const w = iWord.value.trim();
     const r = iRead.value.trim();
     const m = iMean.value.trim();
-    if (!w && !r && !m) { done(); return; }
+    if (!w && !r && !m) {
+      done();
+      return;
+    }
 
     try {
       let res;
-      if (existing?.id) res = await apiExUpdate(kanji, existing.id, w, r, m);
-      else res = await apiExAdd(kanji, w, r, m);
+      if (existing?.id) {
+        res = await apiExUpdate(kanji, existing.id, w, r, m);
+      } else {
+        res = await apiExAdd(kanji, w, r, m);
+      }
       const list = Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : []);
       renderExampleList(container, list || [], kanji);
-    } catch (_) { /* ignore */ }
+    } catch (_) {
+      // ignore
+    }
   });
 
   cancel.addEventListener('click', done);
@@ -527,10 +525,15 @@ function openExampleEditor(container, kanji, existing = null) {
 async function initExamplesUI() {
   const meta = window.__ENTRY_META__;
   if (!meta?.kanji) return;
-  const col = document.querySelector('.kanji-col'); if (!col) return;
+  const col = document.querySelector('.kanji-col');
+  if (!col) return;
 
   let anchor = col.querySelector('.examples-anchor');
-  if (!anchor) { anchor = document.createElement('div'); anchor.className = 'examples-anchor'; col.appendChild(anchor); }
+  if (!anchor) {
+    anchor = document.createElement('div');
+    anchor.className = 'examples-anchor';
+    col.appendChild(anchor);
+  }
   const container = document.createElement('div');
   container.className = 'examples-block';
   anchor.replaceWith(container);
@@ -544,53 +547,55 @@ async function initExamplesUI() {
   }
 }
 
-/* -------- Toolbar: only Review button -------- */
-function makeToolbarButtons(){
+/* ---------- Toolbar: only Review button ---------- */
+function makeToolbarButtons() {
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
 
-  const b3 = Object.assign(document.createElement('button'), { className:'toolbtn', textContent:'Review: Last 40' });
+  const b3 = Object.assign(document.createElement('button'), {
+    className: 'toolbtn',
+    textContent: 'Review: Last 40'
+  });
   b3.addEventListener('click', async () => {
     if (!REMOTE_HISTORY.length) await historyReadSafe();
-    const list = REMOTE_HISTORY.slice(0,40);
+    const list = REMOTE_HISTORY.slice(0, 40);
     if (list.length) await openReviewNow(list);
   });
 
   bar.append(b3);
 }
 
-/* -------- Fetch helpers for Review -------- */
+/* ---------- Fetch examples for a set of kanji ---------- */
 async function fetchExamplesFor(list) {
   const uniq = [...new Set(list.map(x => x.k))];
-  const pairs = await Promise.all(uniq.map(async k => {
-    try { const res = await apiExGet(k); return [k, Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : [])]; }
-    catch { return [k, []]; }
-  }));
-  const map = {}; pairs.forEach(([k, arr]) => { map[k] = arr; }); return map;
-}
-async function fetchReadingsFor(list){
-  const uniq = [...new Set(list.map(x => x.k))];
-  const pairs = await Promise.all(uniq.map(async k => {
-    try { const r = await apiRdGet(k); return [k, (r && typeof r.value === 'string') ? r.value : '']; }
-    catch { return [k, '']; }
-  }));
-  const map = {}; pairs.forEach(([k, v]) => { map[k] = v; }); return map;
+  const pairs = await Promise.all(
+    uniq.map(async k => {
+      try {
+        const res = await apiExGet(k);
+        return [k, Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : [])];
+      } catch {
+        return [k, []];
+      }
+    })
+  );
+  const map = {};
+  pairs.forEach(([k, arr]) => { map[k] = arr; });
+  return map;
 }
 
-/* -------- Review page (with tiny × remove, plus reading tag) -------- */
-async function openReviewNow(items){
-  const list = items.slice(0,40).map(x => ({k:x.k}));
-  const [exMap, rdMap] = await Promise.all([fetchExamplesFor(list), fetchReadingsFor(list)]);
+/* ---------- Review page (with tiny × remove + faint example text) ---------- */
+async function openReviewNow(items) {
+  const list = items.slice(0, 40).map(x => ({ k: x.k }));
+  const exMap = await fetchExamplesFor(list);
   const ENDPOINT = window.HISTORY_ENDPOINT;
 
-  const cells = list.map(({k})=>{
-    const rd = rdMap[k] || '';
-    const rdHtml = rd ? `<div class="rd-tag">${escapeHtml(rd)}</div>` : '';
-    const e = (exMap[k]||[])[0] || {};
-    const w = e.w ? `<div class="ex-mini"><span class="w">${escapeHtml(e.w)}</span>${e.r?`<span class="r">${escapeHtml(e.r)}</span>`:''}${e.m?`<span class="m">${escapeHtml(e.m)}</span>`:''}</div>` : '';
+  const cells = list.map(({ k }) => {
+    const e = (exMap[k] || [])[0] || {};
+    const w = e.w
+      ? `<div class="ex-mini"><span class="w">${escapeHtml(e.w)}</span>${e.r ? `<span class="r">${escapeHtml(e.r)}</span>` : ''}${e.m ? `<span class="m">${escapeHtml(e.m)}</span>` : ''}</div>`
+      : '';
     return `<div class="cell" data-k="${k}">
       <button class="hx" title="remove from history" aria-label="remove">×</button>
-      ${rdHtml}
       <div class="k">${k}</div>${w}
     </div>`;
   }).join('');
@@ -605,21 +610,43 @@ async function openReviewNow(items){
   .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
   .cell{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
          min-height:40mm; border:1px solid #eee; border-radius:6px; padding:2mm 2.5mm; background:#fff; }
-  .rd-tag{
-    margin-top:1mm; margin-bottom:1mm;
-    font:700 3.6mm/1.1 "Noto Serif JP",serif;
-    color: rgba(32,84,140,.78); background: rgba(32,84,140,.06);
-    border:1px solid rgba(32,84,140,.20); border-radius:999px;
-    padding: .6mm 2.2mm;
-  }
   .k{ font-size:18mm; line-height:1; margin-top:1mm }
-  .ex-mini{ width:100%; margin-top:1.5mm; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; }
-  .ex-mini .w{ font-weight:700; }
-  .ex-mini .r{ color:#777; font-size:3.4mm; display:inline-block; margin-left:2mm; }
-  .ex-mini .m{ display:block; font-size:3.5mm; margin-top:.4mm; }
   .hx{ position:absolute; top:2mm; right:2mm; appearance:none; background:transparent; border:0;
        font:700 12px/1 system-ui; color:rgba(0,0,0,.35); cursor:pointer; }
   .hx:hover{ color:rgba(0,0,0,.6) }
+
+  /* ---------- Example box (tunable faintness) ---------- */
+  :root{
+    /* 1.0 = opaque, 0 = invisible */
+    --rv-jp: .80;      /* Japanese word line */
+    --rv-romaji: .55;  /* romaji reading */
+    --rv-en: .18;      /* English gloss (very faint) */
+  }
+  .ex-mini{
+    width:100%;
+    margin-top:1.5mm;
+    padding:1mm 1.5mm;
+    border:1px dashed rgba(0,0,0,.10);
+    border-radius:5px;
+    background:rgba(0,0,0,.015);
+  }
+  .ex-mini .w{
+    display:block;
+    font-weight:700;
+    color:rgba(0,0,0,var(--rv-jp));
+  }
+  .ex-mini .r{
+    display:inline-block;
+    margin-left:6px;
+    font-size:3.2mm;
+    color:rgba(0,0,0,var(--rv-romaji));
+  }
+  .ex-mini .m{
+    display:block;
+    margin-top:.35mm;
+    font-size:3.3mm;
+    color:rgba(0,0,0,var(--rv-en));
+  }
 </style></head>
 <body>
   <h2>Review (Last ${list.length})</h2>
@@ -649,20 +676,25 @@ async function openReviewNow(items){
   })();
 </script>
 </body></html>`;
-  const w = window.open('', '_blank'); if(!w) return;
-  w.document.open(); w.document.write(html); w.document.close();
+
+  const w = window.open('', '_blank');
+  if (!w) return;
+  w.document.open();
+  w.document.write(html);
+  w.document.close();
 }
 
-/* Boot */
+/* ---------- Boot ---------- */
 window.addEventListener('load', () => {
   if (document.getElementById('results')) {
+    // Home page
     loadEntries();
     attachSearch();
-    makeToolbarButtons();   // only Review button added
+    makeToolbarButtons();   // only Review button
     historyReadSafe();
   } else {
+    // Entry pages
     initStrokePlayers();
-    initReadingUI();        // <-- new
     initExamplesUI();
   }
 });
