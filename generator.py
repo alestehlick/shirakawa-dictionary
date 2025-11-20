@@ -33,10 +33,7 @@ TEMPLATE = """<!doctype html>
   <div class="kanji-col">
     <div class="kanji-glyph">{kanji}</div>
     {stroke_gif_html}
-
-    <!-- Reading appears above Examples -->
     <div class="reading-anchor"></div>
-
     <div class="examples-anchor"></div>
   </div>
   {images_html}
@@ -51,7 +48,7 @@ TEMPLATE = """<!doctype html>
 </div>
 
 <script>
-  // Expose current entry meta so script.js can record recent history on entry pages
+  // Expose current entry meta so script.js can record history and seed readings
   window.__ENTRY_META__ = {{
     kanji: {js_kanji},
     furigana: {js_furigana}
