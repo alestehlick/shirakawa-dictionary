@@ -158,15 +158,11 @@ a.kanji-link:hover{ border-bottom-style:solid }
 }
 .stroke-gif img{ width:clamp(72px,12vw,132px); height:auto; display:block; background:#fff; border-radius:6px }
 
-/* ------------------- Reading UI (new) ------------------- */
-/* Reset the huge size inherited from .kanji-col */
+/* ------------------- Reading UI ------------------- */
 .reading-block{
   width:100%;
-  font-size:1rem;          /* normal text size */
-  margin-top:.1rem;
-  margin-bottom:.2rem;     /* subtle breathing room above examples */
+  font-size:1rem;
 }
-
 .rd-wrap{ display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
 
 .rd-pill{
@@ -176,12 +172,9 @@ a.kanji-link:hover{ border-bottom-style:solid }
   color:var(--blue-ink); background:var(--blue-bg);
   border:1px solid var(--blue-faint); border-radius:999px;
   padding:.25rem .6rem;
-
-  /* match example word size */
-  font-size:1.5rem;
+  font-size:1.5rem;            /* same as ex-word */
   line-height:1.1;
 }
-
 .rd-edit, .rd-del{
   appearance:none; background:transparent; border:0; cursor:pointer;
   font:600 .8rem/1 system-ui;
@@ -222,7 +215,6 @@ a.kanji-link:hover{ border-bottom-style:solid }
   background:#fff; padding:.55rem .7rem; position:relative;
 }
 
-/* Faint edit / delete buttons tucked to the right */
 .ex-controls{
   position:absolute; top:.35rem; right:.45rem; display:flex; gap:.5rem;
 }
@@ -238,24 +230,15 @@ a.kanji-link:hover{ border-bottom-style:solid }
   font-weight:700; letter-spacing:.01em;
   font-size:1.5rem; line-height:1.1; color:#000;
 }
-
-
 .ex-reading{
-  display:block;
-  margin:0 0 .15rem 0;
-  /* Japanese reading: a bit faint */
-  color:rgba(0,0,0,.55);
-  font-size:.96rem;
+  display:block; margin:0 0 .15rem 0;
+  color:rgba(0,0,0,.55); font-size:.96rem;
 }
-
 .ex-meaning{
-  display:block;
-  margin:0;
-  /* English translation: almost invisible */
-  color:rgba(0,0,0,.18);
+  display:block; margin:0;
+  color:rgba(0,0,0,.18);       /* nearly invisible */
   font-size:.94rem;
 }
-
 
 .ex-faint-add,
 .ex-faint-addmore{
@@ -299,4 +282,3 @@ a.kanji-link:hover{ border-bottom-style:solid }
   body{ background:#fff; color:#111; padding:0 }
   .entry{ gap:1.2rem }
 }
-
