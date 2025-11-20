@@ -159,10 +159,12 @@ a.kanji-link:hover{ border-bottom-style:solid }
 .stroke-gif img{ width:clamp(72px,12vw,132px); height:auto; display:block; background:#fff; border-radius:6px }
 
 /* ------------------- Reading UI (new) ------------------- */
-/* NEW – reset the huge inherited size from .kanji-col */
+/* Reset the huge size inherited from .kanji-col */
 .reading-block{
   width:100%;
-  font-size:1rem;   /* back to normal text size */
+  font-size:1rem;          /* normal text size */
+  margin-top:.1rem;
+  margin-bottom:.2rem;     /* subtle breathing room above examples */
 }
 
 .rd-wrap{ display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
@@ -173,9 +175,10 @@ a.kanji-link:hover{ border-bottom-style:solid }
   font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
   color:var(--blue-ink); background:var(--blue-bg);
   border:1px solid var(--blue-faint); border-radius:999px;
-  padding:.25rem .6rem; line-height:1;
-  /* ADD THESE: */
-  font-size:1.5rem;     /* matches .ex-word */
+  padding:.25rem .6rem;
+
+  /* match example word size */
+  font-size:1.5rem;
   line-height:1.1;
 }
 
@@ -280,4 +283,3 @@ a.kanji-link:hover{ border-bottom-style:solid }
   body{ background:#fff; color:#111; padding:0 }
   .entry{ gap:1.2rem }
 }
-
