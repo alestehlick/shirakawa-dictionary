@@ -1,21 +1,17 @@
 /* =========================================================
-   History + examples over JSONP.
-   - Review page supports per-kanji delete (tiny ×).
-   - Example list supports per-example delete (tiny ×).
-   - Worksheet buttons removed; only Review button remains.
+   History + readings + examples over JSONP.
+   - Review page: tiny × to remove kanji, faint readings/meanings.
+   - Entry page: reading pill above examples, examples editable.
    ========================================================= */
 
 let REMOTE_HISTORY = [];
 
-/* Helpers */
-const escapeHtml = s =>
-  String(s).replace(/[&<>"'\\]/g, m =>
-    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '\\': '&#92;' }[m])
-  );
-
+/* ---------- Helpers ---------- */
+const escapeHtml = s => String(s).replace(/[&<>"'\\]/g, m =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','\\':'&#92;'}[m])
+);
 const toArray = v =>
-  Array.isArray(v) ? v :
-  (v == null || v === '') ? [] :
+  Array.isArray(v) ? v : (v == null || v === '') ? [] :
   String(v).split(/\s*[;,/｜|]\s*| +/).filter(Boolean);
 
 /* JSONP core */
@@ -27,7 +23,6 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
 
     const script = document.createElement('script');
     let done = false;
-
     const cleanup = () => {
       if (script.parentNode) script.parentNode.removeChild(script);
       try { delete window[cbName]; } catch (_) { window[cbName] = undefined; }
@@ -35,24 +30,19 @@ function jsonp(url, callbackParam = 'callback', timeoutMs = 10000) {
 
     const timer = setTimeout(() => {
       if (done) return;
-      done = true;
-      cleanup();
+      done = true; cleanup();
       reject(new Error('timeout'));
     }, timeoutMs);
 
     window[cbName] = (data) => {
       if (done) return;
-      done = true;
-      clearTimeout(timer);
-      cleanup();
+      done = true; clearTimeout(timer); cleanup();
       resolve(data);
     };
 
     script.onerror = () => {
       if (done) return;
-      done = true;
-      clearTimeout(timer);
-      cleanup();
+      done = true; clearTimeout(timer); cleanup();
       reject(new Error('script error'));
     };
 
@@ -67,13 +57,11 @@ async function apiReadJsonp() {
   const url = `${window.HISTORY_ENDPOINT}?op=read&t=${t}`;
   return jsonp(url);
 }
-
 async function apiPushGet(k, r) {
   const t = Date.now();
   const url = `${window.HISTORY_ENDPOINT}?op=push&k=${encodeURIComponent(k)}&r=${encodeURIComponent(r || '')}&t=${t}`;
   return jsonp(url);
 }
-
 function apiRemoveGet(k) {
   const t = Date.now();
   return jsonp(`${window.HISTORY_ENDPOINT}?op=remove&k=${encodeURIComponent(k)}&t=${t}`);
@@ -91,7 +79,6 @@ function showHistoryWarning(msg) {
   }
   note.textContent = `History issue: ${msg}`;
 }
-
 async function historyReadSafe() {
   try {
     const r = await apiReadJsonp();
@@ -107,10 +94,8 @@ async function historyReadSafe() {
     showHistoryWarning(e.message || 'fetch error');
   }
 }
-
 async function historyPush(k, r) {
   if (!k) return;
-  // update local cache immediately for snappy behaviour
   REMOTE_HISTORY = [{ k, r: r || '' }, ...REMOTE_HISTORY.filter(x => x.k !== k)].slice(0, 200);
   try {
     const res = await apiPushGet(k, r);
@@ -134,6 +119,14 @@ function apiExUpdate(k, id, w, r, m) {
 }
 function apiExDelete(k, id) {
   return jsonp(`${window.HISTORY_ENDPOINT}?op=ex_del&k=${encodeURIComponent(k)}&id=${encodeURIComponent(id)}&t=${Date.now()}`);
+}
+
+/* ---------- Reading API ---------- */
+function apiRdGet(k) {
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=rd_get&k=${encodeURIComponent(k)}&t=${Date.now()}`);
+}
+function apiRdSet(k, v) {
+  return jsonp(`${window.HISTORY_ENDPOINT}?op=rd_set&k=${encodeURIComponent(k)}&v=${encodeURIComponent(v)}&t=${Date.now()}`);
 }
 
 /* ---------- Index (home) ---------- */
@@ -160,14 +153,9 @@ function initThumb(img) {
   const list = (img.dataset.srcList || '').split('|').filter(Boolean);
   if (!list.length) { img.remove(); return; }
   let i = 0;
-  img.onerror = () => {
-    i += 1;
-    if (i < list.length) img.src = list[i];
-    else img.remove();
-  };
+  img.onerror = () => { i += 1; if (i < list.length) img.src = list[i]; else img.remove(); };
   img.src = list[i];
 }
-
 function initAllThumbs(root = document) {
   root.querySelectorAll('img.thumb[data-src-list]').forEach(initThumb);
 }
@@ -208,12 +196,8 @@ async function loadEntries() {
       }
       if (id) {
         imageSources.push(
-          `images/${id}.png`,
-          `images/${id}.jpg`,
-          `images/${id}.jpeg`,
-          `images/${id}.webp`,
-          `images/${id}.gif`,
-          `images/${id}.svg`
+          `images/${id}.png`,`images/${id}.jpg`,`images/${id}.jpeg`,
+          `images/${id}.webp`,`images/${id}.gif`,`images/${id}.svg`
         );
       }
       const drawSource = id ? `Draws/IM_${id}.png` : null;
@@ -244,25 +228,19 @@ async function loadEntries() {
         Promise.race([
           historyPush(k, r),
           new Promise(res => setTimeout(res, 300))
-        ]).finally(() => {
-          window.location.href = url;
-        });
+        ]).finally(() => { window.location.href = url; });
       });
     });
 
-    if (grid.children.length) {
-      results.appendChild(grid);
-      initAllThumbs(grid);
-    } else {
-      results.textContent = 'No entries found yet.';
-    }
+    if (grid.children.length) { results.appendChild(grid); initAllThumbs(grid); }
+    else { results.textContent = 'No entries found yet.'; }
   } catch (err) {
     console.error(err);
     results.textContent = 'No entries found yet.';
   }
 }
 
-/* ---------- Search ---------- */
+/* Search */
 function searchEntries() {
   const q = (document.getElementById('search')?.value || '').trim().toLowerCase();
   const grid = document.getElementById('index-grid');
@@ -307,36 +285,21 @@ function searchEntries() {
   ranked.forEach(({ el }) => grid.appendChild(el));
 }
 
-const debounce = (fn, ms = 120) => {
-  let t;
-  return (...args) => {
-    clearTimeout(t);
-    t = setTimeout(() => fn(...args), ms);
-  };
-};
-
+const debounce = (fn, ms = 120) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
 function attachSearch() {
   const box = document.getElementById('search');
   if (!box) return;
   const run = debounce(searchEntries, 120);
   box.addEventListener('input', run);
-  box.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      box.value = '';
-      searchEntries();
-    }
-  });
+  box.addEventListener('keydown', e => { if (e.key === 'Escape') { box.value = ''; searchEntries(); }});
   window.addEventListener('keydown', e => {
     const tag = document.activeElement?.tagName;
-    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
-      e.preventDefault();
-      box.focus();
-    }
+    if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); box.focus(); }
   });
   searchEntries();
 }
 
-/* ---------- Entry pages: record visit ---------- */
+/* ---------- Entry pages: record history ---------- */
 (function maybeRecordFromEntryPage() {
   if (window.__ENTRY_META__ && window.__ENTRY_META__.kanji) {
     historyPush(window.__ENTRY_META__.kanji, window.__ENTRY_META__.furigana || '');
@@ -353,8 +316,7 @@ function initStrokePlayers() {
     let timer = null;
 
     const stop = () => {
-      clearTimeout(timer);
-      timer = null;
+      clearTimeout(timer); timer = null;
       wrapper.classList.remove('playing');
       wrapper.innerHTML =
         '<button type="button" class="stroke-play" aria-label="Play stroke order" title="Play stroke order">▶</button>';
@@ -374,7 +336,118 @@ function initStrokePlayers() {
   });
 }
 
-/* ---------------- Examples UI (entry page) ---------------- */
+/* ---------- Reading UI (entry page) ---------- */
+function renderReadingBlock(container, kanji, value) {
+  container.innerHTML = '';
+  const wrap = document.createElement('div');
+  wrap.className = 'rd-wrap';
+
+  const current = (value || '').trim();
+
+  if (current) {
+    const pill = document.createElement('span');
+    pill.className = 'rd-pill';
+    pill.textContent = current;
+    wrap.appendChild(pill);
+
+    const edit = document.createElement('button');
+    edit.className = 'rd-edit';
+    edit.type = 'button';
+    edit.textContent = 'edit';
+
+    const del = document.createElement('button');
+    del.className = 'rd-del';
+    del.type = 'button';
+    del.textContent = '×';
+    del.title = 'delete reading';
+
+    edit.addEventListener('click', () => openReadingEditor(container, kanji, current));
+    del.addEventListener('click', async () => {
+      try { await apiRdSet(kanji, ''); } catch (_) {}
+      renderReadingBlock(container, kanji, '');
+      historyPush(kanji, '');   // keep history in sync
+    });
+
+    wrap.append(edit, del);
+  } else {
+    const add = document.createElement('button');
+    add.className = 'rd-add';
+    add.type = 'button';
+    add.textContent = '＋ add reading';
+    add.addEventListener('click', () => openReadingEditor(container, kanji, ''));
+    wrap.appendChild(add);
+  }
+
+  container.appendChild(wrap);
+}
+
+function openReadingEditor(container, kanji, existing) {
+  container.innerHTML = '';
+
+  const editor = document.createElement('div');
+  editor.className = 'rd-editor';
+
+  const input = document.createElement('input');
+  input.className = 'rd-in';
+  input.placeholder = 'Reading (e.g. hinoto)';
+  input.value = existing || '';
+
+  const actions = document.createElement('div');
+  actions.className = 'rd-actions';
+
+  const save = document.createElement('button');
+  save.className = 'rd-save';
+  save.type = 'button';
+  save.textContent = 'Save';
+
+  const cancel = document.createElement('button');
+  cancel.className = 'rd-cancel';
+  cancel.type = 'button';
+  cancel.textContent = 'Cancel';
+
+  actions.append(save, cancel);
+  editor.append(input, actions);
+  container.appendChild(editor);
+
+  const restore = (val) => renderReadingBlock(container, kanji, val);
+
+  save.addEventListener('click', async () => {
+    const val = input.value.trim();
+    try { await apiRdSet(kanji, val); } catch (_) {}
+    restore(val);
+    historyPush(kanji, val);
+  });
+
+  cancel.addEventListener('click', () => restore(existing));
+}
+
+async function initReadingUI() {
+  const meta = window.__ENTRY_META__;
+  if (!meta?.kanji) return;
+  const col = document.querySelector('.kanji-col');
+  if (!col) return;
+
+  let anchor = col.querySelector('.reading-anchor');
+  if (!anchor) {
+    anchor = document.createElement('div');
+    anchor.className = 'reading-anchor';
+    col.insertBefore(anchor, col.firstChild || null);
+  }
+  const container = document.createElement('div');
+  container.className = 'reading-block';
+  anchor.replaceWith(container);
+
+  try {
+    const res = await apiRdGet(meta.kanji);
+    const v = typeof res?.value === 'string' ? res.value : '';
+    const seed = v || meta.furigana || '';
+    renderReadingBlock(container, meta.kanji, seed);
+  } catch (_) {
+    renderReadingBlock(container, meta.kanji, meta.furigana || '');
+  }
+}
+
+/* ---------- Examples UI (entry page) ---------- */
 function renderExampleList(container, list, kanji) {
   container.innerHTML = '';
 
@@ -391,7 +464,6 @@ function renderExampleList(container, list, kanji) {
 
   const wrap = document.createElement('div');
   wrap.className = 'examples-wrap';
-
   list.forEach(ex => {
     const row = document.createElement('div');
     row.className = 'ex-row';
@@ -415,9 +487,7 @@ function renderExampleList(container, list, kanji) {
         const res = await apiExDelete(kanji, ex.id);
         const list2 = Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : []);
         renderExampleList(container, list2, kanji);
-      } catch (_) {
-        // ignore
-      }
+      } catch (_) {}
     });
 
     controls.append(edit, del);
@@ -489,7 +559,7 @@ function openExampleEditor(container, kanji, existing = null) {
 
   editor.append(row, actions);
 
-  if (container.firstChild && container.firstChild.classList.contains('ex-faint-add')) {
+  if (container.firstChild && (container.firstChild.classList.contains('ex-faint-add'))) {
     container.firstChild.remove();
   }
   container.prepend(editor);
@@ -500,23 +570,15 @@ function openExampleEditor(container, kanji, existing = null) {
     const w = iWord.value.trim();
     const r = iRead.value.trim();
     const m = iMean.value.trim();
-    if (!w && !r && !m) {
-      done();
-      return;
-    }
+    if (!w && !r && !m) { done(); return; }
 
     try {
       let res;
-      if (existing?.id) {
-        res = await apiExUpdate(kanji, existing.id, w, r, m);
-      } else {
-        res = await apiExAdd(kanji, w, r, m);
-      }
+      if (existing?.id) res = await apiExUpdate(kanji, existing.id, w, r, m);
+      else res = await apiExAdd(kanji, w, r, m);
       const list = Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : []);
       renderExampleList(container, list || [], kanji);
-    } catch (_) {
-      // ignore
-    }
+    } catch (_) {}
   });
 
   cancel.addEventListener('click', done);
@@ -525,8 +587,7 @@ function openExampleEditor(container, kanji, existing = null) {
 async function initExamplesUI() {
   const meta = window.__ENTRY_META__;
   if (!meta?.kanji) return;
-  const col = document.querySelector('.kanji-col');
-  if (!col) return;
+  const col = document.querySelector('.kanji-col'); if (!col) return;
 
   let anchor = col.querySelector('.examples-anchor');
   if (!anchor) {
@@ -547,7 +608,7 @@ async function initExamplesUI() {
   }
 }
 
-/* ---------- Toolbar: only Review button ---------- */
+/* ---------- Toolbar: Review button only ---------- */
 function makeToolbarButtons() {
   const bar = document.querySelector('.toolbar');
   if (!bar) return;
@@ -565,38 +626,43 @@ function makeToolbarButtons() {
   bar.append(b3);
 }
 
-/* ---------- Fetch examples for a set of kanji ---------- */
+/* ---------- Fetch examples for review ---------- */
 async function fetchExamplesFor(list) {
   const uniq = [...new Set(list.map(x => x.k))];
-  const pairs = await Promise.all(
-    uniq.map(async k => {
-      try {
-        const res = await apiExGet(k);
-        return [k, Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : [])];
-      } catch {
-        return [k, []];
-      }
-    })
-  );
+  const pairs = await Promise.all(uniq.map(async k => {
+    try {
+      const res = await apiExGet(k);
+      return [k, Array.isArray(res?.list) ? res.list : (Array.isArray(res) ? res : [])];
+    } catch {
+      return [k, []];
+    }
+  }));
   const map = {};
   pairs.forEach(([k, arr]) => { map[k] = arr; });
   return map;
 }
 
-/* ---------- Review page (with tiny × remove + faint example text) ---------- */
+/* ---------- Review page (printable) ---------- */
 async function openReviewNow(items) {
-  const list = items.slice(0, 40).map(x => ({ k: x.k }));
+  const list = items.slice(0, 40).map(x => ({ k: x.k, r: x.r || '' }));
   const exMap = await fetchExamplesFor(list);
   const ENDPOINT = window.HISTORY_ENDPOINT;
 
-  const cells = list.map(({ k }) => {
+  const cells = list.map(({ k, r }) => {
     const e = (exMap[k] || [])[0] || {};
-    const w = e.w
-      ? `<div class="ex-mini"><span class="w">${escapeHtml(e.w)}</span>${e.r ? `<span class="r">${escapeHtml(e.r)}</span>` : ''}${e.m ? `<span class="m">${escapeHtml(e.m)}</span>` : ''}</div>`
-      : '';
+    const w = e.w ? `<div class="ex-mini">
+      <span class="w">${escapeHtml(e.w)}</span>
+      ${e.r ? `<span class="r">${escapeHtml(e.r)}</span>` : ''}
+      ${e.m ? `<span class="m">${escapeHtml(e.m)}</span>` : ''}
+    </div>` : '';
+
+    const rd = r ? `<div class="rd-mini">${escapeHtml(r)}</div>` : '';
+
     return `<div class="cell" data-k="${k}">
       <button class="hx" title="remove from history" aria-label="remove">×</button>
-      <div class="k">${k}</div>${w}
+      ${rd}
+      <div class="k">${k}</div>
+      ${w}
     </div>`;
   }).join('');
 
@@ -610,43 +676,17 @@ async function openReviewNow(items) {
   .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(42mm,1fr)); gap: 6mm; padding: 4mm }
   .cell{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
          min-height:40mm; border:1px solid #eee; border-radius:6px; padding:2mm 2.5mm; background:#fff; }
-  .k{ font-size:18mm; line-height:1; margin-top:1mm }
+  .k{ font-size:18mm; line-height:1; margin-top:.5mm }
+  .rd-mini{
+    font-size:3.4mm; color:rgba(32,84,140,.45); margin-top:1mm;
+  }
+  .ex-mini{ width:100%; margin-top:1.5mm; padding:1mm 1.5mm; border:1px dashed rgba(0,0,0,.12); border-radius:5px; }
+  .ex-mini .w{ font-weight:700; }
+  .ex-mini .r{ color:rgba(0,0,0,.35); font-size:3.4mm; display:inline-block; margin-left:2mm; }
+  .ex-mini .m{ display:block; font-size:3.5mm; margin-top:.4mm; color:rgba(0,0,0,.16); }
   .hx{ position:absolute; top:2mm; right:2mm; appearance:none; background:transparent; border:0;
        font:700 12px/1 system-ui; color:rgba(0,0,0,.35); cursor:pointer; }
   .hx:hover{ color:rgba(0,0,0,.6) }
-
-  /* ---------- Example box (tunable faintness) ---------- */
-  :root{
-    /* 1.0 = opaque, 0 = invisible */
-    --rv-jp: .80;      /* Japanese word line */
-    --rv-romaji: .55;  /* romaji reading */
-    --rv-en: .18;      /* English gloss (very faint) */
-  }
-  .ex-mini{
-    width:100%;
-    margin-top:1.5mm;
-    padding:1mm 1.5mm;
-    border:1px dashed rgba(0,0,0,.10);
-    border-radius:5px;
-    background:rgba(0,0,0,.015);
-  }
-  .ex-mini .w{
-    display:block;
-    font-weight:700;
-    color:rgba(0,0,0,var(--rv-jp));
-  }
-  .ex-mini .r{
-    display:inline-block;
-    margin-left:6px;
-    font-size:3.2mm;
-    color:rgba(0,0,0,var(--rv-romaji));
-  }
-  .ex-mini .m{
-    display:block;
-    margin-top:.35mm;
-    font-size:3.3mm;
-    color:rgba(0,0,0,var(--rv-en));
-  }
 </style></head>
 <body>
   <h2>Review (Last ${list.length})</h2>
@@ -677,11 +717,8 @@ async function openReviewNow(items) {
 </script>
 </body></html>`;
 
-  const w = window.open('', '_blank');
-  if (!w) return;
-  w.document.open();
-  w.document.write(html);
-  w.document.close();
+  const w = window.open('', '_blank'); if (!w) return;
+  w.document.open(); w.document.write(html); w.document.close();
 }
 
 /* ---------- Boot ---------- */
@@ -690,11 +727,12 @@ window.addEventListener('load', () => {
     // Home page
     loadEntries();
     attachSearch();
-    makeToolbarButtons();   // only Review button
+    makeToolbarButtons();
     historyReadSafe();
   } else {
-    // Entry pages
+    // Entry page
     initStrokePlayers();
+    initReadingUI();
     initExamplesUI();
   }
 });
