@@ -5,6 +5,11 @@
   --kanji-size: clamp(4rem, 12vw, 8rem);
   --kanji-inline-scale: 1.20;
   --kanji-col-w: clamp(160px, 22vw, 300px);
+
+  /* subtle blue for readings */
+  --blue-ink: rgba(32, 84, 140, .78);
+  --blue-faint: rgba(32, 84, 140, .20);
+  --blue-bg: rgba(32, 84, 140, .06);
 }
 
 *,*::before,*::after{ box-sizing:border-box }
@@ -44,6 +49,8 @@ h1{
   display:flex; align-items:flex-start; justify-content:flex-start;
   flex-direction:column; gap:.6rem;
 }
+
+.kanji-glyph{ line-height:1; }
 
 .image-col:empty{ display:none }
 .image-col{ flex:0 0 auto; display:flex; flex-direction:column; gap:1rem; align-items:center }
@@ -150,6 +157,48 @@ a.kanji-link:hover{ border-bottom-style:solid }
   border:1px solid #e2dbc9; border-radius:10px; background:#fff; padding:4px; cursor:pointer
 }
 .stroke-gif img{ width:clamp(72px,12vw,132px); height:auto; display:block; background:#fff; border-radius:6px }
+
+/* ------------------- Reading UI (new) ------------------- */
+.reading-block{ width:100%; }
+.rd-wrap{ display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+
+.rd-pill{
+  display:inline-flex; align-items:center; gap:.45rem;
+  font-weight:700; letter-spacing:.01em;
+  font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  color:var(--blue-ink); background:var(--blue-bg);
+  border:1px solid var(--blue-faint); border-radius:999px;
+  padding:.25rem .6rem; line-height:1;
+}
+.rd-edit, .rd-del{
+  appearance:none; background:transparent; border:0; cursor:pointer;
+  font:600 .8rem/1 system-ui;
+  color:var(--blue-ink); opacity:.45;
+}
+.rd-edit:hover, .rd-del:hover{ opacity:.8 }
+.rd-add{
+  appearance:none; background:transparent; border:0; cursor:pointer;
+  font:600 .9rem/1 system-ui; color:var(--blue-ink); opacity:.45;
+}
+.rd-add:hover{ opacity:.8 }
+
+.rd-editor{
+  width:100%; border:1px solid var(--rule); border-radius:12px;
+  background:#fff; padding:.6rem .7rem; box-shadow:0 1px 0 rgba(0,0,0,.03);
+  margin:.2rem 0 .4rem;
+}
+.rd-in{
+  width:100%; border:1px solid var(--rule); border-radius:10px;
+  padding:.55rem .65rem; background:#fff;
+  font:1rem/1.25 system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
+}
+.rd-actions{ display:flex; gap:.5rem; justify-content:flex-end; margin-top:.45rem }
+.rd-save,.rd-cancel{
+  appearance:none; border:1px solid var(--rule); border-radius:10px;
+  padding:.35rem .7rem; background:#fff; cursor:pointer;
+  font:600 .92rem/1.1 system-ui;
+}
+.rd-save:hover,.rd-cancel:hover{ background:#f9f7f1 }
 
 /* ------------------- Examples UI ------------------- */
 .examples-block{ width:100%; }
