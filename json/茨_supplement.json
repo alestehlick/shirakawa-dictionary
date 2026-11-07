@@ -1,0 +1,30 @@
+{
+  "id": "U+8328",
+  "kanji": "茨",
+  "kun_readings_romaji": [
+    "ibara",
+    "kusabuki"
+  ],
+  "on_readings_romaji": [
+    "shi"
+  ],
+  "category": "",
+  "meanings": [
+    "thorny plant",
+    "to thatch",
+    "to heap or gather",
+    "vegetation used as covering"
+  ],
+  "explanation": "茨 is semantic–phonetic, with 艸 and 次 as the phonetic shi. Shirakawa begins with the older definition of covering a roof with plant material.\n\nAnother lexical explanation describes arranging thatching grass in sequence over the building. Related glosses include piling, covering, and gathering, all actions involved in accumulating the material and laying it over a surface.\n\nThe Japanese thorny-plant meaning ibara is recorded alongside this thatching range. Other plant names and an earth-filling use involve related writings. Shirakawa's account therefore does not reduce every occurrence to a thorn bush. It follows the practical covering and collecting vocabulary while retaining the broader botanical uses and the sound relations through which the received character was employed.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 茨",
+      "url": "https://kotobank.jp/word/%E8%8C%A8-435536#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2104,
+  "editorial_status": "source-checked English supplement"
+}

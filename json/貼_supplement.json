@@ -1,0 +1,32 @@
+{
+  "id": "U+8CBC",
+  "kanji": "貼",
+  "kun_readings_romaji": [
+    "haru",
+    "haritsukeru",
+    "oginau"
+  ],
+  "on_readings_romaji": [
+    "chou",
+    "ten"
+  ],
+  "category": "",
+  "meanings": [
+    "to pledge as security",
+    "to paste on",
+    "to supplement",
+    "to amend"
+  ],
+  "explanation": "貼 is semantic–phonetic, using 占 for the sound also found in 帖. 貝 identifies the property-related field of an older meaning: placing something as security. Shirakawa cites a historical expression for working against an advance payment.\n\nThe word also comes to mean attaching material on top of something to supplement or correct it. In Tang usage, 貼黄 referred to an amendment attached to an imperial document. Pasting and correction meet in that documentary practice.\n\nShirakawa compares 帖 and 添 within the relevant sound-family, with something added to a document and affixed to it. The later familiar sense of sticking or pasting is therefore presented alongside the older pledge meaning, rather than being assumed to explain why the graph contains the valuables classifier.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 貼",
+      "url": "https://kotobank.jp/word/%E8%B2%BC-568031#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1963,
+  "editorial_status": "source-checked English supplement"
+}

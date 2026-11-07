@@ -1,0 +1,28 @@
+{
+  "id": "U+55C5",
+  "kanji": "嗅",
+  "kun_readings_romaji": [
+    "kagu"
+  ],
+  "on_readings_romaji": [
+    "kyuu"
+  ],
+  "category": "",
+  "meanings": [
+    "to smell",
+    "to sniff",
+    "to give off an odour"
+  ],
+  "explanation": "Shirakawa treats 嗅 as an abbreviation of a fuller graph combining 鼻, nose, with 臭, odour. That fuller formation joins the organ to what it approaches and perceives. The older explanation describes bringing the nose toward a smell; 臭 also participates in the sound.\n\nThe modern 口 form therefore needs comparison with its fuller predecessor before its formation becomes clear. Its principal use is verbal: to smell or sniff, with an additional lexical sense of being odorous.\n\nShirakawa relates it to words for odour and putrefaction. He also questions a famous Analects occurrence apparently describing a bird sniffing before flight, proposing a textual confusion with a word for spreading the wings. That passage should not be used uncritically as evidence for an unusual original meaning of 嗅.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 嗅",
+      "url": "https://kotobank.jp/word/%E5%97%85-476567#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1863,
+  "editorial_status": "source-checked English supplement"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "U+5504",
+  "kanji": "唄",
+  "kun_readings_romaji": [
+    "uta"
+  ],
+  "on_readings_romaji": [
+    "bai"
+  ],
+  "category": "",
+  "meanings": [
+    "Buddhist chant",
+    "song of praise",
+    "song in Japanese"
+  ],
+  "explanation": "唄 combines 口 with 貝 as the phonetic bai. Shirakawa explains it through 梵唄, Buddhist chanting, and the transcription of an Indic name for the chant. The mouth classifier identifies its vocal performance.\n\nA Buddhist encyclopaedia compares the western chant with the eastern song of praise. In this setting the content celebrates the Buddha's virtues, so chanting and praise are more specific starting points than song in general.\n\nJapanese later uses 唄 for forms such as 小唄 and other popular songs. The entry therefore follows a transmitted Buddhist vocal term into a broader Japanese musical application. The presence of 貝 is phonetic and does not require a story about shells serving as the original musical instrument.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 唄",
+      "url": "https://kotobank.jp/word/%E5%94%84-112637#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2092,
+  "editorial_status": "source-checked English supplement"
+}

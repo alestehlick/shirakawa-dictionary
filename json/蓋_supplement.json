@@ -1,0 +1,32 @@
+{
+  "id": "U+84CB",
+  "kanji": "蓋",
+  "kun_readings_romaji": [
+    "futa",
+    "oou",
+    "kedashi"
+  ],
+  "on_readings_romaji": [
+    "gai",
+    "kou"
+  ],
+  "category": "",
+  "meanings": [
+    "cover",
+    "lid",
+    "to cover over",
+    "introductory or conjectural particle"
+  ],
+  "explanation": "蓋 combines 艸 with the phonetic 盍. Shirakawa interprets 盍 as a vessel with its lid, so the phonetic also contributes an association with covering. The older definition of 蓋 concerns grass used to roof or thatch a structure.\n\nThatched covering broadens to a cover or lid and to the action of placing something over another object. Shirakawa compares a family of words including 加, 架, and 駕, which likewise involve setting, mounting, or adding something above.\n\nThe grammatical use of 蓋 needs separate treatment. He explains one classical usage through a contraction or sound-based replacement of an expression equivalent to why not, while other contexts use it to introduce a statement. These function-word uses should not be narrated as though a physical lid naturally became every later particle.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 蓋",
+      "url": "https://kotobank.jp/word/%E8%93%8B-456682#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1804,
+  "editorial_status": "source-checked English supplement"
+}

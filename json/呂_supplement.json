@@ -1,0 +1,31 @@
+{
+  "id": "U+5442",
+  "kanji": "呂",
+  "kun_readings_romaji": [
+    "kane",
+    "sebone"
+  ],
+  "on_readings_romaji": [
+    "ro",
+    "ryo"
+  ],
+  "category": "",
+  "meanings": [
+    "metal ingots",
+    "backbone",
+    "musical pitch",
+    "ro"
+  ],
+  "explanation": "In his analysis of the early forms, Shirakawa identifies 呂 with blocks of copper used for making bronze vessels. Oracle-bone and bronze writings show separate blocks; the connecting line familiar in the later character is absent. A bronze inscription listing selected casting metals provides part of his support for reading the graph as metal stock.\n\nHe discusses the inherited explanation of 呂 as a backbone, given in the Shuowen, and its association with 膂, the back or bodily strength. His form-analysis section treats the copper-ingot reading as primary and the spinal sense as a later interchange. The entry also retains the traditional association in its discussion of related words, so those two strands should not be silently collapsed.\n\n呂 additionally names the six yin pitches in the traditional system of twelve pitch standards, paired with 律. Modern uses in musical terminology and names belong to this subsequent history of the character.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 呂",
+      "url": "https://kotobank.jp/word/%E5%91%82-149890#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 508,
+  "editorial_status": "source-checked English supplement"
+}

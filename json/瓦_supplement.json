@@ -1,0 +1,29 @@
+{
+  "id": "U+74E6",
+  "kanji": "瓦",
+  "kun_readings_romaji": [
+    "kawara"
+  ],
+  "on_readings_romaji": [
+    "ga"
+  ],
+  "category": "",
+  "meanings": [
+    "roof tile",
+    "earthenware",
+    "baked clay object",
+    "spindle whorl"
+  ],
+  "explanation": "Shirakawa reads 瓦 as a pictograph of the curved shape of a roof tile. The bend of the manufactured piece, rather than a collection of independent modern components, is the organizing feature of the early form.\n\nThe Shuowen gives the broader material definition of a clay object that has already been fired, contrasting it with an unfired piece. The character can therefore refer to baked earthenware beyond roofing tiles alone.\n\nShirakawa also records its application to implements such as spindle whorls. These belong to the wider use of worked and fired clay objects. The ordinary tile meaning remains closest to the depicted shape, while the more general earthenware vocabulary develops through the material and manufacturing state identified by the old definition.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 瓦",
+      "url": "https://kotobank.jp/word/%E7%93%A6-48375#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1749,
+  "editorial_status": "source-checked English supplement"
+}

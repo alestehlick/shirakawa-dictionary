@@ -1,0 +1,24 @@
+{
+  "id": "U+817A",
+  "kanji": "腺",
+  "kun_readings_romaji": [],
+  "on_readings_romaji": [
+    "sen"
+  ],
+  "category": "",
+  "meanings": [
+    "gland"
+  ],
+  "explanation": "Shirakawa identifies 腺 as a character created in Japan for physiological terminology. It combines the body classifier with 泉, which supplies the sound sen and the image of a spring issuing liquid. That association makes it suitable for a bodily structure that produces and releases a secretion.\n\nHe cites a Chinese dictionary's explanation that Japanese physiologists used the term for such secreting structures in the animal body. The account explicitly recognizes the character's Japanese creation and its subsequent adoption in Chinese.\n\nThis places 腺 in a different historical layer from the oracle-bone and bronze graphs discussed elsewhere in the dictionary. Its formation is a modern technical coinage, but it uses the familiar semantic–phonetic method: a bodily category, an appropriate sound element, and a concrete association with liquid issuing from a source. Its ordinary meaning is simply a gland.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 腺",
+      "url": "https://kotobank.jp/word/%E8%85%BA-87954#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1600,
+  "editorial_status": "source-checked English supplement"
+}

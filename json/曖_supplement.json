@@ -1,0 +1,31 @@
+{
+  "id": "U+66D6",
+  "kanji": "曖",
+  "kun_readings_romaji": [
+    "kageru",
+    "kurai",
+    "atataka"
+  ],
+  "on_readings_romaji": [
+    "ai"
+  ],
+  "category": "",
+  "meanings": [
+    "dim",
+    "hazy",
+    "obscure",
+    "faintly warm sunlight"
+  ],
+  "explanation": "Shirakawa classifies 曖 as semantic–phonetic. 日 gives the setting of sunlight, and 愛 supplies the sound ai. In the sound-and-meaning group he follows, 愛 carries associations with something faint, uncertain, or only indistinctly perceived.\n\nHe distinguishes several applications of that shared quality: an indistinct human figure, vegetation growing in shadow, and sunlight becoming shaded or dim. 曖 names the last of these. Its literal range includes a day whose light is obscured, together with the gentle warmth of sunlight felt faintly rather than strongly.\n\nThis gives the basis for the broader meaning obscure or unclear, familiar in 曖昧. Shirakawa's account proceeds through the related word-family and its different semantic classifiers. The sunlight component specifies one manifestation of a common quality of faintness, from which the modern abstract sense of indistinctness is readily followed.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 曖",
+      "url": "https://kotobank.jp/word/%E6%9B%96-420865#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1464,
+  "editorial_status": "source-checked English supplement"
+}

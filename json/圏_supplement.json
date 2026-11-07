@@ -1,0 +1,30 @@
+{
+  "id": "U+570F",
+  "kanji": "圏",
+  "kun_readings_romaji": [
+    "kakoi"
+  ],
+  "on_readings_romaji": [
+    "ken"
+  ],
+  "category": "",
+  "meanings": [
+    "enclosure",
+    "animal pen",
+    "bounded area",
+    "circle or marking dot"
+  ],
+  "explanation": "圏 is the modern form of 圈. It is semantic–phonetic, with 囗 enclosing the space and 卷, now 巻, supplying the sound ken. Shirakawa connects 卷 with curling or bending something into a rounded form.\n\nThe older definition concerns a pen for keeping animals, bounded by a wooden fence or similar barrier. The enclosure establishes both an interior and an exterior, giving the expressions 圏内 and 圏外.\n\nThe word also covers rounding, curved containers, and the small circular marks used in punctuation or annotation, called 圏点. Shirakawa compares 拳 and related巻-family words through their rounded, drawn-in shapes. The wider sense of a sphere or bounded region follows the enclosing boundary rather than requiring a separate abstract origin.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 圏",
+      "url": "https://kotobank.jp/word/%E5%9C%8F-60236#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1315,
+  "editorial_status": "source-checked English supplement",
+  "related_form": "圈"
+}

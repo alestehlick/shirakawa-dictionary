@@ -1,0 +1,30 @@
+{
+  "id": "U+5AC9",
+  "kanji": "嫉",
+  "kun_readings_romaji": [
+    "netamu",
+    "nikumu"
+  ],
+  "on_readings_romaji": [
+    "shitsu"
+  ],
+  "category": "",
+  "meanings": [
+    "jealousy",
+    "envy",
+    "to resent",
+    "to hate"
+  ],
+  "explanation": "Shirakawa identifies 疾 as the phonetic in 嫉, with 女 as the semantic classifier. 疾 also has a verbal use meaning to hate or detest, so the phonetic contributes a close connection of meaning as well as sound. 嫉 names an intense hostile feeling directed at someone else.\n\nThe Shuowen records the word under a different principal writing and lists 嫉 as an alternative form. Shirakawa relates the female classifier to the traditional association of this emotional field with women. That is part of his account of the graph's historical classification, rather than a reason to restrict the later word's application to women.\n\nThe meanings move through envy and jealousy into hatred, aversion, and doing harm. In his comparison with related vocabulary for fierce anger, Shirakawa emphasizes the intensity of the feeling already present in 疾. The combination therefore does not depict a literal bodily illness.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 嫉",
+      "url": "https://kotobank.jp/word/%E5%AB%89-521059#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1081,
+  "editorial_status": "source-checked English supplement"
+}

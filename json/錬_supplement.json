@@ -1,0 +1,30 @@
+{
+  "id": "U+932C",
+  "kanji": "錬",
+  "kun_readings_romaji": [
+    "neru",
+    "nerigane"
+  ],
+  "on_readings_romaji": [
+    "ren"
+  ],
+  "category": "",
+  "meanings": [
+    "to refine metal",
+    "to forge",
+    "to temper",
+    "to train"
+  ],
+  "explanation": "Shirakawa treats 錬, in its fuller form 鍊, as semantic–phonetic. 金 identifies metal, and 柬 supplies the sound ren, also found in 練 and related graphs. He interprets 柬 through material placed in a bag and subjected to processing.\n\nThe old definition concerns working metal. Heating removes impurities and produces a more refined material, so the central action is improving something through treatment rather than merely striking it.\n\nShirakawa compares the related processing words used with water, fire, fibres, and metal. Their different classifiers specify the material or means while preserving the sound-family and its association with working a substance into a better condition. From refining metal come tempering, bringing something to completion, and the training or discipline expressed in 錬成 and 錬磨. The distinction from 練 is chiefly the explicit metal category.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 錬",
+      "url": "https://kotobank.jp/word/%E9%8C%AC-661996#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1610,
+  "editorial_status": "source-checked English supplement"
+}

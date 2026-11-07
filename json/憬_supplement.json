@@ -1,0 +1,30 @@
+{
+  "id": "U+61AC",
+  "kanji": "憬",
+  "kun_readings_romaji": [
+    "tooi",
+    "satoru"
+  ],
+  "on_readings_romaji": [
+    "kei"
+  ],
+  "category": "",
+  "meanings": [
+    "distant",
+    "far-reaching",
+    "spacious",
+    "to become aware in traditional glosses"
+  ],
+  "explanation": "憬 combines 心 with 景 as the phonetic kei. Shirakawa questions the traditional definition awakening or realizing because he finds no supporting example for it in the material discussed.\n\nThe Book of Odes passage cited by the old dictionary instead concerns people far away. Its early commentary explains distance, providing firmer evidence for remoteness or a broad, far-reaching appearance.\n\nShirakawa also cautions that the familiar longing compound 憧憬 is not found in the Chinese literature he discusses. He compares it with a sound-related expression originally describing loss of self-possession. The entry should therefore preserve the uncertainty and distinguish the classical evidence for distance from both the traditional awakening gloss and the later Japanese language of aspiration.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 憬",
+      "url": "https://kotobank.jp/word/%E6%86%AC-488103#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2034,
+  "editorial_status": "source-checked English supplement"
+}

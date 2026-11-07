@@ -1,0 +1,32 @@
+{
+  "id": "U+816B",
+  "kanji": "腫",
+  "kun_readings_romaji": [
+    "hareru",
+    "harasu",
+    "haremono"
+  ],
+  "on_readings_romaji": [
+    "shu",
+    "shou"
+  ],
+  "category": "",
+  "meanings": [
+    "swelling",
+    "a swollen growth",
+    "to swell",
+    "to become puffy"
+  ],
+  "explanation": "Shirakawa analyzes 腫 as semantic–phonetic. The body component locates the condition in flesh, while 重 supplies the sound. He interprets 重 through a bulging bag containing something, and takes that fullness as the semantic association carried into 腫.\n\nThe body is swollen or distended as that filled bag is distended. The Shuowen's gloss concerns a swollen growth, and Shirakawa notes the Zhouli's office of specialists responsible for treating such external swellings. This places the word within an established ancient anatomical and medical vocabulary.\n\nIts range includes localized lumps, general swelling, and puffiness. He also compares a related term for swelling of the feet. These are applications of the same visible bodily expansion. The argument follows the sound element's filled, bulging shape into the flesh-related graph and then the several kinds of swelling named by it.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 腫",
+      "url": "https://kotobank.jp/word/%E8%85%AB-526057#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1402,
+  "editorial_status": "source-checked English supplement"
+}

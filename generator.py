@@ -43,7 +43,7 @@ TEMPLATE = """<!doctype html>
     <div class="readings"><b>Kun:</b> {kun} &nbsp;|&nbsp; <b>On:</b> {on}</div>
     <div class="meanings">{meanings}</div>
     <h3>Explanation</h3>
-    <p>{explanation_html}</p>
+    {explanation_html}{sources_html}
   </div>
 </div>
 
@@ -185,6 +185,30 @@ def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji
             out.append(ch)
     return "".join(out)
 
+def render_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji: str) -> str:
+    paragraphs = re.split(r"\n\s*\n", raw_text.strip())
+    return "\n    ".join(
+        f"<p>{linkify_explanation(paragraph, kanji_to_file, self_kanji)}</p>"
+        for paragraph in paragraphs if paragraph
+    )
+
+def render_sources(data: dict) -> str:
+    sources = data.get("sources") or []
+    if not sources:
+        return ""
+    items = []
+    for source in sources:
+        url = source["url"]
+        if not url.startswith(("https://", "http://")):
+            raise SystemExit(f"Unsupported source URL in {data['kanji']}: {url}")
+        title = html.escape(source["title"])
+        note = source.get("note", "")
+        suffix = f" — {html.escape(note)}" if note else ""
+        items.append(f'<li><a href="{html.escape(url, quote=True)}" rel="noopener noreferrer">{title}</a>{suffix}</li>')
+    return ('\n    <aside class="entry-sources" aria-label="Sources">'
+            '<h3>Sources</h3><p>English summary of Shirakawa’s analysis.</p><ul>'
+            + "".join(items) + '</ul></aside>')
+
 # ---------- Build pages & grouped index ----------
 raw_entries: list[dict] = []
 json_files = sorted(json_dir.glob("*.json"))
@@ -245,7 +269,7 @@ for i, data in enumerate(raw_entries):
                 f'loading="lazy" decoding="async"></div>'
             )
 
-    explanation_html = linkify_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
+    explanation_html = render_explanation(expl_raw, kanji_to_file, self_kanji=kanji)
 
     furigana_candidates = []
     if kun_list: furigana_candidates.append(kun_list[0])
@@ -268,6 +292,7 @@ for i, data in enumerate(raw_entries):
         on=on,
         meanings=meanings,
         explanation_html=explanation_html,
+        sources_html=render_sources(data),
         images_html=images_html,
         wide_image_html=wide_image_html,
         stroke_gif_html=stroke_gif_html,

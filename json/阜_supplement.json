@@ -1,0 +1,31 @@
+{
+  "id": "U+961C",
+  "kanji": "阜",
+  "kun_readings_romaji": [
+    "oka",
+    "ookii",
+    "sakan"
+  ],
+  "on_readings_romaji": [
+    "fu"
+  ],
+  "category": "",
+  "meanings": [
+    "sacred ladder",
+    "hill",
+    "high ground",
+    "abundant"
+  ],
+  "explanation": "Shirakawa identifies the early 阜 as a ladder for a deity's ascent and descent. He takes the oracle-bone and bronze shape as the steps of that sacred structure, and reads many characters in its family through places where divine movement is received or regulated.\n\nThe Shuowen instead defines 阜 as a large earthen elevation or a stoneless hill. Shirakawa questions that pictorial identification because, in his view, the early shape and its associated characters point to the ladder and the sacred site. He compares Japanese names for elevated ritual ladders or stairways.\n\nThe received senses hill, high, large, prosperous, and abundant belong to the character's subsequent range. Its left-hand component form 阝 consequently needs to be distinguished from the similar-looking right-hand settlement component derived from 邑. His account makes the divine stairway the organizing idea of the 阜 family.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 阜",
+      "url": "https://kotobank.jp/word/%E9%98%9C-614907#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1649,
+  "editorial_status": "source-checked English supplement"
+}

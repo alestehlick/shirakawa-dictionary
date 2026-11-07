@@ -1,0 +1,31 @@
+{
+  "id": "U+65E6",
+  "kanji": "旦",
+  "kun_readings_romaji": [
+    "yoake",
+    "asa",
+    "ashita"
+  ],
+  "on_readings_romaji": [
+    "tan",
+    "dan"
+  ],
+  "category": "",
+  "meanings": [
+    "dawn",
+    "morning",
+    "daybreak"
+  ],
+  "explanation": "Shirakawa starts from bronze-inscription forms in which the sun appears partway above a cloud. He understands 旦 as a picture of sunlight breaking through that cloud at daybreak. The received horizontal line is consequently interpreted through the earlier cloud-shaped support, not simply as a diagram of the earth's surface.\n\nThis is the point at which he departs from the Shuowen, which identifies the lower 一 with the ground and explains the sun appearing above it. The older form is decisive for his reading.\n\nBronze accounts of royal ceremonies frequently introduce an event at dawn, followed by the king's entry into the great hall. Shirakawa places 旦 beside expressions for the dim early morning, explaining that important investitures and other rites were conducted at that hour. Dawn thus names a natural appearance that also structured political and ceremonial time. The core meanings morning and daybreak follow directly from that original scene.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 旦",
+      "url": "https://kotobank.jp/word/%E6%97%A6-94840#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 424,
+  "editorial_status": "source-checked English supplement"
+}

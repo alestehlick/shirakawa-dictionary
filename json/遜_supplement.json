@@ -1,0 +1,31 @@
+{
+  "id": "U+905C",
+  "kanji": "遜",
+  "kun_readings_romaji": [
+    "nogareru",
+    "shitagau",
+    "yuzuru"
+  ],
+  "on_readings_romaji": [
+    "son"
+  ],
+  "category": "",
+  "meanings": [
+    "to withdraw",
+    "to yield",
+    "to be modest",
+    "to comply"
+  ],
+  "explanation": "Shirakawa analyzes 遜 as semantic–phonetic. 辵 gives the movement category, and 孫 supplies the sound son. Early writing could use 孫 itself for withdrawing or fleeing; he cites the Chunqiu's account of a woman departing to Qi with that verb. Adding the movement component distinguishes the action more explicitly.\n\nThe original line of meaning is retreating, leaving, or getting out of the way. From withdrawing before another person develops the social sense of yielding one's position and complying rather than pressing forward. This supplies the connection with modesty and deference.\n\nShirakawa also compares words in the sound-family of 損, in which reduction or giving way provides a related association. His sequence therefore follows an attested verb of departure into the ethical vocabulary of yielding and humility. The grandchild meaning of 孫 is not the starting point of this particular word history.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 遜",
+      "url": "https://kotobank.jp/word/%E3%81%9D%E3%82%93%E3%81%AE%E3%81%8C%E3%82%8C%E3%82%8B%E3%81%97%E3%81%9F%E3%81%8C%E3%81%86%E3%82%86%E3%81%9A%E3%82%8B-2788682#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1876,
+  "editorial_status": "source-checked English supplement"
+}

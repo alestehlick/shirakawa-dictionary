@@ -1,0 +1,31 @@
+{
+  "id": "U+57FC",
+  "kanji": "埼",
+  "kun_readings_romaji": [
+    "sai",
+    "saki",
+    "misaki"
+  ],
+  "on_readings_romaji": [
+    "ki"
+  ],
+  "category": "",
+  "meanings": [
+    "curving shore",
+    "cape or headland",
+    "projecting bank",
+    "mountainside in related usage"
+  ],
+  "explanation": "埼 combines 土 with 奇 as the phonetic ki. Shirakawa interprets 奇 through a curved cutting implement and an association with irregular or uneven shape.\n\n埼 denotes a bend or projection in a waterside bank. A commentary on a classical rhapsody identifies it as the end or head of a curving shore, providing the geographical setting for the word.\n\nJapanese uses it for a cape or headland. Shirakawa distinguishes that use from the older definition of 岬 as a mountain's side, although the writings can converge in Japanese geography. He also records 崎 and 碕 as alternative forms. The different earth, mountain, and stone classifiers specify related landscapes while 奇 maintains the sound and irregular-shape connection.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 埼",
+      "url": "https://kotobank.jp/word/%E5%9F%BC-1812622#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2116,
+  "editorial_status": "source-checked English supplement"
+}

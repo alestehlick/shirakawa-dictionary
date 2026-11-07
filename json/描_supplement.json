@@ -1,0 +1,31 @@
+{
+  "id": "U+63CF",
+  "kanji": "描",
+  "kun_readings_romaji": [
+    "egaku",
+    "kaku",
+    "utsusu"
+  ],
+  "on_readings_romaji": [
+    "byou"
+  ],
+  "category": "",
+  "meanings": [
+    "to sketch",
+    "to depict",
+    "to trace",
+    "to portray"
+  ],
+  "explanation": "Shirakawa identifies 描 as semantic–phonetic, with the hand component indicating the action and 苗 providing the sound byō. He follows the word through comparisons between different manners of drawing or tracing.\n\nIn the related vocabulary he discusses, 描 has the lighter touch: a slight, tentative rendering comparable to a sketch. Another drawing word is associated with rubbing or following a surface more heavily, like tracing along an existing form.\n\nThis distinction concerns the movement and pressure of the hand, not simply the finished image. The character therefore comes to mean drawing, depicting, copying, or tracing, with a particular association with a light descriptive outline. Shirakawa's unfolding uses the sound-family and the contrasting handling of the brush to explain the action named by the graph.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 描",
+      "url": "https://kotobank.jp/word/%E6%8F%8F-613082#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1694,
+  "editorial_status": "source-checked English supplement"
+}

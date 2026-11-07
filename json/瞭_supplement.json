@@ -1,0 +1,29 @@
+{
+  "id": "U+77AD",
+  "kanji": "瞭",
+  "kun_readings_romaji": [
+    "akiraka"
+  ],
+  "on_readings_romaji": [
+    "ryou"
+  ],
+  "category": "",
+  "meanings": [
+    "clear",
+    "distinct",
+    "to see clearly",
+    "to make clear"
+  ],
+  "explanation": "Shirakawa identifies 目 as the semantic component and the element associated with 尞 as the phonetic in 瞭. He traces that phonetic back to a form representing a courtyard fire, a light kindled in an open ceremonial space. Its word-family carries the sense of brightness.\n\nWith the eye component, that brightness becomes clarity of sight: the eye sees distinctly, or appears bright and clear. Shirakawa cites the Mencius, where an upright inner condition is reflected in the clarity of a person's pupils. The passage joins actual visible eyes with an evaluation of the person.\n\nFrom clear seeing, the character broadens to something evident or distinctly understood, and to making it clear. The formation thus brings together a brightness-bearing phonetic and the category of vision, providing the connection between the eye's appearance and the familiar abstract sense of clarity.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 瞭",
+      "url": "https://kotobank.jp/word/%E7%9E%AD-659067#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1331,
+  "editorial_status": "source-checked English supplement"
+}

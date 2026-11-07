@@ -1,0 +1,31 @@
+{
+  "id": "U+6905",
+  "kanji": "椅",
+  "kun_readings_romaji": [
+    "iigiri",
+    "aogiri",
+    "isu",
+    "hashi"
+  ],
+  "on_readings_romaji": [
+    "i"
+  ],
+  "category": "",
+  "meanings": [
+    "chair",
+    "seat",
+    "a timber tree"
+  ],
+  "explanation": "Shirakawa begins with a tree name. 椅 combines 木 with the phonetic 奇; the i value of this sound family is also represented by 倚. The Shuowen associates the tree with 梓, and Shirakawa places it among trees related to the paulownia group.\n\nHe follows that older sense into the Shijing's account of planting trees when establishing the capital of Wei. The trees are cultivated for the timber they will supply later, and 椅 and 桐 are particularly connected with wood for stringed instruments. The original lexical setting is therefore valuable timber rather than furniture alone.\n\nThe common sense chair develops through interchange with 倚, to lean or rest against something. Shirakawa connects the sounds and meanings of 椅, 倚, 依, and related forms around leaning and support. This explains how a graph first used for a tree became the regular writing in 椅子, a supported place to sit.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 椅",
+      "url": "https://kotobank.jp/word/%E6%A4%85-429927#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 935,
+  "editorial_status": "source-checked English supplement"
+}

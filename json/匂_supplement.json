@@ -1,0 +1,26 @@
+{
+  "id": "U+5302",
+  "kanji": "匂",
+  "kun_readings_romaji": [
+    "niou"
+  ],
+  "on_readings_romaji": [],
+  "category": "",
+  "meanings": [
+    "to give off fragrance",
+    "to smell",
+    "nioi"
+  ],
+  "explanation": "Shirakawa identifies 匂 as a Japanese-created character. He proposes that it arose by abbreviating a variant writing of 韻 and confusing the resulting simple shape with another existing graph. An older Japanese dictionary records two such simple forms with nio(u) among their readings.\n\nHe compares earlier explanations by Ogyū Sorai and Fujitani Nariakira, who proposed different miswritings, including a cursive form connected with fragrance. Shirakawa prefers the abbreviation from the 韻 variant.\n\nThe entry therefore concerns the development of a Japanese written form and competing explanations of its shape. It does not supply an ancient Chinese pictograph of fragrance enclosed in something. The familiar smell and fragrance use should be understood against that Japanese orthographic history.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 匂",
+      "url": "https://kotobank.jp/word/%E5%8C%82-2070700#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2129,
+  "editorial_status": "source-checked English supplement"
+}

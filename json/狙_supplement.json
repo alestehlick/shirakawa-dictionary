@@ -1,0 +1,31 @@
+{
+  "id": "U+72D9",
+  "kanji": "狙",
+  "kun_readings_romaji": [
+    "nerau",
+    "saru"
+  ],
+  "on_readings_romaji": [
+    "so",
+    "sho"
+  ],
+  "category": "",
+  "meanings": [
+    "monkey",
+    "dog in older usage",
+    "to watch for an opportunity",
+    "to aim at"
+  ],
+  "explanation": "狙 is semantic–phonetic, combining the animal classifier with 且 as the phonetic so. The older dictionary gives both a kind of monkey and a dog that suddenly bites people, so its early animal vocabulary is broader than a single modern species name.\n\nShirakawa cites the monkey keeper in Zhuangzi's famous morning-three, evening-four story as an example of the monkey meaning.\n\nThe later sense of watching for an opportunity or aiming at something is explained through interchange with related words for spying and searching, including 索. It should not simply be attributed to a monkey's supposed personality. Shirakawa distinguishes the older animal name from the sound-related vocabulary that supplies the familiar Japanese nerau meaning.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 狙",
+      "url": "https://kotobank.jp/word/%E7%8B%99-551593#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2029,
+  "editorial_status": "source-checked English supplement"
+}

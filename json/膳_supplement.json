@@ -1,0 +1,29 @@
+{
+  "id": "U+81B3",
+  "kanji": "膳",
+  "kun_readings_romaji": [
+    "sonaemono"
+  ],
+  "on_readings_romaji": [
+    "zen"
+  ],
+  "category": "",
+  "meanings": [
+    "ritual food offering",
+    "prepared meal",
+    "to serve food",
+    "dining tray"
+  ],
+  "explanation": "Shirakawa classifies 膳 as semantic–phonetic: the flesh component supplies the food category, and 善 supplies the sound zen. His starting point is a prepared offering, especially sacrificial food presented to a deity. He associates the word with the vocabulary of divine offerings represented by 饌 and related forms.\n\nThe institutional setting clarifies the action. The official responsible for slaughter apportioned the sacrificial meat, and the 膳夫 presented it. In bronze inscriptions that title can be written 善夫, without the added flesh classifier. Shirakawa cites vessels associated with an official of that name or office as evidence for the phonetic and occupational connection.\n\nFrom supplying a sacred offering, the word broadens to preparing and serving food, the completed meal, and eating well. Modern Japanese uses for a meal or the tray on which it is arranged follow this history of food made ready and set before its recipient.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 膳",
+      "url": "https://kotobank.jp/word/%E8%86%B3-87960#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1168,
+  "editorial_status": "source-checked English supplement"
+}

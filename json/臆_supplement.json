@@ -1,0 +1,29 @@
+{
+  "id": "U+81C6",
+  "kanji": "臆",
+  "kun_readings_romaji": [
+    "omou"
+  ],
+  "on_readings_romaji": [
+    "oku"
+  ],
+  "category": "",
+  "meanings": [
+    "breast",
+    "inner thoughts",
+    "to conjecture",
+    "to suppose"
+  ],
+  "explanation": "Shirakawa treats 臆 as semantic–phonetic. The body component identifies its anatomical field, and 意 supplies the sound oku. The Shuowen records a different principal writing with 乙, interpreted as a bone-shaped element, and gives the meaning breastbone; 臆 is listed as an alternative.\n\nThe concrete starting point is therefore the chest or breast. From the interior of the breast, the word comes to express what one holds inwardly: thoughts, intentions, and suppositions. The compound 胸臆 makes that connection between the bodily location and one's inner feelings explicit.\n\nShirakawa also reads 意 through apprehending a divine intention from the sound marking a god's arrival. Within 臆, this helps explain the vocabulary of estimating or conjecturing what is not directly known. The account joins an old anatomical word to the semantic field of inward thought; it does not make the modern emotion of timidity the graph's primary pictorial meaning.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 臆",
+      "url": "https://kotobank.jp/word/%E8%87%86-451674#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1192,
+  "editorial_status": "source-checked English supplement"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "U+5815",
+  "kanji": "堕",
+  "kun_readings_romaji": [
+    "ochiru",
+    "kobotsu",
+    "yabureru"
+  ],
+  "on_readings_romaji": [
+    "da",
+    "ki"
+  ],
+  "category": "",
+  "meanings": [
+    "to fall",
+    "to collapse",
+    "to break down",
+    "to neglect by related usage"
+  ],
+  "explanation": "堕 is the modern form of 墮, with 隋 as the phonetic da. Shirakawa interprets 隋 through portions of sacrificial meat piled before the sacred ladder used for divine ascent and descent. 墮 describes that heap collapsing or falling down.\n\nHe distinguishes another traditionally conflated form involving ritual implements and a curse. That graph may explain the abandonment or destruction meanings and its different ki reading. He questions treating all the received forms and readings as one transparent original character.\n\nThe main 墮 branch is falling and collapse, with related vocabulary including 墜. Interchange with 惰 adds ceasing or neglecting an activity. Modern moral deterioration in 堕落 belongs to this falling range, while Shirakawa preserves uncertainty about how some of the older destructive uses were combined.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 堕",
+      "url": "https://kotobank.jp/word/%E5%A0%95-556064#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1731,
+  "editorial_status": "source-checked English supplement",
+  "related_form": "墮"
+}

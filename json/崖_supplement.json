@@ -1,0 +1,30 @@
+{
+  "id": "U+5D16",
+  "kanji": "崖",
+  "kun_readings_romaji": [
+    "gake",
+    "kishi"
+  ],
+  "on_readings_romaji": [
+    "gai"
+  ],
+  "category": "",
+  "meanings": [
+    "cliff",
+    "steep edge",
+    "bank or shore",
+    "boundary"
+  ],
+  "explanation": "Shirakawa treats 崖 as semantic–phonetic, using an older cliff graph for the sound gai. He identifies that older graph as the initial writing, before the mountain classifier was added in the fuller form.\n\nThe traditional definition concerns a high edge: ground ending in a steep drop. Shirakawa distinguishes related vocabulary for a water's edge, written 涯, and the steep bank or cliff expressed by 岸. These words overlap but emphasize different features of the boundary.\n\n崖 accordingly denotes a cliff and can also be used for a bank or waterside through its relation with 涯. The underlying spatial idea is an edge or limit made conspicuous by the height or abrupt ending of the ground.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 崖",
+      "url": "https://kotobank.jp/word/%E5%B4%96-42083#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1927,
+  "editorial_status": "source-checked English supplement"
+}

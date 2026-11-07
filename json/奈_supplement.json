@@ -1,0 +1,32 @@
+{
+  "id": "U+5948",
+  "kanji": "奈",
+  "kun_readings_romaji": [
+    "karanashi",
+    "nanzo"
+  ],
+  "on_readings_romaji": [
+    "na",
+    "dai",
+    "nai"
+  ],
+  "category": "",
+  "meanings": [
+    "how",
+    "what can be done",
+    "crabapple",
+    "phonetic element in names"
+  ],
+  "explanation": "Shirakawa treats 奈 as the popular abbreviated writing of 柰, the name of the karanashi, a crabapple-like fruit tree. The older graph contains 木, marking a tree, above 示. Although traditionally classified as semantic–phonetic, its proposed 示 phonetic does not adequately explain the pronunciation; Shirakawa explicitly leaves that sound relationship unresolved. Oracle-bone graphs resembling this combination are separate characters and cannot by themselves establish its origin.\n\nThe interrogative use is already represented in early classical texts: 柰何, later 奈何, corresponds to 如何, asking how something is or what can be done. Shirakawa connects these expressions through their historical sounds, and compares interrogative 那. The questioning sense should therefore be followed through word usage rather than deduced from a modern picture of 大 over an altar.\n\nHis account preserves both the older botanical meaning and the familiar interrogative function while acknowledging the limits of the proposed graphic etymology.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 奈",
+      "url": "https://kotobank.jp/word/%E5%A5%88-586919#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 6,
+  "editorial_status": "source-checked English supplement"
+}

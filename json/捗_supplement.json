@@ -1,0 +1,31 @@
+{
+  "id": "U+6357",
+  "kanji": "捗",
+  "kun_readings_romaji": [
+    "osameru",
+    "hakadoru"
+  ],
+  "on_readings_romaji": [
+    "choku",
+    "ho"
+  ],
+  "category": "",
+  "meanings": [
+    "to make progress",
+    "to advance",
+    "to gather or put in order",
+    "to strike"
+  ],
+  "explanation": "Shirakawa classifies 捗 as semantic–phonetic, combining the hand component with 歩 as a sound element. He also allows analysis through an abbreviated phonetic 陟, which supplies the choku reading. These alternatives concern the graph's sound history.\n\nOlder dictionaries give meanings involving taking or gathering, putting disordered things in order, and striking. Shirakawa emphasizes that actual examples of these uses are extremely scarce. His account therefore does not reconstruct a richly documented ancient sequence from the dictionary glosses alone.\n\nThe familiar Japanese development is hakadoru, making headway or progressing, as in 進捗. That use is the reason the graph remains useful in modern written Japanese. The reliable distinction is between its semantic–phonetic formation, its sparsely evidenced older glosses, and the established Japanese word for work or an undertaking moving forward.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 捗",
+      "url": "https://kotobank.jp/word/%E3%81%A1%E3%82%88%E3%81%8F%E3%81%BB%E3%81%8A%E3%81%95%E3%82%81%E3%82%8B%E3%81%AF%E3%81%8B%E3%81%A9%E3%82%8B-2789116#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1556,
+  "editorial_status": "source-checked English supplement"
+}

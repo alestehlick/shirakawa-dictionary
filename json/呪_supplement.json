@@ -1,0 +1,31 @@
+{
+  "id": "U+546A",
+  "kanji": "呪",
+  "kun_readings_romaji": [
+    "norou",
+    "inoru"
+  ],
+  "on_readings_romaji": [
+    "ju",
+    "shuu"
+  ],
+  "category": "",
+  "meanings": [
+    "to curse",
+    "to invoke",
+    "incantation",
+    "spell"
+  ],
+  "explanation": "Shirakawa begins with 祝, the earlier writing that covered both benediction and imprecation. 呪 developed to mark the latter field more distinctly. He analyzes its received structure as 口 together with 兄. Here 兄 is the praying officiant presenting a sai, the ritual receptacle holding a written prayer, and the additional 口 belongs to the same world of spoken and deposited invocations.\n\nBlessing and cursing are thus branches of a shared religious act: addressing powers through an efficacious formula. 呪 eventually specializes in curses, spells, and incantatory practice, while still retaining the broader sense of invoking or praying.\n\nThe graph is absent from the Shuowen; Shirakawa notes examples from the Later Han onward. He then follows the historical practice into offices concerned with incantations and into Japan, citing the Nihon shoki's account of a ritual specialist's arrival. This chronology distinguishes the later specialized graph from the older rite expressed by 祝.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 呪",
+      "url": "https://kotobank.jp/word/%E5%91%AA-76667#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 768,
+  "editorial_status": "source-checked English supplement"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "U+6841",
+  "kanji": "桁",
+  "kun_readings_romaji": [
+    "keta",
+    "koromokake"
+  ],
+  "on_readings_romaji": [
+    "kou"
+  ],
+  "category": "",
+  "meanings": [
+    "horizontal beam",
+    "clothes rack",
+    "wooden restraint",
+    "numerical place in Japanese"
+  ],
+  "explanation": "桁 is semantic–phonetic, with 木 and 行 as the phonetic kō. Shirakawa associates 行 here with things arranged in a line. The older definition names a roof timber, a beam laid horizontally across supports.\n\nThe same word can describe a clothes rack or a wooden restraint. Related writings extend to a bridge made by placing boats alongside one another, retaining the idea of something set across or in an aligned series.\n\nJapanese also uses 桁 for a place on an abacus and hence a numerical digit's position. Shirakawa identifies that specifically as a Japanese application. His comparison with 衡 and 横 places the main physical meanings within a sound-family of crosswise members and things stretched horizontally.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 桁",
+      "url": "https://kotobank.jp/word/%E6%A1%81-3166#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2114,
+  "editorial_status": "source-checked English supplement"
+}

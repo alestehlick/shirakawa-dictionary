@@ -1,0 +1,32 @@
+{
+  "id": "U+6627",
+  "kanji": "昧",
+  "kun_readings_romaji": [
+    "yoake",
+    "kurai",
+    "oroka"
+  ],
+  "on_readings_romaji": [
+    "mai"
+  ],
+  "category": "",
+  "meanings": [
+    "dim",
+    "before dawn",
+    "obscure",
+    "ignorant",
+    "unaware"
+  ],
+  "explanation": "Shirakawa classifies 昧 as semantic–phonetic, with 日 locating the word in the field of light and time, and 未 supplying its sound. The old dictionary definition concerns the darkness immediately before daybreak: light is about to appear, but the surroundings are still indistinct. Expressions such as 昧爽 and 昧旦 preserve this specific hour.\n\nBronze records place important court ceremonies in that early morning interval. Shirakawa therefore follows the word through an actual ceremonial timetable, beside dawn and the brighter morning, rather than treating the graph only as a general label for darkness.\n\nFrom a world whose details cannot yet be distinguished come the meanings obscure, uncomprehending, and ignorant. Related words for hidden or extinguished light support the same semantic field. The Japanese senses of being unaware or acting without understanding develop from this loss of clear perception. His explanation moves from a particular dim hour to an intellectual condition.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 昧",
+      "url": "https://kotobank.jp/word/%E6%98%A7-632818#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1240,
+  "editorial_status": "source-checked English supplement"
+}

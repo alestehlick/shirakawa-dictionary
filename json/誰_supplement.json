@@ -1,0 +1,29 @@
+{
+  "id": "U+8AB0",
+  "kanji": "誰",
+  "kun_readings_romaji": [
+    "dare",
+    "tare"
+  ],
+  "on_readings_romaji": [
+    "sui"
+  ],
+  "category": "",
+  "meanings": [
+    "who",
+    "which person",
+    "to question someone's identity"
+  ],
+  "explanation": "誰 combines 言 with 隹 as the phonetic sui. Shirakawa connects the bird element with the ancient practice of bird divination, comparing the roles of 隹 in related characters.\n\nHe proposes that 誰 originally concerned identifying an unspecified person by such a divinatory procedure. The older definition describes challenging or asking someone's identity, preserving the question directed toward determining who the person is.\n\nMany interrogatives borrow a graph whose original meaning lies elsewhere. Shirakawa considers 誰 closer to its original function because the procedure itself asks for an identity. He also compares 推, inference or conjecture, within the related vocabulary. This is his proposed divinatory background to the ordinary question who, rather than a general claim that every modern question involves an omen.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 誰",
+      "url": "https://kotobank.jp/word/%E8%AA%B0-539457#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2069,
+  "editorial_status": "source-checked English supplement"
+}

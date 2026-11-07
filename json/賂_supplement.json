@@ -1,0 +1,30 @@
+{
+  "id": "U+8CC2",
+  "kanji": "賂",
+  "kun_readings_romaji": [
+    "mainai",
+    "okurimono"
+  ],
+  "on_readings_romaji": [
+    "ro"
+  ],
+  "category": "",
+  "meanings": [
+    "gift",
+    "property given or surrendered",
+    "bribe",
+    "treasure"
+  ],
+  "explanation": "賂 combines 貝 with 各 as the phonetic ro, a reading also represented by 路 and 輅. The valuables classifier marks the field of gifts and property.\n\nShirakawa stresses that the older word did not inherently mean a corrupt payment. Classical examples include property taken after military defeat and gifts sent diplomatically to express apology. Such transfers could be public and politically recognized.\n\nPayments intended to obtain a favour also occurred, and that use supplies the familiar bribery meaning in 賄賂. The unfolding therefore moves from giving or surrendering valuables to the particular purpose of influencing another person. Reading every early 賂 as a clandestine bribe would erase the broader historical range preserved in the sources he cites.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 賂",
+      "url": "https://kotobank.jp/word/%E8%B3%82-662372#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2004,
+  "editorial_status": "source-checked English supplement"
+}

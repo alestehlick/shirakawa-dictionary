@@ -1,0 +1,33 @@
+{
+  "id": "U+53B3",
+  "kanji": "厳",
+  "kun_readings_romaji": [
+    "ogosoka",
+    "kibishii",
+    "tsutsushimu"
+  ],
+  "on_readings_romaji": [
+    "gen",
+    "gon"
+  ],
+  "category": "",
+  "meanings": [
+    "solemn",
+    "reverent",
+    "strict",
+    "severe",
+    "majestic"
+  ],
+  "explanation": "The modern 厳 abbreviates 嚴. Shirakawa works back through its earlier base form and the related 敢. Above that base, the fuller character places ritual prayer receptacles, the sai represented by 口; some bronze forms show three of them. The composition belongs to the solemn performance of a sacred ceremony.\n\nIn his account 敢 involves ladling fragrant sacrificial wine. The surrounding structure marks the sanctuary where that offering is performed, represented through a building in bronze forms and associated with a sacred place beneath a cliff. The added prayer vessels intensify the ceremonial setting.\n\nThe central meaning is reverent or solemn observance. Shirakawa points to bronze usage concerning ancestral or divine presence and explains the apparent boldness of 敢 as an expression of respectful restraint. Strictness, severity, an imposing appearance, and the fear inspired by authority develop from that demanding sacred solemnity.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 厳",
+      "url": "https://kotobank.jp/word/%E5%8E%B3-433889#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1070,
+  "editorial_status": "source-checked English supplement"
+}

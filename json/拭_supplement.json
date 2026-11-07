@@ -1,0 +1,30 @@
+{
+  "id": "U+62ED",
+  "kanji": "拭",
+  "kun_readings_romaji": [
+    "fuku",
+    "nuguu",
+    "kiyomeru"
+  ],
+  "on_readings_romaji": [
+    "shoku"
+  ],
+  "category": "",
+  "meanings": [
+    "to wipe",
+    "to wipe away",
+    "to cleanse"
+  ],
+  "explanation": "拭 combines the hand classifier with 式 as the phonetic. Shirakawa interprets 式 through the ritual implement 工 and the action of purifying or warding off harmful influence. This gives a ceremonial background to the wiping action.\n\nA ritual text describes wiping a jade tablet, while another account portrays Confucius wiping his tear-covered face with his sleeve. Together they show both formal cleansing and the ordinary removal of moisture.\n\nShirakawa places 拭 beside older wiping words written with 飾 and 刷. Their forms involve a cloth carried on the body, and their sounds are related. His analysis therefore links the manual action, the cloth used for it, and the clean condition achieved, rather than treating 式 only in its later sense of a rule or formula.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 拭",
+      "url": "https://kotobank.jp/word/%E6%8B%AD-534047#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1903,
+  "editorial_status": "source-checked English supplement"
+}

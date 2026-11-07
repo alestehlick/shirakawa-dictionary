@@ -1,0 +1,30 @@
+{
+  "id": "U+9192",
+  "kanji": "醒",
+  "kun_readings_romaji": [
+    "sameru",
+    "satoru"
+  ],
+  "on_readings_romaji": [
+    "sei"
+  ],
+  "category": "",
+  "meanings": [
+    "to become sober",
+    "to wake",
+    "to regain awareness",
+    "to recognize an error"
+  ],
+  "explanation": "醒 is semantic–phonetic. 酉 places it in the sphere of wine, and 星 supplies the sound sei. The older definitions begin with becoming sober after intoxication.\n\nThe first transition is therefore a change in awareness: a person emerges from the confusion caused by drink and returns to clear perception. From this develop waking, understanding one's situation, and recognizing an error or illusion. The later mental meanings preserve the contrast between clouded and restored consciousness.\n\nShirakawa also records the expression 醒狂, behaving wildly while sober, in contrast to 酔狂, wildness associated with intoxication. Such usage keeps the wine-related starting point visible even where the emphasis falls on conduct. The star component functions as the phonetic; the explanation does not require a story about seeing stars on waking.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 醒",
+      "url": "https://kotobank.jp/word/%E9%86%92-544438#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1853,
+  "editorial_status": "source-checked English supplement"
+}

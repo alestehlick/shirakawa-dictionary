@@ -1,0 +1,29 @@
+{
+  "id": "U+9DB4",
+  "kanji": "鶴",
+  "kun_readings_romaji": [
+    "tsuru"
+  ],
+  "on_readings_romaji": [
+    "kaku"
+  ],
+  "category": "",
+  "meanings": [
+    "crane",
+    "auspicious bird",
+    "pickaxe head",
+    "white by related usage"
+  ],
+  "explanation": "鶴 combines 鳥 with 寉 as the phonetic kaku. Shirakawa interprets the phonetic through the bird's striking cry, citing a Book of Odes poem in which the crane's voice carries far beyond its marsh.\n\nAlthough related words concern whiteness, he considers the memorable call the most likely basis of the name. This is an account of sound-based naming, not an assertion that the phonetic depicts the bird's modern silhouette.\n\nThe crane was regarded as auspicious and became a mount of immortals; specialized writings interpreted its unusual appearance as a favourable sign. Shirakawa also records the tool-head and white usages. The main unfolding keeps the named bird and its impressive voice before the later symbolic associations.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 鶴",
+      "url": "https://kotobank.jp/word/%E9%B6%B4-460028#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2019,
+  "editorial_status": "source-checked English supplement"
+}

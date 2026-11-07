@@ -1,0 +1,33 @@
+{
+  "id": "U+525D",
+  "kanji": "剝",
+  "kun_readings_romaji": [
+    "hagasu",
+    "hagu",
+    "hagareru",
+    "hageru",
+    "saku"
+  ],
+  "on_readings_romaji": [
+    "haku"
+  ],
+  "category": "",
+  "meanings": [
+    "to skin",
+    "to peel",
+    "to strip off",
+    "to flake or fall away"
+  ],
+  "explanation": "Shirakawa reads 剝 as a compound of an animal form and 刀. He cautions that the left element is not the identically shaped graph associated with drilling; its seal form instead resembles an animal, whose hide is removed with a knife.\n\nAn older variant combines bone and knife, supporting the cutting and stripping action. The primary range includes splitting, skinning, peeling, and scraping away a surface.\n\nWhat is stripped can be forcibly taken from someone, giving 剝奪; a surface can also detach by itself, giving 剝落. Shirakawa compares sound-related impact words and regards the spoken word as imitating the noise of stripping. The graphic action and the proposed sound imitation contribute different parts of his explanation.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 剝",
+      "url": "https://kotobank.jp/word/%E5%89%9D-600042#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2102,
+  "editorial_status": "source-checked English supplement"
+}

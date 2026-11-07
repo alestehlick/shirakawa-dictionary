@@ -1,0 +1,31 @@
+{
+  "id": "U+6C3E",
+  "kanji": "氾",
+  "kun_readings_romaji": [
+    "ukabu",
+    "habikoru",
+    "hiroi"
+  ],
+  "on_readings_romaji": [
+    "han"
+  ],
+  "category": "",
+  "meanings": [
+    "to float or drift",
+    "to overflow",
+    "to inundate",
+    "wide or general"
+  ],
+  "explanation": "Shirakawa reads 氾 as water combined with a prone human figure. He interprets the figure as a drowned body floating face downward; the contrasting formation in 泛 represents a body facing upward. The small modern component should not obscure this reconstruction of the older shape.\n\nFrom a body carried on the water come floating and drifting, then water spreading beyond its usual bounds. This gives the inundation and overflow expressed in 氾濫. The common thread is movement or extension without containment.\n\nThe broader senses extensive and general overlap with 汎, which is also used in that range. Shirakawa distinguishes these related writings instead of treating their present interchangeability as proof that they began as the same graph. His explanation proceeds from the floating figure to the spreading water and its figurative breadth.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 氾",
+      "url": "https://kotobank.jp/word/%E6%B0%BE-605964#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1765,
+  "editorial_status": "source-checked English supplement"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "U+7C60",
+  "kanji": "籠",
+  "kun_readings_romaji": [
+    "kago",
+    "komoru",
+    "komeru"
+  ],
+  "on_readings_romaji": [
+    "rou"
+  ],
+  "category": "",
+  "meanings": [
+    "basket",
+    "cage",
+    "to enclose",
+    "to remain inside"
+  ],
+  "explanation": "Shirakawa analyzes 籠 as semantic–phonetic, with 竹 giving the material category and 龍 supplying the sound. The Shuowen's first concrete object is a basket used for carrying earth. Another recorded sense is a container for arrows, a quiver.\n\nThose objects share their function: things are collected and held inside them. Shirakawa follows that enclosing action into the wider meanings of gathering together, including, and shutting something in. Japanese komoru, remaining within, continues this sense of containment.\n\nThe same idea can be applied to people or affairs. 籠統 concerns taking things together within one compass, while 籠絡 describes bringing someone under one's influence or control. These figurative uses grow out of the basket's capacity to hold its contents. His explanation moves from a bamboo container to the action and condition of being enclosed.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 籠",
+      "url": "https://kotobank.jp/word/%E7%B1%A0-461351#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1606,
+  "editorial_status": "source-checked English supplement"
+}

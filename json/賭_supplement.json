@@ -1,0 +1,30 @@
+{
+  "id": "U+8CED",
+  "kanji": "賭",
+  "kun_readings_romaji": [
+    "kakeru",
+    "kake"
+  ],
+  "on_readings_romaji": [
+    "to"
+  ],
+  "category": "",
+  "meanings": [
+    "wager",
+    "gambling",
+    "to stake",
+    "to entrust to chance"
+  ],
+  "explanation": "賭 is semantic–phonetic. 貝 identifies property or valuables, and 者 supplies the sound to, a value also found in 都 and related formations. Shirakawa makes that phonetic range explicit rather than relying only on the familiar reading sha.\n\nThe entry added to the Shuowen tradition defines the word through games of chance. The noun names a wager or gambling, while the verb means placing a stake and leaving its outcome to the event.\n\nShirakawa compares 睹 in a sound-related group concerned with confronting a particular or not-yet-known object. His treatment is chiefly phonetic and lexical: the valuables classifier identifies what is put at stake, while the established gambling word supplies the character's use. No independent divination scene is asserted for the modern components.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 賭",
+      "url": "https://kotobank.jp/word/%E3%81%A8%E3%81%8B%E3%81%91%E3%81%8B%E3%81%91%E3%82%8B-2789371#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1945,
+  "editorial_status": "source-checked English supplement"
+}

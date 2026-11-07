@@ -1,0 +1,30 @@
+{
+  "id": "U+914E",
+  "kanji": "酎",
+  "kun_readings_romaji": [
+    "koisake",
+    "sake",
+    "kamosu"
+  ],
+  "on_readings_romaji": [
+    "chuu"
+  ],
+  "category": "",
+  "meanings": [
+    "rich repeatedly brewed wine",
+    "sacrificial wine",
+    "to brew"
+  ],
+  "explanation": "Shirakawa analyzes 酎 as semantic–phonetic. 酉 provides the wine-vessel and alcohol category. He suggests that the apparent 寸 phonetic is an abbreviated 丑, which better explains the sound chū. That identification is a proposed historical reduction of the component.\n\nThe Shuowen describes a rich wine produced through three successive brewings. Shirakawa follows this particular drink into the ritual calendar: when the wine was ready, the ruler tasted it and presented it in the ancestral temple. The word thus names both a concentrated, fragrant brew and the wine used for an offering.\n\nHe also notes the Han institution of 酎金, contributions exacted from the feudal rulers for this sacrificial wine. This is the historical setting of the graph's ceremonial meaning. Modern Japanese compounds such as 焼酎 retain the character in a later alcohol vocabulary; the ancient starting point was the repeatedly brewed offering wine.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 酎",
+      "url": "https://kotobank.jp/word/%E9%85%8E-567075#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1069,
+  "editorial_status": "source-checked English supplement"
+}

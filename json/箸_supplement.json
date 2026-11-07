@@ -1,0 +1,30 @@
+{
+  "id": "U+7BB8",
+  "kanji": "箸",
+  "kun_readings_romaji": [
+    "hashi",
+    "taru"
+  ],
+  "on_readings_romaji": [
+    "cho",
+    "chaku"
+  ],
+  "category": "",
+  "meanings": [
+    "chopsticks",
+    "bamboo tube",
+    "to attach or become evident by related usage"
+  ],
+  "explanation": "箸 is semantic–phonetic, with 竹 identifying bamboo and 者 supplying the sound cho, also represented in 楮. The older dictionary identifies the implement used with food, and Shirakawa notes a later alternative writing used in the same chopstick vocabulary.\n\nThe principal meaning is the pair of eating sticks. The lexical range also includes a bamboo tube or container, retaining the material indicated by the classifier.\n\n箸 can interchange with 著 for attaching, becoming evident, and related meanings. Those uses belong to another branch of the shared sound-family; they should not be explained as actions performed by chopsticks. Shirakawa's brief account distinguishes the bamboo utensil from these conventional exchanges between related written forms.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 箸",
+      "url": "https://kotobank.jp/word/%E3%81%A1%E3%82%88%E3%81%A1%E3%82%84%E3%81%8F%E3%81%AF%E3%81%97%E3%81%9F%E3%82%8B-2789031#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2130,
+  "editorial_status": "source-checked English supplement"
+}

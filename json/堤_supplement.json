@@ -1,0 +1,29 @@
+{
+  "id": "U+5824",
+  "kanji": "堤",
+  "kun_readings_romaji": [
+    "tsutsumi"
+  ],
+  "on_readings_romaji": [
+    "tei"
+  ],
+  "category": "",
+  "meanings": [
+    "embankment",
+    "dike",
+    "to hold back",
+    "to obstruct"
+  ],
+  "explanation": "Shirakawa treats 堤 as semantic–phonetic. 土 identifies an earthwork, and 是 provides the sound, with related readings also represented by 提 and 題. The Shuowen's gloss concerns holding or stopping, particularly checking the movement of water.\n\nThe physical result is an earthen bank or embankment. Water is detained or prevented from passing beyond it, so the noun and the verbs for holding back, obstructing, or remaining blocked belong to one practical action.\n\nShirakawa also follows the alternate writing 隄. Through its 阜 component, which he interprets as a sacred ladder or place of divine ascent and descent, he connects that form with an embankment protecting a sanctuary. The two writings thus meet in the idea of an earth barrier. The familiar river-bank sense of 堤 continues the material structure and the restraining function emphasized in the old gloss.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 堤",
+      "url": "https://kotobank.jp/word/%E5%A0%A4-571961#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1603,
+  "editorial_status": "source-checked English supplement"
+}

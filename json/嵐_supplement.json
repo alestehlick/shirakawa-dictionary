@@ -1,0 +1,29 @@
+{
+  "id": "U+5D50",
+  "kanji": "嵐",
+  "kun_readings_romaji": [
+    "arashi"
+  ],
+  "on_readings_romaji": [
+    "ran"
+  ],
+  "category": "",
+  "meanings": [
+    "mountain vapour",
+    "mist among mountains",
+    "strong wind",
+    "storm in Japanese"
+  ],
+  "explanation": "嵐 is a compound of 山 and 風. Shirakawa begins with mountain air or vapour, including mist lying among the slopes. A poetic expression for green mountain haze preserves this atmospheric range.\n\nThe entry added to the older dictionary tradition calls it a mountain name, while another lexical source gives strong wind. Shirakawa records both strands rather than making the familiar Japanese storm sense the sole starting point.\n\nJapanese uses 嵐 for arashi, a storm or violent wind. The character's history thus joins mountain atmosphere with wind, but its meanings have differed across contexts and languages. The modern components express the compound directly; the entry does not require a reconstructed sacrificial or divinatory origin.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 嵐",
+      "url": "https://kotobank.jp/word/%E5%B5%90-27744#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2048,
+  "editorial_status": "source-checked English supplement"
+}

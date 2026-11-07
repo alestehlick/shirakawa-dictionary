@@ -1,0 +1,28 @@
+{
+  "id": "U+8A03",
+  "kanji": "訃",
+  "kun_readings_romaji": [
+    "shirase"
+  ],
+  "on_readings_romaji": [
+    "fu"
+  ],
+  "category": "",
+  "meanings": [
+    "to announce a death",
+    "death notice",
+    "to go and report"
+  ],
+  "explanation": "訃 is semantic–phonetic, using 卜 for the sound fu, also found in 赴 and 仆. 言 identifies the act of reporting. The character should not be explained solely through the independent meaning divination of 卜.\n\nShirakawa cites a funeral-ritual instruction in which a messenger goes to announce that a named retainer has died. Different textual versions write either 赴 or 訃 for the reporting action.\n\nThe death notice is thus connected with going to deliver news, and the speech classifier makes that communicative function explicit. Shirakawa treats the relation with 赴 as sound-based borrowing and conventional differentiation. The familiar 訃報 retains the specific report of death rather than the wider movement meaning of its related writing.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 訃",
+      "url": "https://kotobank.jp/word/%E8%A8%83-614873#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2006,
+  "editorial_status": "source-checked English supplement"
+}

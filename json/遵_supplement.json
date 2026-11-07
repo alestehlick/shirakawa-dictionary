@@ -1,0 +1,30 @@
+{
+  "id": "U+9075",
+  "kanji": "遵",
+  "kun_readings_romaji": [
+    "shitagau",
+    "yoru"
+  ],
+  "on_readings_romaji": [
+    "jun"
+  ],
+  "category": "",
+  "meanings": [
+    "to follow",
+    "to conform to",
+    "to rely on",
+    "to learn from"
+  ],
+  "explanation": "遵 is semantic–phonetic, with 尊 supplying the sound in the relevant jun family. The movement element accompanies a word for following or going in accordance with something.\n\nShirakawa compares 循, whose formation he associates with military inspection using a shield. 遵, by contrast, is characteristically used for adherence to a rule or established standard, as in Mencius's language about following the laws of former kings. The two writings can nevertheless overlap in use.\n\nHe places 巡 and 徇 beside them as related vocabulary of following and inspection. The familiar sense obey or comply thus belongs to a wider group of words for guided movement, imitation, and adherence. It should not be derived merely from the independent modern meaning of 尊, respect.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 遵",
+      "url": "https://kotobank.jp/word/%E9%81%B5-529654#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1990,
+  "editorial_status": "source-checked English supplement"
+}

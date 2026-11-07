@@ -1,0 +1,26 @@
+{
+  "id": "U+6803",
+  "kanji": "栃",
+  "kun_readings_romaji": [
+    "tochi"
+  ],
+  "on_readings_romaji": [],
+  "category": "",
+  "meanings": [
+    "Japanese horse chestnut",
+    "horse-chestnut tree",
+    "horse-chestnut nut"
+  ],
+  "explanation": "Shirakawa identifies 栃 as a Japanese-created character. The Japanese tree-name tochi was also written with 橡 and several other graphs in older dictionaries, so its written history is not confined to one stable Chinese character.\n\nHe notes 杤 as another form and records a proposal that 万 represents ten thousands, read as a combination of ten and thousand to suggest to-chi. This is an explanatory proposal, not an established ancient Chinese phonetic analysis.\n\nThe word names the tree and its nuts. Shirakawa also mentions the rolling stick used when making noodles containing the nut material. The entry concerns a Japanese plant-name and its spellings; it should not be given an invented oracle-bone origin or a regular Chinese on-reading.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 栃",
+      "url": "https://kotobank.jp/word/%E6%A0%83-1771063#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2124,
+  "editorial_status": "source-checked English supplement"
+}

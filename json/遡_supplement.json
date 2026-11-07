@@ -1,0 +1,29 @@
+{
+  "id": "U+9061",
+  "kanji": "遡",
+  "kun_readings_romaji": [
+    "sakanoboru"
+  ],
+  "on_readings_romaji": [
+    "so"
+  ],
+  "category": "",
+  "meanings": [
+    "to go upstream",
+    "to go back in time",
+    "to trace backward",
+    "to face toward"
+  ],
+  "explanation": "遡 is semantic–phonetic, with 朔 supplying the sound. Shirakawa compares it with 泝, treated as the principal writing in the older dictionary tradition, while observing that both forms were used.\n\nTheir conventions differ. 泝 is used for travelling against a watercourse, whereas 遡 is also used for going backward in time. His example is 遡及, where a law's effect reaches back to a time before its promulgation; that expression is not ordinarily written with 泝.\n\nThe range also includes approaching or facing something, and a complaint sense through interchange with a related graph. The important distinction is between shared sound and meaning on one hand and the later distribution of the written forms on the other.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 遡",
+      "url": "https://kotobank.jp/word/%E3%81%9D%E3%81%95%E3%81%8B%E3%81%AE%E3%81%BC%E3%82%8B-2788499#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1992,
+  "editorial_status": "source-checked English supplement"
+}

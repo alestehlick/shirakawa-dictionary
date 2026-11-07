@@ -1,0 +1,32 @@
+{
+  "id": "U+55A9",
+  "kanji": "喩",
+  "kun_readings_romaji": [
+    "tatoeru",
+    "tsugeru",
+    "satosu",
+    "satoru"
+  ],
+  "on_readings_romaji": [
+    "yu"
+  ],
+  "category": "",
+  "meanings": [
+    "to illustrate by analogy",
+    "to explain",
+    "to inform",
+    "to understand"
+  ],
+  "explanation": "Shirakawa identifies 兪 as the phonetic in 喩. He interprets 兪 as a handled surgical implement transferring discharged material into a receptacle, with an early connection to the graph later used for healing. The important semantic thread he draws from it is transfer from one place to another.\n\nIn 喩 that transfer becomes explanatory: one brings in another case or example so that the present matter can be understood through it. This gives the meanings comparing, illustrating, and explaining by analogy. Classical examples also use the word for apprehending something by reference to what one understands elsewhere.\n\nShirakawa connects 喩 closely with 諭, sharing both sound and earlier meaning. Later usage tends to specialize 喩 in analogy and figurative comparison, while 諭 more often concerns instruction, admonition, or formal explanation. The two branches retain the central movement from one understood thing to another.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 喩",
+      "url": "https://kotobank.jp/word/%E3%82%86%E3%81%9F%E3%81%A8%E3%81%88%E3%82%8B%E3%81%A4%E3%81%92%E3%82%8B%E3%81%95%E3%81%A8%E3%81%99%E3%81%95%E3%81%A8%E3%82%8B-2790784#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1661,
+  "editorial_status": "source-checked English supplement"
+}

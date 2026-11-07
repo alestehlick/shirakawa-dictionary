@@ -1,0 +1,32 @@
+{
+  "id": "U+7D00",
+  "kanji": "紀",
+  "kun_readings_romaji": [
+    "itosuji",
+    "nori",
+    "shirusu"
+  ],
+  "on_readings_romaji": [
+    "ki"
+  ],
+  "category": "",
+  "meanings": [
+    "thread",
+    "order",
+    "guiding principle",
+    "record",
+    "chronicle"
+  ],
+  "explanation": "Shirakawa classifies 紀 as semantic–phonetic, with 糸 indicating thread and 己 providing the sound ki. He interprets 己 as a device for winding or reeling thread and suggests that it may have been the original writing of the word later expressed more explicitly by 紀.\n\nThe Shuowen explains the character through the differentiation of silk threads. Keeping the strands distinct, arranging them, and winding them into an ordered whole supplies the concrete basis for the later vocabulary of regulation and organization. Shirakawa cites ritual discourse in the Liji: exemplary conduct provides the ordering thread of a community, while the loss of that thread brings disorder.\n\nFrom ordering threads comes arranging affairs and setting out their sequence. A record or chronicle gives events their beginnings, developments, and conclusions in an intelligible order. The meanings rule, framework, record, and period are thus followed back to the practical work of managing thread.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 紀",
+      "url": "https://kotobank.jp/word/%E7%B4%80-49798#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 876,
+  "editorial_status": "source-checked English supplement"
+}

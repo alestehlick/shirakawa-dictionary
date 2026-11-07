@@ -1,0 +1,33 @@
+{
+  "id": "U+690E",
+  "kanji": "椎",
+  "kun_readings_romaji": [
+    "tsuchi",
+    "utsu",
+    "tataku",
+    "shii"
+  ],
+  "on_readings_romaji": [
+    "tsui",
+    "sui"
+  ],
+  "category": "",
+  "meanings": [
+    "wooden mallet",
+    "to hammer",
+    "to strike",
+    "chinquapin tree"
+  ],
+  "explanation": "Shirakawa classifies 椎 as semantic–phonetic. 木 identifies a wooden implement, and 隹 supplies the sound, with tsui-type values also represented in related graphs. The Shuowen's definition gives something used for striking.\n\nThe primary object is a mallet or club, and the corresponding verb is hitting or pounding with it. Shirakawa places this word beside related terms for rods, lashes, and striking with such implements, emphasizing their shared sound and physical action.\n\nThe character also names the shii tree, read with a sui-type sound in the Chinese-reading tradition. His glosses additionally retain the traditional term 椎髻 for a tied topknot. The botanical and hairstyle uses are recorded branches of the word's range, alongside the implement and the physical action that organize the etymological explanation.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 椎",
+      "url": "https://kotobank.jp/word/%E6%A4%8E-515439#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1698,
+  "editorial_status": "source-checked English supplement"
+}

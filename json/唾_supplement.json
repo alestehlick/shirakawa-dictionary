@@ -1,0 +1,30 @@
+{
+  "id": "U+553E",
+  "kanji": "唾",
+  "kun_readings_romaji": [
+    "tsuba",
+    "tsubahaku"
+  ],
+  "on_readings_romaji": [
+    "da"
+  ],
+  "category": "",
+  "meanings": [
+    "saliva",
+    "to spit",
+    "to reject with contempt",
+    "to revile"
+  ],
+  "explanation": "唾 combines 口 with 垂 as its phonetic. Shirakawa interprets 垂 as flowers hanging from a branch until they reach downward toward the ground, giving the family an association with falling.\n\nThe old definition of 唾 is the fluid of the mouth. As a verb it means expelling that fluid, or spitting. Shirakawa compares 吐, which describes a similar mouth action, and suggests an imitative sound behind these related words.\n\nSpitting can also express rejection, abuse, or contempt, giving the force seen in 唾棄. The physical act and its social meaning remain connected: what is spat out is repudiated or treated as unworthy. The phonetic relationship supplies an additional part of the history rather than requiring every later use to be read directly from 垂.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 唾",
+      "url": "https://kotobank.jp/word/%E5%94%BE-556061#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1931,
+  "editorial_status": "source-checked English supplement"
+}

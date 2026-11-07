@@ -1,0 +1,31 @@
+{
+  "id": "U+92AD",
+  "kanji": "銭",
+  "kun_readings_romaji": [
+    "suki",
+    "zeni"
+  ],
+  "on_readings_romaji": [
+    "sen"
+  ],
+  "category": "",
+  "meanings": [
+    "hoe or cultivating tool",
+    "coin",
+    "money",
+    "levy or assessment"
+  ],
+  "explanation": "銭 is the modern form of 錢, semantic–phonetic with 金 and 戔 as the phonetic sen. Shirakawa associates 戔 with thin, overlapping material.\n\nThe older word denotes an agricultural implement used for shallow cultivation or cutting weeds. A Book of Odes hymn about ceremonial farming names the implement among the tools to be prepared. Shirakawa distinguishes this light working of the ground from deeper ploughing.\n\nCurrency was subsequently cast in the shape of such tools, and the implement's name became a name for money. He compares the corresponding knife-shaped currency called 刀幣. The later senses of collecting, apportioning, or taxing concern that monetary range. His account therefore passes through tool-shaped currency rather than beginning with the round coin familiar from later history.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 銭",
+      "url": "https://kotobank.jp/word/%E9%8A%AD-87495#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1354,
+  "editorial_status": "source-checked English supplement",
+  "related_form": "錢"
+}

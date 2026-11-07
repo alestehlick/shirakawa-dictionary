@@ -1,0 +1,32 @@
+{
+  "id": "U+53F0",
+  "kanji": "台",
+  "kun_readings_romaji": [
+    "utena",
+    "dai"
+  ],
+  "on_readings_romaji": [
+    "dai",
+    "tai"
+  ],
+  "category": "",
+  "meanings": [
+    "elevated sacred building",
+    "platform",
+    "support or stand",
+    "court or official establishment"
+  ],
+  "explanation": "For the platform meaning, modern 台 replaces 臺. Shirakawa reads 臺 through a tall gate-like building and 至, which he interprets as an arrow used to select and claim a site. The rooftop bears a grain-shaped ritual ornament.\n\nThe building is a sacred elevated place where divine presence can gather. Monumental towers in historical accounts preserve this ceremonial setting. From the elevated structure come a platform, a stand, and a high, level piece of ground; court and official titles extend its institutional range.\n\nShirakawa stresses that the simpler graph 台 originally had separate histories. One concerned an invocation for fertility, while an i-reading belonged to the 怡 family. Its present use for 臺 is a later written substitution, so the five-stroke form alone cannot explain the tower's origin.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 台",
+      "url": "https://kotobank.jp/word/%E5%8F%B0-90713#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 310,
+  "editorial_status": "source-checked English supplement",
+  "related_form": "臺"
+}

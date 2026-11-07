@@ -1,0 +1,32 @@
+{
+  "id": "U+8C8C",
+  "kanji": "貌",
+  "kun_readings_romaji": [
+    "katachi",
+    "kao",
+    "sugata",
+    "arawareru"
+  ],
+  "on_readings_romaji": [
+    "bou"
+  ],
+  "category": "",
+  "meanings": [
+    "face",
+    "appearance",
+    "bearing",
+    "outward form"
+  ],
+  "explanation": "Shirakawa begins with the simpler writing 皃. He interprets its upper 白 as the human head or face and the lower 儿 as the person presenting that appearance. The Shuowen records 貌 and another fuller form as alternatives.\n\nThe relevant appearance is formal bearing, particularly the countenance and posture displayed when appearing in a public or ceremonial setting. Shirakawa connects it with the vocabulary of ritual presentation associated with 頁 and 頌.\n\nFrom that visible bearing come face, form, and appearance generally. A likeness can then be described through a shared outward form. The same external emphasis also permits a critical sense: a formally correct greeting may be only outward observance, without corresponding sincerity. The account follows the presented human face into both resemblance and the distinction between external manner and inner intention.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 貌",
+      "url": "https://kotobank.jp/word/%E8%B2%8C-626986#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1711,
+  "editorial_status": "source-checked English supplement"
+}

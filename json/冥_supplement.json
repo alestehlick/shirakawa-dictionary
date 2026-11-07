@@ -1,0 +1,35 @@
+{
+  "id": "U+51A5",
+  "kanji": "冥",
+  "kun_readings_romaji": [
+    "kurai",
+    "fukai",
+    "haruka"
+  ],
+  "on_readings_romaji": [
+    "mei",
+    "myou",
+    "men",
+    "ben"
+  ],
+  "category": "",
+  "meanings": [
+    "dark",
+    "unseen",
+    "deep",
+    "remote",
+    "the world of the dead"
+  ],
+  "explanation": "Shirakawa reads 冥 as a picture of the cloth covering placed over a dead person's face. The graph represents the covering as a whole, with its lower strokes showing the hanging ties or cords. He connects this interpretation with the funeral face-cloth described in the Yili, including the cloth's contrasting surfaces and attached fastening cords.\n\nThe covering marks the deceased person's passage beyond ordinary sight. From this funerary setting he develops the meanings darkness and the unseen realm after death. Further extensions express something profound, hidden, distant, or beyond direct perception.\n\nThis differs from the Shuowen's explanation through 日, 六, and a covering, linked to the moon's waning after the sixteenth day. For Shirakawa that numerical decomposition misses the original object. Related forms such as 幎, the covering itself, and 瞑, closing the eyes, preserve the connection between a covered face, the cessation of sight, and darkness.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 冥",
+      "url": "https://kotobank.jp/word/%E5%86%A5-642835#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 85,
+  "editorial_status": "source-checked English supplement"
+}

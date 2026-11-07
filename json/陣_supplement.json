@@ -1,0 +1,30 @@
+{
+  "id": "U+9663",
+  "kanji": "陣",
+  "kun_readings_romaji": [
+    "tsuraneru",
+    "shiku"
+  ],
+  "on_readings_romaji": [
+    "jin"
+  ],
+  "category": "",
+  "meanings": [
+    "military camp",
+    "battle formation",
+    "array",
+    "battle"
+  ],
+  "explanation": "Shirakawa connects 陣 with 陳 and its older variants, whose meanings include arranging and setting out in order. The graph 陣 substitutes the recognizable 車, a vehicle or war chariot. He interprets the left-hand 阜 element through his concept of a sacred ladder or place of divine ascent and descent.\n\nOn that basis he proposes a military chariot stationed at a sacred place: the headquarters or principal camp. From a camp organized around such a position come arranging troops, battle formation, and the battlefield more broadly. He also relates the word's sound and sense to 陳 and 展, laying out and unfolding.\n\nThe proposal is explicitly limited by chronology. 陣 itself is not found in the pre-Qin texts he discusses, and Shirakawa says that its precise formative intention is difficult to recover. The camp interpretation is his reconstruction of the later graph, not a directly attested explanation from its creators.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 陣",
+      "url": "https://kotobank.jp/word/%E9%99%A3-518083#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1020,
+  "editorial_status": "source-checked English supplement"
+}

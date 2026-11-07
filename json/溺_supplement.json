@@ -1,0 +1,31 @@
+{
+  "id": "U+6EBA",
+  "kanji": "溺",
+  "kun_readings_romaji": [
+    "oboreru",
+    "shizumu"
+  ],
+  "on_readings_romaji": [
+    "deki",
+    "jou"
+  ],
+  "category": "",
+  "meanings": [
+    "to drown",
+    "to submerge",
+    "to be absorbed in",
+    "to indulge excessively"
+  ],
+  "explanation": "Shirakawa classifies 溺 as semantic–phonetic, with water as the semantic component and 弱 supplying the sound. He records the Shuowen's treatment of it as a river name, while also examining the different older writings associated with drowning and urination. These written histories overlap in later use.\n\nA Shijing passage already employs the graph for sinking or drowning together. In his comparison of related words, Shirakawa connects the sense with being entangled or held: the current catches a person and draws them into the water.\n\nFrom physical submergence comes being absorbed or overwhelmed by an activity or desire, the familiar figurative sense of indulging or losing oneself in something. The urination use belongs to interchange with the separate vocabulary represented by 尿. His explanation keeps the water-name tradition, drowning sense, and later overlapping spellings distinguishable.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 溺",
+      "url": "https://kotobank.jp/word/%E3%81%A7%E3%81%8D%E3%81%98%E3%82%88%E3%81%86%E3%81%8A%E3%81%BC%E3%82%8C%E3%82%8B%E3%81%97%E3%81%9A%E3%82%80-2789263#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1916,
+  "editorial_status": "source-checked English supplement"
+}

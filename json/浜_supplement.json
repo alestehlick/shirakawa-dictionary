@@ -1,0 +1,32 @@
+{
+  "id": "U+6D5C",
+  "kanji": "浜",
+  "kun_readings_romaji": [
+    "hama",
+    "migiwa",
+    "hate"
+  ],
+  "on_readings_romaji": [
+    "hin"
+  ],
+  "category": "",
+  "meanings": [
+    "shore",
+    "water's edge",
+    "limit or extremity",
+    "to approach"
+  ],
+  "explanation": "浜 represents 濱 in modern Japanese. Shirakawa compares 濱, with 賓 as the phonetic hin, and 瀕, with 頻, noting that their later meanings are differentiated although their older shore vocabulary overlaps.\n\nHe interprets 頁 in the 頻 formation as a person assuming ritual posture at the water's edge, and 賓 through rites of welcoming or sending off. He therefore proposes an older background in funerary ceremonies performed beside water. This remains his reconstruction of the related forms.\n\nThe shore marks an edge or end, allowing the word to denote the limit of a territory. Approaching that boundary also gives a verge or near-to sense, especially retained in 瀕. Modern 浜 should thus be connected with the older shore forms rather than analyzed through 兵 as an independent new etymology.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 浜",
+      "url": "https://kotobank.jp/word/%E6%B5%9C-116171#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1548,
+  "editorial_status": "source-checked English supplement",
+  "related_form": "濱"
+}

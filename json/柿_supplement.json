@@ -1,0 +1,27 @@
+{
+  "id": "U+67FF",
+  "kanji": "柿",
+  "kun_readings_romaji": [
+    "kaki"
+  ],
+  "on_readings_romaji": [
+    "shi"
+  ],
+  "category": "",
+  "meanings": [
+    "persimmon",
+    "persimmon tree"
+  ],
+  "explanation": "Shirakawa treats 柿 as semantic–phonetic, with 木 identifying the tree and a shi phonetic in the fuller older writing. The early dictionary defines the fruit by its red colour.\n\nA ritual text includes persimmons among foods served at a meal, showing that the fruit was valued from an early period. Shirakawa then cites a literary acknowledgment of a gift of persimmons, praising their colour, moisture, and sweetness as they remain on the tree in cold weather.\n\nHis entry follows the named fruit through these culinary and literary uses rather than constructing a new ritual etymology. The modern graph's right side supplies the inherited sound; the tree classifier and the attested red fruit provide the stable botanical identity.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 柿",
+      "url": "https://kotobank.jp/word/%E3%81%97%E3%81%8B%E3%81%8D-2787186#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2075,
+  "editorial_status": "source-checked English supplement"
+}

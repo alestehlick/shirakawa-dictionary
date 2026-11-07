@@ -1,0 +1,30 @@
+{
+  "id": "U+65AC",
+  "kanji": "斬",
+  "kun_readings_romaji": [
+    "kiru",
+    "korosu"
+  ],
+  "on_readings_romaji": [
+    "zan"
+  ],
+  "category": "",
+  "meanings": [
+    "to cut",
+    "to hew",
+    "to sever",
+    "to behead"
+  ],
+  "explanation": "Shirakawa reads 斬 as a compound of 車 and 斤, the chariot and the cutting tool. His starting point is the cutting of timber for constructing a vehicle. He cites the wheelwright section of the Zhouli, where the verb is used of cutting the several kinds of wood needed for a chariot's parts.\n\nThe familiar punitive meanings, including beheading and cutting through the waist, are later applications of the cutting action. Shirakawa questions the Shuowen's attempt to connect the graph's formation with execution by chariot dismemberment: that punishment had a separate written designation, while an early graph for beheading was 伐.\n\nThe semantic progression is therefore woodworking, forceful cutting, and then severing or killing more generally. Related vocabulary for worked boards and engraving chisels belongs to the same field of cutting and shaping. Figurative uses for something ending or being completely cut off continue that concrete action.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 斬",
+      "url": "https://kotobank.jp/word/%E6%96%AC-512790#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 678,
+  "editorial_status": "source-checked English supplement"
+}

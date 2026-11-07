@@ -1,0 +1,33 @@
+{
+  "id": "U+5DFB",
+  "kanji": "巻",
+  "kun_readings_romaji": [
+    "maku",
+    "magaru"
+  ],
+  "on_readings_romaji": [
+    "kan",
+    "ken",
+    "kon"
+  ],
+  "category": "",
+  "meanings": [
+    "to roll up",
+    "scroll",
+    "volume of a work",
+    "to bend or bundle"
+  ],
+  "explanation": "巻 is the modern form of 卷. Shirakawa reads the fuller seal form as two hands rolling an animal hide, including its claw-bearing part, into a curved bundle. He therefore makes the rolled hide central rather than accepting bent knees as the primary definition.\n\nImportant documents were once written on hides. When bamboo slips and later paper replaced that material, the rolled document and its unit of counting retained the name. This gives the history of a scroll and a volume expressed with 巻.\n\nRolling also produces bending, bundling, and wrapping tightly into a rounded form. Shirakawa connects 拳, 圏, and related characters through that family of curling and binding. Modern 巻 should thus be read through the older hand-and-hide formation, not reconstructed anew from its simplified strokes.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 巻",
+      "url": "https://kotobank.jp/word/%E5%B7%BB-135682#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1219,
+  "editorial_status": "source-checked English supplement",
+  "related_form": "卷"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "U+984E",
+  "kanji": "顎",
+  "kun_readings_romaji": [
+    "ago"
+  ],
+  "on_readings_romaji": [
+    "gaku"
+  ],
+  "category": "",
+  "meanings": [
+    "jaw",
+    "prominent face",
+    "austere countenance"
+  ],
+  "explanation": "顎 combines 頁, the head or face classifier, with 咢 as the phonetic gaku. Shirakawa's account is semantic–phonetic; the pair of mouths visible inside 咢 is not offered as a literal picture of the upper and lower jaws.\n\nThe Chinese lexical definitions he cites concern a prominent, elevated-looking face and an austere or imposing countenance. Those older meanings place the graph in the appearance of the face as a whole.\n\nJapanese uses 顎 for ago, the jaw. Shirakawa explicitly identifies that as the Japanese application rather than silently projecting it into the older Chinese glosses. His entry thus distinguishes the character's phonetic construction and earlier facial description from its familiar anatomical meaning in modern Japanese.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 顎",
+      "url": "https://kotobank.jp/word/%E9%A1%8E-24913#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1896,
+  "editorial_status": "source-checked English supplement"
+}

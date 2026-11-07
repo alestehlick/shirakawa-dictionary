@@ -1,0 +1,31 @@
+{
+  "id": "U+6795",
+  "kanji": "枕",
+  "kun_readings_romaji": [
+    "makura",
+    "nemuru"
+  ],
+  "on_readings_romaji": [
+    "chin",
+    "shin"
+  ],
+  "category": "",
+  "meanings": [
+    "pillow",
+    "to rest one's head",
+    "to lie down",
+    "to place across"
+  ],
+  "explanation": "枕 is semantic–phonetic, with 木 and the phonetic also used in 沈 and 鴆. Shirakawa interprets that phonetic's earlier shape as a person lying with the head supported.\n\nThe older definition describes the object placed beneath the head when reclining. A Book of Odes elegy mentions an adorned pillow beside the person in the coffin, showing the object in a funerary setting as well as ordinary rest.\n\nThe noun becomes a verb for using a pillow, lying down, or remaining at ease. Other uses concern laying something across or placing it against the neck. Shirakawa compares 沈 through the related notion of lying or settling down, so the word's extensions remain connected with a supported or horizontal position.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 枕",
+      "url": "https://kotobank.jp/word/%E6%9E%95-135907#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2070,
+  "editorial_status": "source-checked English supplement"
+}

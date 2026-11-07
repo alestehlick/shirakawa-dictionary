@@ -1,0 +1,29 @@
+{
+  "id": "U+7B8B",
+  "kanji": "箋",
+  "kun_readings_romaji": [
+    "harifuda"
+  ],
+  "on_readings_romaji": [
+    "sen"
+  ],
+  "category": "",
+  "meanings": [
+    "label",
+    "slip of paper",
+    "letter",
+    "annotation"
+  ],
+  "explanation": "Shirakawa treats 箋 as semantic–phonetic. The bamboo classifier supplies the writing-material category, and 戔 provides the sound sen together with an association with thin things laid over one another.\n\nThe Shuowen's definition concerns writing placed on the outside of something, as on a title label. A narrow writing slip or attached identification therefore gives the concrete starting point. From such a slip come a label, a name tag, and a piece of writing.\n\nShirakawa distinguishes its conventional uses from 牋, which more often concerns written memorials or a literary form. 箋 is especially used for attached notes and explanatory comments, as in 箋注 and 附箋. The physical addition of a small written slip thus supplies the bridge into the scholarly action of annotating a text.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 箋",
+      "url": "https://kotobank.jp/word/%E7%AE%8B-549221#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1713,
+  "editorial_status": "source-checked English supplement"
+}

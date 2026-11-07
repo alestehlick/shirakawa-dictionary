@@ -1,0 +1,30 @@
+{
+  "id": "U+6977",
+  "kanji": "楷",
+  "kun_readings_romaji": [
+    "kata",
+    "kaisho"
+  ],
+  "on_readings_romaji": [
+    "kai"
+  ],
+  "category": "",
+  "meanings": [
+    "model",
+    "standard",
+    "correct form",
+    "regular script"
+  ],
+  "explanation": "楷 is semantic–phonetic, with 木 and 皆 as the phonetic kai. Shirakawa notes that the older definition names a tree without securely identifying it. He treats the story about disciples bringing such trees to Confucius's grave as a legend, rather than reliable evidence for the character's origin.\n\nFor the relevant word-family he compares a term for wheat straw associated with firmness, suggesting a corresponding wood-related word. This is a proposed connection, not a complete botanical identification.\n\nThe established range includes a model, rule, proper form, and conformity to a standard. 楷書 names the regular script as one such formal style. The entry preserves both these familiar meanings and the uncertainty surrounding the earlier tree-name explanation.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 楷",
+      "url": "https://kotobank.jp/word/%E6%A5%B7-456627#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2011,
+  "editorial_status": "source-checked English supplement"
+}

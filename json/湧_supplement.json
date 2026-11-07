@@ -1,0 +1,31 @@
+{
+  "id": "U+6E67",
+  "kanji": "湧",
+  "kun_readings_romaji": [
+    "waku",
+    "afureru"
+  ],
+  "on_readings_romaji": [
+    "yuu",
+    "you"
+  ],
+  "category": "",
+  "meanings": [
+    "to well up",
+    "to gush",
+    "to spring forth",
+    "to overflow"
+  ],
+  "explanation": "Shirakawa follows 湧 through the earlier writing 涌, which combines water with the phonetic 甬. He relates 甬 to the bucket form also found in 桶, and discusses the water issuing upward from a bucket-shaped dug well.\n\nThat upward appearance gives the central meaning of welling or springing up. Water can then gush out abundantly, and other things can be said to emerge with comparable force.\n\n湧 is a later writing with 勇, supplying the sound yū and an association with vigorous movement. Shirakawa notes its recognition in a later dictionary tradition. The entry's history therefore distinguishes the older 涌 formation from the subsequent 湧: the modern character should not be presented as an unchanged oracle-bone picture of a brave person standing in water.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 湧",
+      "url": "https://kotobank.jp/word/%E6%B9%A7-650185#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1852,
+  "editorial_status": "source-checked English supplement"
+}

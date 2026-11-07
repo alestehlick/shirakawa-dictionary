@@ -1,0 +1,30 @@
+{
+  "id": "U+4E32",
+  "kanji": "串",
+  "kun_readings_romaji": [
+    "kushi",
+    "tsuranuku"
+  ],
+  "on_readings_romaji": [
+    "kan"
+  ],
+  "category": "",
+  "meanings": [
+    "to thread through",
+    "skewer in Japanese",
+    "string of objects",
+    "to become familiar by related usage"
+  ],
+  "explanation": "串 pictures objects pierced or threaded on a single line. Shirakawa compares an early form related to 貫, showing cowries pierced and strung on a cord, and suggests that 串 represents one strand rather than the paired arrangement called 朋.\n\nThis identification is proposed through their shared sound and meaning. An early Book of Odes occurrence appears in a people's name, so that passage is not by itself a literal description of skewering food.\n\nThe character overlaps with 貫 for passing through and with 慣 and related writings for familiarity or habituation. Japanese uses it concretely for a skewer and skewered things. The material threading scene and the later sound-related uses should therefore be kept distinct.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 串",
+      "url": "https://kotobank.jp/word/%E4%B8%B2-483230#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2112,
+  "editorial_status": "source-checked English supplement"
+}

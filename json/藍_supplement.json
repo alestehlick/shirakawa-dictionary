@@ -1,0 +1,28 @@
+{
+  "id": "U+85CD",
+  "kanji": "藍",
+  "kun_readings_romaji": [
+    "ai"
+  ],
+  "on_readings_romaji": [
+    "ran"
+  ],
+  "category": "",
+  "meanings": [
+    "indigo plant",
+    "plant used for blue dye",
+    "indigo colour"
+  ],
+  "explanation": "藍 is semantic–phonetic, with 艸 specifying a plant and 監 supplying the sound ran. Shirakawa points to 濫 and 覧 as other examples of that phonetic's ran reading.\n\nThe older definition identifies a plant used to dye cloth. A Book of Odes poem describes gathering it, while the Rites of Zhou assigns officials responsibility for collecting dye plants and distributing them to dyers. These passages place 藍 within an organized practical craft.\n\nThe plant name consequently also denotes the colour obtained from it. Shirakawa notes the well-known expression about blue coming from indigo in Xunzi. The history proceeds from the dye-bearing plant to its processed colour, with the classifier and phonetic keeping their separate roles in the character's construction.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 藍",
+      "url": "https://kotobank.jp/word/%E8%97%8D-420857#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1999,
+  "editorial_status": "source-checked English supplement"
+}

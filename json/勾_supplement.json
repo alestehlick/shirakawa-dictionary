@@ -1,0 +1,30 @@
+{
+  "id": "U+52FE",
+  "kanji": "勾",
+  "kun_readings_romaji": [
+    "magaru"
+  ],
+  "on_readings_romaji": [
+    "kou",
+    "ku"
+  ],
+  "category": "",
+  "meanings": [
+    "to bend",
+    "hook",
+    "to mark",
+    "to draw or seize"
+  ],
+  "explanation": "Shirakawa treats 勾 and 句 as originally the same formation, subsequently distinguished in conventional writing. In 勾 he identifies the enclosing curve 勹 and the bent element 厶 as components of a curved shape. He suggests a connection with a body flexed for burial, so that detail should be understood as a reconstruction rather than a settled identification.\n\nBending and hooking provide the central range of meaning. Something curved can catch, draw, or hold another object; a hooked mark can also be made in writing.\n\nJapanese compounds preserve several branches: 勾玉 names a curved bead, 勾引 concerns drawing or taking someone away, and 勾欄 refers to a railing. Their meanings are organized through the bend and its catching or enclosing action, rather than through an independent modern meaning assigned to each visible component.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 勾",
+      "url": "https://kotobank.jp/word/%E5%8B%BE-493788#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1778,
+  "editorial_status": "source-checked English supplement"
+}

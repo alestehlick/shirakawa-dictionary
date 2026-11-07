@@ -1,0 +1,33 @@
+{
+  "id": "U+7FA8",
+  "kanji": "羨",
+  "kun_readings_romaji": [
+    "urayamu",
+    "urayamashii",
+    "amari"
+  ],
+  "on_readings_romaji": [
+    "sen",
+    "zen",
+    "en"
+  ],
+  "category": "",
+  "meanings": [
+    "to envy",
+    "to desire",
+    "surplus",
+    "passage into a tomb"
+  ],
+  "explanation": "Shirakawa identifies the older saliva-related element as the phonetic in 羨. He finds the traditional explanation of its remaining components insufficient to account for the graph's formation and meaning.\n\nHe therefore proposes a connection among three attested uses: desire, surplus, and the approach passage into a tomb. Sacrificial meat could be offered in that passage and the remainder distributed to people. This proposed ritual setting gives the surplus meat and its desirability a common background.\n\nHis account also compares the phonetic's association with spitting and the related formation of 盗. The reconstruction is presented as a possibility, not a fully demonstrated scene. Envy and longing belong to one branch of the word, while the tomb-passage usage has its own reading and lexical connections.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 羨",
+      "url": "https://kotobank.jp/word/%E7%BE%A8-447278#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1998,
+  "editorial_status": "source-checked English supplement"
+}

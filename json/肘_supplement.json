@@ -1,0 +1,30 @@
+{
+  "id": "U+8098",
+  "kanji": "肘",
+  "kun_readings_romaji": [
+    "hiji",
+    "osaeru"
+  ],
+  "on_readings_romaji": [
+    "chuu"
+  ],
+  "category": "",
+  "meanings": [
+    "elbow",
+    "arm joint",
+    "to press or restrain with the elbow",
+    "a measure of length"
+  ],
+  "explanation": "肘 is semantic–phonetic, with 肉 indicating the body and 寸 supplying the chū sound. Shirakawa proposes that 寸 here abbreviates 丑, whose form concerns applying force with the fingertips and holding something tightly.\n\nHe rejects explaining the elbow through the wrist's pulse point, an older interpretation based on 寸: the wrist location does not account for the elbow. In his comparison, 丑 applies force with the fingers, whereas 肘 applies it at the arm's joint.\n\nThe word therefore names the elbow and can describe pressing, restraining, or stopping something with it. It also serves as a bodily measure of length. The proposed abbreviated phonetic and the anatomical classifier together organize his account of the joint and its force.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 肘",
+      "url": "https://kotobank.jp/word/%E8%82%98-567086#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2039,
+  "editorial_status": "source-checked English supplement"
+}

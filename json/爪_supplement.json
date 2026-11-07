@@ -1,0 +1,30 @@
+{
+  "id": "U+722A",
+  "kanji": "爪",
+  "kun_readings_romaji": [
+    "tsume",
+    "tsuma"
+  ],
+  "on_readings_romaji": [
+    "sou"
+  ],
+  "category": "",
+  "meanings": [
+    "claw",
+    "nail",
+    "to scratch or trim nails",
+    "hook-shaped fastening"
+  ],
+  "explanation": "Shirakawa reads 爪 as a pictograph of long animal claws, with the older dictionary describing an inverted hand. He tentatively distinguishes bird talons from a related form showing claws concealed in an animal's paw.\n\nThe word names a claw or nail and also supplies related actions such as scratching and trimming. Objects shaped like claws, including hooks and small fastenings, receive the same name by resemblance.\n\nHe cautions against interpreting every 爪-like component as a claw. In his account, 孚 and 為 originally use a hand shape: one concerns taking captives and the other handling an elephant. Their later classification under 爪 does not make claws part of their original meaning. Graphic resemblance and historical component identity must therefore be kept distinct.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 爪",
+      "url": "https://kotobank.jp/word/%E7%88%AA-99490#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2043,
+  "editorial_status": "source-checked English supplement"
+}

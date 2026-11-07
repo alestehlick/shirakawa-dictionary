@@ -1,0 +1,30 @@
+{
+  "id": "U+95C7",
+  "kanji": "闇",
+  "kun_readings_romaji": [
+    "yami",
+    "kurai"
+  ],
+  "on_readings_romaji": [
+    "an"
+  ],
+  "category": "",
+  "meanings": [
+    "darkness",
+    "dark or obscure",
+    "to close off",
+    "to cover"
+  ],
+  "explanation": "闇 is semantic–phonetic, with 音 supplying the sound an. Shirakawa questions the traditional definition simply closing a gate, since 閉 already expresses that action and leaves the choice of 音 unexplained.\n\nHe interprets 音 through the sounding of an invocation and the answering presence of a deity. 門 is the ancestral sanctuary gate. Rites took place at night, when an invocation was placed at the gate and the participants awaited the divine visit. Darkness belongs to that ceremonial setting.\n\nFrom the dark, enclosed place come obscurity, covering, and closure. 闇 overlaps with 暗 and 陰, including uses for eclipses. Shirakawa groups these words through related sound and a condition in which something is shut away from clear view.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 闇",
+      "url": "https://kotobank.jp/word/%E9%97%87-429045#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2074,
+  "editorial_status": "source-checked English supplement"
+}

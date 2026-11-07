@@ -1,0 +1,32 @@
+{
+  "id": "U+990C",
+  "kanji": "餌",
+  "kun_readings_romaji": [
+    "esa",
+    "e",
+    "konamochi",
+    "dango"
+  ],
+  "on_readings_romaji": [
+    "ji"
+  ],
+  "category": "",
+  "meanings": [
+    "flour cake or dumpling",
+    "food",
+    "animal feed",
+    "bait"
+  ],
+  "explanation": "餌 is semantic–phonetic, with 耳 supplying the sound ji. Shirakawa discusses an older variant with a different food-related classifier, while the received 食 form is also recognized in the traditional dictionary.\n\nThe earlier food is made by combining flour or ground ingredients, shaping them, and steaming them. Ritual commentary distinguishes this preparation from a related cake form. Dumplings or flour cakes are consequently a more specific starting point than the modern general word bait.\n\nThe range broadens to food, eating, feeding, and something liked or desired. Food offered to an animal becomes feed, and food used to draw it toward capture becomes bait. The later Japanese esa usage thus belongs to a wider food vocabulary, not to a graphic picture of an ear being used as bait.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 餌",
+      "url": "https://kotobank.jp/word/%E3%81%98%E3%81%93%E3%81%AA%E3%82%82%E3%81%A1%E3%81%A0%E3%82%93%E3%81%94%E3%81%88%E3%81%95-2787335#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2022,
+  "editorial_status": "source-checked English supplement"
+}

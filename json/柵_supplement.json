@@ -1,0 +1,30 @@
+{
+  "id": "U+67F5",
+  "kanji": "柵",
+  "kun_readings_romaji": [
+    "magaki",
+    "toride"
+  ],
+  "on_readings_romaji": [
+    "saku"
+  ],
+  "category": "",
+  "meanings": [
+    "fence",
+    "palisade",
+    "stockade",
+    "barrier gate"
+  ],
+  "explanation": "Shirakawa identifies 柵 as semantic–phonetic, with 木 specifying the material and 冊 providing the sound. He interprets the early 冊 here as the original fence graph: upright wooden pieces bound or arranged together.\n\nBronze pictorial emblems can place two such sections opposite one another, with an animal between them. Shirakawa reads these as the opening gate of an animal enclosure, its two parts capable of being opened and shut. This gives a concrete setting to the fence and the control of passage through it.\n\nThe meanings extend to palisades, defensive enclosures, barriers, and related structures made from stakes. He distinguishes this development from the later use of 冊 for bound writing slips. The basic arrangement of uprights is comparable, but the enclosure and the written book become separate lexical branches.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 柵",
+      "url": "https://kotobank.jp/word/%E6%9F%B5-68672#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1729,
+  "editorial_status": "source-checked English supplement"
+}

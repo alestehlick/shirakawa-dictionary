@@ -1,0 +1,30 @@
+{
+  "id": "U+9AB8",
+  "kanji": "骸",
+  "kun_readings_romaji": [
+    "mukuro",
+    "hagibone"
+  ],
+  "on_readings_romaji": [
+    "gai"
+  ],
+  "category": "",
+  "meanings": [
+    "skeleton",
+    "remains",
+    "corpse",
+    "shinbone"
+  ],
+  "explanation": "Shirakawa treats 骸 as a semantic–phonetic graph. 骨 places it in the field of bones and skeletal structure, while 亥 supplies the sound gai. In his interpretation the early form of 亥 itself represents the skeletal remains of an animal's body. The phonetic therefore also helps explain the concrete image associated with 骸.\n\nThe Shuowen gives the narrower meaning shinbone. Shirakawa's account sets that anatomical sense within the broader meaning of the bones or framework left from a body. From skeletal remains, the word can refer to the dead body as a whole, hence the familiar Japanese readings mukuro and nakigara.\n\nHe compares the sounds and meanings of related words including 骼 and 核, whose senses concern a framework or inner structural core. These comparisons support his emphasis on what forms or remains as the supporting structure of something.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 骸",
+      "url": "https://kotobank.jp/word/%E9%AA%B8-456702#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 741,
+  "editorial_status": "source-checked English supplement"
+}

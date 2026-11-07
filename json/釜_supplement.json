@@ -1,0 +1,29 @@
+{
+  "id": "U+91DC",
+  "kanji": "釜",
+  "kun_readings_romaji": [
+    "kama"
+  ],
+  "on_readings_romaji": [
+    "fu"
+  ],
+  "category": "",
+  "meanings": [
+    "cooking pot",
+    "cauldron",
+    "measuring vessel",
+    "unit of capacity"
+  ],
+  "explanation": "釜 is semantic–phonetic, with 父 supplying the sound fu. Shirakawa points to bronze inscriptions whose fuller writings combine the vessel classifier 缶 with this phonetic; another traditional fuller form is later.\n\nThe named vessels from Qi served as measures. Their physical form is broad-bellied, flat-bottomed, and without legs. A classical list of capacity units confirms this measuring function, and 釜 can name both the container and its capacity.\n\nIn western usage it was also a cooking vessel. Shirakawa cites a Book of Odes poem about boiling water plants for an ancestral offering. The history therefore includes regional differences in use: a vessel for measurement in one setting and for preparing food in another, rather than one exclusively modern kitchen meaning.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 釜",
+      "url": "https://kotobank.jp/word/%E9%87%9C-46502#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2027,
+  "editorial_status": "source-checked English supplement"
+}

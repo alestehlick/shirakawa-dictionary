@@ -1,0 +1,30 @@
+{
+  "id": "U+5806",
+  "kanji": "堆",
+  "kun_readings_romaji": [
+    "oka",
+    "uzutakai"
+  ],
+  "on_readings_romaji": [
+    "tai",
+    "tsui"
+  ],
+  "category": "",
+  "meanings": [
+    "heap",
+    "mound",
+    "to pile up"
+  ],
+  "explanation": "堆 is semantic–phonetic, with 土 indicating earth and 隹 providing the sound tai. Its central meanings concern heaping earth and the small mound produced by that action.\n\nShirakawa disputes identifying an older graph resembling 阜 as the original picture of this mound. He interprets that older graph as an early form of 師, showing a large folded piece of meat, while he explains 阜 itself as a ladder used in divine ascent and descent. Neither should therefore be substituted casually for the formation of 堆.\n\nHe places 堆 beside related words for accumulated or raised ground, including 敦. Where a sound element has no separate, identifiable semantic contribution, he also allows the possibility of an imitative sound behind the word. The secure organizing sense here remains earth gathered into a heap.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 堆",
+      "url": "https://kotobank.jp/word/%E5%A0%86-556220#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1763,
+  "editorial_status": "source-checked English supplement"
+}

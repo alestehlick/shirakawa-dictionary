@@ -1,0 +1,29 @@
+{
+  "id": "U+9905",
+  "kanji": "餅",
+  "kun_readings_romaji": [
+    "mochi"
+  ],
+  "on_readings_romaji": [
+    "hei"
+  ],
+  "category": "",
+  "meanings": [
+    "cake of kneaded flour",
+    "mochi",
+    "rice cake",
+    "flat cake-like object"
+  ],
+  "explanation": "Shirakawa treats 餅, also written 餠, as semantic–phonetic. 食 identifies food, and the component associated with 并 or joining supplies the sound hei. He begins with the Shuowen's explanation of a food made from wheat flour: the flour is kneaded together, formed, and steamed.\n\nThe Shiming connects the name with bringing the dough into one joined mass. Shirakawa develops this as combining material into a single flat piece. The cake's coherent, flattened shape then allows the word to name other things of similar form, including a cake-shaped piece of precious metal.\n\nThe Japanese use for a cake made from glutinous rice is a particular development of this older food word. Following the historical sequence keeps the Chinese wheat-flour preparation, the general flat-cake shape, and the Japanese rice-based mochi meaning distinct but connected.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 餅",
+      "url": "https://kotobank.jp/word/%E3%81%B8%E3%81%84%E3%82%82%E3%81%A1-2790307#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1283,
+  "editorial_status": "source-checked English supplement"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "U+85E4",
+  "kanji": "藤",
+  "kun_readings_romaji": [
+    "fuji",
+    "fujikazura"
+  ],
+  "on_readings_romaji": [
+    "tou"
+  ],
+  "category": "",
+  "meanings": [
+    "vine",
+    "climbing plant",
+    "wisteria"
+  ],
+  "explanation": "藤 is semantic–phonetic. The plant classifier 艸 identifies its botanical field, while the remaining element belongs to the 朕 and 滕 family and supplies the sound tō. Shirakawa does not explain the whole graph as a picture of a wisteria tree.\n\nThe word denotes a climbing or trailing plant and, in Japanese, especially wisteria. He connects its sound-family with 縢, the binding or wrapping of something with cord. The vine's winding and clinging growth makes this association relevant to the plant name.\n\nOlder lexical sources also apply the word to another plant, whereas the familiar flowering-vine use becomes frequent in poetry from the Tang period onward. The Japanese fuji meaning is consequently a particular botanical development within a wider history of vines and winding growth.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 藤",
+      "url": "https://kotobank.jp/word/%E8%97%A4-579413#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1780,
+  "editorial_status": "source-checked English supplement"
+}

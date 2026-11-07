@@ -1,0 +1,28 @@
+{
+  "id": "U+9EBA",
+  "kanji": "麺",
+  "kun_readings_romaji": [
+    "mugiko"
+  ],
+  "on_readings_romaji": [
+    "men"
+  ],
+  "category": "",
+  "meanings": [
+    "wheat flour",
+    "noodles",
+    "flour-based food"
+  ],
+  "explanation": "Shirakawa treats the character represented today by 麺 as semantic–phonetic. The grain component, 麥 in the fuller writing, identifies wheat; the other component supplies the sound of the word. His starting point is the Shuowen's definition of finely reduced wheat material: flour.\n\nThe original referent is therefore the ground ingredient. When flour is worked and shaped into noodle foods, the written word comes to name the preparation as well. Shirakawa records alternate writings used in this history, preserving the distinction between naming the powder and naming the food made from it.\n\nHe places the word beside historically related vocabulary for the powder or fine particles produced from grain, including 末. The modern spelling 麺 reflects Japanese simplification of the fuller form 麵. Its very familiar noodle sense belongs to the development from milling wheat to preparing a food from wheat flour.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 麺",
+      "url": "https://kotobank.jp/word/%E9%BA%BA-644481#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1035,
+  "editorial_status": "source-checked English supplement"
+}

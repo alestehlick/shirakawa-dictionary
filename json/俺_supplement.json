@@ -1,0 +1,30 @@
+{
+  "id": "U+4FFA",
+  "kanji": "俺",
+  "kun_readings_romaji": [
+    "ore",
+    "ookii",
+    "ware"
+  ],
+  "on_readings_romaji": [
+    "en"
+  ],
+  "category": "",
+  "meanings": [
+    "large",
+    "full or ample",
+    "I in later usage"
+  ],
+  "explanation": "俺 is semantic–phonetic, using 奄 as the phonetic en and 人 for the human sphere. Shirakawa connects 奄 with covering over something and places it with related words of similar sound.\n\nThe older definition of 俺 is large or ample. He compares the adjacent dictionary entry for 伴 and its relation to bodily fullness, showing that the earlier meaning differs from the familiar modern pronoun.\n\nThe first-person use appears later, notably in Yuan drama. Shirakawa records that change without offering a complete intervening history. The entry should therefore distinguish the older descriptive word from the later self-reference, rather than inventing a literal component scene in which a person announces an identity. Japanese ore belongs to that received pronominal range.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 俺",
+      "url": "https://kotobank.jp/word/%E4%BF%BA-455493#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2106,
+  "editorial_status": "source-checked English supplement"
+}

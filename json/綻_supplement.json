@@ -1,0 +1,30 @@
+{
+  "id": "U+7DBB",
+  "kanji": "綻",
+  "kun_readings_romaji": [
+    "hokorobiru",
+    "nuu"
+  ],
+  "on_readings_romaji": [
+    "tan"
+  ],
+  "category": "",
+  "meanings": [
+    "a seam coming undone",
+    "to split open",
+    "to open into bloom",
+    "to mend or stitch"
+  ],
+  "explanation": "綻 is semantic–phonetic: 糸 marks the textile context and 定 supplies the sound tan. Shirakawa follows the word through an older writing with 袒, whose phonetic is 旦. A passage in the Book of Rites referring to split or torn clothing attests this earlier usage.\n\nIn that history 袒 first concerned the opening or unseaming of a garment and later came to denote exposing the body. 綻 retained the thread classifier and the more specific sense of a seam coming apart.\n\nThe separation of joined edges explains its extension to opening flowers and to other things that split or disclose an interior. Its lexical range also includes repairing or stitching clothing. Shirakawa's account therefore begins with the construction and failure of a seam, before following the familiar figurative opening.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 綻",
+      "url": "https://kotobank.jp/word/%E7%B6%BB-563587#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1802,
+  "editorial_status": "source-checked English supplement"
+}

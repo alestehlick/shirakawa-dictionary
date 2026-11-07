@@ -1,0 +1,33 @@
+{
+  "id": "U+7136",
+  "kanji": "然",
+  "kun_readings_romaji": [
+    "moeru",
+    "shikari",
+    "shikaredomo"
+  ],
+  "on_readings_romaji": [
+    "zen",
+    "nen"
+  ],
+  "category": "",
+  "meanings": [
+    "so",
+    "thus",
+    "however",
+    "to burn",
+    "adverbial suffix"
+  ],
+  "explanation": "Shirakawa analyzes 然 as a compound of 肰, dog meat, and 火. The flesh of the dog is placed over fire, and its fat catches and sustains the flame. 然 is consequently the early writing of the word later distinguished as 燃, to burn. The lower 灬 preserves the fire component of that composition.\n\nHe relates this burning to sacrificial rites attested in oracle-bone divination. Dogs were burned in offerings to Heaven, whose deity was believed to receive the sacrifice through its rising smell. The graphic scene is therefore interpreted within an actual category of ancient worship, rather than inferred from the character's later grammatical meanings.\n\nThe uses meaning so, thus, and however, and the ending in expressions such as 突然, belong to phonetic interchange with other grammatical words. Shirakawa separates those borrowed functions from the original burning sense. Adding another 火 produced 燃 and made the older concrete meaning explicit again.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 然",
+      "url": "https://kotobank.jp/word/%E7%84%B6-506842#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 80,
+  "editorial_status": "source-checked English supplement"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "U+8E2A",
+  "kanji": "踪",
+  "kun_readings_romaji": [
+    "ato"
+  ],
+  "on_readings_romaji": [
+    "sou"
+  ],
+  "category": "",
+  "meanings": [
+    "footprint",
+    "track",
+    "trace",
+    "to follow a trail"
+  ],
+  "explanation": "踪 combines 足, the foot classifier, with 宗 as the phonetic sō. Shirakawa treats it as a later writing, noting its absence from the earliest dictionaries discussed in the entry. The visible 宗 should consequently not be turned into a new ritual explanation for the whole character.\n\nThe established word concerns footprints and the trail left by movement, as in 踪迹. A track both records where someone has been and gives another person a route to follow. From that relation come the verbal senses of following and tracing.\n\n踪 is associated with 蹤 as a conventional variant writing. Shirakawa's account here is principally lexical and phonetic: the foot component identifies tracks, while the sound element connects the graph with its word. He does not offer an independent ancient pictorial origin for this later form.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 踪",
+      "url": "https://kotobank.jp/word/%E8%B8%AA-551736#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1831,
+  "editorial_status": "source-checked English supplement"
+}

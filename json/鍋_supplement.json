@@ -1,0 +1,31 @@
+{
+  "id": "U+934B",
+  "kanji": "鍋",
+  "kun_readings_romaji": [
+    "nabe",
+    "karimo",
+    "aburasashi"
+  ],
+  "on_readings_romaji": [
+    "ka"
+  ],
+  "category": "",
+  "meanings": [
+    "round-bottomed pot",
+    "cauldron",
+    "axle fitting",
+    "oil container in older usage"
+  ],
+  "explanation": "鍋 combines 金 with 咼 as the phonetic ka. Shirakawa associates 咼 with a rounded, swirling form, relevant here to a pot or cauldron with a circular bottom.\n\nThe older range is not restricted to cookware. He records a wheel-related fitting and the container used to oil a vehicle, as well as a sickle usage that he tentatively connects with hammering or working metal.\n\nThe familiar Japanese nabe belongs to the round cooking-vessel branch. The metal classifier identifies the material, while the phonetic supplies both the sound and the rounded-form association in his account. The several older implement meanings should be retained as lexical evidence rather than forced into a single story about preparing food.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 鍋",
+      "url": "https://kotobank.jp/word/%E9%8D%8B-108402#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2128,
+  "editorial_status": "source-checked English supplement"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "U+9808",
+  "kanji": "須",
+  "kun_readings_romaji": [
+    "hige",
+    "mochiiru",
+    "matsu",
+    "subekaraku"
+  ],
+  "on_readings_romaji": [
+    "su",
+    "shu"
+  ],
+  "category": "",
+  "meanings": [
+    "beard",
+    "whiskers",
+    "to await",
+    "to need",
+    "must"
+  ],
+  "explanation": "Shirakawa identifies 須 with facial hair attached to a human head. 頁 represents a person in a ritual posture, and 彡 supplies the beard. In bronze forms the hair is visibly joined to the face, so he says the whole can also be understood as a single pictograph rather than merely two independent components.\n\nThe graph is the early writing of the word later distinguished as 鬚. Its beard sense is supported by a passage in the Liji concerning the trimming of the deceased person's hair and beard during funeral preparations. Animal whiskers and similar growths extend that concrete referent.\n\nThe other familiar meanings follow a different route. Waiting, needing, seeking, and the forceful construction expressing necessity arise through phonetic interchange, particularly with 需. Shirakawa therefore distinguishes the depicted beard from the grammatical and verbal uses that became attached to its sound. The meaning must cannot be read directly out of the beard's shape.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 須",
+      "url": "https://kotobank.jp/word/%E9%A0%88-526056#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1259,
+  "editorial_status": "source-checked English supplement"
+}

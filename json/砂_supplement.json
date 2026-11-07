@@ -1,0 +1,29 @@
+{
+  "id": "U+7802",
+  "kanji": "砂",
+  "kun_readings_romaji": [
+    "suna"
+  ],
+  "on_readings_romaji": [
+    "sa",
+    "sha"
+  ],
+  "category": "",
+  "meanings": [
+    "sand",
+    "grit",
+    "granular mineral material"
+  ],
+  "explanation": "Shirakawa identifies 砂 as semantic–phonetic. 石 supplies the material category, while 少 supplies the sound, with sa readings also seen in 沙 and 紗. The construction places the word among small mineral particles without requiring the modern phrase little stone to serve as a complete historical explanation.\n\nHe distinguishes its ordinary referent from 沙: 沙 is the fine sand of a water's edge, whereas 砂 tends to denote a somewhat coarser material. This is a distinction within closely related vocabulary, and the two writings also interchange in use. The difference between the stone and water components helps the reader follow their respective associations.\n\nThe granular character of the material also explains its place in names of mineral medicines, such as 朱砂 and 丹砂 for cinnabar. Shirakawa's account moves from the phonetic construction to the kinds of sandy or sand-like substances named by the graph.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 砂",
+      "url": "https://kotobank.jp/word/%E7%A0%82-84480#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 916,
+  "editorial_status": "source-checked English supplement"
+}

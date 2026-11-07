@@ -1,0 +1,28 @@
+{
+  "id": "U+8B0E",
+  "kanji": "謎",
+  "kun_readings_romaji": [
+    "nazo"
+  ],
+  "on_readings_romaji": [
+    "mei"
+  ],
+  "category": "",
+  "meanings": [
+    "riddle",
+    "enigmatic expression",
+    "to bewilder with words"
+  ],
+  "explanation": "謎 is semantic–phonetic, with 言 indicating language and 迷 supplying the sound mei. The older dictionary defines concealed or indirect speech, for which an earlier term was used before this graph became established.\n\nShirakawa describes riddling as entertainment at drinking gatherings. Many riddles asked listeners to identify a character from hints about its written components. His example concerns a plant graph described indirectly through parts of its structure.\n\nThe word therefore joins verbal concealment with the listener's temporary uncertainty. Shirakawa compares 迷 and a related eye word for obstructed vision, alongside other vocabulary of darkness and bewilderment. The sound-family supports that obscured understanding, while 言 specifies the linguistic device that produces it.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 謎",
+      "url": "https://kotobank.jp/word/%E3%82%81%E3%81%84%E3%81%AA%E3%81%9E-2790706#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2127,
+  "editorial_status": "source-checked English supplement"
+}

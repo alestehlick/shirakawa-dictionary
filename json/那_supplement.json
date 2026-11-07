@@ -1,0 +1,33 @@
+{
+  "id": "U+90A3",
+  "kanji": "那",
+  "kun_readings_romaji": [
+    "utsukushii",
+    "ooi",
+    "nanzo"
+  ],
+  "on_readings_romaji": [
+    "na",
+    "da"
+  ],
+  "category": "",
+  "meanings": [
+    "that",
+    "which",
+    "how",
+    "abundant",
+    "graceful"
+  ],
+  "explanation": "Shirakawa classifies 那 as semantic–phonetic. The older left-hand element is connected with a graph for long, abundant cheek or facial hair, and the settlement component belongs to its use as a place-name. He treats the pronunciation as a development from that older phonetic series, rather than extracting its sound from the modern strokes alone.\n\nThe important descriptive usage appears in paired expressions such as 阿那 and 猗儺. These describe luxuriant flowers and pliant, graceful branches. Shirakawa connects their beauty and suppleness with the abundance and softness associated with the original phonetic element. The gloss many belongs to this network and also involves interchange with 多.\n\nThe interrogative uses, as in asking why or how, and the demonstrative and sentence-ending uses are phonetic loans. They are not literal pictures of a town or its inhabitants. His unfolding therefore distinguishes the graph's formation, its graceful descriptive vocabulary, and its later grammatical employment.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 那",
+      "url": "https://kotobank.jp/word/%E9%82%A3-586918#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 391,
+  "editorial_status": "source-checked English supplement"
+}

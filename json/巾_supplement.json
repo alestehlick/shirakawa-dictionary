@@ -1,0 +1,32 @@
+{
+  "id": "U+5DFE",
+  "kanji": "巾",
+  "kun_readings_romaji": [
+    "hizakake",
+    "kire",
+    "tefuki"
+  ],
+  "on_readings_romaji": [
+    "kin"
+  ],
+  "category": "",
+  "meanings": [
+    "cloth",
+    "kerchief",
+    "towel",
+    "headcloth",
+    "ceremonial apron"
+  ],
+  "explanation": "Shirakawa reads 巾 as a picture of a cloth hanging from the waist. He places its earliest use among ceremonial garments, particularly the knee-covering or apron worn in formal dress. Its form survives within characters concerned with wearing, belts, and related hanging cloths.\n\nBronze inscriptions recording royal gifts use 巾 for the ceremonial apron later written with more specialized graphs such as 黻. This evidence establishes a more particular starting point than an unspecified piece of fabric. Over time the old ceremonial sense was assigned to those differentiated writings, leaving 巾 to name cloths more generally.\n\nA cloth carried on the person could wipe things, and later cloths worn on the head supplied the headcloth sense. Towel, kerchief, and textile are extensions from this changing use of the object. Shirakawa therefore unfolds the character from a depicted article of formal clothing into the broader practical vocabulary of cloth.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 巾",
+      "url": "https://kotobank.jp/word/%E5%B7%BE-480690#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 974,
+  "editorial_status": "source-checked English supplement"
+}

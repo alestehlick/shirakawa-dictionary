@@ -1,0 +1,31 @@
+{
+  "id": "U+6144",
+  "kanji": "慄",
+  "kun_readings_romaji": [
+    "osoreru",
+    "ononoku",
+    "furueru"
+  ],
+  "on_readings_romaji": [
+    "ritsu"
+  ],
+  "category": "",
+  "meanings": [
+    "to tremble",
+    "to shudder",
+    "fear",
+    "to recoil in dread"
+  ],
+  "explanation": "Shirakawa classifies 慄 as semantic–phonetic. 心 identifies an emotional or mental condition, while 栗 provides the sound ritsu. The graph therefore places a word of fear within the vocabulary of the heart; its formation does not require a story about a chestnut physically frightening someone.\n\nThe old glosses supply the particular quality of that fear. The Erya explains it as being afraid, and the Guangya as trembling or shaking. Their combination points to the bodily response of someone overcome by dread: shuddering, shrinking, or becoming rigid with fear. 戦慄 preserves that visible reaction.\n\nThe entry also includes distress and sorrow within the character's range. These extend the same unsettled state of heart rather than introducing a second graphic origin. Shirakawa's discussion is compact here: the reliable unfolding is the phonetic construction, the early fear-and-trembling glosses, and their extension into emotional suffering.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 慄",
+      "url": "https://kotobank.jp/word/%E6%85%84-657892#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1299,
+  "editorial_status": "source-checked English supplement"
+}

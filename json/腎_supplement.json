@@ -1,0 +1,28 @@
+{
+  "id": "U+814E",
+  "kanji": "腎",
+  "kun_readings_romaji": [
+    "jinzou"
+  ],
+  "on_readings_romaji": [
+    "jin"
+  ],
+  "category": "",
+  "meanings": [
+    "kidney",
+    "the kidneys",
+    "vital essence in traditional medicine"
+  ],
+  "explanation": "Shirakawa classifies 腎 as semantic–phonetic but questions the traditional identification of its sound element with the same base as 堅 and 賢. The historical pronunciation of 腎 differs from those ken words and agrees instead with 臣. He therefore gives particular weight to 臣 in explaining the character's sound.\n\nThe concrete anatomical meaning is the kidney. The Shuowen calls it the organ of water, interpreting the body through the traditional five-phase system. Shirakawa follows the associated vocabulary in which the kidneys are understood as the repository of generative essence, and related terms concern that essence and its depletion.\n\nWithin this traditional physiology, the liver and kidneys are treated as sources of a person's active vitality, accounting for the importance attached to 肝腎. The entry combines a historical phonetic correction with the older conceptual vocabulary surrounding the organ.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 腎",
+      "url": "https://kotobank.jp/word/%E8%85%8E-536588#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1607,
+  "editorial_status": "source-checked English supplement"
+}

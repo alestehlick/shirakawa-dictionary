@@ -1,0 +1,27 @@
+{
+  "id": "U+81FC",
+  "kanji": "臼",
+  "kun_readings_romaji": [
+    "usu"
+  ],
+  "on_readings_romaji": [
+    "kyuu"
+  ],
+  "category": "",
+  "meanings": [
+    "mortar for pounding",
+    "to pound in a mortar"
+  ],
+  "explanation": "臼 is a pictograph of a pounding mortar. The older explanation describes a progression from a hollow in the ground to mortars hollowed from wood or stone, and interprets the internal marks as grain.\n\nShirakawa cautions that a mortar must be distinguished from a pitfall, even where dictionary classification groups similar shapes together. A trap into which a person falls and a vessel for pounding grain are different objects.\n\nHe makes a similar distinction for the lower part of the older form of 旧, which he interprets as a device holding a decoy bird rather than as 臼. His account therefore begins with the recognizable utensil but resists reading every superficially similar hollow shape as the same component.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 臼",
+      "url": "https://kotobank.jp/word/%E8%87%BC-34556#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1991,
+  "editorial_status": "source-checked English supplement"
+}

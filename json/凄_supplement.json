@@ -1,0 +1,30 @@
+{
+  "id": "U+51C4",
+  "kanji": "凄",
+  "kun_readings_romaji": [
+    "samui",
+    "susamajii"
+  ],
+  "on_readings_romaji": [
+    "sei"
+  ],
+  "category": "",
+  "meanings": [
+    "cold",
+    "chilly",
+    "bleak",
+    "terrible or chilling"
+  ],
+  "explanation": "凄 is semantic–phonetic, with the ice classifier indicating coldness and 妻 supplying the sound sei. The older glosses concern chill or cool air.\n\nShirakawa places 凄 with 淒 and 悽 as sound-related words describing a bleak, desolate condition. The water-classified 淒 has an older definition involving gathering rain clouds; the writings can overlap in the atmosphere they convey.\n\nFrom literal cold comes the chilling or dreadful quality expressed by Japanese susamajii and related uses. The emotional force is supported by this family of bleakness words, rather than by an independent story about 妻 as a wife. The graphic classifier distinguishes the cold branch while the phonetic preserves the relation to the broader vocabulary.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 凄",
+      "url": "https://kotobank.jp/word/%E5%87%84-544416#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2038,
+  "editorial_status": "source-checked English supplement"
+}

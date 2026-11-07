@@ -1,0 +1,33 @@
+{
+  "id": "U+8AE6",
+  "kanji": "諦",
+  "kun_readings_romaji": [
+    "akirameru",
+    "akiraka",
+    "tsumabiraka",
+    "makoto"
+  ],
+  "on_readings_romaji": [
+    "tei",
+    "tai"
+  ],
+  "category": "",
+  "meanings": [
+    "to examine closely",
+    "to make clear",
+    "truth",
+    "to give up in Japanese"
+  ],
+  "explanation": "諦 is semantic–phonetic, with 帝 supplying the sound tei or tai. The older definition concerns examining something carefully and making its details clear.\n\nShirakawa distinguishes the sound relations within this family, including ritual words written with 帝-related graphs, from the particular vocabulary of close examination and underlying order. The important semantic range is clarity, thorough understanding, and truth. Buddhist usage includes the tai reading in 諦観.\n\nJapanese also uses 諦 in akirameru, to give up or resign oneself. Shirakawa records this specifically as a Japanese meaning; his brief entry does not offer a full historical derivation of that verb. It should therefore be kept distinct from the directly attested older senses of scrutiny and clear recognition rather than supplied with an invented intermediate story.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 諦",
+      "url": "https://kotobank.jp/word/%E8%AB%A6-573333#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2015,
+  "editorial_status": "source-checked English supplement"
+}

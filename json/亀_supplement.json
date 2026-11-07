@@ -1,0 +1,31 @@
+{
+  "id": "U+4E80",
+  "kanji": "亀",
+  "kun_readings_romaji": [
+    "kame"
+  ],
+  "on_readings_romaji": [
+    "ki",
+    "kin",
+    "kyuu"
+  ],
+  "category": "",
+  "meanings": [
+    "turtle",
+    "tortoise",
+    "tortoise shell",
+    "long-lasting"
+  ],
+  "explanation": "The modern 亀 abbreviates 龜. Shirakawa reads the early graph as a picture of the whole turtle, retaining its body rather than deriving the character from unrelated modern stroke groups. Its association with great age is explained through the animal and the words used for it.\n\nThe turtle had a central place in divination. Excavated shells from the Shang capital bear records of their contribution, preparation, and number on the bridge joining the upper and lower shell. Shirakawa uses this evidence to place the animal in an organized system of ritual procurement.\n\nHe suggests that its body also invited the cosmological comparison of a rounded heaven and square earth, and that longevity contributed to its sacred character. From the animal and its long-lived reputation comes the extended sense enduring or long-lasting. The divinatory shell remains a major concrete referent throughout this history.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 亀",
+      "url": "https://kotobank.jp/word/%E4%BA%80-466777#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1578,
+  "editorial_status": "source-checked English supplement"
+}

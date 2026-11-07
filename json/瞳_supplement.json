@@ -1,0 +1,28 @@
+{
+  "id": "U+77B3",
+  "kanji": "瞳",
+  "kun_readings_romaji": [
+    "hitomi"
+  ],
+  "on_readings_romaji": [
+    "dou"
+  ],
+  "category": "",
+  "meanings": [
+    "pupil of the eye",
+    "eye",
+    "uncomprehending gaze"
+  ],
+  "explanation": "Shirakawa identifies 目 as the semantic component and 童 as the phonetic in 瞳. The character names the pupil, the small central part of the eye. An early dictionary gloss compares it to the eye's little bead, and classical accounts of a double pupil provide examples of the established anatomical word.\n\nHe then examines another branch of its vocabulary. In expressions describing an uncomprehending or ignorant look, 瞳 connects with a word-family in which 童 can indicate smoothness or the absence of something: a bare mountain or a hornless animal. This is a lexical association, not an assertion that a pupil literally depicts a child.\n\nHis explanation consequently keeps the ordinary formation straightforward—an eye word with the sound supplied by 童—while showing how a related descriptive use developed around vacancy or lack of understanding. The anatomical and figurative senses need not be forced into one pictorial story.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 瞳",
+      "url": "https://kotobank.jp/word/%E7%9E%B3-579448#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 791,
+  "editorial_status": "source-checked English supplement"
+}

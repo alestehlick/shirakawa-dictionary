@@ -1,0 +1,31 @@
+{
+  "id": "U+60E7",
+  "kanji": "惧",
+  "kun_readings_romaji": [
+    "osoreru",
+    "odoroku"
+  ],
+  "on_readings_romaji": [
+    "gu",
+    "ku"
+  ],
+  "category": "",
+  "meanings": [
+    "fear",
+    "to dread",
+    "to be apprehensive",
+    "to be cautious"
+  ],
+  "explanation": "For the shorter writing 惧, the relevant Shirakawa discussion is his entry for 懼. He analyzes that fuller form as semantic–phonetic: 心 identifies the feeling, and 瞿 provides the sound. 瞿 depicts a bird looking sharply from side to side in alarm.\n\n懼 names the corresponding state of heart: being startled, fearful, or apprehensive. The alert reaction also develops into caution and respectful restraint. Shirakawa cites a bronze inscription using an earlier related graph for the anxious speaker, connecting the word to early written usage.\n\nHe places the sound-family beside other graphs of alarm and suggests that its warning associations belong to bird divination. This is his broader cultural interpretation of the series. The modern shorter form conceals much of the bird-and-eyes configuration, so following his explanation requires returning to 瞿 in 懼 rather than treating the visible 具 as a complete account of the origin.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 懼",
+      "url": "https://kotobank.jp/word/%E6%87%BC-482054#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "Shirakawa’s discussion of the fuller form 懼.",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1877,
+  "editorial_status": "source-checked English supplement"
+}

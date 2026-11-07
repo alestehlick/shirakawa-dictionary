@@ -1,0 +1,28 @@
+{
+  "id": "U+938C",
+  "kanji": "鎌",
+  "kun_readings_romaji": [
+    "kama"
+  ],
+  "on_readings_romaji": [
+    "ren"
+  ],
+  "category": "",
+  "meanings": [
+    "sickle",
+    "harvesting hook",
+    "sharp edge or angle by related usage"
+  ],
+  "explanation": "鎌 combines 金 with 兼 as the phonetic ren, a reading also found in 廉. Shirakawa interprets 兼 as holding two grain stalks together; 鎌 names the metal implement used to cut the gathered stalks.\n\nThe older dictionary defines it through another sickle word, and a regional vocabulary records it as a western name for a hooked harvesting tool. The agricultural implement therefore provides the concrete starting point.\n\nShirakawa compares related words for whetstones, sharpness, and acute angles. Through that family 鎌 can also overlap with 廉 in an edge or corner meaning. The account joins the tool's material, its phonetic connection with holding grain, and the sharp cutting quality that supports its extended uses.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 鎌",
+      "url": "https://kotobank.jp/word/%E9%8E%8C-46504#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2110,
+  "editorial_status": "source-checked English supplement"
+}

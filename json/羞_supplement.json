@@ -1,0 +1,32 @@
+{
+  "id": "U+7F9E",
+  "kanji": "羞",
+  "kun_readings_romaji": [
+    "susumeru",
+    "tabemono",
+    "haji",
+    "hajiru"
+  ],
+  "on_readings_romaji": [
+    "shuu"
+  ],
+  "category": "",
+  "meanings": [
+    "to present an offering",
+    "sacrificial food",
+    "gift",
+    "shame or embarrassment"
+  ],
+  "explanation": "Shirakawa reads 羞 as a sacrificial sheep, 羊, held out by a hand. Although the received lower element resembles 丑, the oracle-bone and bronze forms show the ordinary hand 又, which he takes as the starting point.\n\nThe action is presenting sheep meat to a deity. From this come an offering, prepared food, and a gift made in formal presentation. The older definition of advancing or offering something preserves that action.\n\nFor shame and embarrassment, Shirakawa does not simply accept the proposal of a borrowing from 醜. He suggests that a person's shame could itself be presented before the deity, comparing language about becoming an ancestor's disgrace. This is his bridge between ritual presentation and the moral or emotional sense of 羞.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 羞",
+      "url": "https://kotobank.jp/word/%E7%BE%9E-526155#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1954,
+  "editorial_status": "source-checked English supplement"
+}

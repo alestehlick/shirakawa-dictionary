@@ -1,0 +1,30 @@
+{
+  "id": "U+9E7F",
+  "kanji": "鹿",
+  "kun_readings_romaji": [
+    "shika",
+    "ka"
+  ],
+  "on_readings_romaji": [
+    "roku"
+  ],
+  "category": "",
+  "meanings": [
+    "deer",
+    "sovereignty in figurative usage",
+    "good fortune by sound borrowing",
+    "foothills by sound borrowing"
+  ],
+  "explanation": "鹿 is a pictograph of a deer, recognizable in the early forms by its head, antlers, body, and feet. Shirakawa rejects treating the lower 比-like shape as the independent word compare: it represents the animal's legs.\n\nHe discusses inscriptions on deer heads, deer decoration on ritual bronzes, and sacred deer in the royal precinct described by the Book of Odes. These attest the animal's importance without changing the basic pictorial origin.\n\nOther meanings depend on sound. 鹿 overlaps with 禄, heavenly favour or allotted fortune, and with 麓, foothills. Shirakawa suggests that the political expression pursuing the deer originally involved competing for Heaven's favour or grant of rule. Its sovereignty sense should therefore not be explained solely as a literal royal hunting scene.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 鹿",
+      "url": "https://kotobank.jp/word/%E9%B9%BF-456273#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1964,
+  "editorial_status": "source-checked English supplement"
+}

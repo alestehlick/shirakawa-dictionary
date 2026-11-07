@@ -1,0 +1,31 @@
+{
+  "id": "U+5239",
+  "kanji": "刹",
+  "kun_readings_romaji": [
+    "hatabashira",
+    "tera"
+  ],
+  "on_readings_romaji": [
+    "satsu",
+    "setsu"
+  ],
+  "category": "",
+  "meanings": [
+    "temple",
+    "pagoda",
+    "banner pole",
+    "instant in 刹那"
+  ],
+  "explanation": "Shirakawa first connects 刹 with an older cutting or killing graph, combining a knife with an element also found in the early formation of 殺. In his interpretation that underlying figure concerns an animal bearing dangerous spiritual power, killed to remove its harmful influence. He presents 刹 as probably an early synonym of 殺, rather than deriving its original formation from a Buddhist building.\n\nThe familiar temple sense follows a separate historical route: the character was used in the transcription of Sanskrit kṣetra, a sacred domain or field. Its Buddhist vocabulary also includes the banner pole marking a religious attainment, and a pole above a stupa indicating the presence of relics.\n\nShirakawa emphasizes that its later currency is overwhelmingly Buddhist. 刹那 likewise belongs to translated Buddhist terminology for an instant. Those transcriptional and terminological uses must be distinguished from the older graphic association with killing.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 刹",
+      "url": "https://kotobank.jp/word/%E5%88%B9-69127#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 908,
+  "editorial_status": "source-checked English supplement"
+}

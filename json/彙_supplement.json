@@ -1,0 +1,30 @@
+{
+  "id": "U+5F59",
+  "kanji": "彙",
+  "kun_readings_romaji": [
+    "harinezumi",
+    "atsumaru"
+  ],
+  "on_readings_romaji": [
+    "i"
+  ],
+  "category": "",
+  "meanings": [
+    "hedgehog",
+    "collection",
+    "group",
+    "category"
+  ],
+  "explanation": "Shirakawa reads the earliest 彙 as a pictograph of a hedgehog curled into a rounded body. The Shuowen identifies the animal by comparison with a porcupine, but analyzes the graph through components and a shortened 胃 phonetic. Shirakawa instead takes the whole early shape as the animal itself.\n\nThe separate semantic–phonetic writing 蝟 also names the hedgehog. Through that associated graph and its sound-family, the word acquires the sense of things gathered densely or brought into a group. Shirakawa connects the family with 胃, 謂, and related words carrying a sense of close concentration.\n\nFrom gathering together come a collection, a class, and a grouping of similar things. The use in 語彙, a body of vocabulary, follows this later sense. His explanation therefore moves from the depicted rounded animal to its related writings and the lexical development of collection and category.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 彙",
+      "url": "https://kotobank.jp/word/%E5%BD%99-429929#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1426,
+  "editorial_status": "source-checked English supplement"
+}

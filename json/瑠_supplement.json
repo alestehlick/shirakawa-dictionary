@@ -1,0 +1,29 @@
+{
+  "id": "U+7460",
+  "kanji": "瑠",
+  "kun_readings_romaji": [
+    "ruri"
+  ],
+  "on_readings_romaji": [
+    "ru",
+    "ryuu"
+  ],
+  "category": "",
+  "meanings": [
+    "ruri",
+    "lustrous precious material",
+    "glass in historical usage"
+  ],
+  "explanation": "瑠 is semantic–phonetic, combining 玉 with 留 as the phonetic ryū or ru. Shirakawa notes alternative writings, including 流, for the same material name. The differences in classifier should not conceal the continuity of the spoken name.\n\nHe follows 瑠璃 through accounts of Western Regions products and a tradition associating the material with the Roman world. Later Japanese commentary identifies some of these descriptions with glass rather than a hard natural gemstone.\n\nA further Japanese source describes imported Dutch glass vessels by their blue-green 瑠璃 colour. Shirakawa's unfolding is consequently a history of a lustrous material and its transmitted name, including ancient glass and later imported vessels. It does not require every historical instance of ruri to denote exactly the same mineral.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 瑠",
+      "url": "https://kotobank.jp/word/%E7%91%A0-660253#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1949,
+  "editorial_status": "source-checked English supplement"
+}

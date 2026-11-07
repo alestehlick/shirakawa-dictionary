@@ -1,0 +1,30 @@
+{
+  "id": "U+91C7",
+  "kanji": "采",
+  "kun_readings_romaji": [
+    "toru",
+    "iro"
+  ],
+  "on_readings_romaji": [
+    "sai"
+  ],
+  "category": "",
+  "meanings": [
+    "to pluck",
+    "to gather",
+    "tribute-bearing domain",
+    "colour or appearance"
+  ],
+  "explanation": "Shirakawa reads 采 as a compound showing a hand, 爪, picking produce from a tree, 木. Taking or gathering fruit is the concrete action from which he unfolds the word's history.\n\nThe gathering of produce also includes receiving the yield of land as tribute. Bronze inscriptions recording grants preserve this connection, and 采邑 names an allotted domain whose revenues support its holder. The political sense therefore follows the right to take the harvest.\n\nAnother branch concerns colour and visible adornment, where 采 overlaps with 彩. Shirakawa connects that range with gathering plants for their colouring material. Picking, revenue, and colourful appearance are not three unrelated component stories: his account traces them through the products taken from plants and the uses to which those products are put.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 采",
+      "url": "https://kotobank.jp/word/%E9%87%87-507083#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1818,
+  "editorial_status": "source-checked English supplement"
+}

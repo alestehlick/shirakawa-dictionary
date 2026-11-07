@@ -1,0 +1,32 @@
+{
+  "id": "U+54BD",
+  "kanji": "咽",
+  "kun_readings_romaji": [
+    "nodo",
+    "musebu"
+  ],
+  "on_readings_romaji": [
+    "in",
+    "en",
+    "etsu"
+  ],
+  "category": "",
+  "meanings": [
+    "throat",
+    "to choke",
+    "to sob",
+    "to swallow"
+  ],
+  "explanation": "咽 combines 口 with 因 as the phonetic in. Shirakawa begins with the throat, especially its narrow passage, and compares related words for constriction, narrowness, and gripping the neck.\n\nBecause food or breath can catch at that constricted point, the same word becomes verbal: to choke, catch in the throat, or sob. He relates these uses to 噎 and 饐 through both sound and meaning.\n\n咽 also overlaps with 嚥 in the act of swallowing. Throat, swallowing, and choking are therefore connected within a group of related bodily words, rather than being successive pictures hidden inside 因. Shirakawa's explanation combines the anatomical passage with the different sounds and actions that occur there; 咽喉 preserves its association with the closely related 喉.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 咽",
+      "url": "https://kotobank.jp/word/%E5%92%BD-437096#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1917,
+  "editorial_status": "source-checked English supplement"
+}

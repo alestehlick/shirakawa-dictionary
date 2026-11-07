@@ -1,0 +1,31 @@
+{
+  "id": "U+962A",
+  "kanji": "阪",
+  "kun_readings_romaji": [
+    "saka",
+    "tsutsumi",
+    "kewashii"
+  ],
+  "on_readings_romaji": [
+    "han"
+  ],
+  "category": "",
+  "meanings": [
+    "slope",
+    "steep bank",
+    "embankment",
+    "barrier"
+  ],
+  "explanation": "Shirakawa treats 阪 as semantic–phonetic, with 反 providing the sound and 阜 the semantic setting. He associates 反 with turning back from terrain difficult to climb. In his interpretation 阜 originates as a sacred ladder, a place where a deity ascends and descends.\n\n阪 consequently evokes an elevated sacred location that ordinary people cannot readily climb into. Such a place might also be protected by a barrier; Shirakawa compares it cautiously with a Japanese iwakura, a rock-associated sacred site. The old dictionary senses include a steep bank, a mountain's flank, and an embankment separating one place from another.\n\nThe later spelling 坂 uses 土 and comes to refer more generally to a slope in the terrain. The relationship explains their interchange without erasing Shirakawa's more particular account of 阪. Its development runs from a difficult, separated elevation to the ordinary vocabulary of slopes, inclines, and banks.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 阪",
+      "url": "https://kotobank.jp/word/%E9%98%AA-605971#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1290,
+  "editorial_status": "source-checked English supplement"
+}

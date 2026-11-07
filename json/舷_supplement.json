@@ -1,0 +1,28 @@
+{
+  "id": "U+8237",
+  "kanji": "舷",
+  "kun_readings_romaji": [
+    "funabata"
+  ],
+  "on_readings_romaji": [
+    "gen"
+  ],
+  "category": "",
+  "meanings": [
+    "side of a boat",
+    "gunwale",
+    "ship's side"
+  ],
+  "explanation": "舷 is semantic–phonetic: 舟 identifies a boat, and 玄 supplies the sound gen. The word denotes either side of the vessel, especially the edge or gunwale along which a person can sit or strike.\n\nShirakawa cites Guo Pu's Jin-period rhapsody on the river, where people sing while beating the side of a boat. He presents this as the earliest usage example in his discussion. It gives a concrete setting for the part named by 舷.\n\nThe entry offers a lexical and phonetic explanation rather than a reconstructed ancient ritual scene. The boat component specifies the object, while the sound component distinguishes this particular part of it; the familiar ship-side meaning remains the central one.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 舷",
+      "url": "https://kotobank.jp/word/%E8%88%B7-491336#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1926,
+  "editorial_status": "source-checked English supplement"
+}

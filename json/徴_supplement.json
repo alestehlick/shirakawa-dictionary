@@ -1,0 +1,33 @@
+{
+  "id": "U+5FB4",
+  "kanji": "徴",
+  "kun_readings_romaji": [
+    "mesu",
+    "shirushi",
+    "arawareru"
+  ],
+  "on_readings_romaji": [
+    "chou",
+    "chi"
+  ],
+  "category": "",
+  "meanings": [
+    "to demand or summon",
+    "to punish",
+    "sign or evidence",
+    "to manifest"
+  ],
+  "explanation": "徴 is the modern form of 徵. Shirakawa reads the older graph as a long-haired ritual specialist struck on a road, represented by 彳 and 攴. The person might be an elder or a female medium; exceptional ritual power is the important feature of his interpretation.\n\nThe beating is intended to exert punitive force on an enemy and compel the desired result. A manifested result then becomes the 徴験, the sign that the act has worked. Shirakawa compares 微 and 徼 as related coercive ritual formations.\n\nHe treats 徵 as an initial writing of 懲. From compelling and punishing come demanding, summoning, and exacting something; from the visible effect come a sign, proof, and manifestation. The older dictionary's simple summon gloss therefore records only one branch of his proposed ritual history.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 徴",
+      "url": "https://kotobank.jp/word/%E5%BE%B4-535979#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 965,
+  "editorial_status": "source-checked English supplement",
+  "related_form": "徵"
+}

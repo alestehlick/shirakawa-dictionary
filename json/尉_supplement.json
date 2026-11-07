@@ -1,0 +1,29 @@
+{
+  "id": "U+5C09",
+  "kanji": "尉",
+  "kun_readings_romaji": [
+    "hinoshi"
+  ],
+  "on_readings_romaji": [
+    "i",
+    "utsu"
+  ],
+  "category": "",
+  "meanings": [
+    "to press cloth with heat",
+    "an ironing implement",
+    "military or administrative officer"
+  ],
+  "explanation": "Shirakawa reads the original 尉 as a compound of folded cloth, fire, and a hand. The hand applies heat to the folded material, representing the action of pressing or smoothing it with a heated implement. The Shuowen's explanation of pressing downward belongs to this practical treatment of cloth.\n\nThe concrete word thus concerns ironing and the implement used for it. When 尉 became established in official titles, a separate character 熨 was made to preserve the heating-and-pressing sense more explicitly.\n\nShirakawa records 尉 as an old official designation, including an office connected with judicial custody, and also notes interchange with 慰 in the sense of comforting. These later administrative and verbal uses should be followed as the history of the written word. The graphic origin itself remains the hand applying heat to fabric.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 尉",
+      "url": "https://kotobank.jp/word/%E5%B0%89-29721#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1697,
+  "editorial_status": "source-checked English supplement"
+}

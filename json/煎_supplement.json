@@ -1,0 +1,30 @@
+{
+  "id": "U+714E",
+  "kanji": "煎",
+  "kun_readings_romaji": [
+    "iru",
+    "nitsumeru"
+  ],
+  "on_readings_romaji": [
+    "sen"
+  ],
+  "category": "",
+  "meanings": [
+    "to roast",
+    "to parch",
+    "to decoct",
+    "to simmer down"
+  ],
+  "explanation": "Shirakawa identifies 煎 as semantic–phonetic. 火, written as the lower 灬, supplies the action's category of heating, and 前 supplies the sound sen. The early dictionary glosses describe parching or drying something by fire, giving the word a more particular starting point than cooking in general.\n\nThe primary action is applying heat until the material dries or roasts. The range then includes boiling and reducing a liquid, with the concentration or diminution produced by heating remaining part of the sense.\n\nShirakawa notes the later uses in tea preparation and medicinal decoctions, represented by 煎茶 and 煎薬. Those familiar compounds continue the history of treating a substance with heat to prepare or extract it. The explanation follows the phonetic construction, the old parching gloss, and the later extension to simmering, concentrating, and preparing a drink or medicine.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 煎",
+      "url": "https://kotobank.jp/word/%E3%81%9B%E3%82%93%E3%81%84%E3%82%8B%E3%81%AB%E3%81%A4%E3%82%81%E3%82%8B-2788375#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 910,
+  "editorial_status": "source-checked English supplement"
+}

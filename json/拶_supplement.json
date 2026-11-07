@@ -1,0 +1,30 @@
+{
+  "id": "U+62F6",
+  "kanji": "拶",
+  "kun_readings_romaji": [
+    "osu",
+    "yubizeme"
+  ],
+  "on_readings_romaji": [
+    "satsu"
+  ],
+  "category": "",
+  "meanings": [
+    "to press",
+    "to crowd",
+    "to squeeze",
+    "finger-squeezing punishment"
+  ],
+  "explanation": "Shirakawa reads 拶 as a compound involving 手 and a graph for remaining bones, associated with the 列 family. He tentatively suggests an original action of gathering up those bones; his wording marks this as a possibility, not an established ritual scene. The attested verbal usage he follows means pressing, crowding, or pushing with the hand.\n\nThis is the setting of 挨拶. Shirakawa notes its use among Chan or Zen communities and explains it through pushing through a crowd and advancing to the front. The courteous Japanese sense is a later development of that compound's history.\n\nA more literal and violent application is 拶指, squeezing the fingers as a punishment or torture. He relates it to an older named practice mentioned in the Zhuangzi. The entry therefore separates a tentative explanation of the graph's earliest composition from the clearly recorded meanings of physical pressure and compression.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 拶",
+      "url": "https://kotobank.jp/word/%E6%8B%B6-510894#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 772,
+  "editorial_status": "source-checked English supplement"
+}

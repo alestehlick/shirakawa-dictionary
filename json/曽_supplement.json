@@ -1,0 +1,33 @@
+{
+  "id": "U+66FD",
+  "kanji": "曽",
+  "kun_readings_romaji": [
+    "koshiki",
+    "kasaneru",
+    "katsute",
+    "sunawachi"
+  ],
+  "on_readings_romaji": [
+    "sou",
+    "zo"
+  ],
+  "category": "",
+  "meanings": [
+    "steaming vessel",
+    "to repeat or add",
+    "once",
+    "already"
+  ],
+  "explanation": "Shirakawa explains the fuller form 曾 as a pictograph of a steaming vessel. Its upper marks represent escaping steam, while the vessel below has the layered arrangement associated with a steamer. He regards it as an early writing of the object later distinguished as 甑.\n\nThe stacked structure supplies a basis for repetition and increase, as seen in related formations. This material starting point differs from an explanation based only on the character's later grammatical uses. Bronze forms are important evidence for the original utensil in his account.\n\nThe familiar meanings once, already, and related function-word uses arose through borrowing the graph for words of the appropriate sound. They are not literal descriptions of cooking. Modern Japanese 曽 simplifies the older form, making the steaming vessel still less apparent without comparison with the early writing.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 曽",
+      "url": "https://kotobank.jp/word/%E6%9B%BD-551707#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1838,
+  "editorial_status": "source-checked English supplement"
+}

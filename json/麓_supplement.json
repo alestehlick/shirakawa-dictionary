@@ -1,0 +1,29 @@
+{
+  "id": "U+9E93",
+  "kanji": "麓",
+  "kun_readings_romaji": [
+    "fumoto",
+    "yamamori"
+  ],
+  "on_readings_romaji": [
+    "roku"
+  ],
+  "category": "",
+  "meanings": [
+    "foot of a mountain",
+    "wooded foothills",
+    "forest warden"
+  ],
+  "explanation": "Shirakawa classifies 麓 as semantic–phonetic: 林 identifies woodland, and 鹿 supplies the sound roku. The old explanations concern both the woodland adjoining a mountain and the official who guards such woodland.\n\nHe connects these senses with enclosed forest or parkland established where trees grow thickly at a mountain's foot. A classical passage names the official responsible for the mountain forest, preserving the administrative side of the word.\n\nThe resulting range includes foothills, a large wooded area, and its keeper. Older variant forms occur in oracle-bone and bronze inscriptions as personal names; Shirakawa treats their relation through their shared sound. The familiar Japanese fumoto is consequently one part of a history joining the wooded lower slopes with the land and office associated with them.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 麓",
+      "url": "https://kotobank.jp/word/%E9%BA%93-125786#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1617,
+  "editorial_status": "source-checked English supplement"
+}

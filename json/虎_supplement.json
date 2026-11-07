@@ -1,0 +1,28 @@
+{
+  "id": "U+864E",
+  "kanji": "虎",
+  "kun_readings_romaji": [
+    "tora"
+  ],
+  "on_readings_romaji": [
+    "ko"
+  ],
+  "category": "",
+  "meanings": [
+    "tiger",
+    "fierce",
+    "valiant"
+  ],
+  "explanation": "Shirakawa treats 虎 as a pictograph of the tiger. He reads the early character as an animal figure, with the lower part belonging to its legs and tail. This matters because the Shuowen explains the tiger's feet by comparison with human feet; Shirakawa keeps those strokes within the pictured animal instead.\n\nHe then places the graph in the wider vocabulary and imagery surrounding the tiger. The Chu name for the animal and the taotie designs on bronze vessels enter his discussion. He suggests that a bronze mask pattern may be an unfolded or symmetrically expanded version of the tiger figure, while marking the proposed relationship cautiously.\n\nThe literal animal provides the basis for figurative descriptions of ferocity and martial courage. Shirakawa also suggests a relation between the animal's name and its vocal sound. These comparisons supplement the pictorial origin; they do not replace the direct identification of the early graph as a tiger.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 虎",
+      "url": "https://kotobank.jp/word/%E8%99%8E-493416#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1141,
+  "editorial_status": "source-checked English supplement"
+}

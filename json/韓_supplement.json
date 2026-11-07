@@ -1,0 +1,28 @@
+{
+  "id": "U+97D3",
+  "kanji": "韓",
+  "kun_readings_romaji": [
+    "igeta"
+  ],
+  "on_readings_romaji": [
+    "kan"
+  ],
+  "category": "",
+  "meanings": [
+    "Han, an ancient state",
+    "Korea",
+    "a framed well or its upright"
+  ],
+  "explanation": "Shirakawa works back from 韓 to a bronze form depicting an upright pole. He identifies its principal element with a standard or flagstaff. The received 韋, associated with hide or leather, was not present in the bronze example he discusses; he suggests that leather could have been wrapped around such a pole when the fuller writing developed.\n\nHe also examines the Shuowen tradition, which explains the word through the framing of a well. An interpretation as a well mechanism would make the upright a post supporting a lifting device, and the leather element could then concern the leather vessel used to draw water. Shirakawa presents these possibilities rather than claiming a single fully secure original object.\n\nThe graph subsequently serves as the name of an ancient state. The country-name and modern Korea-related uses belong to that proper-name history. They should not be projected backward as a picture of the modern country in the character's components.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 韓",
+      "url": "https://kotobank.jp/word/%E9%9F%93-48410#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1193,
+  "editorial_status": "source-checked English supplement"
+}

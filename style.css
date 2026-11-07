@@ -277,6 +277,19 @@ a.kanji-link:hover{ border-bottom-style:solid }
   .ex-editor-row{ grid-template-columns:1fr }
 }
 
+.entry-sources{
+  margin-top:1.6rem;
+  padding-top:.8rem;
+  border-top:1px solid var(--rule);
+  font-size:.88rem;
+  line-height:1.55;
+  overflow-wrap:anywhere;
+}
+.entry-sources h3{ margin-top:0; font-size:1rem; }
+.entry-sources p{ margin:.35rem 0; }
+.entry-sources ul{ margin:.45rem 0 0; padding-left:1.2rem; }
+.entry-sources li{ margin:.35rem 0; }
+
 /* Print */
 @media print{
   body{ background:#fff; color:#111; padding:0 }

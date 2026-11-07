@@ -1,0 +1,31 @@
+{
+  "id": "U+8A63",
+  "kanji": "詣",
+  "kun_readings_romaji": [
+    "mouderu",
+    "itaru",
+    "mairu"
+  ],
+  "on_readings_romaji": [
+    "kei"
+  ],
+  "category": "",
+  "meanings": [
+    "to arrive",
+    "to visit a sacred place",
+    "to present oneself",
+    "to attain mastery"
+  ],
+  "explanation": "詣 is semantic–phonetic, with 旨 supplying the sound kei. Shirakawa distinguishes this ritual 旨 from the separately developed form associated with eating. In the ritual formation, 曰 is a receptacle holding a written invocation, and the upper element represents the descent of a spirit toward it.\n\n詣 initially concerns that divine arrival and the reverent reception of the descending presence. He connects the related bowing posture with the older writing behind 稽首. His account differs from an unsupported traditional definition concerning the arrival of a season.\n\nThe word extends to approaching a sanctuary, as in 参詣, and to presenting oneself at the royal palace. Arrival at a profound destination also supplies 造詣: reaching deeply into learning or an art, hence attainment and mastery.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 詣",
+      "url": "https://kotobank.jp/word/%E8%A9%A3-488099#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1881,
+  "editorial_status": "source-checked English supplement"
+}

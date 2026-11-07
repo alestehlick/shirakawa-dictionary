@@ -1,0 +1,29 @@
+{
+  "id": "U+80A1",
+  "kanji": "股",
+  "kun_readings_romaji": [
+    "mata"
+  ],
+  "on_readings_romaji": [
+    "ko"
+  ],
+  "category": "",
+  "meanings": [
+    "thigh",
+    "groin",
+    "branch",
+    "part or share"
+  ],
+  "explanation": "The body element 肉 identifies the region of meaning in 股. Shirakawa questions treating the remaining 殳 simply as an ordinary phonetic, because its usual sound does not adequately explain ko. He instead considers it an abbreviation of a fuller phonetic graph.\n\nHis reconstruction connects that fuller form with castrating a ram: the genitals between the legs are cut using the implement represented by 殳. On this account the graphic history points to the groin and the adjoining thighs. This is a proposed reconstruction of the fuller formation, not a picture of a modern leg in 股 itself.\n\nThe word subsequently denotes a thigh, a branching division, or one part of a whole. In 股肱, thigh and upper arm represent indispensable supporting limbs and hence a ruler's trusted assistants.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 股",
+      "url": "https://kotobank.jp/word/%E8%82%A1-493415#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1760,
+  "editorial_status": "source-checked English supplement"
+}

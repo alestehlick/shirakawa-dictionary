@@ -1,0 +1,29 @@
+{
+  "id": "U+932E",
+  "kanji": "錮",
+  "kun_readings_romaji": [
+    "fusagu"
+  ],
+  "on_readings_romaji": [
+    "ko"
+  ],
+  "category": "",
+  "meanings": [
+    "to repair by casting metal",
+    "to seal",
+    "to confine",
+    "firmly fixed"
+  ],
+  "explanation": "錮 is semantic–phonetic, combining 金 with 固 as the phonetic ko. The older definition concerns filling or sealing a damaged place by casting metal onto it. The metal classifier identifies this practical repairing action.\n\nA sealed opening can no longer allow passage, giving the later senses of blocking, binding, and confinement. 禁錮 belongs to that extended range of closing someone in or preventing freedom of movement.\n\nShirakawa also compares 痼, a firmly established or persistent illness, and 固 itself. These words share the idea of something fixed and resistant to change. Metal repair, confinement, and inveterate disease therefore occupy related branches of a sound-family, rather than requiring the literal presence of metal in every later meaning.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 錮",
+      "url": "https://kotobank.jp/word/%E9%8C%AE-493433#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2050,
+  "editorial_status": "source-checked English supplement"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "U+718A",
+  "kanji": "熊",
+  "kun_readings_romaji": [
+    "kuma"
+  ],
+  "on_readings_romaji": [
+    "yuu"
+  ],
+  "category": "",
+  "meanings": [
+    "bear",
+    "brightly blazing in 熊熊"
+  ],
+  "explanation": "Shirakawa classifies 熊 as a compound of 能 and 火 and notes a corresponding form in an ancient curse inscription. The older dictionary describes the bear and treats the fire element as an abbreviated phonetic.\n\nHe examines possible sound relationships but also identifies difficulties: the earliest 能 resembles another animal graph, and variant personal names show a separate sound connection. The formation should therefore not be presented as fully settled.\n\nA myth tells of Gun becoming a yellow bear and entering a deep pool. Shirakawa explicitly cautions that such a myth cannot establish the graphic derivation. Alongside the animal name, 熊熊 describes bright blazing. His discussion preserves the evidence and its limits rather than resolving the bear by an invented fire story.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 熊",
+      "url": "https://kotobank.jp/word/%E7%86%8A-484901#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2077,
+  "editorial_status": "source-checked English supplement"
+}

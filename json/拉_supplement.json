@@ -1,0 +1,32 @@
+{
+  "id": "U+62C9",
+  "kanji": "拉",
+  "kun_readings_romaji": [
+    "hishigu",
+    "kujiku",
+    "tsuresaru"
+  ],
+  "on_readings_romaji": [
+    "ra",
+    "rou"
+  ],
+  "category": "",
+  "meanings": [
+    "to crush",
+    "to pull",
+    "to drag away",
+    "to seize"
+  ],
+  "explanation": "拉 combines 手 with the phonetic 立, here supplying the sound ra. Shirakawa begins with the older sense of crushing or breaking by hand, rather than assuming that the present meaning pull explains the formation from the outset.\n\nThe early lexical definition is supported by a classical account of seizing and crushing a person's chest with fatal force. He relates the word to 柆, used of broken wood, within a sound-family concerned with breaking or collapsing something.\n\nFrom forceful manual seizure develops pulling or leading someone away. 拉致 expresses forcible removal, and older usage includes compelling people into service. Crushing, dragging, and abduction are thus successive parts of the word's attested range, with the hand classifier identifying the action while 立 principally supplies its sound.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 拉",
+      "url": "https://kotobank.jp/word/%E6%8B%89-655378#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1790,
+  "editorial_status": "source-checked English supplement"
+}

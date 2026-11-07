@@ -1,0 +1,30 @@
+{
+  "id": "U+8FA3",
+  "kanji": "辣",
+  "kun_readings_romaji": [
+    "karai",
+    "kibishii"
+  ],
+  "on_readings_romaji": [
+    "ratsu"
+  ],
+  "category": "",
+  "meanings": [
+    "pungent",
+    "hot-tasting",
+    "severe",
+    "forceful or formidable"
+  ],
+  "explanation": "辣 is semantic–phonetic. 辛 identifies the pungent taste, while 束 represents an abbreviated phonetic from 剌, supplying ratsu. Shirakawa connects that phonetic with intensity or fierceness.\n\nAn older lexical definition describes an exceptionally strong pungent flavour. The character thus brings together the taste category and a word for its sharp degree, rather than depicting an action performed on a bundle.\n\nSeverity then extends beyond food. A forceful or formidable operator can be described with 辣手 or 辣腕. These expressions retain the impact of the sharp taste as a description of human action or ability. Shirakawa's brief account follows the phonetic and the intensification from pungency to harshness and striking effectiveness.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 辣",
+      "url": "https://kotobank.jp/word/%E8%BE%A3-656218#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1971,
+  "editorial_status": "source-checked English supplement"
+}

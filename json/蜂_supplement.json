@@ -1,0 +1,28 @@
+{
+  "id": "U+8702",
+  "kanji": "蜂",
+  "kun_readings_romaji": [
+    "hachi"
+  ],
+  "on_readings_romaji": [
+    "hou"
+  ],
+  "category": "",
+  "meanings": [
+    "bee or wasp",
+    "to swarm",
+    "to rise in a group"
+  ],
+  "explanation": "Shirakawa classifies 蜂 as semantic–phonetic. He discusses a fuller writing with a related hō phonetic and an older variant using the phonetic represented by the simpler modern form. The insect classifier identifies the creature.\n\nThe old definition describes a flying insect that stings people. Shirakawa proposes that its name imitates the buzzing sound of insects flying together, comparing other insect names formed from their wing sounds or cries.\n\nThe swarm provides the extension to gathering or rising all at once. 蜂起 applies that collective movement to people, particularly an uprising. The sound-based naming of the insect and the later image of its massed flight are distinct stages in the explanation, rather than a literal account hidden in each modern stroke.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 蜂",
+      "url": "https://kotobank.jp/word/%E8%9C%82-601885#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1985,
+  "editorial_status": "source-checked English supplement"
+}

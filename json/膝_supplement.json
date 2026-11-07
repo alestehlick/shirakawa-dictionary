@@ -1,0 +1,29 @@
+{
+  "id": "U+819D",
+  "kanji": "膝",
+  "kun_readings_romaji": [
+    "hiza",
+    "hizakobushi"
+  ],
+  "on_readings_romaji": [
+    "shitsu"
+  ],
+  "category": "",
+  "meanings": [
+    "knee",
+    "knee joint",
+    "to advance on the knees"
+  ],
+  "explanation": "膝 is semantic–phonetic, with the body classifier and the phonetic also found in 漆. Shirakawa discusses a fuller earlier variant and notes that both writings were current in the Han period.\n\nThe older definition locates the knee at the upper joint of the lower leg and compares the kneeling figure 卩, whose bent knee is conspicuous. The phonetic's history concerns cutting a tree to obtain lacquer and the resulting knotted or joint-like surface.\n\nShirakawa also relates this vocabulary to 七, which he interprets through a bone joint. Knee and knotted joint therefore belong to a connected sound-and-meaning family in his account. The verbal use, advancing on the knees, follows directly from the anatomical noun.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 膝",
+      "url": "https://kotobank.jp/word/%E8%86%9D-521062#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2031,
+  "editorial_status": "source-checked English supplement"
+}

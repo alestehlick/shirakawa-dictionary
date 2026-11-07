@@ -1,0 +1,31 @@
+{
+  "id": "U+7DFB",
+  "kanji": "緻",
+  "kun_readings_romaji": [
+    "komakai",
+    "nuu",
+    "tsuzure"
+  ],
+  "on_readings_romaji": [
+    "chi"
+  ],
+  "category": "",
+  "meanings": [
+    "closely worked",
+    "fine or minute",
+    "to stitch",
+    "to mend"
+  ],
+  "explanation": "緻 combines 糸 with 致 as the phonetic chi. Shirakawa notes that the entry was added to the Shuowen tradition by Xu Xuan; earlier Han usage often wrote 致 for the closely packed or fine quality later expressed with 緻.\n\nOlder glosses also describe repairing worn clothing. Stitching into the fabric to fill or mend a damaged place explains the practical textile range: sewing, patching, and closely worked stitching.\n\nThe word's fine and dense senses remain visible in 緻密. Shirakawa compares related words for piercing and decorative needlework, linking the closeness of the result with the repeated work of the needle. The character's precision is therefore understood through textile work and its associated vocabulary, rather than through a general modern idea of intellectual complexity.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 緻",
+      "url": "https://kotobank.jp/word/%E7%B7%BB-564913#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1923,
+  "editorial_status": "source-checked English supplement"
+}

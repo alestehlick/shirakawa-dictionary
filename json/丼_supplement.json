@@ -1,0 +1,26 @@
+{
+  "id": "U+4E3C",
+  "kanji": "丼",
+  "kun_readings_romaji": [
+    "donburi",
+    "don"
+  ],
+  "on_readings_romaji": [],
+  "category": "",
+  "meanings": [
+    "older form of 井",
+    "donburi bowl in Japanese"
+  ],
+  "explanation": "Shirakawa discusses 丼 under 井, as an older well-frame form, rather than in a separate headword article. He reads 井 as a picture of the surrounding frame. The seal form 丼 includes a central dot, which the traditional explanation identifies as a vessel.\n\nHe cautions that similar early frame shapes also represented shackles, casting moulds, and pitfalls, later distinguished in other characters. The later account of well-field land division cannot simply be projected back into the period when the graph arose.\n\nHis entry separately records Japanese donburi, a bowl. That lexical use must be distinguished from the ancient well-frame analysis: the central dot is not presented as a piece of food in a rice bowl, and the old pictograph does not establish the origin of the Japanese bowl name.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 井",
+      "url": "https://kotobank.jp/word/%E4%BA%95-429843#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "Shirakawa’s discussion of 井 and its early form; Japanese bowl usage is distinguished in the explanation.",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 2126,
+  "editorial_status": "source-checked English supplement"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "U+99C5",
+  "kanji": "駅",
+  "kun_readings_romaji": [
+    "umaya",
+    "ekisha"
+  ],
+  "on_readings_romaji": [
+    "eki"
+  ],
+  "category": "",
+  "meanings": [
+    "relay station",
+    "relay horse or carriage",
+    "station"
+  ],
+  "explanation": "駅 is the modern form of 驛. Shirakawa analyzes the fuller graph as semantic–phonetic, with 馬 identifying the horse and 睪 supplying the sound eki. The modern 尺 shape is a simplification and should not be assigned an independent measuring meaning here.\n\nHe interprets 睪 through an animal carcass and the ideas of loosening, unfolding, and continuing at length. In 驛 that continuing sequence is the succession of horses or carriages used in a relay. The older definition concerns horses kept ready for that service.\n\nA relay station is consequently part of a route along which travel and messages are carried onward by changes of mount. Shirakawa compares 繹 and 訳 within the same phonetic family, emphasizing continuation. The familiar station word preserves this transport history even when horses are no longer involved.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 駅",
+      "url": "https://kotobank.jp/word/%E9%A7%85-441405#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 360,
+  "editorial_status": "source-checked English supplement",
+  "related_form": "驛"
+}

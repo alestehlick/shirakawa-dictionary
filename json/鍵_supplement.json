@@ -1,0 +1,30 @@
+{
+  "id": "U+9375",
+  "kanji": "鍵",
+  "kun_readings_romaji": [
+    "kagi",
+    "kusabi"
+  ],
+  "on_readings_romaji": [
+    "ken"
+  ],
+  "category": "",
+  "meanings": [
+    "key",
+    "lock or fastening",
+    "lifting bar",
+    "axle wedge"
+  ],
+  "explanation": "鍵 combines 金 with 建 as the phonetic ken. Shirakawa begins with older implement meanings: a bar passed through the two ears of a tripod vessel to lift it, and a wedge securing the end of a wheel axle.\n\nThe lock or key meaning is explained through borrowing for a sound-related word, not as a literal picture of a modern key. Shirakawa compares related vocabulary for barriers, tubes, and the complementary parts of a fastening.\n\nOver time the lock-related sense becomes central. Japanese also applies 鍵 to the keys of a piano. The history therefore includes several kinds of inserted or securing implement, but Shirakawa explicitly retains the role of sound-based interchange when accounting for the transition to the familiar key and lock.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 鍵",
+      "url": "https://kotobank.jp/word/%E9%8D%B5-43448#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1960,
+  "editorial_status": "source-checked English supplement"
+}

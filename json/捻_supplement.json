@@ -1,0 +1,31 @@
+{
+  "id": "U+637B",
+  "kanji": "捻",
+  "kun_readings_romaji": [
+    "hineru",
+    "tsumamu",
+    "toru"
+  ],
+  "on_readings_romaji": [
+    "nen"
+  ],
+  "category": "",
+  "meanings": [
+    "to twist with the fingers",
+    "to pinch",
+    "to pick off",
+    "to wring"
+  ],
+  "explanation": "Shirakawa classifies 捻 as semantic–phonetic. The hand component indicates the action, and 念 supplies the sound nen. The old added Shuowen gloss specifies twisting with the fingers, and he understands the core action as pinching, turning, or taking something off with the fingertips.\n\nHe compares the closely related 拈 and 撚, which share much of that physical field. Their compounds can nevertheless prefer different writings: taking incense uses 拈香, pinching one's nose in displeasure uses 捻鼻, and turning one's beard while considering something uses 撚鬚.\n\nThese examples preserve small differences in conventional written usage while showing the common underlying gesture. The word extends to pressing, plucking, or twisting something away. Shirakawa's explanation follows a precise hand action through a family of related verbs rather than treating every modern spelling as a wholly separate origin.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 捻",
+      "url": "https://kotobank.jp/word/%E6%8D%BB-595798#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1587,
+  "editorial_status": "source-checked English supplement"
+}

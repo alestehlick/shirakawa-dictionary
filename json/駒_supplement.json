@@ -1,0 +1,28 @@
+{
+  "id": "U+99D2",
+  "kanji": "駒",
+  "kun_readings_romaji": [
+    "koma"
+  ],
+  "on_readings_romaji": [
+    "ku"
+  ],
+  "category": "",
+  "meanings": [
+    "foal",
+    "young horse",
+    "young person"
+  ],
+  "explanation": "駒 is semantic–phonetic, with 馬 identifying the animal and 句 supplying the sound ku. Shirakawa also associates 句 with something small, bent, or not yet fully extended.\n\nThe older definitions specify a young horse, with different sources describing it through age or size. The central point is its immaturity rather than a separate species. Shirakawa compares 狗 for a young dog and related names for young sheep and cattle.\n\nThe shared sound-family helps explain this vocabulary of creatures not yet fully grown. From the young animal the word also extends to children or young people. The familiar Japanese koma therefore begins, in this account, with the small or incompletely developed horse indicated by the animal classifier and its phonetic.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 駒",
+      "url": "https://kotobank.jp/word/%E9%A7%92-66045#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1976,
+  "editorial_status": "source-checked English supplement"
+}

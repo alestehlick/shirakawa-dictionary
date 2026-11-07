@@ -1,0 +1,30 @@
+{
+  "id": "U+8CAA",
+  "kanji": "貪",
+  "kun_readings_romaji": [
+    "musaboru"
+  ],
+  "on_readings_romaji": [
+    "don",
+    "tan"
+  ],
+  "category": "",
+  "meanings": [
+    "to hoard",
+    "to begrudge",
+    "to covet",
+    "greedy"
+  ],
+  "explanation": "Shirakawa reads 貪 as a compound of 今 and 貝. He interprets 今 as a lid covering a vessel: valuables are stored inside and withheld from use. He therefore rejects an ordinary kon phonetic analysis as a poor sound match.\n\nThe first emphasis in his account is reluctance to part with what one possesses, rather than merely a desire to acquire someone else's property. Older regional vocabulary for stinginess supports this hoarding side of the word.\n\nFrom withholding wealth develops the broader range of greed and covetousness. Shirakawa also compares the vocabulary of 饕餮, traditionally associated with voracious desire. The central graphic explanation, however, remains goods kept under cover and not released, from which the moral judgment of avarice becomes understandable.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 貪",
+      "url": "https://kotobank.jp/word/%E8%B2%AA-563579#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1934,
+  "editorial_status": "source-checked English supplement"
+}

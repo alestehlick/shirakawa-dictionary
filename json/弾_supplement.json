@@ -1,0 +1,34 @@
+{
+  "id": "U+5F3E",
+  "kanji": "弾",
+  "kun_readings_romaji": [
+    "hajiku",
+    "utsu",
+    "tama",
+    "tadasu",
+    "hiku"
+  ],
+  "on_readings_romaji": [
+    "dan"
+  ],
+  "category": "",
+  "meanings": [
+    "to flick or shoot",
+    "projectile",
+    "to rebuke or impeach",
+    "to pluck a stringed instrument"
+  ],
+  "explanation": "弾 is the modern form of 彈, semantic–phonetic with 弓 and 單, now 単, as the phonetic dan. The older definition concerns sending out a small ball, with a variant explicitly showing a projectile held by a bow.\n\nShirakawa also examines early forms emphasizing the plucked bowstring. He proposes that some record a ritual method of accusation or punishment: an oracle inscription about Qiang captives may concern a sacrificial expulsion or purifying action. Bowstrings had several ritual applications in his account.\n\nThe word consequently includes flicking, striking, the projectile itself, and rebuking or driving away, as in 弾劾. Plucking strings also supplies the musical range. The physical string action is shared, while the punitive ritual interpretation is presented as Shirakawa's reconstruction of particular early evidence.",
+  "sources": [
+    {
+      "title": "Shirakawa, 普及版 字通 — 弾",
+      "url": "https://kotobank.jp/word/%E5%BC%BE-563611#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "note": "",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "joyo": true,
+  "frequency_rank": 1010,
+  "editorial_status": "source-checked English supplement",
+  "related_form": "彈"
+}
