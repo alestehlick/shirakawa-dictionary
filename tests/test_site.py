@@ -55,7 +55,7 @@ class StaticDictionaryTests(unittest.TestCase):
         cls.pages = {path: Page(path.read_text(encoding='utf-8'))
                      for path in [ROOT/'index.html', *sorted((ROOT/'entries').glob('*.html'))]}
         cls.assets = {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()[:12]
-                      for name in ('script.js', 'style.css', 'entries/index.json')}
+                      for name in ('script.js', 'style.css', 'entries/index.json', 'fonts/entry-serif.css')}
 
     def test_search_index_is_complete_unique_and_matches_source(self):
         self.assertEqual([row['kanji'] for row in self.index], sorted(self.entries))
@@ -92,7 +92,7 @@ class StaticDictionaryTests(unittest.TestCase):
                      'HISTORY_ENDPOINT', 'REMOTE_HISTORY', '__ENTRY_META__', 'jsonp',
                      'historyPush', 'initReadingUI', 'initExamplesUI',
                      'reading-anchor', 'examples-anchor', 'localStorage', 'sessionStorage', 'indexedDB')
-        for path in [ROOT/'generator.py', ROOT/'script.js', ROOT/'style.css', *self.pages]:
+        for path in [ROOT/'generator.py', ROOT/'script.js', ROOT/'style.css', ROOT/'fonts/entry-serif.css', *self.pages]:
             text = path.read_text(encoding='utf-8')
             for token in forbidden:
                 self.assertNotIn(token, text, f'{path.name}: {token}')

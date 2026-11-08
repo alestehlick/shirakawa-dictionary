@@ -5,8 +5,9 @@ analysis. Search by character, English meaning, or romanized on/kun reading.
 Exact reading matches are shown first; `/` focuses search and Escape clears it.
 
 The site has no account, editing, review-history, or cloud-storage integration.
-Pages use system fonts and load only their own static files. Source links open
-when followed. Stroke-order GIFs download only when the play button is used.
+The index uses system fonts; entry pages use their original Noto Serif JP typeface,
+served locally in Unicode subsets. Pages load only their own static files.
+Source links open when followed. Stroke-order GIFs download only when played.
 
 ## Build and check
 
@@ -27,6 +28,7 @@ Entry text itself remains readable with JavaScript disabled.
 - `json/`: source records, readings, glosses, explanations, and optional citations.
 - `images/`: etymological illustrations, matched to numerical filename suffixes.
 - `order_gifs/`: stroke animations, matched to characters.
+- `fonts/`: the original entry typeface, its local stylesheet, and its OFL license.
 - `entries/`: generated pages and compact search index.
 - `generator.py`: the standard-library build script.
 - `script.js`, `style.css`, `index.html`: the reader interface.

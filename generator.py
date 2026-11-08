@@ -23,6 +23,7 @@ TEMPLATE = """<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{kanji}</title>
+  <link rel="stylesheet" href="../fonts/entry-serif.css">
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js" defer></script>
 </head>
@@ -32,8 +33,8 @@ TEMPLATE = """<!doctype html>
   <div class="kanji-col">
     <div class="kanji-glyph">{kanji}</div>
 {stroke_gif_html}
-{images_html}
   </div>
+{images_html}
   <div class="text-col">
 {wide_image_html}
 {category_html}
@@ -207,7 +208,7 @@ def write_if_changed(path: Path, content: str) -> bool:
 
 def version_assets(content: str, versions: dict[str, str]) -> str:
     # New URLs prevent a previously cached script from surviving a site update.
-    pattern = r'((?:href|src|data-index-src)=")(\.\./)?(style\.css|script\.js|entries/index\.json)(?:\?v=[a-f0-9]+)?(")'
+    pattern = r'((?:href|src|data-index-src)=")(\.\./)?(style\.css|script\.js|entries/index\.json|fonts/entry-serif\.css)(?:\?v=[a-f0-9]+)?(")'
     return re.sub(pattern, lambda m: f'{m[1]}{m[2] or ""}{m[3]}?v={versions[m[3]]}{m[4]}', content)
 
 
@@ -227,7 +228,7 @@ def build() -> None:
         entries[data["kanji"]] = (file, data)
     kanji_to_file = build_kanji_map([data for _, data in entries.values()])
     versions = {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()[:12]
-                for name in ("style.css", "script.js")}
+                for name in ("style.css", "script.js", "fonts/entry-serif.css")}
     index = []
     updated = 0
 

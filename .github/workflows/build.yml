@@ -8,6 +8,7 @@ on:
       - 'generator.py'
       - 'script.js'
       - 'style.css'
+      - 'fonts/**'
       - 'index.html'
       - 'tests/**'
       - '.github/workflows/build.yml'
