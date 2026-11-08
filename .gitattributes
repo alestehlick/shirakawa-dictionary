@@ -1,0 +1,8 @@
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.py text eol=lf
+entries/index.json text eol=lf
+.github/workflows/*.yml text eol=lf
+README.md text eol=lf
+SUPPLEMENT.md text eol=lf

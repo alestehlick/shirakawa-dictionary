@@ -4,27 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shirakawa Kanji Dictionary</title>
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-
-  <script>
-    window.HISTORY_ENDPOINT = "https://script.google.com/macros/s/AKfycbyFMWpzj21PROmEnaMYtQyLa9RqKxsmm9GMoazYaifdpY2CvrVuVCH0F4SkQ2Ku50aB/exec";
-  </script>
+  <link rel="stylesheet" href="style.css?v=36806f5e2f1b">
+  <script src="script.js?v=6f9bb17ca69e" defer></script>
 </head>
 <body>
-  <h1>Shirakawa Kanji Dictionary</h1>
-
-  <div class="toolbar">
-    <input id="search" placeholder="Search kanji or meaning…" />
-    <!-- Only the Review button is injected by script.js -->
-  </div>
-
-  <div id="results"></div>
-  <div id="modal-root"></div>
-
-  <script src="script.js"></script>
+  <main>
+    <h1>Shirakawa Kanji Dictionary</h1>
+    <div class="toolbar" role="search">
+      <label class="visually-hidden" for="search">Search kanji, meaning, or romanized reading</label>
+      <input id="search" type="search" placeholder="Search kanji, meaning, or reading…" autocomplete="off" spellcheck="false" aria-controls="results">
+    </div>
+    <p id="results-count" class="results-count" role="status" aria-live="polite"></p>
+    <div id="results" data-index-src="entries/index.json?v=4a22833bcf5e">Loading dictionary…</div>
+    <noscript>Enable JavaScript to search the dictionary index. Individual entry pages can be read without it.</noscript>
+  </main>
 </body>
 </html>

@@ -2,9 +2,15 @@ name: Build Dictionary Pages
 
 on:
   push:
+    branches: [main]
     paths:
       - 'json/**'
       - 'generator.py'
+      - 'script.js'
+      - 'style.css'
+      - 'index.html'
+      - 'tests/**'
+      - '.github/workflows/build.yml'
   workflow_dispatch:
 
 permissions:
@@ -22,17 +28,19 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-
     - name: Run generator
       run: python generator.py
+
+    - name: Check the static site
+      run: python -m unittest discover -s tests -v
 
     - name: Commit and push changes
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git add entries/
-        git commit -m "Auto-build: update entries" || echo "No changes"
+        git add entries/ index.html
+        if git diff --cached --quiet; then
+          exit 0
+        fi
+        git commit -m "Auto-build: update dictionary pages"
         git push

@@ -39,7 +39,8 @@ numbered etymology image. Existing matching stroke-order animations are reused.
 
 `generator.py` supports paragraph breaks and optional source metadata. Source
 links are static HTML; viewing an entry requires no request to Kotobank. The
-existing search, reading/example editing, and history code is unchanged.
+subsequent interface cleanup removed reading/example editing and review history;
+the dictionary remains searchable and its explanations and citations are unchanged.
 
 To rebuild, run `python generator.py` from this repository’s root. The generated
 pages and search index are included in the local changes.
@@ -54,7 +55,8 @@ pages and search index are included in the local changes.
 - Desktop and simulated iPad portrait/landscape WebKit checks cover search,
   navigation, paragraph/source display, layout, stroke playback, 𠮟, and links
   from modern forms to their preserved older forms.
-- Remote history requests were intercepted during testing.
+- The original supplement tests intercepted remote requests. The subsequent
+  interface cleanup removed those requests and their supporting code entirely.
 
 The repository retains its six pre-existing duplicate headwords and its
 pre-existing non-Jōyō entries. Accordingly, the complete JSON collection has
