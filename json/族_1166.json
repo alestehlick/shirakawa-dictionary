@@ -13,5 +13,28 @@
     "clan",
     "family"
   ],
-  "explanation": "A compound graph that joins the clan banner and the arrow. The banner—originally a flagpole with a fixed streamer—was the clan’s standard, borne with the group in war and on the move. The arrow was revered as sacred; in vows made before the gods, one signaled the oath by the gesture of breaking an arrow. In some oracle-bone and bronze forms a covenant container for written prayers is added, underscoring the rite. 族 thus portrays a swearing ceremony at the foot of the clan banner and came to name those bound by that common vow—the fellows of the same lineage—and, because such rites gathered everyone, it also suggests assembling. In the same ritual sphere, 氏 depicts a small handled knife used to portion sacrificial meat at the clan banquet after ancestor worship; those who shared that meal were the uji, hence shizoku, the family."
+  "explanation": "族 joins 㫃, the clan's banner, with 矢, an arrow used in swearing an oath. The participants pledge themselves beneath their common standard. They apparently made a gesture of breaking an arrow to mark the vow.\n\nThose who shared the oath were the clan's members and its military body. Bronze inscriptions can direct someone to lead his 族 in protecting the king or describe several 族 being sent on campaign. Common allegiance and collective service give the group its unity.\n\nFrom the assembled clan come family, lineage, companions of the same kind, and a gathering. 鏃 later uses 族 as its phonetic for an arrowhead. The banner and oath-arrow remain the earlier formation behind the social word.",
+  "sources": [
+    {
+      "title": "常用字解 · 族 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15343282.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 族",
+      "url": "https://kotobank.jp/word/%E6%97%8F-89833#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 131
+  }
 }

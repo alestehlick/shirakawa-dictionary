@@ -18,5 +18,28 @@
     "to correct",
     "proper"
   ],
-  "explanation": "Shirakawa sees 正 as a compound: the footstep graph 止—whose ancient form matches 之 and means to go or advance—set against the image of a walled city. In early forms it thus depicts a person moving upon a fortified place, yielding the sense of attacking and subduing. From this, 正 functioned as the original graph of 征, “to campaign and conquer,” while 政 named the method of rule over the subdued—exerting strong pressure and exacting levies. Order imposed in this way was regarded as proper and just (正当, 正義), and from that valuation the character came to mean “correct” and “to rectify,” as reflected also in compounds such as 純正, “pure, unmixed.”"
+  "explanation": "正 combines a foot, 止, with the outline of a walled settlement. In the early forms the upper sign is an enclosure, later reduced to a single line. The foot moves toward the fortified place.\n\n正 is the earlier writing for 征, campaigning and subduing. The conqueror's action was treated as justified, and the word extended to putting things right. Taking tribute from the conquered place belongs to 征; adding the striking implement 攴 produces 政, rule exercised through coercive action.\n\nThe person directing this order could also be called 正, an official or chief. From conquest and administration come proper order, correctness, justice, and purity. The modern top stroke preserves the abbreviated enclosure.",
+  "sources": [
+    {
+      "title": "常用字解 · 正 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14213169.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 正",
+      "url": "https://kotobank.jp/word/%E6%AD%A3-530317#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 157
+  }
 }

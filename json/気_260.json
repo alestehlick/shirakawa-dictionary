@@ -14,5 +14,28 @@
     "vital force",
     "temperament"
   ],
-  "explanation": "気 is a picto-phonetic character whose older form is 氣. The element 气 depicts scudding vapors—the moving breath of clouds—and because this vital qi was taken as the source of life, 米, the grains that nourish it, was added, giving the form 気. The same conception appears in 餼, where 氣 with the food radical denotes a gift of provisions. From this root of vital breath, 気 came to name the powers that pervade nature—the great air that surrounds the earth, the vigor that sets activity in motion, and the breath on which we live—and, by extension, the dispositions that show themselves in people and communities."
+  "explanation": "気 abbreviates 氣, which combines 气 with 米. 气 pictures drifting cloud vapour and supplies the sound. This breath or vapour was regarded as the source of life; 米 is the grain that nourishes it. The fuller character joins vital breath with its material sustenance.\n\nThe same connection between food and sustaining life appears in 餼, provisions presented to a guest. 氣 itself comes to embrace breath, air, vigour, and the force through which living activity continues.\n\nThe word extends from that animating force to a person's temperament, intention, and mood. It can also describe the atmosphere of a place, a drifting scent, or the changing conditions of a season. These uses retain something of the invisible but perceptible breath represented by 气.",
+  "sources": [
+    {
+      "title": "常用字解 · 気 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8648567.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 気",
+      "url": "https://kotobank.jp/word/%E6%B0%97-49796#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 2
+  }
 }

@@ -14,5 +14,20 @@
     "way",
     "method"
   ],
-  "explanation": "Shirakawa understands 方 as a pictograph of a dead person suspended from a horizontal beam. Such figures were erected at border places as curse-barriers to ward off evil spirits, so the graph first evoked the outer, distant regions (totsukuni) and then naturally came to mean a direction (as in hôi, hôgaku, hôkô). From the sense of a course one follows it further developed the meanings of way and method (as in hôhô). This ritual background also clarifies related graphs: 放 initially referred to beating the suspended figure to drive away malign forces; 白 depicts a skull; and 敫 shows a skull hung up and struck on a post in an exorcistic rite."
+  "explanation": "方 depicts a corpse suspended from a crossbeam. Such a display served as a ritual barrier at a boundary, using the dead person's feared power to repel harmful beings. The setting is the edge of a community and the territory beyond it.\n\nOracle-bone inscriptions use 方 in names of external peoples and regions, such as 土方 and 馬方. From an outlying country or frontier come ‘distant region,’ ‘quarter,’ and ‘direction.’ A direction also supplies a course to follow, giving the later senses of a way, technique, or method.\n\n放 adds the action of striking this suspended figure in a rite of expulsion. This connection helps explain the boundary image in 方.",
+  "sources": [
+    {
+      "title": "字通 · 方",
+      "url": "https://kotobank.jp/word/%E6%96%B9-442815#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 35
+  }
 }

@@ -16,5 +16,28 @@
     "oneself",
     "to become pregnant"
   ],
-  "explanation": "This character is a pictograph of a woman seen from the side with a markedly swollen belly, evoking pregnancy. In the Book of Odes (Greater Odes, Da Ming), the phrase 大任有身, “Tai Ren conceived,” preserves this original sense of 身 as ‘to become pregnant.’ Related graphs support the image: 孕 depicts a child within the mother’s abdomen, and 包 likewise shows an unborn infant enclosed. From this core image of conception, the meaning broadened over time to denote the ‘body’ and, by extension, ‘oneself.’"
+  "explanation": "身 pictures a pregnant person seen from the side. The projecting abdomen is the identifying feature. Its early sense is carrying a child, preserved in the Book of Odes' description of Tai Ren's pregnancy.\n\nThe related 孕 makes the child within the body explicit. Words later written with 娠 belong to the same pregnancy vocabulary; as 身 became the general word for the body, other formations could distinguish the more particular sense.\n\nFrom the pregnant body the reference widens to the body itself, its contents or inner substance, and the person. 身 can therefore mean oneself: the embodied individual who acts, experiences, or bears responsibility. Pregnancy remains the starting image even where the later word is entirely general.",
+  "sources": [
+    {
+      "title": "常用字解 · 身 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13849486.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 身",
+      "url": "https://kotobank.jp/word/%E8%BA%AB-536534#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 147
+  }
 }

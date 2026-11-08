@@ -12,5 +12,28 @@
     "mind",
     "intention"
   ],
-  "explanation": "Shirakawa reads 念 as a phono‑semantic compound. The upper element 今, serving as the phonetic, originally depicts a lid fitted with a stopper—the closure of a jar or bottle—and related ancient forms even show a wine vessel (酉) sealed in this way. Beneath it sits 心, the heart. Together they picture something shut under a lid within the heart—feelings and ideas kept inside—and from this image the character comes to mean to harbor a thought, to think, and the heart or mind."
+  "explanation": "念 combines 心, the heart, with 今 as its phonetic. 今 pictures a lid with a stopper projecting below it, closing a jar or bottle. The closure keeps what is inside from escaping.\n\nThe same image is applied to the heart. A thought or feeling is held deeply within, as contents are enclosed beneath a lid. 念 therefore means keeping something in mind, dwelling on it, or harbouring an inward thought.\n\nThe word can name the thought itself and the attachment that makes it difficult to put aside. Through interchange with 唸 it also means reciting or reading aloud. Inward retention and repeated utterance become connected ways of sustaining something in attention.",
+  "sources": [
+    {
+      "title": "常用字解 · 念 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22620963.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 念",
+      "url": "https://kotobank.jp/word/%E5%BF%B5-111643#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 141
+  }
 }

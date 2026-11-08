@@ -14,5 +14,28 @@
     "body",
     "skin"
   ],
-  "explanation": "This character is a straightforward pictograph: it depicts a large cut of flesh, with the soft folds and layers clearly shown. From that concrete image it naturally came to mean meat or flesh, and by extension could also point to the human body and even the skin. The form 宍 is used as an alternate way to write the same word for meat."
+  "explanation": "肉 pictures a cut piece of flesh. The enclosing outline marks the portion, and the strokes within indicate its inner substance. The early word refers to a substantial piece of meat.\n\nFrom flesh come the body, skin, and the condition of being fleshy or gaining weight. Its sound family is close to words for softness and yielding: flesh is soft in contrast with the bones that support it.\n\nAs a component, 肉 often takes a form resembling 月. In such characters it can concern a body part or bodily condition. Its history remains that of flesh, even where the compact modern shape looks like the separate character for the moon.",
+  "sources": [
+    {
+      "title": "常用字解 · 肉 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22415354.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 肉",
+      "url": "https://kotobank.jp/word/%E8%82%89-109186#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 179
+  }
 }

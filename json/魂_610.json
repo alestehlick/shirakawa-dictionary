@@ -13,5 +13,28 @@
     "spirit",
     "mind"
   ],
-  "explanation": "A compound character formed from 云 and 鬼. 云 is the original graph of 雲, showing a cloud or a cloud-like state, while 鬼 depicts the human specter of the dead and, by extension, the realm of spirits. Together they express the “soul,” conceived as a cloud-like qi (pneuma) that, upon death, leaves the person and enters the spiritual world. In contrast stands 魄 (haku), which is tied to the body’s remains; there the element 白 represents the bleached, withered skull. From this core sense, 魂 also comes to mean the inner heart or mind, as in compounds like 魂胆 (secret intention), 詩魂 (poetic spirit), and 商魂 (commercial drive)."
+  "explanation": "魂 joins 云, the earlier writing of 雲, with 鬼, a spirit of the dead. 云 pictures cloud vapour. A person's soul was thought to become like that drifting vapour after death and enter the spirit world. The two components give form to this elusive presence.\n\nThe distinction between 魂 and 魄 sets the cloud-like soul beside another aspect of the dead. In 魄, 白 represents a skull from which the colour of life has gone. 魂 is associated with the more active, yang breath, while 魄 belongs to the yin aspect.\n\n云 and 魂 also have related sounds. Beyond the departed soul, 魂 can name a person's inward spirit, deepest feeling, or the animating force expressed in an activity.",
+  "sources": [
+    {
+      "title": "常用字解 · 魂 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11376099.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 魂",
+      "url": "https://kotobank.jp/word/%E9%AD%82-505768#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 12
+  }
 }

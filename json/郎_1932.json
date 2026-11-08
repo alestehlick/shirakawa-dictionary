@@ -15,5 +15,28 @@
     "official title",
     "lord"
   ],
-  "explanation": "郎 is a phono-semantic character. Its early form writes 郎 with 良 as the phonetic, which gives the on reading and carries the idea of “good.” 良 originally depicted a winnowing implement that sent air through grain to drive off the chaff, keeping only the sound kernels; from this act of selecting the good it came to mean “good.” In 郎, that phonetic not only supplies the sound but also suggests a “good man,” and the character was used for naming a male child, for a young man or husband, as a polite address (“lord,” “you”), and as the title of an official post."
+  "explanation": "郎 combines 邑, a settlement, with 良 as its phonetic. Its earliest dictionary explanation is a place name in the state of Lu. The uses for a man and an official connect through 良, ‘good.’\n\n良 has an association with selecting sound grain by winnowing, giving the sense of what is good or worthy. 郎 can accordingly designate a worthy man. Its official use may also connect with service in the 廊, the corridors or surrounding halls of a court.\n\nUnder the Han, 郎 became an established official title. It later served more broadly for a man, son, or husband, and in male names indicating order among relatives, such as 九郎. Respectful address and official standing remain linked in these uses.",
+  "sources": [
+    {
+      "title": "常用字解 · 郎 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28873300.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 郎",
+      "url": "https://kotobank.jp/word/%E9%83%8E-662433#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 65
+  }
 }

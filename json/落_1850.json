@@ -15,5 +15,28 @@
     "to come down",
     "to cease"
   ],
-  "explanation": "A phono-semantic character built with 洛 as its phonetic, giving the on-yomi raku. Within 洛, the element 各 conveys the idea of something descending from above. Ancient glosses distinguish 零 for what falls from the sky—rain or dew—and 落 for what falls from trees—leaves; from there, the character broadened to the general senses “to fall,” “to come down,” and even “to stop, cease.” In ritual usage, 落 also refers to the blood-purification performed when a building or vessel is completed. Paired with 成, which denotes fixing a final ornament and purifying when the forging of a pike is finished, the compound 落成 came to mean the ceremonial completion of construction."
+  "explanation": "落 combines the plant element 艹 with 洛, which supplies the sound. Its concrete sense is the falling of leaves from a tree. From falling come descending, dwindling, decline, and finally stopping or coming to an end. Related 零 concerns falling rain or dew.\n\nA further use belongs to ceremonies marking the completion of an important object or building. When a bell was cast, sacrificial blood was poured over it in a rite of purification; a newly finished terrace or residence could likewise be inaugurated with a ceremony. 落 names this completion rite, preserved in 落成.\n\nOther later uses refer to an enclosed court, a dwelling, or a settlement, as in 院落 and 村落.",
+  "sources": [
+    {
+      "title": "常用字解 · 落 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/27556089.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 落",
+      "url": "https://kotobank.jp/word/%E8%90%BD-655830#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 5
+  }
 }

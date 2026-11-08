@@ -14,5 +14,28 @@
     "manservant",
     "i (humble)"
   ],
-  "explanation": "A phono-semantic character, 僕 takes 業 as its phonetic, yielding the boku sound shared by characters such as 撲 and 樸. In bronze inscriptions it depicts a person wearing a ceremonial headpiece after a rite—an attendant serving the gods. An old-script form follows the pattern of 臣, which likewise originally showed one in service to the divine. From this origin the sense shifted to a general “servant,” specifically a “male servant,” and in time it became a humble first-person term; Sima Qian famously uses 僕 to refer to himself in his letter to Ren An."
+  "explanation": "僕 combines 人 with 菐 as its phonetic. The older formation shows an attendant wearing a ceremonial headpiece and taking part in a rite. The implement held resembles 辛, a large needle or pointed tool, and may concern slaughtering the sacrificial victim.\n\nAn old variant contains 臣, likewise associated with service to a deity. Early bronze inscriptions also use 僕 in official titles. Such service could carry official standing.\n\nLater it became a term for a servant and a humble way of referring to oneself. Sima Qian uses it in his letter to Ren An. The familiar first-person use continues that history of self-designation through a word for service.",
+  "sources": [
+    {
+      "title": "常用字解 · 僕 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25620716.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 僕",
+      "url": "https://kotobank.jp/word/%E5%83%95-629357#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 182
+  }
 }

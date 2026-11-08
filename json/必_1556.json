@@ -13,5 +13,28 @@
     "inevitable",
     "without fail"
   ],
-  "explanation": "必 is a pictograph of the head of a weapon—a pike, halberd, or broad axe—fixed to its haft at the socket. In early writing it named that fitting itself, and as a sacred implement it figured in ritual. From this base grew a cluster of graphs tied to ritual solemnity and guarded conduct—宓 (peaceful, calm), 祕/秘 (secret), 密 (close, secret), 毖 (careful), and related shrine terms—originally referring to ceremonies employing that weapon-head as a sacred utensil. The familiar sense “certainly; without fail” is a later phonetic loan: bronze inscriptions actually write this adverb with 弋, while 必 served its older, implement-based meaning (it is the original graph behind 秘/祕, with the separate form 袐 later created). Thus 必 first depicts the blade-head secured to the handle, and only later came to express inevitability."
+  "explanation": "必 pictures the fitting at which a weapon's blade is attached to its shaft. The early shape emphasizes the blade and its fastening; additional strokes can show its gleam. It is the earlier writing for 柲, the weapon's haft or fitting.\n\nSuch weapons could also be sacred implements. Several characters containing 必, including 祕 and 密, concern rites performed with them. Their secrecy or solemnity belongs to those particular ritual settings.\n\n必 was borrowed for its sound to write ‘certainly’ or ‘without fail.’ Bronze inscriptions also use the related fitting-shaped 弋 for this adverb. The familiar necessity or certainty continues this sound-loan use.",
+  "sources": [
+    {
+      "title": "常用字解 · 必 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23916123.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 必",
+      "url": "https://kotobank.jp/word/%E5%BF%85-610666#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 152
+  }
 }

@@ -16,5 +16,28 @@
     "many",
     "various"
   ],
-  "explanation": "An indicative character formed by adding a single horizontal stroke above 白. The base graph 白 depicts a skull; in 百 a further mark—likely the nostrils of that skull—is uniquely added, and with this addition the value “hundred” is signaled. The graph thereby takes its on reading from 白. Because a hundred was regarded as a perfect number, 百 naturally extends to mean the whole, all, a great many, or various."
+  "explanation": "百 adds a numerical mark above 白, which probably supplies the sound. In oracle-bone writing, one stroke gives one hundred, two strokes two hundred, and three strokes three hundred. The form combines a sound element with a visible count of hundreds.\n\nSome early examples also contain a triangular mark that appears to indicate the nostrils, making their head-shape somewhat different from 白 alone. The head's internal mark and the upper numerical stroke perform different functions.\n\nA hundred is a completed counting unit and readily represents a large total. 百 therefore extends to many, every kind, or the whole collection, as in expressions for the many officials or all the people. 佰 applies the same count to a group of a hundred persons.",
+  "sources": [
+    {
+      "title": "常用字解 · 百 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23942705.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 百",
+      "url": "https://kotobank.jp/word/%E7%99%BE-612631#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 95
+  }
 }

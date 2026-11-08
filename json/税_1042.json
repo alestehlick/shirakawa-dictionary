@@ -11,5 +11,28 @@
     "land tax",
     "levy"
   ],
-  "explanation": "Tax is a phono-semantic character. Its original form, 稅, combines 禾 “grain” for meaning with 兌 as the phonetic, which provides the on-reading and is shared by related graphs like 悅 and 說. The Shuowen glosses it as 租, the land tax, indicating grain collected as rent from fields. The Spring and Autumn Annals records 初畝稅, the first levy assessed per 畝 (a unit of field area), showing a system that taxed planting space rather than actual yield. The graph thus evokes the collection of grain as a fixed land tax."
+  "explanation": "税 combines 禾, grain, with 兌 as its phonetic. It concerns crops delivered as a levy: agricultural produce taken in payment of tax. The older form is 稅.\n\nThe Spring and Autumn Annals records the introduction of a levy assessed by 畝, a measure of field area. A tenth was treated as the general principle of taxation. The grain component keeps the material form of the payment visible.\n\nThe word belongs near 脱, shedding or removing, and may carry the idea of drawing out what is within. Through interchange with 脱 it also has uses for releasing, putting aside, or allowing something to go. Tax collection and release are distinct applications within this sound family.",
+  "sources": [
+    {
+      "title": "常用字解 · 税 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14416013.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 税",
+      "url": "https://kotobank.jp/word/%E7%A8%8E-85469#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 154
+  }
 }

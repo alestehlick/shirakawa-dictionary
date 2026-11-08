@@ -14,5 +14,28 @@
     "to do",
     "service"
   ],
-  "explanation": "仕 is a phono-semantic character: the person element 亻 supplies the human actor, while 士 (shi) serves as the phonetic and originally depicted a small ritual broadax held blade-down, an emblem of the warrior class and its rank. From this image of the warrior who serves his king, the character took on the sense “to serve,” later generalized to serving one’s superior in a broader sense. In Japanese it naturally extends to everyday acts of doing and arranging, which is why it appears in words such as shigoto (work), shikake (device), shiire (stocking), shitate (tailoring), shiokuri (remittance), shikomi (training), shidashi (catering), and shiwake (classification)."
+  "explanation": "仕 joins a person, 亻, with 士 as its phonetic. 士 pictures the head of a small ceremonial axe, an emblem of the warrior class and its standing. 仕 is the act of entering service as a person of that rank.\n\nThe service is directed to a ruler or superior. 士, 仕, and 事 share a related sound and meaning: the ranked person, his service, and the duties he performs. Those duties belonged to a world in which ceremonies and government were closely connected.\n\nThe word broadens to doing one's work or carrying out an assigned task. In Japanese, the character appears widely in words for work and preparing or arranging things.",
+  "sources": [
+    {
+      "title": "常用字解 · 仕 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12180717.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 仕",
+      "url": "https://kotobank.jp/word/%E4%BB%95-515150#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 57
+  }
 }

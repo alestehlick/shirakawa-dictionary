@@ -22,5 +22,28 @@
     "to correct",
     "to repair"
   ],
-  "explanation": "A phono-semantic character: the water element signals a relation to water, while the phonetic 台 points to the reading and, in its old form, depicts a plow set over a covenant vessel used to deposit prayers. That image evokes the rite performed at the start of cultivation—purifying the plow and praying for a rich harvest. Applied to water, 治 originally expressed the ritual act of bringing water under control. Because flood control was a central duty of early rulers along great, flood-prone rivers, the character naturally came to mean governing the realm and affairs of state. From there its sense broadened to curing the body or mind and, more generally, to putting things in order—correcting and repairing what is out of balance."
+  "explanation": "治 combines 水 with 台 as its phonetic. 台 joins 厶, the old plough shape, with 口, a vessel containing written prayers. At the beginning of cultivation, the implement is purified and a plentiful harvest sought through prayer.\n\n治 probably extends that rite to water: bringing the water under control and making it fit for the fields. The practical work of regulating a flow is accompanied by the ritual that secures its proper condition.\n\nFrom ordering water come managing an affair and governing a country. The same act of setting right can be directed toward the person: regulating the mind, correcting conduct, or restoring the body to health. Government, treatment, repair, and improvement share this movement toward a well-ordered condition.",
+  "sources": [
+    {
+      "title": "常用字解 · 治 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12510538.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 治",
+      "url": "https://kotobank.jp/word/%E6%B2%BB-515317#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 90
+  }
 }

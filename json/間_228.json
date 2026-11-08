@@ -20,5 +20,28 @@
     "calm",
     "quiet"
   ],
-  "explanation": "Originally written as 閒, this character is a compound of a gate (門) with what looks like the moon (月) but in early forms is actually the flesh radical (肉) set above it. Bronze inscriptions even show the graph 外 written within the gate. Together these elements depict a rite performed at the gate of an ancestral mausoleum, where meat was offered in prayer—a scene centered on the threshold that separates outside from inside. From this image of a dividing boundary arose the senses of an interval or stretch of time and space (aida, ma), a gap or opening, and, by extension, a state of calm or quiet."
+  "explanation": "間 was earlier written 閒, enclosing a 月-shaped form within 門. The inner shape represents sacrificial meat. Bronze variants place the meat above the gate or put 外 inside it, pointing toward a rite at the entrance to an ancestral shrine.\n\nMeat was offered and prayers performed at this threshold. The particular ceremony remains uncertain, but its location separates the sacred interior from the space outside. This gives the connection with an intervening space and with keeping the two sides apart.\n\n間 names a gap, an interval, a room, or the distance between things. Applied to time, it is the period between events. Other uses concern quiet withdrawal, repose, concealment, and acting secretly or awaiting an opportunity.",
+  "sources": [
+    {
+      "title": "常用字解 · 間 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8522215.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 間",
+      "url": "https://kotobank.jp/word/%E9%96%93-60237#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 17
+  }
 }

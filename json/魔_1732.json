@@ -11,5 +11,28 @@
     "devil",
     "evil spirit"
   ],
-  "explanation": "A phono-semantic character: the element 麻 provides the sound ma and points toward the Buddhist loan name 魔羅 (Mara), a phonetic rendering of the Sanskrit Mara, the force that obstructs enlightenment. From this background the graph came to signify the oni or devil—an evil presence that brings calamity and tempts people onto harmful paths."
+  "explanation": "魔 joins 鬼, a spirit or demon, with 麻 as the sound element. It was formed for the Buddhist rendering of Sanskrit Māra, the hostile power associated with obstruction and delusion. The new character uses a Chinese sound element to represent a borrowed religious name.\n\nIt belongs to the later vocabulary of Buddhism. From that setting, 魔 broadens to an evil being or harmful agency, and to the condition of a mind drawn into error.\n\nThe hemp meaning of 麻 is independent of its phonetic role here.",
+  "sources": [
+    {
+      "title": "常用字解 · 魔 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25792163.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 魔",
+      "url": "https://kotobank.jp/word/%E9%AD%94-135320#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 97
+  }
 }

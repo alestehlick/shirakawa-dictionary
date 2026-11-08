@@ -16,5 +16,28 @@
     "position",
     "only"
   ],
-  "explanation": "所 is a compound graph of 戶 and 斤. 戶 depicts the single-leaf door of a household altar (in contrast to the double-leaf gate 門), while 斤 is an adze. The character pictures the altar door secured and protected with the adze; within that door a seat was prepared for the spirit of the deceased or a deity. Bronze inscriptions preserve this sacral sense in phrases such as 帝所 and 雷公之所, meaning the consecrated place of a god or an ancestral spirit. From this core meaning of a sacred ‘place,’ the word broadened to denote the ruler’s palace—the imperial dwelling—and then more generally any place or social position. By association with the on-reading of 許, it also developed the adverbial sense ‘only’ (bakari), and in classical usage it appears as a contraction of 之於, functioning as a relative or locative marker in emphatic constructions."
+  "explanation": "所 combines 戸, a single-leaf door, with 斤, an adze. The door belongs to a sacred shelf or enclosure for a spirit tablet. Working with the adze makes this door and the place in which the sacred presence is installed.\n\nThe first place is therefore a sanctuary, the dwelling of a deity or ancestor. From that honoured location come a ruler's residence and places more generally. The word can also describe a position, situation, or condition.\n\nIts classical grammatical uses introduce what an action concerns or help form passive expressions. These are later applications of the writing. The concrete beginning remains the making of the enclosure that becomes the spirit's place.",
+  "sources": [
+    {
+      "title": "常用字解 · 所 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13357704.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 所",
+      "url": "https://kotobank.jp/word/%E6%89%80-78735#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 72
+  }
 }

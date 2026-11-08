@@ -21,5 +21,28 @@
     "road",
     "path"
   ],
-  "explanation": "This character is a pictograph of a crossroads—broad thoroughfares intersecting. As the place where people pass, it first conveyed the idea of “to go.” Crossings were also imagined as points where spirits move about, and so they became sites for ancient rites and magical practices, including beguiling arts and displays of skill. From the basic sense of going, the meaning widened to action in general, giving rise to uses such as “to conduct” and “to perform.”"
+  "explanation": "行 pictures two roads crossing. Oracle-bone and bronze forms show the open ways meeting at a junction; 彳 and its counterpart are later parts of this complete road shape.\n\nA road is where one goes, giving travelling, proceeding, and sending someone onward. Going through an action also becomes performing or carrying it out. A succession of people moving together can form a row or rank, supplying another branch of the word's uses.\n\nRoads were also places where ritual power could be directed toward other territories. Characters such as 術 place a ritual object within the road formation, and many related graphs concern such acts. 行 consequently belongs to both ordinary movement and the ceremonial actions performed along a route.",
+  "sources": [
+    {
+      "title": "常用字解 · 行 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10886630.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 行",
+      "url": "https://kotobank.jp/word/%E8%A1%8C-2769#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 100
+  }
 }

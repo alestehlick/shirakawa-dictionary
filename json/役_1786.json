@@ -14,5 +14,28 @@
     "military service",
     "corvee labor"
   ],
-  "explanation": "This character combines 彳, the step beside the crossroads in 行 that signifies going or marching, with 殳, a hand-held striking weapon like a pike. Together they evoke taking up arms and setting out to the border to stand guard. From this image 役 first expressed warfare and military service, and then broadened to the state-imposed corvée, to work and duties in general, and by extension to functions and the people who perform them."
+  "explanation": "役 combines 彳, movement along a road, with 殳, a hand-held staff or weapon. The implement could bear feathers and serve as a ritual staff carried on a circuit or patrol.\n\nThe same equipment was probably used when going on campaign or undertaking frontier guard duty. An early definition gives guarding the border, placing the character within the obligations of military service. Movement with the staff joins ritual patrol to practical watchkeeping.\n\nFrom this service come work, a duty, an assigned task, and the person performing it. The word can also mean employing someone or serving another. Its general occupational range develops from a particular kind of public obligation.",
+  "sources": [
+    {
+      "title": "常用字解 · 役 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26522689.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 役",
+      "url": "https://kotobank.jp/word/%E5%BD%B9-442793#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 167
+  }
 }

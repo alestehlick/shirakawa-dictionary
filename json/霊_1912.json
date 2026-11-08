@@ -16,5 +16,28 @@
     "divine spirit",
     "ghost"
   ],
-  "explanation": "The character 霊 goes back to the older graph 靈, which depicted a rain-invoking rite: three ritual receptacles for covenant-prayers set out in a row, together with a shaman-priestess 巫 who conducts the ceremony. It first named the rainmaking ritual itself. Because the same array and supplicatory act were used when calling down the divine presence, the graph came to denote the numinous spirits so invoked and, more broadly, everything pertaining to divine agency—hence senses like deity, shaman, soul, and even the idea of surpassing excellence. In bronze inscriptions the graph also appears with 示, the altar-table of worship, or with 心, the heart, underscoring its sacred and inner, animating force."
+  "explanation": "霊 abbreviates 靈, which combines 霝 with 巫. In 霝, 雨 stands above three vessels containing written prayers. Their arrangement depicts supplication for rain; 巫 adds the medium conducting the ceremony.\n\nThe formation first concerns the rain-invoking rite. The same arrangement of prayer vessels could be used to seek the descent of another divine presence. From the ceremony the word extends to the power called upon and to the medium who receives it.\n\n霊 therefore names a deity, spirit, soul, or mysterious efficacy. Something endowed with that power can be exceptional, excellent, or auspicious. The modern simplified form conceals much of the older composition, in which the rain, repeated prayers, and officiating figure remain distinct.",
+  "sources": [
+    {
+      "title": "常用字解 · 霊 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28616028.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 霊",
+      "url": "https://kotobank.jp/word/%E9%9C%8A-562660#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 62
+  }
 }

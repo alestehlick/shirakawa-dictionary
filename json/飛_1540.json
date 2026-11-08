@@ -15,5 +15,28 @@
     "to rise",
     "swift"
   ],
-  "explanation": "A pictograph of a bird in flight, wings spread wide at the instant of taking off. From this vivid image the character came to mean to fly, and by extension to rise into the air and to move with speed. It contrasts with 翔 (shō), which evokes a gentle, circling glide. In compounds it retains these senses: flight through the air (hikō), soaring (hishō), arriving by flight (hirai); upward motion, as in flames that leap up (hien) and lofty pavilions (hikaku, hirō); and swiftness or rapid conveyance, as in quickly circulated proclamations (higeki), a boat that seems to fly (hishū), and a hurried letter (hisho)."
+  "explanation": "飛 pictures a bird spreading its wings to take flight. The early form preserves the body and extended wings, making the movement of rising into the air visible.\n\nFrom flying come soaring, going upward, and passing beyond a boundary. A lofty pavilion can be called 飛閣, its height suggesting something raised into the air. The word also describes things leaping, scattering, or travelling away.\n\nFlight readily gives speed. An urgent proclamation sent swiftly from place to place is a 飛檄; clouds moving across the sky are 飛雲. The different uses extend the same airborne movement into height, distance, and rapid conveyance.",
+  "sources": [
+    {
+      "title": "常用字解 · 飛 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23729653.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 飛",
+      "url": "https://kotobank.jp/word/%E9%A3%9B-607543#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 124
+  }
 }

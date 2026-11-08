@@ -13,5 +13,28 @@
     "mind",
     "spirit"
   ],
-  "explanation": "A pictograph of the heart, regarded in antiquity as the source of life and the seat of thought. Although the character itself does not appear in oracle-bone inscriptions, the oracle-bone form of 文 shows chest markings on a front-facing human figure, an emblem pointing to the heart. By the bronze inscription period, 心 is attested with moral and mental nuance, as in 敬明乃心, “Let your heart be made clear through reverence,” already expressing heart as mind, consideration, and the place where virtue takes root. The Japanese word kokoro originally evoked a “coagulating place,” where feelings and intentions gather and take form."
+  "explanation": "心 is a picture of the heart as a bodily organ. The early rounded and branching outlines become the compact modern strokes. The organ gives the character its concrete starting point.\n\nBronze inscriptions already use 心 for a person's inward disposition. Commands to make the heart clear or to keep it reverent concern intention, judgment, and moral conduct. The physical heart and the thinking or feeling mind therefore stand together in the early history of the word.\n\nFrom this inner seat come thought, feeling, sympathy, and purpose. Something's 心 can also be its central core.",
+  "sources": [
+    {
+      "title": "常用字解 · 心 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13820035.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 心",
+      "url": "https://kotobank.jp/word/%E5%BF%83-64563#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 40
+  }
 }

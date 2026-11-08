@@ -18,16 +18,31 @@
     "to burn",
     "adverbial suffix"
   ],
-  "explanation": "Shirakawa analyzes 然 as a compound of 肰, dog meat, and 火. The flesh of the dog is placed over fire, and its fat catches and sustains the flame. 然 is consequently the early writing of the word later distinguished as 燃, to burn. The lower 灬 preserves the fire component of that composition.\n\nHe relates this burning to sacrificial rites attested in oracle-bone divination. Dogs were burned in offerings to Heaven, whose deity was believed to receive the sacrifice through its rising smell. The graphic scene is therefore interpreted within an actual category of ancient worship, rather than inferred from the character's later grammatical meanings.\n\nThe uses meaning so, thus, and however, and the ending in expressions such as 突然, belong to phonetic interchange with other grammatical words. Shirakawa separates those borrowed functions from the original burning sense. Adding another 火 produced 燃 and made the older concrete meaning explicit again.",
+  "explanation": "然 joins 肰, dog meat, with 火, fire, now written as the four lower dots. As the meat is roasted, its fat catches fire. The character is the early writing of the burning word later distinguished as 燃.\n\nBurning a dog was part of offerings to Heaven. The deity was believed to receive the sacrifice through its rising smell, giving the burning a particular ritual setting as well as a visible physical action.\n\nThe meanings ‘so,’ ‘thus,’ and ‘however,’ and the ending in words such as 突然, belong to sound-based interchange with grammatical words. They are a separate branch from roasting meat. Another 火 was added in 燃 to distinguish the burning sense while 然 continued in its extensive grammatical uses.",
   "sources": [
     {
-      "title": "Shirakawa, 普及版 字通 — 然",
+      "title": "常用字解 · 然 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14893060.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 然",
       "url": "https://kotobank.jp/word/%E7%84%B6-506842#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
-      "note": "",
-      "accessed": "2026-11-07"
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
     }
   ],
   "joyo": true,
   "frequency_rank": 80,
-  "editorial_status": "source-checked English supplement"
+  "editorial_status": "source-checked English supplement",
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 80
+  }
 }

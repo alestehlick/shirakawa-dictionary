@@ -16,5 +16,28 @@
     "to take",
     "to collect"
   ],
-  "explanation": "Shirakawa interprets 最 as a compound: 取, which shows an ear 耳 and a hand 又 and originally meant taking an enemy’s left ear as proof of a kill, set beneath 月, understood here not as the moon but as a hood or cover. The graph evokes many such ears being gathered and covered from above, giving the senses of taking and collecting. Compare 撮, “to pinch up,” which likewise expresses taking with the fingertips. Because military merit was reckoned by the number of ears taken, 最 came to signify the highest achievement, and by extension ‘the foremost’ and ‘most, extremely,’ alongside its older senses ‘to take’ and ‘to collect.’"
+  "explanation": "最 places 取 beneath 冃, a covering shape. 取 combines an ear with a hand: after killing an enemy, a soldier cut off the left ear as proof, and the number collected determined military merit. 冃 covers the gathered trophies.\n\nThe highest tally established the foremost achievement. From taking and assembling the ears, 最 thus acquires the sense of first rank or greatest degree, becoming the ordinary ‘most’ in comparisons.\n\nThe older sense of collecting survives in the related 撮, which adds a hand and describes picking or pinching things up. The character's history links gathering a countable collection with being foremost within a ranked set.",
+  "sources": [
+    {
+      "title": "常用字解 · 最 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11610303.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 最",
+      "url": "https://kotobank.jp/word/%E6%9C%80-507096#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 39
+  }
 }

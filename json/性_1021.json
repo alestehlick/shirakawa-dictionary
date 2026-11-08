@@ -14,5 +14,28 @@
     "character",
     "sex"
   ],
-  "explanation": "A phono-semantic compound, 性 pairs the heart radical 忄, which points to feeling and sensibility, with 生 as its phonetic. The graph 生 originally depicts a sprouting plant and here lends the sound sei. From this formation, 性 came to mean the affective endowment human beings possess by birth—their innate nature or disposition. In the Warring States period it became a key term of moral thought: Mencius articulated the view that human nature is originally good, in line with Confucian teaching, while Xunzi spoke of nature as “bad” to stress the necessity of self-cultivation—an exhortation to improve oneself, not a denial that character can be corrected."
+  "explanation": "性 combines 忄, the heart, with 生 as its phonetic. 生 concerns being born or coming into life. Together the word names what a being has by its birth: its inherent nature, disposition, or constitution.\n\nThe same sound relationship appears in 姓, a person's lineage or origin. 性 concerns the qualities that belong to something, while 姓 concerns where a person comes from.\n\n性 is not restricted to human feelings or even to living things. Classical texts speak of the 性 of land and of water, meaning their characteristic properties. Human temperament is one application of this wider idea of a nature belonging to its bearer.",
+  "sources": [
+    {
+      "title": "常用字解 · 性 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14275095.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 性",
+      "url": "https://kotobank.jp/word/%E6%80%A7-22268#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 135
+  }
 }

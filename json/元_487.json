@@ -18,5 +18,28 @@
     "head",
     "chief"
   ],
-  "explanation": "In the earliest script, this character is a pictograph: an enlarged human head with the side view of a body (the person element) set beneath it, a drawing that emphatically foregrounds the head. From this focus it first means “head,” and by extension the “head” as leader or sovereign, as in 元首. Because the head is the highest part, the graph naturally came to mark what stands at the start or serves as the source: the beginning of time in 元日, and the fundamental basis in 根元. In usage it carries the senses kashira (leader), moto (basis), and hajime (beginning), and its on reading and sense sometimes overlap with those of 原 and 玄."
+  "explanation": "元 pictures a person whose head is enlarged and emphasized above the body. The early form makes the head the identifying feature. Its first sense is head, then the person at the head of others: a chief or leader.\n\nRelated characters place that head within ancestral rites. 冠 concerns arranging the hair at adulthood; 完 concerns being whole and bringing a rite or return to completion; 寇 shows striking a captive's head before the ancestors. The emphasized head remains visible across these formations.\n\nFrom the head come first, foremost, original, and fundamental. 元 can name the beginning of a period, the basis of something, or the principal heir. Applied to the natural world, it contributes to ideas of the primal or originating force, as in 元気.",
+  "sources": [
+    {
+      "title": "常用字解 · 元 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10431039.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 元",
+      "url": "https://kotobank.jp/word/%E5%85%83-60241#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 192
+  }
 }

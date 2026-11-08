@@ -14,5 +14,28 @@
     "state",
     "land"
   ],
-  "explanation": "This character is a compound graph. In its older, full form 國, it places 或 inside an enclosing border. 或 originally shows a city wall with a halberd (戈), evoking a territory defended by arms; encircled by the outer wall, it came to mean the fortified seat of power and then, more broadly, a country. Once 或 later developed the separate meaning “or,” the enclosure clarified the sense of a guarded domain. In the Tang, Empress Wu Zetian replaced 或 with 八方 (“all directions”) to create the variant 圀, a form still seen in names such as Tokugawa Mitsukuni (徳川光圀). The modern standard form 国 is an abbreviation that arose from the cursive (grass-script) writing of 國."
+  "explanation": "国 abbreviates 國, which encloses 或 within an outer wall. 或 already pictures a fortified settlement guarded by 戈, a shafted weapon. It is the earlier writing for the defended city.\n\nWhen 或 came to serve other uses, including ‘or,’ another enclosure was added to distinguish 國. The word first concerns the armed capital or seat of power, then the country organized around it. The city and its defended boundary give a visible centre to the larger domain.\n\nThe related 邦 concerns establishing territory through its sacred earth-shrine. 圀, introduced under Empress Wu, instead represents the eight directions within a boundary. These formations offer different ways of describing a political whole; the modern 国 preserves the word in an abbreviated shape.",
+  "sources": [
+    {
+      "title": "常用字解 · 国 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11292418.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 国",
+      "url": "https://kotobank.jp/word/%E5%9B%BD-55694#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 103
+  }
 }

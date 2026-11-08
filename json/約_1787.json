@@ -17,5 +17,28 @@
     "approximately",
     "general"
   ],
-  "explanation": "約 is a picto-phonetic character. Its phonetic is 勺, the shape of a slightly bent ladle handle, which signals the on reading yaku. The graph itself evokes bending and tying a cord, so it came to mean to tie or bind, a knot, and by extension an oath. The content of a promise was once indicated by the number and form of knots, making 約 the word for an agreed pledge, as in 約束. From this it also developed the sense of what is broadly set or taken in outline, hence “general, approximate,” as in 大約. In antiquity, 約剤 referred to important treaty documents, 剂 indicating an inscription cut with a knife on a square tripod."
+  "explanation": "約 combines 糸, thread or cord, with 勺 as its phonetic. 勺 pictures a ladle with a slightly bent handle. Bending the cord back upon itself makes the knot: 約 is tying, wrapping, or binding.\n\nA knot could serve as evidence of an undertaking. The physical binding becomes a pledge or agreement, giving the familiar promise in 約束. The parties are brought within a fixed commitment as the cord is held within its knot.\n\nBinding also draws something into a smaller compass. 約 therefore gives contracting, reducing, and omitting detail. An abbreviated statement presents the main extent, producing approximately or about. Promise and concision share this bringing-together within a defined limit.",
+  "sources": [
+    {
+      "title": "常用字解 · 約 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26551371.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 約",
+      "url": "https://kotobank.jp/word/%E7%B4%84-647769#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 176
+  }
 }

@@ -14,5 +14,28 @@
     "company",
     "society"
   ],
-  "explanation": "A phono-semantic character, 社 combines 示, the altar or offering table used in worship, with a right-hand element originally written as 士/土, a rounded clod of earth that both gives the sound and depicts the earth deity itself. In oracle-bone forms, small dots appear on this earthen mound, indicating the sprinkling of purifying liquor over the god. A yashiro, or shrine, was first the sacred place where this earth deity was revered—an open structure without a roof raised over the altar. Mountains, rivers, and clustered groves were likewise conceived as divine abodes, and trees were often planted above each region’s earth-god mound. As worship later moved into built sanctuaries, these became the jinja, Shinto shrines. From the shrine as a community center, the character’s meaning extended to organized groups, seen in words like kessha (association) and kaisha (company)."
+  "explanation": "社 adds 示, worship, to 土 as its phonetic. 土 is the earlier image of the earth deity, a sacred mound or upright earth-place. Some early forms add drops of wine poured over it in offering. As 土 acquired the general earth meaning, 示 distinguished the sacred place in 社.\n\nA local spirit was worshipped at the site, often with a tree planted as the place upon which the presence could settle. Establishing an earth-shrine and its boundaries was part of creating a political community. Ceremonies first acknowledged the deity belonging to that ground.\n\n社 therefore names both the sacred place and the people organized around it. From the shrine's community come an association or organized group, the sense retained in 結社 and 会社. In Japanese it also names the *yashiro*, a shrine, while the original earth-deity setting remains important for understanding the formation.",
+  "sources": [
+    {
+      "title": "常用字解 · 社 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12665199.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 社",
+      "url": "https://kotobank.jp/word/%E7%A4%BE-75448#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 110
+  }
 }

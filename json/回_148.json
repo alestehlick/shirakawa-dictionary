@@ -17,5 +17,28 @@
     "to rotate",
     "to return"
   ],
-  "explanation": "Shirakawa reads 回 as a pictograph of water whirling in a deep place—a pool or eddy seen from above. From this image of circling flow arise the senses of turning, revolving, and rotating, and by extension the idea of returning to where one began. He aligns 回 with related graphs formed on the same imagery: 淵 depicts the deep pool where water gathers and swirls, and 洄 shows the act of water circling back on itself. This shared motif was felt even in classical naming, as with Confucius’s disciple Yan Hui (顔回), whose style name Ziyuan (子淵) pairs 回 and 淵—both evoking water that turns round and round."
+  "explanation": "回 depicts water turning back upon itself in a swirling current. The early enclosing or coiling lines give the movement a compact shape. From circling water come turning, revolving, and making a circuit, then returning toward a starting point.\n\n洄 makes the water element explicit. 淵 names the deep place in which water gathers, and the relation was used in personal naming: Confucius's disciple 顔回 had the courtesy name 子淵. The given name and courtesy name answer one another through the image of circulating water.\n\nA completed circuit also provides a way to count repeated actions, giving 回 its use for an occasion or ‘time.’ Turning away or aside supplies further senses of bending, avoiding, and deviating.",
+  "sources": [
+    {
+      "title": "常用字解 · 回 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/6939287.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 回",
+      "url": "https://kotobank.jp/word/%E5%9B%9E-456611#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 48
+  }
 }

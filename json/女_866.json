@@ -17,5 +17,28 @@
     "female",
     "you (archaic)"
   ],
-  "explanation": "This character is a pictograph of a kneeling woman with her hands placed one over the other in front of her in a posture of reverent worship. Oracle-bone forms even show a variant with a small dot, indicating purification by libation, which clarifies that the figure depicts a woman serving the spirit of the dead. The image thus expresses a ritual stance, not submission before a man. In related compositions such as 安, the woman appears within a mausoleum, and a short extra stroke marks a fringed cloth used to guide the soul’s transfer. Beyond its basic sense of “woman, female,” the graph was also used as a second-person pronoun—later written with 汝—and seems originally to have been a form of address for women or girls."
+  "explanation": "女 pictures a kneeling woman with her hands placed together before her. The posture is one of reverence at a sacred place, attending to a spiritual presence. The early figure remains recognizable behind the crossed modern strokes.\n\nThe word names a woman or female and can refer to a daughter or unmarried young woman. As a verb it concerns marriage, including giving a woman in marriage or taking her as a wife. The same human figure appears in many formations involving kinship and ritual roles; 安 places her beneath the roof of an ancestral shrine.\n\n女 was also borrowed as the second-person pronoun, ‘you.’ The later 汝 serves that use as well. This grammatical function develops through sound beside the original female figure.",
+  "sources": [
+    {
+      "title": "常用字解 · 女 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13396596.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 女",
+      "url": "https://kotobank.jp/word/%E5%A5%B3-449223#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 158
+  }
 }

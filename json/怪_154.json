@@ -16,5 +16,28 @@
     "mysterious",
     "to suspect"
   ],
-  "explanation": "A phono-semantic compound: the left side is the heart radical, signaling a feeling or state of mind, while the right component 夬 (written in old forms like 圣) serves as the phonetic for kai. That right element shows a hand (又) set above earth (土), pointing to rites for the tutelary spirit of the soil. In contrast to a graph associated with clearing fields, this one evokes the ceremony of worshipping the earth guardian. When something uncanny was sensed around that deity, it stirred unease in the heart; with the heart radical added, the character came to express the uncanny or dubious—hence “strange,” “suspicious,” and the verb “to suspect.”"
+  "explanation": "怪 is a phonetic compound with 忄, the heart, on the left and 圣 on the right. 圣 supplies the sound. An associated oracle-bone graph places hands on either side of 土, the representation of an earth deity, and appears to depict a rite offered to that deity.\n\nThe word initially concerns uncanny manifestations of the earth and its spirits. With the heart element, 怪 names the response to what seems extraordinary or disturbing: finding something strange, wondering at it, or regarding it with suspicion. It also names the strange thing itself, including a monster or supernatural apparition.\n\nThe variant 恠 replaces the right-hand element with 在. That variant arose through a change in the written shape, while the older formation preserves 圣.",
+  "sources": [
+    {
+      "title": "常用字解 · 怪 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/7486392.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 怪",
+      "url": "https://kotobank.jp/word/%E6%80%AA-456617#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 9
+  }
 }

@@ -18,5 +18,28 @@
     "sequence",
     "to lodge"
   ],
-  "explanation": "Originally a pictograph of a person seen in profile with the mouth open, exhaling a sorrowful breath. The 欠 element draws the open mouth and the act of breathing out, while the small strokes suggest the moisture at the lips. From this ‘lamenting breath’ image grows a line of related graphs: 咨 first meant to lament or sigh, and from it comes 諮, to consult or inquire; the drool that hangs from the mouth gives 涎, slobber, and drooling before sacrificial sheep meat yields 羨, envy. 次 itself, by loan, came to express ‘to follow’ and ‘next,’ and thus ‘order, sequence’ (shidai). Its occasional sense ‘to lodge, make camp’ likely reflects its use for the army’s halting place (shi), close in on-reading."
+  "explanation": "次 pictures a person with the mouth open in lament. 欠 is the figure seen from the side, and the short strokes before the face show the breath escaping. The sigh is made visible beside the body.\n\nAdding a prayer receptacle gives 咨, a lament directed to the deity. The appeal becomes a request for guidance, and 諮 later distinguishes consultation. These formations preserve the older action of sighing or appealing.\n\n次 also interchanges with 弐, two or again. Through that use it acquires next and in succession, then order, arrangement, and rank. Another use for a temporary military lodging belongs to related encampment vocabulary. The lamenting figure and the sequencing word thus meet through the history of the writing.",
+  "sources": [
+    {
+      "title": "常用字解 · 次 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12450313.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 次",
+      "url": "https://kotobank.jp/word/%E6%AC%A1-515288#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 106
+  }
 }

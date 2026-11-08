@@ -14,5 +14,28 @@
     "sage",
     "holy person"
   ],
-  "explanation": "聖 is a compound graph that sets a large ear above the profile of a person standing on tiptoe (the form written as 壬), together with a mouth and a ritual container for covenant prayers. The enlarged ear highlights hearing: people in antiquity believed the ear could catch the gods’ faint voices. The character thus portrays one who chants prayers, straining upward in devotion and able to hear the deities’ voice and receive their messages—a priestly figure. From this root, related characters such as 聡 came to signify keen discernment of the divine voice, and 聴 the receptive hearing that brings insight to the heart. In later usage, Confucianism elevated 聖 to the supreme title of “saint,” also extending it to “clever, wise,” and as an honorific associated with the Son of Heaven."
+  "explanation": "聖 combines 耳, an enlarged ear, with 口, the vessel containing written prayers, and 𡈼, a person standing on tiptoe. The figure recites the prayer and strains upward to hear the deity's answer. The prominent ear makes this exceptional hearing visible.\n\nThe 聖 person can receive a revelation beyond ordinary perception. In an old story, the musician 師曠 listens to the wind and discerns the outcome of a coming war. Such perception belongs to the sacred specialist's insight.\n\nFrom this come extraordinary understanding and mastery. 聖 becomes the sage, the highest ideal of knowledge and virtue, and can honour a ruler or someone supremely accomplished in an art. The later distinction develops the power to hear what others cannot.",
+  "sources": [
+    {
+      "title": "常用字解 · 聖 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14394608.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 聖",
+      "url": "https://kotobank.jp/word/%E8%81%96-85468#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 199
+  }
 }

@@ -14,5 +14,28 @@
     "watch",
     "duty"
   ],
-  "explanation": "This character began as a pictograph of the back of an animal’s paw, with the upper element 釆 portraying a claw, so that the whole figure shows the paw’s top side complete with claws. The ancient Shuowen already glossed it as “an animal’s paw.” In later writing the anatomical sense was assigned to 蹯, while 番 developed into meanings of alternation and orderly succession—one’s turn, a numbered sequence, and standing watch or duty taken in rotation."
+  "explanation": "番 pictures an animal's paw. The upper 釆-like element represents the claws, while 田 below depicts the pad or palm of the foot. The whole concerns the paw's underside, where the bare pad is visible.\n\nA paw moves quickly and repeatedly, and the sound family includes fluttering, turning, and other agile movements. Alternating steps provide a connection with taking turns and doing something in succession. From this come a turn of duty, a position in a sequence, and a numbered occasion.\n\nTwo things acting alternately can form a pair. This is the sense retained in 蝶番, a hinge joining two sides. Other related words develop the paw's pale, hairless surface or the curling and gathering associated with movement.",
+  "sources": [
+    {
+      "title": "常用字解 · 番 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23566971.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 番",
+      "url": "https://kotobank.jp/word/%E7%95%AA-117809#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 64
+  }
 }

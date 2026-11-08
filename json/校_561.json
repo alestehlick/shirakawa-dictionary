@@ -13,5 +13,28 @@
     "to plan",
     "to count"
   ],
-  "explanation": "A phono-semantic character, 校 sets 交 as its phonetic, a figure viewed from the front with legs crossed, and pairs it with wood to suggest crossed timbers at a roof. The image points to a purpose-built hall: in antiquity, a school where children of the nobility studied upon coming of age. The older form of “learning,” 學, originally showed that same timbered school building; by adding a child within and a hand element, it came to express guiding and teaching. Thus 校 names the school as the physical place, 学 the act of learning, and 教 the act of teaching conducted there. From the notion of checking and organizing within the school context, 校 also extended to the senses of comparing, consulting or planning, and counting."
+  "explanation": "校 combines 木, wood, with 交 as its phonetic. 交 pictures a person standing with the legs crossed. Its crossing form is associated here with the timbers crossing above a building's roof.\n\nA building bearing those roof timbers is a school, the place where young people learn. 校 consequently names a school and the activity of receiving instruction. The crossed timbers belong to the same architectural setting visible in the older form of 學.\n\nThe word also interchanges with 較 for comparing, measuring, and checking. Other old wooden uses include restraints and enclosures. These share a practical vocabulary of wooden structures, while the school sense keeps the roofed place of instruction in view.",
+  "sources": [
+    {
+      "title": "常用字解 · 校 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11043787.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 校",
+      "url": "https://kotobank.jp/word/%E6%A0%A1-493763#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 116
+  }
 }

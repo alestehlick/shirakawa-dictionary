@@ -13,5 +13,28 @@
     "ground",
     "place"
   ],
-  "explanation": "In this graph, 也 serves as the phonetic, signaling the on-reading chi/ji, as it does in characters like 池 and 馳. Shirakawa traces the origin back to 墜, a form composed of 隊 and 土. 隊 depicts a sacrificial animal set before 阜—the divine “ladder” for the gods’ ascent and descent—marking the spot where deities set foot. 土 is the earthen mound embodying the earth god. Thus 墜 originally expressed worship of the earth gods at the very place of the gods’ landing. When 墜 later shifted in sense to “to fall,” the new phono-semantic character 地 was created: 土 provides the semantic element “earth/ground,” and 也 supplies the sound. From this formation, 地 came to mean land, earth, ground, and by extension, place."
+  "explanation": "地 combines 土, earth, with 也 as its phonetic. An earlier word for the ground was written with the formation later represented by 墜. That older composition shows an offering before 阜, the sacred stairway by which a deity ascends and descends, together with the earth deity 土. The place is where the god sets foot.\n\nAs the older writing came to mean falling or dropping, a new phonetic character distinguished the land sense: 土 supplied the domain and 也 the sound. The original ritual place thus stands behind a later, more generally applicable writing.\n\n地 names land, soil, a locality, or a country. It can also indicate the ground on which something rests, extending to a person's position or circumstances and to a material's underlying texture or base.",
+  "sources": [
+    {
+      "title": "常用字解 · 地 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/17246492.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 地",
+      "url": "https://kotobank.jp/word/%E5%9C%B0-71674#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 54
+  }
 }

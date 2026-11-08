@@ -16,5 +16,28 @@
     "oneself",
     "from"
   ],
-  "explanation": "Originally a pictograph of a nose seen from the front, this graph took on the sense of “self” because people traditionally pointed to the nose when referring to themselves. In oracle-bone inscriptions it already appears in the construction 自…至…, meaning “from … to …,” with 自 functioning as “from.” As the character came to be used primarily for “self, oneself,” a new graph, 鼻, was created to write “nose,” formed by adding 畀 beneath 自 as a phonetic element, evoking the sound of nasal breathing."
+  "explanation": "自 pictures a nose seen from the front. The early outline marks the ridge and surrounding shape of the organ, which was its original meaning.\n\nPeople apparently pointed to or touched their own nose when referring to themselves. This gesture connects the bodily sign with ‘I,’ ‘oneself,’ and acting personally. As that use became established, 鼻 was formed to distinguish the organ: 自 remains above 畀, a phonetic associated with the sound of nasal breathing.\n\n自 also describes something arising of itself, without another person's intervention. As a grammatical word it marks a point of departure, ‘from’ a place, time, or source. The self-reference and these wider uses continue beyond the original anatomical picture.",
+  "sources": [
+    {
+      "title": "常用字解 · 自 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12455939.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 自",
+      "url": "https://kotobank.jp/word/%E8%87%AA-515299#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 27
+  }
 }

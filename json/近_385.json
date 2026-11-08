@@ -17,5 +17,28 @@
     "to approach",
     "vicinity"
   ],
-  "explanation": "In its old forms 近 brings together 止, the mark of a foot or step, and 斤, a sacred broadax. The graph is phono-semantic: 斤 supplies the on reading kin and at the same time names the ritual implement. Shirakawa sees the scene as a ceremony akin to that in 往: one touches the consecrated axe with the foot and then departs, thus setting out endowed with its spiritual power. The royal territory encircling the capital was called 圻, the sphere where this rite of 近 was observed, and from that context the character came to mean what lies “near” the capital in distance; later the idea of nearness naturally extended to time as well."
+  "explanation": "近 combines movement with 斤 as its phonetic. In the early form, 止, a foot, touches 斤, a sacred axe. The traveller makes contact with the consecrated implement before setting out, as in the related departure rite behind 往.\n\nThe king's immediate territory around the capital was called 圻. It was the range within which people acted after performing this rite. 近 therefore concerns what lies close to the capital: a nearby place or approaching that centre.\n\nNearness then extends beyond the royal domain. It can describe a close attendant, intimacy, familiarity, or something readily at hand. Applied to time it gives recently, these days, and the near past. Distance, relationship, and time share the same relation of proximity.",
+  "sources": [
+    {
+      "title": "常用字解 · 近 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9577582.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 近",
+      "url": "https://kotobank.jp/word/%E8%BF%91-480707#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 198
+  }
 }

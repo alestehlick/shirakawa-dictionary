@@ -19,5 +19,28 @@
     "to show",
     "to appear"
   ],
-  "explanation": "An early pictograph, 見 shows a large eye set above the profile of a person (儿), highlighting the human eye to convey the act of seeing. In this older sense, to see was not merely to look, but to enter into an inner connection with what was seen. Gazing at the dense life of a forest or the flow of a river was understood as a way to draw the strong workings of their nature into oneself. This idea survives in early Japanese poetry as well: the Man’yoshū often uses expressions like miredo akanukamo, “though I gaze on it, I do not tire,” and the verb miyu, reflecting the belief that seeing could summon the spirit of things and replenish one’s vital force."
+  "explanation": "見 pictures a person with an enlarged eye. The body is shown in profile, while the eye is made prominent to identify the act of seeing. The corresponding early form behind 聞 emphasizes an ear instead.\n\nThe objects of seeing and hearing could be spiritual presences. 視 concerns seeing the deity represented by 示, and 親 includes reverence before the newly established ancestral presence. Seeing in such settings creates a relation with what is seen.\n\nOld poetry treats looking as an encounter one can dwell upon without ever having enough. The ordinary meanings broaden to seeing, becoming visible, appearing before someone, recognizing, and understanding. The related 現 makes the appearing presence explicit; the two words share a connected history.",
+  "sources": [
+    {
+      "title": "常用字解 · 見 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10228681.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 見",
+      "url": "https://kotobank.jp/word/%E8%A6%8B-491249#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 96
+  }
 }

@@ -175,10 +175,23 @@ def linkify_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji
             out.append(ch)
     return "".join(out)
 
+def render_inline_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji: str) -> str:
+    if '*' not in raw_text:
+        return linkify_explanation(raw_text, kanji_to_file, self_kanji)
+    parts = []
+    cursor = 0
+    for match in re.finditer(r'(?<!\*)\*([^*\n]+)\*(?!\*)', raw_text):
+        parts.append(linkify_explanation(raw_text[cursor:match.start()], kanji_to_file, self_kanji))
+        parts.append('<em>' + linkify_explanation(match[1], kanji_to_file, self_kanji) + '</em>')
+        cursor = match.end()
+    parts.append(linkify_explanation(raw_text[cursor:], kanji_to_file, self_kanji))
+    return ''.join(parts)
+
+
 def render_explanation(raw_text: str, kanji_to_file: dict[str, str], self_kanji: str) -> str:
     paragraphs = re.split(r"\n\s*\n", raw_text.strip())
     return "\n    ".join(
-        f"<p>{linkify_explanation(paragraph, kanji_to_file, self_kanji)}</p>"
+        f"<p>{render_inline_explanation(paragraph, kanji_to_file, self_kanji)}</p>"
         for paragraph in paragraphs if paragraph
     )
 

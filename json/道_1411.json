@@ -15,5 +15,28 @@
     "path",
     "to speak"
   ],
-  "explanation": "A compound graph of 首 ‘head’ and 辵 ‘to go.’ Bronze forms add 又 ‘hand,’ making explicit the act of advancing while holding a head. In ancient rite, the head of an enemy was believed to carry potent curse power that could drive off harmful spirits clinging to foreign soil; one moved forward bearing it to exorcize and purify the route. The related 導 combines head, movement, and hand (又/寸) and names the guiding advance that performs this purification, while 道 denotes the stretch thus cleared and sanctified as a usable way. Kindred graphs echo the same ritual logic: 除 shows a handled needle (余) thrust into the ground to expel spirits below, and 途 marks a path purified in that fashion. Over time, 道 broadened from a ritually cleansed roadway to the rational order or method of things (道理), and in Japan it came to mean the disciplined arts (華道, 茶道). In classical usage it can also mean ‘to speak.’"
+  "explanation": "道 joins 首, a head, with 辵, movement along a road. Early forms also show a hand carrying the head. The scene is a purification of the route using the head of someone from another people, whose feared power could repel hostile spirits.\n\nOnce the way was cleared, it could be travelled. 道 names this opened route, while 導 develops the guiding action; the two were originally one writing. Other road-purifying methods lie behind 途 and 術, reflecting the idea that spirits as well as people used roads.\n\nFrom a usable route come going along a way, a course of conduct, and a method or teaching. These widen into principle and the organized arts of practice. The character also has a classical use for speaking or relating something, belonging to its broader vocabulary.",
+  "sources": [
+    {
+      "title": "常用字解 · 道 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22061496.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 道",
+      "url": "https://kotobank.jp/word/%E9%81%93-138784#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 94
+  }
 }

@@ -14,5 +14,28 @@
     "to finish",
     "to accomplish"
   ],
-  "explanation": "完 combines 宀, the roof of the ancestral mausoleum, with 元, a figure marked by an emphasized head. Shirakawa reads the graph within the context of ancestral rites: beneath the mausoleum roof, the highlighted head evokes head-centered rituals such as the genpuku coming‑of‑age, when the hair was tied up and a coronet donned. In this same ritual sphere, 完 depicts the formal report of a warrior’s safe return after battle, offered before the ancestors in thanks for survival. From the idea of bringing affairs back under the protective roof and concluding them without harm, the character takes on the meanings of completing, carrying through to the end, and being whole or perfect. Related graphs like 冠 (the coronet of adulthood) and 寇 (an enemy ritually subdued at the mausoleum) confirm 完 as a character rooted in mausoleum ceremonies."
+  "explanation": "完 combines 宀, an ancestral shrine, with 元, a person whose head is enlarged and emphasized. The rite is the report made before the ancestors after returning from war victorious and alive. The intact person stands beneath the sacred roof.\n\nThe undertaking has been carried through without loss of life. This gives being whole, fulfilling something, and bringing it safely to completion. The same head-centred ritual setting appears in 冠, where the hair is arranged at coming of age.\n\nFrom bodily soundness come preserving or guarding something intact. 完 can also describe confinement that leaves the body unmutilated. Its ordinary complete and finished retain both sides of the rite: the task has reached its end, and the person or thing has remained whole.",
+  "sources": [
+    {
+      "title": "常用字解 · 完 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8410866.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 完",
+      "url": "https://kotobank.jp/word/%E5%AE%8C-468968#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 125
+  }
 }

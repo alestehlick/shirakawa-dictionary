@@ -20,16 +20,23 @@
     "remote",
     "the world of the dead"
   ],
-  "explanation": "Shirakawa reads 冥 as a picture of the cloth covering placed over a dead person's face. The graph represents the covering as a whole, with its lower strokes showing the hanging ties or cords. He connects this interpretation with the funeral face-cloth described in the Yili, including the cloth's contrasting surfaces and attached fastening cords.\n\nThe covering marks the deceased person's passage beyond ordinary sight. From this funerary setting he develops the meanings darkness and the unseen realm after death. Further extensions express something profound, hidden, distant, or beyond direct perception.\n\nThis differs from the Shuowen's explanation through 日, 六, and a covering, linked to the moon's waning after the sixteenth day. For Shirakawa that numerical decomposition misses the original object. Related forms such as 幎, the covering itself, and 瞑, closing the eyes, preserve the connection between a covered face, the cessation of sight, and darkness.",
+  "explanation": "冥 pictures the cloth laid over a dead person's face. Its lower strokes represent the hanging ties that fasten the covering. A ritual description specifies a dark outer surface, a red lining, and attached cords, matching the cloth and ties in this reading.\n\nCovering the face marks the dead person's withdrawal from ordinary sight. From this funerary object come darkness and the unseen realm after death, then what is hidden, profound, remote, or beyond clear perception.\n\nThe related 幎 makes the cloth explicit, while 瞑 concerns closing the eyes. The cloth hides the face, while the closed eyes mark the end of ordinary sight. The physical covering and the unseen condition answer one another.",
   "sources": [
     {
-      "title": "Shirakawa, 普及版 字通 — 冥",
+      "title": "字通 · 冥",
       "url": "https://kotobank.jp/word/%E5%86%A5-642835#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
-      "note": "",
-      "accessed": "2026-11-07"
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
     }
   ],
   "joyo": true,
   "frequency_rank": 85,
-  "editorial_status": "source-checked English supplement"
+  "editorial_status": "source-checked English supplement",
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 85
+  }
 }

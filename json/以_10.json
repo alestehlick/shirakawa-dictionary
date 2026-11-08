@@ -12,5 +12,28 @@
     "by means of",
     "from"
   ],
-  "explanation": "A pictograph ultimately tied to the plow. In the graph 耜 (suki, plow), the left element 耒 shows the handled, forked-topped plow, while the right element depicts the rounded cutting edge of its blade; that rounded edge appears in early forms as 巳, as 以, or as a triangular variant. In Shang–Zhou usage a form written as 台 was used for 以te (with, by means of) by adding the covenant vessel that held prayer texts to the plow sign, expressing the idea of using the plow after ritually purifying it to ward off harm such as insect damage. The vessel element was later omitted, yielding the present form 以. The same 台 form also served as a first-person pronoun (ware, I) in ancient texts."
+  "explanation": "以 begins with the shape of a ploughing implement, also preserved in early forms related to 厶 and 耜. In Shang and Zhou writing, the sense of putting the tool to use could be written 台, adding the vessel that held prayers.\n\nThe prayers purified the plough before it was used, warding off insect damage and other harm to the crop. The vessel was later omitted, leaving the implement-shaped writing for employing something.\n\nFrom this use come ‘with,’ ‘using,’ and ‘by means of’: 以 introduces what makes an action possible. Related sound-based functions include leading, acting together, and expressing a reason. 所以 preserves the reason-giving branch. The tool's employment provides the concrete background to this extensive grammatical range.",
+  "sources": [
+    {
+      "title": "常用字解 · 以 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4578220.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 以",
+      "url": "https://kotobank.jp/word/%E4%BB%A5-429903#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 93
+  }
 }

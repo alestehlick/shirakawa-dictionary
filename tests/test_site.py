@@ -20,6 +20,8 @@ class Page(HTMLParser):
         self.paragraphs = []
         self.paragraph = None
         self.in_sources = False
+        self.emphasis = []
+        self.emphasized = None
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
@@ -28,11 +30,16 @@ class Page(HTMLParser):
             self.in_sources = True
         if tag == 'p' and not self.in_sources:
             self.paragraph = ''
+        if tag == 'em':
+            self.emphasized = ''
         for name in ('href', 'src', 'data-stroke-src', 'data-index-src'):
             if name in attrs:
                 self.references.append((tag, name, attrs[name]))
 
     def handle_endtag(self, tag):
+        if tag == 'em' and self.emphasized is not None:
+            self.emphasis.append(self.emphasized)
+            self.emphasized = None
         if tag == 'p' and self.paragraph is not None:
             self.paragraphs.append(self.paragraph)
             self.paragraph = None
@@ -40,6 +47,8 @@ class Page(HTMLParser):
             self.in_sources = False
 
     def handle_data(self, text):
+        if self.emphasized is not None:
+            self.emphasized += text
         if self.paragraph is not None:
             self.paragraph += text
 
@@ -68,8 +77,28 @@ class StaticDictionaryTests(unittest.TestCase):
     def test_explanation_text_survives_generation(self):
         for kanji, source in self.entries.items():
             page = self.pages[ROOT/'entries'/f'{kanji}.html']
-            expected = [p for p in re.split(r'\n\s*\n', (source.get('explanation') or '').strip()) if p]
+            text = re.sub(r'(?<!\*)\*([^*\n]+)\*(?!\*)', r'\1', source.get('explanation') or '')
+            expected = [p for p in re.split(r'\n\s*\n', text.strip()) if p]
             self.assertEqual(page.paragraphs, expected, kanji)
+
+    def test_romanized_japanese_terms_are_italic(self):
+        expected = {'奈':['karanashi'], '鉄':['kurogane'], '度':['taku','do'],
+                    '鋼':['hagane'], '様':['sama'], '社':['yashiro'],
+                    '業':['gō'], '物':['mono'], '利':['kiku'],
+                    '現':['utsutsu'], '応':['ukeigari'], '七':[]}
+        for kanji, terms in expected.items():
+            self.assertEqual(self.pages[ROOT/'entries'/f'{kanji}.html'].emphasis, terms, kanji)
+
+    def test_inline_emphasis_keeps_content_escaped_and_links_intact(self):
+        sys.path.insert(0, str(ROOT))
+        import generator
+        rendered = generator.render_explanation('*kiku* with 利 and <script>alert(1)</script>',
+                                                {'利':'%E5%88%A9.html'}, '水')
+        page = Page(rendered)
+        self.assertEqual(page.emphasis, ['kiku'])
+        self.assertEqual(page.paragraphs, ['kiku with 利 and <script>alert(1)</script>'])
+        self.assertIn(('a','href','%E5%88%A9.html'), page.references)
+        self.assertNotIn('<script>', rendered)
 
     def test_links_assets_and_cache_versions(self):
         for path, page in self.pages.items():

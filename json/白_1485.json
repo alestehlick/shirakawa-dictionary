@@ -17,5 +17,28 @@
     "to say",
     "to report"
   ],
-  "explanation": "Shirakawa sees 白 as a pictograph of a skull whose flesh has fallen away, bleached by wind and rain until it becomes white bone; from that stark image the sense of “white” arose. In ancient practice the skulls of outstanding leaders or slain enemy chiefs were kept as dokuro (skulls), believed to concentrate formidable spiritual, even cursing, power; from this aura of authority comes the title 伯, “chief.” The character is also used with the sense “to say” (mosu), for formally stating or reporting something."
+  "explanation": "白 pictures a human skull, stripped of flesh and bleached by exposure. The pale bone gives the colour white. The early outline presents the head as a whole.\n\nSkulls of powerful leaders or formidable enemies could be preserved. Shang remains include skulls bearing red inscriptions that name leaders of other groups. This practice belongs to the same ritual world as several characters containing 白, including words associated with the display or treatment of heads.\n\nFrom whiteness come brightness, cleanness, and an unmarked or empty surface. 白 can describe having nothing, including no official rank. Making something clear also gives declaring, reporting, or saying it openly. The movement from a visible colour to clarity connects these familiar uses.",
+  "sources": [
+    {
+      "title": "常用字解 · 白 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23090863.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 白",
+      "url": "https://kotobank.jp/word/%E7%99%BD-192815#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 128
+  }
 }

@@ -14,5 +14,28 @@
     "interior",
     "inner"
   ],
-  "explanation": "This character began as a pictograph of an entryway: sturdy uprights set together with a roof above, marking the doorway of a building. By contrast, the graph for iru (入) shows an entrance without a roof. In bronze inscriptions, 内 often appears where one would expect 入, as in writing “entering the gate” with 内門, emphasizing the act of going within. From this sense of having passed through a doorway, the character came to mean the inside or interior, and by extension the inward realm of the heart and mind, as seen in words like naishin (one’s inner feelings) and naisei (introspection)."
+  "explanation": "内 pictures the entrance of a building. Bronze forms preserve the roofed opening, identifying the place through which one passes into the interior. Its primary function is to name the inside, even though early texts can also use it for entering.\n\nInvestiture accounts sometimes write ‘enter the gate’ with 内 where 入 would be expected. The two words share this crossing of the threshold, while 内 tends toward the place and 入 toward the movement.\n\nFrom the space within a house come home, one's household, and people close to it. The inward place can also be the heart or private thought. Thus physical interior, personal circle, and inner feeling extend the same relation between an outside and what is enclosed.",
+  "sources": [
+    {
+      "title": "常用字解 · 内 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22278032.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 内",
+      "url": "https://kotobank.jp/word/%E5%86%85-440222#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 105
+  }
 }

@@ -12,5 +12,28 @@
     "to learn",
     "study"
   ],
-  "explanation": "The character was originally written 學. In its earliest form it sketches a school building, recognizable by the crossed roof timbers (chigi). The graph combines the crossed marks 爻 with an element later written as 臼, which Shirakawa takes as a pair of hands—the act of guiding and instructing. Set above the child 子, the composition becomes 學, expressing the learning of the young. In antiquity, this evoked the rite in which youths, on coming of age, were taught the clan’s traditions and the norms of life under the elders’ supervision. The related 教 (敎) brings together 爻 and 子 with 攴, the striking hand, to show “to teach,” and some old forms of 学 likewise added 攴."
+  "explanation": "学 abbreviates 學. Its oldest formation represents a school building whose roof bears crossed timbers, 爻. The roofed space is the place where the clan's young people receive instruction.\n\nA pair of hands, 𦥑, is added around the upper part to express teaching and guiding. 子 then identifies the child who learns there. The fuller formation gathers the institution, the act of instruction, and its young recipient into one shape. Other early variants add a striking hand to mark the teaching action.\n\nThe related writings develop uses for both teaching and learning. 學 becomes receiving instruction, the knowledge acquired through it, and the place devoted to that activity. The closeness of teaching and learning survives in the classical idea that each helps advance the other.",
+  "sources": [
+    {
+      "title": "常用字解 · 学 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8267712.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 学",
+      "url": "https://kotobank.jp/word/%E5%AD%A6-460033#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 68
+  }
 }

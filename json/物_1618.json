@@ -13,5 +13,28 @@
     "thing",
     "object"
   ],
-  "explanation": "物 is a phono-semantic character: 牛 (ox) contributes the sense—an ox being a paradigmatic “big thing” of early life—while 勿 supplies the sound (wù → butsu/motsu). In oracle-bone and bronze forms, 勿 depicts soil spattering from a plow, a sense echoed in its phonetic affinity with 撥 “to spatter.” The Book of Odes (Minor Odes, “No Sheep”) uses 物 in a line about victims of many colors being prepared for sacrifice, evoking herds and living creatures. In line with the Shuowen’s gloss “all things,” the character’s meaning broadened to denote “things” or “objects” in general."
+  "explanation": "物 combines 牛, cattle, with 勿 as its phonetic. 勿 pictures a plough throwing soil aside, its sound related to the scattering action. The ox is a large and prominent being, giving the formation a concrete reference among the things of everyday life.\n\nEarly use also distinguishes cattle by their coat colours. Such visible differences allow animals and other objects to be identified and classed. The word can therefore concern the distinguishing character of a thing as well as the thing itself.\n\n物 broadens to creatures, objects, possessions, material substance, and all that exists. It can also name a spirit or an unknown presence. Japanese *mono* preserves this breadth, from an ordinary thing to the unseen agency felt in a supernatural occurrence.",
+  "sources": [
+    {
+      "title": "常用字解 · 物 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24577582.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 物",
+      "url": "https://kotobank.jp/word/%E7%89%A9-142633#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 161
+  }
 }

@@ -17,5 +17,28 @@
     "origin",
     "to be due to"
   ],
-  "explanation": "Shirakawa treats 由 as a pictograph of a calabash vessel whose seeds have fully ripened and dissolved away, leaving the rind hollow—an image of an emptied interior. The graph closely resembles 卣, the bronze wine cask, and likely arose from that vessel type. From this core picture of a hollowed container, related characters took shape: 油 evokes the oily state of ripened gourd seeds, 軸 suggests a hollow core that lets an axle turn, and 抽 expresses drawing out or extracting what has ripened and become oily. On this base the graph also lent its sound to meanings such as “to be due to” and “reason,” reflected in Japanese usage like yoshi in reported statements or in phrases meaning “without reason.”"
+  "explanation": "由 probably goes back to a hollow gourd. Its ripe interior has dissolved, leaving the shell empty. The shape resembles 卣, the bronze wine vessel, which may preserve the older writing.\n\nThis hollow interior accompanies several related formations. 油 concerns the oily condition of the ripened contents, while words for a tube or an axis develop other features of the form. The family gathers the vessel, its contents, and the space within it.\n\nThe familiar uses of 由 are sound loans: following a course, the place from which something proceeds, using something, and a reason or cause. From the course followed come origin and circumstances, as in 由来 and 由縁. These linguistic uses continue alongside the older material image.",
+  "sources": [
+    {
+      "title": "常用字解 · 由 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26633724.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 由",
+      "url": "https://kotobank.jp/word/%E7%94%B1-650045#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 178
+  }
 }

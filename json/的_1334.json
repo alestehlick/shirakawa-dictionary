@@ -14,5 +14,28 @@
     "adjectival suffix",
     "clear"
   ],
-  "explanation": "Shirakawa explains 的 as a phono-semantic character whose earliest form is 昀. Here 勺 functions as the phonetic element that signals the On reading teki, a value shared by other graphs built with 勺. Early lexica gloss it as “to become clear,” and the reduplicated form 昀昀 (tekiteki) describes a state of evident clarity; hence its use for meanings such as akiraka “clear” and hakkiri “distinctly.” 的 later became the prevailing written form of this graph. In subsequent usage it was also applied to the concrete sense of a shooting target, giving the kun reading mato and appearing in compounds like shateki “target practice.”"
+  "explanation": "的 belongs to a phonetic formation with 勺 as its sound element. An older writing is 旳, with 日 at the left. Its basic meaning is bright or conspicuous, something that stands out clearly.\n\nThe writing 的 became usual, and the word was applied to the white centre of an archery target. The visible mark provides an aim: a point at which attention or an arrow is directed. From distinctness also come exactness, certainty, and being precisely right.\n\nLater grammatical use attaches 的 to a word to describe a condition or quality. This familiar suffix belongs to the character's extended linguistic functions.",
+  "sources": [
+    {
+      "title": "常用字解 · 的 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/20609109.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 的",
+      "url": "https://kotobank.jp/word/%E7%9A%84-575235#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 83
+  }
 }

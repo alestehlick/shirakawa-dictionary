@@ -15,5 +15,28 @@
     "fresh",
     "beginning"
   ],
-  "explanation": "New is a compound graph built from 辛, 木, and 斤. 辛 is a large, handled needle used for divination; 木 is a tree; 斤 is an axe. In the ancestral rite evoked here, a diviner casts the sacred needle to let the gods indicate a particular tree. That tree is then cut with an axe to make a mortuary tablet. Because this is a freshly felled, divinely chosen tree, the character came to mean “new” and “beginning.” The practice parallels the ritual of shooting a sacred arrow and building where it lands to mark the site of important constructions. Related characters preserve facets of the same scene: 親 shows one bowing before the newly made mortuary tablet, hence “parent,” the newly revered person in the ancestral line; 薪 names the leftover wood used as firewood in the festival. Thus 新 remembers a sacred choosing, first cutting, and the sense of fresh inception."
+  "explanation": "新 combines 辛, a large needle with a handle, with 木, a tree, and 斤, an axe. To choose wood for a spirit tablet, the needle is cast, and the tree it strikes is cut down. The selection is received as the divine will.\n\nThe freshly felled wood makes the new tablet in which the ancestral presence is installed. Reverence before it belongs to 親, while 薪 names wood used in the associated ceremonies. Early uses of 新 frequently concern an ancestral shrine or lineage building, preserving this setting of sacred renewal.\n\nFrom newly chosen and cut timber come new, a beginning, and renewing. The word extends to a new year or newly opened land. A fresh condition is established through the sacred selection and first cutting.",
+  "sources": [
+    {
+      "title": "常用字解 · 新 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13984005.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 新",
+      "url": "https://kotobank.jp/word/%E6%96%B0-81293#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 193
+  }
 }

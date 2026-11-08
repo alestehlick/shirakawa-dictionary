@@ -18,16 +18,23 @@
     "extensive",
     "to fill"
   ],
-  "explanation": "The modern 弥 abbreviates 彌. Shirakawa turns first to bronze inscriptions, where the graph combines 弓, a bow, a jewel-like element later resembling 日, and 爾. In his interpretation the bow is an implement for dispelling harmful powers, the jewel is auspicious, and 爾 represents decorative tattooing on a woman's upper body. Their combination probably expressed a rite seeking abundant blessings for her.\n\nBronze inscriptions use the character in wishes for prolonged life and a fortunate completion of one's years. This usage supplies the bridge from the ritual composition to duration, extension, fullness, and reaching an ultimate limit. From these senses come the adverbial meanings increasingly and ever more.\n\nShirakawa regards the later fuller form containing 長 as a graphic alteration. He therefore does not accept the Shuowen's analysis of that late form as sufficient evidence for the original construction. His interpretation of the bronze composition remains a proposed explanation, not a directly documented description of the ceremony.",
+  "explanation": "弥 abbreviates 彌. Bronze forms combine a bow, a jewel-shaped element, and 爾. The bow is a means of warding off harmful powers, the jewel is auspicious, and 爾 represents painted or tattooed decoration on a woman's upper body. Their combination probably concerns a rite seeking blessings and a fortunate life for her.\n\nBronze inscriptions use the word in wishes for long life and a favourable end to one's years. This provides the connection with duration: lasting a long time, extending through a whole span, and reaching its completion. The sense broadens to things extensive, far-reaching, full, or covering everything.\n\nThe adverbial uses ‘increasingly’ and ‘ever more’ belong to this extension. A later form adds 長, the long-haired human figure, extending the transmitted shape beyond the older bronze composition.",
   "sources": [
     {
-      "title": "Shirakawa, 普及版 字通 — 弥",
+      "title": "字通 · 弥",
       "url": "https://kotobank.jp/word/%E5%BC%A5-138183#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
-      "note": "",
-      "accessed": "2026-11-07"
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
     }
   ],
   "joyo": true,
   "frequency_rank": 34,
-  "editorial_status": "source-checked English supplement"
+  "editorial_status": "source-checked English supplement",
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 34
+  }
 }

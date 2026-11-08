@@ -13,5 +13,28 @@
     "to poison",
     "harm"
   ],
-  "explanation": "In the oldest forms, this character is a pictograph: it portrays a woman richly adorned for worship or festival, with the upper element representing piled hair ornaments. From the image of lavish adornment and devoted attendance, it originally expressed warm, wholehearted attentiveness—teatsui, “cordial.” Early lexicography also glossed it as “thick, ample.” Only later was the graph borrowed for its sound doku to write the idea of “poison,” as in dokuyaku; the toxic sense is thus a secondary, loaned usage layered onto a ritual, benevolent origin."
+  "explanation": "毒 depicts a woman richly adorned for ritual service, especially the abundance of ornaments in her hair. Related forms show the dressed hair from the side or add a hand attending to it. The striking feature is the thickness and elaborateness of the decoration.\n\nThis gives the older sense of something ample or ‘thick,’ including generous or wholehearted treatment. 篤 shares that sense through a related word. Elaborate adornment can also suggest excess in contrast with simplicity.\n\nThe familiar poison sense is probably a sound loan from another old writing. Once established, it produces uses for poisonous plants or medicines, harming, painful intensity, cruelty, and bitterness.",
+  "sources": [
+    {
+      "title": "常用字解 · 毒 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22175075.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 毒",
+      "url": "https://kotobank.jp/word/%E6%AF%92-582413#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 84
+  }
 }

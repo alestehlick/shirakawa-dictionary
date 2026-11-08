@@ -14,5 +14,28 @@
     "to withdraw",
     "to recede"
   ],
-  "explanation": "Shirakawa reads 退 as a compound whose older, proper form is written like 復, combining three elements: 彳, the step sign from the left half of 行 that suggests a short movement; 皿, the ritual dish piled with offerings; and 夊, a foot turned backward. In Shang–Zhou inscriptions this depicts returning the heaped offering vessels to their place after the rite has concluded, and from that scene arise meanings such as to draw back, to retreat, and to put something back or pull it down. In divinatory usage, the omen-bird 隹 figures in deciding whether to continue or desist: 遂 names the outcome of proceeding, while 退 names the outcome of withdrawing. Over time those earlier graphs fell out of use, and 退 became the standard character for retreat and withdrawal."
+  "explanation": "退's older formation combines 彳, movement along a road, with a 日-shaped abbreviation of a ritual food vessel and 夊, a backward-facing foot. The vessel holds the offering, and the reversed foot marks its removal.\n\nWhen worship is over, the food presented to the deity is taken back. This withdrawal gives drawing away, stepping back, and moving something out of the place it occupied. Yielding or moving aside also belongs to respectful movement during a ceremony.\n\nThe uses broaden to retreating, resigning, stopping, or causing someone to withdraw. Early military advance and retreat could be decided through other divinatory rites; the general vocabulary later converges in 退. The offering removed after worship remains the concrete starting action.",
+  "sources": [
+    {
+      "title": "常用字解 · 退 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15654313.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 退",
+      "url": "https://kotobank.jp/word/%E9%80%80-556241#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 91
+  }
 }

@@ -12,5 +12,28 @@
     "mountain ascetic",
     "transcendent"
   ],
-  "explanation": "Shirakawa sees this as a picto‑phonetic graph. In its older form 僊, a component shows the act of lifting and removing a corpse—head and lower body grasped with both hands—so that the body could be set for a time in a boarded enclosure to weather before burial; on that basis, 僊 originally named that person. The later form 仙 writes the word with 山, treated as a reading marker that also evokes the mountains, and the meaning shifts to a person who cultivates the Way in seclusion: a mountain ascetic or Daoist transcendent. The character is already noted in the Shiming (Explanation of Names) of the late Han."
+  "explanation": "仙 is the later form of 僊, which combines 人 with 䙴 as its phonetic. 䙴 shows a dead person being lifted and moved: the upper part is the head, the bent lower figure is the body, and 廾 supplies the two carrying hands.\n\nThe dead were first placed in a boarded mortuary shelter. After the body had weathered, the remains were moved for burial. 僊 names the person within this passage beyond ordinary life.\n\nThe simpler 仙 replaces the right side with 山 as its phonetic and probably also evokes residence in the mountains. The word comes to name a recluse, an ascetic cultivating the Way, or a transcendent. The mountain dweller and the older mortuary figure share the idea of passing beyond the ordinary human condition.",
+  "sources": [
+    {
+      "title": "常用字解 · 仙 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14638206.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 仙",
+      "url": "https://kotobank.jp/word/%E4%BB%99-549211#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 171
+  }
 }

@@ -12,5 +12,28 @@
     "person",
     "someone"
   ],
-  "explanation": "In Shirakawa’s view, 者 depicts an earthwork. Branches are piled up above the sun sign 日 and coated with earth 士; in early graphs a small dot marks the covering soil that seals and hides what lies within. Such clay fences once encircled villages, and a covenant charm was buried in their midst—a receptacle holding prayer texts to the deities. The characters inscribed on this talisman give rise to 書, formed by placing the brush sign 聿 over 者, originally denoting sacred writing used for exorcism. The same earthwork image underlies 堵 “clay wall,” expands to 都, a walled city, and 京, the arched city gate—hence names like 京都 and 京師 for a fortified capital. From an original sense of an earthwork and the act of concealing, 者 later shifted to mean “person,” and it now functions as an agentive suffix in compounds such as isha, gakusha, and shisha."
+  "explanation": "者 combines branching sticks with 曰, a receptacle holding written prayers. Small marks in the early upper part indicate earth packed around the sticks. The scene is a protective earthwork surrounding a settlement, with a prayer text buried inside it to bar harmful spirits.\n\n者 is the earlier writing of 堵, the wall or earthwork. Adding 聿, a brush, gives 書, the sacred writing placed within that barrier. 曰 preserves the prayer receptacle beneath the earthwork.\n\nThe familiar uses for ‘person’ or ‘one who’ are sound loans. The word can specify a thing or an entire circumstance as well as a person, and it develops grammatical functions such as marking a topic or condition.",
+  "sources": [
+    {
+      "title": "常用字解 · 者 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12698539.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 者",
+      "url": "https://kotobank.jp/word/%E8%80%85-524331#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 78
+  }
 }

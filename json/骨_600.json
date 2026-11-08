@@ -13,5 +13,28 @@
     "skeleton",
     "framework"
   ],
-  "explanation": "A pictograph: the upper element 冎 sketches the bones above the chest, while the lower 月 is the meat sign. Together they depict bone with flesh still attached, giving the basic sense “bone.” From this core image the character came to represent the body’s structural nucleus—hence terms like 骨格 (skeletal framework) and 筋骨 (sinews and bones)—and, by extension, the hardness and inner backbone of character, as in 気骨 (resolute spirit). The antique sense in kottō is linked with 董, a graph that conveys the idea of arranging and selecting fine old objects."
+  "explanation": "骨 depicts bone with flesh still attached. The upper element, 冎, represents the bony structure above the chest; the lower 月-shaped element is 肉, flesh. The whole presents the body's firm inner substance with flesh around it.\n\nFrom a bone come the framework of a body and, more broadly, the body itself. The stiffness and straightness of that supporting material also lend the word senses of hardness and sharpness.\n\nApplied to a person, the inner framework becomes character, bearing, and resolute spirit, as in 気骨 and 骨力. The visible skeleton provides a concrete basis for speaking of something's strength of structure or a person's unyielding disposition.",
+  "sources": [
+    {
+      "title": "常用字解 · 骨 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11336523.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 骨",
+      "url": "https://kotobank.jp/word/%E9%AA%A8-22337#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 69
+  }
 }

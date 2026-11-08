@@ -16,5 +16,28 @@
     "not",
     "negation"
   ],
-  "explanation": "Shirakawa traces 不 to a pictograph of a flower’s calyx and the stalk that bears the pistil. That original, botanical sense survives only faintly—occasionally glossed as “corolla” (hanabusa) or “calyx” (heta)—because very early the graph was pressed into service as a loan. In bronze inscriptions it often stands for 丕 (hi), and so can mean “very, greatly; big.” From oracle-bone times, however, it is also used as a loan sign for negation, which underlies the Japanese -zu and -shikarazu. Related graphs map the maturation of the fruit: 丕 shows the pistil of 不 beginning to swell; 否 depicts the portion of the pistil’s stalk that has become fruit; the element 咅 (read hai) represents a ripe fruit about to split; and 剖 shows that fruit being cut into two with a knife."
+  "explanation": "不 originally pictures the supporting calyx at the base of a flower. This botanical meaning survives only occasionally because the graph was borrowed very early to write a negative word. Its familiar ‘not’ is consequently a sound-loan use.\n\nThe flower's development also gives a series of related shapes. A swelling growth produces 丕 and 否; the mature fruit becomes 咅, and its splitting is expressed in 剖. The family connects growth, swelling, and division, while the borrowed negative use follows a separate course.\n\nBronze inscriptions can use 不 where 丕, ‘greatly,’ would later be written. A phrase containing 不 is therefore not automatically negative. The particular word and its context determine whether the writing expresses negation, greatness, or one of the related forms.",
+  "sources": [
+    {
+      "title": "常用字解 · 不 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24126338.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 不",
+      "url": "https://kotobank.jp/word/%E4%B8%8D-614892#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 76
+  }
 }

@@ -18,5 +18,28 @@
     "remainder",
     "feelings"
   ],
-  "explanation": "緒 is a phono-semantic character combining 糸, the thread radical, with 者 as its phonetic. In early forms, 者 depicts the act of burying an etsu— a covenant vessel containing petitions to the gods—within an earthen village wall as a protective barrier against harm. Joined to 糸, this yields the image of thread ends bound together, the starting point one can grasp. From this concrete sense it came to mean the beginning of things and a clue that lets one take hold of a matter, and also the remainder or what is left over. By extension it refers to the stirrings of the mind and heart, as in compounds like 心緒 and 情緒. In Japanese it is read o in words such as 鼻緒, the thong of a geta sandal."
+  "explanation": "緒 combines 糸, thread, with 者 as its phonetic. 者 carries an association with blocking or stopping up, and 緒 is the end at which threads are tied and held. The concrete object is a thread-end or fastening point.\n\nAn accessible end allows one to take hold of a whole length. From it come the beginning of an undertaking and the first clue by which a matter can be pursued. A remaining length also gives the uses for a remainder or what is left over.\n\nThe image extends to the heart as its feelings loosen and disclose themselves, giving 心緒 and 情緒. In Japanese, 緒 also names a cord or thong, including the fastening that holds a sandal to the foot.",
+  "sources": [
+    {
+      "title": "常用字解 · 緒 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13393076.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 緒",
+      "url": "https://kotobank.jp/word/%E7%B7%92-448352#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 77
+  }
 }

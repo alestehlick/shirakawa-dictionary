@@ -19,5 +19,28 @@
     "to soften",
     "to become calm"
   ],
-  "explanation": "This character combines 禾 and 口. In early usage, 禾 is not merely ‘grain’ but the marker trees set up in rows at the gate of a military camp, the sign of a mustering place. Joined with 口, the mouth that issues commands, the graph evokes the order given at that gate to halt fighting and return to quiet. From this image it came to mean making peace and reconciliation, and by extension to soften, grow gentle, and become calm. The Doctrine of the Mean already praises 和 as “the way that reaches everywhere under heaven,” treating harmony as a supreme human virtue."
+  "explanation": "和 combines 禾, here a great marker at a military gate, with 口, a vessel holding written pledges. Large posts shaped like 禾 originally marked the entrance; later descriptions place banners at its two sides.\n\nAn agreement was sworn before this gate. The prayer vessel identifies the covenant through which hostilities were settled, giving peace-making and friendly relations. From this come gentleness, calm, concord, and mutual accommodation.\n\nMusical harmony belongs to the related 龢, which contains 龠, pipes sounding together. 和 later serves for that word as well, extending to voices or flavours in agreement. The military covenant and the musical accord reach a shared meaning through their connected words, while preserving distinct graphic beginnings.",
+  "sources": [
+    {
+      "title": "常用字解 · 和 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28976763.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 和",
+      "url": "https://kotobank.jp/word/%E5%92%8C-448360#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 188
+  }
 }

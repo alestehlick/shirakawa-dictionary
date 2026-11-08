@@ -13,5 +13,28 @@
     "mountain",
     "mountain range"
   ],
-  "explanation": "This character is a pictograph of a mountain range. Early forms sketch the silhouette of a lofty central peak with lower ridges spreading to left and right—the natural profile of Chinese mountains shaped by crustal movement and erosion. It does not show a single conical summit like Mt. Fuji born of volcanic eruption, but the expansive, tiered outline of a range. From this three-crested profile the graph 山 took shape."
+  "explanation": "山 is a picture of mountains. The early forms trace a connected outline of rising peaks, usually with a higher part between lower ones. The modern three-pronged shape condenses that irregular profile into a few strokes.\n\nThe character names a mountain or mountain range. As a component it appears in many words for mountainous places and landforms. Similarity in the modern script can conceal a different origin, however: some components now written 山, including the lower part of 密, developed from an earlier fire shape. The mountain outline is clear in 山 itself; another character's history depends on its own early forms.",
+  "sources": [
+    {
+      "title": "常用字解 · 山 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11877695.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 山",
+      "url": "https://kotobank.jp/word/%E5%B1%B1-143996#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 142
+  }
 }

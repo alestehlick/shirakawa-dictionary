@@ -12,5 +12,28 @@
     "ghost",
     "demon"
   ],
-  "explanation": "A pictograph of a human ghost or demon, marked off from the living by its large head. In oracle-bone forms, some graphs omit the later cloud mark and instead show dripping dots, evoking the purification and exorcism performed by pouring perfumed wine. Other early forms add the altar sign 示, originally a ritual table set out for worship. The small stroke group later written like ム seems to depict clouds (云), and in subsequent development this line contributes to the graph 魂 for the human soul. 鬼 thus names the ghost of a person, while 神 refers to the gods of the natural world; together they form 鬼神, “ghosts and deities,” the realm of the departed among the divine."
+  "explanation": "鬼 pictures a human spirit with an enlarged head and a bent or crouching body. People were thought to become 鬼 after death; the disproportionate head distinguishes the dead presence from an ordinary living person.\n\nThe small element later written 厶 was added to the older figure and probably represents cloud vapour. The same conception becomes explicit in 魂, where 云 gives the drifting, cloud-like soul. 魄 instead relates the dead to the pale skull and bodily remains.\n\n鬼 can name a wandering spirit, an apparition, or a presence feared for the harm it might cause. Its closeness to 畏 joins fear with reverence. The character gives the otherwise elusive dead a recognizable human-headed form, while leaving their altered condition visible.",
+  "sources": [
+    {
+      "title": "常用字解 · 鬼 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8729721.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 鬼",
+      "url": "https://kotobank.jp/word/%E9%AC%BC-40829#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 112
+  }
 }

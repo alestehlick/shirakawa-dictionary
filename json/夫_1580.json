@@ -18,5 +18,28 @@
     "husband",
     "man"
   ],
-  "explanation": "In its earliest form, 夫 is a pictograph of a man with a hairpin thrust through his topknot. It builds on the graph 大—the front view of a person with arms and legs outstretched—by adding a short stroke at the crown to mark the ceremonial hairpin, depicting a man in full formal dress. A complementary character, 妻, shows a woman arranging three hairpins in her coiffure with the help of a hand (又), the image of bridal finery. Together, 夫 and 妻 present bridegroom and bride in wedding attire, from which 夫 came to mean “husband,” and by extension “man.” The character also appears in respectful titles such as 夫人 (“Lady,” an honorific for another’s wife) and 夫子 (“Master,” for an elder or learned teacher). In classical usage it further serves as a particle: an opening exclamation at the start of speech (“sore”) and a sentence-final note of lament or emphasis (“kana”)."
+  "explanation": "夫 adds a hairpin to the head of 大, the frontal human figure. The short stroke above the outspread body marks an adult man in formal dress. 妻 provides the complementary female figure with her hair ornamented; together the two characters evoke the ceremonial dress of bridegroom and bride.\n\n夫 consequently names an adult man and a husband. Bronze inscriptions also count men as so many 夫, particularly those supplying labour. 大夫 denotes an officer overseeing such work and later becomes a title.\n\nIn expressions such as 夫人 and 夫子, the character can mean ‘that person,’ providing an indirect, respectful designation for a lady or master. Classical uses also include an introductory particle and a sentence-final expression of feeling. These grammatical functions belong to the word's later range.",
+  "sources": [
+    {
+      "title": "常用字解 · 夫 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24126652.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 夫",
+      "url": "https://kotobank.jp/word/%E5%A4%AB-449195#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 50
+  }
 }

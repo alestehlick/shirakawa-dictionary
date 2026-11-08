@@ -17,5 +17,28 @@
     "valuable",
     "high-ranking"
   ],
-  "explanation": "Shirakawa sees 貴 as a compound of 臼, the shape of both hands brought together, and 貝, a cowry shell. The character portrays a shell being offered up with both hands, capturing the act of handling something as precious. Although no archaic script form of this graph survives, the shell here is likely the koyasugai, a cowry associated with safe childbirth. Cowries from the southern seas were extraordinarily prized in northern China during the Yin and Zhou periods and, in the Zhou, even served as currency. From this background the word first meant what is sacred and exalted, and it later shifted to denote high social rank and noble standing."
+  "explanation": "貴 combines a pair of hands with 貝, a cowry shell. The hands lift and present the shell, showing the care given to a precious object. The upper element represents the two hands together.\n\nCowries circulated as valuables and currency. They could be strung into counted sets, and bronze-vessel inscriptions record substantial expenditure in such strings of shells. Their worth gives the concrete basis for 貴: something costly and highly valued.\n\nThe same valuation extends from objects to people. 貴 can indicate high rank, generous emoluments, or an elevated and admirable character. To regard someone or something as 貴 is to prize or honour it.",
+  "sources": [
+    {
+      "title": "常用字解 · 貴 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8806360.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 貴",
+      "url": "https://kotobank.jp/word/%E8%B2%B4-425693#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 23
+  }
 }

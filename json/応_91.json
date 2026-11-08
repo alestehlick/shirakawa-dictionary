@@ -14,5 +14,28 @@
     "to answer",
     "to comply"
   ],
-  "explanation": "Originally written 應, this is a phono‑semantic character. Its key element, identified here as 雁 (serving as the on‑reading indicator for ō), depicts a person pressing a bird (隹, specifically a hawk) to the breast (膺), an image of hawk‑hunting. In Japan this solemn hunt, called ukeigari, was performed as a form of divination to question the gods; the outcome was received as a revelation. From that ritual setting grew the sense of “respond,” understood first as the deity’s answer to inquiry. Because the component supplies both sound and this ritual‑semantic associations, the character is an example of 亦声, where a phonetic also carries meaning."
+  "explanation": "応 abbreviates 應, combining 心, the heart, with 䧹 as its phonetic. 䧹 pictures a hawk held against a person's breast and concerns hawk hunting used to ask for a divine response.\n\nThe result of the hunt reveals the god's intention. A comparable divinatory hunt in Japan was called *ukeigari*. The essential relation is between an inquiry and the answer received: the deity responds, and the outcome may agree with what the questioner has sought.\n\nFrom that response come answering, corresponding, receiving, and acting in accordance with something. Agreement also gives following or yielding. The grammatical ‘should’ or ‘ought to’ develops the fitting action that answers a situation's demand.",
+  "sources": [
+    {
+      "title": "常用字解 · 応 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5691240.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 応",
+      "url": "https://kotobank.jp/word/%E5%BF%9C-448695#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 174
+  }
 }

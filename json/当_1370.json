@@ -17,5 +17,28 @@
     "appropriate",
     "exactly"
   ],
-  "explanation": "Originally written 當, this is a phono‑semantic character with 尚 as its sound element; related graphs such as 堂 and 棠 also use 尚. Classical passages in the Xunzi show 当 used where 嘗 appears with senses like “once” and “as a trial.” Shirakawa understands 嘗 as the welcoming of deities who come in answer to offerings and prayers, and 尚 as the manifestation of those gods at the window where they are received. Reading 田 as the space between the fields, 當 evokes an agricultural rite of welcoming and worshipping the gods in the ricefield. Because such rites were performed at the proper season, the character came to express alignment with the right time—hence senses like hitting the mark, corresponding or meeting, fitting or suiting, being fulfilled, and “just now/exactly.”"
+  "explanation": "当 is the shortened form of 當, with 尚 as its phonetic above 田, cultivated land. 尚 represents a window through which divine presence is welcomed; the spreading strokes above it mark that descent. Together with the field below, the composition probably belongs to an agricultural rite.\n\n當 is closely associated with 嘗, which concerns receiving a visiting deity and, in later use, the offering of newly harvested food. Such ceremonies had to meet the right seasonal conditions. To perform something at the fitting time gives a possible bridge to 當 as ‘appropriate’ or ‘corresponding to the occasion.’\n\nThe meanings then apply to place, circumstance, and obligation: facing something, meeting it, matching it, being equivalent, or being what ought to happen. The character also came to be used for pledging property, a function earlier written 典.",
+  "sources": [
+    {
+      "title": "常用字解 · 当 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/21396404.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 当",
+      "url": "https://kotobank.jp/word/%E5%BD%93-579332#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 26
+  }
 }

@@ -15,5 +15,28 @@
     "to match",
     "to control"
   ],
-  "explanation": "This character combines 酉, the wine jar, with 己, whose older form depicts a person kneeling. It pictures someone kneeling before a wine vessel, the scene of pouring out and handing around drink. From this solemn act of apportionment, the sense expands to distributing or serving, then to matching a man and woman in marriage, and allotting shares. In compounds such as shihai (支配), it further conveys directing others at one’s will, even subjugating. Related graphs sketch the same ritual setting: 即 (卽) shows a person kneeling before tableware, hence taking one’s seat at the meal; 郷 (鄕) portrays people seated facing one another with dishes between them."
+  "explanation": "配 places a kneeling person beside 酉, a wine vessel or jar. The component now written 己 comes from 卩, the seated human figure. Vessel and person are brought together: the wine vessel is allotted to its recipient.\n\nThis matching gives assigning, distributing, and arranging appropriate pairs. Applied to people, it becomes joining a man and woman in marriage. In each use, someone or something is placed in a fitting relation to another.\n\nThe word extends to allocating shares or assigning a person to a post. Sending someone to a distant place also gives penal exile. Early uses concerning correspondence with Heaven's mandate preserve the broader force of being matched to what a situation requires.",
+  "sources": [
+    {
+      "title": "常用字解 · 配 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22890917.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 配",
+      "url": "https://kotobank.jp/word/%E9%85%8D-598346#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 60
+  }
 }

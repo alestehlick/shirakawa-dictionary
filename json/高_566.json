@@ -17,5 +17,28 @@
     "elevated",
     "noble"
   ],
-  "explanation": "Shirakawa reads 高 as a compound built from an abbreviated form of 京 and an enclosing element used here as sai, a sacred receptacle for covenantal prayer slips. In archaic depiction, 京 shows the arched entrance and exit of the capital’s great fortress gate, surmounted by a watchtower. The whole graph pictures presenting written prayers at that imposing gate to purify the threshold and keep malign forces from entering. Because the gate is crowned by a high lookout, the character naturally came to mean high, tall, and great, and by extension a high place or rank and, in a spiritual sense, refined nobility—sensed in contrasts like 高低 and in words such as 高尚."
+  "explanation": "高 combines the great gate represented by 京 with 口, the vessel holding written prayers. The gate has an arched entrance beneath a watchtower. Prayers are presented at this imposing threshold to keep harmful spirits from entering.\n\nThe protected gate is a high structure, giving high, tall, great, and outstanding. Its upper chamber makes physical height visible, while its sacred protection gives the entrance a special dignity.\n\nThe word extends to elevated position, rank, and excellence. It can describe a high place, an accomplished person, or a noble and refined quality. The same architectural family includes 喬, where an additional ornament above the gate invites the divine presence.",
+  "sources": [
+    {
+      "title": "常用字解 · 高 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11079835.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 高",
+      "url": "https://kotobank.jp/word/%E9%AB%98-493858#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 155
+  }
 }

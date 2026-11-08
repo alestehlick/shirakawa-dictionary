@@ -16,5 +16,28 @@
     "to cease",
     "to run out"
   ],
-  "explanation": "A phono-semantic character: the silk radical 糸 evokes thread and supplies the idea, while 色 serves as the phonetic, giving the on-reading zetsu. In its earliest form the graph depicts cutting the thread stretched on a loom, so its primary sense is to cut a thread. From that concrete image it broadened to mean sever, cease, or be exhausted. The character seems also to have referred to colored thread, which underlies uses that convey an emphatic sense of utter, supremely, as in zetsumyo (exquisitely outstanding). The form is attested in Warring States bronze inscriptions and continues to appear on Han-period stone monuments."
+  "explanation": "絶 combines 糸, thread, with 色 as its phonetic. An older writing pictures the cutting of threads still stretched on a loom. It expresses severing the thread or the thread coming apart; the later formation takes over that cutting vocabulary.\n\nFrom the broken thread come interruption, separation, exhaustion, and an end beyond which nothing continues. The same force gives utterly or completely: a connection or supply has been cut off.\n\nThe word also seems to have concerned coloured thread. An exceptionally beautiful colour supplies another approach to its intensive use, as in 絶妙, supremely fine. Both the limit reached by cutting and excellence beyond comparison contribute to the word's emphatic range.",
+  "sources": [
+    {
+      "title": "常用字解 · 絶 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14606860.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 絶",
+      "url": "https://kotobank.jp/word/%E7%B5%B6-547838#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 98
+  }
 }

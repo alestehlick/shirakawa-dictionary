@@ -12,5 +12,28 @@
     "exceptional",
     "only"
   ],
-  "explanation": "A phono-semantic compound formed with the ox radical 牛 and the phonetic 寺, 特 was explained in the Shuowen as “a big male ox,” evoking the image of a prime, imposing bull. From this sense of a distinguished animal, the word came to describe human excellence: in the Mao tradition of the Book of Odes it is used of a man outstanding among a hundred, hence meanings such as “to excel” and “to be different, set apart.” In later usage it can also substitute for 独 to mean “alone,” which underlies the adverbial sense of “only” and “especially” found in modern Japanese."
+  "explanation": "特 combines 牛, cattle, with 寺 as its phonetic. It names a large bull or mature male animal. The impressive beast supplies an image of something standing out from its kind.\n\nThe comparison extends to a person of exceptional ability. An early poem describes someone distinguished among a hundred men, giving excelling, surpassing others, and being different. The word can also name a single animal offered in sacrifice.\n\nThrough interchange with 独 and related words, 特 acquires the adverbial uses alone, merely, and especially. Singularity and exceptional quality meet in its familiar special: something is singled out, whether by being one or by standing above the ordinary.",
+  "sources": [
+    {
+      "title": "常用字解 · 特 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22097376.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 特",
+      "url": "https://kotobank.jp/word/%E7%89%B9-582404#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 190
+  }
 }

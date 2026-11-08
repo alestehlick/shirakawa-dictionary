@@ -24,5 +24,28 @@
     "to raise",
     "superior"
   ],
-  "explanation": "This character began as an indicative sign built on a hand: a small mark placed above the outstretched palm simply pointed to “what is above.” Its counterpart 下 marked below the hand. Over time the pointing dots lengthened into vertical strokes, yielding simple line forms, and with an added side dot the graphs settled into the recognizable shapes 上 and 下. From the concrete sense of the space above the palm, 上 broadened to mean the upward direction and actions of lifting, raising, and ascending; in space, the upper part or top; in time, the beginning and antiquity; and in human relations, those of higher rank, along with nuances of reverent offering, esteem, and excelling."
+  "explanation": "上 began as a pointing sign. The early lower curve represents an upward-facing palm, with a small mark placed above it to indicate what is on or above the hand. 下 provides the counterpart, with a covering hand and a mark beneath.\n\nAs the forms became more linear, the reference shape and indicating mark developed into the modern strokes. Their relation carries the meaning: the marked position is above the supporting surface.\n\nFrom that spatial relation come the top, an upper place, rising, and raising something. Applied to time, 上 can indicate an earlier period or the beginning. Applied to rank, it denotes a superior or sovereign and the acts of honouring or presenting something upward to such a person.",
+  "sources": [
+    {
+      "title": "常用字解 · 上 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13638282.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 上",
+      "url": "https://kotobank.jp/word/%E4%B8%8A-33718#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 46
+  }
 }

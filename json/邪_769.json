@@ -13,5 +13,28 @@
     "wrong",
     "wicked"
   ],
-  "explanation": "In early script, 邪 is a phono-semantic compound. It sets 牙, the large curved tusk of an animal, as the phonetic, a graph that also suggests something bent or askew. The companion element 邑 depicts a walled settlement or fortress. Taken together they evoke a city wall that fails to make a true square—an oblique, out-of-true structure—and from this image the character comes to mean what is not in correct form, hence “evil,” “wrong.” The bent nuance of 牙 is seen also in a related graph where 牙 is placed within the clothing radical to describe garments worn askew. Thus the core idea is physical crookedness that extends to moral deviation."
+  "explanation": "邪 combines 邑, a settlement, with 牙 as its phonetic. 牙 pictures large, curved animal fangs and carries an association with crookedness or an irregular form. Applied to the settlement, it probably concerns a city wall that does not make a regular square.\n\nFrom being out of the proper alignment come obliqueness, deviation, and what is wrong. The related words 邪 and 斜 share this movement between physical crookedness and a departure from what is considered correct.\n\n邪 therefore describes perversity, deceit, and harmful or malign influences. It can name an evil spirit as well as a distorted intention. Other uses, including the sentence-final question later written 耶, belong to sound-based grammatical interchange.",
+  "sources": [
+    {
+      "title": "常用字解 · 邪 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12778708.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 邪",
+      "url": "https://kotobank.jp/word/%E9%82%AA-524363#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 33
+  }
 }

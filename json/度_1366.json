@@ -16,5 +16,28 @@
     "times",
     "regulation"
   ],
-  "explanation": "Shirakawa interprets 度 as a compound formed from an abbreviated 席 and 又, the hand. It depicts hands spreading out a straw mat, using the mat’s breadth as a yardstick. From this image come the senses of measuring and the standard or measure itself. Because a mat is laid from end to end, the meaning extends to spanning or crossing a space and, further, to exceeding. From the idea of a fixed standard it also develops the sense of rule or regulation, as seen in compounds like hatto (法度) and seido (制度). As a count of occurrences, it is used for “times,” as in sando, “three times.”"
+  "explanation": "度 combines a shortened form of 席, a mat, with 又, a hand. The gesture is the spreading out of the mat. Its length and breadth provide a standard against which other lengths can be measured.\n\nFrom this practical standard come measurement, a scale, and the degree or extent of something. Early texts use the verb for surveying woods and measuring land before settling people upon it. A fixed measure also becomes a rule, giving the uses for regulations and institutions.\n\nOther branches include going across or beyond an extent, sometimes written 渡, and counting repeated occasions as so many ‘times.’ The measuring verb has the reading *taku*, while many nominal and counting uses have *do*. The abbreviated upper part preserves the mat, 席, spread out by the hand.",
+  "sources": [
+    {
+      "title": "常用字解 · 度 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/21258724.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 度",
+      "url": "https://kotobank.jp/word/%E5%BA%A6-102903#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 29
+  }
 }

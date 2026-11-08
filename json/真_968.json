@@ -14,5 +14,28 @@
     "real",
     "truth"
   ],
-  "explanation": "The original form of 真 is 眞, which joins two stark images: 七, taken here as the figure of a person inverted in death, and 県, the image of a head hung upside down. Together they portray one who has suddenly fallen and died in the open. Such an unexpected death was thought to produce a powerful, vengeful spirit, and early ritual centered on appeasing it: bowing before the fallen (as in 顛, to topple), setting the dead respectfully in a small roadside shrine (祠), placing upon a seat a spiritually potent jewel (玉), enshrining the presence (鎭座), calming its wrath (鎭/鎮), and acting with circumspection and reverence (慎). Many graphs built on 眞 reflect facets of this pacification rite. In time, the graph that once marked the fallen dead came to signify what is ultimate and enduring—‘the true’—in line with an ancient view that human life is brief and provisional, while the realm after death is eternal. The shift parallels 久, which originally depicted supporting a corpse from behind and later came to mean ‘long-lasting.’"
+  "explanation": "真 abbreviates 眞, which combines 匕, an inverted human figure, with 県, a head suspended upside down. The formation concerns someone who has died unexpectedly or fallen dead away from home.\n\nSuch a death could leave a dangerous spirit. Related characters concern treating it with care, calming its anger, and sealing or settling its power with jade. 慎 and 鎮 belong to this world of reverence and pacification.\n\nThe dead person has passed beyond further change. From that unalterable condition come the eternal, genuine existence, and what is true. The word extends to one's original nature and to ultimate reality. A true person or true knowledge then belongs to a condition beyond the limits of ordinary, changeable existence.",
+  "sources": [
+    {
+      "title": "常用字解 · 真 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13902220.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 真",
+      "url": "https://kotobank.jp/word/%E7%9C%9F-4672#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 150
+  }
 }

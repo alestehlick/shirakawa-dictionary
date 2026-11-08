@@ -16,6 +16,28 @@
     "to alter",
     "to be in disorder"
   ],
-  "explanation": "This character is a compound of 言 and 攴. In Shirakawa’s view, 言 is not mere “speech,” but the ritual vessel that held solemn words of oath to the gods, its sides adorned with hanging threads. With 攴, “to strike,” added, the graph shows striking that oath‑vessel—an act of rupturing the divine covenant—and from this image arises the sense of changing or altering, and by extension, falling into disorder."
-
+  "explanation": "変 is the simplified form of 變. Its fuller upper element is 䜌: 言, a solemn oath, flanked by hanging thread ornaments. 攴 below is a hand wielding a striking implement. The action is directed against the ornamented oath text or receptacle.\n\nStriking the object breaks the existing commitment and compels an alteration. The formation belongs to a group of rites in which a blow was thought capable of changing a harmful or binding condition. Related formations of 改 and 更 apply a comparable action to other ritual objects.\n\nFrom changing an oath come alteration and replacement, then disturbance, rebellion, or a major disruption. The character can also describe an extraordinary or uncanny event, something that departs from the expected course. Its broad range of ‘change’ develops from a specific act of ritual intervention.",
+  "sources": [
+    {
+      "title": "常用字解 · 変 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24880018.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 変",
+      "url": "https://kotobank.jp/word/%E5%A4%89-171168#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 63
+  }
 }

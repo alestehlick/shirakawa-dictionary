@@ -18,5 +18,28 @@
     "divine will",
     "innate"
   ],
-  "explanation": "The graph shows a large head set above 大, the front-facing figure of a person with outstretched arms and legs. It first meant the head—the highest part of the human body—and from that sense of “what is above” it came to name the sky, hence heaven. Already in Shang times 天 was venerated as the divine realm; oracle-bone inscriptions call the Shang capital 天邑商, “the sacred settlement of Shang.” A related character refers to the ground where the gods set their feet when descending and ascending by their ladder, the meeting place of heaven and earth. In the Zhou period the doctrine of the Mandate of Heaven cast dynastic change as Heaven’s decree, and so 天 came to signify the will of Heaven and whatever lies beyond human power; by extension it also names nature itself and what is inborn."
+  "explanation": "天 draws attention to the head of a frontal human figure, 大. In the earliest forms the head can be enlarged into a clear round or broad shape; the later upper horizontal stroke preserves that emphasis. The head is the body's highest point.\n\nThe word belongs beside terms for the crown, summit, and forehead. This relation provides the connection with what is overhead: the sky and heaven. The shape begins with the marked human head, while its meaning reaches the great space above people.\n\nHeaven also becomes the divine authority to which human rule is answerable, as in 天命, the heavenly mandate. Further uses concern nature, what comes from heaven, and what is given at birth.",
+  "sources": [
+    {
+      "title": "常用字解 · 天 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/20826461.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 天",
+      "url": "https://kotobank.jp/word/%E5%A4%A9-102026#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 66
+  }
 }

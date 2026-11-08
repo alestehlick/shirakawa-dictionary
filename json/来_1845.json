@@ -14,5 +14,28 @@
     "to come",
     "to bring"
   ],
-  "explanation": "Originally this graph was a pictograph of a barley stalk, shown upright from the side. The Shuowen notes that in Zhou times it evoked the receiving of “auspicious barley” and wheat, echoing the legend of Hòu Ji, the Zhou agriculture deity, who was gifted blessed grain and thereby brought prosperity to the realm. In the oracle-bone inscriptions the graph was also borrowed for its sound to write the verbs “to come” and “to bring.” Later, writers differentiated these senses with related characters: 徠 for “to come” and 賚 for “to bestow.” Thus the familiar meaning “to come” arose by phonetic loan from a sign that first pictured bountiful grain."
+  "explanation": "来 abbreviates 來, originally a picture of a wheat plant. Its stem, grain-bearing head, and branching growth are visible in the early forms. The plant belongs to the agricultural traditions surrounding the Zhou ancestor 后稷 and the gift of auspicious grain.\n\nThe everyday ‘to come’ was already written with this graph in oracle-bone inscriptions. It is a sound loan, as are related early uses for bringing or bestowing.\n\nLater writings distinguish some functions: 徠 adds movement for coming, while 賚 concerns a gift or reward. 来 remains the ordinary writing for arriving, causing something to come, inviting it, and the time that has passed since a stated point.",
+  "sources": [
+    {
+      "title": "常用字解 · 来 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/27504495.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 来",
+      "url": "https://kotobank.jp/word/%E6%9D%A5-482036#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 86
+  }
 }

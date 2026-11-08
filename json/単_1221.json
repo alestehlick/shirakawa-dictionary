@@ -15,5 +15,28 @@
     "to exhaust",
     "all"
   ],
-  "explanation": "The original form 單 is a pictograph of an oval shield topped with two feather ornaments; different tribes distinguished themselves by the patterns or adornments on their shields. From this shield, the graph 戦 arose by combining 單 with 戈, the pike, to show combat with shield and spear. As a military term, 單 denoted a single unit or troop—hence expressions like 三單 for three troops—and from that sense it broadened to mean the single or the one, as in being alone or one in number. In compounds it also came to express doing something to the utmost or exhausting one’s powers, and by extension the sense of the whole or entirety."
+  "explanation": "単 abbreviates 單, a picture of an oval shield with two feather ornaments above it. Shields belonged to both warfare and hunting. 戰 adds a weapon to the shield; the older hunting formation 獸 includes it with a dog.\n\nA 單 was also a military unit. Three such units formed an army, so the word distinguished one body within a larger force. From the separate unit come one, single, and alone.\n\nThe uses extend to one person, a single course of action, or a single layer. A shield-shaped sign thus becomes the ordinary word for singularity through its place in military organization. The full 單 preserves more of the original equipment than modern 単.",
+  "sources": [
+    {
+      "title": "常用字解 · 単 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/16474460.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 単",
+      "url": "https://kotobank.jp/word/%E5%8D%98-120309#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 186
+  }
 }

@@ -10,5 +10,28 @@
     "member",
     "number"
   ],
-  "explanation": "In its oldest form, the character shows a round ding, a ritual tripod cauldron, marked with a small circle to indicate its roundness; the element later written as 貝 is an abbreviated form of 鼎. When that whole figure was enclosed within a surrounding circle it produced 圓 (円), “round.” 員 itself was originally the mark used to count the number of such round tripods, hence the sense “number,” and by extension it came to denote those included in a tally—the “members” of a group."
+  "explanation": "員 pictures a round 鼎, a ritual tripod vessel. The circle above marks the shape of its rim; the lower part now written 貝 is an abbreviated form of the cauldron.\n\n員 was the earlier writing for round. When the word needed to be distinguished from other uses of the same graph, an outer enclosure was added to make 圓, now 円. The circle in 員 continues to mark the vessel's roundness.\n\nRitual offerings were counted by their vessels, giving 員 the meaning of a number or tally. From counting those included come a specified complement and the members of a group. Roundness and membership share a transmitted graph through this intervening use in reckoning.",
+  "sources": [
+    {
+      "title": "常用字解 · 員 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4949625.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 員",
+      "url": "https://kotobank.jp/word/%E5%93%A1-437076#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 168
+  }
 }

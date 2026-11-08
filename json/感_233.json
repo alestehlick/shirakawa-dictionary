@@ -15,5 +15,28 @@
     "emotion",
     "sense"
   ],
-  "explanation": "感 is a phono-semantic character built on the phonetic 咸 (kan). In 咸, a sacred broadax (戉) is set over a covenant receptacle (sai), a coffer that held written petitions to the gods, sealing and guarding the prayers within. It was believed that when prayers were thus secured, the gods would visit in secret at night to grant a response. From this scene of a divine answer—the moving of the gods’ own heart—感 came to signify the stirring of the heart, and by extension the feelings and thoughts that arise within the human mind."
+  "explanation": "感 combines 心, the heart, with 咸 as its phonetic. 咸 places 戉, a sacred axe, above the vessel holding written prayers. The axe protects the container and seals the prayer's efficacy within it.\n\nWith the prayer safeguarded in this way, the deity was thought to visit secretly during the night and answer it. 感 first concerns the divine heart being moved: the appeal reaches the god and draws a response.\n\nThe same relation extends to people. To 感 someone is to move their heart; to feel 感 is to experience the answering emotion. Gratitude, sorrow, recognition, and sensation belong to this wider range. The heart component makes inward responsiveness explicit, while related 撼 preserves the force of stirring or shaking.",
+  "sources": [
+    {
+      "title": "常用字解 · 感 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8549417.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 感",
+      "url": "https://kotobank.jp/word/%E6%84%9F-469003#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 38
+  }
 }

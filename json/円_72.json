@@ -15,5 +15,28 @@
     "round",
     "yen"
   ],
-  "explanation": "Originally written 圓, this is a phono-semantic character with 員 as its core, providing the sound en. In Shirakawa’s reading, 員 depicts a round object set atop a rounded ding tripod 鼎—an ancient bronze vessel used in ritual—whose form is abbreviated as 貝 in the graph; this arrangement itself conveyed the idea of roundness. When 員 later developed other meanings, the form with an added outer circular enclosure, 圓, was used specifically to express “round” and “circle,” a sense that continues in the modern simplified form 円."
+  "explanation": "円 abbreviates 圓, which encloses 員 within an outer boundary. 員 is the phonetic, but it also supplies the older image of roundness: a round 鼎, a ritual tripod vessel.\n\nIn 員, the lower part now resembling 貝 is an abbreviated 鼎. The small circle above marks the vessel's round rim. 員 was itself the earlier writing for round.\n\nWhen 員 acquired other uses, an additional surrounding line distinguished 圓. The word means round, a circle, or its circumference. From a complete, evenly rounded form come smoothness and completeness. The modern 円 preserves the word after a substantial simplification of its older shape.",
+  "sources": [
+    {
+      "title": "常用字解 · 円 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5163785.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 円",
+      "url": "https://kotobank.jp/word/%E5%86%86-37934#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 145
+  }
 }

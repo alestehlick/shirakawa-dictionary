@@ -16,5 +16,28 @@
     "generation",
     "lifetime"
   ],
-  "explanation": "In its early form, 世 pictures a fresh bud pushing out from branching boughs. The element 生 shows the sprouting shoot of a plant; the graph 枼 depicts three new branches spreading from a trunk, and 葉 is the foliage that appears upon them. From this image of new leaves emerging in succession, the character came to evoke the span of a human life, successive generations, and, by extension, an age or the human world—the society formed by people."
+  "explanation": "世 pictures new shoots emerging from the branches of a tree. The early forms show branching growth, close to 生, which represents a plant coming up. 世 emphasizes the new growth of a tree, while 生 can show the growth of grasses and plants more generally.\n\nThe successive appearance of leaves gives an image for successive human generations. A 世 is a generation, an age, or the span of a person's life; it also names the world in which those lives unfold. The related word 葉 means a leaf, and the expressions 万世 and 万葉 can both refer to countless generations.",
+  "sources": [
+    {
+      "title": "常用字解 · 世 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14211422.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 世",
+      "url": "https://kotobank.jp/word/%E4%B8%96-85461#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 121
+  }
 }

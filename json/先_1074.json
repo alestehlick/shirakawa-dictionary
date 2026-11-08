@@ -16,5 +16,28 @@
     "first",
     "earlier"
   ],
-  "explanation": "A compound character formed from 止, the footprint sign that in early writing overlaps with 之 and means “to go, to walk,” placed above a person 人 (儿). By setting the mark of movement over a human figure, the graph highlights the act of moving before others—leading the way. Oracle-bone inscriptions from the Yin period show a ritual practice of sending people from other tribes ahead to test the safety of the road, reflecting the belief that unknown ground harbored dangerous spirits and required exorcistic road-purification rites, as seen in road-related graphs. From this ritual sense of “going ahead,” the character broadened to spatial meanings like “ahead, in front” and then to time—“formerly, previous”—as in terms for sages and ancestors of the past, and even to a prospective nuance in words for foreseeing or knowing in advance."
+  "explanation": "先 places a foot, in the early form associated with 之, above a human figure. The enlarged and elevated body part identifies the principal action, much as the eye is emphasized in 見. The foot points to going in front or taking the lead.\n\nOracle-bone texts often concern sending someone ahead to clear a route. People from other groups, including captives or those presented as slaves, could be assigned this task. The road was to be made safe through purification before others followed.\n\nFrom an advance party come the spatial senses ‘ahead’ and ‘in front,’ then the temporal ‘earlier’ and ‘before.’ Those who have gone before include ancestors and deceased elders. The word can also mean giving something priority, acting first, or overtaking someone.",
+  "sources": [
+    {
+      "title": "常用字解 · 先 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14685932.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 先",
+      "url": "https://kotobank.jp/word/%E5%85%88-509271#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 102
+  }
 }

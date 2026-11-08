@@ -12,5 +12,28 @@
     "team",
     "group"
   ],
-  "explanation": "In its earliest form, 隊 shows the sacred ladder by which the gods ascend and descend (the left element, 阝), set before a sacrificial animal (豕). Together they mark the spot where the deities come down and set foot. From this image of descent, 隊 served as the ancestral graph of 墜 “to fall.” In bronze inscriptions the related graph appears in phrases meaning “not to let fall,” that is, not allowing the achievements of the ancestors to decline. Thus 隊, 墜 (and a closely related form) belong to one lineage of graphs centered on descent and alighting; later, 隊 came to be used for a “troop” or “group, company.”"
+  "explanation": "隊 combines 阜, the sacred stairway for a deity's ascent and descent, with a sacrificial animal placed before it. The formation marks the place where the deity comes down. It belongs to the earlier family from which 墜 and the land word 地 developed.\n\nAdding 土 makes the earth-place explicit in 墜. The descent sense then gives falling, dropping, and allowing something to be lost. Bronze inscriptions use a related animal form in promises not to let inherited achievement fall away.\n\n隊 later also names an ordered body of people: a troop, company, or group. This familiar use shares the transmitted writing with the older descent vocabulary.",
+  "sources": [
+    {
+      "title": "常用字解 · 隊 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15800728.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 隊",
+      "url": "https://kotobank.jp/word/%E9%9A%8A-556221#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 120
+  }
 }

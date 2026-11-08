@@ -15,5 +15,28 @@
     "monastic quarters",
     "boy"
   ],
-  "explanation": "A phono-semantic character, 坊 takes 方 as its phonetic, which also evokes the notion of dividing space into squares. Inside walled cities, streets were laid out in a jōri grid of square sections, and each section was a 坊 with its own “block name” (坊名). From this base sense it came to mean a ward or town and, by extension, a place of commerce, as seen in compounds like 坊市 (market town), 坊肆 (shop), and 酒坊 (liquor shop). Temple precincts were similarly partitioned into 坊, so the character can also refer to a temple and, more specifically, to monastic living quarters (坊舎, 僧坊) and their head (坊主)."
+  "explanation": "坊 combines 土, land, with 方 as its phonetic. 方 also has associations with a square and a bounded division of space. A 坊 is a section laid out within the grid of a settlement.\n\nSuch a ward had its own gate and an official responsible for it. The word extends to a town district, a market, a shop, or a workplace: an identifiable area where people live or carry on an activity.\n\nTemple precincts were likewise divided into 坊. The word could therefore name monastic quarters or a temple, and the head of one such division was a 坊主. The administrative and religious uses share the organization of space into distinct holdings.",
+  "sources": [
+    {
+      "title": "常用字解 · 坊 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25368664.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 坊",
+      "url": "https://kotobank.jp/word/%E5%9D%8A-131738#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 153
+  }
 }

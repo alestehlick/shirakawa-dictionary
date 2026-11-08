@@ -16,5 +16,28 @@
     "entire",
     "complete"
   ],
-  "explanation": "Although early oracle-bone or bronze forms are not attested, the seal-script shape preserved in the Shuowen suggests a jade girdle-pendant: pieces of jade hanging from a waist belt with additional ornaments suspended below. As an image of a pendant set in which every component is present and beautifully arranged, the graph came to signify being fully furnished and in perfect order—hence the meanings “complete,” “entire,” and “all.” Early lexicography even associated it under the jade radical as “pure jade,” reflecting the ideal of flawless workmanship that underlies the character’s sense of wholeness."
+  "explanation": "An old form of 全 appears to depict a pendant ornament of jade, with additional pieces hanging from it. This identification remains tentative. The received shape resembles 入 over 玉, retaining the association with jade and completeness.\n\nA complete ornament provides a possible visual basis for something being intact and fully furnished. From this come ‘whole,’ ‘entire,’ ‘all present,’ and preserving something in its entirety. The character can describe both the whole of a thing and the condition in which none of its required parts is missing.\n\nThe similar shape of 金 belongs to a different material history, involving metal cast into a form.",
+  "sources": [
+    {
+      "title": "常用字解 · 全 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14854283.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 全",
+      "url": "https://kotobank.jp/word/%E5%85%A8-440732#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 28
+  }
 }

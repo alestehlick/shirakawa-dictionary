@@ -14,5 +14,28 @@
     "variety",
     "kind"
   ],
-  "explanation": "A compound graph of three 口 set in a row, where 口 is not a mouth but, in Shirakawa’s reading, the sai: a sacred receptacle for slips bearing written prayers and covenants to the gods. Arraying many such vessels suggests collective recitation and the accumulation of petitions; from this image the character came to signify multiplicity and assortment—kinds, varieties, numbers—and by extension goods and articles. Related graphs elaborate the same ritual scene: 區 (区) shows many such vessels prayed over in a secluded place; 歐 (欧) emphasizes praying in a loud voice; 謳 gives that prayerful voice as song; and 毆 (殴) depicts urging a prayer’s fulfillment by striking the vessels with a pike (殳)."
+  "explanation": "品 groups three 口, ritual vessels containing written prayers or pledges. Bringing several together represents the performance of many prayers. Their repeated forms express multiplicity.\n\nAn array can be divided into kinds and ordered by category. 品 therefore develops the senses of type, class, grade, and sorting. A bronze inscription grants servants in three 品: the phrase identifies people from three different groups of origin. Another inscription concerns dividing captives by their group of origin.\n\nThe same distinction applies to goods and to people. 品 can name an article, a variety, a person's standing, or a quality of character. The movement is from a plurality set out together to the classes and ranks within it.",
+  "sources": [
+    {
+      "title": "常用字解 · 品 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24047600.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 品",
+      "url": "https://kotobank.jp/word/%E5%93%81-522246#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 187
+  }
 }

@@ -18,5 +18,28 @@
     "generation",
     "price"
   ],
-  "explanation": "Shirakawa reads 代 as a semantic–phonetic compound: the person element 亻 paired with 弋, which supplies sound and evokes a sacred implement. He explains 弋 as the white radiance flaring from the blade of a battleaxe (戚), a ritual instrument credited with the power to purify, exorcize, and redirect misfortune. Symbolically affixing this sign to a person signified cleansing calamity and transferring it to another, a ritual ‘renewal’ through substitution. From this act of transference the character took on the senses of replacing or changing places, and by extension change across time—generations succeeding one another (yo). In Japanese usage it also yields shiro, ‘seedling bed’ and, by extension, ‘price’ or ‘cost,’ as in nawashiro (苗代)."
+  "explanation": "代 joins 人 with 弋 as its phonetic. 弋 probably goes back here to 尗, the form of white light flashing from the blade of 戚, a battleaxe. The shining implement was credited with the power to purify and repel harmful influences.\n\nApplying its sign to a person could cleanse a calamity and transfer it to another bearer. This is renewal through substitution: the harmful condition is altered by moving it elsewhere. The character's action is therefore changing or replacing.\n\nFrom one bearer taking another's place come a substitute, a proxy, and things acting in turn. Generations succeed one another in the same way, giving an age or period. Payment likewise supplies something in exchange, extending the substitution sense into value and cost.",
+  "sources": [
+    {
+      "title": "常用字解 · 代 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15860358.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 代",
+      "url": "https://kotobank.jp/word/%E4%BB%A3-81136#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 89
+  }
 }

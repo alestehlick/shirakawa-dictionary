@@ -16,5 +16,28 @@
     "to calm",
     "cheap"
   ],
-  "explanation": "安 combines 宀, the roof of the ancestral mausoleum, with 女, a seated woman. It portrays a new bride visiting her husband’s ancestral shrine, revering the forebears, receiving the family’s clan spirit, and through this rite being accepted into the lineage. Protected by the ancestors, she may live in peace and ease—hence the character’s original sense of calm and of calming. Early forms even record ritual details: wine sprinkled for purification, and a small thread at the bride’s hem, a garment sign marking her entrancement by the ancestral power, an idea that echoes the “true bed” investiture of Japanese myth. From this core meaning of serenity, the later Japanese sense “cheap” is a secondary development. Related graphs extend the same motif: 按 shows calming by pressing with the hand, while 晏 depicts the woman worshipping in the mausoleum with a spiritually potent jade set upon her head, augmenting her spirit and expressing a heart at peace and in happiness."
+  "explanation": "安 places 女, a woman, beneath 宀, the roof of an ancestral shrine. The scene is a new bride's reception into her husband's lineage. In the shrine she undergoes purification with ritual wine and receives the ancestral spirit.\n\nSome oracle-bone forms add falling drops; bronze forms can add a garment below the woman. These details belong to the rite establishing her 安寧, a condition of peace and security. The expression 帰寧, returning to visit one's parental home, preserves the same vocabulary of settled well-being.\n\nFrom the bride's peaceful establishment in the household come being at ease, calming someone, dwelling, and placing something securely. Enjoyment is another related use, shared through interchange with 宴 and 晏. The central connection is between acceptance into a protected household and a state of rest.",
+  "sources": [
+    {
+      "title": "常用字解 · 安 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4505610.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 安",
+      "url": "https://kotobank.jp/word/%E5%AE%89-685369#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 123
+  }
 }

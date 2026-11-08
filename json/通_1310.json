@@ -18,5 +18,28 @@
     "to spread widely",
     "universal"
   ],
-  "explanation": "通 is a phono-semantic character built from 甬 and 辵 (辶). The element 甬, also seen as the phonetic in 痛, originally depicts a bucket—a hollow, tube-like vessel—and supplies both the sound and the image of a cylindrical passage. 辵 conveys the act of going or walking. Together they express the idea of moving through a hollow space, passing smoothly without obstruction. From this core sense arise broader uses: to pass through, to go back and forth, to reach and pervade, and by extension to be widespread or universal."
+  "explanation": "通 combines 辵, movement, with 甬 as its phonetic. 甬 represents a bucket-like vessel; the related sound family includes hollow cylindrical things, open through the middle. This provides an association with passage and unobstructed connection.\n\nThe central meaning is reaching through or extending across an entire span. A bronze expression uses it of continuing prosperity and a long life, applying the word from beginning to end.\n\nFrom passage come going through, travelling back and forth, reaching a destination, and communication between places. Something can also pervade a whole area. Applied to knowledge, 通 is being thoroughly familiar with a subject or understanding how its parts connect. The movement element places these relations within the action of passing and reaching.",
+  "sources": [
+    {
+      "title": "常用字解 · 通 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/20046249.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 通",
+      "url": "https://kotobank.jp/word/%E9%80%9A-98898#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 104
+  }
 }

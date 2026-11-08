@@ -13,5 +13,28 @@
     "fixed date",
     "to meet at an appointed time"
   ],
-  "explanation": "期 is a phono-semantic character with 其 as its phonetic. The graph 其 originally depicts a square dustpan (箕), and from its sense of something regular and of set dimensions comes the idea of a defined span. In early forms 期 appears with 月, and some variants add another sign, tying the meaning to calendrical cycles—the month or day marked by the movements of the moon and sun. Accordingly, 期 denotes a specific, fixed stretch of time and, by extension, an appointed date (as in terms like 期日 or 納期), and it can also express the idea of meeting or coming together at a set time."
+  "explanation": "期 combines 月 with 其 as its phonetic. 其 originally represents a near-square winnowing basket and can have associations with a fixed position, interval, or division. 月 places the word within the vocabulary of measured time.\n\n期 names a definite period, including the completion of a cycle. A traditional explanation also connects it with the coming together of the sun and moon, making calendrical recurrence one way of understanding the meeting sense.\n\nAn agreed time becomes an appointment: to fix a date, promise to meet, or expect an event at a stated time. The measured span reaches its appointed completion.",
+  "sources": [
+    {
+      "title": "常用字解 · 期 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8798033.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 期",
+      "url": "https://kotobank.jp/word/%E6%9C%9F-49802#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 169
+  }
 }

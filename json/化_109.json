@@ -17,5 +17,28 @@
     "to die",
     "to follow"
   ],
-  "explanation": "化 combines 人 “person” with 七, which here is the inverted form of 人, the posture of a corpse. In early writing the figure shows such inverted bodies set head-to-foot, back to back, picturing the loss of vital energy and a person’s passage into death. From this image the meaning broadened to the idea of change itself—the ceaseless alternation of death and life—and further to the transformative power by which nature brings things to growth and by which virtue and thought gently guide and reform others. Thus the character is used for dying, for changing, and for following, and in Japanese it also lives on in readings like bakeru and bakasu."
+  "explanation": "化 sets human figures back to back, their heads and feet turned in opposite directions. The inverted figure, 匕, represents a dead person. Reversing the body's posture gives a visible image of losing vital breath and passing into death.\n\nFrom this transformation come changing, dying, and becoming something else. Life and death are successive conditions within a wider process: things grow, alter, and pass away, while new life takes their place. Nature's productive transformations are 造化.\n\nHuman influence can likewise change a person's conduct. 化 therefore extends to reforming and guiding through teaching, and to the response of those who receive that influence. Bodily reversal, natural transformation, and moral change share the passage from one condition into another.",
+  "sources": [
+    {
+      "title": "常用字解 · 化 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5845872.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 化",
+      "url": "https://kotobank.jp/word/%E5%8C%96-58505#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 74
+  }
 }

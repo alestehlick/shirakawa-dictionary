@@ -16,5 +16,28 @@
     "flavor",
     "savor"
   ],
-  "explanation": "味 is a phono-semantic character: 口, the mouth, signals tasting, while 未 supplies the sound (mi). 未 originally depicts a tree with branches growing luxuriantly; the tender tips where new leaves emerge were thought to have a particularly notable flavor. From this image, 味 came to express savor or rich taste. The Shuowen defines it as “滋味,” a deep savor, and the character is used broadly for ‘taste’ and ‘to taste.’"
+  "explanation": "味 combines 口, the mouth, with 未 as its phonetic. 未 pictures a tree with luxuriant branches. The tender new growth at their tips has a particularly fine flavour, connecting the sound element with nourishment and savour.\n\nThe mouth receives that flavour. 味 therefore names taste, including the traditional five flavours, and the act of tasting or appreciating something. Savour belongs to the natural thing and is discovered through attending to it.\n\nTasting becomes a way of understanding more closely. A work, expression, or experience can have a distinctive 味: the quality or interest that emerges as one dwells on it. Physical taste and considered appreciation share this receptive act of finding what something contains.",
+  "sources": [
+    {
+      "title": "常用字解 · 味 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25963636.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 味",
+      "url": "https://kotobank.jp/word/%E5%91%B3-424333#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 101
+  }
 }

@@ -13,5 +13,28 @@
     "hard",
     "strong"
   ],
-  "explanation": "Originally written 鐵, this is a phono-semantic character: the metal radical marks it as a metal, while the element read as tetsu (here identified with 戴) supplies the sound. The tradition also connects the graph with a sense of dark color—the word tetsu evokes the deep, reddish-black sheen likened to a black-chestnut horse. The Shuowen straightforwardly glosses it as kurogane, “iron.” From the nature of the substance itself, the character readily came to carry the associated ideas of hardness and strength."
+  "explanation": "鉄 abbreviates 鐵, which combines 金, metal, with the phonetic 𢧑. The older sound element has an association with a dark colour. 驖, a reddish-black horse, belongs to the same family.\n\nIron is the dark metal, *kurogane*, beside other metals traditionally distinguished by colour. Its hardness and strength then provide an image for firmness, toughness, and an unyielding resolve. 鉄 can describe those qualities as well as the substance and implements made from it.\n\nThe modern right side is written 失. That shortened shape preserves the word after its older phonetic has been abbreviated. The sound relationship is clearest in the full 鐵 and its related dark-colour vocabulary.",
+  "sources": [
+    {
+      "title": "常用字解 · 鉄 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/20755266.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 鉄",
+      "url": "https://kotobank.jp/word/%E9%89%84-101018#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 22
+  }
 }

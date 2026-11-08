@@ -25,5 +25,28 @@
     "to grow",
     "raw"
   ],
-  "explanation": "Originally a pictograph of a sprouting plant pushing up from the earth, this character takes its meaning from germination and growth. From that image it came to express being born, growing up, living, and life itself, and it applies not only to humans but also to animals and plants. In bronze inscriptions, 生 can even denote “people,” as in 百生, meaning a multitude of folk (later written 百姓), and it is also used directly for “life.” In Japanese it further carries the sense of “as born” or “raw,” and appears in verbs such as hayasu “to let grow” (hige o hayasu) and ikeru “to arrange/plant” (hana o ikeru), as well as the reading ki in compounds like kiito “raw silk.”"
+  "explanation": "生 pictures a plant sprouting through the ground. A lower line marks the surface, and the upright growth branches above it. One bronze variant makes the seed explicit, showing germination as well as the emerging shoot. The character's starting point is the appearance of new life.\n\nFrom sprouting come growing, being born, producing, and bringing into existence. The meaning extends from plants to living creatures generally, and from the act of birth to life itself. Something remaining in its original, living condition is 生: fresh, uncooked, or raw.\n\nEarly inscriptions also use 生 for the word later distinguished as 姓. Thus 百生 corresponds to 百姓, the people or clans. The related 性 concerns an inborn nature. These connections preserve the link between birth, inherited identity, and what belongs to a thing from its beginning.",
+  "sources": [
+    {
+      "title": "常用字解 · 生 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14231302.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 生",
+      "url": "https://kotobank.jp/word/%E7%94%9F-78786#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 8
+  }
 }

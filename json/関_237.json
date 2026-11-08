@@ -17,5 +17,28 @@
     "connection",
     "to close"
   ],
-  "explanation": "Originally written as 關, this character combines the gate sign 門 with the figure of a horizontal locking bar laid across the doors. Its primary sense is the concrete act of shutting a gate. From the idea of fastening with such a structural device, the graph extends to mechanisms or apparatuses (as in 機関), and to the official barrier or checkpoint that controls passage (関, 関所). In compounds like 関係 “relationship,” it evokes two sides bounded and held together by an intervening barrier, hence the notion of connection."
+  "explanation": "関 abbreviates 關, which combines 門 with 𢇇, a locking bar. The crosspiece fastens the two leaves of the gate and holds them closed. The formation concerns a closure built into the gate's structure.\n\nFrom the fastening come shutting, blocking, and separating. A gate controlling a road becomes a barrier or checkpoint. The same structural idea gives a mechanism and the crucial point through which an operation must pass.\n\nThe bar also joins the two sides. 関 therefore extends to involvement, connection, and a relationship: two parties are held within the same arrangement. Closure and connection are the two functions of the fitting that keeps the gate together.",
+  "sources": [
+    {
+      "title": "常用字解 · 関 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8562591.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 関",
+      "url": "https://kotobank.jp/word/%E9%96%A2-86733#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 129
+  }
 }

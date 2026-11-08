@@ -13,5 +13,28 @@
     "night",
     "evening"
   ],
-  "explanation": "夜 is a compound graph combining 大 and 夕. In early forms, 大 draws a person seen from the front with arms and legs outstretched, while 夕 sketches the evening moon. Together they picture the moon appearing beneath the person’s arm, evoking the moment when the moon comes into view. From this image the character came to signify the time of evening and night."
+  "explanation": "夜 combines 大, a person seen from the front with arms and legs spread, with 夕, the evening moon. The moon appears beneath the person's arm. Its emergence gives an image for the time when the moon comes into view: evening and night.\n\nFrom that time of day come night, nighttime darkness, and the hours extending toward dawn. 夜 can refer to the night as a whole or specify a part of it, such as midnight.",
+  "sources": [
+    {
+      "title": "常用字解 · 夜 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26462900.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 夜",
+      "url": "https://kotobank.jp/word/%E5%A4%9C-647455#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 1
+  }
 }

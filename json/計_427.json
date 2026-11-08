@@ -15,5 +15,28 @@
     "to plan",
     "to think"
   ],
-  "explanation": "Shirakawa treats 計 as a later compound first noted in the Shuowen; since no oracle-bone or bronze forms are known, its earliest shape cannot be fixed with certainty. From its on-yomi kei he envisions an affinity with 卜, divination, in which one tallies the recorded hits and misses, and with 稽, the act of pondering and comparing. In this light, 計 belongs to the realm of reckoning and deliberation—used for counting, calculating, laying plans, and thinking things through."
+  "explanation": "計's received form combines 言 with 十. It concerns a completed reckoning, gathering individual items into a total that can be assessed. Annual accounts are one application of that summing-up.\n\nThe oldest formation is uncertain, but the word's sound connects it with 卟, examining the record of divinations. The successes and failures were counted and reviewed, giving a relation to 稽, investigating or comparing. 言 places prayers or solemn declarations within this probable early setting.\n\nFrom reckoning and examining come calculation, estimation, consideration, and deliberation. A course of action determined through that assessment becomes a plan. The numerical and mental uses share the bringing-together of particulars to arrive at a result.",
+  "sources": [
+    {
+      "title": "常用字解 · 計 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9895261.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 計",
+      "url": "https://kotobank.jp/word/%E8%A8%88-488049#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 117
+  }
 }

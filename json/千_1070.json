@@ -11,5 +11,28 @@
   "meanings": [
     "thousand"
   ],
-  "explanation": "In the earliest scripts on tortoise plastron and bone, as well as in bronze inscriptions, this character is formed by taking the figure of a person (人) and adding a short stroke to the leg, a deliberate notch that distinguishes it from the ordinary 人 and assigns it a numeric value. With this marked “person,” the texts denote the number thousand; and to show two thousand or three thousand, they add the numerals 二 or 三 to that leg portion. The character thus arose as a specially notched human figure used as the sign for a thousand."
+  "explanation": "千 is formed on 人, a person, which supplies its sound. Early writing adds a thickened mark near the figure's lower part to distinguish the numeral from the ordinary human sign.\n\nOracle-bone forms for two thousand and three thousand add two or three horizontal strokes in the same lower position. The repeated pattern shows that the human figure remains the base of the numerical writing.\n\n千 means a thousand and, by extension, a great many or many times. The old sound relationships are wider than the modern Japanese readings suggest: bronze inscriptions can also use 人 where 年 is expected. The sound relationship connects the human base with the numerical word.",
+  "sources": [
+    {
+      "title": "常用字解 · 千 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14636876.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 千",
+      "url": "https://kotobank.jp/word/%E5%8D%83-549207#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 159
+  }
 }

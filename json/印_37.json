@@ -14,5 +14,28 @@
     "stamp",
     "print"
   ],
-  "explanation": "This character is a compound graph that places the fingertips (爪) above the form of a kneeling person (卩). It pictures firmly pressing down from above—an act of holding something in place. From this concrete image it came to signify the act of pressing down a seal, and by extension the seal itself and the stamped mark in general."
+  "explanation": "印 combines 爪, fingertips descending from above, with 卩, a kneeling person. The hand presses the person down. Its first meanings concern holding down, restraining, and bringing someone under control.\n\nThe same pressing action later names the application of a seal. From pressing the seal come the seal itself, the impression it leaves, and a mark used to identify or authenticate something.",
+  "sources": [
+    {
+      "title": "常用字解 · 印 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4932247.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 印",
+      "url": "https://kotobank.jp/word/%E5%8D%B0-32766#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 148
+  }
 }

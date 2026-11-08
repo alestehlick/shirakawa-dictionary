@@ -21,5 +21,28 @@
     "rule",
     "fate"
   ],
-  "explanation": "Originally written 數, the character combines 婁, which depicts a girl with her hair piled high, with 攴 (攵), the hand holding a stick that marks an action. The graph shows striking and breaking down that coiffure, disheveling the hair. As an act directed against a person, it yields the sense “to attack.” From the image of hair thrown into disorder—beyond orderly reckoning—arose the meanings “number” and “to count.” And because counting follows fixed patterns, the character also came to signify established rule or ordinance, and by extension an allotted fate, as seen in compounds such as 命数 and 暦数."
+  "explanation": "数 abbreviates 數, made from 婁 and 攴. 婁 shows a woman with her hair piled high; 攴 adds a hand holding a striking implement. The act is beating and disarranging the hair.\n\nSuch treatment was used in reproaching or punishing a woman, giving the sense of blaming or urging. The many loosened strands also give multiplicity: things scattered into numerous separate parts. From their number comes counting and reckoning.\n\nA reckoning leads to a determinate result. 数 therefore extends to an order or principle that governs events, including the course of a dynasty or an allotted fate. It can also mean repeatedly or frequently. The older senses of reproach, multiplicity, and recurrence remain alongside the familiar numerical use.",
+  "sources": [
+    {
+      "title": "常用字解 · 数 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14192615.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 数",
+      "url": "https://kotobank.jp/word/%E6%95%B0-83217#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 146
+  }
 }

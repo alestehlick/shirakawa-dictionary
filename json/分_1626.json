@@ -19,5 +19,28 @@
     "part",
     "minute"
   ],
-  "explanation": "Shirakawa explains 分 as a compound of 八 and 刀. The graph 八 shows something split into left and right, while 刀 is the blade that performs the cut. Together they depict dividing an object into two, which underlies the senses “to divide,” “to separate,” and “to branch off” seen in wakeru, wakatsu, and wakareru. Classical glosses simply define it as “to separate.” The related character 別 originally evokes cutting at the joints with a knife, and from this combination comes the idea of 分別—discriminating by kind. In Japanese the meaning naturally extends to wakaru, “to understand,” since understanding is the ability to make clear distinctions, as in the phrase “a person who understands reason.”"
+  "explanation": "分 combines 八, the shape of two parts separating, with 刀, a knife. The knife brings about the division shown above it. Together the elements express cutting or separating something into two.\n\nFrom this concrete action come dividing, distributing, parting, and distinguishing one thing from another. A division also establishes a boundary or an allotted portion. Applied to social life, that portion becomes a person's station, proper role, or duty, as in 身分 and 名分.\n\nThe character also supplies units used in measuring length, weight, angle, and time. These uses concern a defined part of a larger whole. Its related words include 半 and 判, both concerned with division, and 頒, the distribution of portions.",
+  "sources": [
+    {
+      "title": "常用字解 · 分 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24655816.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 分",
+      "url": "https://kotobank.jp/word/%E5%88%86-122190#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 15
+  }
 }

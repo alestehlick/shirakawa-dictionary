@@ -14,5 +14,28 @@
     "method",
     "art"
   ],
-  "explanation": "術 is a compound graph built from 行 and 朮. 行 shows great roads crossing at a junction—a place where many spirits were believed to pass—so crossroads became sites for potent ritual practice. 朮 represents an animal endowed with spirit power. At such roads, diviners employed the spirit-guided techniques associated with 述 and 遂 to consult fate and determine whether an army should attack or advance, and then to proceed in accordance with that verdict. From this sense of efficacious ritual technique, 術 broadened to mean cultivated skill and learned method, and now extends to fields such as technology, the arts, and scholarship."
+  "explanation": "術 places 朮 within 行, the road. 行 depicts a crossroads, where many spirits were thought to pass. 朮 represents an animal endowed with spiritual power. The animal was used in rites performed on the road to determine a course of action, including whether an army should advance or withdraw.\n\nThe decision and its execution are linked. Related 述 and 遂 concern proceeding in accordance with what has been determined and carrying the action through. The road is therefore both the place of the rite and the route of the ensuing movement.\n\nFrom an effective ritual procedure come a method, technique, art, or learned skill. 術 also retains uses for a road or passage. Its range joins the place where action is decided with the means of accomplishing it.",
+  "sources": [
+    {
+      "title": "常用字解 · 術 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13264273.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 術",
+      "url": "https://kotobank.jp/word/%E8%A1%93-528835#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 137
+  }
 }

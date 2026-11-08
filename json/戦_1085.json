@@ -18,5 +18,28 @@
     "to tremble",
     "to shudder"
   ],
-  "explanation": "The character originally appears as 戰, formed by combining 單, the image of an oval shield topped with two plume-like decorations, with 戈, a halberd. In bronze inscriptions one can even see a figure defending with a shield in the right hand and striking with a pike in the left, a vivid emblem of combat. From this composition the senses to fight, battle, and war developed. The Japanese verb tatakau probably echoes an older phrase tatekau, to cross shields. By phonetic extension with the same on reading sen, the graph is also used for the sense to tremble or shudder, standing in for 顫, hence readings such as ononoku."
+  "explanation": "戦 is the shortened form of 戰, which joins 單 and 戈. 單 represents an oval shield with feather ornaments at its top; 戈 is a shafted weapon with a sideways blade. The fighter holds the shield on the left and the weapon on the right.\n\nThis equipment gives fighting, battle, and war. The shield also occurs in the early hunting formation 獸, where hunting and warfare share an armed, organized approach. The two activities belonged to a closely connected practical and ritual setting.\n\n戦 can also mean trembling or shuddering. That use is connected by sound with 顫 and related words for fearful agitation. It is a separate word relationship alongside the graphic scene of combat.",
+  "sources": [
+    {
+      "title": "常用字解 · 戦 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14743355.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 戦",
+      "url": "https://kotobank.jp/word/%E6%88%A6-431418#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 126
+  }
 }

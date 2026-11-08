@@ -14,5 +14,28 @@
     "basis",
     "book"
   ],
-  "explanation": "An indicative graph built on 木, the tree: by adding a conspicuous dot or stroke at the lower part of the trunk, the ancient form points to the base and roots, yielding the senses of “root,” “origin,” and by extension “basis” and the “beginning” of things. In later usage it also came to denote a volume and to serve as the counter for books (ippon, nihon), hence “book.” Marking the top of 木 instead produces 末, the treetop or “end”; paired together as 本末, they evoke “root and tip,” the beginning and the end."
+  "explanation": "本 is 木, a tree, with an extra mark drawing attention to the base of its trunk. In the older forms the added mark can be a thick dot; the modern horizontal stroke performs the same pointing function. It identifies the root or foundation.\n\nMarking the upper part of the tree produces 末, the tip or end. 本 and 末 thus distinguish the two ends of one visible form.\n\nA root is where growth begins and what supports it, giving 本 the senses ‘origin,’ ‘beginning,’ ‘basis,’ and ‘essential part.’ It can also indicate what is original or properly belongs to something. The use for a book or written text is a later meaning of the character.",
+  "sources": [
+    {
+      "title": "常用字解 · 本 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25677736.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 本",
+      "url": "https://kotobank.jp/word/%E6%9C%AC-631932#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 16
+  }
 }

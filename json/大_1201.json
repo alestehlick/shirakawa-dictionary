@@ -16,5 +16,28 @@
     "large",
     "great"
   ],
-  "explanation": "A pictograph of a person seen from the front with arms and legs outstretched, 大 originally portrays an expansive human figure and thus came to mean big, and by extension prosperous and excellent. This simple form became a seed for related graphs: placing a large “face” above it gives 天; inserting an ornamental hairpin through the topknot on the head yields 夫, the proper ceremonial attire of a bridegroom; adding a short horizontal stroke to the figure forms 立, standing at a set place; arranging such standing figures left and right produces 竝 (並), to stand in a row; and adding a small stroke below both sides creates 亦, the original graph of 腋 (armpit)."
+  "explanation": "大 depicts a human being viewed from the front, with arms and legs spread. The oracle-bone and bronze forms preserve this broad, open stance. From the expansive figure come the central meanings ‘large’ and ‘great,’ with further uses for something flourishing, outstanding, or of high degree.\n\nThe frontal body provides a base for other formations. In 天, attention is drawn to the head; in 夫, the head bears the hairpin of an adult man.",
+  "sources": [
+    {
+      "title": "常用字解 · 大 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15858695.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 大",
+      "url": "https://kotobank.jp/word/%E5%A4%A7-449450#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 13
+  }
 }

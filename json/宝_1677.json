@@ -13,5 +13,28 @@
     "precious object",
     "valuables"
   ],
-  "explanation": "Originally written 寶, this is a picto-phonetic character. It shows the roof of the ancestral mausoleum (宀), under which offerings are set out: jade (玉), cowry shells (貝, once used as valuables), and an earthen jar (缶) for wine or water. The jar element also serves as the phonetic, which underlies the Sino-Japanese reading. The graph thus names the precious items presented in the ancestral shrine—hence “treasure.” The Shuowen glosses it as “rare,” explaining it in the sense of a “rare treasure” (珍宝). Bronze inscriptions often include dedicatory phrases such as “to make a treasured ritual vessel,” reflecting its association with prized sacrificial objects."
+  "explanation": "宝 abbreviates 寶. Beneath 宀, the roof of an ancestral sanctuary, the older graph places 玉, jade, and 貝, cowries, together with 缶, an earthen vessel that supplies the sound. The objects are valuables presented in the shrine.\n\nBronze dedications call their vessels 寶, treasured ritual objects. The character begins among things treasured for sacred use. The phonetic 缶 may preserve the memory of an earlier use of pottery in such ceremonies.\n\nFrom treasured offerings come treasure and precious possessions generally. The same reverence extends to what belongs to a deity or sovereign, producing honorific uses for a ruler's throne, command, or carriage, and to anything regarded as especially important.",
+  "sources": [
+    {
+      "title": "常用字解 · 宝 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25136363.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 宝",
+      "url": "https://kotobank.jp/word/%E5%AE%9D-559525#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 43
+  }
 }

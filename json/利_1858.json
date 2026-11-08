@@ -16,5 +16,28 @@
     "sharp",
     "effective"
   ],
-  "explanation": "This character combines 禾, the grain plant, with 刀/刂, a blade. It pictures cutting down grain with a sharp edge; from the harvest and the gain that comes of it, the sense of profit and advantage arose. The Shuowen glosses it as sharp, drawing on the keen cutting blade, and from there the meanings broadened to sharp and quick. In Japanese it is read kiku, to be effective, as in hidarikiki left-handedness and kuchikiki intercession or influence."
+  "explanation": "利's received form combines 禾, grain, with 刀, a blade. Cutting the crop gives a sharp edge its practical purpose, while gathering the crop gives gain or benefit.\n\nThe earlier bronze shape represents a ploughing implement. It belongs to the same agricultural family as words for cultivating and bringing land into order. The knife-shaped component develops with the emphasis on a keen cutting action.\n\n利 therefore joins sharpness with usefulness: an edge is effective because it cuts, and cultivation yields something worth having. The word extends to quickness, smooth passage, advantage, profit, and prevailing over another. Japanese *kiku*, being effective or working as intended, continues this range of practical efficacy.",
+  "sources": [
+    {
+      "title": "常用字解 · 利 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/27775035.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 利",
+      "url": "https://kotobank.jp/word/%E5%88%A9-579154#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 165
+  }
 }

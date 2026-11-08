@@ -13,5 +13,28 @@
     "moon",
     "month"
   ],
-  "explanation": "A pictograph of the moon, portrayed not as a full disc like the sun 日, but as the waxing three-day crescent chosen to set it apart. Because the moon waxes and wanes, the slender early crescent captured its characteristic change. The old shape also lies behind 夕 “evening,” which originally resembled the moon appearing at dusk. In oracle-bone forms the drawing varies by period, yet consistently shows the three-day crescent. In bronze inscriptions, 月 bears a dot while 夕 does not; in the modern script, 月 carries two small interior strokes, distinguishing it from 夕 with only one. From this image the character came to mean both the visible moon and, by extension, the month."
+  "explanation": "月 pictures the crescent moon. Oracle-bone drawings vary by period, and some can also serve for 夕, evening, but the curved lunar outline remains recognizable. The received rectangular side and interior strokes are later developments of that shape.\n\nThe moon's waxing and waning measures a recurring period, giving 月 the meaning ‘month.’ From months come the broader passage of years and time. It also names menstruation through its periodic return.\n\nA 月-shaped component in another character may instead be the abbreviated flesh sign 肉, as in many words for the body. The crescent and the flesh-sign have converged in the compact modern script.",
+  "sources": [
+    {
+      "title": "常用字解 · 月 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10195162.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 月",
+      "url": "https://kotobank.jp/word/%E6%9C%88-99088#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 67
+  }
 }

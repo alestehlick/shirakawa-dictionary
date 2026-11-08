@@ -16,5 +16,28 @@
     "front",
     "to face"
   ],
-  "explanation": "Shirakawa understands 面 as a pictograph of a mask with only the eyes showing. In ancient rites, various masks were worn for divine ceremonies; related character forms such as 戲 and 劇 even suggest performers equipped with tiger-skin headgear. From this ritual mask, the graph broadened in sense to the human face (ganmen), and then to the front or visible surface, and further to the idea of facing or standing opposite. By extension, it can also imply turning one’s face away from something."
+  "explanation": "面 pictures a mask with openings through which only the eyes appear. The outer contour presents a face, while the eyes identify the living wearer behind it. The mask gives a visible expression that can cover the person's own.\n\nThe word extends from this represented face to the human face generally. A face turns toward something, giving facing, meeting someone in person, and a particular direction or aspect. Turning away supplies another branch of the same bodily relation.\n\nThe visible face of a thing is then its front, outer surface, or upper side. 面 can consequently describe the surface encountered by the eye or hand as well as a person's appearance. The movement from mask to face makes these different surfaces part of one vocabulary.",
+  "sources": [
+    {
+      "title": "常用字解 · 面 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26272204.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 面",
+      "url": "https://kotobank.jp/word/%E9%9D%A2-141892#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 87
+  }
 }

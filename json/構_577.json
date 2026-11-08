@@ -16,5 +16,28 @@
     "to combine",
     "to contrive"
   ],
-  "explanation": "Shirakawa reads 構 as a phono‑semantic character. Its core is the phonetic 冓 (kō), an image of identical elements strung and tied together above and below, expressing the act of assembling or putting things together. With the wood element added, the graph narrows to the concrete scene of fitting pieces of wood into a structure. From this image arise its senses: to build, to set up, to put together or combine, and by extension to contrive."
+  "explanation": "構 joins 木, wood, with 冓 as its phonetic. 冓 represents braided cords tied together, a symbolic formation associated with a marriage joining. It contributes the idea of combining or fitting things into a connected arrangement.\n\nWith 木, the combination becomes the fitting of timbers into a framework. The older definition concerns covering or building a roof: separate wooden members are assembled into a structure.\n\nThe action then extends to constructing anything from related parts, setting something up, and organizing a whole. A plan can likewise be assembled in the mind or deliberately put into action. 構 therefore includes building, composing, preparing, and contriving, with the wooden framework as its concrete application.",
+  "sources": [
+    {
+      "title": "常用字解 · 構 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11164039.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 構",
+      "url": "https://kotobank.jp/word/%E6%A7%8B-493879#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 118
+  }
 }

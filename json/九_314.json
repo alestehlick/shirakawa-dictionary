@@ -13,5 +13,28 @@
   "meanings": [
     "nine"
   ],
-  "explanation": "Shirakawa sees 九 as a pictograph drawn from the dragon. In early forms of the dragon graph 竜, the element 虫 (here not meaning ‘insect’) represents the body, while 九 depicts the bent, severed head—understood as a male dragon’s head. The ancient graph 禹, name of the flood-taming deity, combines this male-dragon head with 虫 to portray a dragon being. The use of 九 for the numeral ‘nine’ is a later phonetic borrowing. In Japanese, kokonotsu evokes the point at which counting on the fingers comes to its end. In China, nine was revered as a sacred number—reflected in titles like the Nine Songs and Nine Chapters—so 九 likely carried an aura of sanctity."
+  "explanation": "九 pictures a dragon with its body bent. The curved and turning outline is the creature's shape; it was borrowed for its sound to write the number nine. The numeral therefore carries a graphic history older than its use in counting.\n\nNine is the highest single-digit number and can suggest culmination or the utmost extent. In the Yijing it identifies yang lines, as in 初九, 九二, and 上九. This gives the numeral an important place in the language of cosmic order.\n\nRelated words connect through sound with entwining, gathering, and long duration. These associations extend the family around the bent dragon and its numerical use, without requiring the strokes themselves to enumerate nine objects.",
+  "sources": [
+    {
+      "title": "常用字解 · 九 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8941246.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 九",
+      "url": "https://kotobank.jp/word/%E4%B9%9D-476520#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 133
+  }
 }

@@ -18,5 +18,28 @@
     "to promise",
     "to strengthen"
   ],
-  "explanation": "結 is a phono-semantic character: the thread element points to cords and tying, while 吉 acts as the phonetic and evokes the idea of sealing—originally the head of a small adze set upon a sacred covenant vessel that held written prayers, closing them in to preserve their power. From this core sense of closing and containing, musubu came to mean the gathering and concentrating of vital force. In ancient Japan, people performed binding rites, knotting pine twigs or plants to ‘bind in’ the soul’s wish for safety and great happiness; tying cords could also affirm affection and serve as a pledge. Hence the character’s range of meanings: to tie and connect, to make a promise, and to consolidate or strengthen."
+  "explanation": "結 joins 糸, thread, with 吉 as the sound element. 吉 pictures a prayer receptacle protected by a small axe-head above it. The covering safeguards what is held inside and seals in the prayer's power.\n\nTying a knot likewise had a ritual significance: a cord could fasten and preserve something whose effectiveness was to be maintained. Ancient songs give the tying of cords a symbolic role, and congratulatory cords continue that association with binding and good wishes. The character's literal action is fastening threads together.\n\nFrom tying and tightening come joining, linking, gathering into a bundle, and making a connection secure. A promise or agreement can similarly be made firm, giving uses such as 結約 and 結盟. The binding thread keeps a connection firm, as 吉 safeguards the prayer held within its vessel.",
+  "sources": [
+    {
+      "title": "常用字解 · 結 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10172491.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 結",
+      "url": "https://kotobank.jp/word/%E7%B5%90-490234#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 18
+  }
 }

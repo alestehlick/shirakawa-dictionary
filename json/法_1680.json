@@ -16,5 +16,28 @@
     "method",
     "means"
   ],
-  "explanation": "Shirakawa explains that the original form was 灋, built from the water sign, the sacred beast 廌 (a sheep-like “ordeal animal” used in trials), and 去. Here 去 combines a figure with outstretched limbs (大) and an open covenant vessel (凵) whose lid has been removed, signaling that a false oath has been exposed. In ancient adjudication, parties swore before the gods and underwent divine ordeal; when guilt was revealed, the loser was expelled—cast into the waters—together with the ordeal beast and the invalidated covenant chest. Hence 灋 first meant to discard or banish, a sense reflected in bronze texts such as 勿灋朕命, “Do not cast away my command.” Later the 廌 component was abbreviated to yield 法, which came to signify the rule to be followed—law and regulation—and by extension following a rule and the means or method for doing so."
+  "explanation": "The fuller form 灋 combines water, the ordeal animal 廌, and 去. 廌 is the sheep-like creature used in a divine trial. The ancient 去 joins a person, 大, with an oath receptacle whose lid has been removed. Opening it invalidates the oath of the party judged to have sworn falsely.\n\nThe defeated litigant, the discredited oath vessel, and the ordeal animal are cast into water. The composition records a way of disposing of them after judgment. Bronze inscriptions consequently use 灋 in the sense of 廃, ‘to discard’ or ‘to annul’; a command can be something that must not be cast aside.\n\n法 is the shorter writing with 廌 omitted. From the procedure of judgment and disposal, the word develops the senses of punishment, criminal law, and an established rule. A rule provides a pattern to follow, giving the further meanings ‘standard,’ ‘method,’ and ‘way of doing something.’",
+  "sources": [
+    {
+      "title": "常用字解 · 法 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25166134.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 法",
+      "url": "https://kotobank.jp/word/%E6%B3%95-131733#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 20
+  }
 }

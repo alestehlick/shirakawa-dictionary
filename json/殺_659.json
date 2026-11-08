@@ -16,5 +16,28 @@
     "to reduce",
     "to diminish"
   ],
-  "explanation": "Shirakawa reads 殺 as a compound graph: on the left stands the figure of a curse-bearing animal, marked by a small dot for its ear, and on the right 殳, the long-handled pike (an elongated戈). The scene shows striking down the animal that has brought a curse, thereby weakening and neutralizing its baneful power. From this, the original sense is to lessen or blunt a harmful influence—hence uses like gensai “to reduce”—and only subsequently did it come to mean simply “to kill.” In oracle-bone and bronze inscriptions the character is written with just the animal figure, a usage later seen with 蔡 for “to kill.”"
+  "explanation": "殺 combines a curse-bearing animal on the left with 殳, a weapon wielded by a hand, on the right. The animal is an early form associated with 祟, harmful supernatural influence. Striking it down enacts a counter-rite against the curse it carries.\n\nDestroying this creature was thought to weaken an enemy's curse. That is the starting point for the sense ‘to reduce’ or ‘to diminish,’ preserved alongside ‘to kill.’ 相殺 retains the idea of one force cancelling another. The killing is therefore part of a ritual action whose intended result is the lessening of harmful power.\n\nThe character subsequently applies to killing people, execution, destruction, and damaging or withering living things. It can also intensify a verb. These later uses broaden the violent action and its force beyond the particular creature in the original formation.",
+  "sources": [
+    {
+      "title": "常用字解 · 殺 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11802529.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 殺",
+      "url": "https://kotobank.jp/word/%E6%AE%BA-507113#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 14
+  }
 }

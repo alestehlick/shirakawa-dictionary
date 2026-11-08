@@ -14,5 +14,28 @@
     "motion",
     "activity"
   ],
-  "explanation": "A phono-semantic graph. In early bronze forms, 童 served as the phonetic element (giving the on reading dō) and was even used to write this word itself. Later, the component 力—understood by Shirakawa as the form of a suki, a plow—was added, bringing in the concrete image of agricultural labor. From this scene the senses broadened to “move the body,” “to move, budge,” and by extension “to act, to do.” The graph 童 originally depicted a person with tattoo marks over the eyes, denoting a prisoner or slave, which here functions purely as the sound element. In the present form the upper part is written like 重, but the word’s core imagery comes from 童 as phonetic combined with 力 as the laboring implement; for the specialized sense of “to work,” Japanese later created 働."
+  "explanation": "動 now combines 重 with 力. Early bronze writing uses 童 for the word, and that older formation supplies both the sound relationship and the setting of the action. 童 depicts a servant or captive with a mark above the eye, with 東, a bag-shaped sign, below as its phonetic.\n\n力 represents a plough. Adding it places the servant at agricultural work, moving the body to cultivate the land. The early meaning is making or working, with farming as the concrete activity.\n\nFrom bodily labour come moving, acting, and doing more generally. Movement can then be a change, a disturbance, or something that stirs another person. Japanese later formed 働 by adding the person element to distinguish the specialized sense of working.",
+  "sources": [
+    {
+      "title": "常用字解 · 動 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/21991911.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 動",
+      "url": "https://kotobank.jp/word/%E5%8B%95-579420#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 151
+  }
 }

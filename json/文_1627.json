@@ -18,5 +18,28 @@
     "decoration",
     "literature"
   ],
-  "explanation": "In its earliest forms, 文 depicts the tattoo or body painting placed on the chest of a front‑facing figure. Such designs—shapes like a heart, cross, or chevron—were painted in fresh cinnabar on the bodies of the dead as potent ritual adornment: charms to keep the soul from slipping away, ward off intrusive spirits, and pray for revival. From this sacred practice, 文 came to signify a beautifully adorned figure or pattern, coloring and decoration. Related characters preserve this ritual background: 産 portrays rites surrounding birth; 彥 combines 文 with a brow mark and hairlines to show the coming‑of‑age tattoo on the forehead of a youth; 爽, 爾, and 奭 depict vivid vermilion motifs set symmetrically on the breasts, hence senses like clarity, brightness, and beauty (爾 being the bust portion of 爽). Characters that add 彡 underscore the luster and elegance of such body decoration. 章 represents the ink‑charged tip of a tattoo needle; paired with 文 it yields 文章, which extends the idea of patterned adornment to the realm of composed expression, and through 文字 to the notions of characters, writing, and words."
+  "explanation": "文 pictures a person facing forward with a design marked on the chest. Early forms show a heart-like shape, a cross, or a chevron within the body's outline. These were probably temporary ritual markings applied to a dead person.\n\nBody decoration protected and consecrated the person at a passage between conditions. Related 爽 concerns vermilion chest marks warding harmful spirits away from the dead; 産 and 彦 connect marking with birth and a young man's attainment of adulthood. The visible design gives the body a specially adorned state.\n\nFrom this come pattern, colour, decoration, and refinement. 章 pictures a tattooing needle with ink gathered at its point, joining the beauty of marking to 文 in 文章. Patterned adornment then extends to composed expression: 文 becomes a written text or literary work. The same ordering of visible forms underlies decoration and writing.",
+  "sources": [
+    {
+      "title": "常用字解 · 文 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24656046.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 文",
+      "url": "https://kotobank.jp/word/%E6%96%87-8555#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 166
+  }
 }

@@ -15,5 +15,28 @@
     "reputation",
     "fame"
   ],
-  "explanation": "Shirakawa reads 名 as a compound of 夕 and 口. Here 夕 is an abbreviated form of 肉, the meat offered in ancestral rites, while 口 depicts the sacred covenant vessel (sai) into which written prayers to the gods were placed. When a newborn survived its first vulnerable days, a rite was held in the ancestral mausoleum: meat was presented, a prayer proclaiming the child’s growth was recited, and at that moment the child received a 名. From this ritual act came the senses “name” and “to name,” and by extension the idea of publicly acknowledged “reputation” or “fame,” as in 名声 and 名望. In the same tradition, one first received a childhood name (幼名), and later, at another temple rite, underwent formal naming (命名); to avoid uttering the personal name, a courtesy name (字, azana) was adopted, often chosen in deliberate relation to the given 名 and used as the ordinary, everyday name."
+  "explanation": "名 combines 夕, here a piece of sacrificial meat, with 口, the ritual container for written prayers. The scene is the naming of a child before the ancestors.\n\nWhen the child reached three months, the family reported the birth at its ancestral shrine. The offering and prayer accompanied the giving of a name, making the ceremony an admission into the lineage. The name was bestowed within this relationship to the ancestral spirits.\n\nFrom the personal name come the names of things, their designation in language, and the name corresponding to an actual role or condition. A name known publicly becomes reputation or fame. 名 can also mean recording something in writing. These uses develop the identifying word and the recognition it confers.",
+  "sources": [
+    {
+      "title": "常用字解 · 名 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26132106.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 名",
+      "url": "https://kotobank.jp/word/%E5%90%8D-586865#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 181
+  }
 }

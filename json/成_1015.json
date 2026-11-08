@@ -16,5 +16,28 @@
     "to accomplish",
     "to complete"
   ],
-  "explanation": "In the earliest forms, 成 combines the spear 戈 with a single vertical stroke that depicts a tassel or pendant hanging down. The graph shows the final act after a weapon was made: attaching a decorative pendant to the spear as a rite of purification and exorcism, the ceremony that marked the work as complete. From this completion rite the character came to mean to be complete, to become, and to accomplish. The same ritual logic appears in related usage (as in 就), where at the completion of a great fortress gate a vessel was anointed with the blood of a sacrificial dog. The sense of finishing and ritually purifying a work underlies the core meaning of 成."
+  "explanation": "成 combines 戈, a shafted weapon, with a hanging tassel or pendant. Oracle-bone and bronze forms show the ornament attached to the weapon. It is added when manufacture is finished, as part of a purification rite marking the completed object.\n\nCompletion was formally acknowledged through such a ceremony. The related 就 concerns the finishing of a great gate, accompanied by a dog sacrifice. 成 applies this ritual pattern to making an object ready for use.\n\nFrom the finished work come being complete, accomplishing, and bringing something into its established condition. The word also gives becoming, settling an affair, and reaching a peaceful agreement. Its relation to 誠, sincerity, belongs to the use of the consecrated weapon in solemn pledges.",
+  "sources": [
+    {
+      "title": "常用字解 · 成 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14232267.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 成",
+      "url": "https://kotobank.jp/word/%E6%88%90-530503#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 130
+  }
 }

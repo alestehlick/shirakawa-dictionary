@@ -16,5 +16,28 @@
     "distinction",
     "other"
   ],
-  "explanation": "別 is a compound graph that joins the element called ka—an ancient depiction of the human skeleton from the chest upward—with the knife radical. The character pictures cutting the sinews where they bind the bones, a vivid act of severing what had been connected. From this image arise its senses of separating, dividing or apportioning, and parting, and by extension the notion of distinction and otherness."
+  "explanation": "別 combines the upper-body bone shape 冎 with a knife, 刀, now written as 刂 at the right. The action is separating the bones at their joints. It is a concrete form of dismembering or taking an articulated structure apart.\n\nFrom this come dividing, separating, loosening connections, and parting. A separation also establishes a distinction, giving the senses of something different or of considering things separately.\n\nThe related 分 and 半 concern division into portions, while 辨 concerns distinguishing. 別 shares this wider vocabulary but retains the particular image of a knife working between bones. The compact modern left side preserves that earlier skeletal outline.",
+  "sources": [
+    {
+      "title": "常用字解 · 別 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24840107.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 別",
+      "url": "https://kotobank.jp/word/%E5%88%A5-154001#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 88
+  }
 }

@@ -16,5 +16,28 @@
     "fief",
     "enfeoff"
   ],
-  "explanation": "The old form of 封 combines three elements: 丰, the figure of a young tree; 土, the earth that is also the basis of the shrine (the original form of 社); and 又, a hand. Together they depict planting a tree by hand at a sacred site, a rite for inviting a deity’s presence. From this solemn act evolved the political sense of enfeoffment—distributing the Son of Heaven’s land and appointing lords (封建). Related expressions preserve the ritual background: 封樹 is the heaping of earth on a grave and planting a tree, and 封禅 is the ceremony in which the Son of Heaven raises altars and offers worship to heaven and earth. In later usage, with the on reading fuu, the character means to shut or seal, as in 封鎖, 封書, 封筒, and 密封."
+  "explanation": "封 combines a growing tree, 土, and 寸, a hand. 土 represents the local earth deity, and the hand plants a tree at that sacred place as a support for the divine presence. The action establishes and marks a territory.\n\nInvesting a lord with land was performed through such a rite. Early accounts describe the ruler standing at the local shrine and granting vessels, land, and people. Other ritual descriptions mark the central altar and its boundaries with differently coloured earth, preserving the relation between sacred ground and political domain.\n\n封 therefore names enfeoffment and the boundary mound that establishes a holding. Heaping, closing, or coating something gives further uses for sealing it shut. A sealed letter then becomes a 封書. The territorial and closing senses retain the idea of fixing a defined limit.",
+  "sources": [
+    {
+      "title": "常用字解 · 封 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24428791.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 封",
+      "url": "https://kotobank.jp/word/%E5%B0%81-614872#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 115
+  }
 }

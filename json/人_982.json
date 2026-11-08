@@ -13,5 +13,28 @@
     "person",
     "human being"
   ],
-  "explanation": "In its oldest forms, 人 is a side-view sketch of a standing human figure, the basic sign for the person and, by extension, humankind. Shirakawa traces a whole family of characters that stylize this same body in different attitudes: 大 shows a front view with arms and legs outstretched; a bent figure appears in 勺 viewed from the side; 匈, the ancient form of 胸, marks a chest adorned with ritual body drawings; 身 presents a pregnant figure with a swollen belly, while 包 and 孕 depict the embryo held within. In 光, a person (written with the variant 儿) bears a flame upon the head, and in 兄 a person carries a ritual “sai” vessel above. 企 captures someone on tiptoe, heels raised, seen from the side. All of these are transformations of the same archetypal human shape, reaffirming 人 as the elemental graphic of the person."
+  "explanation": "人 depicts a human figure seen from the side. The early oracle-bone and bronze forms show the body with an arm and a leg in profile; the modern two-stroke shape preserves this compact outline. It differs from 大, which presents the body frontally with limbs spread.\n\nThis side-view figure recurs in characters concerned with the body, including 身 and 包. Its basic meaning is a person or human being, extending collectively to people and a population. It can also refer to another person and, through a person's conduct and qualities, to character or personality. The graphic starting point remains the individual human figure.",
+  "sources": [
+    {
+      "title": "常用字解 · 人 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14028746.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 人",
+      "url": "https://kotobank.jp/word/%E4%BA%BA-536577#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 7
+  }
 }

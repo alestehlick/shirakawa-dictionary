@@ -11,5 +11,28 @@
     "single unit",
     "counter for pieces"
   ],
-  "explanation": "A phono-semantic character, 個 takes 固 as its phonetic, which marks the Sino-Japanese reading ko and suggests the idea of something firm and fixed in shape. From this grows the sense of a single, self-contained entity—one thing or one person—so the character comes to mean an individual and to serve as a general counter affixed to numerals (e.g., ikko ‘one piece’, niko ‘two pieces’). From the Tang period it is also used as a suffix in colloquial Chinese expressions, as in 真個 (shinko, ‘really’) and 這個 (shako, ‘this’)."
+  "explanation": "個 combines 人, a person, with 固 as its phonetic. 固 concerns something fixed in a definite form. 個 identifies one such entity considered on its own, without a matching counterpart: one item or one person.\n\nThe single entity becomes a unit for counting. 個 therefore follows numerals in expressions such as 一個 and 二個, sharing this function with 个 and 箇. It also supplies the individual considered separately from a larger group.\n\nThe word later enters colloquial constructions such as 真個, really, and 這個, this. These extend its grammatical range while preserving the act of singling something out. The definite form and the distinct unit remain connected through 固 and 個.",
+  "sources": [
+    {
+      "title": "常用字解 · 個 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10610240.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 個",
+      "url": "https://kotobank.jp/word/%E5%80%8B-61197#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 194
+  }
 }

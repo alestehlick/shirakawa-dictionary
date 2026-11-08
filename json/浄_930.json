@@ -16,5 +16,28 @@
     "to purify",
     "cleanse"
   ],
-  "explanation": "Originally written 淨, this is a phono‑semantic character with the water element giving the sense of washing and purification, and 争 serving as the phonetic. Early usage seems to have carried a nuance of “cold, chill”—as the Shuowen glosses a related graph as “sei, chill”—a natural association, since crystalline, pure water is felt as cold. The phonetic 争 also appears in 静(靜), whose bronze form shows hands grasping a plow‑like implement, depicting a rite to purify agricultural tools; by extension, 浄 may likewise have referred to a ritual of purifying an implement. From these ritual and sensory associations, the character came to mean “pure, clean” and “to cleanse,” and it is prominently used in Buddhist vocabulary, as in 浄行 (pure practice) and 浄土 (the Pure Land)."
+  "explanation": "浄, formerly 淨, combines 水, water, with 爭, now 争, as its phonetic. The early word seems to have concerned cold or chill and belongs near other words with that meaning.\n\nPure, clear water was often cold. This sensory association connects the chill with cleanness and clarity, giving clean, pure, and purifying. The water component keeps the physical quality present in the formation.\n\nThe word later becomes frequent in Buddhist writing. 浄土 applies purity to a religious realm, while uses for cleansing or purification carry the same movement into conduct and spiritual condition. Physical clarity and religious purity meet through the clear water.",
+  "sources": [
+    {
+      "title": "常用字解 · 浄 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13694989.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 浄",
+      "url": "https://kotobank.jp/word/%E6%B5%84-78808#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 184
+  }
 }

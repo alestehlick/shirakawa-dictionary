@@ -15,5 +15,28 @@
     "present",
     "reality"
   ],
-  "explanation": "Shirakawa understands 現 as a later phono-semantic character modeled on 顕 (顯). The left element 王 represents the jade bead 玉, an object believed to hold spiritual potency; when hung with cords, it serves as a vessel for a divine presence. 顕 depicts one bowing in reverence before this consecrated jade, at which the numinous power rises and reveals itself. In 現 the component 見 provides the sound, and the graph came to be used in place of 顕 with the sense “to show itself, to appear.” From this, utsutsu “reality” is understood as the very manifestation of a spirit within the visible, tangible world."
+  "explanation": "現 combines 見 as its phonetic with a left-hand element probably representing 玉, jade. Jade could serve as the lodging of a spirit, fitted with thread ornaments and approached in reverence. The presence becomes manifest through the consecrated object.\n\nThe fuller 顯, now 顕, pictures this reverence before the adorned jade. 現 probably developed as a related writing for appearing or revealing. 見 already shares the vocabulary of seeing and becoming visible, making the sound element part of the same act of manifestation.\n\nFrom appearing come the evident, the present, and reality: what has entered the visible world. Japanese *utsutsu* belongs to this range. The spiritual appearance supplies the older image, while the word extends to the ordinary reality encountered around us.",
+  "sources": [
+    {
+      "title": "常用字解 · 現 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10478569.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 現",
+      "url": "https://kotobank.jp/word/%E7%8F%BE-427731#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 172
+  }
 }

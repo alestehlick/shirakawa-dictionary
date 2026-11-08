@@ -13,5 +13,28 @@
     "now",
     "the present"
   ],
-  "explanation": "In its earliest forms, 今 is a pictograph: a jar-like vessel closed with a mushroom-shaped stopper and lid. This stoppered-lid motif also appears in the original writing of 飲, where 酉 depicts a wine cask sealed in the same way. Although the graph first denoted the physical lid, it was later borrowed for its sound and came to write the idea of “now,” giving the familiar sense of the present, as in compounds like 今昔 (past and present)."
+  "explanation": "今 pictures the lid or stopper of a jar. The early shape is the closing piece itself. A stoppered wine vessel appears in related formations, including early writings connected with drinking, which preserve the concrete use of the lid.\n\nThe character was borrowed for a similarly sounding word meaning the present time. This use became dominant, giving ‘now,’ ‘today,’ and the immediate occasion. A temporal 今 stands beside spatial 近: each concerns what is close, one in time and the other in place.\n\nOther members of the 今 sound family preserve the idea of closing or covering. That material history explains the graphic form, while the familiar time word depends on the loan of its sound.",
+  "sources": [
+    {
+      "title": "常用字解 · 今 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11340254.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 今",
+      "url": "https://kotobank.jp/word/%E4%BB%8A-435769#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 79
+  }
 }

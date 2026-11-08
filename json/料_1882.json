@@ -12,5 +12,28 @@
     "fee",
     "food"
   ],
-  "explanation": "Formed from the graphs for rice (米) and the ladle-measure 斗, 料 pictures grain being measured out with a handled scoop. In early lexicography it is defined straightforwardly as “to measure,” specifically the measuring of quantity. From that concrete scene the sense broadened to measuring or comparing in general, and then to what is measured out for use: materials for making things, and by extension provisions and food, as seen in compounds like 材料, 飼料, and 食料."
+  "explanation": "料 combines 米, grain, with 斗, a handled measure. It pictures the grain within the scoop as its quantity is determined. The concrete action is measuring out a portion.\n\nFrom measuring come counting, comparing, selecting, and considering. Assessment applies the same operation more widely: an amount or condition is examined before a decision is made.\n\nThe measured portion also gives what is set aside for a purpose: provisions, materials, an allowance, or the resources needed to do something. 料理 concerns putting things in order for use, while 資料 supplies material for examination. The action of measuring and the material made available remain joined in the word's range.",
+  "sources": [
+    {
+      "title": "常用字解 · 料 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28195014.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 料",
+      "url": "https://kotobank.jp/word/%E6%96%99-659019#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 180
+  }
 }

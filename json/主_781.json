@@ -18,5 +18,28 @@
     "lord",
     "main"
   ],
-  "explanation": "Shirakawa reads 主 as a pictograph of a lamp’s flame. The Shuowen glosses it as the “flame in a lantern,” specifically the fire burning on a tallow plate. Bronze inscriptions render the flicker of the flame itself; the later standard form adds the dish and its stand beneath. In clan rites, the elder—written in an older graph showing a hand holding fire within the ancestral shrine—was the one who tended this sacred flame. Because fire was revered, the bearer of the flame stood at the center of the household and managed its affairs. From that ritual role grew the senses of “master” and “owner,” and by extension “main” or “chief.”"
+  "explanation": "主 begins with the flame of a lamp. Early bronze writing can show the flame alone; the fuller form adds the oil dish and its support below. The whole is a picture of the burning light.\n\nFire was sacred, and its care belonged to the household's master or elder. A related early form of 叟 shows someone handling fire within an ancestral shrine. The keeper of the flame could therefore be called 主, transferring the name from the sacred fire to the person responsible for it.\n\nFrom that role come master, owner, chief, and the person directing an affair. 主 also names the place where a spirit is lodged, as in an ancestral tablet. What holds or governs the centre then gives the adverbial sense ‘chiefly’ or ‘mainly.’",
+  "sources": [
+    {
+      "title": "常用字解 · 主 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12830645.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 主",
+      "url": "https://kotobank.jp/word/%E4%B8%BB-76657#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 163
+  }
 }

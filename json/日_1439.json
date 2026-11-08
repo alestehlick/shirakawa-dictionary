@@ -16,5 +16,28 @@
     "day",
     "light"
   ],
-  "explanation": "A pictograph of the sun: a round disk marked with a central dot to show it is not an empty circle but a body with substance. Because the sun, unlike the moon, has no phases, the figure is drawn as a consistent circle. From this image the character came to mean day, the sun itself, and light. The Sino-Japanese reading jitsu is sometimes explained by association with 実, “fullness,” evoking the sun that fills and enriches. In Japanese it also appears as ka in dates, as in yokka, “the fourth day.”"
+  "explanation": "日 pictures the sun, originally as a rounded outline with a small mark inside. The inner mark gives the outline a substantial centre, just as a mark can be added to the crescent shape used for evening. The enclosing curve later becomes the familiar rectangular form.\n\nThe visible sun supplies the meanings sunlight and daytime. Its recurring appearance also measures a day, allowing 日 to count days and name dates or periods.",
+  "sources": [
+    {
+      "title": "常用字解 · 日 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22416022.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 日",
+      "url": "https://kotobank.jp/word/%E6%97%A5-109713#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 61
+  }
 }

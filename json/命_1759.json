@@ -17,5 +17,28 @@
     "order",
     "fate"
   ],
-  "explanation": "命 combines 令 and 口. In Shirakawa’s view, 令 shows a kneeling officiant wearing a deep ceremonial hood as they receive a revelation from the gods, while 口 here is not a mouth but the ritual receptacle (sai) that holds prayer texts or covenant documents. The character thus signifies what is bestowed as a divine message in response to prayer—hence a mandate or command. Because human life was regarded as Heaven’s bestowal, the graph also came to mean “life,” and by extension “destiny” or “fate.” In oracle-bone and bronze inscriptions, 令 often appears with the value of 命, indicating that 令 is the original form for this concept."
+  "explanation": "命 combines 令 with 口, the ritual container holding written prayers. 令 shows a kneeling figure wearing a ceremonial cap and receiving a divine revelation. Adding the prayer vessel makes explicit the appeal and the answer bestowed in response.\n\nThe original sense is a divine command or gift. Early inscriptions use 令 for the same word. Western Zhou bronzes speak of receiving Heaven's great mandate, making this bestowal a principle of the dynasty's founding.\n\nA person's life and its allotted length were also gifts of Heaven, so 命 names life, destiny, and what lies beyond human control. The word extends to a ruler's orders and to commands more generally. Divine allotment and human command share the authority of something received and binding.",
+  "sources": [
+    {
+      "title": "常用字解 · 命 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26132835.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 命",
+      "url": "https://kotobank.jp/word/%E5%91%BD-435448#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 143
+  }
 }

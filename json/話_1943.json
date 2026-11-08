@@ -17,5 +17,28 @@
     "to criticize",
     "slander"
   ],
-  "explanation": "Shirakawa reads 話 as a phono-semantic graph: the left side 言 marks speech, while the right side 舌 supplies the sound and preserves an ancient ritual image. In early forms, 舌 depicts a small handled blade thrust into a covenant vessel (sai) that held written petitions to the gods; by piercing and scraping them away, the prayer’s power was annulled. Built on this image, 話 originally evoked speech that cuts and harms—words of censure, slander, or malicious talk. From there its use broadened to ordinary speaking and conversation. Its phonetic kin, such as 訛 and 獪, likewise cluster around senses of deceptive or crafty speech, confirming this early nuance."
+  "explanation": "話 combines 言, speech, with 舌 as its phonetic. 舌's early form places a scraping blade above 口, the vessel holding written prayers or pledges. Damaging the contents would destroy the prayer's power.\n\nThe formation probably concerns words deliberately spoken to harm another: denunciation, slander, or a curse. Yet early usage also includes beneficial counsel. A poem contrasts the wise person, who acts upon good words, with the foolish person, who treats the same advice as an accusation.\n\n話 therefore contains both favourable and hostile speech before developing its general range of talking, a story, or an account. Its history is wider than ordinary conversation, and the modern tongue-shaped component preserves an older ritual formation.",
+  "sources": [
+    {
+      "title": "常用字解 · 話 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28999647.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 話",
+      "url": "https://kotobank.jp/word/%E8%A9%B1-603466#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 191
+  }
 }

@@ -15,5 +15,28 @@
     "form",
     "shape"
   ],
-  "explanation": "Originally written 體, the character combines the bone element with 豊 as a phonetic, making it a phono-semantic compound. 豊 serves as the on-reading indicator, and within the old phonological correspondences an initial l-series manifests as a t-series in Sino-Japanese, which explains the readings tai/tei (a pattern also seen in words like 頼 and 留). In the Zhou Rites, Inner Cooking section, 體 refers to the sacrificial body whose limbs and flesh are distinguished and prepared; from this ritual sense of the offering’s body, the meaning broadened to the human body and, more generally, to one’s outward form or shape."
+  "explanation": "体 is the modern writing of 體, which joins 骨, bone, with 豊 as its phonetic. The older word concerns the body together with its bones and articulated parts. Its early setting was probably the sacrificial animal: ritual texts speak of distinguishing the named portions and presenting the prepared body.\n\nFrom the animal's assembled body, 體 extends to a human body and to the whole formed by shape and substance. Something can also be grasped or carried out in one's own person, giving the uses in 体得 and 体験. Form, inherent character, and a pattern to follow are further developments of this bodily whole.",
+  "sources": [
+    {
+      "title": "常用字解 · 体 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15532460.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 体",
+      "url": "https://kotobank.jp/word/%E4%BD%93-90708#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 30
+  }
 }

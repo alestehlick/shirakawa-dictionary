@@ -13,5 +13,28 @@
     "in front",
     "to advance"
   ],
-  "explanation": "In the earliest forms, 前 is a compound that brings together a footprint (止), a shallow vessel (舟, also written as 月) used as a basin, and a knife (刀). It pictures washing the feet in a basin and then trimming the toenails to an even line—an act of ritual purification performed before setting out on a journey or upon returning home. From this idea of preparation prior to setting forth, the character came to mean “to advance” and “before, in front.” It also became the base for related graphs: with an added knife it formed 剪, “to cut,” and with the hand added it gave 揃, “to cut and set in order.” By extension, 前 naturally came to mark what is “earlier” or “formerly” in time."
+  "explanation": "前's older formation joins 止, a foot, with 舟, here a washing basin, and in some forms 刀, a knife. It depicts washing the feet and trimming the toenails. The received 月-like part comes from the basin shape.\n\nCutting the nails was a rite of purification, performed before departure or upon return. An account of the Duke of Zhou describes his cutting his nails and sinking them in a river, giving the bodily offering a sacrificial force. Related funerary customs also included cutting nails and hair.\n\n前 retains cutting in its relationship with 剪 and 揃. It also names what is in front, advancing, and going ahead. From spatial precedence come before, beforehand, formerly, and the past. The ritual preparation provides the setting for setting out.",
+  "sources": [
+    {
+      "title": "常用字解 · 前 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14856351.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 前",
+      "url": "https://kotobank.jp/word/%E5%89%8D-544359#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 156
+  }
 }

@@ -15,16 +15,23 @@
     "alluring",
     "supernatural apparition"
   ],
-  "explanation": "Shirakawa begins with the fuller ancient writing, which he classifies as a semantic–phonetic formation. Its phonetic is an early form of 笑, interpreted as a female ritual medium dancing with raised hands. The related 夭 expresses the supple, bending posture of that dance. This connects the character's sound with an appearance at once graceful and arresting.\n\nHe then places the dancer in the setting of spirit possession and oracular speech. A medium's utterances could be regarded as ominous or harmful, and the character acquired associations with uncanny manifestations, malign wonders, and spirits. He contrasts this development with 若, which in his account expresses conformity to a divine will.\n\nThe personal sense, a captivating or voluptuous appearance, belongs to the same semantic field: an attraction that can also suggest seductive display. Thus the modern senses of beauty and the supernatural preserve two developments of the character's ritual and bodily associations.",
+  "explanation": "The older writing combines 女 with 芺, an early form of 笑 that supplies the sound. This phonetic depicts a female medium dancing with raised hands. 夭, visible in the shorter 妖, expresses the bending, supple posture of that dance. The graceful figure connects the character with an alluring or captivating appearance.\n\nThe same medium could become possessed and utter an oracle. Such speech could be received as a harmful portent, giving 妖 its associations with uncanny events, malign wonders, and spirits. The related 若 expresses following the divine will; 妖 carries the more troubling implications of seductive display and potentially harmful ritual power.\n\nThe senses ‘bewitching’ and ‘supernatural’ thus belong to the same field of bodily grace, attraction, and spirit possession. The word can describe a person's beauty as well as an uncanny manifestation or being.",
   "sources": [
     {
-      "title": "Shirakawa, 普及版 字通 — 妖",
+      "title": "字通 · 妖",
       "url": "https://kotobank.jp/word/%E5%A6%96-455122#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
-      "note": "",
-      "accessed": "2026-11-07"
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
     }
   ],
   "joyo": true,
   "frequency_rank": 3,
-  "editorial_status": "source-checked English supplement"
+  "editorial_status": "source-checked English supplement",
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 3
+  }
 }

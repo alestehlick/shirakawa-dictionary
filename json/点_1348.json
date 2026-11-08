@@ -21,5 +21,28 @@
     "to turn on",
     "to apply drops"
   ],
-  "explanation": "Originally written 點, this is a phono-semantic character built with 占 as the phonetic, which also underlies characters like 店 and 坫 and carries the on reading ten. Alongside its phonetic role, 占 evoked a narrow spot set aside to place wine cups—a small, delimited place—giving the character its core sense of a tiny mark or speck, as in a black spot or the series of dots in a dotted line. From the idea of making a small mark came the scholarly uses of adding or adjusting dots in manuscripts (as in emendation and correction). The sense of applying a small, precise amount extends to instilling drops (eye drops, medicines) and, by transferring the notion of a momentary point of ignition, to lighting or switching on fires and lamps. It further developed into the idea of tallying and marks of evaluation, hence scores and points, and even appears in cultural contexts such as preparing powdered tea."
+  "explanation": "点 abbreviates 點, combining 黑, black, with 占 as its phonetic. 占 has an association with a small, delimited place, such as the spot where a wine cup is set. Applied to a mark, this gives a small black speck or blemish.\n\nMaking a precise mark can identify, divide, correct, or count. The word therefore extends to points added to a text, checking items, tallying, and assigning a score. A spot can also be a stain or flaw.\n\nThe same small application gives touching, adding drops, and kindling a flame at a particular point. In an old protective custom, children received red marks on their foreheads to ward off illness. The modern 点 shortens the full black-mark formation.",
+  "sources": [
+    {
+      "title": "常用字解 · 点 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/20862937.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 点",
+      "url": "https://kotobank.jp/word/%E7%82%B9-102028#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 149
+  }
 }

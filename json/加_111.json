@@ -14,5 +14,28 @@
     "to attach",
     "to increase"
   ],
-  "explanation": "加 is a compound graph. In early forms the element written like a square opening is not a mouth but a ritual receptacle that held written prayers and covenant texts offered to the gods. Set beside it is 力, whose archaic shape evokes the plow (耒). Together they depict the ceremony of purifying and exorcising the plow—symbolically “adding” sacred protection to agricultural tools so that insects would not ravage the fields and the autumn yield would rise. From this rite of adding consecration to implements, the character came to mean to attach or add, and by extension, to increase."
+  "explanation": "加 joins 力, a plough, with 口, the vessel holding written prayers. The vessel is brought beside the implement in a rite of purification before cultivation begins.\n\nUnpurified tools were thought to bring insect damage to the autumn crop. Prayers and purification were therefore added to the plough so that it could be used safely and the harvest would increase. This is both adding a rite to the implement and seeking an addition to its productive result.\n\nFrom that action come adding, attaching, augmenting, and giving something further. 加 can also mean surpassing an existing amount or, adverbially, still more. Related 嘉 adds the sound of a drum and joins the agricultural setting to celebration and auspicious offerings.",
+  "sources": [
+    {
+      "title": "常用字解 · 加 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5849642.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 加",
+      "url": "https://kotobank.jp/word/%E5%8A%A0-456299#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 99
+  }
 }

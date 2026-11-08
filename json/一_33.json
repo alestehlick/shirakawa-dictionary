@@ -17,5 +17,28 @@
     "all",
     "whole"
   ],
-  "explanation": "Shirakawa takes 一 as an indicative sign: the simple form of a single wooden counting rod laid horizontally. In the oracle-bone and bronze inscriptions, numbers were recorded with such rods; 二 and 三 are this same element repeated in layers. As the starting point of enumeration it also bears the sense of “beginning,” and, because it gathers things into a single sum, it naturally extends to meanings like “the whole, all.”"
+  "explanation": "一 is an indicative sign: a horizontal stroke marking the number one in the counting-rod system. Oracle-bone and bronze numerals repeat horizontal strokes for the first few numbers, while a vertical stroke marks ten. The form works as a numerical sign without depicting an object beyond the counting mark itself.\n\nAs the starting point of counting, 一 also means ‘beginning.’ As the smallest positive count, it can indicate a small amount. Gathering several things into one gives the further senses ‘all,’ ‘the whole,’ and ‘exclusively.’\n\nThe undivided one also gives an image of original unity. Applied to the world as a whole, it can name the beginning from which multiplicity unfolds.",
+  "sources": [
+    {
+      "title": "常用字解 · 一 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4904958.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 一",
+      "url": "https://kotobank.jp/word/%E4%B8%80-429974#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 4
+  }
 }

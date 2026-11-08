@@ -18,5 +18,28 @@
     "teacher",
     "first earthly branch (rat)"
   ],
-  "explanation": "In the earliest inscriptions the character is a direct picture of an infant: oracle-bone forms show the large head of a newborn with sprouting hair. Other early shapes depict a small figure with one arm raised and the other lowered, a posture signaling rank, and thus portray the child as a prince. From this initial sense of “prince,” the graph broadened to the general meaning “child.” By extension it could also denote a man, a lord, or a “Master” in the honorific sense applied to teachers. The same graph names the first of the Twelve Earthly Branches, zi (Japanese ne), associated with the rat."
+  "explanation": "子 pictures a young child. The early forms emphasize the head and small body. Some show one hand raised and the other lowered, a gesture identifying a child of royal rank. In those contexts, 子 functions as a princely title.\n\nThe title survives in names such as 子鄭 and 子雀, probably referring to princes associated with particular territories. Its use in courtesy names and respectful forms of address later broadened beyond that early setting. A respected teacher or learned person could be called 子, ‘Master,’ and the word could address someone as ‘you.’\n\nThe ordinary child sense extends to offspring, seeds, eggs, and small things. The same writing also supplies the first name in the twelve-branch cycle, a further use of the established child-sign.",
+  "sources": [
+    {
+      "title": "常用字解 · 子 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12106211.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 子",
+      "url": "https://kotobank.jp/word/%E5%AD%90-3235#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 47
+  }
 }

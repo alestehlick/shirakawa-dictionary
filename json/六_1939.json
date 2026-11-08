@@ -16,5 +16,28 @@
     "six",
     "the number six"
   ],
-  "explanation": "In its earliest forms, this character sketched a small, tent‑like building. A related graph read riku shows the figure of 六 stacked or piled, echoing that shape. The concrete sense of a little shelter fell out of use, and the character was taken over as a phonetic loan; thus it came to denote the numeral “six,” retaining the sound while shifting to the numerical meaning."
+  "explanation": "六 originally pictures a small tent or temporary shelter. The early oracle-bone and bronze forms preserve its roofed outline more clearly than the later standardized shape.\n\nRelated 陸 and 陵 place such shelters at a sacred elevated site, before the stairway by which a deity ascends and descends. Repeated shelter forms in this family evoke the arrangements made to receive the divine presence.\n\nThe graph was borrowed for its sound to write the number six. In the Yijing, six also identifies yin lines, a specialized numerical use subsequent to the shelter-shaped sign.",
+  "sources": [
+    {
+      "title": "常用字解 · 六 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28926133.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 六",
+      "url": "https://kotobank.jp/word/%E5%85%AD-640727#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 144
+  }
 }

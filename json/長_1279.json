@@ -16,5 +16,28 @@
     "chief",
     "leader"
   ],
-  "explanation": "This character began as a pictograph of a person shown in profile with conspicuously long hair. From the image of that length of hair it came to express length and extension—hence meanings such as “long,” “length,” and by extension “height.” Because the long-haired figure evoked an elder, one who was revered and looked to as the head of a group, the graph also developed the sense of a chief or leader and the respectful nuance attached to seniority. These associations remain visible in compounds like choja (a person of eminent virtue, also an elder or wealthy man), chojo (a superior), choro (a respected elder), kaicho (the head of an assembly), and shacho (a company’s president)."
+  "explanation": "長 pictures a person in profile with conspicuously long hair. The extended hair makes length visible, giving long, length, and height.\n\nThe long-haired figure is an elder, respected as a leader of the clan. From that person come chief, head, and the honour accorded to seniority. Length and leadership are joined through the same human image.\n\nThe wider word family includes flourishing or extending freely, and words for spreading and swelling. 長 consequently concerns growing as well as being long. Its leadership use survives in names for the head of a group, from an assembly to a company, while the elder remains the concrete figure behind that standing.",
+  "sources": [
+    {
+      "title": "常用字解 · 長 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/19013512.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 長",
+      "url": "https://kotobank.jp/word/%E9%95%B7-452080#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 139
+  }
 }

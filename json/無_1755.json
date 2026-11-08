@@ -18,5 +18,28 @@
     "without",
     "nonexistence"
   ],
-  "explanation": "Originally a pictograph, 無 shows a dancer with ornamented sleeves fluttering as they move. In oracle-bone (tortoise plastron) and bronze inscriptions it appears in rain-invoking rites, as in 無雩, a ceremony of prayer for rain. Its later use for “not, nothing; there is none,” as in 有無, is a phonetic loan: the graph’s sound was borrowed to write negation. Over time 無 specialized as the standard character for negation, while 舞—formed by combining 無 with 舛, the splayed legs of a dancer—was created to write “to dance” and “dance” explicitly."
+  "explanation": "無 originally pictures a dancer spreading ornamented sleeves. The elaborate strokes at either side belong to the dancer's costume. Oracle-bone inscriptions use the graph for a rain-invoking dance, sometimes adding the rain element to make the ceremony explicit.\n\nIts familiar meaning ‘not’ or ‘there is none’ arose through a sound loan: the dance graph was borrowed to write a similarly sounding negative word. As this use became established, 舛, the spreading feet of a dancer, was added to distinguish 舞, ‘to dance.’ 無 then became the usual writing for absence and negation.\n\nThe dancer's broad costume also connects the sound family with abundance and luxuriant growth, as in 蕪. Those positive senses and the negative use belong to different branches of the character's history.",
+  "sources": [
+    {
+      "title": "常用字解 · 無 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26076258.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 無",
+      "url": "https://kotobank.jp/word/%E7%84%A1-140186#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 21
+  }
 }

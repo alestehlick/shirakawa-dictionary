@@ -15,5 +15,28 @@
     "plains",
     "wild"
   ],
-  "explanation": "A phono-semantic character. In the oldest inscriptions the graph appears as 埜, showing a wooded area with a shrine; here 士 is the early graph used for 社, the sacred place of worship. The form 里 combines 田 (fields) with 士 to depict a field precinct centered on a shrine where the field gods were venerated. By adding 予 as a phonetic element to this base, the character 野 is formed. Originally it evoked a sacred grove or cultivated precinct at the outskirts, and its meaning later broadened to the open country—fields and countryside—and by extension the rustic or vulgar."
+  "explanation": "野 is a phonetic formation with 予 as its sound element. The earlier 埜 combines a grove of trees with the sacred earth-place beneath them: a woodland shrine. Oracle-bone inscriptions already have this grove form, and bronze writing also uses it in a place name.\n\n里 belongs to the cultivated land and its field shrine, whereas 埜 concerns the grove. The later writing 野 brings the land element together with its phonetic 予. These forms place the word in the country beyond the urban centre.\n\nFrom the outlying countryside come open land and rural settlements. In contrast with the cultivated manners of the capital, 野 can mean plain, rustic, rough, or unpolished. Applied to public life, 在野 describes being outside official office.",
+  "sources": [
+    {
+      "title": "常用字解 · 野 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26463545.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 野",
+      "url": "https://kotobank.jp/word/%E9%87%8E-593886#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 45
+  }
 }

@@ -13,5 +13,28 @@
   "meanings": [
     "three"
   ],
-  "explanation": "An indicative graph showing three counting rods laid one above another, reflecting how numbers were tallied; in oracle-bone inscriptions the numerals from one to four appear in just this way. The shape also evokes three ornamental hairpins gathered and set into a coiffure, a motif that lies behind 参 and suggests the idea of assembling. Three thus names the triad of heaven, earth, and human, revered as a sacred number, and many traditional named groupings (meisu) are organized by threes, proliferating into the hundreds and thousands."
+  "explanation": "三 records three horizontal counting marks. The early numeral system repeats the same simple stroke for the first few numbers, making the quantity directly visible. Three marks give the number three without a pictorial scene.\n\nLater natural philosophy treated one, two, and three as successive stages in the unfolding of the world, with three completing heaven, earth, and human beings. That scheme gives an existing numeral a cosmological significance. Three consequently becomes a favoured sacred number and a basis for many named groups.\n\n參, now 参, is sometimes used in numerical writing because of its related sound. Its own image is three hairpins gathered in a coiffure. The numeral 三 and the ornamental graph 參 thus meet through sound and use, while retaining distinct graphic origins.",
+  "sources": [
+    {
+      "title": "常用字解 · 三 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11839081.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 三",
+      "url": "https://kotobank.jp/word/%E4%B8%89-512744#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 53
+  }
 }

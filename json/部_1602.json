@@ -15,5 +15,28 @@
     "part",
     "classification"
   ],
-  "explanation": "A phono-semantic compound: the right-hand 邑 points to settlements—villages and towns—while the phonetic element evokes the idea of splitting. Shirakawa takes 音 to depict a ripened fruit on the verge of bursting, and notes how the same phonetic appears in 剖, where it combines with the knife radical 刂 to mean cutting into two. In early glosses such as the Yu Pian it is simply “to divide.” From the sense of apportioning a settlement into parts, the character came to mean a divided district, one of several parts of a whole, and by extension a section or classification."
+  "explanation": "部 joins 邑, a settlement or territory, with 咅 as its phonetic. 咅 represents a fruit reaching maturity and splitting open. This sound family carries the idea of division, made explicit by the knife in 剖.\n\nWith the place element, the division concerns a defined tract of land. 部 can therefore name a district, a section, or a portion separated from a larger whole. The same principle extends to a person's position and allotted function.\n\nFrom a division come the people grouped within it, their organization, and the office that administers them. 部 consequently serves for a group, department, or bureau, as well as the act of arranging something into its component parts.",
+  "sources": [
+    {
+      "title": "常用字解 · 部 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24402678.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 部",
+      "url": "https://kotobank.jp/word/%E9%83%A8-128738#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 75
+  }
 }

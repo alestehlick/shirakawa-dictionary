@@ -14,5 +14,28 @@
     "form",
     "honorific suffix"
   ],
-  "explanation": "Originally written 樣, this is a phono-semantic character: 木 “tree” supplies the semantic base, while the phonetic 羕 (yo)—denoting water that drifts and flows on in a long vein—gives the sound. The idea is of water-like lines traced in wood grain, which naturally suggests a pattern or outward aspect. From this image come meanings such as form, mode, and appearance, seen in compounds like 樣式 (form, style) and 様子 (state, appearance). In Japanese it also reads sama, used after names as a respectful title equivalent to “Mr., Esq.”"
+  "explanation": "様 abbreviates 樣, which combines 木, wood, with 羕 as its phonetic. 羕 concerns drifting water and the long, continuous courses traced by its movement.\n\nThe character probably names patterns resembling those watercourses represented on wood. Flowing lines provide a model that can be transferred to another surface, giving a form or design. From the pattern come the way something looks, its arrangement, and the manner in which it is made or done.\n\n様 therefore serves for form, appearance, condition, and method, as in 様子 and 様式. Japanese *sama* extends to the state or unfolding of an event and also becomes a respectful title after a person's name. The underlying connection is the recognizable form in which something presents itself.",
+  "sources": [
+    {
+      "title": "常用字解 · 様 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/27258868.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 様",
+      "url": "https://kotobank.jp/word/%E6%A7%98-511903#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 109
+  }
 }

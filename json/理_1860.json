@@ -17,5 +17,28 @@
     "grain",
     "texture"
   ],
-  "explanation": "理 is a phono-semantic character: the jade element signals meaning, while 里 functions as the sound, giving the on reading ri. The Shuowen glosses it as “to govern, to prepare a jewel,” and the Han Feizi tale of Mr. He vividly illustrates its original action: “The king had a jade-cutter work the uncut stone.” In its earliest sense, 理 names the careful working of jade so that its natural veins emerge on the surface. From this craft-based image comes the broader idea of putting things in order—managing, polishing, rectifying—until their inherent pattern shows. Hence its later abstract sense of “principle,” the inner structure or grain that things possess by nature; this nuance survives in words like 肌理 (kiri), which speaks of the skin’s texture and, by extension, fine grain or pattern."
+  "explanation": "理 combines 玉, jade, with 里 as its phonetic. Its concrete action is working and polishing jade so that the stone's natural markings emerge. The craftsman brings an existing pattern into view through careful treatment.\n\nThe same notion extends to putting things in order, adjusting them, and distinguishing their proper lines. Skin has a texture, 肌理; the earth has the courses and patterns of mountains and rivers, 地理. Human feelings and conduct likewise have an order expressed as 情理 and 道理.\n\n理 therefore comes to name both the work of arranging and the structure made clear by that work. Its abstract meanings of principle, reason, and underlying order grow from the visible grain of a material. Later philosophy develops this order into the cosmic principle discussed alongside 気.",
+  "sources": [
+    {
+      "title": "常用字解 · 理 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/27871567.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 理",
+      "url": "https://kotobank.jp/word/%E7%90%86-148286#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 59
+  }
 }

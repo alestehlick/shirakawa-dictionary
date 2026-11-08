@@ -16,5 +16,28 @@
     "metal",
     "money"
   ],
-  "explanation": "Shirakawa reads 金 as a pictograph of metal cast in an earthen mold. The central outline shows the profile of a standardized mold with its gate cut away, and the small adjoining strokes mark the little globules or lumps of cast copper, making the idea of “metal” explicit. In early usage 金 meant metal in general—and especially copper, the base material for bronze vessels—while bronze (“blue‑green copper”) was contrasted with akagane, “red metal,” i.e., copper. Later the character came to denote yellow gold and, by extension, wealth and money, and from the Warring States period onward objects made of gold became increasingly common."
+  "explanation": "金 pictures metal cast into a shaped mass. The outline is compared with the cross-section of a rail, while the small marks beside it indicate separate lumps of cast copper. The added marks identify the material as metal.\n\nThe early word refers broadly to metal, especially copper, from which bronze ritual vessels were made. It later also names gold, then money and wealth. Its meaning is consequently wider than the yellow precious metal alone.\n\nAs a component, 金 identifies a large family of words for metals and the objects worked from them: vessels, weapons, tools, and other implements. The variety develops from the many uses of the cast material represented in the original shape.",
+  "sources": [
+    {
+      "title": "常用字解 · 金 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9578073.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 金",
+      "url": "https://kotobank.jp/word/%E9%87%91-53951#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 127
+  }
 }

@@ -20,5 +20,28 @@
     "to bear fruit",
     "to be full"
   ],
-  "explanation": "Originally written 實, the character combines the roof radical 宀—the roof of a mausoleum where ancestral spirits are venerated—with 貫, strings of shell currency threaded on a cord. Together they depict a corded bundle of coins offered at the ancestral shrine, an image of abundant, ample offerings. From this core sense arises the meanings “to be full, replete,” and by natural extension “to bear fruit” and “fruit” itself (as in 果実), referring to the seed and the covering that encloses it. When the heart is filled with right intention, the character also expresses “sincerity” and “truth” (as in 誠実), and thus “truly, really.”"
+  "explanation": "実 abbreviates 實, formed from 宀 and 貫. The roof marks an ancestral sanctuary; 貫 shows cowry currency threaded into strings. The valuables are presented within the shrine, giving an image of a substantial offering and the wealth it contains.\n\nSome bronze forms instead involve a 鼎, suggesting a ritual vessel filled with offerings. Both readings concern providing something in fullness. From this come being full, filling, abundance, and the solid contents of a thing.\n\nA plant fills out as its fruit ripens, giving the uses for fruit and seed. Applied to conduct, substantial fulfilment becomes carrying something out, sincerity, and reality. The adverbial ‘truly’ or ‘really’ belongs beside these uses for something whose content is present and dependable.",
+  "sources": [
+    {
+      "title": "常用字解 · 実 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12653502.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 実",
+      "url": "https://kotobank.jp/word/%E5%AE%9F-511534#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 92
+  }
 }

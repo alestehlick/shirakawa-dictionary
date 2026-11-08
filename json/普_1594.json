@@ -15,5 +15,28 @@
     "general",
     "all"
   ],
-  "explanation": "普 is a compound graph formed from 竝 (並), depicting two people standing side by side, and 日, which here represents a ritual vessel (sai) containing a written prayer or oath rather than the sun. Built on the same constructive principle as the original form of 曹 (棘 + 日), it pictures people lined up to make a solemn covenant. From this scene of collective swearing the meaning extends to “all,” and by extension “universal,” “widespread,” and “broadly reaching.”"
+  "explanation": "普 combines 竝, two people standing side by side, with 曰, a vessel containing written prayers or pledges. The people are the parties taking their places together before the sacred text.\n\nThe formation concerns swearing a common oath. Their shared participation gives all and everyone: those who stand together are included in the same undertaking. The repeated human figure makes this collective relation visible.\n\nFrom the assembly come general, universal, and widely shared. The word extends to something spreading through an entire area or reaching everyone within it. 普 therefore joins the completeness of participation to the breadth of its reach.",
+  "sources": [
+    {
+      "title": "常用字解 · 普 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24305296.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 普",
+      "url": "https://kotobank.jp/word/%E6%99%AE-614921#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 162
+  }
 }

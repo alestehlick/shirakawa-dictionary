@@ -13,5 +13,28 @@
     "useless",
     "inferior"
   ],
-  "explanation": "A phono-semantic character: the horse component signals the field of carrying goods by packhorse, while the phonetic 太 (on reading tai/ta) supplies the sound value that yields the Japanese on readings da/ta. Its original sense is to load baggage onto a horse’s back, reflected in usages such as dasai suru “to load” and dachin, the transport fee for such carriage. In Japanese it also appears phonetically in geta (下駄, wooden clogs) and developed an evaluative nuance for things of little worth, as in dame (駄目), muda (無駄), and dasaku (駄作). The established written form is 駄."
+  "explanation": "駄 is a later writing of 馱, formed from 馬, horse, with 大 as the phonetic. Its original action is loading goods onto a horse's back. The horse element supplies the carrying animal, while the second element supplies the sound.\n\nThe character can name the load, the act of carrying it, or the packhorse itself. 駄賃 is the payment for this transport, and 駄 can count loads. These uses remain close to the practical work from which the word starts.\n\nThe related 佗 also concerns bearing a burden, and the camel name 駱駝 belongs to the same carrying vocabulary. Japanese later also uses 駄 for something poor, wasted, or unproductive.",
+  "sources": [
+    {
+      "title": "常用字解 · 駄 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15492758.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 駄",
+      "url": "https://kotobank.jp/word/%E9%A7%84-556050#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 71
+  }
 }

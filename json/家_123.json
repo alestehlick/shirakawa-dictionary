@@ -17,5 +17,28 @@
     "family",
     "household"
   ],
-  "explanation": "A pictograph that sets the roof sign 宀 over a dog, depicting the animal placed beneath the eaves as a foundation offering. In oracle-bone and bronze forms the dog is drawn with its tail hanging down, marking it as a sacrificial victim interred at the start of construction in a rite of soil pacification to appease the earth deities. The character thus first named an ancestral mausoleum—a sacred building for honoring forebears. As people lived in relation to this center, its sense broadened to the dwelling itself and, by extension, to the family or clan and their way of life."
+  "explanation": "家 combines 宀, a roof, with an animal form now written 豕, pig. In the early bronze forms the animal is identified as a slain dog offered at the building's foundation. Burying the victim pacified the ground on which the structure stood.\n\nThe building was an ancestral shrine. Oracle-bone texts can refer to the 家 of a named ancestor, placing the word in the setting of a lineage's sacred centre. The offering and the shrine establish the protected place around which people live.\n\nFrom that centre come a dwelling, the people inhabiting it, and the family or bloodline. 家 can then refer more narrowly to a husband or wife, to a hereditary house, or to a person's own established tradition or school. The received 豕 preserves the animal component after its shape has changed.",
+  "sources": [
+    {
+      "title": "常用字解 · 家 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/6037386.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 家",
+      "url": "https://kotobank.jp/word/%E5%AE%B6-29803#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 140
+  }
 }

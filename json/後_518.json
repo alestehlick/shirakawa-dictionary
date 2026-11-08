@@ -19,5 +19,28 @@
     "back",
     "to be late"
   ],
-  "explanation": "This character combines three elements: 彳, the side of a crossroads, evoking a road; 幺, a twisted thread bundle used as a ritual curse implement (as seen in the old form of 禦); and 夊, footprints turned backward. Together they depict a rite in which a thread-bundle charm is employed to compel an enemy to retreat. From this image of driving someone back arise the senses of “back/behind,” “to move back,” and, by extension, “later/after” and “to be late.”"
+  "explanation": "後 combines 彳, a road, with 幺, a twisted bundle of threads used as a ritual implement, and 夊, a backward-facing footprint. 幺 also appears in an early form of 御, preserving its place among objects used in rites.\n\nThe implement is used on the road in a prayer that the enemy will retreat. The reversed foot makes the desired movement visible: going back and withdrawing. The character's spatial sense grows from this rite directed toward an opponent's movement.\n\nFrom retreating come behind, the rear, and remaining at the back. Applied to time or sequence, the same position becomes afterwards, later, the last part, or a descendant. Being left behind also gives delay and lateness. The road and backward foot carry these extensions beyond the original ritual scene.",
+  "sources": [
+    {
+      "title": "常用字解 · 後 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10694159.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 後",
+      "url": "https://kotobank.jp/word/%E5%BE%8C-425801#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 81
+  }
 }

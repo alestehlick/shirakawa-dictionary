@@ -14,5 +14,28 @@
     "employ",
     "by means of"
   ],
-  "explanation": "This character is a pictograph of a fence or enclosure made by fitting wooden pieces together. Within such an enclosed space, offerings for ritual worship were placed and elevated; hence 用 originally meant to employ something for a sacrificial purpose. A passage in the Spring and Autumn Annals uses 用 in this sense of offering—blood being taken and used for the rite—showing the word’s early ritual coloring. From that core it broadened to the general meanings “to use, employ,” and also came to function, like 以, with the sense “by means of, with.”"
+  "explanation": "用 pictures an enclosure made by joining wooden members. Sacrificial victims were kept within such a fence, and to ‘use’ one meant to employ it in an offering. Early ritual usage provides the concrete basis of the familiar verb.\n\nThe Spring and Autumn Annals uses 用 of a captive ruler in a sacrificial context, where blood was taken for the rite. Divination instructions to ‘use’ something may also originally concern the choice of an offering. The word then broadens to carrying out a decision or putting something into action.\n\nFrom this come using or employing, an instrument's function, and the resources or preparations required for an undertaking. 用 can also work like 以, meaning ‘with’ or ‘by means of.’ 甬 and 庸 share related uses, although their added graphic elements have their own histories.",
+  "sources": [
+    {
+      "title": "常用字解 · 用 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/27096141.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 用",
+      "url": "https://kotobank.jp/word/%E7%94%A8-650152#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 51
+  }
 }

@@ -16,5 +16,28 @@
     "within",
     "correct"
   ],
-  "explanation": "Shirakawa reads this character as a pictograph of a military standard. In the oracle-bone and bronze inscriptions, it appears as a vertical pole with streamers fastened at both top and bottom—the kind of flag used to signal battlefield maneuvers. In the Yin dynasty, forces were arrayed as left, middle, and right armies; this was the banner of the middle army, whose general, acting as marshal, could command the whole. From that emblem of the central command the graph came to mean the middle or center, and by extension the inside/within, and even what is proper or correct."
+  "explanation": "中 pictures a standard raised on a pole. Oracle-bone and bronze forms can show streamers above and below the central emblem. This is the flag of the central army, whose commander directed the force as a whole.\n\nEarly divinations use 中 for that central command. To stand at its head was to occupy the position from which the armies were brought under one authority. The centre is therefore both a location and an organizing point.\n\nFrom this military emblem come the middle, the centre, and what lies within. The idea of occupying the proper middle also gives balanced, fitting, or correct. To reach that point is to hit the mark, producing uses for a successful shot, a correct result, or achieving the intended outcome.",
+  "sources": [
+    {
+      "title": "常用字解 · 中 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/18203163.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 中",
+      "url": "https://kotobank.jp/word/%E4%B8%AD-96994#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 55
+  }
 }

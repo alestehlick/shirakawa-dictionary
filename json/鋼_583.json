@@ -12,5 +12,28 @@
     "steel",
     "tempered steel"
   ],
-  "explanation": "鋼 is a phono-semantic character: the metal sign on the left marks the domain of metal, while 岡 supplies the sound kō and points to the image behind the word. Shirakawa reads 岡 as the clay mold used in casting—earth packed and fired by heat rising from below until it hardens into a rigid shell. In 剛, where 岡 appears with a knife, the scene is of cutting the mold away, hence the sense of something tough and not easily torn off. With 金 + 岡, 鋼 names iron that has been refined and hardened: tempered, high-quality steel."
+  "explanation": "鋼 combines 金, metal, with 岡 as its phonetic. 岡 represents a clay casting mould hardened by firing from below. The fired mould gives this sound family an association with firmness and resistance.\n\nWith 金, the word names iron made hard through refining and working: steel. The Japanese *hagane* belongs to this material sense. The related 剛 likewise concerns hardness, with a knife opening or cutting the hardened mould.\n\nFrom the strength of the worked metal come toughness and an unyielding quality. The two components join the material itself to the hard condition expressed through 岡. The hardened mould and worked steel share the quality of firmness.",
+  "sources": [
+    {
+      "title": "常用字解 · 鋼 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11214472.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 鋼",
+      "url": "https://kotobank.jp/word/%E9%8B%BC-493771#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 41
+  }
 }

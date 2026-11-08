@@ -12,5 +12,28 @@
   "meanings": [
     "five"
   ],
-  "explanation": "Shirakawa reads 五 as the image of a double wooden lid, two planks crossed diagonally to seal a sacred receptacle. Its use as the numeral “five” is a loan based on the on reading go, whereas the characters for one through four arose directly from tally rods set side by side. The same “double lid” form also appears in 吾, where it is placed atop a covenant vessel that held written prayers; sealing the lid preserves their power, giving rise to notions of protecting and warding off. As a numeral, 五 is widely used as a name-number in expressions such as 五行, the five circulating agents, and 五倫, the five human relations."
+  "explanation": "The early numerical sign for five is often a cross made by laying counting rods diagonally. Forms already resembling 五 also occur. Their crossed wooden members are interpreted as a lid, and the use for the numerical word is consequently treated as a sound loan.\n\nThe protective lid survives more clearly in 吾, where crossed members cover a prayer receptacle. Such an element need not mean the number five whenever it appears in another character.\n\nAs a numeral, 五 names five objects, a fivefold action, or five repetitions. The related 伍 applies the count to a group of five people and then to companions in that group. Later named sets, including the five phases, build on this established numerical use.",
+  "sources": [
+    {
+      "title": "常用字解 · 五 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10653146.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 五",
+      "url": "https://kotobank.jp/word/%E4%BA%94-429841#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 82
+  }
 }

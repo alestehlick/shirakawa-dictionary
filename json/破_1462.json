@@ -15,5 +15,28 @@
     "to destroy",
     "to defeat"
   ],
-  "explanation": "破 is a phono-semantic compound: the left side 石 evokes stone, while the right side 皮 serves as the phonetic, giving the sound ha and originally depicting hands peeling an animal hide. Early lexica describe it as “breaking stone into pieces” (Shuowen) and “dissociating” or “flaking off” (Yupian), with Guangya glossing it as “to tear.” From the image of a stone surface spalling away like a hide being peeled, the character came to mean to break, split, or tear, and by extension to destroy and to defeat. The role of 皮 as phonetic is seen in related characters such as 坡 and 跛, which share the same on-reading cue."
+  "explanation": "破 joins 石, stone, with 皮 as its phonetic. The concrete action is a stone's surface breaking and coming away. 皮 pictures a hand peeling an animal's skin, placing attention on the outer layer that separates from the body beneath it.\n\nEarly definitions concern breaking stone, loosening its structure, and separation. From this come splitting, cracking, crumbling, or opening something through a break. The action extends to materials and structures generally.\n\nWhat is broken can no longer hold its former arrangement. 破 therefore also means destroying, violating a settled condition, or defeating an opposing force. The phonetic family joins the ideas of an outer surface and its opening or falling apart.",
+  "sources": [
+    {
+      "title": "常用字解 · 破 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22759019.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 破",
+      "url": "https://kotobank.jp/word/%E7%A0%B4-171211#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0001-0200",
+    "date": "2026-11-08",
+    "frequency_rank": 107
+  }
 }
