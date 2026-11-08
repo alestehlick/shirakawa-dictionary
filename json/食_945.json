@@ -18,5 +18,28 @@
     "food",
     "to nourish"
   ],
-  "explanation": "Shirakawa explains 食 as a pictograph of a gui (簋), a round ritual food vessel; with a lid set on top, the vessel’s profile becomes the form of the character. From the image of food placed in a container it naturally came to mean “food,” and by extension “to eat.” Because a person is sustained by eating, the sense further broadens to “to nourish, to provide for.” In Japanese, when it specifically denotes “food,” the on reading shi is also used. Bronze inscriptions often depict the act of eating or drinking by placing the vessel sign before a person, showing a diner with tableware set in front. In the Yin period, it is noted that two meals a day were customary."
+  "explanation": "食 pictures a covered vessel for food. The lower 皀 is a vessel holding prepared grain for an offering, and the upper strokes form its lid. The ancient shapes show the container and cover more plainly than the modern graph.\n\nThe contents give the meaning ‘food’; taking the food gives ‘eat.’ Because eating sustains the person, 食 can also mean to nourish or provide someone with food. The same vessel can be viewed from the side of the person receiving nourishment or of the person supplying it.\n\nMeals also had a ritual setting. The principal morning and evening meals were associated with receiving and sending off the sun. Food was therefore both ordinary sustenance and an offering through which human life was ordered with the sacred powers.",
+  "sources": [
+    {
+      "title": "常用字解 · 食 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13774760.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 食",
+      "url": "https://kotobank.jp/word/%E9%A3%9F-161022#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 219
+  }
 }

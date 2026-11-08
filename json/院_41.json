@@ -11,5 +11,28 @@
     "institution",
     "compound"
   ],
-  "explanation": "A phono-semantic graph, 院 takes 完 as its phonetic element, signaling the on reading, and early materials even wrote the word with 寃. Its core sense lies in 垣—an enclosing fence or hedge—so 院 depicts a building set within a fenced perimeter, and by extension the grounds or garden belonging to it. From this image of an enclosed residence grew specialized uses such as 書院, the scholar’s study or house, and 僧院, a monks’ dwelling, which in turn gave rise to the broader modern sense of an organized institution."
+  "explanation": "院 uses 完 as its sound element. An older writing is 寏, meaning an enclosing wall; 院 was first a variant for the same word. The sounds of 完 and 垣 belong to its early history.\n\nFrom the enclosing wall, 院 names a building with a walled perimeter and the grounds or garden attached to it. The boundary defines the establishment as a place set apart.\n\nThe word was applied to many such enclosed places: palace quarters, temples, schools, and other institutions. The familiar institutional sense grows from the building and its surrounding precinct.",
+  "sources": [
+    {
+      "title": "常用字解 · 院 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4951199.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 院",
+      "url": "https://kotobank.jp/word/%E9%99%A2-32768#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 390
+  }
 }

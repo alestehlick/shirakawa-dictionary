@@ -16,5 +16,28 @@
     "customer",
     "traveler"
   ],
-  "explanation": "客 is a compound character formed from 宀 and 各. The宀 component depicts a great roof, the mitamaya—a mausoleum where ancestors are enshrined. 各 shows the act of presenting a sai, a ritual container that holds written prayers, and making supplication as the deities descend in response to the invitation. Together they portray a deity who comes down and enters the ancestral shrine: a god called in from outside, the “guest god” (kyakujin), known in Japan as maroudo, a deity of another clan. Over time the sacred sense broadened to human visitors, yielding meanings such as guest, customer, and traveler."
+  "explanation": "客 places 各 beneath 宀, the roof of an ancestral sanctuary. 各 shows a descending foot above a vessel containing a prayer. The god is invited by the prayer and comes down into the sanctuary. 客 names a divine visitor received from outside.\n\nThe visiting power could belong to another ancestral line. At Zhou ceremonies, for example, Shang ancestral spirits could be welcomed as guest deities. Japanese *maroudo* likewise once named a god from another group.\n\nFrom the guest deity, 客 broadens to a human guest or visitor: someone who comes from elsewhere and is received within. Travellers, temporary residents, and customers all belong to this later range, with their position as people arriving from outside.",
+  "sources": [
+    {
+      "title": "常用字解 · 客 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8915087.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 客",
+      "url": "https://kotobank.jp/word/%E5%AE%A2-459984#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 330
+  }
 }

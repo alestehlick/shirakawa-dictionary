@@ -15,5 +15,28 @@
     "to collect",
     "to assemble"
   ],
-  "explanation": "This character combines the bird graph 隹 with the tree 木. In its ancient form it shows many birds alighting on a tree, vividly expressing the idea of gathering. Early bronze inscriptions, such as the Mao Gong Ding, already use 集 in contexts like the phrase “唯天將集厥命,” where it carries the sense of bringing things together to fruition, as when Heaven’s mandate is realized. Shirakawa further sees an echo of bird divination: affairs were decided by observing how flocks gathered and dispersed, so the graph came to suggest both the act of assembling and the settling or fulfillment of matters. In early texts 集 also interchanged with 就."
+  "explanation": "集 places 隹, a bird, above 木, a tree. The fuller form 雧 shows several birds together in the branches. Birds alighting in one place give the senses ‘gather,’ ‘assemble,’ and ‘come to rest.’ The shorter 集 lets one bird stand for the flock.\n\nThe character also has an old use meaning to bring something to completion or fulfilment, close to 就. This may preserve a connection with bird divination: the gathering and dispersal of birds could reveal whether an undertaking would succeed. An auspicious gathering would then signal that the matter was coming to fulfilment. In ordinary use, 集 retains the direct image of separate things coming together—a gathering of people or a collection brought into one place.",
+  "sources": [
+    {
+      "title": "常用字解 · 集 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13069087.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 集",
+      "url": "https://kotobank.jp/word/%E9%9B%86-526135#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 241
+  }
 }

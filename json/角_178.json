@@ -18,5 +18,28 @@
     "to compete",
     "to fight"
   ],
-  "explanation": "This character began as a pictograph of an animal’s horn, clearly seen in the oracle-bone and bronze forms. It could denote pulling or handling an animal by its horn, in contrast to 牽, which shows leading an ox with a rope, the element 玄 depicting the cord. From the projecting, pointed nature of a horn arose senses for a corner or angle, things with sharp edges, and by extension a square with four right angles; the image of animals locking horns also fostered meanings of contention and competition. The original form lives on in ritual bronzes of the Shang and Zhou periods, where a horn-shaped wine vessel was called 角."
+  "explanation": "角 pictures an animal’s horn. Its pointed, projecting form gives both the horn itself and a sharp corner, angle, or edge. Squared and angular things take the same description.\n\nAnimals contend with their horns, so 角 also means to compete, test strength, or struggle against another. Related 較 shares this sphere of comparison and contest.\n\nHorns were also used as containers and instruments. A horn could become a drinking vessel, measure, or trumpet; Shang and Zhou ritual vessels called 角 preserve the older use of the animal horn for wine.",
+  "sources": [
+    {
+      "title": "常用字解 · 角 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8096008.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 角",
+      "url": "https://kotobank.jp/word/%E8%A7%92-43512#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 376
+  }
 }

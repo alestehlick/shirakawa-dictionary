@@ -15,5 +15,28 @@
     "place",
     "status"
   ],
-  "explanation": "This character combines the person graph 人 with 立. The graph 立 itself is formed from 大, a front-facing figure with arms outstretched, set upon 一, the ground line, depicting someone standing upright. With 人 added, the whole image points to a person at a fixed standing spot, and by extension to one’s proper station—kurai, “rank” or “position.” Earlier, 立 alone was used for this idea; later, 位 became the established form."
+  "explanation": "位 adds 人, a person, to 立. In 立, 大 shows a standing person above 一, the line marking a definite place. 立 originally wrote both standing and the place occupied; 位 later makes the position sense explicit.\n\nIn formal court ceremonies, participants stood at assigned places. Taking one’s place also meant occupying a recognized rank or office. 位 therefore comes to mean position, station, or status, including the rank one assumes. The character keeps the concrete image of a person standing where their role requires them to stand.",
+  "sources": [
+    {
+      "title": "常用字解 · 位 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4629793.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 位",
+      "url": "https://kotobank.jp/word/%E4%BD%8D-429901#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 380
+  }
 }

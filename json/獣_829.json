@@ -15,5 +15,28 @@
     "prey",
     "game"
   ],
-  "explanation": "The original form is 獸, a compound in which 罾 is combined with 犬. Within 罾, the upper element 單 depicts an oval hunting shield adorned with twin feather pennants, while the lower “sai” represents a covenant vessel that held written petitions to the deities—together evoking the rite of praying for success before setting out to hunt. With the addition of the hunting dog 犬, the graph came to signify the act of the hunt itself. In oracle-bone inscriptions 獸 is used for “to hunt,” and only later did its sense shift to the quarry—the beast or game taken—whereupon the phono-semantic character 狩 was created to write the verb “to hunt.”"
+  "explanation": "獣, formerly 獸, combines 嘼 with 犬, a hunting dog. 嘼 has 單 above: an oval shield with two feather ornaments, used in the hunt. Below it is 口, a vessel containing a prayer for success before setting out. The shield and prayer together record the preparatory rite.\n\nAdding the dog gives the hunt itself. Oracle-bone inscriptions use 獸 as a verb, asking whether hunting should take place. It is the original graph for the action later written 狩.\n\nThe meaning then shifts from hunting to the animal pursued or taken—the game or beast. 狩 keeps the verb ‘hunt,’ while 獣 becomes the familiar word for a wild animal. The ritual equipment and dog preserve the activity from which that animal-name developed.",
+  "sources": [
+    {
+      "title": "常用字解 · 獣 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13152308.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 獣",
+      "url": "https://kotobank.jp/word/%E7%8D%A3-490228#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 363
+  }
 }

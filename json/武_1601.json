@@ -16,5 +16,28 @@
     "bravery",
     "strength"
   ],
-  "explanation": "武 is a compound of 戈, the halberd, and a ‘going’ element that in oracle-bone script is written like 之, originally the form of a footstep. The character thus pictures advancing with a weapon in hand: to grasp the pike and move forward. From this image arise senses of boldness and strength—brave, fierce, strong—and by extension the idea of the warrior and the martial. In classical thought it stands as a virtue paired with 文, the civil, together forming the balanced ideal of bunbu, “pen and sword,” with 武徳, martial virtue, especially esteeming courage."
+  "explanation": "武 combines 戈, a weapon, with 止, a footprint. In the earliest writing, the footprint also expresses going or advancing. The graph shows someone moving forward with the weapon in hand—the firm stride of a warrior entering action.\n\nFrom this manner of advancing come courage, strength, and martial power. 武 can name the warrior, the weapons and methods of warfare, or the virtue associated with decisive military action. Its old uses also preserve the stride or footprint itself.\n\nPaired with 文, the cultivated or civil virtue, 武 represents the martial side of authority. The pair 文武 joins these two capacities in the ideal of a ruler or accomplished person.",
+  "sources": [
+    {
+      "title": "常用字解 · 武 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24378287.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 武",
+      "url": "https://kotobank.jp/word/%E6%AD%A6-122191#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 280
+  }
 }

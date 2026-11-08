@@ -14,5 +14,28 @@
     "soil",
     "ground"
   ],
-  "explanation": "This character portrays a rounded clod of clay set upon a stand—an image of the clay itself shaped into an oval, echinus-like form and revered as the deity of the soil. Oracle-bone inscriptions show libations of purifying liquor being poured over this earthen god as people prayed. Places where such soil deities were enshrined were called yashiro (shrines), so 土 functioned as the prototype of 社, with 示 added to indicate the sacred altar. From denoting the consecrated earthen effigy, the graph naturally broadened to mean soil, a lump of earth, and the solid ground itself."
+  "explanation": "土 pictures a rounded mass of earth set upright on a stand. The earth was shaped into a tall mound and worshipped as the deity of the land. Some oracle-bone forms show a libation being poured over this earthen sacred object.\n\n土 was thus originally the graph for the earth deity and the place where it was worshipped. It is the earlier form of 社; 示 was added later to make that sacred use explicit. The community’s land belonged under the deity’s protection.\n\nFrom the consecrated earth and its territory, 土 broadened to the land itself, cultivated ground, soil, and a clod of earth. The modern everyday meaning preserves the material from which the original sacred object was made.",
+  "sources": [
+    {
+      "title": "常用字解 · 土 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/21188064.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 土",
+      "url": "https://kotobank.jp/word/%E5%9C%9F-99264#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 239
+  }
 }

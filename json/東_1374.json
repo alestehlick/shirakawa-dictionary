@@ -13,5 +13,28 @@
     "east",
     "eastern"
   ],
-  "explanation": "Shirakawa explains that the earliest form of 東 depicts a sack tied at the top and bottom. That figure, however, was pressed into service not for its original sense but as a phonetic loan to write the direction “east,” at a time when the script lacked native graphs for east, west, and south. To express the meaning “bag” explicitly, scribes later created the phono-semantic 橐 (“taku”) by adding the sound-marking element 石—an on-reading marker also seen in 宕 (to) and 拓 (taku). The portion of 橐 without 石 corresponds to the old shape of 東. In Japanese the character also reads azuma, as in 東歌 (azumauta)."
+  "explanation": "東 originally pictures a sack tied at both ends. Its middle bulges with the contents, while the upper and lower ends are gathered shut. This is an early form of the sack later written 橐; the ancient shapes preserve the tied ends clearly.\n\nThe graph was borrowed for the sound of the word ‘east.’ In the surviving inscriptions it already names the direction, and its original use as the name of a sack is not preserved. The modern meaning therefore comes through a sound loan. The visible picture explains the form of the character, while the borrowing explains why that form came to name the east.",
+  "sources": [
+    {
+      "title": "常用字解 · 東 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/21466543.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 東",
+      "url": "https://kotobank.jp/word/%E6%9D%B1-25590#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 215
+  }
 }

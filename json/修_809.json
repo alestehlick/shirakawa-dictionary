@@ -17,5 +17,28 @@
     "to discipline",
     "to purify"
   ],
-  "explanation": "Shirakawa interprets 修 as a compound of 攸 and 彡. The graph 攸 depicts water being poured over a person’s back, evoking ritual ablution—an act that purifies the body and calms the heart. The addition of 彡 functions as a sign marking what has been refined and made clean. From this image of purification and refinement, 修 comes to mean purifying and putting oneself in order, correcting and regulating one’s conduct, and by extension studying to master skills and repairing or making things right."
+  "explanation": "修 combines 攸 with 彡. In the old form of 攸, water is poured down a person’s back. This is ritual washing, an ablution that removes impurity from the body. The added 彡 marks the cleansed and ordered condition produced by the washing.\n\nPurifying the body also prepares the mind. The related 悠 adds 心, the heart, for the calm that follows purification. 修 develops the active side of this process: putting oneself in order, refining one’s conduct, and cultivating the abilities or learning needed for a task.\n\nThe same work of bringing something into a proper condition can be applied to objects and undertakings. 修 consequently means to repair, improve, complete, or carry out something with care. Study and self-cultivation retain the original emphasis on preparing and refining the person.",
+  "sources": [
+    {
+      "title": "常用字解 · 修 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13024460.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 修",
+      "url": "https://kotobank.jp/word/%E4%BF%AE-526050#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 217
+  }
 }

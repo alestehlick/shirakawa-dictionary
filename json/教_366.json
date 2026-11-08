@@ -14,5 +14,28 @@
     "instruction",
     "education"
   ],
-  "explanation": "Shirakawa sees 教 as a compound centered on 爻, the crossed rafters of a sacred building, joined with 攴, the whip or urging stick. In 斈—the old form that underlies 学—the same rafters shelter 子, the children learning within; 教 replaces the child with the urging hand/rod to show an elder driving on the learners under those sacred eaves. The crossed-wood roof motif survives in Shinto architecture as a mark of sanctity, and in antiquity noble youths gathered in such sanctuaries to receive training in tradition and ceremony from senior elders. From this ritualized scene of instruction comes the meaning “to teach.”"
+  "explanation": "教 brings together 爻, 子, and 攴. 爻 represents the crossed roof timbers of a building used for instruction. 子 is a young learner, and 攴 is a hand holding the rod or whip of instructional authority. The child remains part of the scene: an elder urges the learner on within the school.\n\nThese buildings were places where the young, especially children of noble families, learned inherited traditions and ceremonial practice from their elders. The roof with its projecting crossed timbers marked a setting close to a sanctuary. 爻 with 子 forms an early graph for learning; adding 攴 gives the activity of teaching and disciplining the learner.\n\nFrom this scene, 教 means to teach, train, or admonish, and also the teaching that is passed on.",
+  "sources": [
+    {
+      "title": "常用字解 · 教 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9408756.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 教",
+      "url": "https://kotobank.jp/word/%E6%95%99-477621#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 246
+  }
 }

@@ -18,5 +18,28 @@
     "to manage",
     "longitude"
   ],
-  "explanation": "Originally written 經, this is a phono-semantic compound with 巠 as the phonetic. In ancient form, 巠 depicts the warp on a loom: threads drawn taut and spread by a horizontal bar added at the base, so the graph itself points to the warp. Set against 緯, the woof, the pair 経緯 came to mean the warp and woof and, by extension, the course and governing principles of matters. From this sense of an ordered course arise uses like passing through events (keika) and direct experience (keiken). Because weaving begins by setting the warp—the framework on which all work proceeds—the character also develops meanings of managing and conducting affairs (keiei) and initiating operations (keishi). In the realm of learning, 経書 and 経典 name the Confucian classics as foundational, primary texts. Hence its common senses include the warp or vertical, to pass or go through, to manage or run, and by extension a basis or rule."
+  "explanation": "経, formerly 經, combines 糸, thread, with the sound element 巠. 巠 pictures the warp stretched on a loom, with a crosspiece below keeping the threads in place. It is itself the earlier graph for the warp.\n\nThe warp provides the fixed structure through which the transverse weft, 緯, is worked. Together, 経緯 names the two systems of thread and then the connected course or order of a matter. Following that course gives passing through events, the passage of time, and experience.\n\nBecause the warp establishes the basis for the whole fabric, 経 also means a governing principle, a constant rule, or the work of organizing and managing affairs. A foundational text is an 経, giving the classical books and, in Buddhism, scriptures recited or studied as authoritative teaching.",
+  "sources": [
+    {
+      "title": "常用字解 · 経 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9956744.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 経",
+      "url": "https://kotobank.jp/word/%E7%B5%8C-52357#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 306
+  }
 }

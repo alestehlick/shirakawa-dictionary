@@ -17,5 +17,28 @@
     "beautiful",
     "good"
   ],
-  "explanation": "好 combines the graphs for woman (女) and child (子). In oracle-bone and bronze forms it appears as a woman cradling a child, expressing the original sense of a mother cherishing her infant. This nurturing affection is echoed in the Book of Odes, which says 妻子好合, “wife and children in loving harmony.” From this core idea the character came to describe what is beautiful and pleasing, what is intimate and friendly, and more broadly anything in a favorable, good state—hence its later use for liking or being fond of something."
+  "explanation": "好 combines 女, a woman, with 子, a child. It probably first expresses a mother cherishing her infant. The two figures place affection and care at the centre of the graph.\n\nWhat is cherished is pleasing and dear. From the mother’s feeling toward the child come beauty, intimacy, and friendly affection. The meaning broadens to anything in a favourable condition: something good, agreeable, or desirable.\n\nFrom finding something pleasing, 好 also becomes liking or taking pleasure in it. Its familiar uses for fondness and preference keep the personal attraction within the older scene of tenderness.",
+  "sources": [
+    {
+      "title": "常用字解 · 好 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10845783.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 好",
+      "url": "https://kotobank.jp/word/%E5%A5%BD-493780#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 381
+  }
 }

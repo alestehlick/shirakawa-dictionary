@@ -15,5 +15,28 @@
     "edge",
     "tooth"
   ],
-  "explanation": "Shirakawa takes 刃 as a pictograph: a knife with a small flash of light at its cutting edge, a graphic glint that singles out the sharp part of the blade. In the Shuowen this is the “hard knife,” showing the knife and the biting “tooth” of its edge, and so the graph names the blade, the edge, and by extension the toothed edge of tools and cutlery (as in hamono). No distinct ancient forms are recorded."
+  "explanation": "刃 adds a small flash of light to 刀, a knife. The glint marks the sharp cutting edge. The graph names that edge or blade, and can also refer more broadly to an edged weapon or cutting implement.",
+  "sources": [
+    {
+      "title": "常用字解 · 刃 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14029172.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 刃",
+      "url": "https://kotobank.jp/word/%E5%88%83-536578#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 340
+  }
 }

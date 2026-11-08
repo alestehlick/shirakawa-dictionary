@@ -20,5 +20,20 @@
     "to turn back",
     "to bend back"
   ],
-  "explanation": "This character combines the cliff sign 厂 with the hand 又. It pictures a hand braced against a steep cliff as someone claws upward; the sheer face throws the body back, giving the sense of being overturned and of going against. In bronze inscriptions 反 is commonly used for 叛逆—rebellion and breach of faith—likely evoking the attempt to clamber up and violate a sacred precinct, an act of defiance. From this it came to mean to oppose or go against, and also to turn back or put back. The later graph 叛 adds the phonetic 半 to 反, but 反 is the original form. In Japanese it also appears in verbs like soru and sorasu, ‘to arch or bend (the body) back.’"
+  "explanation": "反 combines 厂, a cliff, with 又, a hand. It shows a hand taking hold of the steep face to climb upward. A slope of this kind is 坂; when it belongs to a sacred place, it can be written 阪 with the divine-ladder element 阜.\n\nAttempting to climb into such a protected sacred place was an act of defiance. 反 therefore came to express rebellion, opposing authority, and breaking faith. Some bronze forms add the earth-deity sign beneath the cliff, making the sacred setting clearer.\n\nThe graph also has early uses for returning or giving something back. Its later meanings include reversing, overturning, turning back, and repeating an action. The climbing hand supplies the original form, while these uses gather around opposition and return.",
+  "sources": [
+    {
+      "title": "字通 · 反",
+      "url": "https://kotobank.jp/word/%E5%8F%8D-563548#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 329
+  }
 }

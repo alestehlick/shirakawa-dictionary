@@ -15,5 +15,28 @@
     "artisan",
     "construction"
   ],
-  "explanation": "A pictograph of a tool, 工 first sketches the simple form of an implement. In bronze inscriptions it can look like a metalworking stand used in forging and hammering. Beyond the workshop, this implement also had a ritual role in cursing rites: the archaic form of 巫 shows a spirit medium holding such tools in both hands, and 左 depicts a hand gripping this implement to seek out where the gods are. Thus 工 embodies both the craftsman’s device and a sacred instrument of inquiry."
+  "explanation": "工 pictures a tool. Its precise identity is uncertain, though some bronze forms resemble a stand used in metalworking. This practical implement gives the world of making: the craftsperson, skilled work, and what is produced through that skill.\n\nA similar 工 form also occurs as a ritual implement in characters such as 巫, 左, and 尋. The workshop tool and the sacred instrument may have been distinct objects despite their shared written form. Early uses of 工 also name people serving in worship and ceremonial duties.\n\nThose specialized services broaden into official functions and occupations. 工 can thus name the maker, the work, or the skilled service supplied, while its relation with 功 gives accomplishment or a successful result.",
+  "sources": [
+    {
+      "title": "常用字解 · 工 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10781995.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 工",
+      "url": "https://kotobank.jp/word/%E5%B7%A5-493727#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 364
+  }
 }

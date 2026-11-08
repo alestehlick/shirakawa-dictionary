@@ -16,5 +16,28 @@
     "shabby",
     "initial"
   ],
-  "explanation": "A phono-semantic character: the upper 艹 indicates plants and supplies the meaning, while 早 functions as the phonetic, giving the on reading sou; in early graphs 早 depicts the bowl of a ladle. The character continues the older form 艸 and fundamentally means grass or herbage, as in words for grassy plains and mountain plants. By extension it describes what is rough or unrefined (shabby, rustic) and, in writing, a rough copy or draft. It is also used by loan with the sense of beginning, seen in compounds such as 草創 (inauguration, first founding) and 起草 (to draft, begin writing)."
+  "explanation": "草 combines 艸, plants, with 早 as its sound element. 早 originally pictures the scooping part of a spoon. 草 took over the ordinary meaning of the simpler 艸: grass, herbage, or vegetation growing over the ground.\n\nFrom wild growth, the word also describes what is rough, coarse, or not fully finished. In writing, this becomes a rough draft or rapid, informal script. The first version is set down before it has been worked into a polished form.\n\nThe beginning senses connect by sound with 創. 草創 names an undertaking’s first establishment, and 起草 the initial drafting of a text.",
+  "sources": [
+    {
+      "title": "常用字解 · 草 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15102494.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 草",
+      "url": "https://kotobank.jp/word/%E8%8D%89-482981#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 367
+  }
 }

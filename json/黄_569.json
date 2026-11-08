@@ -17,5 +17,28 @@
     "yellow",
     "yellow color"
   ],
-  "explanation": "In the earliest oracle-bone forms, this character depicts a fire arrow—an arrow shot alight—whose glow suggested the color “yellow.” In bronze inscriptions the figure shifts to the outline of girdle pendants (peiyu), jade ornaments hung from a leather belt at the waist; some forms clearly show the side-hanging, arc-shaped jade known as huang. The graph 黄 thus came to resemble a set of such combined pendants, and their warm, light-brown sheen was taken as the hue called “yellow.” Within the Five Agents doctrine, yellow was the color of the center and thus came to be compared with the imperial position, giving rise to usages like 黄門, the “yellow” (that is, palace) gate."
+  "explanation": "The oracle-bone form of 黄 probably pictures a fire arrow, with the glow suggesting yellow. Bronze forms appear instead to show a pendant of jade worn at the waist. Its pale amber colour could likewise be called yellow. Both forms carry the colour through a concrete object.\n\nYellowing also marks fading vitality. Early uses describe ageing hair and plants losing their fresh colour, so 黄 can refer to decline or old age as well as the hue itself.\n\nIts later association with earth and the centre belongs to the Five Agents system. That symbolic place broadens the colour’s ceremonial importance, while the older forms keep the light of fire and the warm colour of the jade before the eye.",
+  "sources": [
+    {
+      "title": "常用字解 · 黄 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11109328.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 黄",
+      "url": "https://kotobank.jp/word/%E9%BB%84-471940#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 395
+  }
 }

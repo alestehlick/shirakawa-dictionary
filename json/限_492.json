@@ -14,5 +14,28 @@
     "restrict",
     "boundary"
   ],
-  "explanation": "Limits are pictured here through a sacred threshold. The left element 阝 (from 阜) originally depicts the ladder by which deities ascend and descend between heaven and earth—a holy place that must be protected. At that approach an apotropaic eye 目, a curse eye set to repel evil, is installed, and beneath it stands 匕, the figure of a person turning away. The whole character thus shows someone forced to turn back under the warding eye at the divine approach, where further advance is barred. From this image comes the sense of setting bounds and not permitting passage—hence “to limit” and “limit.”"
+  "explanation": "限 combines 阜, the divine ladder, with 目, an eye, and 匕, a person turning away. The ladder marks the sacred approach by which the god ascends and descends. An eye possessing harmful, repelling power is displayed there to keep unwelcome beings out.\n\nThe person beneath the eye withdraws, unable to advance farther. This is the furthest point a person may reach, giving a limit or boundary. The graph marks the separation between the protected sacred place and the space outside it.\n\nFrom this barred approach come limiting, preventing passage, and fixing an extent. The boundary may concern space, time, quantity, or what an action is permitted to reach.",
+  "sources": [
+    {
+      "title": "常用字解 · 限 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10468146.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 限",
+      "url": "https://kotobank.jp/word/%E9%99%90-491351#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 371
+  }
 }

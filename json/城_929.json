@@ -14,5 +14,28 @@
     "fortress",
     "to build"
   ],
-  "explanation": "A picto-phonetic character: the right-hand element 成 supplies the sound and carries the idea of ritually “adorning” and pacifying a halberd, a gesture of exorcism and purification. The left side shows the earthen rampart and walls. Early forms sketch a fortress in plan, with watchtowers at the southern and northern sides. In this light, 城 denotes walls ritually purified and secured, and by extension the fortified enclosure and the castle within. It can also be used for the act of building or fortifying a castle."
+  "explanation": "城 combines 土, an earthen wall, with the sound element 成. Older forms use a plan of the fortified enclosure, with lookout towers at its north and south sides. 成 shows a weapon furnished with ritual adornment, used in purification and defence.\n\n城 therefore names a fortified place whose walls have been ritually secured as well as physically armed. The word can refer to the enclosing rampart, the protected settlement within it, or the act of building such defences.\n\nFrom the fortified city come the later senses of castle and stronghold. The character keeps both aspects of the enclosure: a constructed wall around the inhabitants and a protected boundary intended to exclude hostile powers.",
+  "sources": [
+    {
+      "title": "常用字解 · 城 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13693530.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 城",
+      "url": "https://kotobank.jp/word/%E5%9F%8E-81137#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 334
+  }
 }

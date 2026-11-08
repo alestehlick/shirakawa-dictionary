@@ -12,5 +12,28 @@
     "rightness",
     "morality"
   ],
-  "explanation": "Shirakawa reads 義 as a compound of sheep (羊) and the sign 我, which originally depicts a saw. In ancient rites, sheep—favored as offerings—were cut in half with a saw so that the sacrifice could be shown flawless inside and out: not only the fleece, horns, and hooves, but even the inner organs free of any defect. From this ideal of a sacrifice wholly fit before the gods, 義 first meant what is correct as an offering and later broadened to what is right and proper in general. The right side of 犠 in 犠牲 preserves this image as 羲, showing the lower legs of the sawn sacrificial sheep hanging down; with the cattle element added, 犠 extends the notion to sacrifices including oxen and other animals."
+  "explanation": "義 combines 羊, a sheep, with 我, a saw. The animal is cut for a sacrificial offering. Sheep were frequently used, and the body could be divided so that its fitness was visible within as well as without.\n\nA suitable victim had to be complete and free of defects. Sound fleece, horns, and hooves were not enough; the internal organs also had to show no disease. Cutting the body probably served to display this inner soundness. An offering meeting all these conditions was 義, ‘right’ or ‘fit’ before the gods.\n\nFrom the faultless sacrifice, the character broadens to what is proper and right generally: a correct course, a duty, or a principle to follow. The related 羲 shows the cut lower part hanging down, preserving the sacrificial setting in 犠.",
+  "sources": [
+    {
+      "title": "常用字解 · 義 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8848442.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 義",
+      "url": "https://kotobank.jp/word/%E7%BE%A9-49809#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 382
+  }
 }

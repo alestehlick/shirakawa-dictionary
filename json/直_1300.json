@@ -22,5 +22,28 @@
     "immediately",
     "only"
   ],
-  "explanation": "Shirakawa explains 直 as a compound of 省 and an element depicting a fence or screen that suggests concealment. In his reading, 省 originally shows an ornament affixed at the eyebrows to heighten the eyes’ numinous, curse-like power, and by extension it came to mean inspecting the realm and setting wrongs right. Combined with the idea of something screened off, the character conveys secretly investigating matters and correcting them. From this core sense arise its uses for “to correct” and “correct,” and by natural extension “straight,” “direct,” and a frank, unbent disposition. It also develops the adverbial sense “immediately,” as well as the usage “only, merely,” and even “to be assigned one’s turn” in contexts like night duty (宿直). In Japanese it is the everyday verb for mending and setting things right (naosu/naoru)."
+  "explanation": "直 combines the inspecting eye of 省 with 乚, a screening or concealing boundary. In 省, an ornament above the eye strengthens its spiritual power. The adorned gaze was used in inspecting a territory and bringing wrongdoing under control.\n\nWith the screen added, 直 probably means investigating secretly and correcting what is wrong. From setting things right come ‘correct,’ ‘upright,’ and ‘straight.’ Applied to a person, this becomes an honest, unbent disposition.\n\nThe old graph also shares uses with 値 for meeting, encountering, and value. Its familiar Japanese verbs *naosu* and *naoru* retain the active and resulting sides of correction: putting something right and returning to a proper condition.",
+  "sources": [
+    {
+      "title": "常用字解 · 直 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/19728990.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 直",
+      "url": "https://kotobank.jp/word/%E7%9B%B4-25740#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 345
+  }
 }

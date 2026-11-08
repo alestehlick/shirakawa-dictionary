@@ -14,17 +14,24 @@
     "both",
     "unit for weight or other quantities"
   ],
-  "explanation": "両 is the modern form of 兩. Shirakawa reads the earlier graph as a pair of wheels set alongside one another and treats it as an initial writing of 輛, the vehicle-counting word. Bronze inscriptions use two transmitted variants for vehicles.\n\nHe therefore questions an older dictionary arrangement that separates a repeat or twice graph from the weight unit 兩 while leaving the first shape unexplained. In his account the bronze evidence points back to one vehicle-related formation.\n\nFrom paired wheels come two, both, and things placed in a corresponding pair. The word also serves as a unit in several systems of counting or measurement, including weight. Sound-related uses such as 倆 concern other branches of the vocabulary; the central pictorial explanation remains the paired wheels.",
+  "explanation": "両 is the modern form of 兩. The earlier graph pictures the two wheels of a vehicle side by side. Bronze inscriptions use it for a vehicle, and it is the original writing behind 輛, the word used in counting vehicles.\n\nThe paired wheels give two things taken together, both members of a pair, or things standing alongside one another. The emphasis is on correspondence within a set of two.\n\n兩 also became a unit in systems of counting and measurement, including weight and later money. These uses broaden the numerical range of the word, while the original form remains the pair of wheels that belong to one vehicle.",
   "sources": [
     {
-      "title": "Shirakawa, 普及版 字通 — 両",
+      "title": "字通 · 両",
       "url": "https://kotobank.jp/word/%E4%B8%A1-149894#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
-      "note": "",
-      "accessed": "2026-11-07"
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
     }
   ],
   "joyo": true,
   "frequency_rank": 341,
   "editorial_status": "source-checked English supplement",
-  "related_form": "兩"
+  "related_form": "兩",
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 341
+  }
 }

@@ -16,5 +16,28 @@
     "to be connected",
     "person in charge"
   ],
-  "explanation": "This character joins the person graph 人 with 系, the strands used for decorative threading. In ancient usage, adorning a person with such threads signified fastening them into a bond—linking and keeping them in a continuing connection. From that image, 係 came to express being tied to something or someone, and by extension the state of relationship or involvement seen in compounds like kankei, as well as the encumbrances hinted at in keirui. In Japanese it also yields kakari, the person responsible for a task or office, the one “attached” to a duty."
+  "explanation": "係 combines 人, a person, with 系, hanging or connected cords. The cords were ornaments attached to a person in a ritual setting. To attach them was to establish a bond: the person was tied into a particular relation or role.\n\nFrom this physical attachment, 係 develops the broader senses ‘connect,’ ‘be related,’ and ‘be involved.’ A bond can also bind or constrain someone, giving the sense of an obligation or something on which a person depends. In Japanese, a *kakari* is the person attached to a particular duty—the person responsible for it. 関係 expresses the relationship between people or matters; 係 retains the idea that one thing is tied to another.",
+  "sources": [
+    {
+      "title": "常用字解 · 係 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9857766.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 係",
+      "url": "https://kotobank.jp/word/%E4%BF%82-459437#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 209
+  }
 }

@@ -14,5 +14,28 @@
     "to pass an examination",
     "mansion"
   ],
-  "explanation": "第 is a phono‑semantic character: 竹 shows the bamboo slips (chikukan) that served as writing materials, and an abbreviated form of 弟 functions as the phonetic, indicating the On reading tei/dai. As the Shuowen explains, it originally evoked bamboo slips bound neatly in order with a leather thong (韋), hence the idea of arranging things in proper sequence. From this core meaning come its roles as an ordinal marker and as a word for ranking, as well as its use in compounds like 及第, “to pass an examination.” By extension, the On reading tei was also employed as a substitute for 邸, giving the sense “mansion” in certain contexts."
+  "explanation": "第 combines 竹, bamboo, with an abbreviated 弟 as its sound element. 弟 originally shows something bound with a leather thong, the turns of the binding following an orderly sequence. In 第, bamboo writing strips are arranged and tied together in that way.\n\nThe strips must follow their proper order for the text to be read. 第 therefore means sequence or a place within a sequence, giving its familiar use in 第一, 第二, and other numbered positions. Ordering also produces ranks or grades. To reach an accepted grade is to qualify, as in 及第, passing an examination. A separate use for a residence comes through interchange with 邸.",
+  "sources": [
+    {
+      "title": "常用字解 · 第 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15897100.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 第",
+      "url": "https://kotobank.jp/word/%E7%AC%AC-556261#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 247
+  }
 }

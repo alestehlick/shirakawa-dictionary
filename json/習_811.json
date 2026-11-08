@@ -14,5 +14,28 @@
     "habit",
     "custom"
   ],
-  "explanation": "習 is a compound graph with 羽, “feather,” above and, in its earliest forms, not the later 白 “white,” but the shape of a sacred receptacle that held covenant or prayer texts. The core act is to rub a feather over this container to activate and amplify the efficacy of the prayer. By its very nature this was something performed again and again, and from that repeated ritual the character came to express repetition and, by extension, learning through practice, becoming accustomed, and the piling up of actions that form habit and custom. Although later views treated the lower element as 白 and glossed the whole as “to fly often,” the oracle and bronze forms preserve the vessel beneath 羽. Feathers themselves were potent ritual objects and decorations, even affixed to arms and shields; the graph 単 depicts two feather ornaments on an oval shield, echoing this ritual-ornamental context in which 習 took shape."
+  "explanation": "習 combines 羽, feathers, with 曰, a vessel containing a prayer. The feathers are rubbed repeatedly over the vessel to stimulate the prayer’s power and bring its effect into action. The lower part later takes the familiar shape 白.\n\nThe important movement is repetition. The rite is performed again and again, giving practice, learning through repeated action, and becoming accustomed to something. What is repeated accumulates into a habit or an established custom.\n\nRepeated contact can also become overfamiliarity. In the sacred setting, continually pressing the prayer could amount to treating the divine power too lightly. This gives the older senses of familiarity and slight regard alongside the ordinary learning and practice.",
+  "sources": [
+    {
+      "title": "常用字解 · 習 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13051049.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 習",
+      "url": "https://kotobank.jp/word/%E7%BF%92-526156#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 351
+  }
 }

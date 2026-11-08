@@ -14,5 +14,28 @@
     "much",
     "numerous"
   ],
-  "explanation": "A compound graph formed by 夕 plus 夕. Here 夕 is taken as the figure of meat; two such pieces heaped together evoke an abundance of meat. This image is echoed in the ritual graph 宜, where two 夕 are set above and below a 且 chopping board as offerings in a mausoleum, reinforcing the picture of plentiful sacrificial fare. From this ritual scene the character came to mean “many, much,” and by extension “to excel” and “to be left over, to exceed.” Related characters preserve facets of this sense of surplus or largeness: 侈 speaks of flaunting one’s abundance, 哆 depicts a mouth opened wide, and 移 shows grains (禾) with much meat (多) in a rite meant to shift misfortune elsewhere."
+  "explanation": "多 places one 夕-shaped piece of meat above another. Here the forms represent flesh prepared for an offering. Two portions together show an abundance of sacrificial meat.\n\nThe same stacked meat appears in early forms of 宜, where it is set on an offering stand before the ancestral sanctuary. 多 takes the plentiful contents of the offering as its meaning.\n\nFrom much meat, the character broadens to a large amount or number of anything. Abundance can also mean more than something else, giving ‘exceed’ or ‘excel.’ To regard someone’s contribution as substantial becomes valuing or praising it. The ordinary ‘many’ begins with the plentiful sacred provision.",
+  "sources": [
+    {
+      "title": "常用字解 · 多 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15484728.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 多",
+      "url": "https://kotobank.jp/word/%E5%A4%9A-512650#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 322
+  }
 }

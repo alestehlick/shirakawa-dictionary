@@ -15,5 +15,28 @@
     "child",
     "infant"
   ],
-  "explanation": "A pictograph of a human child distinguished by an infant’s hairstyle. As described in the Book of Rites (Nei Ze), boys received the “male-horn” style three months after birth; the ancient form 兒 depicts this agemaki: the hair is parted down the middle and bound into ring-like tufts by the ears that jut out like small horns. A similar outline was imagined for the “female rainbow” 霓, seen as a two‑headed dragon whose twin heads recall an infant’s hornlike buns. From this vivid image the character naturally came to mean “child, infant.”"
+  "explanation": "児, formerly 兒, pictures a child identified by its hairstyle. The early forms show the hair arranged to either side of the head, rather like the paired bunches of Japanese *mizura*. The distinctive dressing marks the wearer as a young child.\n\nAn early account of infant care describes choosing a day three months after birth to arrange the hair: boys received the horn-like style and girls a different binding. The graph preserves this visible sign of childhood. Its basic meaning is a child or infant, with later uses for someone’s child or for treating a person as immature.",
+  "sources": [
+    {
+      "title": "常用字解 · 児 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12488432.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 児",
+      "url": "https://kotobank.jp/word/%E5%85%90-515289#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 366
+  }
 }

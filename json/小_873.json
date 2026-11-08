@@ -14,5 +14,28 @@
     "small",
     "little"
   ],
-  "explanation": "This character began as a pictograph of tiny objects scattered about—likely small shells. From that image it naturally came to mean both “small” and, by extension, “a few.” The association with shells helps explain related graphs: combining the idea of smallness with the shell element yields characters for fine, diminutive things, such as 瑣, originally evoking linked pieces of jade like a chain, and 鎖, a chain rendered in metal. The form 少 depicts small shells strung on a cord, capturing the sense of “few.” In antiquity shells were revered as ritual amulets, worn as ornament, and used as currency, a cultural backdrop that gives these shell-based images their weight and coherence."
+  "explanation": "小 pictures tiny objects scattered apart, probably small shells. The early forms consist of a few separate marks, each representing one of these little objects. Their size gives ‘small,’ while the small number also allows the sense ‘a little’ or ‘a few.’\n\nThe related 少 adds a connecting stroke, probably showing small shells or beads threaded together. 小 keeps the scattered arrangement. Its basic smallness extends readily to something slight in amount, narrow in extent, or young and not yet grown. In comparisons of status or worth, it can also describe what is lesser or humble.",
+  "sources": [
+    {
+      "title": "常用字解 · 小 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13431356.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 小",
+      "url": "https://kotobank.jp/word/%E5%B0%8F-448356#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 227
+  }
 }

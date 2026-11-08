@@ -13,5 +13,28 @@
     "inn",
     "hotel"
   ],
-  "explanation": "Shirakawa treats 店 as a phono‑semantic character, with 占 acting as the phonetic that signals the On reading ten, as seen in related graphs like 佔 and 坫. The Jade Book (Gyoku Hen) explains 坫 as the stand where wine cups are set back; while that sense belongs chiefly to 坫, 店 likely began as a variant of it. From the image of goods laid out in the corner of a hall like cups arranged on a stand, the graph came to mean a place of display and sale—a shop. Its use later broadened to lodging, a traveler’s inn or hotel, as reflected in compounds such as 飯店, which can denote a hotel and, in Japanese usage, also the name for a Chinese restaurant."
+  "explanation": "店 combines 广, a roofed space, with the sound element 占. It was probably a variant of 坫, the stand at the corner of a hall on which a wine cup was set after use. The stand provided a defined place for arranging and displaying objects.\n\nGoods could likewise be laid out at the side of a hall, as cups were placed on the stand. 店 consequently came to mean a shop: the place where merchandise is set out for sale. The word later also named a traveller’s lodging or inn. Its commercial uses retain the idea of an established place in which goods or services are provided.",
+  "sources": [
+    {
+      "title": "常用字解 · 店 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/20851124.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 店",
+      "url": "https://kotobank.jp/word/%E5%BA%97-561798#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 262
+  }
 }

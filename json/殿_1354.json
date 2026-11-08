@@ -16,5 +16,28 @@
     "mansion",
     "lord"
   ],
-  "explanation": "殿 is formed from 屍 and 殳. In early script, 屍 shows a person seated on a stand like 丌, emphasizing the hips and buttocks, and it is the original graph for 臀, the buttocks. 殳 depicts a hand wielding a long cudgel or pike. Brought together, the character reflects the custom of striking the buttocks as a form of chastisement. In later usage it came to denote the grand residence or hall associated with authority—palaces and noble mansions—and by extension it became a respectful title for the person who dwells there, as in the Japanese honorific readings tono and dono."
+  "explanation": "The left side of 殿 is an earlier graph for 臀, the buttocks. It shows a person seated on a low stand, with that part of the body emphasized. 殳 adds a striking implement held in a hand. Together they probably record the custom of striking the buttocks.\n\nThe rear part of the body also supplies ‘behind’ or ‘last,’ including the rear guard of a group. The character has further uses for settling or bringing under control.\n\nThe familiar grand-hall meaning probably belongs to a related word concerning offerings laid before an ancestral representative and the place of worship. From that ceremonial hall come a palace, a noble residence, and the respectful titles *tono* and *dono*.",
+  "sources": [
+    {
+      "title": "常用字解 · 殿 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/20969684.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 殿",
+      "url": "https://kotobank.jp/word/%E6%AE%BF-427815#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 348
+  }
 }

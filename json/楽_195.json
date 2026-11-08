@@ -18,5 +18,28 @@
     "to enjoy",
     "to like"
   ],
-  "explanation": "Originally written as 樂, this is a pictograph of a handbell with a handle. The central “white” element represents the bell itself, while the paired yō components on the left and right render the tasselled cords that adorn it. Such a bell was shaken in court dances and music to delight the gods, and a shamaness would also ring it in healing rites to drive away the spirit of illness. In that ritual context the graph for ryō came to be associated with curing, and the character 療 was later created on that basis as a phono-semantic formation. From this sacred instrument, the senses broadened: for ‘music’ it is read gaku, for ‘to enjoy, ease’ it is read raku, and for ‘to like’ it is read gō."
+  "explanation": "楽, formerly 樂, pictures a handbell with a handle. The central 白 represents the body of the bell; the paired 幺 are its hanging threads or tassels, and the lower 木 supplies the handle. The instrument was shaken during sacred music and dancing.\n\nThe sound delighted the gods and accompanied the dance through which people approached them. It could also be used by a ritual specialist to drive away the spirits responsible for illness. An old form associated with 療, ‘heal,’ adds the sickness element to this musical instrument.\n\nThese uses unfold into three related senses: music, read *gaku*; enjoyment and ease, read *raku*; and taking pleasure in or being fond of something, read *gō*. The pleasure belongs first to the music and the rite, then to the person who enjoys them.",
+  "sources": [
+    {
+      "title": "常用字解 · 楽 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8279242.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 楽",
+      "url": "https://kotobank.jp/word/%E6%A5%BD-43522#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 202
+  }
 }

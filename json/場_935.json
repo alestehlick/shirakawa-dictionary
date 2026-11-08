@@ -14,5 +14,28 @@
     "field",
     "ground"
   ],
-  "explanation": "場 is a phono-semantic character: the left component 土 marks the ground, while 易 supplies the sound and a resonant idea. In Shirakawa’s reading, 易 depicts a piece of jade set on a pedestal, its radiance streaming downward—an image tied to the rite of tamafuri, the “shaking of the spirit,” in which jade was believed to quicken human vitality. 場 thus originally named the ground set apart for such ceremonies, the sacred precinct where deities were revered—the festival yard (matsuri no niwa). From this sense of a consecrated site, the meaning broadened to a harvest field, an empty lot, and, more generally, any place or locale."
+  "explanation": "場 combines 土, ground, with the sound element 昜. 昜 shows a piece of jade, written in a shape like 日, set on a stand; below it, strokes mark its radiance spreading downward. The jade was believed to possess spiritual power.\n\nIn the rite of *tamafuri*, that power quickened and renewed a person’s vital spirit. 場 names the ground where this ceremony was performed, and more broadly a place set apart for worship. Its earliest sense is thus the ceremonial yard, the *niwa* of a festival or sacred rite.\n\nSuch open ground could also be prepared among the fields. The meaning extended to a harvest or threshing area, a field, an empty lot, and eventually any place where something happens. A stage or a particular occasion continues this sense of a setting provided for an activity.",
+  "sources": [
+    {
+      "title": "常用字解 · 場 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13725989.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 場",
+      "url": "https://kotobank.jp/word/%E5%A0%B4-112620#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 253
+  }
 }

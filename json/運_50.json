@@ -13,5 +13,28 @@
     "to move",
     "fortune"
   ],
-  "explanation": "A phono-semantic character: the walking radical suggests movement and travel, while the phonetic element 軍 supplies the sound un and recalls its old form—a war flag streaming from a chariot. The general’s flag directed maneuvers; the army wheeled its chariots and shifted position in response. From this scene come the senses of turning and circulating, setting things in motion, and thus carrying and conveying. The on reading un is also heard in 暈, the halo that rings the sun or moon, subtly echoing the idea of encircling movement."
+  "explanation": "運 combines 辵, movement along a road, with the sound element 軍. The early 軍 shows a flag streaming above a war chariot. The general’s flag directed the army: its movements told the other chariots when to wheel, advance, or change position.\n\n運 expresses this setting of the army in motion. Turning and moving extend to circulating, carrying, and conveying something from one place to another. The shared idea is movement directed along a course. Applied to the course of events, the character can also mean the way circumstances turn or the lot that falls to someone—hence fortune or destiny. The practical uses for transport retain the more immediate act of moving something to its destination.",
+  "sources": [
+    {
+      "title": "常用字解 · 運 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5012251.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 運",
+      "url": "https://kotobank.jp/word/%E9%81%8B-442490#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 224
+  }
 }

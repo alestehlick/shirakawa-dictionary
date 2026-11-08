@@ -17,5 +17,28 @@
     "theory",
     "doctrine"
   ],
-  "explanation": "Originally written 說, the character combines 言, the solemn words or oaths addressed to the gods, with 兌, which signals the on-reading but also carries a sacred image. Shirakawa reads 兌 as the gentle descent of the divine breath in answer to a shaman’s petitions—here, 兄 evokes one who serves the gods—capturing the rapt, possessed state of the medium. The related form 悅 (悦) shows the shaman’s heart in that moment of divine ecstasy. From this scene of praying to and persuading the deities, 說 broadened to mean persuading people, and by extension explaining and stating; it was even used in place of 悅 with the sense “to be glad.”"
+  "explanation": "説 combines 言, solemn words addressed to the gods, with the sound element 兌. In 兌, 兄 is a ritual specialist praying before the divine presence. The 八 above marks a faint descent of divine breath in answer to the prayer. The worshipper receives it and enters a rapt, possessed state.\n\n説 first concerns pleading or explaining one’s request to the god and receiving the divine response. From addressing the gods, the meaning broadens to addressing people: stating a case, persuading, explaining, or instructing.\n\nThe joy of receiving the divine presence is also written 悦, with 心 added to 兌. 説 can share that sense of gladness or becoming at ease, while its ordinary uses centre on putting something into words so that another can understand.",
+  "sources": [
+    {
+      "title": "常用字解 · 説 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14600604.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 説",
+      "url": "https://kotobank.jp/word/%E8%AA%AC-544445#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 321
+  }
 }

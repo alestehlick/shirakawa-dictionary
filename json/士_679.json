@@ -13,5 +13,28 @@
     "gentleman",
     "male"
   ],
-  "explanation": "In its earliest forms, this character draws the head of a small broadax with the blade pointing downward. It was not a practical weapon but a ceremonial implement that marked social rank, identifying one who served the king in the warrior class. By contrast, the character 王 depicts the head of a large broadax set before the royal throne as a symbol of the king himself. From this origin in martial service, 士 broadened in use to denote those in official posts—civil servants, judges—and, more generally, a man or gentleman."
+  "explanation": "士 pictures the head of a small broad-axe with its cutting edge set downward. It is a ceremonial emblem identifying the bearer’s rank. The larger axe-head is 王; both implements mark a position within the social order.\n\n士 belongs first to the warrior class serving the king. From martial service, it broadens to people holding official responsibilities, including administrators and judicial officers. It can also name a person distinguished by learning or character, and more generally a man. The later uses retain the idea of someone recognized for a role, standing, or accomplishment.",
+  "sources": [
+    {
+      "title": "常用字解 · 士 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12098463.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 士",
+      "url": "https://kotobank.jp/word/%E5%A3%AB-515146#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 316
+  }
 }

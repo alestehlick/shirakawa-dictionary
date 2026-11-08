@@ -16,5 +16,28 @@
     "border",
     "edge"
   ],
-  "explanation": "The original form is 邊, a phono-semantic graph with 晏 as its phonetic. Within 晏, 自 depicts a nose seen from the front, and beneath it is a stand; in contrast to 方—understood as a corpse hung from a horizontal beam—晏 shows a body laid on a pedestal, nose upward, the legs hanging below. The 辵 element conveys walking or moving along a path. In early belief, the boundary where one’s land touched that of other tribes was thought to be haunted by their spirits, so the dead were set at these margins as an apotropaic barrier to ward off harm.邊 thus records a border-guarding curse rite, from which arise meanings such as frontier, boundary, edge, and by extension the neighborhood or vicinity—reflected in Japanese readings like atari and be, as in sokora atari, umibe, and kishibe. In compounds like 辺塞, the character 塞 originally shows ritual implements piled under a roof and raised with both hands to venerate the earth gods, thereby “blocking” the passage of malevolent spirits—hence its sense as a verb ‘to block’ and as a noun ‘fort.’"
+  "explanation": "辺, formerly 邊, combines 辵, going, with the sound element 臱. In 臱, 自 pictures the nose, turned upward above a supporting frame. The lower strokes represent the legs of a dead body hanging from it. The graph records the display of human remains as a ritual defence.\n\nSuch displays were placed at important points where a community’s territory met the outside world. Harmful powers associated with neighbouring peoples were believed to threaten these crossings, and the exposed remains formed a barrier against them. 邊 names the frontier protected by this rite.\n\nFrom the outer limit of a territory come a boundary, edge, rim, or extremity. The word also extends to the area beside something: its surroundings, vicinity, or nearby quarter. These everyday uses retain the position at or around an outer side.",
+  "sources": [
+    {
+      "title": "常用字解 · 辺 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24841131.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 辺",
+      "url": "https://kotobank.jp/word/%E8%BE%BA-623666#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 268
+  }
 }

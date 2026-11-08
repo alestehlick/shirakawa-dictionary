@@ -14,5 +14,28 @@
     "section",
     "game round"
   ],
-  "explanation": "Shirakawa reads this graph as a compound of shaku 尺, the container 口 used to hold covenant-prayers, and an element written like 月 that depicts the crouched‑limb burial pose, with the dead person’s arms and legs bent. In origin, then, the character names the method of interring a stooped, contracted body. From that image of drawing in and confinement come the senses of contraction and delimitation, which develop into “a bounded part” (a section, locality, or bureau) and, by analogy, the bounded field of play in board games—hence the meaning of a single game or round."
+  "explanation": "局 combines 尺 with 口, a vessel holding a prayer. 尺 here represents a dead person buried with the arms and legs folded inward. The prayer vessel accompanies the contracted body, asking that the dead person’s spirit be at peace.\n\nThe drawn-in posture gives the sense of crouching or being cramped. From contraction come narrowness, limitation, and a space confined within boundaries. A bounded part can then be a locality, a portion of the body, or a section of a larger organization.\n\nThe section’s assigned work supplies the administrative sense ‘bureau’ or ‘department.’ A game or performance can likewise be treated as a bounded stretch with a beginning and end, allowing 局 to name a round or a complete game.",
+  "sources": [
+    {
+      "title": "常用字解 · 局 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9482542.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 局",
+      "url": "https://kotobank.jp/word/%E5%B1%80-99453#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 238
+  }
 }

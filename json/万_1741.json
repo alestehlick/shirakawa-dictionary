@@ -13,5 +13,28 @@
     "ten thousand",
     "myriad"
   ],
-  "explanation": "Originally written as 萬, the character was a pictograph of an insect—likely a scorpion—its body and limbs spread in profile. Very early on, however, the graph was pressed into service as a numeral, and oracle-bone inscriptions already use it for “ten thousand,” from which it broadened to mean “myriad” or simply “a great many.” In the Book of Odes (Bei Feng, Jian Xi), the phrase 公庭萬舞 preserves another early nuance: 萬 functions as the name of a ceremonial dance of the Yin people performed with feathered “wings.” The modern form 万 inherits this ancient borrowing, conveying the sense of a vast multitude."
+  "explanation": "万 is the simplified form of 萬. The older graph pictures a creature with prominent appendages and a long, curved tail, probably a scorpion. The ancient forms make the animal shape much easier to see.\n\nThe graph was borrowed for the sound of the word meaning ‘ten thousand.’ The surviving early inscriptions already use it as a number; they do not preserve a use naming the animal. Ten thousand then serves as a vast or comprehensive quantity, giving ‘myriad,’ ‘countless,’ and ‘all kinds.’",
+  "sources": [
+    {
+      "title": "常用字解 · 万 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25906582.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 万",
+      "url": "https://kotobank.jp/word/%E4%B8%87-606000#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 210
+  }
 }

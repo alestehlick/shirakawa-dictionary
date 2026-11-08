@@ -20,5 +20,28 @@
     "layered",
     "important"
   ],
-  "explanation": "This character is a compound of 東 and 土. In early forms, 東 depicts a sack tied at both ends, the original graph for a bag (as in 橐). By adding 土 beneath this sack—a form that evokes a weight or plumb bob—the graph comes to express the sense of “heavy.” From this concrete image of a weighted sack arose the idea of weight in measure, which is reflected in 量, where a spout is added above the sack-form to indicate measuring out grain. On that foundation, the meanings broadened from physical heaviness and weight to notions of piling and layering, and further to figurative senses of importance, gravity, solidity, and carefulness."
+  "explanation": "重 combines 東 with 土. 東 originally pictures a sack tied at both ends. 土 is placed beneath it like an added weight, making the burden of the sack explicit. The graph means ‘heavy’ or ‘having weight.’\n\nThe related 量 adds an opening for pouring at the top of the sack and concerns measuring its contents, especially grain. 重 emphasizes their weight.\n\nFrom physical heaviness come pressure and accumulated weight, then things piled in layers or added one upon another. Applied to conduct or judgement, weight becomes gravity and importance. Something valued highly is treated as weighty; a dignified person carries that weight in a measured, serious manner.",
+  "sources": [
+    {
+      "title": "常用字解 · 重 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13141640.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 重",
+      "url": "https://kotobank.jp/word/%E9%87%8D-442816#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 323
+  }
 }

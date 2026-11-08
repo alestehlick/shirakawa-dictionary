@@ -16,5 +16,28 @@
     "to disperse",
     "to break up"
   ],
-  "explanation": "This character combines 背, which portrays a slab of sinewy, tough meat, with 攴 (攵), the hand wielding a stick to strike. Because that back meat is hard, the scene is of pounding it until it breaks apart. From this vivid act of beating something into small pieces, the sense naturally extends to scattering and dispersal."
+  "explanation": "散 joins 攴, a hand striking with a rod, to a piece of sinewy meat. The upper part of the meat element marks its tough fibres or tendons, with 肉 below. Pounding loosens the fibres and breaks the firm piece apart.\n\nThis beating apart gives ‘scatter,’ ‘disperse,’ and ‘come loose.’ Something previously held together separates into smaller pieces or spreads in different directions. The sense can apply to a gathering that breaks up, materials distributed over an area, or an order that has become disorganized. Because the pounded scraps were not choice meat, 散 also acquired uses for what was of little value or without a useful employment.",
+  "sources": [
+    {
+      "title": "常用字解 · 散 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11998984.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 散",
+      "url": "https://kotobank.jp/word/%E6%95%A3-512751#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 265
+  }
 }

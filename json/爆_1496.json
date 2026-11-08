@@ -13,5 +13,28 @@
     "to burst",
     "explosion"
   ],
-  "explanation": "爆 is a phono-semantic character: the fire radical indicates burning, while 暴 serves as the phonetic and carries an image that deepens the meaning. Shirakawa understands 暴 as depicting the carcass of an animal laid out under the sun, drying and breaking apart; the Shuowen also glosses it as “to scorch.” Together they convey something seared by intense heat and then scattered—hence the senses “to explode,” “to burst open,” and “to split.” This imagery lives on in cultural practice: from ancient times in China, loud reports were used to drive away malevolent spirits. Early firecrackers were simply fresh bamboo heated until it burst; later they became strings of small bamboo tubes packed with explosive mixtures, the 爆竹 that crackle with auspicious noise."
+  "explanation": "爆 combines 火, fire, with the sound element 暴. 暴 pictures an animal’s carcass exposed to the sun, drying until it splits and comes apart. The image carries the force of something breaking into scattered pieces.\n\nWith 火, the cause is intense heat: something is scorched until it bursts, cracks, or flies apart. The word also evokes the sharp report of the bursting, giving the modern sense ‘explode.’\n\nThis noise had a ritual use. 爆竹, bamboo made to burst in the fire, was sounded to drive harmful spirits away. The protective force lay in the loud cracking itself, joining the physical burst to the expulsion of an unwelcome presence.",
+  "sources": [
+    {
+      "title": "常用字解 · 爆 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23193265.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 爆",
+      "url": "https://kotobank.jp/word/%E7%88%86-600073#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 250
+  }
 }

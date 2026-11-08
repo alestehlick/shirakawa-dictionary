@@ -11,5 +11,28 @@
     "thin flat piece",
     "sheet"
   ],
-  "explanation": "A compound graph formed from 木, “wood,” and 攴, the sign for “to strike.” It evokes striking or chopping wood with an ax or similar tool to break it into thin, flat pieces—board-scraps and slivers. From this image of a small piece of board and things that are flat or thin, the character came to denote a thin flat piece, and by extension serves as the counter for flat objects."
+  "explanation": "枚 combines 木, wood, with 攴, a hand striking with a tool. It shows wood being cut or hollowed out with an axe or adze. Early inscriptions can use the word for making a boat, indicating this kind of hewing work.\n\nThe pieces produced include sticks, strips, and thin pieces of board. The word could name a staff or whip and then count such individual wooden objects.\n\nFrom thin wooden pieces, 枚 broadens to the familiar counter for flat or slender things: sheets, boards, and similar objects taken one by one. The counting use retains the shaped piece as its starting point.",
+  "sources": [
+    {
+      "title": "常用字解 · 枚 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25821658.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 枚",
+      "url": "https://kotobank.jp/word/%E6%9E%9A-598357#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 368
+  }
 }

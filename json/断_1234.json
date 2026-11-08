@@ -16,5 +16,28 @@
     "to decide",
     "to abandon"
   ],
-  "explanation": "Originally written 斷, the character combines the 系 element—depicting a thread broken in two and set in a loom—with 斤, the axe used to cut it. It first meant the cutting of a thread, and by extension came to express cutting off or severing in general; from this core image it further developed senses such as discarding or abandoning, declining or refusing, and, by making a decisive “cut,” laying down a decision."
+  "explanation": "断, formerly 斷, combines 斤, an axe, with the thread design 㡭. The threads are stretched on a loom and severed across the middle. The axe identifies the act that cuts them apart.\n\nFrom cutting the threads, 断 means to sever, break off, or interrupt something generally. A connection can be ended; an activity can be stopped; a demand can be refused.\n\nCutting also supplies the force of a decision. An unsettled matter is brought to an end by determining what will be done. Thus 断 extends to deciding, judging, and making a firm resolution, as well as the physical breaking of continuity shown in the older graph.",
+  "sources": [
+    {
+      "title": "常用字解 · 断 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/17074031.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 断",
+      "url": "https://kotobank.jp/word/%E6%96%AD-563599#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 305
+  }
 }

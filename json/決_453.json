@@ -17,5 +17,28 @@
     "to cut open",
     "to drain"
   ],
-  "explanation": "決 is a phono-semantic character: the water radical 氵 joins the phonetic 夬. In early forms, 夬 shows a hand (又) grasping a notched jade ring, 玦 (jue), a pendant worn at the waist that served as a small cutter; that cutting force in 夬 appears as well in graphs like 抉, “to gouge.” With water added, 決 depicts cutting through so that stagnant water can run off—opening a breach in a dike to release a flood. Because cutting a levee is a momentous act undertaken with firm resolve (one even raised the jade jue as a sign of determination), the character naturally extends from “to cut and let flow” to “to decide,” a clear, resolute settling of the heart."
+  "explanation": "決 combines 水, water, with the sound-bearing 夬. In 夬, a hand holds a jade ring with an opening cut into it. Such a piece could be worn at the waist and used as a cutting implement. Its broken circumference gives the sense of cutting through or opening a gap.\n\nWith water added, 決 means to cut an outlet and release water that has collected behind an obstruction. A deliberate opening in a bank lets the water escape before it causes a greater flood. Cutting through an obstruction also supplies the movement behind ‘decide’: bringing an unsettled matter to a definite conclusion, resolving a difficulty, or settling what is to be done.",
+  "sources": [
+    {
+      "title": "常用字解 · 決 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10164355.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 決",
+      "url": "https://kotobank.jp/word/%E6%B1%BA-490278#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 201
+  }
 }

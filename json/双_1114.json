@@ -14,5 +14,28 @@
     "set of two",
     "double"
   ],
-  "explanation": "Originally written as 雙, the character combines the bird element (隹) with the hand (又) to depict a hand holding two birds. From this concrete scene it came to mean a matched pair, things set together or in alignment, and by extension simply “two.” In contrast, 隻 shows a single bird held in a hand, while the simplified form 双 suggests two hands placed side by side to convey the idea of a pair. Hence expressions like isso, “one pair,” name something that forms a set of two."
+  "explanation": "双 is the simplified form of 雙. The older graph places two 隹, birds, above 又, a hand. It pictures two birds held together in one hand.\n\nThe two make a pair: things placed side by side, matched, or taken together as a set. 隻, with one bird held in the hand, supplies the corresponding single item.\n\nFrom a matched pair, 双 also means an equal or counterpart. Something 無双 has no matching companion or rival; it stands without a second of its kind.",
+  "sources": [
+    {
+      "title": "常用字解 · 双 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15046036.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 双",
+      "url": "https://kotobank.jp/word/%E5%8F%8C-551651#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 327
+  }
 }

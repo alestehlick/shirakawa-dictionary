@@ -16,5 +16,28 @@
     "to fill",
     "sufficient"
   ],
-  "explanation": "A phono-semantic compound: the phonetic element read man depicts a ceremonial lap-robe (heishitsu) richly embroidered on one side; because the embroidery covers the whole surface, it conveys the idea of being completely adorned—filled with decoration. With the three-stroke water element added, the graph 滿/満 pictures water so abundant it brims over, giving the sense “full (of water).” From there it broadens to the general meanings “to be full,” “to fill,” and “to suffice.” The same man element appears in 瞞, where, combined with the “eye,” it evokes eyes led astray by profuse ornament, hence the notion of deception, as in 欺瞞."
+  "explanation": "満, formerly 滿, combines 水, water, with the sound element 㒼. 㒼 pictures a ceremonial lap-covering embroidered across its whole surface. The decoration fills the garment, leaving no part of the field unadorned.\n\nAdding water transfers that fullness to a vessel or body of water filled to the brim, even overflowing. From this come filling and being full generally. A requirement fully met gives ‘suffice’ or ‘satisfy,’ and something brought to its full extent is complete.\n\nFullness can also become excessive. Applied to a person’s bearing, 満 may suggest self-satisfaction or arrogance. The development begins with the densely embroidered surface and continues through water, sufficiency, and an excess that can no longer be contained.",
+  "sources": [
+    {
+      "title": "常用字解 · 満 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25907319.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 満",
+      "url": "https://kotobank.jp/word/%E6%BA%80-636507#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 301
+  }
 }

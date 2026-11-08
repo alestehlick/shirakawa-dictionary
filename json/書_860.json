@@ -17,5 +17,28 @@
     "letter",
     "calligraphy"
   ],
-  "explanation": "書 is a compound of 聿, the hand holding a writing brush, and 者, which in its archaic form shows branches piled over a ritual “sai” receptacle and then covered with earth to make an earthen hedge—the source of 堵, “clay wall.” In early villages such walls were embedded with talismanic slips as protective charms, and 書 originally named the sacred characters brushed onto these talismans. From this ritual center it came to mean an official document; bronze inscriptions preserve formulas like “receive the writing and confer investiture.” Because of this sacred-administrative role, 書史 referred to the official in charge of documents; 史 itself first denoted a rite and its record. Over time the sense broadened to ordinary writing—letters, books, and characters—and to calligraphy executed according to established methods (書法), a celebrated art of the East."
+  "explanation": "書 combines 聿, a hand holding a writing brush, with an older form of 者. In 者, branches are piled above 曰, a vessel containing a prayer, and covered with earth. The resulting earthen enclosure protected a settlement. A sacred written charm buried inside it placed the boundary under ritual protection.\n\n書 names the sacred characters written with the brush for this purpose. The writing gave a lasting form to the prayer and made it an active part of the settlement’s defence. From these inscribed sacred words, the meaning broadened to writing in general: a written text, a document, a letter, or a book. It can also name the written characters themselves and the manner in which the brush forms them, giving the sense of handwriting or calligraphy.",
+  "sources": [
+    {
+      "title": "常用字解 · 書 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13359151.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 書",
+      "url": "https://kotobank.jp/word/%E6%9B%B8-78736#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 226
+  }
 }

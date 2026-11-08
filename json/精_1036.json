@@ -13,5 +13,28 @@
     "essence",
     "spirit"
   ],
-  "explanation": "A phono-semantic character combining 米 “rice” with 青 as the phonetic, which cues the on reading sei. In early usage it refers to picking out rice—the choicest, most beautiful grains of rice, barley, and the five cereals selected as offerings to the deities. From this core sense of select purity it broadened to mean clean, beautiful, and exact, and in compounds like 精神 it further came to denote the functioning heart and mind, even the soul."
+  "explanation": "精 combines 米, grain, with the sound element 青. Its early meaning concerns selecting and preparing the finest grain. Rice and other cereals offered to the gods had to be carefully chosen and cleaned, so that the offering consisted of the best and purest part.\n\nFrom this selected grain, 精 comes to describe whatever is refined, excellent, or free of coarseness. Careful selection also suggests exactness and thorough attention, giving ‘precise,’ ‘detailed,’ and ‘carefully worked.’\n\nThe best and most concentrated part of something is its essence. Applied to a person, 精 can therefore name the clear, vital power of the heart and mind, or the spirit itself. 精神 extends this sense of a concentrated inner vitality beyond the original offering of refined grain.",
+  "sources": [
+    {
+      "title": "常用字解 · 精 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14400323.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 精",
+      "url": "https://kotobank.jp/word/%E7%B2%BE-544391#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 244
+  }
 }

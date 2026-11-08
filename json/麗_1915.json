@@ -13,5 +13,28 @@
     "beautiful",
     "elegant"
   ],
-  "explanation": "In the oracle-bone and bronze inscriptions, this character shows deer antlers set out in a row. A deer's paired antlers were regarded as something strikingly beautiful, so the graph came to mean “beautiful, elegant.” From the same image arises the nuance of things standing in a row or side by side. The simple form 丽 is the original graph, later serving as the upper component of 麗. The related character 儷 preserves the sense of “to stand in a pair,” and in compounds such as 伉麗 it refers to a husband and wife."
+  "explanation": "The upper 丽 is the original form of 麗. It pictures the paired antlers of a deer; 鹿 was added below to identify the animal more explicitly. The balanced pair was admired for its beauty, giving ‘beautiful,’ ‘lovely,’ and ‘splendid.’\n\nThe two antlers also provide the sense of things standing side by side or forming a pair. That paired sense is preserved in 儷. A husband and wife can be described as a matched pair in 伉儷, joining companionship with the older image of two things set together. The character’s beauty is therefore closely connected with the visible balance of the deer’s antlers.",
+  "sources": [
+    {
+      "title": "常用字解 · 麗 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28669699.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 麗",
+      "url": "https://kotobank.jp/word/%E9%BA%97-660828#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 258
+  }
 }

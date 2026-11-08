@@ -17,5 +17,28 @@
     "latter part",
     "treetop"
   ],
-  "explanation": "An indicative character built on 木 “tree,” 末 adds a bold mark at the top of the trunk to show the tree’s extremity—its treetop. From this graphic focus on the uppermost tip, the character came to mean “treetop,” then more generally “end,” and by extension “future” or the “latter part.” In deliberate contrast, 本 places the mark at the base of the tree to indicate its root or foundation. The paired notion of 本 and 末 is preserved in expressions like 本末, evoking the relation between basis and end, root and branch, or beginning and outcome."
+  "explanation": "末 adds an enlarged mark to the upper part of 木, a tree. The mark singles out the branch tips or treetop. It later becomes the long horizontal stroke above the rest of the tree.\n\nFrom the tree’s extremity come a tip, an end, and the final part of something. The slender ends also suggest what is small, weak, or of secondary importance. 本 marks the base of the tree, while 末 marks its farthest growth. Together, 本末 compares the foundation with the end or the essential part with its extensions.",
+  "sources": [
+    {
+      "title": "常用字解 · 末 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25878258.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 末",
+      "url": "https://kotobank.jp/word/%E6%9C%AB-136437#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 333
+  }
 }

@@ -14,5 +14,28 @@
     "floor",
     "rank"
   ],
-  "explanation": "Shirakawa interprets 階 as a phono-semantic compound: 皆 provides the sound kai, while the left component 阝 (from 阜) originally depicts the ladder used by deities to ascend and descend. He further sees 皆 as the orderly ranks of spirits coming down in answer to prayer, so the earliest meaning of 階 is the stairway prepared for the gods’ descent from heaven. In ritual settings, altars were raised on earthen platforms, with clay steps built in front; from this context the character came to mean steps and staircases in general, and later extended to graded levels such as social rank, as in 階級."
+  "explanation": "階 combines 阜, the divine ladder, with 皆 as its sound element. 皆 shows divine presences descending side by side in answer to prayer. 阜 supplies the structure by which they move between heaven and the place of worship.\n\n階 probably first names the steps prepared for that descent, or the stairway of an altar. Their ordered sequence allows movement from one level to another.\n\nFrom sacred steps, the word broadens to stairs and ladders generally, then to stages, grades, and ranks. A position in a hierarchy is one level in such a sequence, and advancement is movement upward through it. The ordered descent of the original rite becomes the familiar arrangement of successive levels.",
+  "sources": [
+    {
+      "title": "常用字解 · 階 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/7795936.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 階",
+      "url": "https://kotobank.jp/word/%E9%9A%8E-456625#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 387
+  }
 }

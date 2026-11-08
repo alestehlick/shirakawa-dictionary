@@ -17,5 +17,28 @@
     "to cherish",
     "to care for"
   ],
-  "explanation": "In the ancient script, 愛 combines the figure of 爰—a person pausing and looking back—with a 心 placed at the chest. It pictures someone whose heart is tugged backward at the moment of parting, a feeling that gives rise to “love” and tender care. In Japanese it was also read kanashi, evoking the sorrow of leaving one’s heart with those who remain and the weight that lingers on the mind. From this core sense the character came to mean love and affection more broadly; related graphs written with the same sound, such as 曖, describe dim or clouded states (as in aimai, “ambiguity”), extending the idea into feelings and scenes softened by shadow."
+  "explanation": "愛 places 心, the heart, within a figure pausing and looking back. The person is about to leave, but the heart is drawn toward those remaining behind. The body’s departure and the backward pull of feeling are held together in the graph.\n\nThis lingering concern gives affection, tenderness, and the wish to cherish or protect someone. Japanese *kanashi* could express that feeling: the beloved person remains on the mind, and parting carries sorrow with it.\n\nFrom the heart left with another come love and fondness more generally, as well as reluctance to lose or part with something valued. Related words for dim or clouded states preserve the hesitant, indistinct quality of a feeling that is not easily released.",
+  "sources": [
+    {
+      "title": "常用字解 · 愛 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4352054.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 愛",
+      "url": "https://kotobank.jp/word/%E6%84%9B-23564#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 358
+  }
 }

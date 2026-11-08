@@ -18,5 +18,28 @@
     "hardship",
     "very"
   ],
-  "explanation": "苦 is a phono-semantic character: the grass radical signals a plant, and 古 serves as the phonetic, giving the on reading ku. In the Shuowen it names a specific plant, identified as nigana (Ixeris dentata), renowned for its intense bitterness; from this, the character came to mean “bitter,” and by extension can function as an intensifier meaning “very.” The sense of mental and physical hardship is linked to the older writing of kurō as 劬労, where 劬 depicts a body bent in toil with a plow-like implement, evoking weary farm labor. Sharing the same on reading, 苦 drew upon that image of toil and came to be used for “painful” experience and “to suffer.”"
+  "explanation": "苦 combines 艸, plants, with 古 as its sound element. It first names an intensely bitter herb, called *nigana* in Japanese. From the plant comes bitterness itself. Because the taste is so strong, 苦 can also intensify a description, meaning ‘very’ or ‘severely.’\n\nThe suffering and toil senses connect with 劬. The older writing 劬勞 concerns strenuous agricultural labour, with 力 representing the plough. 苦 took over uses in this sphere of painful effort, giving hardship, distress, and the experience of suffering.\n\nThe character thus joins an unpleasantly strong taste with the strain of difficult work. Both remain familiar in the physical and emotional meanings of bitterness.",
+  "sources": [
+    {
+      "title": "常用字解 · 苦 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9694113.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 苦",
+      "url": "https://kotobank.jp/word/%E8%8B%A6-54598#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 353
+  }
 }

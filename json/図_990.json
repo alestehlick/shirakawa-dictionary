@@ -19,5 +19,28 @@
     "book",
     "document"
   ],
-  "explanation": "The traditional form 圖 sets an inner element within an enclosing frame. The outer 囗 marks a bounded tract, while the inner component is 啚—the base that also appears in 鄙 (hi, “country; base”), and itself incorporates the sign 亩, the figure of a grain elevator, alongside a mouth element. Together they depict a mapped area with the location of a granary inscribed. From this image of a laid‑out site and its marked installation point, the character came to mean a plan or map, and by extension an illustration or drawing, as well as the act of drawing. Because such facilities are placed according to prior design, the graph further developed the sense “to plan; to measure,” and it is also used for “books; writings,” as in terms for library materials."
+  "explanation": "図, formerly 圖, places 啚 inside 囗, the boundary of an area. 啚 combines the granary form 㐭 with a surrounding region; it is also the earlier graph behind 鄙. 圖 shows a map of cultivated land with the granary’s location marked within it.\n\nThe map made the arrangement of fields and storage visible. It could therefore serve as the basis for managing the land and planning its use. From this come a plan, a scheme, and the act of considering how something should be carried out.\n\nThe visible representation also broadens to a drawing, diagram, or illustration. The map remains the central image: an area understood and organized by setting its important places down in a form that can be inspected.",
+  "sources": [
+    {
+      "title": "常用字解 · 図 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14084620.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 図",
+      "url": "https://kotobank.jp/word/%E5%9B%B3-539403#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 352
+  }
 }

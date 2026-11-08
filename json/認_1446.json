@@ -14,5 +14,28 @@
     "to acknowledge",
     "to admit"
   ],
-  "explanation": "A phono-semantic character: 言 (speech) provides the sense of statements and claims, while 忍 serves as the phonetic, yielding the on reading nin. Early lexica such as the Shuowen record the related graph 訒, “to be at a loss in speech,” but the graph 認 itself appears later. In the Three Kingdoms history (Wu Shu, biography of Zhonglímù), the phrase 縣民有識認之 shows 認識 used in the concrete sense “to lay claim to (property)”: a county resident claimed the ripened rice from Mù’s field, and similar examples are known. From this sense of asserting a claim, the verb developed to mean acknowledging or accepting that claim, which underlies the modern meaning “to recognize, to admit.”"
+  "explanation": "認 combines 言, words, with 忍 as its sound element. It is related to the older 訒, whose meanings concern difficulty or hesitation in speaking. The graphs later developed distinct uses.\n\n認’s early recognition sense is concrete: a person identifies property and asserts the right to it. One account concerns a man who opened neglected land and grew rice; when it ripened, a local resident claimed it as his own. Recognizing the crop amounted to asserting ownership.\n\nFrom making such a claim, 認 comes to mean acknowledging or accepting it. The modern senses of recognizing, admitting, approving, and consenting grow from this relation between identifying something, asserting it, and allowing the assertion to stand.",
+  "sources": [
+    {
+      "title": "常用字解 · 認 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22485766.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 認",
+      "url": "https://kotobank.jp/word/%E8%AA%8D-593617#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 396
+  }
 }

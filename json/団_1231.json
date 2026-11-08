@@ -13,5 +13,28 @@
     "lump",
     "team"
   ],
-  "explanation": "Originally written 團, this is a phono-semantic character with 專 (専) as the phonetic, indicating the on reading. Shirakawa explains 專 as the image of something placed in a tied sack (恵) and pressed and beaten by a hand (寸) until it becomes a rounded mass. 團 then adds an outer wrapping, suggesting an even more completely rounded, bundled form. From this concrete scene come the senses of “round,” “to gather into a rounded mass,” “lump or clod,” and by extension “group” or “team.” The same hand-worked idea appears in related graphs like 搏, which depict beating and rolling something up by hand."
+  "explanation": "団, formerly 團, surrounds 專 with an enclosing outline. 專 is the sound element. It shows material placed in a sack, 叀, and struck by a hand, 寸, until the contents are compacted into a rounded mass. The outer enclosure emphasizes the resulting rounded whole.\n\n團 names that result: a ball, lump, or compact body. The related 摶 emphasizes the action of beating and rounding it.\n\nSeparate things gathered into one mass also provide the idea of a group. 団 can therefore name people brought together as a company, team, or association. 団結 retains the sense of members held firmly as one, while 団欒 evokes their gathering closely together.",
+  "sources": [
+    {
+      "title": "常用字解 · 団 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/16893812.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 団",
+      "url": "https://kotobank.jp/word/%E5%9B%A3-563595#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 359
+  }
 }

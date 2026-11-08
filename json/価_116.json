@@ -14,5 +14,28 @@
     "worth",
     "valuation"
   ],
-  "explanation": "Originally written 價, this is a phono-semantic character built on 賈 as its phonetic. Because 賈 denotes trade—buying and selling—it supplies both the sound ka and the commercial sense, and the simplified form 価 carries this forward. Thus 価 expresses the value or price of things, their worth (as in 価値), and by extension appears in words for appraisal and evaluation (評価), the act of determining that value."
+  "explanation": "価, formerly 價, adds 人, a person, to 賈 as its sound element. 賈 concerns buying and selling. Its older form includes a covered vessel, with 鼎 later resembling 貝, and the goods contained for exchange.\n\n價 takes both sound and commercial meaning from 賈. It names the price paid for a thing—the amount required in return for it.\n\nFrom the exchange price, the meaning broadens to worth more generally. A person, object, or achievement can be assessed for its value even when no sale is involved. 価値 and 評価 retain this movement from a concrete price to the judgement of what something is worth.",
+  "sources": [
+    {
+      "title": "常用字解 · 価 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5938357.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 価",
+      "url": "https://kotobank.jp/word/%E4%BE%A1-425151#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 400
+  }
 }

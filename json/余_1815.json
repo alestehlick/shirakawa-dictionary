@@ -17,5 +17,28 @@
     "remainder",
     "i (archaic)"
   ],
-  "explanation": "Originally written as 餘, this is a phono-semantic character: 食 “food” provides the semantic frame of provisions, while 余 supplies the sound. In the Shuowen it is glossed as 饒 “abundant,” evoking plentiful food; from this sprang the later, general sense of what is left over—excess and remainder. In modern usage the simplified 余 stands as the standard form for 餘. Shirakawa further distinguishes another 余 depicting a long-handled needle. In medical imagery this tool pierces an abscess and drains it into a basin, which underlies the sense of recovery in graphs such as 愈 and 愉; as a ritual implement it was thrust into the earth to expel malign spirits hidden below, a nuance that colors 徐 and 途 with the idea of an eased, purified way. The use of 余 as the first-person pronoun “I” is a later loan based on its sound."
+  "explanation": "For the meaning ‘remain’ or ‘be left over,’ 余 is the modern form of 餘. 餘 combines 食, food, with 余 as its sound element. It first describes plentiful food: provisions abundant enough for some to remain after people have eaten.\n\nFrom food in excess, the meaning broadens to a remainder of any kind, a surplus, or something beyond the amount required. Spare time is likewise time left after other demands have been met. Other uses describe an effect, feeling, or possibility that still remains.\n\nThe simpler graph 余 also has an independent history and was borrowed for the first-person pronoun ‘I.’ Its modern use for 餘 brings these originally distinct written uses into the same form.",
+  "sources": [
+    {
+      "title": "常用字解 · 余 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/27067117.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 余",
+      "url": "https://kotobank.jp/word/%E4%BD%99-652559#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 264
+  }
 }

@@ -19,5 +19,28 @@
     "to think",
     "to inquire"
   ],
-  "explanation": "Shirakawa reads 存 as a compound of 才 and 子. 才 depicts the crosspiece fixed atop a landmark tree raised as a sacred signpost; in ancient rites a covenant receptacle for petitions to the gods was attached to such a pole, a prototype that also underlies 在. Adding 士—the head of a small broadax used as a sacred implement—to 才 yields 在, affirming a place as sanctified and truly present. In 存, by contrast, 子 is joined to 才, picturing a child placed under that consecrating sign. It conveys a child being hallowed so that his life is preserved, and from this it comes to mean to be, to exist in a consecrated state, to live, and to keep. By extension it also covers inner intention and regard, as in 存心 (thought held in the heart) and 存問 (inquiring after someone’s condition). Even 存在 originally suggested presence established through sanctification and purification, not mere factual existence."
+  "explanation": "存 combines 才 with 子, a child. 才 pictures a sacred marker: a post with a crosspiece and an attached vessel containing a prayer. The sign established a place under divine protection. Joined to the child, it shows that protection extended to the child’s life.\n\nThrough the consecrating rite, the child is secured as a living presence. 存 therefore means to live, continue in existence, or be preserved. The related 在 uses the same marker with a sacred axe-head and establishes protected presence in a place.\n\nFrom keeping a life safe, 存 extends to retaining or keeping something in being. It can also describe what is held in the mind, or the concerned attention shown in asking after another person’s condition.",
+  "sources": [
+    {
+      "title": "常用字解 · 存 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15435652.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 存",
+      "url": "https://kotobank.jp/word/%E5%AD%98-555751#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 289
+  }
 }

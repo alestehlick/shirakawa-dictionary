@@ -18,5 +18,28 @@
     "to arrive",
     "to attach"
   ],
-  "explanation": "Originally written as 著, this is a phono-semantic character with 者 providing the sound. Shirakawa explains 者 as depicting an earthen hedge raised to protect a village, into which written charms (日) were buried; by implanting these writings, incantatory power was made to adhere to the barrier. From this ritual sense of making something stick came the meanings “to attach, to adhere,” and by extension “to arrive” and “to put on.” 着 is the popular form of 著 and came to be used for everyday senses such as wearing garments and arriving (chaku), while 著 (cho) developed literary senses like “clear, manifest” and “to write and publish.”"
+  "explanation": "着 was originally written 著, with 者 as its sound element. 者 pictures a protective earthen enclosure made with branches and earth. Within it, 曰, vessels holding written prayers, were buried at several points like talismans. Their power was made to adhere to the wall so that it could repel intruders.\n\nThis attachment of protective force gives the sense ‘attach’ or ‘adhere.’ Something put on the body is attached to it, giving wearing clothes; someone reaching a destination has come into contact with the place, giving arrival.\n\n着 became the usual form for these everyday meanings. 著 continues chiefly in uses concerning what is conspicuous or set down in writing, while 着 covers attachment, wearing, and reaching a place.",
+  "sources": [
+    {
+      "title": "常用字解 · 着 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/18105076.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 着",
+      "url": "https://kotobank.jp/word/%E7%9D%80-471948#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 331
+  }
 }

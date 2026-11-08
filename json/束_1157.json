@@ -15,5 +15,28 @@
     "tie up",
     "bind"
   ],
-  "explanation": "This character pictures pieces of wood gathered and bound together: a bundle. From that image it means to bundle or tie up, and by extension a tied bundle itself. The act of fastening things together naturally evoked the broader idea of kessoku—binding with cord and, figuratively, the uniting of people of like intent. In ancient practice, a bundle of brushwood (sokushin) was offered to the gods and set adrift in a mountain stream for divination, and in legal proceedings both accuser and accused presented a bundle of arrows (sokushi). Such rites show how the notion of bundling came to signify solemn union and commitment."
+  "explanation": "束 pictures pieces of wood gathered and tied around the middle. The binding draws the separate branches into one bundle. The character names both the act of bundling and the bundle itself.\n\nThe same arrangement was used for other materials. Early inscriptions count bundles of silk, thread, and arrows, each bundle making a definite unit. Binding can also put something in order, as when hair is tied up or clothing fastened properly. Applied to conduct, the fastening becomes restraint: keeping one’s actions within bounds. In 結束, the separate members are brought together into a single, united whole.",
+  "sources": [
+    {
+      "title": "常用字解 · 束 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15297575.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 束",
+      "url": "https://kotobank.jp/word/%E6%9D%9F-89831#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 266
+  }
 }

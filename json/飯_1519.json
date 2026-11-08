@@ -13,5 +13,28 @@
     "cooked rice",
     "to eat"
   ],
-  "explanation": "飯 is a phono-semantic character: the left side is the food radical 食, while the right side 反 supplies the on reading han. The Shuowen already glosses it as “to eat,” and the character came to be used for staple foods such as millet and foxtail millet, as well as for meshi, cooked rice or a meal. Ritual prescriptions in the Book of Rites note that millet was eaten with a spoon rather than chopsticks, and that one should not roll rice into a ball. From such practices we learn that in antiquity food was commonly pinched by hand, chiefly with the thumb; Shirakawa takes this to be reflected in the graph, with 反 also evoking the thenar—the fleshy base of the thumb—within the act of eating."
+  "explanation": "飯 combines 食, food, with 反 as its sound element. It first means eating staple grain, especially the cooked millets that formed a principal part of the meal. The word also names the cooked food itself, giving rice or a meal, *meshi* in Japanese.\n\nEarly rules of eating describe taking the grain by hand and prohibit rolling it into a ball. It was carried on the fleshy base of the thumb, a part that could itself be associated with the word 飯. This is a detail of the eating practice, while 反 supplies the character’s sound.\n\nThe character’s later everyday range keeps the same centre: prepared staple food and the act of eating it.",
+  "sources": [
+    {
+      "title": "常用字解 · 飯 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23484318.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 飯",
+      "url": "https://kotobank.jp/word/%E9%A3%AF-141308#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 337
+  }
 }

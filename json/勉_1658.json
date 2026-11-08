@@ -14,5 +14,28 @@
     "study",
     "to encourage"
   ],
-  "explanation": "Shirakawa reads 勉 as a phono-semantic compound with 免 as the phonetic. He takes 免 (with the on value men) as depicting the posture of childbirth—an image of straining effort—and 力 as the form of a plow, evoking agricultural labor. Joined together they convey sustained exertion in fieldwork, and from there the broader sense of making every effort: to strive and work diligently (tsutomeru). The character thus comes to suggest spurring oneself on or encouraging diligence, and in compounds points toward studied application."
+  "explanation": "勉 combines 力 with 免 as its sound element. 力 pictures an agricultural implement, the plough, and directs the meaning toward labour in the fields. 免 depicts the posture of childbirth, another activity requiring strenuous effort.\n\n勉 first concerns applying oneself to agricultural work. The bent posture of field labour also connects with 俛, bending forward. From this sustained exertion come striving, working diligently, and making an effort to accomplish something.\n\nThe effort can be urged upon another person as well as oneself, giving encouragement or exhortation. In 勉強, application to study continues the broader idea of pressing on with a demanding task.",
+  "sources": [
+    {
+      "title": "常用字解 · 勉 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24960347.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 勉",
+      "url": "https://kotobank.jp/word/%E5%8B%89-626048#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 336
+  }
 }

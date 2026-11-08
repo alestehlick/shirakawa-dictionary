@@ -12,5 +12,28 @@
     "every",
     "each"
   ],
-  "explanation": "Originally this graph shows a woman with her hair bound up and set with ornaments. In bronze inscriptions it carries the sense of earnest exertion—being diligent and making an effort. The related character 敏, whose ancient form combines 毎 with 又 “hand,” pictures a hand added to the hair ornament, arranging it in readiness; from this image it conveys zealous, attentive engagement in ritual. The familiar meanings “always” and “each time, every” arose later as a loan usage attached to its Chinese reading."
+  "explanation": "毎 pictures a woman with her hair bound and adorned for ritual. The ancient forms emphasize the ornament above the head. Adding a hand produces 敏, concerned with preparing or attending to the adornment; adding threads gives 繁.\n\nBronze inscriptions use 毎 and 敏 for earnest application or diligence, especially in sacred duties. The familiar meanings ‘always,’ ‘each time,’ and ‘every’ are later sound borrowings. The woman’s ritual preparation explains the original form and its early activity, while the borrowed use accounts for the everyday word now written 毎.",
+  "sources": [
+    {
+      "title": "常用字解 · 毎 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25792517.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 毎",
+      "url": "https://kotobank.jp/word/%E6%AF%8E-502899#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 308
+  }
 }

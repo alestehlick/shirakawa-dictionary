@@ -12,5 +12,28 @@
     "tea plant",
     "tea leaves"
   ],
-  "explanation": "Tea is written as a phono-semantic compound: the grass radical signals a plant, while the lower element 余 functions as the phonetic, giving the sound and echoed by characters that share it. In the oldest lexica the word was not yet written as 茶; the earlier form was 荼, and 余 served as the sound marker in related graphs. Classical sources help trace the transition: the Erya glosses 檟 as “bitter tea,” and the Jingdian Shiwen explains 荼 as a kind of late-picked tea, effectively the same entity later written 茶. Lu Yu’s Tang-dynasty Classic of Tea then sets out the craft in full—production, drinking, origins, and more. From the Song and Yuan onward, tea became the daily companion of the literati, and in Japan, brought with Zen in the Kamakura period, it was first taken as medicine before maturing into the Way of Tea."
+  "explanation": "茶 names tea, its leaves, and the drink made from them. The graph is absent from the oldest dictionaries. Its earlier form was probably 荼, combining 艸, plants, with the sound element 余. An early description of a ‘bitter 荼’ refers to the plant later written 茶.\n\nAs tea drinking developed, 茶 became the specialized written form for this plant. Its cultivation, preparation, and drinking were described in detail in the Tang period, and tea became a familiar pleasure of educated life in later centuries. In Japan, its preparation developed into the tea ceremony. The character’s form therefore belongs to the naming of a plant, while the cultural practices gathered around the drink grew much later.",
+  "sources": [
+    {
+      "title": "常用字解 · 茶 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/18054667.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 茶",
+      "url": "https://kotobank.jp/word/%E8%8C%B6-188467#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 235
+  }
 }

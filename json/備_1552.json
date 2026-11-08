@@ -17,5 +17,28 @@
     "fully",
     "in detail"
   ],
-  "explanation": "A phono-semantic character: its phonetic element is 葡, which Shirakawa reads as the form of an ebira, the box-shaped quiver worn on the back. In early oracle-bone forms the quiver is shown packed with arrows. With the person radical added, the whole graph depicts someone carrying a quiver on their back—an image of being ready for combat. From this concrete scene the meaning broadened to preparing for something, providing what is needed, and being furnished with equipment. Because true preparedness implies having everything in place, the character also came to express doing something fully and in detail, even the sense of “all.”"
+  "explanation": "備 adds 人, a person, to the sound element 𤰇, a quiver containing arrows. The person carries it on the back, ready to go into battle. The older forms make the arrows and their container visible.\n\nFrom being equipped for combat, 備 broadens to preparing for any undertaking and providing whatever will be needed. It can describe the act of making ready or the condition of having the necessary equipment and resources.\n\nPreparation requires care in every part. The character consequently also means completely or in detail: all the requirements have been considered and supplied. This thoroughness connects the original armed readiness with its later general uses for provision and preparedness.",
+  "sources": [
+    {
+      "title": "常用字解 · 備 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23861388.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 備",
+      "url": "https://kotobank.jp/word/%E5%82%99-607603#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 357
+  }
 }

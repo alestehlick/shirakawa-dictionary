@@ -13,5 +13,28 @@
     "sovereign",
     "ruler"
   ],
-  "explanation": "This character combines 尹 and 口. In early forms, 尹 shows a hand gripping a sacred cane used by ritual specialists to summon and invite the gods. The 口 here is not a mouth but a ritual receptacle—a covenant vessel into which petitions to the deities were placed. Together they depict the shamanic leader who, holding the divine cane and intoning prayers, could call down the gods. Because this religious chief also wielded communal authority, the graph came to denote the head of a clan and, in time, the hereditary ruler—the sovereign or lord, the kimi."
+  "explanation": "君 combines 尹 with 口. 尹 shows a hand holding a sacred staff, the implement of a priest who could invite a god to approach. The 口 below it is a vessel containing the words of a prayer. Together they identify the chief ritual specialist: the person who held the divine staff and recited the prayers that summoned the god.\n\nThis religious authority also became authority over the community. 君 developed from the leader of the rite into the head of a clan or territory, then a lord or sovereign whose powers included both worship and government. The respect attached to that position extended the word to other honoured people. Japanese *kimi* continues the character’s use as a title or form of address.",
+  "sources": [
+    {
+      "title": "常用字解 · 君 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9786765.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 君",
+      "url": "https://kotobank.jp/word/%E5%90%9B-475718#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 221
+  }
 }

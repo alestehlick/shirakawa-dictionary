@@ -13,5 +13,28 @@
     "capital",
     "metropolis"
   ],
-  "explanation": "Shirakawa reads 京 as a pictograph of a grand fortress gate with an arched passage and a lookout tower above. The profile of this gate is visible in the oracle-bone and bronze forms. Because such a monumental gate guarded the inner city, the character came to mean the capital and, by extension, something great or large. The term keikan (京観) evokes this imposing gate. In ancient ritual practice, the gate itself could serve as a powerful apotropaic boundary: remains from the battlefield were sealed into the structure to form a curse barrier, much as temple sanmon gates later marked a threshold against the outer world."
+  "explanation": "京 pictures a monumental gate with an arched entrance and a lookout tower above. It stood at the entrance to a military camp or fortified city. The height and strength of the structure made it a visible sign of the place it protected.\n\nSuch a gate could also embody ritual defence. Battlefield remains were enclosed in an earthen structure called a *keikan*, a 京観, making the threshold a display of victory and a barrier against hostile powers. Early rites at these gates included sacrifices.\n\nBecause the gate guarded the city, 京 came to name the city itself, especially the capital. Its imposing scale also gave the senses ‘high,’ ‘great,’ and ‘flourishing.’ The familiar meaning ‘capital’ thus grows from the great fortified entrance.",
+  "sources": [
+    {
+      "title": "常用字解 · 京 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9285832.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 京",
+      "url": "https://kotobank.jp/word/%E4%BA%AC-477569#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 272
+  }
 }

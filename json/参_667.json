@@ -17,5 +17,28 @@
     "three",
     "to gather"
   ],
-  "explanation": "Originally written 參, the character combines the image of hair gathered at the crown with three ornamental hairpins and a kneeling figure below. The upper part shows the three pins set into the chignon, while the added 彡 evokes the gleam of their beaded tips; below is a person seen from the side in a posture of worship. From the three hairpins it could mean “three,” from the unequal lengths of the pins it suggested unevenness, and from the gathered hair it developed the sense of assembling or joining—hence uses such as 参詣 for visiting a shrine and 参差 for irregularity. Because the simple numeral 三 is easy to tamper with by adding strokes, 参 came to be used in its place in writing to prevent alteration."
+  "explanation": "参, formerly 參, combines 厽 with 㐱. The upper 厽 shows three jewelled hairpins gathered into the hair. Below is a kneeling person seen from the side, with 彡 marking the pins’ shining ornament. The person is adorned for worship and approaches the divine presence.\n\nThe three pins give the numerical use ‘three.’ Their unequal lengths and slanting arrangement also supply unevenness, preserved in 参差. Gathering the pins together gives assembling, joining, and taking part.\n\nThe worshipping figure supplies approaching or visiting a sacred place, as in 参詣. From participation and attendance, 参 broadens to involvement in other activities. Its several familiar uses remain connected with the assembled ornaments and the person wearing them.",
+  "sources": [
+    {
+      "title": "常用字解 · 参 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11917406.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 参",
+      "url": "https://kotobank.jp/word/%E5%8F%82-512745#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 361
+  }
 }

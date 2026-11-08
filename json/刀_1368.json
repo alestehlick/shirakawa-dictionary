@@ -14,5 +14,28 @@
     "blade",
     "edged tool"
   ],
-  "explanation": "A pictograph of a single-edged blade with a hilt, 刀 first names the knife or sword itself and, by extension, the whole class of edged implements. The Shuowen already treats it as a weapon, in harmony with 兵, a graph showing both hands gripping an axe (斤) and thus standing for arms. Specifically, 刀 denotes a one-edged blade, contrasted with 剣, the two-edged sword. Its iconic shape even entered the economy: in the Warring States period, knife-shaped copper coins circulated under names such as 刀幣, 刀布, and 刀貨."
+  "explanation": "刀 pictures a blade with a handle, in some early forms ending in a ring. It names a knife or single-edged sword; 剣 has two cutting edges. The image also extends to edged implements generally.\n\nThe distinctive shape was used for knife-shaped money. A knife also shaved wooden or bamboo writing strips, so 刀筆, ‘knife and brush,’ came to stand for a clerk’s work: preparing the writing surface and writing upon it.",
+  "sources": [
+    {
+      "title": "常用字解 · 刀 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/21327120.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 刀",
+      "url": "https://kotobank.jp/word/%E5%88%80-44955#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 339
+  }
 }

@@ -16,5 +16,28 @@
     "form",
     "figure"
   ],
-  "explanation": "In early writing, 形 is composed of 井 and 彡. Here 井 does not depict a well but the wooden outer frame of a casting mold—the waku into which molten metal was poured—while 彡 is a sign that evokes beauty in color and outline. Together they first named the handsome, well-proportioned form of objects cast in such molds, and by extension came to denote the shape of things in general and even the figure of a person."
+  "explanation": "形 combines the older 井-shaped frame, later written 幵, with 彡. The frame is the wooden outer structure that holds a casting mould together. The mould gives its form to the object made inside it.\n\n彡 marks colour, lustre, or visible beauty. 形 therefore first concerns the completed casting’s fine appearance—the shape produced when the work is finished. From this come shape and form generally, including the figure of a person or the outline of an object.\n\nWhat is within becomes perceptible through its outward form. 形 can consequently describe something taking shape or manifesting itself, as well as the shape already visible.",
+  "sources": [
+    {
+      "title": "常用字解 · 形 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9849529.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 形",
+      "url": "https://kotobank.jp/word/%E5%BD%A2-463191#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 297
+  }
 }

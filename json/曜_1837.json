@@ -12,5 +12,28 @@
     "luminary",
     "weekday"
   ],
-  "explanation": "曜 is a phono-semantic character: the sun graph 日 supplies the meaning of light, while 翟 serves as the phonetic that carries the yō reading and belongs to a family of graphs expressing brilliance—compare 燿 and 耀, which share this phonetic and the sense of glittering radiance. Traditional glosses define 曜 as shining or sparkling, specifically the sun’s own dazzling light, as in the Book of Odes line 日出有曜, “when the sun rises, there is brightness.” From this image of radiant sunlight, the character extended to celestial luminaries and, in modern usage, to the days of the week (曜日), each day named after a shining body in the sky."
+  "explanation": "曜 combines 日, the sun, with 翟 as its sound element. It means the sun’s light shining brightly. The related 燿 and 耀 belong to the same group of words for radiance and glittering brilliance.\n\nFrom sunlight, 曜 extends to the shining bodies in the sky. This celestial use survives in 曜日, the days of the week named after the sun, moon, and planets. Its centre remains the visible brilliance by which a heavenly body shines.",
+  "sources": [
+    {
+      "title": "常用字解 · 曜 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/27339539.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 曜",
+      "url": "https://kotobank.jp/word/%E6%9B%9C-652720#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 325
+  }
 }

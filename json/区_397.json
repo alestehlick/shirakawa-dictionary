@@ -13,5 +13,28 @@
     "to partition",
     "to set apart"
   ],
-  "explanation": "In its original form 區, the character shows an enclosed, hidden sacred precinct within which three ritual ai vessels are set out—containers for written petitions to the gods. The image is of a secluded place of prayer where many such receptacles are lined up. From this ritual scene, related graphs arose: 欧 portrays raising the voice in supplication, and 殴 depicts striking the vessel to press one’s plea. Because prayer took place within a small, bounded enclosure, 區/区 came to mean a delimited section or ward, and by extension the act of marking off or apportioning space."
+  "explanation": "区, formerly 區, places 品 within 匸, a hidden enclosure. 品 here is a group of prayer vessels, each represented by 口. They are arranged in a secluded sacred place where prayers and incantations can be performed privately.\n\nThe place of prayer is set apart within a small boundary. From this come a section, a defined area, and the act of dividing or distinguishing one part from another. The modern meanings of district, ward, and division retain that marked-off space.\n\nRelated graphs preserve actions within the rite: 謳 concerns the raised voice of invocation, while 毆 adds the striking of the vessels to stir their spiritual power. 區 itself identifies the enclosed setting in which these acts take place.",
+  "sources": [
+    {
+      "title": "常用字解 · 区 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9654792.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 区",
+      "url": "https://kotobank.jp/word/%E5%8C%BA-136382#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 304
+  }
 }

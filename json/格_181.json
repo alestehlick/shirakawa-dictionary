@@ -17,5 +17,28 @@
     "to entangle",
     "framework"
   ],
-  "explanation": "A phono-semantic character with 各 as its phonetic core, 格 draws on an early form in which covenant writings were placed in a ritual vessel to summon the gods, and the gods were implored to descend—hence the sense “to come,” seen in the term raikaku for divine descent. From the belief that affairs are set right under divine will arose the meaning “to rectify; correct,” reflected in kakugen, admonitory words. Because what is right often meets resistance and accusations can make matters twist, the word also came to suggest “to get entangled; to pick a quarrel,” like branches and twigs catching one another—hence kakutou, grappling. By structural analogy to branching, it further denotes a framework, as in kokkaku, the skeletal frame."
+  "explanation": "格 combines 木, tree, with the sound element 各. In 各, a descending foot appears above a vessel containing a prayer. The prayer calls for a god to arrive, giving 各 the sense ‘come down’ or ‘reach.’\n\nThe arriving divine power puts things into their proper condition. 格 consequently carries the ideas of setting right, a correct form, and a standard by which something is judged. These develop into rules, established patterns, rank, and exemplary sayings.\n\nPutting things right can also provoke resistance or accusation. With 木, the image becomes branches meeting and becoming entangled; the same opposition extends to people grappling or contending with one another. 格闘 preserves this sense of struggle, while other uses of 格 retain the sense of order or a proper standard.",
+  "sources": [
+    {
+      "title": "常用字解 · 格 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8145347.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 格",
+      "url": "https://kotobank.jp/word/%E6%A0%BC-43513#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 204
+  }
 }

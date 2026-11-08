@@ -18,16 +18,23 @@
     "abundant",
     "graceful"
   ],
-  "explanation": "Shirakawa classifies 那 as semantic–phonetic. The older left-hand element is connected with a graph for long, abundant cheek or facial hair, and the settlement component belongs to its use as a place-name. He treats the pronunciation as a development from that older phonetic series, rather than extracting its sound from the modern strokes alone.\n\nThe important descriptive usage appears in paired expressions such as 阿那 and 猗儺. These describe luxuriant flowers and pliant, graceful branches. Shirakawa connects their beauty and suppleness with the abundance and softness associated with the original phonetic element. The gloss many belongs to this network and also involves interchange with 多.\n\nThe interrogative uses, as in asking why or how, and the demonstrative and sentence-ending uses are phonetic loans. They are not literal pictures of a town or its inhabitants. His unfolding therefore distinguishes the graph's formation, its graceful descriptive vocabulary, and its later grammatical employment.",
+  "explanation": "The older 那 combines 邑, a settlement, with an older left-hand sound element picturing long cheek hair, abundant and pliant. The graph was used for a place-name, with its sound developing from this older series.\n\nIn descriptive expressions such as 阿那 and 猗儺, the word concerns luxuriant flowers and gracefully bending branches. Their abundance, beauty, and suppleness share the qualities associated with the original sound element. The sense ‘many’ also overlaps with 多.\n\n那 was further borrowed for grammatical words: asking why or how, pointing to something as ‘that,’ or adding a question at the end of a sentence. These uses come through sound borrowing. They coexist with the older descriptive vocabulary and the settlement-name use of the graph.",
   "sources": [
     {
-      "title": "Shirakawa, 普及版 字通 — 那",
+      "title": "字通 · 那",
       "url": "https://kotobank.jp/word/%E9%82%A3-586918#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
-      "note": "",
-      "accessed": "2026-11-07"
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
     }
   ],
   "joyo": true,
   "frequency_rank": 391,
-  "editorial_status": "source-checked English supplement"
+  "editorial_status": "source-checked English supplement",
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 391
+  }
 }

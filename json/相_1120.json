@@ -15,5 +15,28 @@
     "appearance",
     "physiognomy"
   ],
-  "explanation": "相 is a compound of 木 “tree” and 目 “eye.” At heart it means to look upon a tree: gazing at a luxuriant, flourishing tree was thought to stir the soul and replenish the viewer’s vital energy. From this life-giving effect of looking, the character came to mean “to help,” and further, by implying an interaction between the vitality of what is seen and the observer, it developed the sense of “mutual, reciprocal.” It is also used for “appearance, figure” and, by extension, physiognomy. Classical poetry often treats the sight—or even the singing—of lush grasses and groves as an act that rouses the spirit and nourishes vitality, a sensibility echoed in Japanese verse that lingers over scenes one never tires of viewing; the related character 想 expresses thinking shaped by such recollective impressions."
+  "explanation": "相 places 目, an eye, beside 木, a tree. Its direct meaning is to look at the tree and examine it. Looking was also a way of entering into contact with the power of what was seen. Gazing at flourishing trees could be an act that stirred and renewed the spirit.\n\nThe act of looking develops into inspecting closely, judging, or choosing, including examining land for a place to live. What is seen also reveals an outward form, giving ‘appearance’ or ‘aspect.’\n\n相 further carries senses of assisting and attending to another person, as well as acting with or toward a counterpart. These uses underlie mutual action and relationship.",
+  "sources": [
+    {
+      "title": "常用字解 · 相 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15060144.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 相",
+      "url": "https://kotobank.jp/word/%E7%9B%B8-89088#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 270
+  }
 }

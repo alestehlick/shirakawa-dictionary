@@ -12,5 +12,28 @@
   "meanings": [
     "thunder"
   ],
-  "explanation": "In the bronze inscriptions, this character is a pictograph of lightning bursting forth. The later standard form puts the rain radical on top and uses 田 as a compact shorthand for the jagged flashes, following the convention that celestial and weather phenomena take the rain header, as in 雲 (cloud) and 雪 (snow). Thus 雷 came to write thunder. The booming of thunder was likened to drumbeats, and Han-period brick paintings portray the thunder god (Leishen/Raijin) striking drums to summon the peal—an image that conveys the character’s sound and force."
+  "explanation": "The early form of 雷 pictures lightning radiating outward. Its repeated shapes became 畾 and the fuller 𤳳. The later 靁 adds 雨, the element used for weather phenomena; the modern 雷 compresses the lower design into a single 田.\n\nThe graph names thunder through the flashing lightning that accompanies it. The sound and force of the storm also give senses of something sudden, violent, or awe-inspiring. Thunder was compared with the beating of drums, and Han-period images show a thunder god striking them. This supplies a vivid expression of the same power: the spreading flash in the old graph and the rolling sound of the storm.",
+  "sources": [
+    {
+      "title": "常用字解 · 雷 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/27506593.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 雷",
+      "url": "https://kotobank.jp/word/%E9%9B%B7-46704#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 249
+  }
 }

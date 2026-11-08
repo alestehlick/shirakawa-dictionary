@@ -20,5 +20,28 @@
     "to question",
     "to verify"
   ],
-  "explanation": "Shirakawa reads 質 as a compound of 所 and 貝. Here 所 is understood as two axes—tools for cutting—while 貝 is taken not as a shell but as the form of a sacrificial tripod vessel (鼎), a bronze cooking vessel used in rites. In early forms, 質 depicts the act of cutting an inscription into a tripod with axes, thus marking a solemn appointment or contract; it could even denote the engraved document itself (as in shitsuzai). Related graphs such as 則 and 剤 likewise show clauses cut into a tripod with a knife, all revolving around the idea of an engraved covenant. Because this engraved stipulation is the fixed basis of affairs, 質 comes to mean the foundation or essence (honshitsu), and by extension the act of pressing matters back to their basis in order to verify or rectify them (shitasu, shissei), as well as questioning that seeks first principles (shitsumon). From the starting point of a pledged, inscribed contract, the character thus spreads into senses like groundwork, inherent disposition, and even “hostage,” all tied to what is firmly bound or guaranteed."
+  "explanation": "質 combines 斦, two 斤 or hand-axes, with a vessel whose later form resembles 貝. The vessel was originally 鼎, a bronze tripod. The axes cut an inscription into its side, recording an important agreement or oath.\n\n質 first names this act of binding a promise through inscription and the inscribed contract itself. Related 則 and 劑 likewise concern stipulations cut into bronze vessels. The recorded terms establish what is to count as valid and can be used to test whether an action is right.\n\nFrom this fixed basis come truth, verification, and the essential substance of a matter. An agreement can also require a pledge or security, giving goods placed in pawn and a person supplied as a hostage. These uses keep the force of something made definite and guaranteed.",
+  "sources": [
+    {
+      "title": "常用字解 · 質 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12650458.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 質",
+      "url": "https://kotobank.jp/word/%E8%B3%AA-73789#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 350
+  }
 }

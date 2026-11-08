@@ -16,5 +16,28 @@
     "sudden",
     "rough"
   ],
-  "explanation": "In the ancient script, 暴 combines the sun with the figure of an animal’s corpse, evoking a body laid out under the sun to bleach. From this vivid image came the sense of exposing or laying bare—hence “to disclose” and “to reveal”—and, by the sudden way a sun-dried carcass reveals bone, the ideas of “at once,” “sudden,” and “to come into view.” In usage it broadened to describe rough, unruly behavior, as in compounds like 暴虐 and 乱暴. A related graph, 曝, which further emphasizes the sun element, later specialized in the concrete sense of “to bleach” or “to expose to sunlight.”"
+  "explanation": "暴 combines 日, the sun, with the body of a dead animal. The carcass is left exposed in the open. Sun, wind, and rain dry and break it apart until the bones are laid bare. This gives ‘expose,’ ‘lay open,’ and ‘reveal.’\n\nThe force of the weather can bring rapid disintegration. 暴 therefore also expresses suddenness and violent intensity: fierce rain or sunlight, an abrupt event, or something harshly unleashed. Its sound is associated with the sharp cracking of material split by heat.\n\nTransferred to conduct, that uncontrolled force becomes roughness, violence, and cruelty. The exposing carcass and the severe elements around it supply the physical setting for these later senses.",
+  "sources": [
+    {
+      "title": "常用字解 · 暴 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25535490.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 暴",
+      "url": "https://kotobank.jp/word/%E6%9A%B4-600069#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 370
+  }
 }

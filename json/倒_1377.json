@@ -15,5 +15,28 @@
     "to knock down",
     "to invert"
   ],
-  "explanation": "Shirakawa treats 倒 as a phono-semantic character. The phonetic is 到 (tou), whose ancient image shows a person coming to the spot an arrow has reached—arrival. With the person element 亻 added, 倒 depicts a figure turning back from that point, giving the core sense of reversal or being upside down. From this idea of inversion arise the concrete meanings “to knock something down, to throw it over” and, intransitively, “to fall over.”"
+  "explanation": "倒 combines 人, a person, with 到 as its sound element. 到 concerns reaching the spot where an arrow has landed. The arrow was shot to determine a place, and someone went to its point of arrival. 倒 names the return from that point—the movement reversed.\n\nTurning back gives the sense of reversal or inversion. From an upright position being overturned come ‘fall over,’ ‘knock down,’ and ‘turn upside down.’ The person added at the left makes the movement explicit, while 到 preserves the arrival from which the return begins.",
+  "sources": [
+    {
+      "title": "常用字解 · 倒 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/21536400.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 倒",
+      "url": "https://kotobank.jp/word/%E5%80%92-579372#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 300
+  }
 }

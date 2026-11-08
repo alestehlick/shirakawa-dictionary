@@ -16,5 +16,28 @@
     "to reward effort",
     "fatigue"
   ],
-  "explanation": "The original form is 勞, combining a sign for the courtyard watch-fire (a sacred niwabi) with 力, which here sketches a plow. The graph evokes a rite in which the plow was purified and exorcized in sacred fire at the beginning and end of the farming season, a ceremony meant to ward off insect damage and secure a rich harvest. A related idea appears in 静, where purification is done with blue pigment. Bronze inscriptions also show a variant with two fires above and a garment below, suggesting the same fire-purification performed on clothing. From this ritual context, the character first expressed the benevolent response of the gods—rewarding, helping, and showing compassion for human effort—before later extending to the notions of serving and working (as in kinrō), and by further shift to the fatigue and hardship that accompany exertion."
+  "explanation": "労, formerly 勞, combines a sacred courtyard fire with 力, the plough. The plough was purified in the fire before agricultural work began. Similar rites at the beginning and end of the season were believed to keep harmful insects from the crops.\n\nThe rite sought the gods’ kindly response: help, reward, and care for those undertaking the work. This divine encouragement is the earlier meaning of 勞. Related rites purified agricultural tools with pigment, as in 静, or garments with sacred fire.\n\nFrom the work protected by the rite, 労 broadens to labour, service, and achievement. The exertion also brings fatigue and hardship. Its uses for comforting, thanking, or acknowledging someone’s effort preserve the earlier benevolent response alongside the toil.",
+  "sources": [
+    {
+      "title": "常用字解 · 労 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28850000.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 労",
+      "url": "https://kotobank.jp/word/%E5%8A%B4-662428#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 375
+  }
 }

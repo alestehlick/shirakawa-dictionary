@@ -15,5 +15,28 @@
     "conversation",
     "discussion"
   ],
-  "explanation": "談 is a phono-semantic character: the speech element on the left signals words and utterance, while the right-side component 炎 serves as the phonetic, supplying the sound (as it does in 淡 and 啖) and guiding the on-reading. The Shuowen simply defines it as “to talk.” In usage it covers everyday, friendly chatting, as seen in compounds like 談笑 and 戯談, and it also came to evoke the refined philosophical exchanges celebrated in the Six Dynasties under the name 清談. In both sound and sense it stands close to 譚."
+  "explanation": "談 combines 言, speech, with 炎 as its sound element. It names ordinary talking: conversation, storytelling, and the exchange of remarks between people. Its uses include chatting with laughter and speaking playfully or in jest.\n\nThe related 譚 also concerns a story or an account, and the two graphs overlap in sound and meaning. 談 can therefore describe either the act of talking or the talk itself. The everyday conversation remains central, whether the subject is light or serious.",
+  "sources": [
+    {
+      "title": "常用字解 · 談 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/17168747.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 談",
+      "url": "https://kotobank.jp/word/%E8%AB%87-563603#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 294
+  }
 }

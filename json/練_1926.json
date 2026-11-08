@@ -15,5 +15,28 @@
     "to practice",
     "to knead"
   ],
-  "explanation": "This is a phono-semantic character whose oldest form was written 鍊, with 柬 serving as the phonetic element. The graph 柬 depicts a sack with something inside it, evoking a receptacle used in making or processing goods, and thus suggests manufacture. The Shuowen glosses the word as “to regulate metal,” that is, to heat it and cleanse away impurities—tempering and refining. Related graphs distinguish the methods: 涑 denotes refining by water, while 煉 denotes refining by fire. From this image of purification and working material to perfection, the character came to express the training and polishing of body, mind, and technique, as in compounds like 練磨 and 鍛練."
+  "explanation": "練 combines 糸, thread, with the sound element 柬. 柬 shows material contained in a sack and carries an association with working or processing it. In 練, the material is silk.\n\nThe thread was heated and washed to make it soft and supple. 練 names both this treatment and the prepared silk produced by it. Related graphs distinguish similar work on other materials: 湅 uses water, 煉 heat, and 錬 metal.\n\nFrom repeatedly working silk into a better condition, 練 broadens to practice, training, and refinement of a skill. A person’s technique can be worked and improved as the thread is softened and made ready for use. 練習 and 練磨 continue this sustained process of becoming proficient.",
+  "sources": [
+    {
+      "title": "常用字解 · 練 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28795854.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 練",
+      "url": "https://kotobank.jp/word/%E7%B7%B4-661992#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 343
+  }
 }

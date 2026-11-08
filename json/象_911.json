@@ -16,5 +16,28 @@
     "appearance",
     "phenomenon"
   ],
-  "explanation": "This character began as a pictograph of an elephant, its trunk and bulky body clearly drawn in oracle-bone inscriptions. Divination texts even ask, “Will an elephant be caught?” and others record “building a palace,” suggesting that in the Yin period elephants were captured and put to work on construction. In early script, 為 (爲) depicts a hand added to the elephant’s trunk, expressing the idea of employing or using the animal. Elephants still roamed as far north as the north bank of the Yangtze in the fifth to sixth centuries BCE. From the concrete beast, the sense broadened to abstract meanings such as “image, form” and “appearance, condition,” and the graph is at times used where later texts write 像 and 様."
+  "explanation": "象 pictures an elephant, with its long trunk, tusks, body, legs, and tail. The early forms are readily recognizable. Inscriptions mention the capture of elephants, showing that the animal belonged to the world in which the graph was created. Elephants may also have been used for heavy work: 爲 places a hand with an elephant to show making the animal do something.\n\nThe later abstract uses of 象 concern a visible form or appearance—an image in which something takes shape. These are connected with its use for words also written 像, ‘image,’ and 様, ‘form’ or ‘manner.’ Thus a phenomenon is something that presents itself in a perceptible form, while an image gives shape to something represented. The animal picture supplies the graph; these related written uses carry its broader meanings.",
+  "sources": [
+    {
+      "title": "常用字解 · 象 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13593947.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 象",
+      "url": "https://kotobank.jp/word/%E8%B1%A1-473318#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 218
+  }
 }

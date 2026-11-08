@@ -15,5 +15,28 @@
     "to recompense",
     "to retaliate"
   ],
-  "explanation": "報 is a compound of 幸 and 艮. In ancient graphs, 幸 depicts the wooden restraints placed on the hands, while 艮 shows a kneeling person held down by a hand—an image that also underlies the 服 of submission. Together they portray a culprit restrained from behind, so the earliest sense was to take countermeasures against a wrong—retaliation. In bronze inscriptions, however, the character is already used in the realm of reciprocity: favor, and the acts of giving back—rewarding, answering, making a return. From this notion of responding and returning, the meaning broadened to the social act of conveying news, hence later uses such as 報告 and 報知 for reporting and informing."
+  "explanation": "報 combines 幸 with 𠬝. 幸 pictures a restraint fastened around the hands. In 𠬝, a hand presses down a kneeling person, the posture of enforced submission also found in 服. Together they show an offender held under restraint as punishment for a wrong.\n\nThe punishment returns an act upon the person responsible, giving repayment or retribution. The same relation works for a benefit: kindness can be answered with gratitude, service, or a reward. Bronze inscriptions already use 報 in this wider sphere of making a return, including repayment to the ancestors for their virtue.\n\nAn answer can also take the form of words. From responding to what one has received, 報 extends to reporting, announcing, and conveying news.",
+  "sources": [
+    {
+      "title": "常用字解 · 報 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/25254440.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 報",
+      "url": "https://kotobank.jp/word/%E5%A0%B1-626893#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 328
+  }
 }

@@ -15,5 +15,28 @@
     "all",
     "elegance"
   ],
-  "explanation": "Shirakawa treats 都 as a phono‑semantic compound. The left element 阝 is the 邑 radical, the figure of a fortified settlement where people gather. The right side 者, used here as the phonetic, originally depicted a clay hedge: branches piled over a sacred covenant vessel and topped with packed earth to keep out intruders. Together they show a large settlement ringed by an earthen palisade, hence “capital.” From the idea of the capital as the place where everyone comes together, the character further extends to mean “general, all,” and it also came to suggest cultured refinement, as in expressions for elegance. By contrast, 鄙 names the rural lands lying at the capital’s periphery."
+  "explanation": "都 combines 邑, written 阝 at the right, with the sound element 者. 邑 shows people within an enclosure and means a settlement. 者 pictures branches piled over 曰, a vessel containing a prayer, then covered with earth. This makes the protected earthen boundary later written 堵.\n\nThe prayer buried in the earthwork placed the boundary under sacred protection, while the wall also guarded against intrusion. 都 names a large settlement surrounded by such an enclosure. From the fortified settlement, it comes to mean a capital or the city in which the ruler resides.\n\nThe capital’s concentration of people and activity gives further uses for gathering and abundance. Its cultivated life also supplies the sense of elegance or refinement—the polished manner associated with the city.",
+  "sources": [
+    {
+      "title": "常用字解 · 都 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/21115419.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 都",
+      "url": "https://kotobank.jp/word/%E9%83%BD-570144#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 281
+  }
 }

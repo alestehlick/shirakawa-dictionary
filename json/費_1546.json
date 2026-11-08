@@ -15,5 +15,28 @@
     "to spend",
     "to waste"
   ],
-  "explanation": "費 is a phono-semantic character: 貝, the shell that signifies wealth and property, provides the sense of outlay, while 弗 serves as the phonetic indicator (marking the on-reading) and, in bronze inscriptions, also appears as a negation meaning “not.” With that negative overtone, the character originally suggests unrestrained spending—outlay that does not result in keeping anything—hence “waste.” The Shuowen describes it as making unbounded expenditures, and texts like the Lüshi Chunqiu use it in expressions such as 費神傷魂, “to expend one’s spirit and wound the soul,” showing that its scope extends beyond money to the futile consumption of one’s energy and mind."
+  "explanation": "費 combines 貝, wealth or property, with 弗 as its sound element. Its early meaning is to scatter resources in expenditure, especially spending that wastes them. The emphasis falls on what is used up or lost through the outlay.\n\nFrom wasteful spending, 費 broadens to expenditure generally: the money, materials, time, or effort required for something. The same depletion can affect the person. To expend the spirit or wear out one’s energies is also 費. A financial cost and an exhausting demand on the mind thus share the sense of resources being consumed.",
+  "sources": [
+    {
+      "title": "常用字解 · 費 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23782603.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 費",
+      "url": "https://kotobank.jp/word/%E8%B2%BB-607579#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 288
+  }
 }

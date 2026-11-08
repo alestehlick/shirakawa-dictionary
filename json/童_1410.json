@@ -12,5 +12,28 @@
     "child",
     "youth"
   ],
-  "explanation": "A phono-semantic character. In bronze inscriptions, the lower part is 東, originally the shape of a bag (the form of 橐), which functions as the phonetic and gives the on reading do. The early upper element combines 辛 and 目, depicting a large tattooing needle above the eyes—the mark of judicial tattooing. The character thus first referred to a person bearing such marks, treated as a slave or servant. Because people so marked were not permitted to wear a chignon, the graph naturally extended to children, who likewise did not wear their hair in a topknot, and 童 came to mean “child.” The “servant” sense later shifted to 僮, as in 僮僕. In later script forms the lower component sometimes follows 重, with 里 as an abbreviated shape."
+  "explanation": "The bronze form of 童 has 東 below as its sound element. 東 originally pictures a tied sack; later forms sometimes use 重, and the modern lower 里 is an abbreviated remnant. Above it, the old graph combines 辛, a large needle, with 目, an eye. It shows punitive tattooing above the eye.\n\n童 first names a person subjected to this punishment and reduced to servile status. Such people were not permitted to bind their hair in an adult topknot. Their unbound hair provided the connection with children, whose hair was likewise not yet dressed in that way. The meaning broadened to a young child, while 僮 retained the servant sense more explicitly.\n\nThe older association with labour also survives in 童謡: these were originally songs sung by servants or labourers, before the compound came to mean children’s songs.",
+  "sources": [
+    {
+      "title": "常用字解 · 童 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22027310.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 童",
+      "url": "https://kotobank.jp/word/%E7%AB%A5-579439#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 237
+  }
 }

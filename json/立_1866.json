@@ -17,5 +17,28 @@
     "position",
     "rank"
   ],
-  "explanation": "This graph combines 大 and 一. 大 sketches a person seen from the front with arms and legs outstretched, and 一 marks the fixed spot. Together they depict someone standing at a designated place, giving the core sense “to stand” and, by extension, “to take one’s position.” From this image arises 位, the idea of the place where one stands—rank or station—and the verbal sense “to face” or “to be present.” In bronze inscriptions 立 is already used in these extended meanings, overlapping with 位 (place, rank) and with graphs such as 滥 or 莅 (ri), meaning to look out upon, border on, or attend. In later compounds like 設立 and 創立 it naturally develops the sense “to found” or “to establish.”"
+  "explanation": "立 places 大, a person seen from the front with arms and legs spread, above 一. The line marks the place on which the person stands. The graph means to stand firmly at a definite position.\n\nTaking that position can also mean entering a rank or office, a use shared in early inscriptions with 位. From establishing oneself in place, 立 broadens to setting something up: erecting an object, founding an institution, or establishing an order. 設立 and 創立 retain this movement from standing in a fixed position to giving something a firm beginning.",
+  "sources": [
+    {
+      "title": "常用字解 · 立 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28010576.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 立",
+      "url": "https://kotobank.jp/word/%E7%AB%8B-561147#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 291
+  }
 }

@@ -16,5 +16,28 @@
     "ability",
     "capacity"
   ],
-  "explanation": "A compound graph: in its earliest form, 器 depicts four 口 signs—ritual receptacles for covenant texts—arranged around a 犬, a dog offered as a purifying sacrifice. The picture thus signifies vessels purified for ceremonial use, and the word first referred to ritual and funerary vessels. From this it broadened to mean tools and instruments, and by extension a person’s capacity or ability. In later standard forms the central 犬 was replaced by 大, the figure of a person with outstretched limbs."
+  "explanation": "器 brings together four 口 around 犬, a dog. Each 口 is a vessel containing a prayer. The dog is a sacrificial animal used to purify them, and the early forms show it as having been killed for the rite. 器 names the vessels made clean and fit for ceremonial use. The older forms preserve 犬 clearly.\n\nThese were vessels for worship, funerary observance, and formal ritual. The meaning later broadened to containers, implements, and equipment of many kinds.\n\nA vessel has a capacity and is suited to a particular use. Applied to a person, 器 therefore describes ability, scope, or the capacity to fulfil an important role. The physical vessel becomes a way of judging what someone can hold or accomplish.",
+  "sources": [
+    {
+      "title": "常用字解 · 器 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8808669.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 器",
+      "url": "https://kotobank.jp/word/%E5%99%A8-440939#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 285
+  }
 }

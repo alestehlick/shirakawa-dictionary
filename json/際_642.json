@@ -16,5 +16,28 @@
     "occasion",
     "limit"
   ],
-  "explanation": "In the ancient forms, 際 combines 阜 on the left—the stepped ladder or terrace by which deities descend and ascend—with 祭 on the right, which shows a hand presenting meat upon an altar, the act of worship. Together they designate the sacred threshold before that ladder, the contact point where gods and humans meet—the brink (kiwa) where things reach their end or begin. From this core image the character comes to mean edge and verge, and by extension the utmost limit, as seen in expressions like 際涯 “limits,” 天際 “the horizon,” and, in Buddhist usage, 金輪際 “the very bottom of the world; absolutely, to the last extremity.”"
+  "explanation": "際 combines 阜 with 祭. 阜 is the ladder by which a divine power ascends and descends. 祭 shows a hand presenting meat above an altar. The offering is made before the divine ladder, at the point where the god and the human worshipper come into contact.\n\nThis meeting place is also the limit to which a person can approach. 際 therefore means an edge, boundary, or furthest extent. The limit may be spatial, but it can also be the point at which two things meet.\n\nFrom a place of contact, the meaning extends to a time of contact: an occasion, opportunity, or particular moment. The same character can thus name the boundary itself and the encounter that takes place there.",
+  "sources": [
+    {
+      "title": "常用字解 · 際 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11648240.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 際",
+      "url": "https://kotobank.jp/word/%E9%9A%9B-480646#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 302
+  }
 }

@@ -19,5 +19,20 @@
     "ruin",
     "not; without"
   ],
-  "explanation": "In the ancient pictographs, 亡 depicts the bones of a dead person laid out with the arms and legs drawn up in the contracted posture of an early burial. From this image it came to mean to die or perish. The graph can also be viewed as a bleached corpse left among grasses, a nuance preserved in characters like 荒, which portrays a 亡-form abandoned in the fields under grass. Another related graph shows the same corpse with hair still on the head. From the basic sense of death and disappearance, the usage broadened to flight or escape, as in 亡命, and to ruin or extinction in compounds such as 滅亡 and 亡絶. The negative sense ‘not; without’ is a later phonetic loan based on the same on-reading; the separate graph 无 is a different form that conveys this negation as well."
+  "explanation": "亡 pictures a dead person with the limbs drawn inward. The contracted body gives dying, disappearance, and loss. A related form that still shows hair on the head is an early graph behind 荒.\n\nFrom death and absence, 亡 extends to perishing, destruction, or something no longer being present. It can also describe flight into exile. A departing exile could receive funeral rites, placing that departure within the same ritual sphere as death.\n\nThe negative use, ‘not’ or ‘without,’ is a sound borrowing, like several other old negative words. 无 is a variant writing of 亡. The bodily form and the borrowed negation meet in the familiar range of absence, loss, and extinction.",
+  "sources": [
+    {
+      "title": "字通 · 亡",
+      "url": "https://kotobank.jp/word/%E4%BA%A1-626957#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 392
+  }
 }

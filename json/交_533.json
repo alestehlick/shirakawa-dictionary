@@ -21,5 +21,28 @@
     "to exchange",
     "trade"
   ],
-  "explanation": "In its earliest pictographic form, 交 shows a person seen from the front with legs crossed. From this image of crossing came the senses of intersecting and mingling, and then social association, as in ideas of companionship and intercourse (seen in words like kousai and kouyuu). From “to cross/mingle” it naturally broadened to mutuality (“each other”), change, and the act of exchanging or laying things across—hence its use in trade (koueki) for exchanging goods. The crossed-legs posture itself seems to have been regarded as graceful, which is echoed in related graphs such as 佼 and 姣 meaning good-looking or beautiful."
+  "explanation": "交 pictures a person seen from the front with the legs crossed. The crossing supplies the basic idea of things meeting, intersecting, or becoming intermingled.\n\nFrom crossed lines or movements, the meaning extends to people associating with one another. Friendship, social relations, and communication all involve this meeting between counterparts. The same reciprocity gives exchanging things and acting in turn, one after another.\n\nThe posture was also regarded as graceful. Related 佼 and 姣 describe a fine or attractive appearance, preserving an appreciation of the person’s bearing alongside 交’s more familiar meanings of mingling and exchange.",
+  "sources": [
+    {
+      "title": "常用字解 · 交 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10815135.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 交",
+      "url": "https://kotobank.jp/word/%E4%BA%A4-493739#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 394
+  }
 }

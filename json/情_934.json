@@ -14,5 +14,28 @@
     "feeling",
     "sympathy"
   ],
-  "explanation": "情 is a phono-semantic character: the heart radical 忄 indicates the domain of mind and feeling, while 青 provides the sound, pointing to the On reading sei (and by extension jo). The character expresses the movements of the heart when it responds to things—emotion as the mind’s active functioning. In Song learning (Xingli), 性 “nature” was treated as substance and yang, while 情 was its functioning and yin, the way nature manifests in response. The Book of Rites (Liyun) defines human feelings as seven innate responses—joy, anger, sorrow, fear, love, dislike, and desire—abilities “possessed without learning,” highlighting 情 as an inborn capacity. By extension it also came to mean sympathy and considerate regard for others."
+  "explanation": "情 combines 心, written 忄, with 青 as its sound element. 心 places the meaning in the heart and mind. 情 names feeling: what the heart experiences and the impulses with which it responds.\n\nThese responses are part of a person’s inborn life. Joy, anger, sorrow, fear, love, dislike, and desire were described as feelings that do not have to be learned. From feeling in general, 情 extends to affection, sympathy, and considerate concern for another person. It can also mean sincerity or someone’s true feelings, then the actual circumstances of a matter—how things stand beneath their outward presentation.",
+  "sources": [
+    {
+      "title": "常用字解 · 情 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13723027.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 情",
+      "url": "https://kotobank.jp/word/%E6%83%85-530485#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 243
+  }
 }

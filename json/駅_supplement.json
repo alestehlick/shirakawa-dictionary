@@ -14,17 +14,24 @@
     "relay horse or carriage",
     "station"
   ],
-  "explanation": "駅 is the modern form of 驛. Shirakawa analyzes the fuller graph as semantic–phonetic, with 馬 identifying the horse and 睪 supplying the sound eki. The modern 尺 shape is a simplification and should not be assigned an independent measuring meaning here.\n\nHe interprets 睪 through an animal carcass and the ideas of loosening, unfolding, and continuing at length. In 驛 that continuing sequence is the succession of horses or carriages used in a relay. The older definition concerns horses kept ready for that service.\n\nA relay station is consequently part of a route along which travel and messages are carried onward by changes of mount. Shirakawa compares 繹 and 訳 within the same phonetic family, emphasizing continuation. The familiar station word preserves this transport history even when horses are no longer involved.",
+  "explanation": "駅 is the modern form of 驛, combining 馬, horse, with 睪 as its sound element. 睪 pictures an animal carcass and carries associations of loosening, unfolding, and continuing at length. In 驛, that continuation becomes travel carried onward through a succession of mounts or vehicles.\n\nHorses were kept ready for a relay service. At each post, the traveller or message could be transferred to a fresh horse and continue along the route. 驛 names this relay transport and its stations.\n\nThe familiar railway station continues the place where a journey is sustained and passed onward. The modern 尺 is an abbreviation of the older right side; the transport meaning is clearest in the fuller 馬 and 睪 form.",
   "sources": [
     {
-      "title": "Shirakawa, 普及版 字通 — 駅",
+      "title": "字通 · 駅",
       "url": "https://kotobank.jp/word/%E9%A7%85-441405#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
-      "note": "",
-      "accessed": "2026-11-07"
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
     }
   ],
   "joyo": true,
   "frequency_rank": 360,
   "editorial_status": "source-checked English supplement",
-  "related_form": "驛"
+  "related_form": "驛",
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 360
+  }
 }

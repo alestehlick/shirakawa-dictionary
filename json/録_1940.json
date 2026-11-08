@@ -12,5 +12,28 @@
     "to write down",
     "to engrave"
   ],
-  "explanation": "Originally written 錄, this is a phono-semantic character. The right-hand element depicts a drill boring into wood and the shavings that fly from the hole, evoking the act of cutting or incising; in this role it also provides the sound value, giving the on reading roku. With the metal radical added, the image shifts from cutting wood to engraving metal—especially bronze—so the character came to mean to engrave or inscribe, and by extension to write down and make a record."
+  "explanation": "録, formerly 錄, combines 金, metal, with 彔 as its sound element. 彔 pictures an awl-like tool boring into wood, with chips scattering from the hole. It brings an association of cutting or incising a surface.\n\nWith 金, the work is done in metal, especially bronze. 録 means engraving or inscribing something so that it remains recorded on the object.\n\nThe lasting inscription gives the general sense of making a record. Writing something in a document, copying it, or entering it in an account continues the act of preserving information through marks. The medium broadens, while the movement from incision to an enduring record remains clear.",
+  "sources": [
+    {
+      "title": "常用字解 · 録 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28949011.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 録",
+      "url": "https://kotobank.jp/word/%E9%8C%B2-663275#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 335
+  }
 }

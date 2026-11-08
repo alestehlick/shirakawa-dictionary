@@ -16,5 +16,28 @@
     "to be present",
     "to be located"
   ],
-  "explanation": "Shirakawa takes 在 as a compound of 才 and 士. In early forms, 才 depicts a landmark post set up to mark and sanctify a spot: a vertical stake with a horizontal plate, to which a sacred receptacle for covenant texts is affixed, making the place a dwelling of the divine and thus a place that truly “is.” To this, 士—understood as the head of a small broadax—was added as a ritual implement that protects the signpost and affirms the reality of that sanctified presence. From this sense of “being” under the authority of a sacred site, 才 stands as the prototype of 在, which first meant “to be, to exist” in a sacral context, then generalized to “to be” for things, and for people took the form oru, “to be present.” Relatedly, 存, formed by adding 子 “child” to 才, expresses the child’s life and continued existence being secured through that same act of sanctification."
+  "explanation": "在 combines 才 with 士. 才 pictures a marker post with a small crosspiece, to which a vessel containing a prayer was attached. Erecting this sign consecrated the place: the divine power was established there, and the place existed under its protection. 才 is the earlier graph for 在.\n\n士 represents the head of a small broad-axe, a sacred implement. Added to the marker, it guards and confirms the consecrated presence and the authority exercised over that place. 在 originally means to be there as something sacred.\n\nThe meaning broadens to being present at a particular place or time, for a thing or a person. The related 存 adds a child to 才 and concerns a life secured through the same sanctifying act.",
+  "sources": [
+    {
+      "title": "常用字解 · 在 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11653638.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 在",
+      "url": "https://kotobank.jp/word/%E5%9C%A8-507135#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 286
+  }
 }

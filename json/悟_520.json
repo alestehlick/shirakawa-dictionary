@@ -14,5 +14,28 @@
     "to perceive",
     "enlightenment"
   ],
-  "explanation": "悟 is a phono-semantic character: the heart/mind element combines with 吾, which here is not the pronoun but the name of a ritual receptacle (sai) used to store written prayers to the deities. This vessel was sealed with a double wooden lid to preserve the efficacy of the prayers, a feature that the bronze forms emphasize through the strongly drawn double cover. As a phonetic, 吾 supplies the on reading go; as an image, it suggests preservation. In 悟 this preservation becomes the mind’s power to drive away delusion or spiritual darkness, so that one clearly apprehends the principles of things. Hence its sense of “awakening” or “realizing,” matching the Shuowen gloss of 覺, “to awaken.”"
+  "explanation": "悟 combines 心, the heart and mind, with the sound element 吾. 吾 shows a vessel containing a prayer beneath a double wooden cover. The cover protects the prayer from interference and keeps its power intact.\n\nIn 悟, what is guarded is the mind’s clarity. Confusion and delusion are driven away so that the heart can remain lucid. In that condition, the principles of things can be known distinctly. 悟 therefore means to awaken, realize, or understand.\n\nThe awakening can be a return from unconsciousness or an arrival at insight. In both uses, an obscured awareness becomes clear again, and something that could not previously be grasped is now understood.",
+  "sources": [
+    {
+      "title": "常用字解 · 悟 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10706504.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 悟",
+      "url": "https://kotobank.jp/word/%E6%82%9F-493463#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 290
+  }
 }

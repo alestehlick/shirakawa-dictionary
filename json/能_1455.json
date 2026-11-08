@@ -17,5 +17,28 @@
     "skill",
     "efficacy"
   ],
-  "explanation": "Originally a pictograph of a water-dwelling creature, the character’s early forms depict a body with splayed legs; while the Shuo Wen associates it with the bear and notes deer-like legs, the bronze graphs look more like a hermit crab. In Western Zhou bronze inscriptions—such as the Ye Gui food vessel—the character appears in phrases like 多公能福 (“Duke Duo ably bestowed blessing”), already used in the sense of can, be able, be skillful. From this core idea of capability it naturally broadened to mean the working power or efficacy of a thing—its function and capacity to accomplish results—reflected in compounds like 能力 (ability), 効能／功能 (efficacy, function), and 知能 (intelligence)."
+  "explanation": "能 pictures an aquatic creature. Its bronze forms resemble a hermit crab, with a compact body and projecting appendages. The original creature-name is no longer the ordinary meaning of the graph.\n\nEarly inscriptions already use 能 for being able to do something. Its word family includes senses of enduring, bearing, and being equal to a task: ability is the capacity to carry something through. This gives ‘can,’ ‘be capable,’ and ‘perform effectively,’ then a particular skill or function. The later meanings concern what a person or thing can accomplish.",
+  "sources": [
+    {
+      "title": "常用字解 · 能 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22690765.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 能",
+      "url": "https://kotobank.jp/word/%E8%83%BD-111801#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 220
+  }
 }

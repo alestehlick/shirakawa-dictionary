@@ -12,5 +12,28 @@
     "wild",
     "uncivilized"
   ],
-  "explanation": "Originally written 蠻, this is a phono‑semantic character: the phonetic part signals the sound ban, while its early form drew on a ritual image. In bronze inscriptions the graph without the insect component was used for this word, and its core depicted a covenant receptacle into which the words of an oath to the gods were placed, adorned with thread decorations—hence the presence of the silk element 絲 in the old form. The sense “southern savage” arose as a loan on the basis of that sound value; later, the insect/snake element 虫 was added because southern peoples were imagined as serpent‑like tribes. By contrast, northern non‑Chinese groups were called 狄. From this background the character came to be used for ideas such as roughness, wildness, and uncivilized behavior."
+  "explanation": "蛮, formerly 蠻, contains the sound element 䜌 above 虫. The older 䜌 depicts a vessel holding an oath to the gods, adorned on either side with threads. Bronze inscriptions already use this graph alone to name peoples outside the central Chinese states. That use is a borrowing for the sound of their name.\n\n虫 was added later because southern peoples were imagined as belonging to a serpent lineage. The completed 蠻 reflects that ancient view of the peoples to the south. From this outsider designation developed uses meaning rough, forceful, or uncultivated. These later judgements belong to the attitudes carried by the name, while its original written form came from the sound loan.",
+  "sources": [
+    {
+      "title": "常用字解 · 蛮 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/23594397.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 蛮",
+      "url": "https://kotobank.jp/word/%E8%9B%AE-606006#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 230
+  }
 }

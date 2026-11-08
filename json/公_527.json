@@ -14,5 +14,28 @@
     "duke",
     "ruler"
   ],
-  "explanation": "公 began as a pictograph of the flat ceremonial precinct of the royal court. In early forms it depicts a level public square flanked by parallel walls, the place where state rites and business were conducted—ancestor worship, hearings and lawsuits, and other official affairs—before the palace and the ancestral mausoleum. From naming that precinct, the graph extended to mean the palace and ancestral domain, then the ruler who presides there, and finally what pertains to the public or the official as opposed to the private. Hence later moral nuances such as fairness and correctness, the impartial standard expected of a ruler, as reflected in words like gongping and gongzheng."
+  "explanation": "公 pictures the plan of a ceremonial court before a palace or ancestral temple. The open area is flanked by walls on either side. Within this precinct, the community’s rites and official affairs were conducted.\n\nThe name of the court extended to the palace and ancestral sanctuary, and to the lord worshipped or represented there. It also named the business carried on in that setting: ritual duties, hearings, and other affairs belonging to the ruling house and community.\n\nAs this relation broadened beyond the household, 公 came to mean public or official. The conduct expected in that sphere supplied the moral senses of fairness and impartiality. What began as a visible ceremonial space became a word for the authority and common standard maintained there.",
+  "sources": [
+    {
+      "title": "常用字解 · 公 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10791929.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 公",
+      "url": "https://kotobank.jp/word/%E5%85%AC-61341#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 296
+  }
 }

@@ -15,5 +15,28 @@
     "family",
     "clan"
   ],
-  "explanation": "This character is a pictograph of a pair of hinged leaves forming a double door. As the ancient Explanation of Names notes, men means to push, conjuring a doorway that opens by being pushed. From the concrete sense of a gate or entrance, the word naturally expanded to signify the house that has that entrance, and then, by association, the family or kin who live within. In contrast, 戸 (戶) depicts a single swinging door."
+  "explanation": "門 pictures a pair of doors opening to either side. Each leaf has its own upright, producing the balanced double shape that remains visible in the modern character. The doors are pushed open to give access to the space within.\n\nFrom a gate or entrance, 門 extends to the house reached through it and then to the family or lineage living there. A teacher’s entrance likewise stands for the people admitted to study: 門下 and 門生 name those belonging to that teacher’s circle. The same sense of belonging within a particular house develops into a school of practice or a specialized field.",
+  "sources": [
+    {
+      "title": "常用字解 · 門 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26408162.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 門",
+      "url": "https://kotobank.jp/word/%E9%96%80-143120#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 251
+  }
 }

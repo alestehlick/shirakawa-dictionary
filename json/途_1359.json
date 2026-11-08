@@ -14,5 +14,28 @@
     "route",
     "path"
   ],
-  "explanation": "This is a phono-semantic character. In its original form 途, the element 余 functions as the phonetic, signaling the On reading to; characters such as 荼 “to” (a bitter herb, nigana) and 涂 “to” (a ‘way’ at water) share this same phonetic. Shirakawa interprets 余 as the image of a large, handled needle used in a ritual known as jodo, “way-piercing”: the needle is driven into the ground to purge malevolent forces hidden beneath the soil. 涂 depicts performing this rite at a watercourse, while 途 places it on a roadway. From this ritual of piercing and purification, both characters come to mean a road or way that has been exorcised and made safe."
+  "explanation": "途 combines 辵, movement along a road, with 余 as its sound element. 余 pictures a large needle with a handle. Used as a ritual implement, it was thrust into the ground to remove harmful spirits thought to lurk beneath it. This purification of the way was called 除道.\n\n涂 names the performance of such purification at a watercourse, while 途 applies it to a road. The resulting way has been cleared of the powers that might obstruct or endanger passage.\n\n途 therefore means a road or route along which one can proceed. Its broader uses for a course or an undertaking continue the path made ready for movement.",
+  "sources": [
+    {
+      "title": "常用字解 · 途 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/21078568.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 途",
+      "url": "https://kotobank.jp/word/%E9%80%94-579159#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 386
+  }
 }

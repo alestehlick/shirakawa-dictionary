@@ -18,5 +18,28 @@
     "to learn",
     "to remember"
   ],
-  "explanation": "The original form is 覺, a picto‑phonetic character with 學 on top as the phonetic. That upper part, read kaku, also carries the idea of learning: Shirakawa sees it as a ritual learning hall, its roof marked by chigi, with the teacher’s two hands guiding and a child below—an image of instruction. When the element 見, “to see,” is placed underneath, the graph comes to mean waking to something one sees and understands—perception and realization. From this core of becoming aware it naturally extends to ‘awaken’ (mezameru, sameru) and ‘perceive’ (satoru), and in Japanese also to ‘learn, remember’ (oboeru)."
+  "explanation": "覚, formerly 覺, places 見 beneath the roof-and-hands element also found in 學, ‘learn.’ The upper part represents a place of instruction, with crossed timbers and hands guiding the activity. Adding 子, a child, produces 學; adding 見 produces 覺.\n\n見 shows a person with a large eye. Here it brings seeing and perception into the setting of learning: instruction enables someone to notice and understand. 覚 means to become aware, recognize, or grasp something. The same awakening of awareness applies to waking from sleep. In Japanese, remembering or learning something so that it stays in the mind also belongs to this awakening of knowledge.",
+  "sources": [
+    {
+      "title": "常用字解 · 覚 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8169017.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 覚",
+      "url": "https://kotobank.jp/word/%E8%A6%9A-459988#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 211
+  }
 }

@@ -12,5 +12,28 @@
     "to heal",
     "cure"
   ],
-  "explanation": "Shirakawa traces this character to a healing rite of exorcism. In its older, fuller form 醫, the upper element 殴 is built from a sacred arrow with the power to repel malign forces and the implement for striking; it evokes beating the arrow while shouting invocations to drive out evil spirits, since illness was seen as their work. Because shamans (巫) performed such cures, an even earlier form combined 巫 with this striking element. As treatment later came to include purifying wounds with wine and using alcohol as a stimulant, the wine-jar sign 酉 was added beneath, yielding 醫. The simplified form 医 condenses this history: it shows the empowered arrow set within a concealed niche, the emblem of ritual exorcism as healing—a graph already attested from very early times."
+  "explanation": "医 is the modern form of 醫. The simple 医 places a sacred arrow in a concealed enclosure. Adding 殳, striking, makes 殹: the arrow is beaten while invocations are shouted, using its power to drive away the spirits believed to cause illness.\n\nThe healer performing this rite was a 巫, a spirit medium. An older form 毉 adds 巫 beneath the striking scene and makes that role explicit. Healing begins as the expulsion of the afflicting power.\n\nThe later 醫 has 酉, a wine jar, below 殹. Alcohol was used in treatment to cleanse wounds and stimulate the patient, and it also belonged to the rite. From these practices, the character names healing and the person who carries it out—a physician.",
+  "sources": [
+    {
+      "title": "常用字解 · 医 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4662993.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 医",
+      "url": "https://kotobank.jp/word/%E5%8C%BB-429849#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 373
+  }
 }

@@ -17,5 +17,28 @@
     "to look",
     "vision"
   ],
-  "explanation": "A pictograph of the eye. In early script the eye was drawn broad and horizontal; in the modern form it has become taller and vertical. As the organ that first engages the outer world, the eye naturally became a prime motif in character formation, yielding graphs such as 臣, 望, 監, 相, 限, 見, and 看 that incorporate 目 as a core element. Looking is the first act in meeting another person, and by extension the character also touches on silent communication of the mind. Related forms clarify this focus: 眉 depicts the brows set above the eyes, while 媚 originally evoked a woman shaman with fixed, adorned eyebrows. Because the eyes and brows are the most striking features of the face, the compound 眉目 came to mean one’s facial features or overall appearance."
+  "explanation": "目 pictures an eye. The earliest forms are broad and horizontal, with the pupil marked inside; the modern form turns this into a tall, upright shape. As a verb, 目 means to look at or direct the eyes toward something.\n\nThe eyes and eyebrows are the conspicuous features of a face, so 目 also came to identify what stands out as essential or serves as a mark for recognition. From this develop headings, principal points, and divisions under which things are arranged. A heading makes a section recognizable, much as the eye gives the face its most noticeable feature.",
+  "sources": [
+    {
+      "title": "常用字解 · 目 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26381386.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 目",
+      "url": "https://kotobank.jp/word/%E7%9B%AE-142190#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 233
+  }
 }

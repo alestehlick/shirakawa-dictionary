@@ -13,5 +13,28 @@
     "car",
     "cart"
   ],
-  "explanation": "This character is a pictograph of a vehicle: the frame or chassis is drawn with a wheel at each side. It evokes the war chariots of ancient China, horse-drawn and typically pulled by a pair of horses, with which battles were fought. Craftsmanship in vehicle-making was already well developed, and the Zhou Rites’ Kao Gong Ji records the work of the vehicle craftsmen in detail. Chariot and horse pits excavated from Yin and Zhou tombs further testify to this culture of vehicles. From this concrete image of the chariot, the character came to mean vehicle or cart in general."
+  "explanation": "車 pictures a wheeled vehicle. The early forms show the body and axle with a wheel on either side; some also include the long pole by which the vehicle was drawn. As the picture became compact, the two wheels were reduced to strokes around the central frame.\n\nThe graph names the vehicle as a whole. Its basic sense continues in carts, carriages, and later vehicles, while the rotating wheel also allows 車 to name wheel-like mechanisms. The ancient forms preserve the construction of the vehicle more clearly than the squared modern character.",
+  "sources": [
+    {
+      "title": "常用字解 · 車 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12681830.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 車",
+      "url": "https://kotobank.jp/word/%E8%BB%8A-57345#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 206
+  }
 }

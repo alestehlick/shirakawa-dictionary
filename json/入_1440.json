@@ -16,5 +16,28 @@
     "to put in",
     "to insert"
   ],
-  "explanation": "This character is a pictograph of an entryway: two large posts set up together to form the opening to a room. When a roof-like element is added above this doorway shape, it becomes 内, evoking the covered space one has gone into and thus the sense of “inside.” Retaining the original gateway alone gives 入, which focuses on the action itself—going in or putting something in through an entrance."
+  "explanation": "入 pictures the entrance to a room. The early lines meet at the top and open below, marking the place through which someone goes inside. Enclosing this entrance within a roof produces 内, the interior.\n\n入 names the movement across that threshold: to enter or go in. Used of something being moved, it means to put or bring it in; viewed from within, it can mean to receive or admit it. The short graph thus centres on entering, while 内 identifies the space reached by that movement.",
+  "sources": [
+    {
+      "title": "常用字解 · 入 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22450675.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 入",
+      "url": "https://kotobank.jp/word/%E5%85%A5-516773#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 216
+  }
 }

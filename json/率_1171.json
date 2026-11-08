@@ -16,5 +16,28 @@
     "in general",
     "to follow"
   ],
-  "explanation": "Shirakawa sees 率 as a pictograph of wringing out a bundle of wet threads. The ancient forms show a skein pierced by small wooden bars above and below, twisted to squeeze out the water, with droplets drawn to either side. From the act of applying force and drawing everything together, the character came to mean to lead or to command. Because the water is wrung out completely, it also developed the senses of all, entirely, and in general. By extension it can carry the idea of following, as in compounds like sotsujun (obedient, compliant)."
+  "explanation": "率 pictures a wet bundle of threads being wrung out. Small wooden bars pass through the bundle above and below; twisting them squeezes the strands tightly. Dots at the sides show the water falling away.\n\nThe forceful drawing and tightening give leading or bringing others along. The threads move together under the applied force, supplying the relation between one who leads and those who follow. Early inscriptions use 率 for following as well as leading.\n\nWringing out the bundle thoroughly also gives completeness: all or entirely. That can soften into ‘generally’ or ‘for the most part.’ The old picture holds together the pulling action and the thoroughness with which it is carried out.",
+  "sources": [
+    {
+      "title": "常用字解 · 率 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15435343.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 率",
+      "url": "https://kotobank.jp/word/%E7%8E%87-554569#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 372
+  }
 }

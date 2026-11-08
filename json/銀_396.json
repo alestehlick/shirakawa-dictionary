@@ -11,5 +11,28 @@
   "meanings": [
     "silver"
   ],
-  "explanation": "銀 is a phono-semantic character: the metal radical 金 signals a metal, while 艮 serves as the phonetic, as in 垠 (“border, end”), pointing to the on-reading gin. The Shuowen glosses it as “white metal,” not any pale metal but silver itself—the whiteness being the natural color of the substance. In antiquity copper was called akagane (“red metal”), and gold, silver, and copper were esteemed as the three principal metals. Bronze, formed by adding tin to copper, can sometimes take on a silvery sheen; among the vessels excavated from the Zhongshan royal tomb (about 2,300–2,400 years ago) are many refined pieces intricately inlaid with gold and silver. In later times silver became a medium of currency, a legacy still heard in compounds such as ginko, “bank,” literally “silver institution.”"
+  "explanation": "銀 combines 金, metal, with 艮 as its sound element. It names silver, the metal distinguished by its white colour, as copper was distinguished as red metal. The whiteness is the characteristic appearance of this particular substance.\n\nSilver was valued for fine decoration: objects from the Zhongshan royal tombs include intricate gold and silver inlay. Its use for money also allowed 銀 to mean silver currency. From the metal’s appearance, the character extends to things with a white lustre, such as snow. Metal, money, and shining whiteness are the principal paths by which the original substance-name broadens.",
+  "sources": [
+    {
+      "title": "常用字解 · 銀 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9638955.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 銀",
+      "url": "https://kotobank.jp/word/%E9%8A%80-53964#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 257
+  }
 }

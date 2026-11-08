@@ -13,5 +13,28 @@
     "to sell",
     "commerce"
   ],
-  "explanation": "Shirakawa reads 商 as a ritual scene. The character combines 辛, the large tattooing needle that signified judicial authority, set upon a stand, with 口 used not as a mouth but as a covenant vessel that held written petitions to the gods. Displaying the punitive needle and placing the covenant receptacle before it evokes a solemn act of prayerful consultation, so the original sense is to seek the will of the deities, to consult. In the oracle-bone inscriptions, 商 is also the formal name of the Shang polity, whose capital is styled 大邑商, the Great City of Shang. From contexts of prize-giving and compensatory offerings—reciprocal settlements made to redress or conclude matters—the word broadened into the notion of transaction, and in time came to mean selling and trade, hence commerce."
+  "explanation": "商 combines 辛, a large tattooing needle, with a stand, 㓁, and 口, a vessel containing a prayer. The needle symbolizes the authority to punish. Set upright on its base with the prayer vessel before it, it forms a solemn act of consulting the divine will. ‘Take counsel’ is the graph’s original sense.\n\n商 is also the formal name of the Shang state; its capital is called 大邑商, the great city of Shang, in oracle-bone inscriptions.\n\nThe graph once also wrote the word later specified by 賞, a reward or grant. Reward and recompense brought it into the exchange of valuables. Its familiar meanings of trading, commerce, and merchant developed later from this sphere of compensation and transaction.",
+  "sources": [
+    {
+      "title": "常用字解 · 商 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13523610.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 商",
+      "url": "https://kotobank.jp/word/%E5%95%86-78790#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 317
+  }
 }

@@ -14,5 +14,28 @@
     "to divide",
     "earthly branch"
   ],
-  "explanation": "支 is a compound graph that joins the sign for a small tree-branch with the hand (又), picturing a hand grasping a twig. In early usage it served as the original character for “branch” (later written as 枝), set in contrast to 本 “root,” and thus came to mean what splits away from the main line: a branch, to branch off, or to divide. This contrast is echoed in the term 干支, “trunk and branches,” for the sexagenary cycle. Because wooden branches are used to prop things up, the character naturally also took on the sense “to support,” as seen in compounds like 支持 and 支柱."
+  "explanation": "支 combines 十, a small branch, with 又, a hand. It pictures a twig held in the hand and is the earlier graph for 枝. The branch is something divided from the main trunk.\n\nFrom this relation, 支 names a branch line or an offshoot: a part that separates from a larger whole. The same image can describe the branches of a family. 干支 uses the language of trunk and branches for the ten stems and twelve branches of the calendrical cycle.\n\nA wooden branch can also serve as a prop. This gives supporting, bearing, and holding something up, as in 支持 and 支柱. Division and support both develop from the branch in the hand.",
+  "sources": [
+    {
+      "title": "常用字解 · 支 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12134734.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 支",
+      "url": "https://kotobank.jp/word/%E6%94%AF-515210#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 374
+  }
 }

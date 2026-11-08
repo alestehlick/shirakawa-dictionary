@@ -17,5 +17,28 @@
     "to go far",
     "to keep away"
   ],
-  "explanation": "Shirakawa interprets 遠 as a phono-semantic compound: the movement sign 辵 (“to go”) is joined to the phonetic 袁 (en). He reads 袁 as a funerary image—a piece of jade hung at the neckband of a burial garment for a spirit‑invoking rite, with the sign 之, originally shaped like a footprint meaning “to go,” placed at the pillow to send the deceased on the journey to the other world. In later script the 之 element appears as 土. With 辵 added to this base, the character shows the act of going off to a distance, and so comes to mean “far, remote.”"
+  "explanation": "遠 combines 辵, going along a road, with the sound element 袁. 袁 pictures a dead person’s garment with a piece of jade at the neckline. The jade renews the vital spirit for the journey. At the head of the body, 之, a footprint meaning ‘go,’ marks the departure toward the other world. The upper 土 is a later change of that footprint.\n\n袁 is itself the earlier graph for sending the person far away. Adding 辵 makes the journey explicit. From that departure, 遠 comes to mean far, distant, or remote.\n\nDistance can also be felt in time or relationship. The character therefore extends to a long interval, something removed from the present, or the act of keeping someone or something at a distance.",
+  "sources": [
+    {
+      "title": "常用字解 · 遠 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5262401.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 遠",
+      "url": "https://kotobank.jp/word/%E9%81%A0-447279#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 332
+  }
 }

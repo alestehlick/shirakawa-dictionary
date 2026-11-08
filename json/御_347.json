@@ -19,5 +19,28 @@
     "to meet",
     "to drive a carriage"
   ],
-  "explanation": "Shirakawa reads 御 as a phono-semantic graph. The character incorporates a phonetic element (卸), while its ancient forms depict a kneeling worshiper bowing in reverence before sacred objects—either a twisted bundle of threads (yō) or a mallet-like emblem (午/杵). These ritual tokens were thought to welcome descending deities and, by their numinous presence, repel misfortune. From this ritual scene arises the basic senses of “to meet (the gods)” and “to ward off,” which naturally extend to “to serve” the deities and thus “to use” or “to employ.” In time, the character came to be prefixed to words connected with persons of high rank (as in 御衣, imperial clothing), imparting honor. Because its Sino-Japanese reading coincided with that of 馭 “to handle or train a horse,” 御 could also substitute for that character and be used for the ideas of a horse and of driving or handling one. In Japanese it functions widely as an honorific prefix (on-, o-, mi-)."
+  "explanation": "御 contains 卸 as its sound-bearing core, with 彳 added beside it. The old forms show a kneeling person worshipping before 午, a ritual pestle; related forms use a bundle of twisted threads. The implements belong to the ceremony through which a divine power was received.\n\nReceiving the god also brought protection against harmful influences. 御 could therefore express both welcoming a presence and holding misfortune away, a protective sense later written 禦. Serving the divine presence gave further meanings of attending, directing, and putting something to use.\n\nRespectful attendance made 御 suitable for people of high status and, in Japanese, for the honorific prefixes *o-*, *on-*, and *mi-*. Its use for managing horses or driving a carriage is connected by sound with 馭. The graph thus gathers reception, service, protection, and control around the original act of ritual attendance.",
+  "sources": [
+    {
+      "title": "常用字解 · 御 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/9174214.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 御",
+      "url": "https://kotobank.jp/word/%E5%BE%A1-448357#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 208
+  }
 }

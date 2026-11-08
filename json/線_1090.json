@@ -12,5 +12,28 @@
     "thread",
     "strand"
   ],
-  "explanation": "線 is a phono-semantic character built with the silk radical 糸, indicating thread, and 泉 as its phonetic. 泉, which originally depicts water welling up and falling from the base of a cliff, supplies the on reading sen. An older form wrote the character as 綫, using 戔 as the phonetic, a graph that shows thin, flat layers piled up. Ancient dictionaries already define the word concretely: the Shuowen glosses it as “threads,” and the Yupian notes that it is “used to sew garments.” From the core sense of sewing thread or filament, the meaning broadened to any long, slender, continuous thing—hence “line” and “wire.” For the specific sense of sewing thread, older texts tend to write 線, while later usage often favors the variant 綫."
+  "explanation": "線 combines 糸, thread, with 泉 as its sound element. 泉 pictures water issuing and falling from beneath a cliff. An older standard form, 綫, uses 戔 for the sound; 戔 carries an association with small, thin things layered together. Both forms name fine thread.\n\nThe concrete object is sewing thread—the slender strand used to join pieces of clothing. From a thread’s continuous length, 線 comes to describe any similarly long, narrow course: a drawn line, a wire, or a route extending through space. The fine strand supplies the visible shape that unites these uses.",
+  "sources": [
+    {
+      "title": "常用字解 · 線 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14792399.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 線",
+      "url": "https://kotobank.jp/word/%E7%B7%9A-5252#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 259
+  }
 }

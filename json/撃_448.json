@@ -14,5 +14,28 @@
     "attack",
     "to beat"
   ],
-  "explanation": "A phono-semantic character whose older form is 擊, with a phonetic element indicating the on-reading geki. At its core is the form 轂, which Shirakawa explains as depicting a sack (橐) tied at the mouth and struck with a pike-like cudgel (殳). After the husks are loosened, grain is stuffed into the hanging bag and threshed by beating it; from this scene the graph 穀 arose with the sense of striking the contents of a sack. When the hand radical 手 was added below, the action of striking became overt, yielding 擊/撃. The meaning then broadened from beating a suspended bag to striking in general, and by extension to slaying, attacking, and fighting. The idea of a sack hung up and left to dangle is further suggested by the element written 繫."
+  "explanation": "撃, formerly 擊, adds 手, hand, below the sound element 毄. In 毄, a sack tied at the top is struck with 殳, a long staff-like weapon or cudgel. Grain placed inside the sack was beaten to remove its husks. 毄 is the earlier graph for this striking action.\n\nThe added 手 makes the human action explicit: the hand delivers the blows that thresh the grain. From beating the contents of a sack, 撃 broadens to striking or hitting anything, then attacking an opponent, fighting, or delivering a blow in battle. The related 繫 concerns tying or fastening the sack, while 擊 emphasizes the stroke and its impact.",
+  "sources": [
+    {
+      "title": "常用字解 · 撃 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10111762.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 撃",
+      "url": "https://kotobank.jp/word/%E6%92%83-489647#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 260
+  }
 }

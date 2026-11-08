@@ -18,5 +18,28 @@
     "appropriate",
     "to polish"
   ],
-  "explanation": "A compound graph that joins 七 and 刀. Here 七 is not the numeral but the pictograph of a severed bone, and with 刀, “knife,” the character evokes trimming and scraping bone or jade with a blade. The Book of Odes (Wei Feng, Qi’ao) pairs the knife and the file, and Mao’s commentary glosses 切 as treating bone—cutting and refining it—whence expressions like 切磋 “to polish and improve.” From the image of an edge coming right up against something, the word also developed senses of nearness and urgency—being pressing or imminent—and of keen precision and aptness, as seen in compounds such as 切迫, 緊切, 適切, and 切諫."
+  "explanation": "切 combines 七 with 刀, a knife. 七 represents a cut bone or joint, and the knife separates the parts at that point. The graph first concerns cutting and working bone.\n\nSuch work requires close attention and precise technique. From the careful cutting come senses of what is exact, essential, or urgently important. Something pressing calls for the same concentrated attention.\n\nThe physical action broadens to cutting or severing anything, while the figurative uses include closeness, urgency, and aptness. 切磋 compares improvement of oneself or one’s skill with the careful work of cutting and polishing material.",
+  "sources": [
+    {
+      "title": "常用字解 · 切 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/14542933.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 切",
+      "url": "https://kotobank.jp/word/%E5%88%87-171115#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 344
+  }
 }

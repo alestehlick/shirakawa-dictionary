@@ -14,5 +14,28 @@
     "to err",
     "mistake"
   ],
-  "explanation": "In its earliest pictographic form, 失 shows a dancer with arms flung upward, the figure of a female shaman leaping in ritual to the point of self-forgetfulness. From this image of trance—literally losing one’s awareness—the meaning broadened to losing something in general. Related graphs trace other facets of the same ecstatic rite: 佚 depicts relaxed enjoyment, 夭 portrays a shaman’s head inclined and body sinuously twisting (the basis of 妖), and 迭 evokes the alternation between low and exalted, frenzied movements. In later usage, 失 naturally extended to errors and mishaps, as seen in compounds like kashitsu (error) and shikka (accidental fire)."
+  "explanation": "失 pictures a ritual dancer with raised hands. The woman dances and prays until she enters an ecstatic state, losing ordinary awareness of herself. The first loss expressed by the graph is this self-forgetting or loss of consciousness.\n\nFrom losing awareness, 失 broadens to losing anything that had been held: a possession, an opportunity, a memory, or control of an action. An action that slips out of its proper course becomes a mistake or failure.\n\nRelated dancing figures emphasize other postures. 夭 shows the body inclined in the dance; 失 centres on the dancer carried beyond ordinary self-possession. That original loss remains recognizable in the later general meaning ‘lose.’",
+  "sources": [
+    {
+      "title": "常用字解 · 失 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12604824.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 失",
+      "url": "https://kotobank.jp/word/%E5%A4%B1-521044#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 287
+  }
 }

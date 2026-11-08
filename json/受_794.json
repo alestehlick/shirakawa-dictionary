@@ -14,5 +14,28 @@
     "accept",
     "undergo"
   ],
-  "explanation": "In its earliest form, 受 brings together two hands—an upper hand written with爪 and a lower hand with 又—around 舟, which here represents a tray or bowl. The upper hand places something into the vessel, while the lower hand takes it out, so the graph captures both sides of the exchange. Accordingly, in oracle-bone and bronze inscriptions it could mean either to grant or to receive. Later, the act of granting was distinguished with the creation of 授, and 受 settled into its familiar sense of receiving."
+  "explanation": "受 places 舟, here a tray or basin, between two hands. The upper hand is 爪 and the lower one 又; together they form 𠬪. Something is placed in the vessel and passed from one person to another.\n\nSeen from above, the hand grants or hands it over. Seen from below, the hand receives it. Early use of 受 includes both sides of the exchange, and bronze inscriptions use the graph for giving as well as receiving.\n\n授 was formed later to specify the granting side, leaving 受 chiefly for accepting or taking in. Receiving can also mean inheriting or continuing what has been handed down. The shared vessel keeps the relation between giver and recipient visible.",
+  "sources": [
+    {
+      "title": "常用字解 · 受 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12942914.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 受",
+      "url": "https://kotobank.jp/word/%E5%8F%97-76666#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 384
+  }
 }

@@ -14,5 +14,28 @@
     "a little",
     "young"
   ],
-  "explanation": "Shirakawa reads 少 as a pictograph: small shells threaded onto a cord. The earlier graph 小 shows the shells scattered, while 少 depicts them gathered on a string; the line for the cord is not an independent character but part of the picture. Because only a small number of shells are strung, the character comes to mean “few” and “a little,” and by extension, when applied to people, “young.”"
+  "explanation": "少 pictures small shells threaded onto a cord. 小 shows the little objects scattered apart; the added line in 少 connects them. Only a few are strung together, giving ‘few’ and ‘a little.’\n\nThe small quantity extends to something slight in degree or brief in duration. Applied to people, 少 can describe someone young, whose life and growth are still at an early stage. 小 chiefly contrasts size, while 少 chiefly contrasts quantity; their meanings overlap because both begin with small things.",
+  "sources": [
+    {
+      "title": "常用字解 · 少 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/13437895.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 少",
+      "url": "https://kotobank.jp/word/%E5%B0%91-530370#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 284
+  }
 }

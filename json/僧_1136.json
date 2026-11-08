@@ -10,5 +10,28 @@
     "buddhist monk",
     "priest"
   ],
-  "explanation": "A phono-semantic character: the person radical indicates a person, while the right-side element 曾/曽—written in older form as 會—serves as the phonetic, marking the on-reading so. That older form 會 originally depicted a steamer basket (koshiki), earthenware in antiquity and later bamboo. The graph further reflects an abbreviated phonetic rendering of the Sanskrit saṅgha (僧伽), and thus came to mean a person who practices the Buddha’s teaching—hence ‘Buddhist monk’ and ‘priest.’ It appears in usages such as sō and sōryo, and Buddhists were also referred to as futodōjin, taking the on-reading from 仏 (futsu)."
+  "explanation": "僧 combines 人, a person, with the sound element 曾. 曾 pictures a grain steamer, the implement later written 甑 and called *koshiki* in Japanese. In 僧, its role is to supply the sound.\n\nThe character belongs to the transcription 僧伽, representing Sanskrit *saṅgha*, the Buddhist community. 僧 is the shortened form of that transcription. It came to name a person practising the Buddhist teaching, especially a member of the monastic community—a monk or priest. The meaning therefore comes from the Buddhist word being transcribed, while 人 identifies the human referent and 曾 supplies the required sound.",
+  "sources": [
+    {
+      "title": "常用字解 · 僧 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15188185.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 僧",
+      "url": "https://kotobank.jp/word/%E5%83%A7-89093#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 229
+  }
 }

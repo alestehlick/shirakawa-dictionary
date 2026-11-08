@@ -13,5 +13,28 @@
     "to guard",
     "safeguard"
   ],
-  "explanation": "護 is a phono-semantic character. Its phonetic component ultimately derives from a graph showing an eared owl (萑) set on the hand (又) for bird divination—an act meant to ward off calamity and secure protection. The Shuowen glosses it as “to safeguard” and “to watch,” reinforcing the sense of vigilant care. With this auspicious, protective rite as its core image, 護 came to mean to protect and preserve."
+  "explanation": "護 combines 言, spoken words or prayers, with the sound element 蒦. 蒦 shows 雈, an eared owl, held in a hand, 又. The bird was used in divination.\n\nThe rite probably sought to avert calamity and keep the person safe. With the prayer added, 護 expresses the protection obtained or maintained through that act. It means to guard, shelter, or preserve someone from harm.\n\nThe word also emphasizes attentive watching: keeping a person or situation under careful observation so that danger can be met. Protection is therefore both warding off a threat and remaining watchful over what has been entrusted to one’s care.",
+  "sources": [
+    {
+      "title": "常用字解 · 護 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10736305.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 護",
+      "url": "https://kotobank.jp/word/%E8%AD%B7-493471#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 388
+  }
 }

@@ -25,5 +25,28 @@
     "open",
     "reveal"
   ],
-  "explanation": "Shirakawa reads 明 as a compound graph that originally set the window pictograph 囧 beside the moon 月. It pictures moonlight entering through a window—an image grounded in the semi‑subterranean houses of the loess regions of ancient northern China, where a shaft-like room with a single opening admitted light that was revered as the presence of the divine. From this, the character takes on senses of light and brightness, clarity, dawning or opening, and revealing; hence the compound 神明 (shinmei) denotes the gods."
+  "explanation": "The older form of 明 is 朙, combining 囧, a window, with 月, the moon. It pictures moonlight entering through the opening. The left side later took the familiar shape 日, but the ancient forms preserve the window.\n\nThe place where light entered was also a place for welcoming and worshipping the divine presence. In the loess regions, dwellings could have rooms cut around a sunken central court, with light entering from the side facing that opening. Light and the presence of the gods were closely joined in this setting, as the compound 神明 preserves.\n\nFrom illumination come ‘bright’ and ‘clear.’ Something made visible becomes evident or understandable; the coming of light also gives the sense of daybreak. 明 can thus describe light itself, clarity of understanding, or the act of bringing something into the open.",
+  "sources": [
+    {
+      "title": "常用字解 · 明 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26159704.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 明",
+      "url": "https://kotobank.jp/word/%E6%98%8E-139997#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 225
+  }
 }

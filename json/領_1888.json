@@ -16,5 +16,28 @@
     "jurisdiction",
     "to govern"
   ],
-  "explanation": "Shirakawa interprets 領 as a phono‑semantic compound: the head radical 頁 provides the idea of the head/neck, while 令 supplies the sound. Early lexica explain it as the nape or back of the neck, a sense vividly echoed in a verse of the Book of Odes that praises a woman’s graceful neck. From this literal “neck” meaning—paired with the “waist” 腰 as vital bodily points—arises the notion of the essentials or the gist, as in the word 要領. By extension the character came to mean leading or managing people and, consequently, the realm under one’s control, hence senses such as jurisdiction and territory; in concrete usage it also denotes the collar at the neck."
+  "explanation": "領 combines 頁, the head, with 令 as its sound element. Its first meaning is the neck, especially the region where a collar lies. It therefore also names the collar or neckline of a garment.\n\nThe neck and waist are important points of the body. Together they give 要領, the essential points or organizing centre of something. From such a controlling point, 領 extends to leading, directing, and bringing matters under one’s command. A territory under that command is also a 領.\n\n令 concerns receiving a divine command. The neck’s nod of assent joins receiving with accepting responsibility, and 領 can mean to receive or take possession. Taking something in mentally gives the further senses of grasping and understanding it.",
+  "sources": [
+    {
+      "title": "常用字解 · 領 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/28297422.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 領",
+      "url": "https://kotobank.jp/word/%E9%A0%98-483871#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 307
+  }
 }

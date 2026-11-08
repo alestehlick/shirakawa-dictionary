@@ -13,5 +13,28 @@
     "viscera",
     "entrails"
   ],
-  "explanation": "A phono-semantic character: 蔵 (to store, to conceal) supplies the sound zo and the notion of something kept within, while the flesh sign 月 marks a part of the body. Together they form the idea of the organs hidden inside the body. Hence 臓 in compounds such as 内臓 and 臓器 for the internal organs. In traditional classification it designates the five viscera—lungs, heart, spleen, liver, and kidneys—contrasted with the six bowels: large and small intestines, stomach, gallbladder, bladder, and the so‑called triple burner. The core image is of what is stored within the body."
+  "explanation": "臓, formerly 臟, adds 肉, flesh, to 藏, now 蔵. 蔵 supplies the sound and the idea of something stored or concealed within. The flesh element, written 月 at the left, makes the bodily reference explicit: 臓 names the organs hidden inside the body.\n\nThese organs were also understood as places that stored vital energy. The older expression 蔵府 uses the language of storehouses for the internal organs; the later 臓腑 marks the bodily sense directly. 臓 therefore carries both the physical position of the organs within the body and their role as repositories of its sustaining energies.",
+  "sources": [
+    {
+      "title": "常用字解 · 臓 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15293929.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 臓",
+      "url": "https://kotobank.jp/word/%E8%87%93-551757#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 242
+  }
 }

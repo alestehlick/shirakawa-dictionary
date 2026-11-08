@@ -15,5 +15,28 @@
     "to announce",
     "to pray"
   ],
-  "explanation": "Originally a pictograph, 告 depicts a small branch set upon a ritual container known as a sai, a covenant vessel that held written petitions to the gods. The scene is that of presenting this adorned vessel before the deities to pray and make a formal announcement. From this sacred act of petitioning, the sense naturally broadened to reporting or informing those of higher rank. The related character 誥 marks a king’s command conveyed through this same ritual medium, while 史 shows the sacred object fixed to a wooden post for prayer and worship, anchoring 告 in the sphere of ritual proclamation and written supplication."
+  "explanation": "告 pictures a small branch with 口, a vessel containing a prayer, attached to it. The branch is raised before the god so that the petition can be presented. 告 first means announcing one’s plea to the divine presence and asking for a response.\n\nThe related 史 shows this prayer-bearing object held for worship within the ancestral sanctuary. 使 and 事 belong to its use in rites conducted elsewhere, with the branch carried out as part of the mission.\n\nFrom addressing the god, 告 broadens to telling, reporting, or informing someone. 誥 originally supplies the answering side—the divine intention made known in return—and later comes to name a ruler’s formal proclamation or command.",
+  "sources": [
+    {
+      "title": "常用字解 · 告 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11264055.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 告",
+      "url": "https://kotobank.jp/word/%E5%91%8A-493809#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 354
+  }
 }

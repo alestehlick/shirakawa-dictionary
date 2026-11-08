@@ -16,5 +16,28 @@
     "question",
     "inquiry"
   ],
-  "explanation": "This character combines the shrine doors 門 with the square 口, which Shirakawa interprets not as a mouth but as sai, a ritual receptacle that held written covenants and prayers to the gods. Set before the double doors of a sacred enclosure, this vessel marks a formal act of petition: one stands at the gate to seek the deity’s will and receive a revealed answer. From this scene of inquiring after divine intent, the meaning naturally broadened to the general senses of asking, questioning, and making inquiries."
+  "explanation": "問 places 口, a vessel holding a prayer, before 門, the double doors of a shrine cabinet. The prayer is offered at the doors to ask the god’s intention and seek a revelation. The question is addressed to a divine presence enclosed within the shrine.\n\nFrom this act of seeking an answer, 問 broadens to asking another person, making an inquiry, and investigating a matter. Its original setting gives the question a deliberate purpose: something unknown is brought before a power that can disclose it. Later uses also include visiting or sending a message to ask after someone, where an inquiry becomes an expression of concern.",
+  "sources": [
+    {
+      "title": "常用字解 · 問 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26409158.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 問",
+      "url": "https://kotobank.jp/word/%E5%95%8F-579231#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 222
+  }
 }

@@ -16,5 +16,28 @@
     "to confirm",
     "to ascertain"
   ],
-  "explanation": "A phono-semantic character: the phonetic element read kaku shows a frame (冂) set over a bird about to take flight, conveying the idea of holding something back firmly. When this is combined with the semantic 石 “stone,” it adds the sense of hardness—something pressed, strengthened, or beaten solid with a stone becomes firm and steady. From this come the meanings “hard, firm,” and by extension “reliable, certain.” In Japanese it appears as tashika “certain” and the verb tashikameru “to make sure, to ascertain,” as in confirming the authenticity of something."
+  "explanation": "確 combines 石, stone, with the sound element 隺. 隺 shows a bird about to take flight held back by a frame placed above it. The frame restrains it firmly, keeping it from moving away.\n\nAdding 石 gives the hardness of stone and something made solid with it. Firm restraint and a hard material meet in the sense of being secure and unshakable. From physical firmness, 確 extends to something reliable, definite, or certain.\n\nJapanese *tashika* describes that certainty, and *tashikameru* means to establish or confirm it. The action is to make sure that what is believed or reported has a firm basis.",
+  "sources": [
+    {
+      "title": "常用字解 · 確 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8231519.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 確",
+      "url": "https://kotobank.jp/word/%E7%A2%BA-459998#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 342
+  }
 }

@@ -16,5 +16,28 @@
     "to branch off",
     "to dispatch"
   ],
-  "explanation": "Shirakawa explains 派 as a phono-semantic character: the water radical indicates the domain of meaning, while 辰 serves as the phonetic and, in its earliest form, depicts water splitting into branches—the original image behind 派. With “water” added, the character names the act of flow dividing and spreading: to branch off and flow, to branch off, and by extension to send out or dispatch. He links it to related water graphs: 永 marks a place where currents converge with force, and 漾 (yō, ‘to drift, float’) evokes the abiding vigor carried downstream. From this image of a stream dividing from the main current arose the later sense of a faction or school."
+  "explanation": "派 adds 水, water, to 𠂢 as its sound element. 𠂢 itself pictures water separating into branches and is the earlier graph for the word. The fuller 派 makes the water reference explicit.\n\nThe branching current gives dividing and flowing away along separate courses. From sending a branch outward, 派 also comes to mean dispatching someone to another place or task.\n\nA branch can remain connected with a main source while developing its own course. This gives a school, faction, or lineage within a larger tradition. The related 脈 applies the branching flow to the channels through which blood moves in the body.",
+  "sources": [
+    {
+      "title": "常用字解 · 派 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/22725756.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 派",
+      "url": "https://kotobank.jp/word/%E6%B4%BE-597783#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 385
+  }
 }

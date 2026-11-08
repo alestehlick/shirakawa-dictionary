@@ -18,5 +18,28 @@
     "to impose a penalty",
     "fault"
   ],
-  "explanation": "A compound graph of 禾, the grain plant, and 斗, a dry measure, it pictures grain being measured out. From this image of gauging grain came the idea of evaluating and sorting—assigning grades and classes. The sense then broadened to setting standard conditions and the rules or regulations that define them. In Japanese usage it can shade into notions such as shina (quality), hodo (degree or level), and, in legal contexts, toga (fault or charge)."
+  "explanation": "科 combines 禾, grain, with 斗, a vessel for measuring capacity. It shows grain being measured and assessed. The operation establishes both its quantity and its quality.\n\nFrom assessing grain come grades, classes, and an appropriate allocation. A determined measure can serve as a standard or rule, so 科 also names a regulation or a division under which matters are arranged.\n\nThe same sorting gives separate branches or articles of a larger whole. In Japanese legal usage, *toga* names a fault or charge placed under such a rule. Measurement and classification remain the centre of the graph’s development.",
+  "sources": [
+    {
+      "title": "常用字解 · 科 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5979002.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 科",
+      "url": "https://kotobank.jp/word/%E7%A7%91-42059#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 379
+  }
 }

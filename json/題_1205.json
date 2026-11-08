@@ -15,5 +15,28 @@
     "inscription",
     "to write down"
   ],
-  "explanation": "題 is a phono-semantic character built from 是 as the sound element and 頁 as the meaning element. 頁 depicts a person bowing in reverence with ritual headgear and functions as the ‘head/face’ indicator. 是, originally the form of a spoon or ladle, when applied to the human face was associated with the upper part—the forehead. The Shuowen explicitly glosses it as ‘forehead,’ and in early usage it could mean the brow or the head more generally. From the idea of the forehead as the central front of the face, the sense extended to plaques hung at the front center of a room (題額), and by further development to inscribing or writing a title—hence the modern meanings of ‘title’ and ‘to write down.’"
+  "explanation": "題 joins 頁, a person bowing while wearing ritual headgear, with the sound element 是. 頁 supplies the head and face. 是 originally pictures a spoon: its broad upper bowl provides a comparison for the forehead, the prominent front of the head. 題 first names this part of the face.\n\nThe forehead’s position at the front and centre extends to a plaque displayed in the corresponding place in a room. An inscription on such a plaque identifies or announces something. From the displayed inscription, 題 comes to mean a heading or title, then the subject announced by a heading. A topic for discussion, an assigned question, and a problem to be answered all grow from this use.",
+  "sources": [
+    {
+      "title": "常用字解 · 題 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/15916415.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 題",
+      "url": "https://kotobank.jp/word/%E9%A1%8C-556262#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 205
+  }
 }

@@ -16,5 +16,28 @@
     "to attempt",
     "to use"
   ],
-  "explanation": "試 is a picto-phonetic character formed from 言, the words or prayers uttered in ritual, and 式 (shiki), which supplies the sound and evokes a ritual implement used to expel impurity through incantation. Because the efficacy of such rites was confirmed by actually performing them, the character came to mean to try, to test, and by extension to use. It likely belonged to rites connected with punishment or military affairs. In 試験 (shiken, examination), 験 recalls the practice of discerning the gods’ will by observing a horse’s movements and stillness—an animal thought especially quick to catch inspiration—hence the sense of putting something to the test."
+  "explanation": "試 combines 言, spoken words or prayers, with the sound element 式. 式 concerns using the ritual implement 工 to wipe away harmful influences and purify something. In 試, the prayer is made effective through performing the prescribed action.\n\nTrying the method was how its effect became apparent. The early senses therefore include putting something to use, as well as trying or testing it. A rite could also seek the divine intention before an undertaking, with the result determining whether action should follow.\n\nFrom applying a method and observing its effect come the ordinary meanings ‘try,’ ‘test,’ and ‘examine.’ The word keeps the practical step of doing something in order to establish what it will accomplish.",
+  "sources": [
+    {
+      "title": "常用字解 · 試 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12391724.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 試",
+      "url": "https://kotobank.jp/word/%E8%A9%A6-515190#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 319
+  }
 }

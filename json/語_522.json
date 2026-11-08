@@ -16,5 +16,28 @@
     "to tell",
     "to speak"
   ],
-  "explanation": "語 is a phono-semantic character: 吾 supplies the on-reading go, while 言 provides the semantic field of speech. Shirakawa sees 吾 as the image of a sai, a covenant vessel that held written prayers to the gods, sealed with a wooden lid—hence a sense of prayer preserved and entrusted to the divine. 言, for its part, shows the 辛 needle used in punitive tattooing and signifies the solemn words of oath-taking before the gods at trials or treaties, where one accepts that needle’s punishment if the vow is broken. Against this backdrop, 語 originally evoked words addressed upward—prayerful, protective speech—standing in contrast to 言 as more forceful, assertive utterance. From this core it broadened to mean words and language in general, and by extension “to tell, to relate,” as seen in compounds such as 言語."
+  "explanation": "語 combines 言, words, with the sound element 吾. In 吾, a wooden cover is placed over a vessel containing a prayer. The cover protects the prayer and preserves its power against interference. 語 names the words spoken for that protection.\n\nSacred words could attack or defend. 言 carries the force of a solemn assertion or oath that acts against another power; 語 answers with words that guard the prayer. Such utterances could also address and pacify the spirits of a place when people settled there. Speech begins here as an effective exchange with the unseen world.\n\nThe meaning later broadens to words and language in general, then to speaking with another person, telling a story, explaining, or giving instruction. 言語 joins the two old kinds of utterance in the ordinary word for language.",
+  "sources": [
+    {
+      "title": "常用字解 · 語 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10730004.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 語",
+      "url": "https://kotobank.jp/word/%E8%AA%9E-3236#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 254
+  }
 }

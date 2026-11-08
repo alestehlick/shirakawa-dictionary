@@ -16,5 +16,28 @@
     "bamboo slip",
     "to abridge"
   ],
-  "explanation": "A phono-semantic character: the bamboo radical 竹 supplies the material sense, while 間 (kan) gives the sound. In antiquity, a 簡 was a bamboo strip—bamboo lightly singed over a flame and planed smooth into a thin plate for writing. From this concrete tool arose the senses of a bamboo tag and a written piece. Because writing on bamboo slips was a more straightforward alternative to costly jade or silk, the character came to express ease and simplicity, and by extension the idea of abridging or omitting, as felt in words for ease and brevity."
+  "explanation": "簡 combines 竹, bamboo, with 間, also written 閒, as its sound element. A bamboo piece was heated over a flame, flattened, and prepared as a thin strip on which characters could be written. Such strips were 簡; bound together, they made a written text. Wooden strips could be named in the same way.\n\nThe character therefore means a writing strip, document, or letter. Compared with writing on jade or silk, this was a plain and relatively simple medium. 簡 developed the senses ‘simple,’ ‘brief,’ and ‘abridged,’ then omitting elaboration or treating something with little ceremony.\n\nIts uses for selecting, checking, or comparing come through the related 柬, a graph concerned with choosing what is inside a sack.",
+  "sources": [
+    {
+      "title": "常用字解 · 簡 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8599999.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 簡",
+      "url": "https://kotobank.jp/word/%E7%B0%A1-48412#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 311
+  }
 }

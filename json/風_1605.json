@@ -15,5 +15,28 @@
     "customs",
     "style"
   ],
-  "explanation": "A picto-phonetic graph. In oracle-bone and bronze forms it shows a sacred bird wearing a crested headpiece—the same numinous bird that underlies 鳳 (phoenix). The element 凡 was added as a marker for the Sino-Japanese reading. As ideas shifted toward dragons dwelling in the heavens and stirring the air, the bird of 鳳 was set aside and the reptile/dragon sign 虫 was introduced, giving 風 its received form and the sense of wind. Thus the character does not depict moving air; it evokes a spirit-creature, bird- or dragon-like, that brings the wind. In antiquity the wind was imagined as a bird-shaped deity that ranged across the land, touching every place and shaping each region’s distinctive 風俗 (customs) and 風物 (natural scenes and things)."
+  "explanation": "The earliest form of 風 belongs with 鳳, the great sacred bird. It shows a bird with a conspicuous crown, with 凡 serving as the sound element. The wind was understood through the divine being that brought it.\n\nLater, dragons moving through the heavens were believed to raise the wind. The bird in the graph was replaced by 虫, a sign for a crawling creature that could also represent a dragon. The modern character preserves this later form.\n\nWind carried the influence of the power governing a region. Its effects extended beyond moving air to the region’s climate, character, and customary ways of life. From this come the senses ‘custom,’ ‘manner,’ and ‘style,’ as well as an influence that spreads through people and changes their conduct.",
+  "sources": [
+    {
+      "title": "常用字解 · 風 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/24431475.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 風",
+      "url": "https://kotobank.jp/word/%E9%A2%A8-44718#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 203
+  }
 }

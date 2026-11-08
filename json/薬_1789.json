@@ -13,5 +13,28 @@
     "drug",
     "to heal"
   ],
-  "explanation": "A phono-semantic character: the grass radical signals medicinal herbs, while the inner element 樂 (楽) serves as the sound marker, yielding the on reading yaku. Shirakawa notes that this sound reflects an older value that shifted in the same way seen when 勺 “shaku” becomes 約 “yaku” and 釋 “shaku” becomes 訳 “yaku”; related graphs like 鑠 also preserve the older shaku. The Shuowen defines it as “grass that cures illness,” hence its core senses of medicine and healing by medicine. Shirakawa further interprets 樂 as the form of a handbell with a handle, and sees the ancient image behind 薬 as a shamaness ringing that bell to drive out the spirits of disease—an origin that explains both its herbal component and its reading as a vestige of the era when shamans were the healers."
+  "explanation": "薬, formerly 藥, combines 艸, plants, with 樂 as its sound element. Its direct meaning is a plant that treats illness: a medicinal herb. From the herb, the word broadens to medicine generally and to healing by its use.\n\n樂 also preserves an older setting for treatment. It pictures a handled bell, shaken by a ritual healer to drive away the spirits of disease. An early graph for 療, ‘heal,’ combines the sickness element with 樂, recording this bell-ringing treatment. 薬 belongs to the same group of healing words, while its plant element specifies the medicinal substance.\n\nThe character can thus name the remedy itself or the action of curing, relieving, and helping someone through treatment.",
+  "sources": [
+    {
+      "title": "常用字解 · 薬 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/26605444.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 薬",
+      "url": "https://kotobank.jp/word/%E8%96%AC-55381#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 283
+  }
 }

@@ -27,5 +27,28 @@
     "inferior",
     "later"
   ],
-  "explanation": "Shirakawa explains 下 as an indicative graph. In early script a turned-over palm is drawn, and a marking point placed beneath it singles out what lies under the hand—hence the sense of down, lower, under. A point placed above the palm yields the counterpart 上. Over time the indicating dot lengthened into a short vertical stroke, giving rise to the standard paired forms of 上 and 下, with later variants adding side dots. From the concrete idea of the lower side it naturally extends to downward motion—to go or come down, to lower or bring down—and by metaphor to sequence in time (what comes later, at the end) and to rank, expressing the relation of superior and inferior, including the sense of being lower or inferior."
+  "explanation": "下 shows a palm turned downward, with a mark beneath it indicating the space under the hand. The hand establishes a reference level; the added mark identifies the lower side. 上 uses the corresponding arrangement for what is above.\n\nFrom ‘below’ come ‘low’ and the movements of going down, lowering, or bringing something down. The same relation extends to rank, where someone or something is placed beneath another, and to sequence, where 下 can indicate what comes later or toward the end. The simple spatial relation remains the centre of these uses.",
+  "sources": [
+    {
+      "title": "常用字解 · 下 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5841419.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 下",
+      "url": "https://kotobank.jp/word/%E4%B8%8B-75323#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 231
+  }
 }

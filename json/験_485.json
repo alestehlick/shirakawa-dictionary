@@ -19,5 +19,28 @@
     "proof",
     "effect"
   ],
-  "explanation": "Originally written 驗, this is a phono-semantic graph: the horse element supplies the scene of divination, while 僉 serves as the phonetic and links the word to other graphs like 檢 (検) and 險 (険) that share its on-reading. 僉 itself depicts two worshipers dancing in ritual, each presenting a container into which written prayers to the gods are placed. 験 thus names the moment when a response to such prayer is shown. The horse was chosen because it was thought especially quick to receive divine inspiration, and ceremonies that tested the gods’ will through horses were performed—Japan too held shrine horse races from ancient times. From this setting the character came to mean testing or trying something out, investigating, and, by extension, a manifest sign, proof, or the effective result of a prayer."
+  "explanation": "験, formerly 驗, combines 馬, horse, with the sound element 僉. The older 僉 shows two people offering vessels containing prayers and dancing together. Their rite seeks a response from the divine world—a sign that the prayer has been received.\n\nHorses were regarded as particularly receptive to spiritual powers. 驗 probably arose in divination using horses, where their behaviour disclosed a response or omen. The important point was the appearance of a sign by which something unseen could be known.\n\nFrom a manifested sign, the meaning extends to examining and testing: a claim is tried and its truth or effect becomes visible. Proof, a successful result, and an observable effect follow from this. Experience likewise provides evidence gained by actually undergoing or trying something.",
+  "sources": [
+    {
+      "title": "常用字解 · 験 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/10422801.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 験",
+      "url": "https://kotobank.jp/word/%E9%A8%93-491271#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 213
+  }
 }

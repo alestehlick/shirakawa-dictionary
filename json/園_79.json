@@ -13,5 +13,28 @@
     "park",
     "cemetery"
   ],
-  "explanation": "園 is a phono-semantic character: the enclosing frame suggests a bounded place, while the phonetic 袁 (en) supplies both sound and imagery. In 袁, Shirakawa sees the scene of a funerary send-off—a jade ornament placed at the neck of the shrouded body, with the sign 之 by the pillow to mark the soul’s departure—an idea that also underlies 遠, “far.” With that nuance and the enclosure, 園 originally evoked the grove or shrubbery surrounding a burial ground. This is preserved in compounds such as 園塋 (cemetery), 園陵 (imperial mausoleum), and 霊園 (cemetery). The related character 苑 names gently contoured parklands, and from such settings the meaning of 園 broadened to the cultivated spaces we now call “gardens” and “parks.”"
+  "explanation": "園 places the sound element 袁 within 囗, an enclosure. 袁 shows a dead person’s garment with jade placed at the neckline. Above it, a footprint marks departure: the dead person is being sent on the journey to the other world. This is also the earlier graph behind 遠.\n\nWith that funerary meaning, 園 probably first names the planting or grove within a burial ground. Trees were planted in the enclosed precinct, and words for tombs and mausoleum grounds preserve this setting.\n\nFrom the planted grave precinct, 園 broadens to a cultivated enclosure: a garden, orchard, or park. The enclosure and planting remain, while the use no longer has to be funerary.",
+  "sources": [
+    {
+      "title": "常用字解 · 園 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5223822.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 園",
+      "url": "https://kotobank.jp/word/%E5%9C%92-90256#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 318
+  }
 }

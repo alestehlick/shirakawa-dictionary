@@ -20,5 +20,28 @@
     "to change",
     "to shift"
   ],
-  "explanation": "Originally written 轉, 転 is a phono-semantic compound. The element 車 supplies the idea of the wheel, while 専 (専) functions as the phonetic and also evokes rounding—placing something in a bag (囊) and pounding it with the hand (寸) until it becomes round. Since round things roll easily, the character first pictured wheels turning. From that image it naturally broadened in use to mean turning or revolving, rolling or tumbling, and by extension shifting or changing, coming round or transferring."
+  "explanation": "転, formerly 轉, combines 車, a wheeled vehicle, with the sound element 專. 專 contains a sack whose contents are struck and compacted by a hand, 寸. The material is worked into a rounded form.\n\nSomething rounded can turn or roll easily. With 車, 轉 describes the wheel revolving and the vehicle moving as its wheels turn. From this come turning, rolling, and transport by wheeled movement.\n\nThe same change of position extends to circumstances. 転 can mean to shift, change, transfer, or come around to a different condition. Falling or tumbling is another kind of turn, where something loses its former upright position.",
+  "sources": [
+    {
+      "title": "常用字解 · 転 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/20922570.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 転",
+      "url": "https://kotobank.jp/word/%E8%BB%A2-440171#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 312
+  }
 }

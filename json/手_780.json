@@ -15,5 +15,28 @@
     "skill",
     "method"
   ],
-  "explanation": "A pictograph of an open hand: five fingers fanning upward from the wrist. In bronze inscriptions, the ritual phrase meaning to join the hands and bow the head to the ground (baishu keishu) is at times written with head in place of hand, a variation that hints that the word represented by this graph originally referred specifically to the wrist—the point from which the spread fingers rise—before becoming the general term for the hand."
+  "explanation": "手 pictures an open hand, with five fingers spreading from the wrist. The word may originally have named the wrist itself, before becoming the general word for the hand. The old forms make the spread fingers clear.\n\nThe hand naturally gives actions such as holding, taking, and doing something oneself. From what the hand performs, 手 also means a skill, an act, or help given to someone. It can then name the person who performs a particular action or possesses a particular skill.",
+  "sources": [
+    {
+      "title": "常用字解 · 手 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12830055.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 手",
+      "url": "https://kotobank.jp/word/%E6%89%8B-171189#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 273
+  }
 }

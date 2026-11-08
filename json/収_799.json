@@ -16,5 +16,28 @@
     "to harvest",
     "to capture"
   ],
-  "explanation": "Shirakawa takes 収 in its original form 收 as a compound: the left element, glossed in the Shuowen as “to entwine and coil,” evokes strands twisted together like a rope, while 攴, “to strike,” shows the action applied to it. The scene is of beating a newly twisted rope to harden and tighten it so it holds firmly. From this comes the core sense of gathering in and making secure—putting things together, bringing them under control, and stowing them away. Hence 収 means to put away or store, to strengthen and settle disorder (as in 収拾), and by extension to take into custody or capture (as in 収監)."
+  "explanation": "収, formerly 收, combines 丩 with 攴. 丩 shows strands wound and twisted together like a rope. 攴 supplies striking or beating: the twisted material is beaten tight and made firm, so that it holds together securely.\n\nFrom gathering strands into a strong binding, 収 extends to bringing things together and securing them. It can mean to collect, take in, put away, or bring under control. Binding also provides the sense of capturing and taking someone into custody.\n\nWhen scattered activity is gathered in, it comes to a close. 収 can therefore describe something settling, stopping, or reaching its end, as well as the active work of collecting and storing it.",
+  "sources": [
+    {
+      "title": "常用字解 · 収 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/12957139.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 収",
+      "url": "https://kotobank.jp/word/%E5%8F%8E-526139#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 282
+  }
 }

@@ -16,5 +16,28 @@
     "to do",
     "work"
   ],
-  "explanation": "Shirakawa explains 作 as a phono-semantic graph built on 乍, which supplies the on-reading saku and preserves the core sense of making. The graph 乍 originally depicted bending tree branches to weave a fence or the like, and in oracle-bone and bronze inscriptions it refers to constructing a fortress wall or crafting a bronze vessel. 乍 was the original character; later, 作 was created to express deliberate making and agency (as in sakui). From the concrete act of making a particular object, the meaning broadened to encompass human activity in general—carrying out, setting in motion, causing, or accomplishing—hence compounds such as sakkō, “to arouse or promote.”"
+  "explanation": "作 adds 人, a person, to 乍, which supplies the sound and is itself the earlier graph for making. 乍 pictures a tree branch bent firmly into shape, as when branches are worked into a fence. Making begins here as the purposeful shaping of material.\n\nEarly inscriptions use 乍 for constructing settlements or fortifications and for making bronze vessels. The same graph also came to describe actions and undertakings more generally. 作 was formed later to write this broad activity of doing or making.\n\nIts meanings therefore extend from producing an object to carrying out work, bringing something about, beginning an undertaking, or acting in a particular way. Deliberate human activity remains at the centre, whether the result is a tangible object or something accomplished.",
+  "sources": [
+    {
+      "title": "常用字解 · 作 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/11684967.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 作",
+      "url": "https://kotobank.jp/word/%E4%BD%9C-22253#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 240
+  }
 }

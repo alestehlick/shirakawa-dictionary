@@ -14,5 +14,28 @@
     "possible",
     "approve"
   ],
-  "explanation": "Shirakawa interprets 可 as a compound: a covenant vessel that holds written prayers to the gods is struck with a branch (丁), a forceful act meant to press the gods to realize the petition. From this ritual of assertive pleading—demanding that the wish must be fulfilled—comes the sense of assent and permission, the gods’ “all right.” Thus 可 came to mean what is allowed or approved; 許可 (“permission”) originally denotes divine sanction. The graph also underlies 呵 (“to scold, reproach”), preserving the notion of strong pressing."
+  "explanation": "可 brings a wooden branch against 口, a vessel containing a prayer. The vessel is struck while the worshipper presses the god to make the petition come true. The appeal has the force of a demand: the wished-for result must be granted.\n\nThe answering assent is the god’s permission or approval. 可 therefore means ‘acceptable,’ ‘permitted,’ or ‘may,’ while the force of the original demand also gives ‘should’ or ‘must.’\n\nThe related 呵 preserves the sharp voice of pressing or reproaching, and the prayer’s intoned appeal connects with 歌. In the ordinary uses of 可, the old exchange between forceful request and granted assent becomes approval and possibility.",
+  "sources": [
+    {
+      "title": "常用字解 · 可 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/5864296.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 可",
+      "url": "https://kotobank.jp/word/%E5%8F%AF-456258#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 362
+  }
 }

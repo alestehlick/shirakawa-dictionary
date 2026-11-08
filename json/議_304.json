@@ -13,5 +13,28 @@
     "discussion",
     "consultation"
   ],
-  "explanation": "議 is a phono-semantic character formed with 言, the element of speech, and 義 as the sound. In Shirakawa’s reading, 義 originally signified the certifying of a sacrificial sheep as flawless—hence what is correct—and this ritual backdrop colors 議. The earliest sense was hakaru: to take counsel, specifically to consult with the gods in order to arrive at what is right. From that sacred act of consultation grew the broader meanings of deliberation and discussion; the same nuance lies behind compounds such as 謀議. A Shinto norito preserves this atmosphere in the phrase 神議りに議りたまひて, “to consult as one consults with the gods,” where hakaru captures the solemn act of seeking divine counsel."
+  "explanation": "議 combines 言, words, with the sound element 義. 義 concerns a sheep offered to the gods: the animal is examined and found free of defects, fit for the offering. It therefore carries the sense of what is right or acceptable.\n\n議 brings that search for rightness into speech. It probably first meant consulting the gods, asking for the divine judgement before settling a matter. A proposal is examined and weighed so that the proper course can be found.\n\nFrom sacred consultation, the meaning broadens to deliberating, discussing, and arguing a case. The character can also name what is brought forward in discussion—an opinion, proposal, or question requiring consideration. The shared purpose is to determine what should be accepted as right.",
+  "sources": [
+    {
+      "title": "常用字解 · 議 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/8880475.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 議",
+      "url": "https://kotobank.jp/word/%E8%AD%B0-472044#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 267
+  }
 }

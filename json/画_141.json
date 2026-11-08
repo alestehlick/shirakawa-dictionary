@@ -16,5 +16,28 @@
     "to draw",
     "to mark off"
   ],
-  "explanation": "Originally written as 畫, the character combines 聿, a writing brush, with 田, which in early script represents 周—a square shield. 画 thus evokes the act of drawing or inscribing designs upon that shield, and by extension the picture or pattern itself. The 周 shield was a square divided by a cross and engraved with patterned fields; such shields, to which departing troops would attach a ritual sai vessel holding written prayers to the gods, served as objects of solemn vow. From the frequent depiction of these compartmented shield patterns arose the sense of marking off or partitioning (区画). Historically, 劃 was the character used specifically for “to divide/mark off,” while in usage 画 takes the on reading ga for the picture/drawing sense, and kaku for the senses of limiting, dividing, or measuring."
+  "explanation": "画, formerly 畫, combines 聿, a writing brush, with 田. Here 田 is the earliest form of 周, a rectangular shield whose face was divided into decorated sections. 畫 shows the brush laying out the pattern on that surface. It names both the act of drawing and the design produced.\n\nA pattern needs its divisions marked clearly. From arranging these fields of decoration come drawing a line, marking a boundary, and dividing an area. Considering how the design should be arranged also gives planning and devising. The picture sense is read *ga* in Japanese; the senses of division and planning commonly use *kaku*. 劃 makes the cutting or marking of the divisions explicit with 刀.",
+  "sources": [
+    {
+      "title": "常用字解 · 画 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/6757170.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 画",
+      "url": "https://kotobank.jp/word/%E7%94%BB-456348#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 261
+  }
 }

@@ -12,5 +12,28 @@
     "domain",
     "limits"
   ],
-  "explanation": "域 is a phono-semantic character with 或 as its sound element. In Shirakawa’s view, 或 depicts the city’s enclosing wall (the i) defended with a pike 戈, evoking a protected, bounded tract of land. When an added outer encircling is placed around 或, it becomes 國, the original form of 国, and 或 itself was once used to write 國. Against this background, 域 denotes the realm governed within a city’s fortress walls and, by extension, a district or zone and the limits that partition or confine it. The same phonetic 或 appears in 閾 (shikii, threshold) and 棫 (a tree name), confirming its role as the on-reading marker."
+  "explanation": "域 combines 土, land, with the sound element 或. 或 shows an enclosed settlement guarded with 戈, a weapon. It is the earlier form of 國, which adds a further surrounding enclosure. The territory is defined by the place that can be guarded and governed from the settlement.\n\n域 names that delimited territory: a region, district, or area belonging within a particular boundary. It can also express the act of setting the boundary or limiting something to a certain range. A grave precinct, for example, is a specific area marked out for its purpose. The ground element makes the territorial sense explicit.",
+  "sources": [
+    {
+      "title": "常用字解 · 域 (opening quotation)",
+      "url": "https://gaus.livedoor.biz/archives/4890551.html",
+      "work": "常用字解",
+      "author": "白川静",
+      "accessed": "2026-11-08",
+      "scope": "Explicitly attributed opening quotation only; surrounding commentary and other scholars excluded."
+    },
+    {
+      "title": "字通 · 域",
+      "url": "https://kotobank.jp/word/%E5%9F%9F-30087#E6.99.AE.E5.8F.8A.E7.89.88.20.E5.AD.97.E9.80.9A",
+      "work": "普及版 字通",
+      "author": "白川静",
+      "publisher": "Heibonsha / Kotobank",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "editorial_revision": {
+    "batch": "frequency-0201-0400",
+    "date": "2026-11-08",
+    "frequency_rank": 303
+  }
 }
